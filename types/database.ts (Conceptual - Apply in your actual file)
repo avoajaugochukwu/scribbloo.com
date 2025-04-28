@@ -1,9 +1,0 @@
-export interface Category {
-  id: string; // uuid
-  name: string;
-  slug: string | null;
-}
-
-export interface CategoryWithImages extends Category {
-  images: ImageType[];
-} 
