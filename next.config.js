@@ -2,6 +2,19 @@
 const nextConfig = {
   // ... other configurations you might have ...
 
+  // Add or modify the experimental block for serverActions
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '7mb', // Increase the limit to 7MB
+    },
+    // ... other experimental flags ...
+  },
+
+  // OR, if serverActions is stable in your Next.js version, configure it at the top level:
+  // serverActions: {
+  //   bodySizeLimit: '7mb',
+  // },
+
   images: {
     remotePatterns: [
       {
@@ -22,4 +35,7 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
+
+// If using ESM (next.config.mjs):
+// export default nextConfig; 

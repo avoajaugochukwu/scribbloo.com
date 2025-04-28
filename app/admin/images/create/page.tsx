@@ -1,59 +1,63 @@
 'use client';
 
-import { useState, useEffect, useTransition } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label'; // Assuming you have a Label component
 import { Checkbox } from '@/components/ui/checkbox'; // Assuming Checkbox component
-import { createImage, getAvailableCategories, getAvailableTags } from '../actions'; // Import actions
-import { type Category } from '../../categories/actions'; // Import type
-import { type Tag } from '../../tags/actions'; // Import type
+import { createImage } from '../../actions/images/create';
+import { getCategories } from '../../actions/categories/read';
+import { getTags } from '../../actions/tags/read';
+import { type Category } from '../../actions/categories/types';
+import { type Tag } from '../../actions/tags/types';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export default function CreateImagePage() {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const [title, setTitle] = useState('');
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [availableCategories, setAvailableCategories] = useState<Category[]>([]);
   const [selectedCategoryIds, setSelectedCategoryIds] = useState<Set<string>>(new Set());
-  const [availableTags, setAvailableTags] = useState<Tag[]>([]);
   const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
-  const [loadingData, setLoadingData] = useState(true); // For loading categories/tags
-  const [dataError, setDataError] = useState<string | null>(null);
-  const [formMessage, setFormMessage] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
-  const [isPending, startTransition] = useTransition(); // For form submission loading state
 
-  console.log('availableCategories', availableCategories);
-  // Fetch categories and tags on component mount
-  useEffect(() => {
-    async function loadData() {
-      setLoadingData(true);
-      setDataError(null);
-      try {
-        const [categories, tags] = await Promise.all([
-          getAvailableCategories(),
-          getAvailableTags()
-        ]);
-        setAvailableCategories(categories);
-        setAvailableTags(tags);
-      } catch (error: any) {
-        console.error("Failed to load categories/tags:", error);
-        setDataError(error.message || "Failed to load data for the form.");
-      } finally {
-        setLoadingData(false);
+  const { data: availableCategories = [], isLoading: loadingCategories, error: categoryError } = useQuery<Category[], Error>({
+    queryKey: ['availableCategories'],
+    queryFn: getCategories,
+  });
+  const { data: availableTags = [], isLoading: loadingTags, error: tagError } = useQuery<Tag[], Error>({
+    queryKey: ['availableTags'],
+    queryFn: getTags,
+  });
+
+  const createMutation = useMutation({
+    mutationFn: createImage,
+    onSuccess: (result) => {
+      if (result.success) {
+        alert(result.message);
+        queryClient.invalidateQueries({ queryKey: ['adminImages'] });
+        setTitle('');
+        setImageFile(null);
+        setPreviewUrl(null);
+        setSelectedCategoryIds(new Set());
+        setSelectedTagIds(new Set());
+        const fileInput = document.getElementById('imageFile') as HTMLInputElement;
+        if (fileInput) fileInput.value = '';
+      } else {
+        alert(`Creation failed: ${result.message}`);
       }
-    }
-    loadData();
-  }, []); // Empty dependency array ensures this runs only once on mount
+    },
+    onError: (error) => {
+      alert(`Creation error: ${error.message}`);
+    },
+  });
 
-  // Handle file selection and preview
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       setImageFile(file);
-      // Create a preview URL
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewUrl(reader.result as string);
@@ -65,9 +69,7 @@ export default function CreateImagePage() {
     }
   };
 
-  // Handle checkbox changes for categories
   const handleCategoryChange = (categoryId: string, checked: boolean | 'indeterminate') => {
-    console.log('categoryId', categoryId);
     setSelectedCategoryIds(prev => {
       const newSet = new Set(prev);
       if (checked === true) {
@@ -75,14 +77,12 @@ export default function CreateImagePage() {
       } else {
         newSet.delete(categoryId);
       }
-      console.log('newSet', newSet);
       return newSet;
     });
   };
 
-  // Handle checkbox changes for tags
   const handleTagChange = (tagId: string, checked: boolean | 'indeterminate') => {
-     setSelectedTagIds(prev => {
+    setSelectedTagIds(prev => {
       const newSet = new Set(prev);
       if (checked === true) {
         newSet.add(tagId);
@@ -93,47 +93,26 @@ export default function CreateImagePage() {
     });
   };
 
-  // Handle form submission
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setFormMessage(null);
-
     if (!imageFile) {
-      setFormMessage({ text: 'Please select an image file.', type: 'error' });
+      alert('Please select an image file.');
       return;
     }
 
-    startTransition(async () => {
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('imageFile', imageFile);
-      console.log('selectedCategoryIds', selectedCategoryIds);
-      selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
-      selectedTagIds.forEach(id => formData.append('tagIds', id));
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('imageFile', imageFile);
+    selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
+    selectedTagIds.forEach(id => formData.append('tagIds', id));
 
-      console.log('formData.get(categoryIds)', formData.getAll('categoryIds'));
-      const result = await createImage(formData);
-      
-
-      if (result.success) {
-        setFormMessage({ text: result.message, type: 'success' });
-        // Optionally redirect after success
-        // router.push('/admin');
-        // Reset form state
-        setTitle('');
-        setImageFile(null);
-        setPreviewUrl(null);
-        setSelectedCategoryIds(new Set());
-        setSelectedTagIds(new Set());
-        // Reset file input visually (if possible/needed)
-        const fileInput = document.getElementById('imageFile') as HTMLInputElement;
-        if (fileInput) fileInput.value = '';
-
-      } else {
-        setFormMessage({ text: result.message, type: 'error' });
-      }
-    });
+    createMutation.mutate(formData);
   };
+
+  // Combined loading state from useQuery results
+  const loadingData = loadingCategories || loadingTags;
+  // Combined error state from useQuery results (will be Error | null)
+  const dataError = categoryError || tagError;
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl">
@@ -145,7 +124,6 @@ export default function CreateImagePage() {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Title Input */}
         <div>
           <Label htmlFor="title">Image Title (Optional)</Label>
           <Input
@@ -155,22 +133,21 @@ export default function CreateImagePage() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Enter image title"
-            disabled={isPending}
+            disabled={createMutation.isPending}
             className="mt-1"
           />
         </div>
 
-        {/* File Input */}
         <div>
           <Label htmlFor="imageFile">Image File*</Label>
           <Input
             type="file"
             id="imageFile"
             name="imageFile"
-            accept="image/*" // Accept only image types
+            accept="image/*"
             onChange={handleFileChange}
             required
-            disabled={isPending}
+            disabled={createMutation.isPending}
             className="mt-1 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-primary-foreground hover:file:bg-primary/90"
           />
           {previewUrl && (
@@ -182,11 +159,11 @@ export default function CreateImagePage() {
           )}
         </div>
 
-        {/* Data Loading/Error State */}
+        {/* Loading/Error for Categories/Tags */}
         {loadingData && <p className="text-gray-500">Loading categories and tags...</p>}
-        {dataError && <p className="text-red-600">Error loading data: {dataError}</p>}
+        {/* Access the message property since dataError is an Error object */}
+        {dataError && <p className="text-red-600">Error loading data: {dataError.message}</p>}
 
-        {/* Categories Selection */}
         {!loadingData && !dataError && availableCategories.length > 0 && (
           <fieldset className="space-y-2 border p-4 rounded-md">
             <legend className="text-lg font-semibold mb-2">Categories</legend>
@@ -197,7 +174,7 @@ export default function CreateImagePage() {
                     id={`category-${category.id}`}
                     checked={selectedCategoryIds.has(category.id)}
                     onCheckedChange={(checked) => handleCategoryChange(category.id, checked)}
-                    disabled={isPending}
+                    disabled={createMutation.isPending}
                   />
                   <Label htmlFor={`category-${category.id}`} className="cursor-pointer">
                     {category.name}
@@ -207,23 +184,21 @@ export default function CreateImagePage() {
             </div>
           </fieldset>
         )}
-         {!loadingData && !dataError && availableCategories.length === 0 && (
-             <p className="text-sm text-gray-500 italic">No categories available. Create them first.</p>
-         )}
+        {!loadingData && !dataError && availableCategories.length === 0 && (
+          <p className="text-sm text-gray-500 italic">No categories available. Create them first.</p>
+        )}
 
-
-        {/* Tags Selection */}
-         {!loadingData && !dataError && availableTags.length > 0 && (
+        {!loadingData && !dataError && availableTags.length > 0 && (
           <fieldset className="space-y-2 border p-4 rounded-md">
             <legend className="text-lg font-semibold mb-2">Tags</legend>
-             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {availableTags.map((tag) => (
                 <div key={tag.id} className="flex items-center space-x-2">
                   <Checkbox
                     id={`tag-${tag.id}`}
                     checked={selectedTagIds.has(tag.id)}
                     onCheckedChange={(checked) => handleTagChange(tag.id, checked)}
-                    disabled={isPending}
+                    disabled={createMutation.isPending}
                   />
                   <Label htmlFor={`tag-${tag.id}`} className="cursor-pointer">
                     {tag.name}
@@ -233,21 +208,12 @@ export default function CreateImagePage() {
             </div>
           </fieldset>
         )}
-         {!loadingData && !dataError && availableTags.length === 0 && (
-             <p className="text-sm text-gray-500 italic">No tags available. Create them first.</p>
-         )}
-
-
-        {/* Form Message */}
-        {formMessage && (
-          <p className={`text-sm ${formMessage.type === 'error' ? 'text-red-600' : 'text-green-600'}`}>
-            {formMessage.text}
-          </p>
+        {!loadingData && !dataError && availableTags.length === 0 && (
+          <p className="text-sm text-gray-500 italic">No tags available. Create them first.</p>
         )}
 
-        {/* Submit Button */}
-        <Button type="submit" disabled={isPending || loadingData || !imageFile} className="w-full">
-          {isPending ? 'Creating...' : 'Create Image'}
+        <Button type="submit" disabled={createMutation.isPending || loadingData || !imageFile} className="w-full">
+          {createMutation.isPending ? 'Creating...' : 'Create Image'}
         </Button>
       </form>
     </div>

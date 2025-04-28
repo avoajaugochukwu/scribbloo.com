@@ -1,0 +1,35 @@
+'use server';
+
+import { supabase } from '@/lib/supabaseClient';
+import { type Category } from './types'; // Import type
+
+/**
+ * Fetches all categories from the database, ordered by name.
+ */
+export async function getCategories(): Promise<Category[]> {
+  console.log('Fetching all categories...');
+  try {
+    const { data, error } = await supabase
+      .from('categories')
+      .select('id, name, created_at')
+      .order('name', { ascending: true });
+
+    if (error) {
+      console.error('Error fetching categories:', error.message);
+      throw new Error(`Database error fetching categories: ${error.message}`);
+    }
+
+    console.log(`Fetched ${data?.length ?? 0} categories.`);
+    // Ensure the returned data matches the Category type
+    return (data || []).map(cat => ({
+        id: cat.id,
+        name: cat.name,
+        created_at: cat.created_at
+    })) as Category[];
+
+  } catch (err) {
+    console.error('Unexpected error fetching categories:', err);
+    // Re-throw or return an empty array/error object depending on desired handling
+    throw new Error('Failed to fetch categories.');
+  }
+} 

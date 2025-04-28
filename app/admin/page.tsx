@@ -1,13 +1,15 @@
 'use client'; // Required for state and form handling
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useCallback } from 'react';
-// Removed direct supabase import, it's now used in actions.ts
-import { ImageType } from '@/types/database'; // Adjust path if needed
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'; // Add RQ imports
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 // Import the updated action and type
-import { getAdminImages, type AdminImageWithRelations } from './actions/images';
+import { getAdminImages } from './actions/images/read';
+import { deleteImage } from './actions/images/delete'; // Import delete action
+import { type AdminImageWithRelations } from './actions/images/types';
 import Link from 'next/link';
+import { Edit, Trash2 } from 'lucide-react'; // Add Trash2 if adding delete button
 
 // Helper component to render date only on client
 function ClientOnlyDate({ dateString }: { dateString: string | null | undefined }) {
@@ -29,48 +31,48 @@ function ClientOnlyDate({ dateString }: { dateString: string | null | undefined 
 const IMAGES_PER_PAGE = 10; // Keep consistent with the action
 
 export default function AdminPage() {
-  // Use the new type for state
-  const [images, setImages] = useState<AdminImageWithRelations[]>([]);
-  const [currentPage, setCurrentPage] = useState(1); // Use 1-based page for UI
-  const [totalImages, setTotalImages] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [fetchError, setFetchError] = useState<string | null>(null);
+  const queryClient = useQueryClient(); // Get query client
+  const [currentPage, setCurrentPage] = useState(1);
+  const [deleteConfirmation, setDeleteConfirmation] = useState<{ id: string; title: string | null } | null>(null);
 
-  // Get Supabase public URL base from environment variables (still needed here for URL construction)
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const bucketName = 'images'; // *** Replace with your actual bucket name ***
-  const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
+  // --- Fetch with useQuery ---
+  const { data: imageData, isLoading, error: fetchError } = useQuery({
+    // Query key includes page number to refetch when page changes
+    queryKey: ['adminImages', currentPage],
+    queryFn: () => getAdminImages(currentPage, IMAGES_PER_PAGE),
+    placeholderData: (previousData) => previousData, // Keep previous data while loading new page
+    // staleTime: 5 * 60 * 1000, // Optional: 5 minutes
+  });
 
-  // Calculate total pages
+  // Extract data from RQ result
+  const images = imageData?.images ?? [];
+  const totalImages = imageData?.totalCount ?? 0;
   const totalPages = Math.ceil(totalImages / IMAGES_PER_PAGE);
 
-  // Memoize fetch function to avoid recreating it on every render
-  const fetchImagesForPage = useCallback(async (page: number) => {
-    setIsLoading(true);
-    setFetchError(null);
-    console.log(`Requesting page: ${page}`);
-    try {
-      // Call the updated action
-      const { images: fetchedImages, totalCount } = await getAdminImages(page);
-      setImages(fetchedImages);
-      setTotalImages(totalCount);
-      // Optional: Scroll to top when page changes
-      // window.scrollTo(0, 0);
-    } catch (err: any) {
-      console.error('Error loading images on page:', err);
-      setFetchError(err.message || 'Failed to load images.');
-      setImages([]); // Clear images on error
-      setTotalImages(0);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []); // Empty dependency array means this function is created once
+  // --- Delete Mutation ---
+  const deleteMutation = useMutation({
+    mutationFn: deleteImage,
+    onSuccess: (result, imageId) => {
+      if (result.success) {
+        console.log(`Image ${imageId} deleted successfully.`);
+        // Invalidate the query for the current page AND potentially the total count
+        queryClient.invalidateQueries({ queryKey: ['adminImages', currentPage] });
+        // If deletion might change total pages, invalidate all pages or refetch count separately
+        queryClient.invalidateQueries({ queryKey: ['adminImages'] });
+        setDeleteConfirmation(null);
+        // Optionally show success toast
+      } else {
+        console.error(`Failed to delete image ${imageId}:`, result.message);
+        alert(`Deletion failed: ${result.message}`);
+      }
+    },
+    onError: (error, imageId) => {
+      console.error(`Error deleting image ${imageId}:`, error);
+      alert(`An unexpected error occurred during deletion: ${error.message}`);
+    },
+  });
 
-  // Effect to fetch images when currentPage changes
-  useEffect(() => {
-    fetchImagesForPage(currentPage);
-  }, [currentPage, fetchImagesForPage]); // Depend on currentPage and the memoized fetch function
-
+  // --- Handlers ---
   const handlePreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage((prev) => prev - 1);
@@ -82,6 +84,27 @@ export default function AdminPage() {
       setCurrentPage((prev) => prev + 1);
     }
   };
+
+  const handleDeleteClick = (image: AdminImageWithRelations) => {
+    setDeleteConfirmation({ id: image.id, title: image.title });
+  };
+
+  const confirmDelete = () => {
+    if (deleteConfirmation) {
+      deleteMutation.mutate(deleteConfirmation.id);
+    }
+  };
+
+  const cancelDelete = () => {
+    setDeleteConfirmation(null);
+  };
+
+  // Get Supabase URL for image construction
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'images';
+  const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
+
+  const isMutating = deleteMutation.isPending; // Check if delete is running
 
   // --- Render Admin Content (Image List) ---
   return (
@@ -106,11 +129,27 @@ export default function AdminPage() {
         )}
       </div>
 
+      {/* Delete Confirmation Modal */}
+      {deleteConfirmation && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm">
+            <h3 className="text-lg font-medium mb-4">Confirm Deletion</h3>
+            <p className="mb-4">Are you sure you want to delete the image "{deleteConfirmation.title || 'Untitled'}"? This action cannot be undone.</p>
+            <div className="flex justify-end space-x-3">
+              <Button variant="outline" onClick={cancelDelete} disabled={isMutating}>Cancel</Button>
+              <Button variant="destructive" onClick={confirmDelete} disabled={isMutating}>
+                {isMutating ? 'Deleting...' : 'Delete'}
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Loading State */}
       {isLoading && <p className="text-center text-gray-500 py-10">Loading images...</p>}
 
       {/* Error State */}
-      {fetchError && !isLoading && <p className="text-center text-red-600 py-10">{fetchError}</p>}
+      {fetchError && !isLoading && <p className="text-center text-red-600 py-10">{fetchError.message}</p>}
 
       {/* Content: Table */}
       {!isLoading && !fetchError && images.length > 0 && (
@@ -123,6 +162,7 @@ export default function AdminPage() {
                  <th scope="col" className="py-3 px-6">Categories</th>
                  <th scope="col" className="py-3 px-6">Tags</th>
                  <th scope="col" className="py-3 px-6">Created At</th>
+                 <th scope="col" className="py-3 px-6 text-right">Actions</th>
                </tr>
              </thead>
              <tbody>
@@ -157,6 +197,17 @@ export default function AdminPage() {
                      {/* Created At */}
                      <td className="py-4 px-6">
                        <ClientOnlyDate dateString={image.created_at} />
+                     </td>
+                     {/* Actions */}
+                     <td className="py-4 px-6 text-right">
+                       <Button asChild variant="ghost" size="sm" title="Edit Image" disabled={isMutating}>
+                         <Link href={`/admin/images/edit/${image.id}`}>
+                           <Edit className="h-4 w-4" />
+                         </Link>
+                       </Button>
+                       <Button variant="ghost" size="sm" title="Delete Image" onClick={() => handleDeleteClick(image)} disabled={isMutating} className="text-red-600 hover:text-red-800 ml-2">
+                         <Trash2 className="h-4 w-4" />
+                       </Button>
                      </td>
                    </tr>
                  );

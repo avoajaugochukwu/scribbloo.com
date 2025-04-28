@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { useRouter } from 'next/navigation';
-import { createCategory } from './actions'; // Import the category action
+import { useRouter } from 'next/navigation'; // Import the category action
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { createCategory } from '../actions/categories/create';
 
 export function CreateCategoryForm() {
   const router = useRouter();
