@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Textarea } from '@/components/ui/textarea'; // Import Textarea
 import { getImageForEdit } from '../../../actions/images/read'; // getImageForEdit is here
 import { updateImage } from '../../../actions/images/update'; // updateImage is here
 import { getCategories } from '../../../actions/categories/read'; // getCategories is here
@@ -25,6 +26,7 @@ export default function EditImagePage() {
 
     // Local state for form inputs based on fetched data
     const [title, setTitle] = useState('');
+    const [description, setDescription] = useState(''); // <-- Add state for description
     const [selectedCategoryIds, setSelectedCategoryIds] = useState<Set<string>>(new Set());
     const [selectedTagIds, setSelectedTagIds] = useState<Set<string>>(new Set());
 
@@ -49,6 +51,7 @@ export default function EditImagePage() {
     useEffect(() => {
         if (imageDetails) {
             setTitle(imageDetails.title || '');
+            setDescription(imageDetails.description || ''); // <-- Populate description state
             setSelectedCategoryIds(new Set(imageDetails.categoryIds));
             setSelectedTagIds(new Set(imageDetails.tagIds));
         }
@@ -93,13 +96,14 @@ export default function EditImagePage() {
         const formData = new FormData();
         formData.append('imageId', imageId);
         formData.append('title', title);
+        formData.append('description', description); // <-- Append description
         selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
         selectedTagIds.forEach(id => formData.append('tagIds', id));
         updateMutation.mutate(formData);
     };
 
     // --- Loading & Error States ---
-    const isLoading = loadingImage || loadingCategories || loadingTags;
+    const isLoading = loadingImage || loadingCategories || loadingTags || updateMutation.isPending;
     const error = imageError || categoryError || tagError;
 
     // Construct image URL
@@ -110,8 +114,8 @@ export default function EditImagePage() {
         ? `${storageBaseUrl}${imageDetails.image_url}`
         : null;
 
-    if (isLoading) return <p>Loading image details...</p>;
-    if (error) return <p>Error loading data: {error.message}</p>;
+    if (loadingImage) return <p>Loading image details...</p>; // Separate loading for initial image fetch
+    if (imageError) return <p>Error loading image data: {imageError.message}</p>;
     if (!imageDetails) {
         return <p>Image not found.</p>;
     }
@@ -158,6 +162,21 @@ export default function EditImagePage() {
                         placeholder="Image title (optional)"
                         disabled={isLoading}
                         className="mt-1"
+                    />
+                </div>
+
+                {/* Description Textarea */}
+                <div>
+                    <Label htmlFor="description">Description</Label>
+                    <Textarea
+                        id="description"
+                        name="description"
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        placeholder="Image description (optional)"
+                        disabled={isLoading}
+                        className="mt-1"
+                        rows={4} // Adjust as needed
                     />
                 </div>
 
@@ -215,7 +234,7 @@ export default function EditImagePage() {
 
                 {/* Submit Button */}
                 <Button type="submit" disabled={isLoading} className="w-full">
-                    {isLoading ? 'Updating...' : 'Update Image Details'}
+                    {updateMutation.isPending ? 'Updating...' : 'Update Image Details'}
                 </Button>
             </form>
         </div>

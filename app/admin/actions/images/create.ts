@@ -10,6 +10,7 @@ import { revalidatePath } from 'next/cache';
 export async function createImage(formData: FormData): Promise<{ success: boolean; message: string; imageId?: string }> {
   console.log('formData for create:', formData);
   const title = formData.get('title')?.toString().trim() || null;
+  const description = formData.get('description')?.toString().trim() || null;
   const imageFile = formData.get('imageFile') as File | null;
   const categoryIds = formData.getAll('categoryIds').map(id => id.toString()); // Expecting UUIDs
   const tagIds = formData.getAll('tagIds').map(id => id.toString()); // Expecting UUIDs
@@ -47,8 +48,12 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
     console.log('Inserting image metadata into database...');
     const { data: imageInsertData, error: imageInsertError } = await supabase
       .from('images')
-      .insert([{ title: title, image_url: filePath }]) // Use filePath from storage
-      .select('id') // Select the ID of the newly inserted row
+      .insert([{
+          title: title,
+          description: description,
+          image_url: filePath
+      }])
+      .select('id')
       .single();
 
     if (imageInsertError || !imageInsertData) {

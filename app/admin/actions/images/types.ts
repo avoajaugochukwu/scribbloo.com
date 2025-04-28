@@ -12,6 +12,7 @@ export type AdminImageWithRelations = {
 export type ImageForEdit = {
     id: string; // UUID
     title: string | null;
+    description: string | null;
     image_url: string | null; // To display current image
     categoryIds: string[]; // IDs of currently linked categories (UUIDs)
     tagIds: string[];      // IDs of currently linked tags (UUIDs)

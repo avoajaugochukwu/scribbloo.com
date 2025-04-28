@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label'; // Assuming you have a Label component
+import { Textarea } from '@/components/ui/textarea'; // Import Textarea
 import { Checkbox } from '@/components/ui/checkbox'; // Assuming Checkbox component
 import { createImage } from '../../actions/images/create';
 import { getCategories } from '../../actions/categories/read';
@@ -18,6 +19,7 @@ export default function CreateImagePage() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [selectedCategoryIds, setSelectedCategoryIds] = useState<Set<string>>(new Set());
@@ -39,6 +41,7 @@ export default function CreateImagePage() {
         alert(result.message);
         queryClient.invalidateQueries({ queryKey: ['adminImages'] });
         setTitle('');
+        setDescription('');
         setImageFile(null);
         setPreviewUrl(null);
         setSelectedCategoryIds(new Set());
@@ -102,6 +105,7 @@ export default function CreateImagePage() {
 
     const formData = new FormData();
     formData.append('title', title);
+    formData.append('description', description);
     formData.append('imageFile', imageFile);
     selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
     selectedTagIds.forEach(id => formData.append('tagIds', id));
@@ -135,6 +139,20 @@ export default function CreateImagePage() {
             placeholder="Enter image title"
             disabled={createMutation.isPending}
             className="mt-1"
+          />
+        </div>
+
+        <div>
+          <Label htmlFor="description">Description (Optional)</Label>
+          <Textarea
+            id="description"
+            name="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Enter image description"
+            disabled={createMutation.isPending}
+            className="mt-1"
+            rows={4}
           />
         </div>
 

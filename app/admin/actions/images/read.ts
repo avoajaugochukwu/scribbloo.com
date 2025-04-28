@@ -62,53 +62,56 @@ export async function getAdminImages(page = 1, pageSize = 10): Promise<{ images:
 
 
 /**
- * Fetches a single image's details (including linked category/tag IDs) for the edit form.
+ * Fetches a single image with its linked category and tag IDs for editing.
  */
 export async function getImageForEdit(imageId: string): Promise<ImageForEdit | null> {
-    if (!imageId) {
-        console.error('getImageForEdit called with invalid ID');
+    console.log(`Fetching image for edit: ${imageId}`);
+    const { data: imageData, error: imageError } = await supabase
+        .from('images')
+        .select(`
+            id,
+            title,
+            description,
+            image_url
+        `)
+        .eq('id', imageId)
+        .single();
+
+    if (imageError || !imageData) {
+        console.error(`Error fetching image ${imageId}:`, imageError);
         return null;
     }
-    console.log(`Fetching image details for edit: ID ${imageId}`);
-    try {
-        const { data, error } = await supabase
-            .from('images')
-            .select(`
-                id,
-                title,
-                image_url,
-                image_categories ( category_id ),
-                image_tags ( tag_id )
-            `)
-            .eq('id', imageId)
-            .single();
 
-        if (error) {
-            if (error.code === 'PGRST116') { // Not found code
-                console.warn(`Image not found for edit: ID ${imageId}`);
-                return null;
-            }
-            console.error(`Error fetching image for edit (ID: ${imageId}):`, error.message);
-            throw error; // Re-throw other errors
-        }
+    // Fetch linked category IDs
+    const { data: categoryLinks, error: categoryError } = await supabase
+        .from('image_categories')
+        .select('category_id')
+        .eq('image_id', imageId);
 
-        if (!data) return null;
+    // Fetch linked tag IDs
+    const { data: tagLinks, error: tagError } = await supabase
+        .from('image_tags')
+        .select('tag_id')
+        .eq('image_id', imageId);
 
-        // Process data to match the ImageForEdit type
-        const imageDetails: ImageForEdit = {
-            id: data.id,
-            title: data.title,
-            image_url: data.image_url,
-            // Extract just the IDs from the join table results
-            categoryIds: data.image_categories?.map((ic: any) => ic.category_id) ?? [],
-            tagIds: data.image_tags?.map((it: any) => it.tag_id) ?? [],
-        };
-
-        console.log(`Successfully fetched image details for edit:`, imageDetails);
-        return imageDetails;
-
-    } catch (err: any) {
-        console.error(`Unexpected error fetching image for edit (ID: ${imageId}):`, err.message);
-        throw new Error(`Failed to fetch image details: ${err.message}`);
+    if (categoryError || tagError) {
+        console.error(`Error fetching links for image ${imageId}:`, categoryError || tagError);
+        // Decide if you want to return partial data or null
+        // Returning null might be safer if links are critical
+        return null;
     }
+
+    console.log(`Image data fetched for ${imageId}:`, imageData);
+    console.log(`Category links for ${imageId}:`, categoryLinks);
+    console.log(`Tag links for ${imageId}:`, tagLinks);
+
+
+    return {
+        id: imageData.id,
+        title: imageData.title,
+        description: imageData.description,
+        image_url: imageData.image_url,
+        categoryIds: categoryLinks?.map(link => link.category_id) || [],
+        tagIds: tagLinks?.map(link => link.tag_id) || [],
+    };
 } 
