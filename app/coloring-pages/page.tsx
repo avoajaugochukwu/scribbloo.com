@@ -1,10 +1,12 @@
 import { getAllCategories } from '@/lib/coloringPages'; // Adjust import path if needed
+import Link from 'next/link'; // Make sure Link is imported
+import { Category } from '@/types/database'; // Import the Category type
 
 // This is a React Server Component (RSC)
 // It can fetch data directly using async/await
 export default async function ColoringPages() {
   // Fetch categories on the server
-  const categories = await getAllCategories();
+  const categories: Category[] = await getAllCategories();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -13,15 +15,28 @@ export default async function ColoringPages() {
       {/* Section to display categories */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Categories</h2>
-        {categories && categories.length > 0 ? (
-          <ul className="flex flex-wrap gap-4">
+        {categories.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* Map over the categories */}
             {categories.map((category) => (
-              // Assuming category object has 'id' and 'name' properties
-              <li key={category.id} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-blue-200">
-                {category.name}
-              </li>
+              // Wrap the entire card/item in a Link component
+              <Link
+                // Use the category slug to build the href
+                href={`/coloring-pages/${category.slug}`}
+                key={category.id}
+                // Apply styling to the link itself if needed, or style the inner div
+                className="block border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+              >
+                <div className="p-4">
+                  {/* Display the category name */}
+                  <h2 className="font-semibold text-lg text-center text-blue-700 hover:underline">
+                    {category.name}
+                  </h2>
+                  {/* You could add category descriptions or image counts here later */}
+                </div>
+              </Link>
             ))}
-          </ul>
+          </div>
         ) : (
           <p>No categories found.</p>
         )}
