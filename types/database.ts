@@ -16,6 +16,7 @@ export interface Category {
   id: string; // uuid
   name: string;
   slug: string | null; // Assuming slug can be nullable based on schema, adjust if required
+  description?: string | null; // <-- Ensure this line exists and is optional/nullable if needed
 }
 
 /**
@@ -58,4 +59,6 @@ export interface CategoryWithImages extends Category {
 /**
  * Alias for Image interface to avoid naming conflicts (e.g., with next/image).
  */
-export type ImageType = Image; 
+export type ImageType = Image;
+
+// Add other database-related types here 

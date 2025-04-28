@@ -56,7 +56,6 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
           <div className="flex items-center space-x-1"> {/* Add space between icons */}
             <PrintIcon
                 imageUrl={fullImageUrl}
-                imageTitle={image.title || 'Coloring Page'}
                 filename={downloadFilename}
             />
             <DownloadIcon imageUrl={fullImageUrl} filename={downloadFilename} />

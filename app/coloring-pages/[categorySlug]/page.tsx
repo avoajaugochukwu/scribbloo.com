@@ -1,21 +1,22 @@
 import { getImagesByCategorySlug } from '@/lib/coloringPages';
 import Link from 'next/link';
-// Keep next/image import if needed elsewhere, otherwise it's handled by the component
-// import Image from 'next/image';
 import { CategoryWithImages, ImageType } from '@/types/database'; // Adjust path if needed
-// Remove Constants import if URL construction is moved to the component
-// import { Constants } from '@/config/constants';
-// Import the new component
 import ColoringPageImage from './components/ColoringPageImage'; // Relative path to the component
-
-// Define the expected shape of the params object
-interface CategoryPageParams {
-  categorySlug: string;
-}
+import { notFound } from 'next/navigation';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import { Metadata } from 'next';
 
 // Define the props for the page component
 interface CategoryPageProps {
   params: Promise<{ categorySlug: string }>;
+  // searchParams: { [key: string]: string | string[] | undefined }; // Include if you use searchParams
 }
 
 // This is a React Server Component (RSC)
@@ -27,15 +28,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   // Handle case where category is not found
   if (!categoryData) {
-    return (
-      <div className="container mx-auto px-4 py-8 text-center">
-        <h1 className="text-2xl font-bold mb-4">Category Not Found</h1>
-        <p>Sorry, we couldn't find a category with the slug "{decodeURIComponent(categorySlug)}".</p>
-        <Link href="/coloring-pages" className="text-blue-600 hover:underline mt-4 inline-block">
-          Back to Categories
-        </Link>
-      </div>
-    );
+    notFound(); // Trigger 404 page
   }
 
   // Remove imageUrlStub if URL construction is moved to the component
@@ -44,19 +37,46 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const images = categoryData.images || [];
   // console.log('Images:', images); // Keep for debugging if needed
 
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Coloring Pages', href: '/coloring-pages' },
+    { label: categoryData.name, href: `/coloring-pages/${categoryData.slug}` }, // Current page is last
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
-      <nav className="mb-4 text-sm">
-        <Link href="/coloring-pages" className="text-blue-600 hover:underline">
-          Coloring Pages
-        </Link>
-        <span className="mx-2">/</span>
-        <span>{categoryData.name}</span>
-      </nav>
+      <Breadcrumb>
+        <BreadcrumbList>
+          {breadcrumbItems.map((item, index) => (
+            <> {/* Use Fragment to handle key prop correctly */}
+              <BreadcrumbItem key={item.href}>
+                {index === breadcrumbItems.length - 1 ? (
+                  // Render last item as BreadcrumbPage (not a link)
+                  <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                ) : (
+                  // Render other items as links
+                  <BreadcrumbLink asChild>
+                    <Link href={item.href}>{item.label}</Link>
+                  </BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+              {index < breadcrumbItems.length - 1 && (
+                // Add separator if not the last item
+                <BreadcrumbSeparator />
+              )}
+            </>
+          ))}
+        </BreadcrumbList>
+      </Breadcrumb>
 
-      <h1 className="text-3xl font-bold mb-6">
+      <h1 className="text-3xl font-bold mb-6 mt-4"> {/* Added mt-4 for spacing */}
         {categoryData.name} Coloring Pages
       </h1>
+
+      {/* Remove or comment out this section as categoryData.description doesn't exist */}
+      {/* {categoryData.description && (
+        <p className="text-lg text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: categoryData.description.replace(/"/g, '&quot;').replace(/'/g, '&apos;') }} />
+      )} */}
 
       {images.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -72,28 +92,42 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           ))}
         </div>
       ) : (
-        <p>No coloring pages found in the "{categoryData.name}" category yet.</p>
+        <p>No coloring pages found in the &quot;{categoryData.name}&quot; category yet. Check back soon!</p>
       )}
     </div>
   );
 }
 
 // Optional: Generate metadata dynamically
-export async function generateMetadata({ params }: CategoryPageProps) {
+export async function generateMetadata(
+  { params }: CategoryPageProps,
+): Promise<Metadata> {
   const { categorySlug } = await params;
-  // Fetch minimal category data just for the title/description
   const categoryData = await getImagesByCategorySlug(categorySlug) as CategoryWithImages | null;
 
   if (!categoryData) {
     return {
       title: 'Category Not Found',
+      description: 'The requested category could not be found.',
     };
   }
 
+  // Customize title and description based on the category
+  const title = `${categoryData.name} Coloring Pages - Free Printables`;
+  // Create a generic description since categoryData.description doesn't exist
+  const description = `Explore our collection of ${categoryData.name} coloring pages. Download and print free images for kids and adults.`;
+
+  // Optionally merge with parent metadata
+  // const previousImages = (await parent).openGraph?.images || []
+
   return {
-    title: `${categoryData.name} Coloring Pages`,
-    description: `Browse coloring pages in the ${categoryData.name} category.`,
-    // Add other metadata tags as needed
+    title,
+    description, // Use the generic description
+    openGraph: {
+      title,
+      description, // Use the generic description
+      // images: ['/some-specific-page-image.jpg', ...previousImages], // Add specific images if needed
+    },
   };
 }
 

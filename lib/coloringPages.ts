@@ -1,6 +1,6 @@
 // Import the Supabase client and necessary types
 import { supabase } from './supabaseClient'; // Adjust path if needed
-import { CategoryWithImages, Category, Image, ImageType } from '@/types/database'; // Adjust path if needed
+import { CategoryWithImages, Category, ImageType } from '@/types/database'; // Adjust path if needed
 
 /**
  * Fetches a category by its slug, including its associated images, using multiple queries.
@@ -19,7 +19,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     // 1 & 2: Query categories table for the category ID and details
     const { data: categoryData, error: categoryError } = await supabase
       .from('categories')
-      .select('id, name, slug') // Select necessary category fields
+      .select('id, name, slug') // <-- Removed description
       .eq('slug', categorySlug)
       .maybeSingle(); // Expect 0 or 1 category
 
@@ -51,10 +51,14 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
 
     // If no images are linked, return category data with empty images array
     if (imageIds.length === 0) {
-      return {
-        ...categoryData, // Spread the fetched category details
-        images: [],      // Return empty array for images
-      } as CategoryWithImages; // Assert the type
+      // Explicitly construct the object
+      const result: CategoryWithImages = {
+        id: categoryData.id,
+        name: categoryData.name,
+        slug: categoryData.slug,
+        images: [],
+      };
+      return result;
     }
 
     // 5: Query images table for image details
@@ -69,9 +73,12 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     }
 
     // 6: Combine category data and images data and return
+    // Explicitly construct the object
     const result: CategoryWithImages = {
-      ...categoryData,             // Spread category details (id, name, slug)
-      images: (imagesData || []) as ImageType[], // Assign fetched images (or empty array), assert type
+      id: categoryData.id,
+      name: categoryData.name,
+      slug: categoryData.slug,
+      images: (imagesData || []) as ImageType[],
     };
 
     return result;
