@@ -87,13 +87,18 @@ export default function AdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Admin Dashboard - Images</h1>
-        <Button asChild>
-            <Link href="/admin/tags">Manage Tags</Link>
-        </Button>
+        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+        <div className="flex space-x-2">
+            <Button asChild variant="outline">
+                <Link href="/admin/categories">Manage Categories</Link>
+            </Button>
+            <Button asChild variant="outline">
+                <Link href="/admin/tags">Manage Tags</Link>
+            </Button>
+        </div>
         {!isLoading && totalImages > 0 && (
           <div className="text-right text-sm text-gray-600 mb-4">
-            Page {currentPage} of {totalPages} ({totalImages} total images)
+            Showing Images: Page {currentPage} of {totalPages} ({totalImages} total)
           </div>
         )}
       </div>
