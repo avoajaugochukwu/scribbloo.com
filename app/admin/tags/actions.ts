@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 
 export type Tag = {
-  id: number;
+  id: string;
   name: string;
   created_at: string;
 };

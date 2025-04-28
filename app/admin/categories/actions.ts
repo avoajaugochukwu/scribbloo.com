@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache';
 
 // Define the type for a category
 export type Category = {
-  id: number;
+  id: string;
   name: string;
   created_at: string; // Or Date if you prefer
 };

@@ -89,6 +89,9 @@ export default function AdminPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
         <div className="flex space-x-2">
+            <Button asChild>
+                <Link href="/admin/images/create">Create New Image</Link>
+            </Button>
             <Button asChild variant="outline">
                 <Link href="/admin/categories">Manage Categories</Link>
             </Button>
