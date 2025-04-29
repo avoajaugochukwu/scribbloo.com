@@ -68,6 +68,8 @@ export function CategoryList() {
 
   const isMutating = deleteMutation.isPending;
 
+  console.log('categories', categories);
+
   return (
     <div className="mt-8">
       <h2 className="text-xl font-semibold mb-4">Existing Categories</h2>
@@ -107,7 +109,7 @@ export function CategoryList() {
                     {category.name}
                   </td>
                   <td className="py-4 px-6">
-                    {category.slug || 'N/A'}
+                    {category.slug || <span className="text-gray-400 italic">N/A</span>}
                   </td>
                   <td className="py-4 px-6 max-w-xs truncate" title={category.description ?? ''}>
                     {category.description || <span className="text-gray-400 italic">None</span>}

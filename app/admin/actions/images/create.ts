@@ -1,4 +1,5 @@
 'use server';
+import { Constants } from '@/config/constants';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
@@ -21,7 +22,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
       return { success: false, message: 'Invalid file type. Please upload an image.' };
   }
 
-  const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'coloring-images';
+  const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
   const filePath = imageFile.name;
 
   let newImageId: string | null = null;

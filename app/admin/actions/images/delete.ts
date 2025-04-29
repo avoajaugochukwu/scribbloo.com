@@ -1,4 +1,5 @@
 'use server';
+import { Constants } from '@/config/constants';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
@@ -13,7 +14,7 @@ export async function deleteImage(imageId: string): Promise<{ success: boolean; 
     console.log(`Attempting to delete image ID: ${imageId}`);
 
     let imagePath: string | null = null; // To store the file path
-    const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'coloring-images';
+    const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
     const tableName = 'images';
 
     try {

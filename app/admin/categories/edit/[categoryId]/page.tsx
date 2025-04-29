@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next Image
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { getCategoryForEdit, updateCategory } from '../../../actions/categories/update'; // Adjust path
 import { type Category } from '../../../actions/categories/types'; // Adjust path
+import { Constants } from '@/config/constants'; // Import constants
 
 export default function EditCategoryPage() {
     const params = useParams();
@@ -22,9 +24,17 @@ export default function EditCategoryPage() {
     const [description, setDescription] = useState('');
     const [seoTitle, setSeoTitle] = useState('');
     const [seoDescription, setSeoDescription] = useState('');
-    const [heroImageUrl, setHeroImageUrl] = useState('');
-    const [thumbnailImageUrl, setThumbnailImageUrl] = useState('');
-    const [currentSlug, setCurrentSlug] = useState(''); // To display the non-editable slug
+    const [currentSlug, setCurrentSlug] = useState('');
+    // --- State for Current Image Paths (from DB) ---
+    const [currentHeroPath, setCurrentHeroPath] = useState<string | null>(null);
+    const [currentThumbnailPath, setCurrentThumbnailPath] = useState<string | null>(null);
+    // --- State for NEW File Uploads ---
+    const [newHeroImageFile, setNewHeroImageFile] = useState<File | null>(null);
+    const [newThumbnailImageFile, setNewThumbnailImageFile] = useState<File | null>(null);
+    // Preview URLs for NEW uploads (optional)
+    const [newHeroPreviewUrl, setNewHeroPreviewUrl] = useState<string | null>(null);
+    const [newThumbnailPreviewUrl, setNewThumbnailPreviewUrl] = useState<string | null>(null);
+    // --- End State ---
 
     // --- Fetch Category Data ---
     const { data: categoryDetails, isLoading: loadingCategory, error: categoryError } = useQuery<Category | null>({
@@ -40,9 +50,15 @@ export default function EditCategoryPage() {
             setDescription(categoryDetails.description || '');
             setSeoTitle(categoryDetails.seo_title || '');
             setSeoDescription(categoryDetails.seo_description || '');
-            setHeroImageUrl(categoryDetails.hero_image_url || '');
-            setThumbnailImageUrl(categoryDetails.thumbnail_image_url || '');
             setCurrentSlug(categoryDetails.slug || 'N/A'); // Store slug for display
+            // --- Store current image paths ---
+            setCurrentHeroPath(categoryDetails.hero_image_url || null); // Assuming url column stores path
+            setCurrentThumbnailPath(categoryDetails.thumbnail_image_url || null); // Assuming url column stores path
+            // --- Clear new file state when data loads ---
+            setNewHeroImageFile(null);
+            setNewThumbnailImageFile(null);
+            setNewHeroPreviewUrl(null);
+            setNewThumbnailPreviewUrl(null);
         }
     }, [categoryDetails]);
 
@@ -64,6 +80,36 @@ export default function EditCategoryPage() {
         },
     });
 
+    // --- File Handlers (same as create page) ---
+    const handleFileChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+        setter: React.Dispatch<React.SetStateAction<File | null>>,
+        previewSetter: React.Dispatch<React.SetStateAction<string | null>>
+    ) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            setter(file);
+            const reader = new FileReader();
+            reader.onloadend = () => { previewSetter(reader.result as string); };
+            reader.readAsDataURL(file);
+        } else {
+            setter(null);
+            previewSetter(null);
+        }
+    };
+    // --- End File Handlers ---
+
+    // --- Construct Full URLs for Current Images ---
+    const getFullImageUrl = (bucket: string, path: string | null): string | null => {
+        if (!path) return null;
+        // Ensure path doesn't start with a slash if bucket URL already has one
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+        return `${Constants.SUPABASE_URL}/storage/v1/object/public/${bucket}/${cleanPath}`;
+    };
+    const currentHeroFullUrl = getFullImageUrl(Constants.SUPABASE_HERO_IMAGES_BUCKET, currentHeroPath);
+    const currentThumbnailFullUrl = getFullImageUrl(Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET, currentThumbnailPath);
+    // --- End Construct URLs ---
+
     // --- Handlers ---
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -73,8 +119,14 @@ export default function EditCategoryPage() {
         formData.append('description', description.trim());
         formData.append('seoTitle', seoTitle.trim());
         formData.append('seoDescription', seoDescription.trim());
-        formData.append('heroImageUrl', heroImageUrl.trim());
-        formData.append('thumbnailImageUrl', thumbnailImageUrl.trim());
+        // --- Append NEW Files (if selected) ---
+        if (newHeroImageFile) {
+            formData.append('heroImageFile', newHeroImageFile);
+        }
+        if (newThumbnailImageFile) {
+            formData.append('thumbnailImageFile', newThumbnailImageFile);
+        }
+        // --- End Append Files ---
         updateMutation.mutate(formData);
     };
 
@@ -169,37 +221,65 @@ export default function EditCategoryPage() {
                     />
                 </div>
 
-                {/* Hero Image URL */}
+                {/* --- Hero Image Upload --- */}
                 <div>
-                    <Label htmlFor="heroImageUrl">Hero Image URL*</Label>
-                    <Input
-                        id="heroImageUrl"
-                        type="url"
-                        value={heroImageUrl}
-                        onChange={(e) => setHeroImageUrl(e.target.value)}
-                        placeholder="Paste Hero Image URL"
-                        required
-                        disabled={isLoading}
-                        className="mt-1"
-                    />
-                    <p className="text-xs text-gray-500 mt-1">Upload image to storage first, then paste the public URL here.</p>
+                  <Label htmlFor="heroImageFile">Hero Image (Upload new to replace)</Label>
+                  {/* Display Current Hero Image */}
+                  {currentHeroFullUrl && !newHeroPreviewUrl && (
+                      <div className="my-2 p-2 border rounded inline-block">
+                          <Image src={currentHeroFullUrl} alt="Current Hero" width={200} height={120} className="object-contain rounded" />
+                          <p className="text-xs text-center text-gray-500 mt-1">Current</p>
+                      </div>
+                  )}
+                  {/* Display New Hero Preview */}
+                   {newHeroPreviewUrl && (
+                    <div className="my-2 p-2 border rounded inline-block border-blue-500">
+                      <img src={newHeroPreviewUrl} alt="New Hero preview" className="max-h-40 rounded" />
+                       <p className="text-xs text-center text-blue-600 mt-1">New</p>
+                    </div>
+                  )}
+                  <Input
+                    id="heroImageFile"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleFileChange(e, setNewHeroImageFile, setNewHeroPreviewUrl)}
+                    // Not required for edit
+                    disabled={isLoading}
+                    className="mt-1 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">Upload a new image if you want to replace the current one.</p>
                 </div>
+                {/* --- End Hero Image Upload --- */}
 
-                {/* Thumbnail Image URL */}
+                {/* --- Thumbnail Image Upload --- */}
                 <div>
-                    <Label htmlFor="thumbnailImageUrl">Thumbnail Image URL*</Label>
-                    <Input
-                        id="thumbnailImageUrl"
-                        type="url"
-                        value={thumbnailImageUrl}
-                        onChange={(e) => setThumbnailImageUrl(e.target.value)}
-                        placeholder="Paste Thumbnail Image URL"
-                        required
-                        disabled={isLoading}
-                        className="mt-1"
-                    />
-                    <p className="text-xs text-gray-500 mt-1">Upload image to storage first, then paste the public URL here.</p>
+                  <Label htmlFor="thumbnailImageFile">Thumbnail Image (Upload new to replace)</Label>
+                   {/* Display Current Thumbnail Image */}
+                  {currentThumbnailFullUrl && !newThumbnailPreviewUrl && (
+                      <div className="my-2 p-2 border rounded inline-block">
+                          <Image src={currentThumbnailFullUrl} alt="Current Thumbnail" width={100} height={100} className="object-contain rounded" />
+                           <p className="text-xs text-center text-gray-500 mt-1">Current</p>
+                      </div>
+                  )}
+                   {/* Display New Thumbnail Preview */}
+                   {newThumbnailPreviewUrl && (
+                    <div className="my-2 p-2 border rounded inline-block border-blue-500">
+                      <img src={newThumbnailPreviewUrl} alt="New Thumbnail preview" className="max-h-24 rounded" />
+                       <p className="text-xs text-center text-blue-600 mt-1">New</p>
+                    </div>
+                  )}
+                  <Input
+                    id="thumbnailImageFile"
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleFileChange(e, setNewThumbnailImageFile, setNewThumbnailPreviewUrl)}
+                    // Not required for edit
+                    disabled={isLoading}
+                    className="mt-1 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">Upload a new image if you want to replace the current one.</p>
                 </div>
+                {/* --- End Thumbnail Image Upload --- */}
 
                 {/* Submit Button */}
                 <div className="flex justify-end pt-4">

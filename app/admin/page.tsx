@@ -10,6 +10,7 @@ import { deleteImage } from './actions/images/delete'; // Import delete action
 import { type AdminImageWithRelations } from './actions/images/types';
 import Link from 'next/link';
 import { Edit, Trash2 } from 'lucide-react'; // Add Trash2 if adding delete button
+import { Constants } from '@/config/constants';
 
 // Helper component to render date only on client
 function ClientOnlyDate({ dateString }: { dateString: string | null | undefined }) {
@@ -100,8 +101,8 @@ export default function AdminPage() {
   };
 
   // Get Supabase URL for image construction
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'coloring-images';
+  const supabaseUrl = Constants.SUPABASE_URL;
+  const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
   const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
 
   const isMutating = deleteMutation.isPending; // Check if delete is running

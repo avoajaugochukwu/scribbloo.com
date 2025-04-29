@@ -11,7 +11,7 @@ export async function getCategories(): Promise<Category[]> {
   try {
     const { data, error } = await supabase
       .from('categories')
-      .select('id, name, created_at')
+      .select('id, name, created_at, description, seo_title, seo_description, hero_image_url, thumbnail_image_url, slug')
       .order('name', { ascending: true });
 
     if (error) {
@@ -24,7 +24,13 @@ export async function getCategories(): Promise<Category[]> {
     return (data || []).map(cat => ({
         id: cat.id,
         name: cat.name,
-        created_at: cat.created_at
+        created_at: cat.created_at,
+        description: cat.description,
+        seo_title: cat.seo_title,
+        seo_description: cat.seo_description,
+        hero_image_url: cat.hero_image_url,
+        thumbnail_image_url: cat.thumbnail_image_url,
+        slug: cat.slug
     })) as Category[];
 
   } catch (err) {
