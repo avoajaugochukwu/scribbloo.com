@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useRouter, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // For displaying current image
 import { Button } from '@/components/ui/button';
@@ -14,12 +14,10 @@ import { getImageForEdit } from '../../../actions/images/read'; // getImageForEd
 import { updateImage } from '../../../actions/images/update'; // updateImage is here
 import { getCategories } from '../../../actions/categories/read'; // getCategories is here
 import { getTags } from '../../../actions/tags/read'; // getTags is here
-import { type ImageForEdit } from '../../../actions/images/types'; // ImageForEdit type is here
 import { type Category } from '../../../actions/categories/types'; // Category type is here
 import { type Tag } from '../../../actions/tags/types'; // Tag type is here
 
 export default function EditImagePage() {
-    const router = useRouter();
     const params = useParams();
     const imageId = params.imageId as string;
     const queryClient = useQueryClient();
@@ -38,11 +36,11 @@ export default function EditImagePage() {
     });
 
     // --- Fetch Available Categories/Tags ---
-    const { data: availableCategories = [], isLoading: loadingCategories, error: categoryError } = useQuery<Category[], Error>({
+    const { data: availableCategories = [], isLoading: loadingCategories } = useQuery<Category[], Error>({
         queryKey: ['availableCategories'],
         queryFn: getCategories,
     });
-    const { data: availableTags = [], isLoading: loadingTags, error: tagError } = useQuery<Tag[], Error>({
+    const { data: availableTags = [], isLoading: loadingTags } = useQuery<Tag[], Error>({
         queryKey: ['availableTags'],
         queryFn: getTags,
     });
@@ -104,7 +102,6 @@ export default function EditImagePage() {
 
     // --- Loading & Error States ---
     const isLoading = loadingImage || loadingCategories || loadingTags || updateMutation.isPending;
-    const error = imageError || categoryError || tagError;
 
     // Construct image URL
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

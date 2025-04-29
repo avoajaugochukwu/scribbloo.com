@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,7 +15,6 @@ import { type Tag } from '../../actions/tags/types';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export default function CreateImagePage() {
-  const router = useRouter();
   const queryClient = useQueryClient();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');

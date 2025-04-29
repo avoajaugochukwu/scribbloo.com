@@ -1,5 +1,5 @@
 'use server';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { type AdminImageWithRelations, type ImageForEdit } from './types'; // Import types
 

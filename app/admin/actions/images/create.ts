@@ -1,8 +1,7 @@
 'use server';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-// Types are not directly needed here, but could be imported for clarity if desired
 
 /**
  * Creates a new image record, uploads the file, and links categories/tags.

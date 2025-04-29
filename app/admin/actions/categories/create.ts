@@ -2,7 +2,6 @@
 
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-import { type Category } from './types'; // Import type
 
 /**
  * Creates a new category in the database.

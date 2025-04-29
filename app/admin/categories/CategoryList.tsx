@@ -1,7 +1,6 @@
 'use client';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getCategories } from '../actions/categories/read';
 import { updateCategory } from '../actions/categories/update';
@@ -15,11 +14,10 @@ import { Trash2, Edit, Save, XCircle } from 'lucide-react';
 function formatDate(dateString: string | null | undefined): string {
   if (!dateString) return 'N/A';
   try { return new Date(dateString).toLocaleDateString(); }
-  catch (e) { return 'Invalid Date'; }
+  catch (error: any) { return `Invalid Date: ${error.message}`; }
 }
 
 export function CategoryList() {
-  const router = useRouter();
   const queryClient = useQueryClient();
 
   const [editingCategoryId, setEditingCategoryId] = useState<string | null>(null);
@@ -131,7 +129,7 @@ export function CategoryList() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm">
             <h3 className="text-lg font-medium mb-4">Confirm Deletion</h3>
-            <p className="mb-4">Are you sure you want to delete the category "{deleteConfirmation.name}"?</p>
+            <p className="mb-4">Are you sure you want to delete the category &quot;{deleteConfirmation.name}&quot;?</p>
             <div className="flex justify-end space-x-3">
               <Button variant="outline" onClick={cancelDelete} disabled={isMutating}>Cancel</Button>
               <Button variant="destructive" onClick={confirmDelete} disabled={isMutating}>

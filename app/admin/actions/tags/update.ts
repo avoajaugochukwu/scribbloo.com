@@ -2,7 +2,6 @@
 
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-import { type Tag } from './types'; // Import type
 
 /**
  * Updates an existing tag's name.

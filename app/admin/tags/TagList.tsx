@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getTags } from '../actions/tags/read';
@@ -14,14 +14,13 @@ import { Trash2, Edit, Save, XCircle } from 'lucide-react';
 function formatDate(dateString: string | null | undefined): string {
     if (!dateString) return 'N/A';
     try { return new Date(dateString).toLocaleDateString(); }
-    catch (e) { return 'Invalid Date'; }
+    catch (error: any) { return `Invalid Date: ${error.message}`; }
 }
 
 export function TagList() {
     const queryClient = useQueryClient();
     const [editingTagId, setEditingTagId] = useState<string | null>(null);
     const [editingName, setEditingName] = useState('');
-    const [deleteConfirmation, setDeleteConfirmation] = useState<{ id: string; name: string } | null>(null);
 
     // --- Fetch with useQuery ---
     const { data: tags = [], isLoading: isLoadingTags, error: fetchError } = useQuery<Tag[], Error>({
@@ -37,7 +36,7 @@ export function TagList() {
             formData.append('tagName', variables.name);
             return updateTag(formData);
         },
-        onSuccess: (result, variables) => {
+        onSuccess: (result) => {
             if (result.success) {
                 queryClient.invalidateQueries({ queryKey: ['tags'] });
                 setEditingTagId(null);
@@ -51,10 +50,9 @@ export function TagList() {
     // --- Delete Mutation ---
     const deleteMutation = useMutation({
         mutationFn: deleteTag,
-        onSuccess: (result, tagId) => {
+        onSuccess: (result) => {
             if (result.success) {
                 queryClient.invalidateQueries({ queryKey: ['tags'] });
-                setDeleteConfirmation(null);
             } else {
                 alert(`Deletion failed: ${result.message}`);
             }
@@ -80,12 +78,6 @@ export function TagList() {
             return;
         }
         deleteMutation.mutate(tagId);
-    };
-    const confirmDelete = () => {
-        if (deleteConfirmation) deleteMutation.mutate(deleteConfirmation.id);
-    };
-    const cancelDelete = () => {
-        setDeleteConfirmation(null);
     };
 
     // --- Loading/Error States ---
