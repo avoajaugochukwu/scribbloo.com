@@ -12,12 +12,17 @@ export interface Image {
 /**
  * Represents the structure of the 'categories' table.
  */
-export interface Category {
-  id: string; // uuid
+export type Category = {
+  id: string;
   name: string;
-  slug: string | null; // Assuming slug can be nullable based on schema, adjust if required
-  description?: string | null; // <-- Ensure this line exists and is optional/nullable if needed
-}
+  created_at: string;
+  description: string;
+  seo_title: string;
+  seo_description: string;
+  hero_image_url: string;
+  thumbnail_image_url: string;
+  slug: string;
+}; 
 
 /**
  * Represents the structure of the 'tags' table.

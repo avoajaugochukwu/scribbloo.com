@@ -127,7 +127,7 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
                 className="p-1 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Print image"
               >
-                <Printer className="h-5 w-5" />
+                <Printer className="h-8 w-8" />
               </button>
             </TooltipTrigger>
             <TooltipContent>

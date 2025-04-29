@@ -1,24 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import { ImageType } from '@/types/database'; // Adjust path if needed: ../../../types/database
+import { ImageType } from '@/types/database';
 import { Constants } from '@/config/constants';
-import DownloadIcon from './DownloadIcon'; // Renamed import
-import PrintIcon from './PrintIcon'; // <-- Import the new PrintIcon
+import DownloadIcon from './DownloadIcon';
+import PrintIcon from './PrintIcon';
 
 interface ColoringPageImageProps {
   image: ImageType;
   categoryName: string;
-  // Add imageUrlStub if you are constructing the URL here, otherwise remove
-  // imageUrlStub: string;
 }
 
-const imageUrlStub = Constants.SUPABASE_URL + '/storage/v1/object/public/coloring-images/'
-
 export default function ColoringPageImage({ image, categoryName }: ColoringPageImageProps) {
-  const fullImageUrl = image.image_url ? imageUrlStub + image.image_url : null;
-
-  // Generate the base filename (e.g., "fairy-girl" or "coloring-page")
+  const imageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET + image.image_url;
   const baseFilename = image.title
     ? image.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';
@@ -30,9 +24,9 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
     <div key={image.id} className="border rounded-lg overflow-hidden shadow-sm group relative flex flex-col">
       {/* Image Section */}
       <div className="relative">
-        {fullImageUrl ? (
+        {image.image_url ? (
           <Image
-            src={fullImageUrl}
+            src={imageUrl}
             alt={image.title || `Coloring page in ${categoryName}`}
             width={300}
             height={300}
@@ -46,25 +40,25 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
       </div>
 
       {/* Info Section */}
-      <div className="p-4 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow px-8">
         {/* Title and Icons Container */}
         <div className="flex justify-between items-center mb-1">
-          <h3 className="font-semibold text-lg truncate flex-grow mr-2" title={image.title || 'Untitled'}>
+          <h3 className="font-semibold text-2xl truncate flex-grow mr-2" title={image.title || 'Untitled'}>
             {image.title || 'Untitled'}
           </h3>
           {/* Container for multiple icons */}
-          <div className="flex items-center space-x-1"> {/* Add space between icons */}
+          <div className="flex items-center space-x-4"> {/* Add space between icons */}
             <PrintIcon
-                imageUrl={fullImageUrl}
+                imageUrl={imageUrl}
                 filename={downloadFilename}
             />
-            <DownloadIcon imageUrl={fullImageUrl} filename={downloadFilename} />
+            <DownloadIcon imageUrl={imageUrl} filename={downloadFilename} />
           </div>
         </div>
 
         {/* Description */}
         {image.description && (
-          <p className="text-gray-600 text-sm truncate mb-2 flex-grow" title={image.description}> {/* Added flex-grow */}
+          <p className="text-gray-600 text-md truncate mb-2 flex-grow" title={image.description}> {/* Added flex-grow */}
             {image.description}
           </p>
         )}
