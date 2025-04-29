@@ -80,7 +80,6 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     }
     oldHeroPath = currentCategory.hero_image_url;
     oldThumbnailPath = currentCategory.thumbnail_image_url;
-    const slug = currentCategory.slug || 'category'; // Use slug for prefix
 
     // 2. Upload NEW Hero Image (if provided)
     if (newHeroImageFile) {

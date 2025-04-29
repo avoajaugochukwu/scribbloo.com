@@ -5,7 +5,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getTags } from '../actions/tags/read';
 import { updateTag } from '../actions/tags/update';
 import { deleteTag } from '../actions/tags/delete';
-import { type Tag } from '../actions/tags/types';
+import Tag from '@/types/tag.type';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Trash2, Edit, Save, XCircle } from 'lucide-react';
