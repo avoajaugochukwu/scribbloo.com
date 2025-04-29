@@ -5,16 +5,9 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import Link from 'next/link';
 import { getCategories } from '../actions/categories/read';
 import { deleteCategory } from '../actions/categories/delete';
-import { type Category } from '../actions/categories/types';
+import Category from '@/types/category.type';
 import { Button } from '@/components/ui/button';
 import { Trash2, Edit } from 'lucide-react';
-
-// Helper for date formatting
-function formatDate(dateString: string | null | undefined): string {
-  if (!dateString) return 'N/A';
-  try { return new Date(dateString).toLocaleDateString(); }
-  catch (error: any) { return `Invalid Date: ${error.message}`; }
-}
 
 export function CategoryList() {
   const queryClient = useQueryClient();

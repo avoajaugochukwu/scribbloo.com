@@ -100,11 +100,6 @@ export default function AdminPage() {
     setDeleteConfirmation(null);
   };
 
-  // Get Supabase URL for image construction
-  const supabaseUrl = Constants.SUPABASE_URL;
-  const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
-  const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
-
   const isMutating = deleteMutation.isPending; // Check if delete is running
 
   // --- Render Admin Content (Image List) ---
@@ -113,15 +108,15 @@ export default function AdminPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
         <div className="flex space-x-2">
-            <Button asChild>
-                <Link href="/admin/images/create">Create New Image</Link>
-            </Button>
-            <Button asChild variant="outline">
-                <Link href="/admin/categories">Manage Categories</Link>
-            </Button>
-            <Button asChild variant="outline">
-                <Link href="/admin/tags">Manage Tags</Link>
-            </Button>
+          <Button asChild>
+            <Link href="/admin/images/create">Create New Image</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/admin/categories">Manage Categories</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/admin/tags">Manage Tags</Link>
+          </Button>
         </div>
         {!isLoading && totalImages > 0 && (
           <div className="text-right text-sm text-gray-600 mb-4">
@@ -154,73 +149,69 @@ export default function AdminPage() {
 
       {/* Content: Table */}
       {!isLoading && !fetchError && images.length > 0 && (
-         <div className="overflow-x-auto relative shadow-md sm:rounded-lg mb-6">
-           <table className="w-full text-sm text-left text-gray-500">
-             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-               <tr>
-                 <th scope="col" className="py-3 px-6">Thumbnail</th>
-                 <th scope="col" className="py-3 px-6">Title</th>
-                 <th scope="col" className="py-3 px-6">Categories</th>
-                 <th scope="col" className="py-3 px-6">Tags</th>
-                 <th scope="col" className="py-3 px-6">Created At</th>
-                 <th scope="col" className="py-3 px-6 text-right">Actions</th>
-               </tr>
-             </thead>
-             <tbody>
-               {images.map((image) => {
-                 const fullImageUrl = storageBaseUrl && image.image_url
-                   ? `${storageBaseUrl}${image.image_url}`
-                   : null;
-
-                 return (
-                   <tr key={image.id} className="bg-white border-b hover:bg-gray-50">
-                     {/* Thumbnail */}
-                     <td className="py-2 px-6">
-                       {fullImageUrl ? ( <Image src={fullImageUrl} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" onError={(e) => console.warn(`Failed to load image: ${fullImageUrl}`, e)} /> ) : ( <div className="h-16 w-16 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">{image.image_url ? 'URL Error' : 'No Image'}</div> )}
-                     </td>
-                     {/* Title */}
-                     <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
-                       {image.title || 'Untitled'}
-                     </td>
-                     {/* Categories List */}
-                     <td className="py-4 px-6">
-                       {image.categories.length > 0
-                         ? image.categories.join(', ')
-                         : <span className="text-gray-400 italic">None</span>}
-                     </td>
-                     {/* Tags List */}
-                     <td className="py-4 px-6">
-                       {image.tags.length > 0
-                         ? image.tags.join(', ')
-                         : <span className="text-gray-400 italic">None</span>
-                       }
-                     </td>
-                     {/* Created At */}
-                     <td className="py-4 px-6">
-                       <ClientOnlyDate dateString={image.created_at} />
-                     </td>
-                     {/* Actions */}
-                     <td className="py-4 px-6 text-right">
-                       <Button asChild variant="ghost" size="sm" title="Edit Image" disabled={isMutating}>
-                         <Link href={`/admin/images/edit/${image.id}`}>
-                           <Edit className="h-4 w-4" />
-                         </Link>
-                       </Button>
-                       <Button variant="ghost" size="sm" title="Delete Image" onClick={() => handleDeleteClick(image)} disabled={isMutating} className="text-red-600 hover:text-red-800 ml-2">
-                         <Trash2 className="h-4 w-4" />
-                       </Button>
-                     </td>
-                   </tr>
-                 );
-               })}
-             </tbody>
-           </table>
-         </div>
+        <div className="overflow-x-auto relative shadow-md sm:rounded-lg mb-6">
+          <table className="w-full text-sm text-left text-gray-500">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" className="py-3 px-6">Thumbnail</th>
+                <th scope="col" className="py-3 px-6">Title</th>
+                <th scope="col" className="py-3 px-6">Categories</th>
+                <th scope="col" className="py-3 px-6">Tags</th>
+                <th scope="col" className="py-3 px-6">Created At</th>
+                <th scope="col" className="py-3 px-6 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {images.map((image) => {
+                return (
+                  <tr key={image.id} className="bg-white border-b hover:bg-gray-50">
+                    {/* Thumbnail */}
+                    <td className="py-2 px-6">
+                      <Image src={Constants.SUPABASE_COLORING_IMAGES_BUCKET + image.image_url} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" />
+                    </td>
+                    {/* Title */}
+                    <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
+                      {image.title || 'Untitled'}
+                    </td>
+                    {/* Categories List */}
+                    <td className="py-4 px-6">
+                      {image.categories.length > 0
+                        ? image.categories.join(', ')
+                        : <span className="text-gray-400 italic">None</span>}
+                    </td>
+                    {/* Tags List */}
+                    <td className="py-4 px-6">
+                      {image.tags.length > 0
+                        ? image.tags.join(', ')
+                        : <span className="text-gray-400 italic">None</span>
+                      }
+                    </td>
+                    {/* Created At */}
+                    <td className="py-4 px-6">
+                      <ClientOnlyDate dateString={image.created_at} />
+                    </td>
+                    {/* Actions */}
+                    <td className="py-4 px-6 text-right">
+                      <Button asChild variant="ghost" size="sm" title="Edit Image" disabled={isMutating}>
+                        <Link href={`/admin/images/edit/${image.id}`}>
+                          <Edit className="h-4 w-4" />
+                        </Link>
+                      </Button>
+                      <Button variant="ghost" size="sm" title="Delete Image" onClick={() => handleDeleteClick(image)} disabled={isMutating} className="text-red-600 hover:text-red-800 ml-2">
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       )}
 
       {/* Empty State */}
       {!isLoading && !fetchError && images.length === 0 && (
-         <p className="text-center text-gray-500 py-10">No images found.</p>
+        <p className="text-center text-gray-500 py-10">No images found.</p>
       )}
 
       {/* Pagination Controls */}

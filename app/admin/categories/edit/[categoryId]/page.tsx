@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { getCategoryForEdit, updateCategory } from '../../../actions/categories/update'; // Adjust path
-import { type Category } from '../../../actions/categories/types'; // Adjust path
+import Category from '@/types/category.type';
 import { Constants } from '@/config/constants'; // Import constants
 
 export default function EditCategoryPage() {
@@ -99,16 +99,11 @@ export default function EditCategoryPage() {
     };
     // --- End File Handlers ---
 
-    // --- Construct Full URLs for Current Images ---
-    const getFullImageUrl = (bucket: string, path: string | null): string | null => {
-        if (!path) return null;
-        // Ensure path doesn't start with a slash if bucket URL already has one
-        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
-        return `${Constants.SUPABASE_URL}/storage/v1/object/public/${bucket}/${cleanPath}`;
-    };
-    const currentHeroFullUrl = getFullImageUrl(Constants.SUPABASE_HERO_IMAGES_BUCKET, currentHeroPath);
-    const currentThumbnailFullUrl = getFullImageUrl(Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET, currentThumbnailPath);
-    // --- End Construct URLs ---
+    const currentHeroFullUrl = Constants.SUPABASE_HERO_IMAGES_BUCKET + currentHeroPath;
+    const currentThumbnailFullUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET + currentThumbnailPath;
+
+    console.log('currentHeroFullUrl', currentHeroFullUrl);
+    console.log('currentThumbnailFullUrl', currentThumbnailFullUrl);
 
     // --- Handlers ---
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

@@ -10,8 +10,8 @@ import { Checkbox } from '@/components/ui/checkbox'; // Assuming Checkbox compon
 import { createImage } from '../../actions/images/create';
 import { getCategories } from '../../actions/categories/read';
 import { getTags } from '../../actions/tags/read';
-import { type Category } from '../../actions/categories/types';
-import { type Tag } from '../../actions/tags/types';
+import Category from '@/types/category.type';
+import Tag from '@/types/tag.type';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export default function CreateImagePage() {

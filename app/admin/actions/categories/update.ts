@@ -9,15 +9,13 @@ import { Constants } from '@/config/constants'; // Import constants
 async function uploadFile(
     bucketName: string,
     file: File,
-    fileNamePrefix: string = ''
 ): Promise<{ path: string | null; error: string | null }> {
      if (!file || file.size === 0) return { path: null, error: 'File is empty or missing.' };
      if (!file.type.startsWith('image/')) return { path: null, error: 'Invalid file type. Only images are allowed.' };
-     const fileExtension = file.name.split('.').pop();
-     const uniqueFileName = `${fileNamePrefix}${Date.now()}.${fileExtension}`;
-     const filePath = uniqueFileName;
-     console.log(`Uploading file "${file.name}" as "${filePath}" to bucket "${bucketName}"`);
-     const { data, error } = await supabase.storage.from(bucketName).upload(filePath, file, { cacheControl: '3600', upsert: false });
+     
+     
+     console.log(`Uploading file "${file.name}" as "${file.name}" to bucket "${bucketName}"`);
+     const { data, error } = await supabase.storage.from(bucketName).upload(file.name, file, { cacheControl: '3600', upsert: false });
      if (error) { console.error(`Storage upload error (${bucketName}):`, error); return { path: null, error: `Storage upload failed: ${error.message}` }; }
      console.log(`File uploaded successfully to ${bucketName}:`, data.path);
      return { path: data.path, error: null };
@@ -86,7 +84,7 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
     // 2. Upload NEW Hero Image (if provided)
     if (newHeroImageFile) {
-      const heroUploadResult = await uploadFile(heroBucket, newHeroImageFile, `${slug}-hero-`);
+      const heroUploadResult = await uploadFile('hero-images', newHeroImageFile);
       if (heroUploadResult.error || !heroUploadResult.path) {
         return { success: false, message: `New hero image upload failed: ${heroUploadResult.error}` };
       }
@@ -95,7 +93,7 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
     // 3. Upload NEW Thumbnail Image (if provided)
     if (newThumbnailImageFile) {
-      const thumbUploadResult = await uploadFile(thumbnailBucket, newThumbnailImageFile, `${slug}-thumb-`);
+      const thumbUploadResult = await uploadFile('thumbnail-images', newThumbnailImageFile);
       if (thumbUploadResult.error || !thumbUploadResult.path) {
         // Rollback: Delete newly uploaded hero image if thumbnail fails
         if (newHeroPath) await deleteStorageFile(heroBucket, newHeroPath);

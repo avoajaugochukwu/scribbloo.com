@@ -22,7 +22,6 @@ function slugify(text: string): string {
 async function uploadFile(
     bucketName: string,
     file: File,
-    fileNamePrefix: string = ''
 ): Promise<{ path: string | null; error: string | null }> {
     if (!file || file.size === 0) {
         return { path: null, error: 'File is empty or missing.' };
@@ -31,16 +30,11 @@ async function uploadFile(
         return { path: null, error: 'Invalid file type. Only images are allowed.' };
     }
 
-    // Optional: Generate a more unique filename (e.g., using timestamp or UUID)
-    const fileExtension = file.name.split('.').pop();
-    const uniqueFileName = `${fileNamePrefix}${Date.now()}.${fileExtension}`;
-    const filePath = uniqueFileName; // Store just the filename
-
-    console.log(`Uploading file "${file.name}" as "${filePath}" to bucket "${bucketName}"`);
+    console.log(`Uploading file "${file.name}" as "${file.name}" to bucket "${bucketName}"`);
 
     const { data, error } = await supabase.storage
         .from(bucketName)
-        .upload(filePath, file, {
+        .upload(file.name, file, {
             cacheControl: '3600',
             upsert: false, // Don't overwrite existing files with the same name
         });
@@ -93,14 +87,14 @@ export async function createCategory(formData: FormData): Promise<{ success: boo
 
   try {
     // 1. Upload Hero Image
-    const heroUploadResult = await uploadFile(heroBucket, heroImageFile, `${slug}-hero-`);
+    const heroUploadResult = await uploadFile(heroBucket, heroImageFile);
     if (heroUploadResult.error || !heroUploadResult.path) {
       return { success: false, message: `Hero image upload failed: ${heroUploadResult.error}` };
     }
     heroImagePath = heroUploadResult.path;
 
     // 2. Upload Thumbnail Image
-    const thumbnailUploadResult = await uploadFile(thumbnailBucket, thumbnailImageFile, `${slug}-thumb-`);
+    const thumbnailUploadResult = await uploadFile(thumbnailBucket, thumbnailImageFile);
     if (thumbnailUploadResult.error || !thumbnailUploadResult.path) {
       // Rollback: Delete hero image if thumbnail upload fails
       if (heroImagePath) {

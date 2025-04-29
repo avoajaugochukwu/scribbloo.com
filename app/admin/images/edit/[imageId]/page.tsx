@@ -105,8 +105,7 @@ export default function EditImagePage() {
     const isLoading = loadingImage || loadingCategories || loadingTags || updateMutation.isPending;
 
     // Construct image URL
-    const storageBaseUrl = `${Constants.SUPABASE_URL}/storage/v1/object/public/coloring-images/`;
-    const currentImageUrl = `${storageBaseUrl}${imageDetails?.image_url}`;
+    const currentImageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET + imageDetails?.image_url;
 
     if (loadingImage) return <p>Loading image details...</p>; // Separate loading for initial image fetch
     if (imageError) return <p>Error loading image data: {imageError.message}</p>;
