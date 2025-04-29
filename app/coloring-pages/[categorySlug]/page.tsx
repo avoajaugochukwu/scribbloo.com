@@ -1,6 +1,6 @@
 import { getImagesByCategorySlug } from '@/lib/coloringPages';
 import Link from 'next/link';
-import ColoringPageImage from './components/ColoringPageImage'; // Relative path to the component
+import ColoringPageImage from './components/ColoringPageImage';
 import { notFound } from 'next/navigation';
 import {
   Breadcrumb,
@@ -13,30 +13,26 @@ import {
 import { Metadata } from 'next';
 import CategoryWithImages from '@/types/categorywithimages.type';
 import ImageType from '@/types/image.type';
+import Image from 'next/image';
+import React from 'react';
+import { Constants } from '@/config/constants';
 
-// Define the props for the page component
 interface CategoryPageProps {
   params: Promise<{ categorySlug: string }>;
-  // searchParams: { [key: string]: string | string[] | undefined }; // Include if you use searchParams
 }
 
-// This is a React Server Component (RSC)
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { categorySlug } = await params;
 
-  // Fetch the category details and its associated images
   const categoryData = await getImagesByCategorySlug(categorySlug) as CategoryWithImages | null;
 
-  // Handle case where category is not found
+  console.log('Category Data:', categoryData);
+
   if (!categoryData) {
-    notFound(); // Trigger 404 page
+    notFound();
   }
 
-  // Remove imageUrlStub if URL construction is moved to the component
-  // const imageUrlStub = Constants.SUPABASE_URL + '/storage/v1/object/public/images/'
-  // Handle case where category exists but has no images (adjust as needed)
   const images = categoryData.images || [];
-  // console.log('Images:', images); // Keep for debugging if needed
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -45,12 +41,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mb-20">
       <Breadcrumb>
         <BreadcrumbList>
           {breadcrumbItems.map((item, index) => (
-            <> {/* Use Fragment to handle key prop correctly */}
-              <BreadcrumbItem key={item.href}>
+            <React.Fragment key={item.href}>
+              <BreadcrumbItem>
                 {index === breadcrumbItems.length - 1 ? (
                   // Render last item as BreadcrumbPage (not a link)
                   <BreadcrumbPage>{item.label}</BreadcrumbPage>
@@ -65,19 +61,32 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 // Add separator if not the last item
                 <BreadcrumbSeparator />
               )}
-            </>
+            </React.Fragment>
           ))}
         </BreadcrumbList>
       </Breadcrumb>
+
 
       <h1 className="text-3xl font-bold mb-6 mt-4"> {/* Added mt-4 for spacing */}
         {categoryData.name} Coloring Pages
       </h1>
 
-      {/* Remove or comment out this section as categoryData.description doesn't exist */}
-      {/* {categoryData.description && (
-        <p className="text-lg text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: categoryData.description.replace(/"/g, '&quot;').replace(/'/g, '&apos;') }} />
-      )} */}
+      <section className="w-4/6">
+        <Image 
+          src={Constants.SUPABASE_HERO_IMAGES_BUCKET + categoryData.hero_image_url} 
+          alt={categoryData.name} 
+          width={1000} 
+          height={1000} 
+          className="w-full h-auto"
+        />
+        {/* Remove or comment out this section as categoryData.description doesn't exist */}
+        {categoryData.description && (
+          <p className="text-lg text-gray-600 my-6"
+            dangerouslySetInnerHTML={
+              { __html: categoryData.description.replace(/"/g, '&quot;').replace(/'/g, '&apos;') }
+            } />
+        )}
+      </section>
 
       {images.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -87,8 +96,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               key={image.id}
               image={image}
               categoryName={categoryData.name}
-              // Pass imageUrlStub if needed by the component
-              // imageUrlStub={imageUrlStub}
             />
           ))}
         </div>
@@ -131,11 +138,3 @@ export async function generateMetadata(
     },
   };
 }
-
-// Optional: Generate static paths if you want to pre-render these pages at build time
-// export async function generateStaticParams() {
-//   const { data: categories } = await supabase.from('categories').select('slug');
-//   return categories?.map((category) => ({
-//     categorySlug: category.slug,
-//   })) || [];
-// } 

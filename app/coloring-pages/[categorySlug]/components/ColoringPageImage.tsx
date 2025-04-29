@@ -43,7 +43,7 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
       <div className="p-4 flex flex-col flex-grow px-6">
         {/* Title and Icons Container */}
         <div className="flex justify-between items-center mb-1">
-          <h3 className="font-semibold text-2xl truncate flex-grow mr-2" title={image.title || 'Untitled'}>
+          <h3 className="font-semibold text-xl truncate flex-grow mr-2" title={image.title || 'Untitled'}>
             {image.title || 'Untitled'}
           </h3>
           {/* Container for multiple icons */}
