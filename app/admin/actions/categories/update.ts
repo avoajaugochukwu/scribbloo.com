@@ -61,8 +61,8 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
   console.log(`Attempting to update category ID: ${categoryId}`);
 
-  const heroBucket = Constants.SUPABASE_HERO_IMAGES_BUCKET;
-  const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET;
+  const heroBucket = 'hero-images';
+  const thumbnailBucket = 'thumbnail-images';
   let newHeroPath: string | null = null;
   let newThumbnailPath: string | null = null;
   let oldHeroPath: string | null = null;
@@ -187,4 +187,4 @@ export async function getCategoryForEdit(categoryId: string): Promise<Category |
         console.error(`Unexpected error fetching category ${categoryId}:`, err);
         return null;
     }
-} 
+}
