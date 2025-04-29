@@ -1,19 +1,27 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { CreateCategoryForm } from './CreateCategoryForm';
-import { CategoryList } from './CategoryList';
+'use client';
 
-export default async function ManageCategoriesPage() {
+import { Button } from '@/components/ui/button';
+import { CategoryList } from './CategoryList';
+import Link from 'next/link';
+import { PlusCircle } from 'lucide-react';
+
+export default function CategoriesAdminPage() {
   return (
-    <div className="w-3/5 mx-auto px-4 py-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Manage Categories</h1>
-        <Button variant="outline" size="sm" asChild>
-          <Link href="/admin">Back to Admin</Link>
-        </Button>
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-between items-center mb-6 gap-4">
+        <h1 className="text-3xl font-bold">Manage Categories</h1>
+        <div className="flex items-center gap-2">
+            <Button asChild>
+                <Link href="/admin/categories/create">
+                    <PlusCircle className="mr-2 h-4 w-4" /> Create New Category
+                </Link>
+            </Button>
+            <Button asChild variant="outline">
+                <Link href="/admin">Back to Admin Dashboard</Link>
+            </Button>
+        </div>
       </div>
 
-      <CreateCategoryForm />
       <CategoryList />
     </div>
   );

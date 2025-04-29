@@ -16,6 +16,7 @@ import { getCategories } from '../../../actions/categories/read'; // getCategori
 import { getTags } from '../../../actions/tags/read'; // getTags is here
 import { type Category } from '../../../actions/categories/types'; // Category type is here
 import { type Tag } from '../../../actions/tags/types'; // Tag type is here
+import { Constants } from '@/config/constants';
 
 export default function EditImagePage() {
     const params = useParams();
@@ -104,12 +105,8 @@ export default function EditImagePage() {
     const isLoading = loadingImage || loadingCategories || loadingTags || updateMutation.isPending;
 
     // Construct image URL
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'images';
-    const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
-    const currentImageUrl = storageBaseUrl && imageDetails?.image_url
-        ? `${storageBaseUrl}${imageDetails.image_url}`
-        : null;
+    const storageBaseUrl = `${Constants.SUPABASE_URL}/storage/v1/object/public/coloring-images/`;
+    const currentImageUrl = `${storageBaseUrl}${imageDetails?.image_url}`;
 
     if (loadingImage) return <p>Loading image details...</p>; // Separate loading for initial image fetch
     if (imageError) return <p>Error loading image data: {imageError.message}</p>;
@@ -132,9 +129,9 @@ export default function EditImagePage() {
                     <Image
                         src={currentImageUrl}
                         alt={imageDetails.title || 'Current image'}
-                        width={200}
-                        height={200}
-                        className="object-contain max-h-48 rounded"
+                        width={1400}
+                        height={1400}
+                        className="object-contain rounded h-auto w-1/2"
                     />
                 </div>
             )}

@@ -27,7 +27,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'hmmbilteoshdhougrfik.supabase.co', // Replace with your actual Supabase project ID hostname
         port: '',
-        pathname: '/storage/v1/object/public/images/**', // Adjust if your bucket name or path structure is different
+        pathname: '/storage/v1/object/public/**', // Allows any path within the public storage
       },
       // Add other hostnames if you use images from other sources
       // Example: { protocol: 'https', hostname: 'images.unsplash.com' },

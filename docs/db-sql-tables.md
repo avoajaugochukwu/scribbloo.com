@@ -1,4 +1,4 @@
--- 1. Create the images table
+-- Create images table
 create table images (
   id uuid primary key default gen_random_uuid(),
   title text not null,
@@ -7,27 +7,32 @@ create table images (
   created_at timestamp with time zone default timezone('utc', now())
 );
 
--- 2. Create the categories table
+-- Create categories table
 create table categories (
   id uuid primary key default gen_random_uuid(),
   name text not null unique,
-  slug text unique
+  slug text unique,
+  description text default '' not null,
+  seo_title text default '' not null,
+  seo_description text default '' not null,
+  hero_image_url text default '' not null,
+  thumbnail_image_url text default '' not null
 );
 
--- 3. Create the tags table
+-- Create tags table
 create table tags (
   id uuid primary key default gen_random_uuid(),
   name text not null unique
 );
 
--- 4. Create the image_categories join table
+-- Create image_categories join table
 create table image_categories (
   id uuid primary key default gen_random_uuid(),
   image_id uuid references images(id) on delete cascade,
   category_id uuid references categories(id) on delete cascade
 );
 
--- 5. Create the image_tags join table
+-- Create image_tags join table
 create table image_tags (
   id uuid primary key default gen_random_uuid(),
   image_id uuid references images(id) on delete cascade,

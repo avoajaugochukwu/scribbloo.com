@@ -101,7 +101,7 @@ export default function AdminPage() {
 
   // Get Supabase URL for image construction
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'images';
+  const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_NAME || 'coloring-images';
   const storageBaseUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/${bucketName}/` : null;
 
   const isMutating = deleteMutation.isPending; // Check if delete is running
