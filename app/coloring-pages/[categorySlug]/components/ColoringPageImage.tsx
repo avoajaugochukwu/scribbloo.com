@@ -13,7 +13,7 @@ interface ColoringPageImageProps {
   // imageUrlStub: string;
 }
 
-const imageUrlStub = Constants.SUPABASE_URL + '/storage/v1/object/public/images/'
+const imageUrlStub = Constants.SUPABASE_URL + '/storage/v1/object/public/coloring-images/'
 
 export default function ColoringPageImage({ image, categoryName }: ColoringPageImageProps) {
   const fullImageUrl = image.image_url ? imageUrlStub + image.image_url : null;
