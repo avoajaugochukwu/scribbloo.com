@@ -1,7 +1,7 @@
 'use server';
 
 import { supabase } from '@/lib/supabaseClient';
-import { type Tag } from './types'; // Import type
+import Tag from '@/types/tag.type';
 
 /**
  * Fetches all tags from the database, ordered by name.

@@ -1,5 +1,4 @@
-// Define the type for a category (using string for UUID)
-export type Category = {
+type Category = {
   id: string;
   name: string;
   created_at: string;
@@ -9,4 +8,6 @@ export type Category = {
   hero_image_url: string;
   thumbnail_image_url: string;
   slug: string;
-}; 
+};
+
+export default Category;

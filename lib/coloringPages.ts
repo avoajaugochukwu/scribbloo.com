@@ -1,6 +1,8 @@
 // Import the Supabase client and necessary types
+import CategoryWithImages from '@/types/categorywithimages.type';
 import { supabase } from './supabaseClient'; // Adjust path if needed
-import { CategoryWithImages, Category, ImageType } from '@/types/database'; // Adjust path if needed
+import ImageType from '@/types/image.type';
+import Category from '@/types/category.type';
 
 /**
  * Fetches a category by its slug, including its associated images, using multiple queries.
@@ -19,7 +21,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     // 1 & 2: Query categories table for the category ID and details
     const { data: categoryData, error: categoryError } = await supabase
       .from('categories')
-      .select('id, name, slug') // <-- Removed description
+      .select('id, name, slug, created_at, description, seo_title, seo_description, hero_image_url, thumbnail_image_url') // <-- Removed description
       .eq('slug', categorySlug)
       .maybeSingle(); // Expect 0 or 1 category
 
@@ -56,6 +58,12 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
         id: categoryData.id,
         name: categoryData.name,
         slug: categoryData.slug,
+        created_at: categoryData.created_at,
+        description: categoryData.description,
+        seo_title: categoryData.seo_title,
+        seo_description: categoryData.seo_description,
+        hero_image_url: categoryData.hero_image_url,
+        thumbnail_image_url: categoryData.thumbnail_image_url,
         images: [],
       };
       return result;
@@ -78,6 +86,12 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       id: categoryData.id,
       name: categoryData.name,
       slug: categoryData.slug,
+      created_at: categoryData.created_at,
+      description: categoryData.description,
+      seo_title: categoryData.seo_title,
+      seo_description: categoryData.seo_description,
+      hero_image_url: categoryData.hero_image_url,
+      thumbnail_image_url: categoryData.thumbnail_image_url,
       images: (imagesData || []) as ImageType[],
     };
 

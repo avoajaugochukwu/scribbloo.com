@@ -49,21 +49,3 @@ export interface ImageTag {
   image_id: string; // uuid
   tag_id: string; // uuid
 }
-
-// --- Application-Specific Combined Types ---
-
-/**
- * Represents a Category object along with its associated images.
- * This is likely derived from a join query or multiple queries.
- */
-export interface CategoryWithImages extends Category {
-  images: Image[]; // Array of images associated with the category
-}
-
-// Reintroduce the ImageType alias
-/**
- * Alias for Image interface to avoid naming conflicts (e.g., with next/image).
- */
-export type ImageType = Image;
-
-// Add other database-related types here 

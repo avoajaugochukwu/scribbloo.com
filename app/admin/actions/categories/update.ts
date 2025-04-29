@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-import { type Category } from './types';
+import Category from '@/types/category.type';
 import { Constants } from '@/config/constants'; // Import constants
 
 // Re-use the upload helper from create.ts (or move to a shared utils file)

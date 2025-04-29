@@ -1,6 +1,5 @@
 import { getImagesByCategorySlug } from '@/lib/coloringPages';
 import Link from 'next/link';
-import { CategoryWithImages, ImageType } from '@/types/database'; // Adjust path if needed
 import ColoringPageImage from './components/ColoringPageImage'; // Relative path to the component
 import { notFound } from 'next/navigation';
 import {
@@ -12,6 +11,8 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Metadata } from 'next';
+import CategoryWithImages from '@/types/categorywithimages.type';
+import ImageType from '@/types/image.type';
 
 // Define the props for the page component
 interface CategoryPageProps {

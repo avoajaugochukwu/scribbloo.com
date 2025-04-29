@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { ImageType } from '@/types/database';
+import ImageType from '@/types/image.type';
 import { Constants } from '@/config/constants';
 import DownloadIcon from './DownloadIcon';
 import PrintIcon from './PrintIcon';
@@ -40,7 +40,7 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
       </div>
 
       {/* Info Section */}
-      <div className="p-4 flex flex-col flex-grow px-8">
+      <div className="p-4 flex flex-col flex-grow px-6">
         {/* Title and Icons Container */}
         <div className="flex justify-between items-center mb-1">
           <h3 className="font-semibold text-2xl truncate flex-grow mr-2" title={image.title || 'Untitled'}>

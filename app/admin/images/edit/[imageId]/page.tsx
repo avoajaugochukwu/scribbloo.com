@@ -14,8 +14,8 @@ import { getImageForEdit } from '../../../actions/images/read'; // getImageForEd
 import { updateImage } from '../../../actions/images/update'; // updateImage is here
 import { getCategories } from '../../../actions/categories/read'; // getCategories is here
 import { getTags } from '../../../actions/tags/read'; // getTags is here
-import { type Category } from '../../../actions/categories/types'; // Category type is here
-import { type Tag } from '../../../actions/tags/types'; // Tag type is here
+import Category from '@/types/category.type';
+import Tag from '@/types/tag.type';
 import { Constants } from '@/config/constants';
 
 export default function EditImagePage() {

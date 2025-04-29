@@ -112,7 +112,7 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
                 className="p-1 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Download image as PDF"
               >
-                <Download className="h-8 w-8" />
+                <Download className="h-6 w-6" strokeWidth={1.5} cursor="pointer" />
               </button>
             </TooltipTrigger>
             <TooltipContent>

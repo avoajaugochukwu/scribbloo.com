@@ -1,7 +1,7 @@
 'use server';
 
 import { supabase } from '@/lib/supabaseClient';
-import { type Category } from './types'; // Import type
+import Category from '@/types/category.type';
 
 /**
  * Fetches all categories from the database, ordered by name.
