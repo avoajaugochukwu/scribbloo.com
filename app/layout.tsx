@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Header />
         <div className="relative flex flex-col flex-grow">
-          <main className="flex-grow pt-14">{children}</main>
+          <main className="flex-grow pt-4">{children}</main>
         </div>
         <Footer />
         <script
