@@ -3,6 +3,7 @@ import { fetchPages } from "@/lib/notion";
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { BlogPostCard } from "@/components/BlogPostCard";
+import CategoryListDisplay from "./coloring-pages/components/CategoryListDisplay";
 
 export default async function Home() {
   const pages = await fetchPages();
@@ -60,6 +61,10 @@ export default async function Home() {
             Get your coloring fix with our wide range of free and premium coloring pages for kids and adults.
           </p>
         </div>
+      </section>
+
+      <section>
+        <CategoryListDisplay />
       </section>
 
       <section>
