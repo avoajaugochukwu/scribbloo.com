@@ -22,15 +22,17 @@ async function uploadFile(
 }
 
 // Helper to delete a file from storage, ignoring "Not found" errors
-async function deleteStorageFile(bucketName: string, filePath: string | null | undefined): Promise<void> {
+export async function deleteStorageFile(bucketName: string, filePath: string | null | undefined): Promise<void> {
     if (!filePath) return;
     console.log(`Attempting to delete file "${filePath}" from bucket "${bucketName}"`);
     const { error } = await supabase.storage.from(bucketName).remove([filePath]);
     if (error && !error.message.includes('Not found')) { // Log errors other than "file not found"
-        console.error(`Failed to delete file ${filePath} from ${bucketName}:`, error.message);
-        // Optionally throw error here if deletion failure should stop the process
-    } else if (!error) {
-         console.log(`File ${filePath} deleted successfully from ${bucketName}.`);
+        console.error(`Storage delete error (${bucketName}, ${filePath}):`, error.message);
+        // Decide if you want to throw here or just log. Logging is often sufficient.
+    } else if (error) {
+        console.log(`File "${filePath}" not found in bucket "${bucketName}" (already deleted?).`);
+    } else {
+        console.log(`File "${filePath}" deleted successfully from bucket "${bucketName}".`);
     }
 }
 
@@ -82,8 +84,8 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     oldThumbnailPath = currentCategory.thumbnail_image_url;
 
     // 2. Upload NEW Hero Image (if provided)
-    if (newHeroImageFile) {
-      const heroUploadResult = await uploadFile('hero-images', newHeroImageFile);
+    if (newHeroImageFile && newHeroImageFile.size > 0) {
+      const heroUploadResult = await uploadFile(heroBucket, newHeroImageFile);
       if (heroUploadResult.error || !heroUploadResult.path) {
         return { success: false, message: `New hero image upload failed: ${heroUploadResult.error}` };
       }
@@ -91,8 +93,8 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     }
 
     // 3. Upload NEW Thumbnail Image (if provided)
-    if (newThumbnailImageFile) {
-      const thumbUploadResult = await uploadFile('thumbnail-images', newThumbnailImageFile);
+    if (newThumbnailImageFile && newThumbnailImageFile.size > 0) {
+      const thumbUploadResult = await uploadFile(thumbnailBucket, newThumbnailImageFile);
       if (thumbUploadResult.error || !thumbUploadResult.path) {
         // Rollback: Delete newly uploaded hero image if thumbnail fails
         if (newHeroPath) await deleteStorageFile(heroBucket, newHeroPath);
