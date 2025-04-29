@@ -107,8 +107,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           src={Constants.SUPABASE_HERO_IMAGES_BUCKET + categoryData.hero_image_url} 
           alt={categoryData.name} 
           width={1000} 
-          height={1000} 
-          className="w-full h-auto"
+          height={500}
+          className="w-full h-auto relative"
         />
         {/* Remove or comment out this section as categoryData.description doesn't exist */}
         {categoryData.description && (
