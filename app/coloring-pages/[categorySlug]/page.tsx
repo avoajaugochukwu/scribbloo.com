@@ -54,7 +54,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         item: {
           '@type': 'ImageObject',
           name: image.title || 'Coloring Page',
-          contentUrl: `${Constants.SUPABASE_COLORING_IMAGES_BUCKET}${image.image_url}`,
+          contentUrl: `${Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL}${image.image_url}`,
           // Add description if available
           // description: image.description,
         }
@@ -103,7 +103,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <section className="mb-8 md:mb-12 bg-red-900 py-10 md:py-16 rounded-lg">
           <div className="flex justify-center items-center">
             <Image
-              src={Constants.SUPABASE_HERO_IMAGES_BUCKET + categoryData.hero_image_url}
+              src={Constants.SUPABASE_HERO_IMAGES_BUCKET_URL + categoryData.hero_image_url}
               alt={`${categoryData.name} category hero image`}
               width={500}
               height={750}
@@ -166,7 +166,7 @@ export async function generateMetadata(
   const canonicalUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
 
   const ogImageUrl = categoryData.hero_image_url
-    ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET}${categoryData.hero_image_url}`
+    ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image_url}`
     : undefined; // Use undefined if no hero image
 
   return {

@@ -22,7 +22,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
       return { success: false, message: 'Invalid file type. Please upload an image.' };
   }
 
-  const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
+  const bucketName = Constants.SUPABASE_COLORING_IMAGES_NAME;
   const filePath = imageFile.name;
 
   let newImageId: string | null = null;

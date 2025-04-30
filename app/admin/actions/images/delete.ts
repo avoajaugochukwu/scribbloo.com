@@ -4,6 +4,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 // Import shared helper
 import { deleteStorageFile } from '@/lib/storageUtils';
+import { Constants } from '@/config/constants';
 
 /**
  * Deletes an image record and its associated file from storage.
@@ -62,7 +63,7 @@ export async function deleteImage(imageId: string): Promise<{ success: boolean; 
         // 3. Delete associated image file from storage AFTER successful DB deletion
         if (imagePath) {
             console.log(`Attempting to delete image file: ${imagePath}`);
-            await deleteStorageFile('coloring-images', imagePath);
+            await deleteStorageFile(Constants.SUPABASE_COLORING_IMAGES_NAME, imagePath);
         } else {
             console.log(`No image path found for deleted image ${imageId}.`);
         }

@@ -42,8 +42,8 @@ export async function createCategory(formData: FormData): Promise<{ success: boo
 
   let heroImagePath: string | null = null;
   let thumbnailImagePath: string | null = null;
-  const heroBucket = Constants.SUPABASE_HERO_IMAGES_BUCKET;
-  const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET;
+  const heroBucket = Constants.SUPABASE_HERO_IMAGES_NAME;
+  const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_NAME;
 
   try {
     // 1. Upload Hero Image using shared helper

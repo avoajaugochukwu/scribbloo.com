@@ -189,8 +189,8 @@ export default function EditCategoryPage() {
 
 
     // Construct full image URLs for display
-    const heroImageUrl = currentHeroPath ? `${Constants.SUPABASE_URL}/storage/v1/object/public/${Constants.SUPABASE_HERO_IMAGES_BUCKET}/${currentHeroPath}` : null;
-    const thumbnailImageUrl = currentThumbnailPath ? `${Constants.SUPABASE_URL}/storage/v1/object/public/${Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET}/${currentThumbnailPath}` : null;
+    const heroImageUrl = currentHeroPath ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${currentHeroPath}` : null;
+    const thumbnailImageUrl = currentThumbnailPath ? `${Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL}${currentThumbnailPath}` : null;
 
 
     return (

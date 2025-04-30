@@ -167,7 +167,7 @@ export default function AdminPage() {
                   <tr key={image.id} className="bg-white border-b hover:bg-gray-50">
                     {/* Thumbnail */}
                     <td className="py-2 px-6">
-                      <Image src={Constants.SUPABASE_COLORING_IMAGES_BUCKET + image.image_url} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" />
+                      <Image src={Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL + image.image_url} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" />
                     </td>
                     {/* Title */}
                     <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">

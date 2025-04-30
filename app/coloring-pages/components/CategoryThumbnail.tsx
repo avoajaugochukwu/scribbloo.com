@@ -9,7 +9,7 @@ interface CategoryThumbnailProps {
 }
 
 export default function CategoryThumbnail({ category }: CategoryThumbnailProps) {
-  const imageUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET + category.thumbnail_image_url;
+  const imageUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL + category.thumbnail_image_url;
 
   return (
     <>

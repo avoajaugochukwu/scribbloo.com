@@ -4,6 +4,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 // Import shared helper
 import { deleteStorageFile } from '@/lib/storageUtils';
+import { Constants } from '@/config/constants';
 
 /**
  * Deletes a category from the database.
@@ -14,8 +15,8 @@ export async function deleteCategory(categoryId: string): Promise<{ success: boo
     }
 
     // Define bucket names
-    const heroBucket = 'hero-images';
-    const thumbnailBucket = 'thumbnail-images';
+    const heroBucket = Constants.SUPABASE_HERO_IMAGES_NAME;
+    const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_NAME;
     let heroImagePath: string | null = null;
     let thumbnailImagePath: string | null = null;
 

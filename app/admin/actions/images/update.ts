@@ -5,9 +5,10 @@ import { revalidatePath } from 'next/cache';
 // Import shared helpers
 import { uploadStorageFile, deleteStorageFile } from '@/lib/storageUtils';
 import ImageType from '@/types/image.type';
+import { Constants } from '@/config/constants';
 
 // Define the bucket name for coloring images
-const IMAGE_BUCKET = 'coloring-images';
+const IMAGE_BUCKET = Constants.SUPABASE_COLORING_IMAGES_NAME;
 
 /**
  * Updates an existing image's title and its category/tag associations using a DB function.

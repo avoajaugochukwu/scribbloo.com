@@ -34,8 +34,8 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
   console.log(`Attempting to update category ID: ${categoryId}`);
 
-  const heroBucket = Constants.SUPABASE_HERO_IMAGES_BUCKET; // <-- Use Constant
-  const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET; // <-- Use Constant
+  const heroBucket = Constants.SUPABASE_HERO_IMAGES_NAME; // <-- Use Constant
+  const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_NAME; // <-- Use Constant
   let newHeroPath: string | null = null;
   let newThumbnailPath: string | null = null;
   let oldHeroPath: string | null = null;

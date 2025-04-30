@@ -12,7 +12,7 @@ interface ColoringPageImageProps {
 }
 
 export default function ColoringPageImage({ image, categoryName }: ColoringPageImageProps) {
-  const imageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET + image.image_url;
+  const imageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL + image.image_url;
   const baseFilename = image.title
     ? image.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';
