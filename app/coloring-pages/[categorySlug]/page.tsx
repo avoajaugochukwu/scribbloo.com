@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/breadcrumb';
 import { Metadata } from 'next';
 import CategoryWithImages from '@/types/categorywithimages.type';
-import ImageType from '@/types/image.type';
+import ColoringPage from '@/types/coloringpage.type';
 import Image from 'next/image';
 import React from 'react';
 import { Constants } from '@/config/constants';
@@ -54,7 +54,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         item: {
           '@type': 'ImageObject',
           name: image.title || 'Coloring Page',
-          contentUrl: `${Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL}${image.image_url}`,
+          contentUrl: `${Constants.SUPABASE_COLORING_PAGES_BUCKET_URL}${image.image_url}`,
           // Add description if available
           // description: image.description,
         }
@@ -123,7 +123,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {images.length > 0 ? (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {images.map((image: ImageType) => (
+          {images.map((image: ColoringPage) => (
             <ColoringPageImage
               key={image.id}
               image={image}

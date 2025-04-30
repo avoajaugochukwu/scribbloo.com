@@ -1,6 +1,6 @@
 import Category from "./category.type";
-import ImageType from "./image.type";
+import ColoringPage from "./coloringpage.type";
 
 export default interface CategoryWithImages extends Category {
-  images: ImageType[];
+  images: ColoringPage[];
 }

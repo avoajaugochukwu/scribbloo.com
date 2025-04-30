@@ -1,7 +1,7 @@
-type ImageTag = {
+type ColoringPageTag = {
   id: string; // uuid
-  image_id: string; // uuid
+  coloring_page_id: string; // uuid
   tag_id: string; // uuid
 }
 
-export default ImageTag;
+export default ColoringPageTag;

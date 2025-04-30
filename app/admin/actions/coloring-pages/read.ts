@@ -2,18 +2,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { type AdminImageWithRelations, type ImageForEdit } from './types'; // Import types
+import { Constants } from '@/config/constants';
+
+const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE; // Define constant for table name
+const IMAGE_CATEGORIES_TABLE = 'image_categories';
+const IMAGE_TAGS_TABLE = 'image_tags';
 
 /**
  * Fetches paginated images with category/tag names for the admin list.
  */
-export async function getAdminImages(page = 1, pageSize = 10): Promise<{ images: AdminImageWithRelations[], totalCount: number }> {
+export async function getAdminColoringPages(page = 1, pageSize = 10): Promise<{ images: AdminImageWithRelations[], totalCount: number }> {
     const offset = (page - 1) * pageSize;
     console.log(`Fetching images for admin page ${page}, offset ${offset}, limit ${pageSize}`);
 
     try {
         // Fetch total count first
         const { count, error: countError } = await supabase
-            .from('images')
+            .from(COLORING_PAGES_TABLE)
             .select('*', { count: 'exact', head: true });
 
         if (countError) {
@@ -23,7 +28,7 @@ export async function getAdminImages(page = 1, pageSize = 10): Promise<{ images:
 
         // Fetch image data with relations
         const { data, error } = await supabase
-            .from('images')
+            .from(COLORING_PAGES_TABLE)
             .select(`
                 id,
                 title,
@@ -64,10 +69,10 @@ export async function getAdminImages(page = 1, pageSize = 10): Promise<{ images:
 /**
  * Fetches a single image with its linked category and tag IDs for editing.
  */
-export async function getImageForEdit(imageId: string): Promise<ImageForEdit | null> {
+export async function getColoringPageForEdit(imageId: string): Promise<ImageForEdit | null> {
     console.log(`Fetching image for edit: ${imageId}`);
     const { data: imageData, error: imageError } = await supabase
-        .from('images')
+        .from(COLORING_PAGES_TABLE)
         .select(`
             id,
             title,
@@ -84,13 +89,13 @@ export async function getImageForEdit(imageId: string): Promise<ImageForEdit | n
 
     // Fetch linked category IDs
     const { data: categoryLinks, error: categoryError } = await supabase
-        .from('image_categories')
+        .from(IMAGE_CATEGORIES_TABLE)
         .select('category_id')
         .eq('image_id', imageId);
 
     // Fetch linked tag IDs
     const { data: tagLinks, error: tagError } = await supabase
-        .from('image_tags')
+        .from(IMAGE_TAGS_TABLE)
         .select('tag_id')
         .eq('image_id', imageId);
 

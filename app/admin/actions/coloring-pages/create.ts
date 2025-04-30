@@ -7,7 +7,7 @@ import { revalidatePath } from 'next/cache';
 /**
  * Creates a new image record, uploads the file, and links categories/tags.
  */
-export async function createImage(formData: FormData): Promise<{ success: boolean; message: string; imageId?: string }> {
+export async function createColoringPage(formData: FormData): Promise<{ success: boolean; message: string; imageId?: string }> {
   console.log('formData for create:', formData);
   const title = formData.get('title')?.toString().trim() || null;
   const description = formData.get('description')?.toString().trim() || null;
@@ -22,36 +22,35 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
       return { success: false, message: 'Invalid file type. Please upload an image.' };
   }
 
-  const bucketName = Constants.SUPABASE_COLORING_IMAGES_NAME;
+  const BUCKET_NAME = Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME;
   const filePath = imageFile.name;
 
   let newImageId: string | null = null;
 
   try {
     // 1. Upload file to Supabase Storage
-    console.log(`Uploading file "${filePath}" to bucket "${bucketName}"`);
+    console.log(`Uploading file "${filePath}" to bucket "${BUCKET_NAME}"`);
     const { data: storageData, error: storageError } = await supabase.storage
-      .from(bucketName)
+      .from(BUCKET_NAME)
       .upload(filePath, imageFile, {
           cacheControl: '3600',
           upsert: false
       });
 
     if (storageError) {
-      console.error(`Error uploading image to storage bucket "${bucketName}":`, storageError);
+      console.error(`Error uploading image to storage bucket "${BUCKET_NAME}":`, storageError);
       if (storageError.message.includes('Bucket not found')) {
-          return { success: false, message: `Storage Error: Bucket "${bucketName}" not found. Please check configuration.` };
+          return { success: false, message: `Storage Error: Bucket "${BUCKET_NAME}" not found. Please check configuration.` };
       }
       return { success: false, message: `Storage upload failed: ${storageError.message}` };
     }
     console.log('File uploaded successfully:', storageData);
 
 
-    // 2. Insert image metadata into the 'images' table
+    // 2. Insert image metadata into the 'coloring_pages' table
     console.log('Inserting image metadata into database...');
-    const tableName = 'images';
     const { data: imageInsertData, error: imageInsertError } = await supabase
-      .from(tableName)
+      .from(Constants.COLORING_PAGES_TABLE)
       .insert([{
           title: title,
           description: description,
@@ -62,7 +61,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
 
     if (imageInsertError || !imageInsertData) {
       console.error('Error inserting image metadata:', imageInsertError);
-      await supabase.storage.from(bucketName).remove([filePath]);
+      await supabase.storage.from(BUCKET_NAME).remove([filePath]);
       console.log(`Rolled back storage upload for path: ${filePath}`);
       return { success: false, message: `Database insert failed: ${imageInsertError?.message || 'Unknown DB error'}` };
     }
@@ -79,7 +78,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
                 image_id: newImageId,
                 category_id: categoryId
             }));
-            const { error: categoryLinkError } = await supabase.from('image_categories').insert(categoryLinks);
+            const { error: categoryLinkError } = await supabase.from(Constants.COLORING_PAGE_CATEGORY_TABLE).insert(categoryLinks);
             if (categoryLinkError) throw categoryLinkError;
             console.log('Categories linked successfully.');
         }
@@ -91,7 +90,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
                 image_id: newImageId,
                 tag_id: tagId
             }));
-            const { error: tagLinkError } = await supabase.from('image_tags').insert(tagLinks);
+            const { error: tagLinkError } = await supabase.from(Constants.COLORING_PAGE_TAG_TABLE).insert(tagLinks);
             if (tagLinkError) throw tagLinkError;
             console.log('Tags linked successfully.');
         }
@@ -102,10 +101,10 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
         console.log(`Attempting non-blocking rollback for image ID: ${imageIdToRollback}, file path: ${filePath}`);
         Promise.allSettled([
             imageIdToRollback
-                ? supabase.from(tableName).delete().eq('id', imageIdToRollback)
+                ? supabase.from(Constants.COLORING_PAGES_TABLE).delete().eq('id', imageIdToRollback)
                 : Promise.resolve({ status: 'skipped', reason: 'No image ID' }),
             filePath
-                ? supabase.storage.from(bucketName).remove([filePath])
+                ? supabase.storage.from(BUCKET_NAME).remove([filePath])
                 : Promise.resolve({ status: 'skipped', reason: 'No file path' })
         ]).then(results => {
             console.log("Rollback attempt results (linking error):");
@@ -123,6 +122,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
                 }
             });
         });
+        return { success: false, message: `Image metadata saved, but failed to link categories/tags: ${linkError.message}` };
     }
     // --- End Inner Try/Catch ---
 
@@ -130,8 +130,8 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
     // 5. Revalidate paths (Only reached if upload, insert, and linking succeed)
     console.log('Revalidating paths...');
     revalidatePath('/admin');
-    revalidatePath('/admin/images/create');
-    revalidatePath('/admin/images/edit', 'layout');
+    revalidatePath('/admin/coloring-pages/create');
+    revalidatePath('/admin/coloring-pages/edit', 'layout');
     revalidatePath('/coloring-pages', 'layout');
 
     return { success: true, message: 'Image created successfully!', imageId: newImageId ?? undefined };
@@ -140,7 +140,7 @@ export async function createImage(formData: FormData): Promise<{ success: boolea
     console.error('Unexpected error during image creation (upload/insert phase):', err);
     if (filePath) {
         console.log(`Attempting cleanup of storage file due to outer error: ${filePath}`);
-        supabase.storage.from(bucketName).remove([filePath]).catch(cleanupErr => {
+        supabase.storage.from(BUCKET_NAME).remove([filePath]).catch(cleanupErr => {
             console.error("Storage cleanup failed during outer error handling:", cleanupErr);
         });
     }

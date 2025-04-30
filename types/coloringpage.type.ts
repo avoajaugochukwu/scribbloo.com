@@ -1,4 +1,4 @@
-type Image = {
+type ColoringPage = {
   id: string; // uuid is represented as string in JS/TS
   title: string;
   description: string | null;
@@ -6,6 +6,4 @@ type Image = {
   created_at: string; // timestamp with time zone is typically string
 }
 
-type ImageType = Image;
-
-export default ImageType;
+export default ColoringPage;

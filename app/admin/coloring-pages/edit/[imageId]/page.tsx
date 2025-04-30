@@ -10,8 +10,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea'; // Import Textarea
-import { getImageForEdit } from '../../../actions/images/read'; // getImageForEdit is here
-import { updateImage } from '../../../actions/images/update'; // updateImage is here
+import { getColoringPageForEdit } from '../../../actions/coloring-pages/read'; // getImageForEdit is here
+import { updateColoringPage } from '../../../actions/coloring-pages/update'; // updateImage is here
 import { getCategories } from '../../../actions/categories/read'; // getCategories is here
 import { getTags } from '../../../actions/tags/read'; // getTags is here
 import Category from '@/types/category.type';
@@ -31,9 +31,9 @@ export default function EditImagePage() {
 
     // --- Fetch Image Data ---
     const { data: imageDetails, isLoading: loadingImage, error: imageError } = useQuery({
-        queryKey: ['imageForEdit', imageId],
-        queryFn: () => getImageForEdit(imageId),
-        enabled: !!imageId, // Only run query if imageId is available
+        queryKey: ['coloringPageForEdit', imageId],
+        queryFn: () => getColoringPageForEdit(imageId),
+        enabled: !!imageId,
     });
 
     // --- Fetch Available Categories/Tags ---
@@ -58,13 +58,12 @@ export default function EditImagePage() {
 
     // --- Update Image Mutation ---
     const updateMutation = useMutation({
-        mutationFn: updateImage,
+        mutationFn: updateColoringPage,
         onSuccess: (result) => {
             if (result.success) {
-                alert('Image updated successfully!'); // Example feedback
-                // Invalidate queries to refetch data
-                queryClient.invalidateQueries({ queryKey: ['imageForEdit', imageId] });
-                queryClient.invalidateQueries({ queryKey: ['adminImages'] }); // Invalidate list view
+                alert('Image updated successfully!');
+                queryClient.invalidateQueries({ queryKey: ['coloringPageForEdit', imageId] });
+                queryClient.invalidateQueries({ queryKey: ['adminColoringPages'] });
             } else {
                 alert(`Update failed: ${result.message}`);
             }
@@ -105,7 +104,7 @@ export default function EditImagePage() {
     const isLoading = loadingImage || loadingCategories || loadingTags || updateMutation.isPending;
 
     // Construct image URL
-    const currentImageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL + imageDetails?.image_url;
+    const currentImageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + imageDetails?.image_url;
 
     if (loadingImage) return <p>Loading image details...</p>; // Separate loading for initial image fetch
     if (imageError) return <p>Error loading image data: {imageError.message}</p>;

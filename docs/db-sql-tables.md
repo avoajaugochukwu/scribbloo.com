@@ -1,5 +1,5 @@
--- Create images table
-create table images (
+-- Create coloring_pages table (formerly images)
+create table coloring_pages (
   id uuid primary key default gen_random_uuid(),
   title text not null,
   description text,
@@ -28,15 +28,18 @@ create table tags (
 );
 
 -- Create image_categories join table
-create table image_categories (
+create table coloring_page_categories (
   id uuid primary key default gen_random_uuid(),
-  image_id uuid references images(id) on delete cascade,
+  coloring_page_id uuid references coloring_pages(id) on delete cascade,
   category_id uuid references categories(id) on delete cascade
 );
 
 -- Create image_tags join table
-create table image_tags (
+create table coloring_page_tags (
   id uuid primary key default gen_random_uuid(),
-  image_id uuid references images(id) on delete cascade,
+  coloring_page_id uuid references coloring_pages(id) on delete cascade,
   tag_id uuid references tags(id) on delete cascade
 );
+
+-- NOTE: Remember to update the update_image_links RPC function in your database
+--       if it references the 'images' table directly.

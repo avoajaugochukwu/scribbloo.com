@@ -1,18 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import ImageType from '@/types/image.type';
+import ColoringPage from '@/types/coloringpage.type';
 import { Constants } from '@/config/constants';
 import DownloadIcon from './DownloadIcon';
 import PrintIcon from './PrintIcon';
 
 interface ColoringPageImageProps {
-  image: ImageType;
+  image: ColoringPage;
   categoryName: string;
 }
 
 export default function ColoringPageImage({ image, categoryName }: ColoringPageImageProps) {
-  const imageUrl = Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL + image.image_url;
+  const imageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + image.image_url;
   const baseFilename = image.title
     ? image.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';

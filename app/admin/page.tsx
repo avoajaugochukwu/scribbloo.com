@@ -5,9 +5,9 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'; /
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 // Import the updated action and type
-import { getAdminImages } from './actions/images/read';
-import { deleteImage } from './actions/images/delete'; // Import delete action
-import { type AdminImageWithRelations } from './actions/images/types';
+import { getAdminColoringPages } from './actions/coloring-pages/read';
+import { deleteImage } from './actions/coloring-pages/delete'; // Import delete action
+import { type AdminImageWithRelations } from './actions/coloring-pages/types';
 import Link from 'next/link';
 import { Edit, Trash2 } from 'lucide-react'; // Add Trash2 if adding delete button
 import { Constants } from '@/config/constants';
@@ -38,11 +38,10 @@ export default function AdminPage() {
 
   // --- Fetch with useQuery ---
   const { data: imageData, isLoading, error: fetchError } = useQuery({
-    // Query key includes page number to refetch when page changes
-    queryKey: ['adminImages', currentPage],
-    queryFn: () => getAdminImages(currentPage, IMAGES_PER_PAGE),
-    placeholderData: (previousData) => previousData, // Keep previous data while loading new page
-    // staleTime: 5 * 60 * 1000, // Optional: 5 minutes
+    // Update queryKey to reflect the data source
+    queryKey: ['adminColoringPages', currentPage], // <-- Updated query key
+    queryFn: () => getAdminColoringPages(currentPage, IMAGES_PER_PAGE),
+    placeholderData: (previousData) => previousData,
   });
 
   // Extract data from RQ result
@@ -56,12 +55,10 @@ export default function AdminPage() {
     onSuccess: (result, imageId) => {
       if (result.success) {
         console.log(`Image ${imageId} deleted successfully.`);
-        // Invalidate the query for the current page AND potentially the total count
-        queryClient.invalidateQueries({ queryKey: ['adminImages', currentPage] });
-        // If deletion might change total pages, invalidate all pages or refetch count separately
-        queryClient.invalidateQueries({ queryKey: ['adminImages'] });
+        // Invalidate the updated query key
+        queryClient.invalidateQueries({ queryKey: ['adminColoringPages', currentPage] });
+        queryClient.invalidateQueries({ queryKey: ['adminColoringPages'] }); // Invalidate all pages/count
         setDeleteConfirmation(null);
-        // Optionally show success toast
       } else {
         console.error(`Failed to delete image ${imageId}:`, result.message);
         alert(`Deletion failed: ${result.message}`);
@@ -109,7 +106,7 @@ export default function AdminPage() {
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
         <div className="flex space-x-2">
           <Button asChild>
-            <Link href="/admin/images/create">Create New Image</Link>
+            <Link href="/admin/coloring-pages/create">Create New Coloring Page</Link>
           </Button>
           <Button asChild variant="outline">
             <Link href="/admin/categories">Manage Categories</Link>
@@ -167,7 +164,7 @@ export default function AdminPage() {
                   <tr key={image.id} className="bg-white border-b hover:bg-gray-50">
                     {/* Thumbnail */}
                     <td className="py-2 px-6">
-                      <Image src={Constants.SUPABASE_COLORING_IMAGES_BUCKET_URL + image.image_url} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" />
+                      <Image src={Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + image.image_url} alt={image.title || ''} width={60} height={60} className="object-contain h-16 w-16 rounded" />
                     </td>
                     {/* Title */}
                     <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">

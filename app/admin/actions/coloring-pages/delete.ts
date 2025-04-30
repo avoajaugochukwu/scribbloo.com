@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-// Import shared helper
 import { deleteStorageFile } from '@/lib/storageUtils';
 import { Constants } from '@/config/constants';
 
@@ -21,8 +20,8 @@ export async function deleteImage(imageId: string): Promise<{ success: boolean; 
         // 1. Fetch the image to get its path BEFORE deleting
         console.log(`Fetching image ${imageId} to get path for deletion...`);
         const { data: imageToDelete, error: fetchError } = await supabase
-            .from('images')
-            .select('title, image_url') // Select path and title for logging
+            .from(Constants.COLORING_PAGES_TABLE) // <-- Use updated table name
+            .select('title, image_url')
             .eq('id', imageId)
             .single();
 
@@ -45,11 +44,10 @@ export async function deleteImage(imageId: string): Promise<{ success: boolean; 
         imageTitle = imageToDelete.title;
 
         // 2. Delete the image record from the database
-        // Note: Related entries in image_categories/image_tags should cascade delete
-        // if foreign keys are set up with ON DELETE CASCADE. Otherwise, handle manually or via RPC.
+        // Assumes ON DELETE CASCADE is set for image_categories and image_tags FKs
         console.log(`Attempting to delete image "${imageTitle}" (ID: ${imageId}) from database...`);
         const { error: deleteDbError } = await supabase
-            .from('images')
+            .from(Constants.COLORING_PAGES_TABLE) // <-- Use updated table name
             .delete()
             .eq('id', imageId);
 
@@ -63,7 +61,7 @@ export async function deleteImage(imageId: string): Promise<{ success: boolean; 
         // 3. Delete associated image file from storage AFTER successful DB deletion
         if (imagePath) {
             console.log(`Attempting to delete image file: ${imagePath}`);
-            await deleteStorageFile(Constants.SUPABASE_COLORING_IMAGES_NAME, imagePath);
+            await deleteStorageFile(Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME, imagePath);
         } else {
             console.log(`No image path found for deleted image ${imageId}.`);
         }

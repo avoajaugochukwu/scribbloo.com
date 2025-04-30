@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label'; // Assuming you have a Label component
 import { Textarea } from '@/components/ui/textarea'; // Import Textarea
 import { Checkbox } from '@/components/ui/checkbox'; // Assuming Checkbox component
-import { createImage } from '../../actions/images/create';
+import { createColoringPage } from '../../actions/coloring-pages/create';
 import { getCategories } from '../../actions/categories/read';
 import { getTags } from '../../actions/tags/read';
 import Category from '@/types/category.type';
@@ -33,7 +33,7 @@ export default function CreateImagePage() {
   });
 
   const createMutation = useMutation({
-    mutationFn: createImage,
+    mutationFn: createColoringPage,
     onSuccess: (result) => {
       if (result.success) {
         alert(result.message);
@@ -119,7 +119,7 @@ export default function CreateImagePage() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Create New Image</h1>
+        <h1 className="text-2xl font-bold">Create Coloring Page</h1>
         <Button variant="outline" size="sm" asChild>
           <Link href="/admin">Back to Admin</Link>
         </Button>

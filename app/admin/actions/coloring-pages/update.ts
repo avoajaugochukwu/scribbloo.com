@@ -4,17 +4,18 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 // Import shared helpers
 import { uploadStorageFile, deleteStorageFile } from '@/lib/storageUtils';
-import ImageType from '@/types/image.type';
+import ColoringPage from '@/types/coloringpage.type';
 import { Constants } from '@/config/constants';
 
 // Define the bucket name for coloring images
-const IMAGE_BUCKET = Constants.SUPABASE_COLORING_IMAGES_NAME;
+const COLORING_PAGES_BUCKET = Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME;
+const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE; // <-- Updated table name
 
 /**
  * Updates an existing image's title and its category/tag associations using a DB function.
  * Does NOT handle image file replacement.
  */
-export async function updateImage(formData: FormData): Promise<{ success: boolean; message: string }> {
+export async function updateColoringPage(formData: FormData): Promise<{ success: boolean; message: string }> {
     const imageId = formData.get('imageId')?.toString();
     const title = formData.get('title')?.toString().trim();
     const description = formData.get('description')?.toString().trim();
@@ -37,7 +38,7 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
     try {
         // 1. Fetch current image data to get old image path
         const { data: currentImage, error: fetchError } = await supabase
-            .from('images')
+            .from(COLORING_PAGES_TABLE) // <-- Use updated table name
             .select('image_url') // Select only the path
             .eq('id', imageId)
             .single();
@@ -50,7 +51,7 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
 
         // 2. Upload NEW Image (if provided)
         if (newImageFile && newImageFile.size > 0) {
-            const uploadResult = await uploadStorageFile(IMAGE_BUCKET, newImageFile);
+            const uploadResult = await uploadStorageFile(COLORING_PAGES_BUCKET, newImageFile);
             if (uploadResult.error || !uploadResult.path) {
                 return { success: false, message: `New image upload failed: ${uploadResult.error}` };
             }
@@ -59,7 +60,7 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
 
         // 3. Prepare data for DB update (only text fields initially)
         // We handle image_url update separately if needed
-        const updateData: Partial<ImageType> = { // Use your ImageType here
+        const updateData: Partial<ColoringPage> = {
             title: title,
             description: description || null,
             // Conditionally add image_url ONLY if a new one was uploaded
@@ -69,14 +70,14 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
         // 4. Update Image Record (text fields and potentially image_url)
         console.log('Updating image record in database...');
         const { error: updateError } = await supabase
-            .from('images')
+            .from(COLORING_PAGES_TABLE) // <-- Use updated table name
             .update(updateData)
             .eq('id', imageId);
 
         if (updateError) {
             console.error('Error updating image record:', updateError.message);
             // Rollback: Delete NEWLY uploaded file if DB update fails
-            if (newImagePath) await deleteStorageFile(IMAGE_BUCKET, newImagePath);
+            if (newImagePath) await deleteStorageFile(COLORING_PAGES_BUCKET, newImagePath);
             console.log('Rolled back NEW storage upload due to DB update error.');
             return { success: false, message: `Database update error: ${updateError.message}` };
         }
@@ -101,7 +102,7 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
         // 6. Delete OLD image from storage (only after successful DB update AND if a new image was uploaded)
         if (newImagePath && oldImagePath) {
             console.log(`DB updated with new image, attempting to delete old image: ${oldImagePath}`);
-            await deleteStorageFile(IMAGE_BUCKET, oldImagePath);
+            await deleteStorageFile(COLORING_PAGES_BUCKET, oldImagePath);
         }
 
         // 7. Success - Revalidate Paths
@@ -116,7 +117,7 @@ export async function updateImage(formData: FormData): Promise<{ success: boolea
     } catch (err: any) {
         console.error('Unexpected error updating image:', err);
         // Attempt cleanup of NEW file in case of unexpected errors before DB update attempt
-        if (newImagePath) await deleteStorageFile(IMAGE_BUCKET, newImagePath).catch(e => console.error("Unexpected error cleanup failed (image):", e));
+        if (newImagePath) await deleteStorageFile(COLORING_PAGES_BUCKET, newImagePath).catch(e => console.error("Unexpected error cleanup failed (image):", e));
         const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
         return { success: false, message };
     }

@@ -1,8 +1,11 @@
 // Import the Supabase client and necessary types
 import CategoryWithImages from '@/types/categorywithimages.type';
 import { supabase } from './supabaseClient'; // Adjust path if needed
-import ImageType from '@/types/image.type';
+import ColoringPage from '@/types/coloringpage.type';
 import Category from '@/types/category.type';
+
+const IMAGES_TABLE = 'coloring_pages'; // <-- Define constant
+const IMAGE_CATEGORIES_TABLE = 'image_categories'; // <-- Define constant
 
 /**
  * Fetches a category by its slug, including its associated images, using multiple queries.
@@ -39,8 +42,8 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
 
     // 3: Query image_categories table for image IDs
     const { data: imageCategoryLinks, error: linksError } = await supabase
-      .from('image_categories')
-      .select('image_id') // Select only the image_id column
+      .from(IMAGE_CATEGORIES_TABLE) // <-- Use constant
+      .select('image_id')
       .eq('category_id', categoryId);
 
     if (linksError) {
@@ -70,11 +73,11 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       return result;
     }
 
-    // 5: Query images table for image details
+    // 5: Query coloring_pages table for image details
     const { data: imagesData, error: imagesError } = await supabase
-      .from('images')
-      .select('id, title, description, image_url, created_at') // Select desired image fields
-      .in('id', imageIds); // Find images where ID is in the list of imageIds
+      .from(IMAGES_TABLE) // <-- Use constant
+      .select('id, title, description, image_url, created_at')
+      .in('id', imageIds);
 
     if (imagesError) {
       console.error('Error fetching images:', imagesError.message);
@@ -94,7 +97,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       seo_meta_description: categoryData.seo_meta_description,
       hero_image: categoryData.hero_image, // Renamed field
       thumbnail_image: categoryData.thumbnail_image, // Renamed field
-      images: (imagesData || []) as ImageType[],
+      images: (imagesData || []) as ColoringPage[],
     };
 
     return result;
