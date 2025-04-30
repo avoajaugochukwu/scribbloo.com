@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   description: 'Read the Privacy Policy for Scribbloo.',
   // Prevent search engines from indexing placeholder pages (remove later)
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
     description: 'Download hundreds of free, high-quality printable coloring pages for kids, teens, and adults.',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 // --- End SEO Metadata ---
 

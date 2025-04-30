@@ -43,11 +43,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage', // Type of page
-    name: categoryData.seo_title || `${categoryData.name} Coloring Pages`, // Use SEO title or generate
-    description: categoryData.seo_description || `Explore our collection of ${categoryData.name} coloring pages.`, // Use SEO description or generate
-    url: `${baseUrl}/coloring-pages/${categoryData.slug}`, // Canonical URL
-    // Optional: Define the main content of the page (the list of images)
-    // This can get complex; start simple or expand later if needed.
+    name: categoryData.seo_title || `${categoryData.name} Coloring Pages`,
+    description: categoryData.seo_description || `Explore our collection of ${categoryData.name} coloring pages.`,
+    url: `${baseUrl}/coloring-pages/${categoryData.slug}`,
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: images.map((image, index) => ({
@@ -157,7 +155,6 @@ export async function generateMetadata(
   }
 
   // --- SEO Optimization ---
-  // Use specific SEO title/description from DB if available, otherwise generate
   const title = categoryData.seo_title
     ? categoryData.seo_title
     : `${categoryData.name} Coloring Pages - Free Printables | Scribbloo`; // Add your site name
@@ -166,10 +163,8 @@ export async function generateMetadata(
     ? categoryData.seo_description
     : `Explore our collection of ${categoryData.name} coloring pages. Download and print free images for kids and adults on Scribbloo.`; // Add site name/context
 
-  // Construct the canonical URL for this specific category page
   const canonicalUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
 
-  // Construct hero image URL for Open Graph (if it exists)
   const ogImageUrl = categoryData.hero_image_url
     ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET}${categoryData.hero_image_url}`
     : undefined; // Use undefined if no hero image
@@ -177,7 +172,6 @@ export async function generateMetadata(
   return {
     title,
     description,
-    // Add canonical URL
     alternates: {
         canonical: canonicalUrl,
     },
@@ -186,19 +180,14 @@ export async function generateMetadata(
       description,
       url: canonicalUrl, // Use canonical URL for OG
       siteName: 'Scribbloo', // Add your site name
-      // Add OG image if available
       images: ogImageUrl ? [
         {
           url: ogImageUrl,
-          // Optionally add width/height if known, helps FB crawler
-          // width: 800,
-          // height: 600,
           alt: `${categoryData.name} Hero Image`,
         }
       ] : [], // Empty array if no image
       type: 'website', // Or 'article' depending on how you view the page
     },
-    // Optional: Add Twitter card metadata
     twitter: {
       card: 'summary_large_image',
       title: title,

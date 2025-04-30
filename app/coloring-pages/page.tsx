@@ -23,7 +23,11 @@ export const metadata: Metadata = {
     title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
     description: 'Browse categories and find free printable coloring pages for kids and adults.',
     // images: [`${baseUrl}/img/og-image-coloring-index.png`], // Add if you have a specific image
-  }
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ColoringPages() {
