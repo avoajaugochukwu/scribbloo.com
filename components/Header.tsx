@@ -8,7 +8,7 @@ export function Header() {
         {/* Site Title/Logo */}
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/img/Logo.svg" alt="Scribbloo Logo" width={150} height={100} />
+            <Image src="/img/logo.svg" alt="Scribbloo Logo" width={150} height={100} />
           </Link>
         </div>
 
