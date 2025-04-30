@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage', // Type of page
     name: categoryData.seo_title || `${categoryData.name} Coloring Pages`,
-    description: categoryData.seo_description || `Explore our collection of ${categoryData.name} coloring pages.`,
+    description: categoryData.seo_meta_description || `Explore our collection of ${categoryData.name} coloring pages.`,
     url: `${baseUrl}/coloring-pages/${categoryData.slug}`,
     mainEntity: {
       '@type': 'ItemList',
@@ -159,8 +159,8 @@ export async function generateMetadata(
     ? categoryData.seo_title
     : `${categoryData.name} Coloring Pages - Free Printables | Scribbloo`; // Add your site name
 
-  const description = categoryData.seo_description
-    ? categoryData.seo_description
+  const description = categoryData.seo_meta_description
+    ? categoryData.seo_meta_description
     : `Explore our collection of ${categoryData.name} coloring pages. Download and print free images for kids and adults on Scribbloo.`; // Add site name/context
 
   const canonicalUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
