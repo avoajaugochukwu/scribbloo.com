@@ -1,4 +1,4 @@
-import { getImagesByCategorySlug } from '@/lib/coloringPages';
+import { getColoringPagesByCategorySlug } from '@/lib/coloringPages';
 import Link from 'next/link';
 import ColoringPageImage from './components/ColoringPageImage';
 import { notFound } from 'next/navigation';
@@ -11,12 +11,12 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Metadata } from 'next';
-import CategoryWithImages from '@/types/categorywithimages.type';
 import ColoringPage from '@/types/coloringpage.type';
 import Image from 'next/image';
 import React from 'react';
 import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
+import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
 
 interface CategoryPageProps {
   params: Promise<{ categorySlug: string }>;
@@ -25,13 +25,13 @@ interface CategoryPageProps {
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { categorySlug } = await params;
 
-  const categoryData = await getImagesByCategorySlug(categorySlug) as CategoryWithImages | null;
+  const categoryData = await getColoringPagesByCategorySlug(categorySlug) as CategoryWithColoringPages | null;
 
   if (!categoryData) {
     notFound();
   }
 
-  const images = categoryData.images || [];
+  const coloringPages = categoryData.coloringPages || [];
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -48,13 +48,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     url: `${baseUrl}/coloring-pages/${categoryData.slug}`,
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: images.map((image, index) => ({
+      itemListElement: coloringPages.map((coloringPage, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         item: {
           '@type': 'ImageObject',
-          name: image.title || 'Coloring Page',
-          contentUrl: `${Constants.SUPABASE_COLORING_PAGES_BUCKET_URL}${image.image_url}`,
+          name: coloringPage.title || 'Coloring Page',
+          contentUrl: `${Constants.SUPABASE_COLORING_PAGES_BUCKET_URL}${coloringPage.image_url}`,
           // Add description if available
           // description: image.description,
         }
@@ -121,12 +121,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </section>
       )}
 
-      {images.length > 0 ? (
+      {coloringPages.length > 0 ? (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {images.map((image: ColoringPage) => (
+          {coloringPages.map((coloringPage: ColoringPage) => (
             <ColoringPageImage
-              key={image.id}
-              image={image}
+              key={coloringPage.id}
+              coloringPage={coloringPage}
               categoryName={categoryData.name}
             />
           ))}
@@ -145,7 +145,7 @@ export async function generateMetadata(
   { params }: CategoryPageProps,
 ): Promise<Metadata> {
   const { categorySlug } = await params;
-  const categoryData = await getImagesByCategorySlug(categorySlug) as CategoryWithImages | null;
+  const categoryData = await getColoringPagesByCategorySlug(categorySlug) as CategoryWithColoringPages | null;
 
   if (!categoryData) {
     return {

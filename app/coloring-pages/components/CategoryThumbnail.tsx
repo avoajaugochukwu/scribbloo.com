@@ -17,7 +17,7 @@ export default function CategoryThumbnail({ category }: CategoryThumbnailProps) 
         <div className="mb-2 relative w-full overflow-hidden rounded">
           <Image
             src={imageUrl}
-            alt={`${category.name} thumbnail`}
+            alt={`${category.seo_title || category.name} thumbnail`}
             width={300}
             height={300}
             className="w-full transition-transform duration-300 group-hover:scale-105"

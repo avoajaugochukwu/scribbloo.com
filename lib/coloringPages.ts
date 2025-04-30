@@ -1,9 +1,10 @@
 // Import the Supabase client and necessary types
-import CategoryWithImages from '@/types/categorywithimages.type';
+
 import { supabase } from './supabaseClient'; // Adjust path if needed
 import ColoringPage from '@/types/coloringpage.type';
 import Category from '@/types/category.type';
 import { Constants } from '@/config/constants';
+import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
 
 /**
  * Fetches a category by its slug, including its associated images, using multiple queries.
@@ -11,7 +12,7 @@ import { Constants } from '@/config/constants';
  * @param categorySlug The slug of the category to fetch.
  * @returns A promise that resolves to the CategoryWithImages object or null if not found.
  */
-export async function getImagesByCategorySlug(categorySlug: string): Promise<CategoryWithImages | null> {
+export async function getColoringPagesByCategorySlug(categorySlug: string): Promise<CategoryWithColoringPages | null> {
   // Validate the slug
   if (!categorySlug) {
     console.error('Error: categorySlug is required.');
@@ -39,7 +40,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     const categoryId = categoryData.id;
 
     // 3: Query image_categories table for image IDs
-    const { data: imageCategoryLinks, error: linksError } = await supabase
+    const { data: coloringPageCategoryLinks, error: linksError } = await supabase
       .from(Constants.COLORING_PAGE_CATEGORY_TABLE)
       .select('coloring_page_id')
       .eq('category_id', categoryId);
@@ -50,12 +51,12 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     }
 
     // 4: Get all image_ids
-    const imageIds = imageCategoryLinks?.map(link => link.coloring_page_id) || [];
+    const coloringPageIds = coloringPageCategoryLinks?.map(link => link.coloring_page_id) || [];
 
     // If no images are linked, return category data with empty images array
-    if (imageIds.length === 0) {
+    if (coloringPageIds.length === 0) {
       // Explicitly construct the object
-      const result: CategoryWithImages = {
+      const result: CategoryWithColoringPages = {
         id: categoryData.id,
         name: categoryData.name,
         slug: categoryData.slug,
@@ -66,25 +67,25 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
         seo_meta_description: categoryData.seo_meta_description,
         hero_image: categoryData.hero_image, // Renamed field
         thumbnail_image: categoryData.thumbnail_image, // Renamed field
-        images: [],
+        coloringPages: [],
       };
       return result;
     }
 
     // 5: Query coloring_pages table for image details
-    const { data: imagesData, error: imagesError } = await supabase
+    const { data: coloringPagesData, error: coloringPagesError } = await supabase
       .from(Constants.COLORING_PAGES_TABLE) // <-- Use constant
       .select('id, title, description, image_url, created_at')
-      .in('id', imageIds);
+      .in('id', coloringPageIds);
 
-    if (imagesError) {
-      console.error('Error fetching images:', imagesError.message);
-      throw imagesError;
+    if (coloringPagesError) {
+      console.error('Error fetching coloring pages:', coloringPagesError.message);
+      throw coloringPagesError;
     }
 
     // 6: Combine category data and images data and return
     // Explicitly construct the object
-    const result: CategoryWithImages = {
+    const result: CategoryWithColoringPages = {
       id: categoryData.id,
       name: categoryData.name,
       slug: categoryData.slug,
@@ -95,7 +96,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       seo_meta_description: categoryData.seo_meta_description,
       hero_image: categoryData.hero_image, // Renamed field
       thumbnail_image: categoryData.thumbnail_image, // Renamed field
-      images: (imagesData || []) as ColoringPage[],
+      coloringPages: (coloringPagesData || []) as ColoringPage[],
     };
 
     return result;
@@ -110,9 +111,6 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     return null; // Return null on unexpected errors
   }
 }
-
-// You might add other functions here related to fetching coloring page data,
-// like fetching all categories, fetching images by tag, etc.
 
 /**
  * Fetches all categories.
