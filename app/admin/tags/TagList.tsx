@@ -9,6 +9,7 @@ import Tag from '@/types/tag.type';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Trash2, Edit, Save, XCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 // Helper for date formatting
 function formatDate(dateString: string | null | undefined): string {
@@ -41,10 +42,10 @@ export function TagList() {
                 queryClient.invalidateQueries({ queryKey: ['tags'] });
                 setEditingTagId(null);
             } else {
-                alert(`Update failed: ${result.message}`);
+                toast.error(`Update failed: ${result.message}`);
             }
         },
-        onError: (error) => alert(`Update error: ${error.message}`),
+        onError: (error) => toast.error(`Update error: ${error.message}`),
     });
 
     // --- Delete Mutation ---
@@ -54,10 +55,10 @@ export function TagList() {
             if (result.success) {
                 queryClient.invalidateQueries({ queryKey: ['tags'] });
             } else {
-                alert(`Deletion failed: ${result.message}`);
+                toast.error(`Deletion failed: ${result.message}`);
             }
         },
-        onError: (error) => alert(`Deletion error: ${error.message}`),
+        onError: (error) => toast.error(`Deletion error: ${error.message}`),
     });
 
     // --- Handlers (similar to CategoryList, using mutation.mutate) ---

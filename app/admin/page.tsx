@@ -11,6 +11,7 @@ import { type AdminImageWithRelations } from './actions/coloring-pages/types';
 import Link from 'next/link';
 import { Edit, Trash2 } from 'lucide-react'; // Add Trash2 if adding delete button
 import { Constants } from '@/config/constants';
+import { toast } from 'sonner';
 
 // Helper component to render date only on client
 function ClientOnlyDate({ dateString }: { dateString: string | null | undefined }) {
@@ -61,12 +62,12 @@ export default function AdminPage() {
         setDeleteConfirmation(null);
       } else {
         console.error(`Failed to delete image ${imageId}:`, result.message);
-        alert(`Deletion failed: ${result.message}`);
+        toast.error(`Deletion failed: ${result.message}`);
       }
     },
     onError: (error, imageId) => {
       console.error(`Error deleting image ${imageId}:`, error);
-      alert(`An unexpected error occurred during deletion: ${error.message}`);
+      toast.error(`An unexpected error occurred during deletion: ${error.message}`);
     },
   });
 
@@ -189,8 +190,8 @@ export default function AdminPage() {
                     </td>
                     {/* Actions */}
                     <td className="py-4 px-6 text-right">
-                      <Button asChild variant="ghost" size="sm" title="Edit Image" disabled={isMutating}>
-                        <Link href={`/admin/images/edit/${image.id}`}>
+                      <Button asChild variant="ghost" size="sm" title="Edit Coloring Page" disabled={isMutating}>
+                        <Link href={`/admin/coloring-pages/edit/${image.id}`}>
                           <Edit className="h-4 w-4" />
                         </Link>
                       </Button>

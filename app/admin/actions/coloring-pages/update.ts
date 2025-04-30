@@ -16,7 +16,7 @@ const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE; // <-- Updated tabl
  * Does NOT handle image file replacement.
  */
 export async function updateColoringPage(formData: FormData): Promise<{ success: boolean; message: string }> {
-    const imageId = formData.get('imageId')?.toString();
+    const coloringPageId = formData.get('coloringPageId')?.toString();
     const title = formData.get('title')?.toString().trim();
     const description = formData.get('description')?.toString().trim();
     const categoryIds = formData.getAll('categoryIds') as string[];
@@ -25,12 +25,12 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
     const newImageFile = formData.get('imageFile') as File | null;
 
     // --- Validation ---
-    if (!imageId) return { success: false, message: 'Image ID is missing.' };
+    if (!coloringPageId) return { success: false, message: 'Coloring page ID is missing.' };
     if (!title) return { success: false, message: 'Title is required.' };
     // File is optional for update
     // --- End Validation ---
 
-    console.log(`Attempting to update image ID: ${imageId}`);
+    console.log(`Attempting to update coloring page ID: ${coloringPageId}`);
 
     let oldImagePath: string | null = null;
     let newImagePath: string | null = null;
@@ -40,12 +40,12 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
         const { data: currentImage, error: fetchError } = await supabase
             .from(COLORING_PAGES_TABLE) // <-- Use updated table name
             .select('image_url') // Select only the path
-            .eq('id', imageId)
+            .eq('id', coloringPageId)
             .single();
 
         if (fetchError || !currentImage) {
-            console.error(`Error fetching current image ${imageId}:`, fetchError);
-            return { success: false, message: 'Could not find the image to update.' };
+            console.error(`Error fetching current coloring page ${coloringPageId}:`, fetchError);
+            return { success: false, message: 'Could not find the coloring page to update.' };
         }
         oldImagePath = currentImage.image_url;
 
@@ -68,14 +68,14 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
         };
 
         // 4. Update Image Record (text fields and potentially image_url)
-        console.log('Updating image record in database...');
+        console.log('Updating coloring page record in database...');
         const { error: updateError } = await supabase
             .from(COLORING_PAGES_TABLE) // <-- Use updated table name
             .update(updateData)
-            .eq('id', imageId);
+            .eq('id', coloringPageId);
 
         if (updateError) {
-            console.error('Error updating image record:', updateError.message);
+            console.error('Error updating coloring page record:', updateError.message);
             // Rollback: Delete NEWLY uploaded file if DB update fails
             if (newImagePath) await deleteStorageFile(COLORING_PAGES_BUCKET, newImagePath);
             console.log('Rolled back NEW storage upload due to DB update error.');
@@ -83,20 +83,20 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
         }
 
         // 5. Update Links using RPC (after main record update succeeds)
-        console.log('Updating image category/tag links via RPC...');
-        const { error: rpcError } = await supabase.rpc('update_image_links', {
-            p_image_id: imageId,
+        console.log('Updating coloring page category/tag links via RPC...');
+        const { error: rpcError } = await supabase.rpc('update_coloring_page_links', {
+            p_coloring_page_id: coloringPageId,
             p_category_ids: categoryIds,
             p_tag_ids: tagIds,
         });
 
         if (rpcError) {
-            console.error('Error updating image links via RPC:', rpcError);
+            console.error('Error updating coloring page links via RPC:', rpcError);
             // This is tricky. The main record updated, but links failed.
             // Should we try to rollback the main update? Or just report the link error?
             // Reporting the error is usually sufficient. The core data is updated.
             // We also don't rollback the file upload/delete here as the main record IS updated.
-            return { success: false, message: `Image details updated, but failed to update links: ${rpcError.message}` };
+            return { success: false, message: `Coloring page details updated, but failed to update links: ${rpcError.message}` };
         }
 
         // 6. Delete OLD image from storage (only after successful DB update AND if a new image was uploaded)
@@ -106,21 +106,21 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
         }
 
         // 7. Success - Revalidate Paths
-        console.log(`Image "${title}" (ID: ${imageId}) updated successfully.`);
+        console.log(`Coloring page "${title}" (ID: ${coloringPageId}) updated successfully.`);
         revalidatePath('/admin');
-        revalidatePath(`/admin/images/edit/${imageId}`);
+        revalidatePath(`/admin/coloring-pages/edit/${coloringPageId}`);
         // Revalidate relevant public pages if necessary
         // revalidatePath('/coloring-pages', 'layout');
 
-        return { success: true, message: `Image "${title}" updated successfully.` };
+        return { success: true, message: `Coloring page "${title}" updated successfully.` };
 
     } catch (err: any) {
-        console.error('Unexpected error updating image:', err);
+        console.error('Unexpected error updating coloring page:', err);
         // Attempt cleanup of NEW file in case of unexpected errors before DB update attempt
-        if (newImagePath) await deleteStorageFile(COLORING_PAGES_BUCKET, newImagePath).catch(e => console.error("Unexpected error cleanup failed (image):", e));
+        if (newImagePath) await deleteStorageFile(COLORING_PAGES_BUCKET, newImagePath).catch(e => console.error("Unexpected error cleanup failed (coloring page):", e));
         const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
         return { success: false, message };
     }
 }
 
-// ... getImageForEdit function ... 
+// ... getColoringPageForEdit function ... 

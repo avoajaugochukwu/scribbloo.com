@@ -17,10 +17,11 @@ import { getTags } from '../../../actions/tags/read'; // getTags is here
 import Category from '@/types/category.type';
 import Tag from '@/types/tag.type';
 import { Constants } from '@/config/constants';
+import { toast } from 'sonner';
 
 export default function EditImagePage() {
     const params = useParams();
-    const imageId = params.imageId as string;
+    const coloringPageId = params.coloringPageId as string;
     const queryClient = useQueryClient();
 
     // Local state for form inputs based on fetched data
@@ -31,9 +32,9 @@ export default function EditImagePage() {
 
     // --- Fetch Image Data ---
     const { data: imageDetails, isLoading: loadingImage, error: imageError } = useQuery({
-        queryKey: ['coloringPageForEdit', imageId],
-        queryFn: () => getColoringPageForEdit(imageId),
-        enabled: !!imageId,
+        queryKey: ['coloringPageForEdit', coloringPageId],
+        queryFn: () => getColoringPageForEdit(coloringPageId),
+        enabled: !!coloringPageId,
     });
 
     // --- Fetch Available Categories/Tags ---
@@ -61,15 +62,15 @@ export default function EditImagePage() {
         mutationFn: updateColoringPage,
         onSuccess: (result) => {
             if (result.success) {
-                alert('Image updated successfully!');
-                queryClient.invalidateQueries({ queryKey: ['coloringPageForEdit', imageId] });
+                toast.success('Coloring page updated successfully!');
+                queryClient.invalidateQueries({ queryKey: ['coloringPageForEdit', coloringPageId] });
                 queryClient.invalidateQueries({ queryKey: ['adminColoringPages'] });
             } else {
-                alert(`Update failed: ${result.message}`);
+                toast.error(`Update failed: ${result.message}`);
             }
         },
         onError: (error) => {
-             alert(`Update error: ${error.message}`);
+            toast.error(`Update error: ${error.message}`);
         },
     });
 
@@ -92,7 +93,7 @@ export default function EditImagePage() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData();
-        formData.append('imageId', imageId);
+        formData.append('coloringPageId', coloringPageId);
         formData.append('title', title);
         formData.append('description', description); // <-- Append description
         selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
@@ -109,13 +110,13 @@ export default function EditImagePage() {
     if (loadingImage) return <p>Loading image details...</p>; // Separate loading for initial image fetch
     if (imageError) return <p>Error loading image data: {imageError.message}</p>;
     if (!imageDetails) {
-        return <p>Image not found.</p>;
+        return <p>Coloring page not found.</p>;
     }
 
     return (
         <div className="container mx-auto px-4 py-8 max-w-3xl">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Edit Image</h1>
+                <h1 className="text-2xl font-bold">Edit Coloring Page</h1>
                 <Button variant="outline" size="sm" asChild>
                     <Link href="/admin">Back to Admin List</Link>
                 </Button>

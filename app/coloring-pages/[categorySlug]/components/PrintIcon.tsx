@@ -8,6 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { toast } from 'sonner';
 
 interface PrintIconProps {
   imageUrl: string | null;
@@ -59,21 +60,21 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
                     pdfWindow.print();
                   } catch (printError) {
                     console.warn("Auto-print trigger failed (likely browser security restriction):", printError);
-                    alert("Opened PDF in a new tab. Please use the browser's print command (Ctrl+P or Cmd+P) if the print dialog didn't appear automatically.");
+                    toast.error("Opened PDF in a new tab. Please use the browser's print command (Ctrl+P or Cmd+P) if the print dialog didn't appear automatically.");
                   }
                   URL.revokeObjectURL(url);
                 }, 1500);
               } else {
-                alert("Could not open PDF for printing. Please check your popup blocker settings.");
+                toast.error("Could not open PDF for printing. Please check your popup blocker settings.");
                 URL.revokeObjectURL(url);
               }
             } catch (blobError) {
               console.error("Error handling PDF blob for printing:", blobError);
-              alert("Could not process the generated PDF for printing.");
+              toast.error("Could not process the generated PDF for printing.");
             }
           } else {
             console.error("PDF Generation Error from Worker (Print):", error);
-            alert(`Sorry, the PDF for printing could not be generated: ${error || 'Unknown worker error'}`);
+            toast.error(`Sorry, the PDF for printing could not be generated: ${error || 'Unknown worker error'}`);
           }
 
           setIsPreparingPrint(false);
@@ -83,7 +84,7 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
 
         workerRef.current.onerror = (e) => {
           console.error("Print Worker Error Event:", e);
-          alert(`An error occurred with the PDF generation worker for printing: ${e.message}. Check console.`);
+          toast.error(`An error occurred with the PDF generation worker for printing: ${e.message}. Check console.`);
           setIsPreparingPrint(false);
           workerRef.current?.terminate();
           workerRef.current = null;
@@ -97,13 +98,13 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
         });
       };
       img.onerror = () => {
-        alert("Failed to load image data to determine dimensions for printing.");
+        toast.error("Failed to load image data to determine dimensions for printing.");
         setIsPreparingPrint(false);
       };
       img.src = imageUrl;
     } catch (error: any) {
       console.error("Print setup error:", error);
-      alert(`Could not start the print process: ${error.message || 'Unknown error'}`);
+      toast.error(`Could not start the print process: ${error.message || 'Unknown error'}`);
       setIsPreparingPrint(false);
     }
   };

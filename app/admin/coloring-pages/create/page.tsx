@@ -13,6 +13,7 @@ import { getTags } from '../../actions/tags/read';
 import Category from '@/types/category.type';
 import Tag from '@/types/tag.type';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { toast } from 'sonner';
 
 export default function CreateImagePage() {
   const queryClient = useQueryClient();
@@ -36,7 +37,7 @@ export default function CreateImagePage() {
     mutationFn: createColoringPage,
     onSuccess: (result) => {
       if (result.success) {
-        alert(result.message);
+        toast.success(result.message);
         queryClient.invalidateQueries({ queryKey: ['adminImages'] });
         setTitle('');
         setDescription('');
@@ -47,11 +48,11 @@ export default function CreateImagePage() {
         const fileInput = document.getElementById('imageFile') as HTMLInputElement;
         if (fileInput) fileInput.value = '';
       } else {
-        alert(`Creation failed: ${result.message}`);
+        toast.error(`Creation failed: ${result.message}`);
       }
     },
     onError: (error) => {
-      alert(`Creation error: ${error.message}`);
+      toast.error(`Creation error: ${error.message}`);
     },
   });
 
@@ -97,7 +98,7 @@ export default function CreateImagePage() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!imageFile) {
-      alert('Please select an image file.');
+      toast.error('Please select an image file.');
       return;
     }
 

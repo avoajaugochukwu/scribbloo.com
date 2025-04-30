@@ -8,6 +8,7 @@ import { deleteCategory } from '../actions/categories/delete';
 import Category from '@/types/category.type';
 import { Button } from '@/components/ui/button';
 import { Trash2, Edit } from 'lucide-react';
+import { toast } from 'sonner';
 
 export function CategoryList() {
   const queryClient = useQueryClient();
@@ -28,12 +29,12 @@ export function CategoryList() {
         setDeleteConfirmation(null);
       } else {
         console.error(`Failed to delete category ${categoryId}:`, result.message);
-        alert(`Deletion failed: ${result.message}`);
+        toast.error(`Deletion failed: ${result.message}`);
       }
     },
     onError: (error, categoryId) => {
       console.error(`Error deleting category ${categoryId}:`, error);
-      alert(`An unexpected error occurred during deletion: ${error.message}`);
+      toast.error(`An unexpected error occurred during deletion: ${error.message}`);
     },
   });
 

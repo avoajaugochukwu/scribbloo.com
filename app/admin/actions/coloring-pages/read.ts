@@ -5,8 +5,6 @@ import { type AdminImageWithRelations, type ImageForEdit } from './types'; // Im
 import { Constants } from '@/config/constants';
 
 const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE; // Define constant for table name
-const IMAGE_CATEGORIES_TABLE = 'image_categories';
-const IMAGE_TAGS_TABLE = 'image_tags';
 
 /**
  * Fetches paginated images with category/tag names for the admin list.
@@ -34,8 +32,8 @@ export async function getAdminColoringPages(page = 1, pageSize = 10): Promise<{ 
                 title,
                 image_url,
                 created_at,
-                image_categories ( categories ( id, name ) ),
-                image_tags ( tags ( id, name ) )
+                coloring_page_categories ( categories ( id, name ) ),
+                coloring_page_tags ( tags ( id, name ) )
             `)
             .order('created_at', { ascending: false })
             .range(offset, offset + pageSize - 1);
@@ -59,9 +57,9 @@ export async function getAdminColoringPages(page = 1, pageSize = 10): Promise<{ 
         return { images: processedImages, totalCount: count ?? 0 };
 
     } catch (err: any) {
-        console.error('Error in getAdminImages:', err.message);
+        console.error('Error in getAdminColoringPages:', err.message);
         // Ensure a consistent error is thrown or handled
-        throw new Error(`Failed to fetch admin images: ${err.message}`);
+        throw new Error(`Failed to fetch admin coloring pages: ${err.message}`);
     }
 }
 
@@ -81,7 +79,7 @@ export async function getColoringPageForEdit(imageId: string): Promise<ImageForE
         `)
         .eq('id', imageId)
         .single();
-
+    
     if (imageError || !imageData) {
         console.error(`Error fetching image ${imageId}:`, imageError);
         return null;
@@ -89,15 +87,15 @@ export async function getColoringPageForEdit(imageId: string): Promise<ImageForE
 
     // Fetch linked category IDs
     const { data: categoryLinks, error: categoryError } = await supabase
-        .from(IMAGE_CATEGORIES_TABLE)
+        .from(Constants.COLORING_PAGE_CATEGORY_TABLE)
         .select('category_id')
-        .eq('image_id', imageId);
+        .eq('coloring_page_id', imageId);
 
     // Fetch linked tag IDs
     const { data: tagLinks, error: tagError } = await supabase
-        .from(IMAGE_TAGS_TABLE)
+        .from(Constants.COLORING_PAGE_TAG_TABLE)
         .select('tag_id')
-        .eq('image_id', imageId);
+        .eq('coloring_page_id', imageId);
 
     if (categoryError || tagError) {
         console.error(`Error fetching links for image ${imageId}:`, categoryError || tagError);
@@ -105,11 +103,6 @@ export async function getColoringPageForEdit(imageId: string): Promise<ImageForE
         // Returning null might be safer if links are critical
         return null;
     }
-
-    console.log(`Image data fetched for ${imageId}:`, imageData);
-    console.log(`Category links for ${imageId}:`, categoryLinks);
-    console.log(`Tag links for ${imageId}:`, tagLinks);
-
 
     return {
         id: imageData.id,

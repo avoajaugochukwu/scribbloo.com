@@ -8,6 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { toast } from 'sonner';
 
 interface DownloadIconProps {
   imageUrl: string | null;
@@ -57,7 +58,7 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
             URL.revokeObjectURL(url);
           } else {
             console.error("PDF Generation Error from Worker:", error);
-            alert(`Sorry, the PDF could not be generated: ${error || 'Unknown worker error'}`);
+            toast.error(`Sorry, the PDF could not be generated: ${error || 'Unknown worker error'}`);
           }
 
           setIsDownloading(false);
@@ -67,7 +68,7 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
 
         workerRef.current.onerror = (e) => {
           console.error("Worker Error Event:", e);
-          alert(`An error occurred initializing or running the PDF generation worker: ${e.message}. Check the console for details.`);
+          toast.error(`An error occurred initializing or running the PDF generation worker: ${e.message}. Check the console for details.`);
           setIsDownloading(false);
           workerRef.current?.terminate();
           workerRef.current = null;
@@ -81,14 +82,14 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
         });
       };
       img.onerror = () => {
-        alert("Failed to load image data to determine dimensions.");
+        toast.error("Failed to load image data to determine dimensions.");
         setIsDownloading(false);
       };
       img.src = imageUrl;
 
     } catch (error: any) {
       console.error("Download setup error:", error);
-      alert(`Could not start the download process: ${error.message || 'Unknown error'}`);
+      toast.error(`Could not start the download process: ${error.message || 'Unknown error'}`);
       setIsDownloading(false);
     }
   };

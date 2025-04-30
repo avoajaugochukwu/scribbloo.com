@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { metadata, jsonLd } from "./metadata";
+import { metadata } from "./metadata";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Removed JSON-LD script from here if it's handled per-page */}
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased flex flex-col",
@@ -37,11 +41,8 @@ export default function RootLayout({
           <main className="flex-grow pt-4">{children}</main>
         </div>
         <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <GoogleAnalytics gaId="G-LV4B3PXPG8" />
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
