@@ -182,7 +182,12 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
  * Fetches a single category for editing.
  */
 export async function getCategoryForEdit(categoryId: string): Promise<Category | null> {
-    if (!categoryId) return null;
+    if (!categoryId) {
+        console.log("getCategoryForEdit called with no categoryId.");
+        return null;
+    }
+
+    console.log(`getCategoryForEdit: Fetching category with ID: ${categoryId}`);
 
     try {
         const { data, error } = await supabase
@@ -195,18 +200,26 @@ export async function getCategoryForEdit(categoryId: string): Promise<Category |
                 seo_title,
                 seo_description,
                 seo_meta_description,
-                hero_image,         -- Renamed
-                thumbnail_image,    -- Renamed
+                hero_image,
+                thumbnail_image,
                 created_at
             `)
             .eq('id', categoryId)
-            .single() as { data: Category | null, error: any };
+            .single();
 
         if (error) {
-            console.error(`Error fetching category ${categoryId} for edit:`, error);
+            console.error(`Error fetching category ${categoryId} for edit:`, error.message);
             return null;
         }
+
+        if (!data) {
+             console.log(`getCategoryForEdit: No data found for category ID: ${categoryId}`);
+             return null;
+        }
+
+        console.log(`getCategoryForEdit: Successfully fetched data for category ID: ${categoryId}`);
         return data;
+
     } catch (err) {
         console.error(`Unexpected error fetching category ${categoryId}:`, err);
         return null;
