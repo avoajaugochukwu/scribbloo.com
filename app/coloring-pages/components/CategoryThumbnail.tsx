@@ -9,11 +9,11 @@ interface CategoryThumbnailProps {
 }
 
 export default function CategoryThumbnail({ category }: CategoryThumbnailProps) {
-  const imageUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL + category.thumbnail_image_url;
+  const imageUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL + category.thumbnail_image;
 
   return (
     <>
-      {category.thumbnail_image_url ? (
+      {category.thumbnail_image ? (
         <div className="mb-2 relative w-full overflow-hidden rounded">
           <Image
             src={imageUrl}

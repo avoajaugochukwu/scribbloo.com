@@ -21,9 +21,9 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     // 1 & 2: Query categories table for the category ID and details
     const { data: categoryData, error: categoryError } = await supabase
       .from('categories')
-      .select('id, name, slug, created_at, description, seo_title, seo_description, seo_meta_description, hero_image_url, thumbnail_image_url') // <-- Removed description
+      .select('id, name, slug, created_at, description, seo_title, seo_description, seo_meta_description, hero_image, thumbnail_image') // Renamed fields
       .eq('slug', categorySlug)
-      .maybeSingle(); // Expect 0 or 1 category
+      .maybeSingle();
 
     if (categoryError) {
       console.error('Error fetching category:', categoryError.message);
@@ -63,8 +63,8 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
         seo_title: categoryData.seo_title,
         seo_description: categoryData.seo_description,
         seo_meta_description: categoryData.seo_meta_description,
-        hero_image_url: categoryData.hero_image_url,
-        thumbnail_image_url: categoryData.thumbnail_image_url,
+        hero_image: categoryData.hero_image, // Renamed field
+        thumbnail_image: categoryData.thumbnail_image, // Renamed field
         images: [],
       };
       return result;
@@ -92,8 +92,8 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       seo_title: categoryData.seo_title,
       seo_description: categoryData.seo_description,
       seo_meta_description: categoryData.seo_meta_description,
-      hero_image_url: categoryData.hero_image_url,
-      thumbnail_image_url: categoryData.thumbnail_image_url,
+      hero_image: categoryData.hero_image, // Renamed field
+      thumbnail_image: categoryData.thumbnail_image, // Renamed field
       images: (imagesData || []) as ImageType[],
     };
 
@@ -122,8 +122,8 @@ export async function getAllCategories(): Promise<Category[]> {
     try {
         const { data, error } = await supabase
             .from('categories')
-            .select('id, name, slug')
-            .order('name', { ascending: true }); // Optional: order categories by name
+            .select('id, name, slug, seo_title, thumbnail_image') // Example: Added thumbnail_image
+            .order('name', { ascending: true });
 
         if (error) {
             console.error('Error fetching all categories:', error.message);

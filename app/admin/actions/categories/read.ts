@@ -4,14 +4,25 @@ import { supabase } from '@/lib/supabaseClient';
 import Category from '@/types/category.type';
 
 /**
- * Fetches all categories from the database, ordered by name.
+ * Fetches all categories for the admin list.
  */
 export async function getCategories(): Promise<Category[]> {
   console.log('Fetching all categories...');
   try {
     const { data, error } = await supabase
       .from('categories')
-      .select('id, name, created_at, description, seo_title, seo_description, hero_image_url, thumbnail_image_url, slug')
+      .select(`
+        id,
+        name,
+        slug,
+        description,
+        seo_title,
+        seo_description,
+        seo_meta_description,
+        hero_image,
+        thumbnail_image,
+        created_at
+      `)
       .order('name', { ascending: true });
 
     if (error) {
@@ -28,8 +39,9 @@ export async function getCategories(): Promise<Category[]> {
         description: cat.description,
         seo_title: cat.seo_title,
         seo_description: cat.seo_description,
-        hero_image_url: cat.hero_image_url,
-        thumbnail_image_url: cat.thumbnail_image_url,
+        seo_meta_description: cat.seo_meta_description,
+        hero_image: cat.hero_image,
+        thumbnail_image: cat.thumbnail_image,
         slug: cat.slug
     })) as Category[];
 

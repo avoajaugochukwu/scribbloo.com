@@ -25,7 +25,7 @@ export async function deleteCategory(categoryId: string): Promise<{ success: boo
         console.log(`Fetching category ${categoryId} to get image paths for deletion...`);
         const { data: categoryToDelete, error: fetchError } = await supabase
             .from('categories')
-            .select('name, hero_image_url, thumbnail_image_url') // Select paths and name for logging
+            .select('name, hero_image, thumbnail_image') // Renamed fields
             .eq('id', categoryId)
             .single();
 
@@ -48,8 +48,8 @@ export async function deleteCategory(categoryId: string): Promise<{ success: boo
         }
 
         // Store the paths
-        heroImagePath = categoryToDelete.hero_image_url;
-        thumbnailImagePath = categoryToDelete.thumbnail_image_url;
+        heroImagePath = categoryToDelete.hero_image; // Use renamed field
+        thumbnailImagePath = categoryToDelete.thumbnail_image; // Use renamed field
         const categoryName = categoryToDelete.name; // For logging
 
         // 2. Delete the category record from the database

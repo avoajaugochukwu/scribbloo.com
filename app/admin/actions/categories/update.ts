@@ -43,11 +43,11 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
   let oldSlug: string | null = null;
 
   try {
-    // 1. Fetch current category data (including slug)
+    // 1. Fetch current category data (including slug and image paths)
     console.log(`Fetching current data for category ID: ${categoryId}`);
     const { data: currentCategory, error: fetchError } = await supabase
       .from('categories')
-      .select('slug, hero_image_url, thumbnail_image_url') // Select fields needed
+      .select('slug, hero_image, thumbnail_image') // Renamed fields
       .eq('id', categoryId)
       .single();
 
@@ -55,8 +55,8 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
       console.error(`Error fetching category ${categoryId}:`, fetchError?.message);
       return { success: false, message: `Could not find the category (ID: ${categoryId}) to update.` };
     }
-    oldHeroPath = currentCategory.hero_image_url;
-    oldThumbnailPath = currentCategory.thumbnail_image_url;
+    oldHeroPath = currentCategory.hero_image; // Use renamed field
+    oldThumbnailPath = currentCategory.thumbnail_image; // Use renamed field
     oldSlug = currentCategory.slug;
     console.log(`Current data fetched: Slug=${oldSlug}, Hero=${oldHeroPath}, Thumb=${oldThumbnailPath}`);
 
@@ -87,12 +87,12 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     }
 
     // 3. Prepare data for DB update
-    const updateData: Partial<Category> = {
+    const updateData: { [key: string]: any } = {
       name: categoryName,
       description: description || null,
       seo_title: seoTitle || null,
       seo_description: seoDescription || null,
-      seo_meta_description: seoMetaDescription || null, // <-- Add the new field
+      seo_meta_description: seoMetaDescription || null,
     };
 
     // --- Handle Slug Update ---
@@ -105,13 +105,12 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     }
     // --- End Slug Update ---
 
-
-    // Only include image paths if they were successfully uploaded (i.e., are not null)
+    // Only include image paths if they were successfully uploaded
     if (newHeroPath) {
-      updateData.hero_image_url = newHeroPath;
+      updateData.hero_image = newHeroPath; // Renamed field
     }
     if (newThumbnailPath) {
-      updateData.thumbnail_image_url = newThumbnailPath;
+      updateData.thumbnail_image = newThumbnailPath; // Renamed field
     }
 
     // 4. Update Database Record
@@ -166,7 +165,6 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
         revalidatePath(`/coloring-pages/${oldSlug}`); // Revalidate current slug path
     }
 
-
     return { success: true, message: `Category "${categoryName}" updated successfully.` };
 
   } catch (err: any) {
@@ -197,12 +195,12 @@ export async function getCategoryForEdit(categoryId: string): Promise<Category |
                 seo_title,
                 seo_description,
                 seo_meta_description,
-                hero_image_url,
-                thumbnail_image_url,
+                hero_image,         -- Renamed
+                thumbnail_image,    -- Renamed
                 created_at
             `)
             .eq('id', categoryId)
-            .single();
+            .single() as { data: Category | null, error: any };
 
         if (error) {
             console.error(`Error fetching category ${categoryId} for edit:`, error);

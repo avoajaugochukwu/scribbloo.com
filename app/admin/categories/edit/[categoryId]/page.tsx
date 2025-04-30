@@ -55,8 +55,8 @@ export default function EditCategoryPage() {
             setSeoDescription(categoryData.seo_description || '');
             setSeoMetaDescription(categoryData.seo_meta_description || ''); // <-- Populate state
             setCurrentSlug(categoryData.slug || '');
-            setCurrentHeroPath(categoryData.hero_image_url || null);
-            setCurrentThumbnailPath(categoryData.thumbnail_image_url || null);
+            setCurrentHeroPath(categoryData.hero_image || null);
+            setCurrentThumbnailPath(categoryData.thumbnail_image || null);
         }
     }, [categoryData]);
 
