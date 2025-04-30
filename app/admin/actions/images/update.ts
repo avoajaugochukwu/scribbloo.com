@@ -4,7 +4,6 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 // Import shared helpers
 import { uploadStorageFile, deleteStorageFile } from '@/lib/storageUtils';
-import { type AdminImageWithRelations } from './types'; // Assuming this type includes image_url
 import ImageType from '@/types/image.type';
 
 // Define the bucket name for coloring images

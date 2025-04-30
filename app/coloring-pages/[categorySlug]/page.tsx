@@ -66,7 +66,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // --- End Structured Data Prep ---
 
   return (
-    <div className="container mx-auto px-4 mb-20">
+    <div className="container mx-auto px-4 pb-8 md:pb-12">
       {/* --- Embed JSON-LD Script --- */}
       <script
         type="application/ld+json"
@@ -74,54 +74,57 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       />
       {/* --- End JSON-LD Script --- */}
 
-      <Breadcrumb>
+      <Breadcrumb className="mb-4 md:mb-6">
         <BreadcrumbList>
           {breadcrumbItems.map((item, index) => (
             <React.Fragment key={item.href}>
               <BreadcrumbItem>
                 {index === breadcrumbItems.length - 1 ? (
-                  // Render last item as BreadcrumbPage (not a link)
-                  <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                  <BreadcrumbPage className="font-medium text-pink-800">{item.label}</BreadcrumbPage>
                 ) : (
-                  // Render other items as links
-                  <BreadcrumbLink asChild>
+                  <BreadcrumbLink asChild className="text-pink-600 hover:text-pink-700">
                     <Link href={item.href}>{item.label}</Link>
                   </BreadcrumbLink>
                 )}
               </BreadcrumbItem>
               {index < breadcrumbItems.length - 1 && (
-                // Add separator if not the last item
-                <BreadcrumbSeparator />
+                <BreadcrumbSeparator>
+                  <span className="mx-1 text-muted-foreground">&gt;&gt;</span>
+                </BreadcrumbSeparator>
               )}
             </React.Fragment>
           ))}
         </BreadcrumbList>
       </Breadcrumb>
 
-      <h1 className="text-3xl font-bold mb-6 mt-4"> {/* Added mt-4 for spacing */}
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4 md:mb-6">
         {categoryData.name} Coloring Pages
       </h1>
 
-      <section className="w-4/6">
-        <Image 
-          src={Constants.SUPABASE_HERO_IMAGES_BUCKET + categoryData.hero_image_url} 
-          alt={categoryData.name} 
-          width={1000} 
-          height={500}
-          className="w-full h-auto relative"
-        />
-        {/* Remove or comment out this section as categoryData.description doesn't exist */}
-        {categoryData.description && (
-          <p className="text-lg text-gray-600 my-6"
-            dangerouslySetInnerHTML={
-              { __html: categoryData.description.replace(/"/g, '&quot;').replace(/'/g, '&apos;') }
-            } />
-        )}
-      </section>
+      {categoryData.hero_image_url && (
+        <section className="mb-8 md:mb-12 bg-red-900 py-10 md:py-16 rounded-lg">
+          <div className="flex justify-center items-center">
+            <Image
+              src={Constants.SUPABASE_HERO_IMAGES_BUCKET + categoryData.hero_image_url}
+              alt={`${categoryData.name} category hero image`}
+              width={500}
+              height={750}
+              className="rounded-md shadow-xl transform -rotate-3"
+              priority
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </section>
+      )}
+
+      {categoryData.description && (
+        <section className="max-w-3xl mx-auto text-center text-muted-foreground">
+          <p>{categoryData.description}</p>
+        </section>
+      )}
 
       {images.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {/* Map over images and render the component */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {images.map((image: ImageType) => (
             <ColoringPageImage
               key={image.id}
@@ -131,7 +134,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           ))}
         </div>
       ) : (
-        <p>No coloring pages found in the &quot;{categoryData.name}&quot; category yet. Check back soon!</p>
+        <p className="mt-12 text-center text-muted-foreground">
+          No coloring pages found in the &quot;{categoryData.name}&quot; category yet. Check back soon!
+        </p>
       )}
     </div>
   );

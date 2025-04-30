@@ -1,16 +1,67 @@
 import Image from 'next/image';
 import CategoryListDisplay from './coloring-pages/components/CategoryListDisplay';
+import { Metadata } from 'next';
+import { baseUrl } from '@/app/metadata';
 // Keep Link if you plan to add other sections with links later
 // import Link from 'next/link';
+
+// --- SEO Metadata ---
+export const metadata: Metadata = {
+  title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
+  description: 'Download hundreds of free, high-quality printable coloring pages for kids, teens, and adults. New unicorns, animals, mandalas, and more added weekly!',
+  alternates: {
+    canonical: baseUrl,
+  },
+  openGraph: {
+    title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
+    description: 'Download hundreds of free, high-quality printable coloring pages for kids, teens, and adults.',
+    url: baseUrl,
+    siteName: 'Scribbloo',
+    images: [
+      {
+        url: `${baseUrl}/img/og-image-home.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Scribbloo Coloring Pages Collection',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
+    description: 'Download hundreds of free, high-quality printable coloring pages for kids, teens, and adults.',
+  },
+};
+// --- End SEO Metadata ---
 
 export default function Home() {
   // Remove previous Notion fetching and post mapping logic
 
+  // --- JSON-LD Structured Data ---
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Scribbloo',
+    url: baseUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${baseUrl}/search?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+  // --- End Structured Data Prep ---
+
   return (
-    // Using min-height to ensure the container has space for positioned images
-    // Added overflow-hidden on the main container to prevent positioned images
-    // from creating unwanted scrollbars if they slightly exceed boundaries.
-    <div className="container mx-auto px-4 py-4 md:py-4 lg:py-4 overflow-hidden">
+    // Removed top padding to bring breadcrumb up
+    <div className="container mx-auto px-4 pb-8 md:pb-12">
+
+      {/* --- Embed JSON-LD Script --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* --- End JSON-LD Script --- */}
 
       {/* New Hero Section - Reduced min-height */}
       <section className="relative flex items-center justify-center text-center min-h-[50vh] md:min-h-[60vh] mb-16">
@@ -86,7 +137,10 @@ export default function Home() {
       {/* Example: */}
       <section className="my-16">
         <h2 className="text-3xl font-bold text-center mb-10">Coloring Pages</h2>
-        <CategoryListDisplay />
+        {/* Added flex wrapper to center the CategoryListDisplay component */}
+        <div className="flex justify-center">
+          <CategoryListDisplay />
+        </div>
       </section>
      
 

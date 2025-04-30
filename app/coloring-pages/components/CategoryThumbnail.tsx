@@ -29,8 +29,8 @@ export default function CategoryThumbnail({ category }: CategoryThumbnailProps) 
           No Image
         </div>
       )}
-      {/* Category Name */}
-      <span className="text-2xl text-blue-600 hover:text-blue-800">
+      {/* Category Name - Changed text color to pink */}
+      <span className="text-2xl text-pink-600 hover:text-pink-800">
         {category.seo_title}
       </span>
     </>

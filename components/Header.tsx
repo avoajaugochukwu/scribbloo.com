@@ -1,9 +1,5 @@
 import Link from 'next/link';
-import { Plane } from 'lucide-react'; // Assuming you might use an icon
 import Image from 'next/image';
-// Import any components used in the right-aligned section if needed (e.g., Button, ThemeToggle)
-// import { Button } from "@/components/ui/button";
-// import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   return (
