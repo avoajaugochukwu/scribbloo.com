@@ -3,100 +3,81 @@ import { Constants } from '@/config/constants';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
+// Import shared helper
+import { deleteStorageFile } from '@/lib/storageUtils';
 
 /**
  * Deletes an image record and its associated file from storage.
  */
 export async function deleteImage(imageId: string): Promise<{ success: boolean; message: string }> {
     if (!imageId) {
-        return { success: false, message: 'Image ID is missing.' };
+        return { success: false, message: 'Image ID is required.' };
     }
-    console.log(`Attempting to delete image ID: ${imageId}`);
 
-    let imagePath: string | null = null; // To store the file path
-    const bucketName = Constants.SUPABASE_COLORING_IMAGES_BUCKET;
-    const tableName = 'images';
+    let imagePath: string | null = null;
+    let imageTitle: string | null = 'Unknown'; // For logging
 
     try {
-        // 1. Get the image_url (file path) before deleting the record
-        const { data: imageData, error: fetchError } = await supabase
-            .from(tableName)
-            .select('image_url')
+        // 1. Fetch the image to get its path BEFORE deleting
+        console.log(`Fetching image ${imageId} to get path for deletion...`);
+        const { data: imageToDelete, error: fetchError } = await supabase
+            .from('images')
+            .select('title, image_url') // Select path and title for logging
             .eq('id', imageId)
             .single();
 
-        if (fetchError || !imageData) {
-            console.warn(`Could not fetch image record (ID: ${imageId}) to get path for deletion:`, fetchError?.message);
-            // Decide if you want to proceed with DB deletion attempt anyway or fail here
-            // Proceeding might leave an orphan file if the record doesn't exist but the file does
-            // Failing here is safer if the record MUST exist.
-            // Let's try deleting DB record anyway, but log the issue.
-            // return { success: false, message: `Image record not found (ID: ${imageId}). Cannot delete.` };
-        } else {
-            imagePath = imageData.image_url; // Store the path
-            console.log(`Found image path for deletion: ${imagePath}`);
+        if (fetchError) {
+            if (fetchError.code === 'PGRST116') {
+                 console.warn(`Image ${imageId} not found for fetching path, likely already deleted.`);
+                 return { success: true, message: `Image ${imageId} likely already deleted.` };
+            }
+            console.error(`Error fetching image ${imageId} before delete:`, fetchError.message);
+            return { success: false, message: `Failed to fetch image details before deletion: ${fetchError.message}` };
         }
 
+        if (!imageToDelete) {
+             console.warn(`Image ${imageId} not found when fetching for delete.`);
+             return { success: true, message: `Image ${imageId} not found.` };
+        }
 
-        // 2. Delete the database record
-        console.log(`Deleting image record from table "${tableName}" (ID: ${imageId})`);
+        // Store the path and title
+        imagePath = imageToDelete.image_url;
+        imageTitle = imageToDelete.title;
+
+        // 2. Delete the image record from the database
+        // Note: Related entries in image_categories/image_tags should cascade delete
+        // if foreign keys are set up with ON DELETE CASCADE. Otherwise, handle manually or via RPC.
+        console.log(`Attempting to delete image "${imageTitle}" (ID: ${imageId}) from database...`);
         const { error: deleteDbError } = await supabase
-            .from(tableName)
+            .from('images')
             .delete()
             .eq('id', imageId);
 
-        // Don't immediately fail on DB error, still try storage cleanup if path exists
         if (deleteDbError) {
-            console.error(`Error deleting image record (ID: ${imageId}):`, deleteDbError.message);
-            // We'll handle the return message later based on storage cleanup result
-        } else {
-            console.log(`Image record deleted successfully (ID: ${imageId}).`);
+            console.error(`Database error deleting image ${imageId}:`, deleteDbError.message);
+            return { success: false, message: `Database error deleting image: ${deleteDbError.message}` };
         }
 
-        // 3. Delete the file from storage if a path was found
+        console.log(`Image "${imageTitle}" deleted successfully from database.`);
+
+        // 3. Delete associated image file from storage AFTER successful DB deletion
         if (imagePath) {
-            console.log(`Deleting image file "${imagePath}" from bucket "${bucketName}"`);
-            const { error: deleteStorageError } = await supabase.storage
-                .from(bucketName)
-                .remove([imagePath]);
-
-            if (deleteStorageError) {
-                console.error(`Error deleting image file from storage (Path: ${imagePath}):`, deleteStorageError.message);
-                // If DB delete succeeded but storage failed, return specific error
-                if (!deleteDbError) {
-                    return { success: false, message: `Image record deleted, but failed to delete file from storage: ${deleteStorageError.message}` };
-                } else {
-                    // If both failed
-                    return { success: false, message: `Failed to delete DB record (${deleteDbError.message}) AND storage file (${deleteStorageError.message}).` };
-                }
-            } else {
-                 console.log(`Image file deleted successfully from storage (Path: ${imagePath}).`);
-                 // If DB delete failed earlier but storage succeeded
-                 if (deleteDbError) {
-                     return { success: false, message: `Storage file deleted, but failed to delete DB record: ${deleteDbError.message}` };
-                 }
-                 // Both succeeded - fall through to success return
-            }
+            console.log(`Attempting to delete image file: ${imagePath}`);
+            await deleteStorageFile('coloring-images', imagePath);
         } else {
-             // No image path found
-             console.warn(`No image path found for image ID ${imageId}. Skipping storage deletion.`);
-             // If DB delete failed and no path found
-             if (deleteDbError) {
-                 return { success: false, message: `Database deletion failed: ${deleteDbError?.message}. No file path found for storage cleanup.` };
-             } else {
-                 // If DB delete succeeded but no path found (maybe expected if image_url was null)
-                 return { success: true, message: 'Image record deleted (no file path found for storage cleanup).' };
-             }
+            console.log(`No image path found for deleted image ${imageId}.`);
         }
 
-        // 4. Revalidate paths if everything seemed okay (reached only if DB delete succeeded and storage delete succeeded or was skipped appropriately)
+        // 4. Success - Revalidate Paths
+        console.log(`Revalidating paths after deleting image ${imageId}...`);
         revalidatePath('/admin');
         revalidatePath('/coloring-pages', 'layout'); // Revalidate public pages
 
-        return { success: true, message: 'Image deleted successfully.' };
+        return { success: true, message: `Image "${imageTitle}" and associated file deleted successfully.` };
 
     } catch (err: any) {
-        console.error(`Unexpected error deleting image (ID: ${imageId}):`, err);
-        return { success: false, message: `Deletion failed: ${err.message}` };
+        console.error(`Unexpected error deleting image ${imageId}:`, err);
+        const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
+        return { success: false, message };
     }
 } 

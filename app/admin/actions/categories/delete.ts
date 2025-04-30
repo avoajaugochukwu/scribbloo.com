@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-import { deleteStorageFile } from './update'; // Adjust path if needed, or move helper
+// Import shared helper
+import { deleteStorageFile } from '@/lib/storageUtils';
 
 /**
  * Deletes a category from the database.

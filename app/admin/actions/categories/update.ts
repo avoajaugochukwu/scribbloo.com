@@ -3,39 +3,8 @@
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 import Category from '@/types/category.type';
-import { Constants } from '@/config/constants'; // Import constants
-
-// Re-use the upload helper from create.ts (or move to a shared utils file)
-async function uploadFile(
-    bucketName: string,
-    file: File,
-): Promise<{ path: string | null; error: string | null }> {
-     if (!file || file.size === 0) return { path: null, error: 'File is empty or missing.' };
-     if (!file.type.startsWith('image/')) return { path: null, error: 'Invalid file type. Only images are allowed.' };
-     
-     
-     console.log(`Uploading file "${file.name}" as "${file.name}" to bucket "${bucketName}"`);
-     const { data, error } = await supabase.storage.from(bucketName).upload(file.name, file, { cacheControl: '3600', upsert: false });
-     if (error) { console.error(`Storage upload error (${bucketName}):`, error); return { path: null, error: `Storage upload failed: ${error.message}` }; }
-     console.log(`File uploaded successfully to ${bucketName}:`, data.path);
-     return { path: data.path, error: null };
-}
-
-// Helper to delete a file from storage, ignoring "Not found" errors
-export async function deleteStorageFile(bucketName: string, filePath: string | null | undefined): Promise<void> {
-    if (!filePath) return;
-    console.log(`Attempting to delete file "${filePath}" from bucket "${bucketName}"`);
-    const { error } = await supabase.storage.from(bucketName).remove([filePath]);
-    if (error && !error.message.includes('Not found')) { // Log errors other than "file not found"
-        console.error(`Storage delete error (${bucketName}, ${filePath}):`, error.message);
-        // Decide if you want to throw here or just log. Logging is often sufficient.
-    } else if (error) {
-        console.log(`File "${filePath}" not found in bucket "${bucketName}" (already deleted?).`);
-    } else {
-        console.log(`File "${filePath}" deleted successfully from bucket "${bucketName}".`);
-    }
-}
-
+// Import shared helpers
+import { uploadStorageFile, deleteStorageFile } from '@/lib/storageUtils';
 
 /**
  * Updates an existing category, handling optional image replacements.
@@ -85,7 +54,7 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
     // 2. Upload NEW Hero Image (if provided)
     if (newHeroImageFile && newHeroImageFile.size > 0) {
-      const heroUploadResult = await uploadFile(heroBucket, newHeroImageFile);
+      const heroUploadResult = await uploadStorageFile(heroBucket, newHeroImageFile);
       if (heroUploadResult.error || !heroUploadResult.path) {
         return { success: false, message: `New hero image upload failed: ${heroUploadResult.error}` };
       }
@@ -94,7 +63,7 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
     // 3. Upload NEW Thumbnail Image (if provided)
     if (newThumbnailImageFile && newThumbnailImageFile.size > 0) {
-      const thumbUploadResult = await uploadFile(thumbnailBucket, newThumbnailImageFile);
+      const thumbUploadResult = await uploadStorageFile(thumbnailBucket, newThumbnailImageFile);
       if (thumbUploadResult.error || !thumbUploadResult.path) {
         // Rollback: Delete newly uploaded hero image if thumbnail fails
         if (newHeroPath) await deleteStorageFile(heroBucket, newHeroPath);
