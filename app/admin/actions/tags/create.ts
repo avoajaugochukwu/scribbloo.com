@@ -1,5 +1,6 @@
 'use server';
 
+import { Constants } from '@/config/constants';
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 
@@ -15,7 +16,7 @@ export async function createTag(formData: FormData): Promise<{ success: boolean;
 
   try {
     const { error } = await supabase
-      .from('tags')
+      .from(Constants.TAGS_TABLE)
       .insert([{ name: tagName }])
       .select()
       .single();

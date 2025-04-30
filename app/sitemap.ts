@@ -2,11 +2,10 @@
 import { MetadataRoute } from 'next'
 import { fetchPages } from '@/lib/notion'
 import { baseUrl } from './metadata';
+import { getCategories } from './admin/actions/categories/read';
 
 // Define static routes directly
 const staticRoutes = [
-  '/',
-  '/blog',
   '/privacy-policy', // Added based on Footer
   '/terms-of-service', // Added based on Footer
 ];
@@ -39,6 +38,50 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: path === '/' ? 1.0 : 0.8, // Give homepage highest priority
   }));
 
-  // Combine static and dynamic URLs
-  return [...routeUrls, ...blogUrls];
+  // 1. Fetch all categories
+  const categories = await getCategories();
+
+  // 2. Generate category page URLs
+  const categoryUrls = categories.map((category) => ({
+    url: `${baseUrl}/coloring-pages/${category.slug}`,
+    lastModified: new Date(), // Or use a category updated_at field if available
+    changeFrequency: 'weekly' as const, // Or 'monthly' if they change less often
+    priority: 0.8, // Slightly lower than homepage, higher than individual pages maybe
+  }));
+
+  // 3. Add other static pages (adjust as needed)
+  const staticUrls = [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/blog`, // Example static page
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    // Add other static pages like /about, /contact, etc.
+  ];
+
+  // 4. (Optional) Add individual coloring page URLs if desired
+  //    You would need another function like `getAllColoringPageSlugs()`
+  //    const coloringPages = await getAllColoringPageSlugs();
+  //    const coloringPageUrls = coloringPages.map((page) => ({
+  //        url: `${baseUrl}/coloring-page/${page.slug}`, // Adjust URL structure if needed
+  //        lastModified: new Date(), // Or page updated_at
+  //        changeFrequency: 'monthly' as const,
+  //        priority: 0.6,
+  //    }));
+
+  // 5. Combine all URLs
+  return [
+    ...staticUrls,
+    ...routeUrls,
+    ...categoryUrls,
+    ...blogUrls,
+    // ...coloringPageUrls, // Uncomment if adding individual pages
+  ];
 } 

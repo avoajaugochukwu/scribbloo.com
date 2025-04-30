@@ -1,5 +1,6 @@
 'use server';
 
+import { Constants } from '@/config/constants';
 import { supabase } from '@/lib/supabaseClient';
 import Tag from '@/types/tag.type';
 
@@ -10,7 +11,7 @@ export async function getTags(): Promise<Tag[]> {
   console.log('Fetching all tags...');
   try {
     const { data, error } = await supabase
-      .from('tags')
+      .from(Constants.TAGS_TABLE)
       .select('id, name, created_at')
       .order('name', { ascending: true });
 

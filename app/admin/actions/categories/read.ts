@@ -1,5 +1,6 @@
 'use server';
 
+import { Constants } from '@/config/constants';
 import { supabase } from '@/lib/supabaseClient';
 import Category from '@/types/category.type';
 
@@ -10,7 +11,7 @@ export async function getCategories(): Promise<Category[]> {
   console.log('Fetching all categories...');
   try {
     const { data, error } = await supabase
-      .from('categories')
+      .from(Constants.CATEGORIES_TABLE)
       .select(`
         id,
         name,

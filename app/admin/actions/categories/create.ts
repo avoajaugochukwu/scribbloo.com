@@ -83,7 +83,7 @@ export async function createCategory(formData: FormData): Promise<{ success: boo
     };
 
     const { data: newCategory, error: insertError } = await supabase
-      .from('categories')
+      .from(Constants.CATEGORIES_TABLE)
       .insert(insertData)
       .select('id') // Select only the ID
       .single();
