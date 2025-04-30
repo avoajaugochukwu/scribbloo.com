@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useParams, useRouter } from 'next/navigation';
@@ -12,6 +12,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { getCategoryForEdit, updateCategory } from '../../../actions/categories/update'; // Adjust path
 import Category from '@/types/category.type';
 import { Constants } from '@/config/constants'; // Import constants
+import { toast } from 'sonner'; // Assuming sonner for toasts
+import { Skeleton } from '@/components/ui/skeleton'; // For loading state
 
 export default function EditCategoryPage() {
     const params = useParams();
@@ -24,6 +26,7 @@ export default function EditCategoryPage() {
     const [description, setDescription] = useState('');
     const [seoTitle, setSeoTitle] = useState('');
     const [seoDescription, setSeoDescription] = useState('');
+    const [seoMetaDescription, setSeoMetaDescription] = useState(''); // <-- Add state
     const [currentSlug, setCurrentSlug] = useState('');
     // --- State for Current Image Paths (from DB) ---
     const [currentHeroPath, setCurrentHeroPath] = useState<string | null>(null);
@@ -31,57 +34,54 @@ export default function EditCategoryPage() {
     // --- State for NEW File Uploads ---
     const [newHeroImageFile, setNewHeroImageFile] = useState<File | null>(null);
     const [newThumbnailImageFile, setNewThumbnailImageFile] = useState<File | null>(null);
-    // Preview URLs for NEW uploads (optional)
     const [newHeroPreviewUrl, setNewHeroPreviewUrl] = useState<string | null>(null);
     const [newThumbnailPreviewUrl, setNewThumbnailPreviewUrl] = useState<string | null>(null);
-    // --- End State ---
+    // --- End File State ---
 
-    // --- Fetch Category Data ---
-    const { data: categoryDetails, isLoading: loadingCategory, error: categoryError } = useQuery<Category | null>({
-        queryKey: ['categoryForEdit', categoryId],
+    // Fetch category data
+    const { data: categoryData, isLoading: isQueryLoading, error: queryError } = useQuery<Category | null>({
+        queryKey: ['category', categoryId],
         queryFn: () => getCategoryForEdit(categoryId),
         enabled: !!categoryId, // Only run query if categoryId is available
+        staleTime: 5 * 60 * 1000, // Cache for 5 minutes
     });
 
-    // --- Effect to populate form state once category data loads ---
+    // Update local state when category data loads
     useEffect(() => {
-        if (categoryDetails) {
-            setCategoryName(categoryDetails.name || '');
-            setDescription(categoryDetails.description || '');
-            setSeoTitle(categoryDetails.seo_title || '');
-            setSeoDescription(categoryDetails.seo_description || '');
-            setCurrentSlug(categoryDetails.slug || 'N/A'); // Store slug for display
-            // --- Store current image paths ---
-            setCurrentHeroPath(categoryDetails.hero_image_url || null); // Assuming url column stores path
-            setCurrentThumbnailPath(categoryDetails.thumbnail_image_url || null); // Assuming url column stores path
-            // --- Clear new file state when data loads ---
-            setNewHeroImageFile(null);
-            setNewThumbnailImageFile(null);
-            setNewHeroPreviewUrl(null);
-            setNewThumbnailPreviewUrl(null);
+        if (categoryData) {
+            setCategoryName(categoryData.name || '');
+            setDescription(categoryData.description || '');
+            setSeoTitle(categoryData.seo_title || '');
+            setSeoDescription(categoryData.seo_description || '');
+            setSeoMetaDescription(categoryData.seo_meta_description || ''); // <-- Populate state
+            setCurrentSlug(categoryData.slug || '');
+            setCurrentHeroPath(categoryData.hero_image_url || null);
+            setCurrentThumbnailPath(categoryData.thumbnail_image_url || null);
         }
-    }, [categoryDetails]);
+    }, [categoryData]);
 
-    // --- Update Category Mutation ---
+    // Mutation for updating the category
     const updateMutation = useMutation({
         mutationFn: updateCategory,
-        onSuccess: (result) => {
-            if (result.success) {
-                alert('Category updated successfully!');
-                queryClient.invalidateQueries({ queryKey: ['categoryForEdit', categoryId] });
-                queryClient.invalidateQueries({ queryKey: ['categories'] }); // Invalidate list view
-                router.push('/admin/categories'); // Navigate back to list on success
+        onSuccess: (data) => {
+            if (data.success) {
+                toast.success(data.message);
+                // Invalidate specific category query and the list query
+                queryClient.invalidateQueries({ queryKey: ['category', categoryId] });
+                queryClient.invalidateQueries({ queryKey: ['categories'] });
+                router.push('/admin/categories'); // Redirect on success
             } else {
-                alert(`Update failed: ${result.message}`);
+                toast.error(`Update failed: ${data.message}`);
             }
         },
-        onError: (error) => {
-             alert(`Update error: ${error.message}`);
+        onError: (error: any) => {
+             console.error("Mutation error:", error);
+             toast.error(`An unexpected error occurred: ${error.message || 'Unknown error'}`);
         },
     });
 
-    // --- File Handlers (same as create page) ---
-    const handleFileChange = (
+    // --- File Handlers ---
+     const handleFileChange = (
         event: React.ChangeEvent<HTMLInputElement>,
         setter: React.Dispatch<React.SetStateAction<File | null>>,
         previewSetter: React.Dispatch<React.SetStateAction<string | null>>
@@ -90,31 +90,45 @@ export default function EditCategoryPage() {
         if (file) {
             setter(file);
             const reader = new FileReader();
-            reader.onloadend = () => { previewSetter(reader.result as string); };
+            reader.onloadend = () => {
+                previewSetter(reader.result as string);
+            };
             reader.readAsDataURL(file);
         } else {
-            setter(null);
-            previewSetter(null);
+            // Don't clear state if user cancels file selection, only if they submit without a file
+            // setter(null); // Optional: clear if you want immediate feedback on cancel
+            // previewSetter(null);
         }
     };
     // --- End File Handlers ---
 
-    const currentHeroFullUrl = Constants.SUPABASE_HERO_IMAGES_BUCKET + currentHeroPath;
-    const currentThumbnailFullUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET + currentThumbnailPath;
 
-    console.log('currentHeroFullUrl', currentHeroFullUrl);
-    console.log('currentThumbnailFullUrl', currentThumbnailFullUrl);
-
-    // --- Handlers ---
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        // Client-side validation
+        const trimmedName = categoryName.trim();
+        const trimmedDesc = description.trim();
+        const trimmedSeoTitle = seoTitle.trim();
+        const trimmedSeoDesc = seoDescription.trim();
+        const trimmedSeoMetaDesc = seoMetaDescription.trim(); // <-- Trim new field
+
+        // Add trimmedSeoMetaDesc to validation if required
+        if (!trimmedName || !trimmedDesc || !trimmedSeoTitle || !trimmedSeoDesc /* || !trimmedSeoMetaDesc */) {
+            toast.error('Please fill in all required text fields.');
+            return;
+        }
+        // Files are optional for update
+
         const formData = new FormData();
-        formData.append('categoryId', categoryId); // Include the ID
-        formData.append('categoryName', categoryName.trim());
-        formData.append('description', description.trim());
-        formData.append('seoTitle', seoTitle.trim());
-        formData.append('seoDescription', seoDescription.trim());
-        // --- Append NEW Files (if selected) ---
+        formData.append('categoryId', categoryId); // Crucial for update action
+        formData.append('categoryName', trimmedName);
+        formData.append('description', trimmedDesc);
+        formData.append('seoTitle', trimmedSeoTitle);
+        formData.append('seoDescription', trimmedSeoDesc);
+        formData.append('seoMetaDescription', trimmedSeoMetaDesc); // <-- Append new field
+
+        // --- Append NEW Files ONLY if they exist ---
         if (newHeroImageFile) {
             formData.append('heroImageFile', newHeroImageFile);
         }
@@ -122,40 +136,73 @@ export default function EditCategoryPage() {
             formData.append('thumbnailImageFile', newThumbnailImageFile);
         }
         // --- End Append Files ---
+
         updateMutation.mutate(formData);
     };
 
-    // --- Loading & Error States ---
-    const isLoading = loadingCategory || updateMutation.isPending;
+    const isLoading = updateMutation.isPending || isQueryLoading;
 
-    if (loadingCategory) return <p className="p-4 text-center">Loading category details...</p>;
-    if (categoryError) return <p className="p-4 text-center text-red-600">Error loading category data: {categoryError.message}</p>;
-    if (!categoryDetails && !loadingCategory) { // Check after loading is complete
-        return <p className="p-4 text-center text-red-600">Category not found.</p>;
+    // Handle Loading and Error States for Query
+    if (isQueryLoading) {
+        return (
+             <div className="max-w-2xl mx-auto p-4 md:p-6">
+                <div className="flex justify-between items-center mb-6">
+                    <Skeleton className="h-8 w-48" />
+                    <Skeleton className="h-9 w-20" />
+                </div>
+                 <div className="space-y-6">
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-24 w-full" />
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-20 w-full" />
+                    <Skeleton className="h-20 w-full" /> {/* Placeholder for new field */}
+                    <Skeleton className="h-40 w-full" />
+                    <Skeleton className="h-32 w-full" />
+                    <div className="flex justify-end pt-4">
+                        <Skeleton className="h-10 w-32" />
+                    </div>
+                 </div>
+            </div>
+        );
     }
 
+    if (queryError) {
+         return (
+             <div className="max-w-2xl mx-auto p-4 md:p-6 text-center">
+                 <p className="text-red-600">Error loading category data: {queryError.message}</p>
+                 <Button variant="outline" size="sm" asChild className="mt-4">
+                    <Link href="/admin/categories">Back to Categories</Link>
+                 </Button>
+             </div>
+        );
+    }
+     if (!categoryData) {
+         return (
+             <div className="max-w-2xl mx-auto p-4 md:p-6 text-center">
+                 <p className="text-muted-foreground">Category not found.</p>
+                  <Button variant="outline" size="sm" asChild className="mt-4">
+                    <Link href="/admin/categories">Back to Categories</Link>
+                 </Button>
+             </div>
+        );
+    }
+
+
+    // Construct full image URLs for display
+    const heroImageUrl = currentHeroPath ? `${Constants.SUPABASE_URL}/storage/v1/object/public/${Constants.SUPABASE_HERO_IMAGES_BUCKET}/${currentHeroPath}` : null;
+    const thumbnailImageUrl = currentThumbnailPath ? `${Constants.SUPABASE_URL}/storage/v1/object/public/${Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET}/${currentThumbnailPath}` : null;
+
+
     return (
-        <div className="container mx-auto px-4 py-8 max-w-3xl">
-            <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold">Edit Category</h1>
-                <Button variant="outline" size="sm" asChild>
-                    <Link href="/admin/categories">Back to Categories List</Link>
-                </Button>
+        <div className="max-w-2xl mx-auto p-4 md:p-6">
+             <div className="flex justify-between items-center mb-6">
+                <h1 className="text-2xl font-bold">Edit Category: {categoryData?.name}</h1>
+                 <Button variant="outline" size="sm" asChild>
+                    <Link href="/admin/categories">Cancel</Link>
+                 </Button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-lg shadow">
-                {/* Display Slug (Non-Editable) */}
-                 <div>
-                    <Label>Slug (Auto-generated, cannot be changed here)</Label>
-                    <Input
-                        type="text"
-                        value={currentSlug}
-                        disabled // Make it visually disabled
-                        readOnly // Prevent editing
-                        className="mt-1 bg-gray-100 cursor-not-allowed"
-                    />
-                </div>
-
+            <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Category Name */}
                 <div>
                     <Label htmlFor="categoryName">Category Name*</Label>
@@ -164,12 +211,26 @@ export default function EditCategoryPage() {
                         type="text"
                         value={categoryName}
                         onChange={(e) => setCategoryName(e.target.value)}
-                        placeholder="Enter category name"
+                        placeholder="e.g., Unicorn Coloring Pages"
                         required
                         disabled={isLoading}
                         className="mt-1"
                     />
                 </div>
+
+                 {/* Slug (Display Only) */}
+                 <div>
+                    <Label>Current Slug</Label>
+                    <Input
+                        type="text"
+                        value={currentSlug}
+                        readOnly
+                        disabled
+                        className="mt-1 bg-gray-100"
+                    />
+                     <p className="text-xs text-gray-500 mt-1">Slug is automatically generated from the name on save if the name changes.</p>
+                </div>
+
 
                 {/* Description */}
                 <div>
@@ -199,38 +260,66 @@ export default function EditCategoryPage() {
                         disabled={isLoading}
                         className="mt-1"
                     />
+                     <p className="text-xs text-gray-500 mt-1">Keep concise and keyword-rich.</p>
                 </div>
 
-                {/* SEO Description */}
+                {/* SEO Description (for OG/Twitter) */}
                 <div>
-                    <Label htmlFor="seoDescription">SEO Description*</Label>
+                    <Label htmlFor="seoDescription">SEO Description (for Social Sharing)*</Label>
                     <Textarea
                         id="seoDescription"
                         value={seoDescription}
                         onChange={(e) => setSeoDescription(e.target.value)}
-                        placeholder="Enter SEO description"
+                        placeholder="Enter SEO description for social media previews"
                         required
                         disabled={isLoading}
                         className="mt-1"
                         rows={2}
                     />
+                     <p className="text-xs text-gray-500 mt-1">~155 characters. Used for Facebook, Twitter etc.</p>
                 </div>
+
+                 {/* SEO Meta Description (for Google Search Results) */}
+                <div>
+                    <Label htmlFor="seoMetaDescription">SEO Meta Description (for Google)*</Label>
+                    <Textarea
+                        id="seoMetaDescription"
+                        value={seoMetaDescription}
+                        onChange={(e) => setSeoMetaDescription(e.target.value)} // <-- Set state
+                        placeholder="Enter meta description for Google search results"
+                        // required // Make required if needed
+                        disabled={isLoading}
+                        className="mt-1"
+                        rows={2}
+                    />
+                    <p className="text-xs text-gray-500 mt-1">~160 characters. This appears in Google search snippets.</p>
+                </div>
+
 
                 {/* --- Hero Image Upload --- */}
                 <div>
-                  <Label htmlFor="heroImageFile">Hero Image (Upload new to replace)</Label>
-                  {/* Display Current Hero Image */}
-                  {currentHeroFullUrl && !newHeroPreviewUrl && (
-                      <div className="my-2 p-2 border rounded inline-block">
-                          <Image src={currentHeroFullUrl} alt="Current Hero" width={200} height={120} className="object-contain rounded" />
-                          <p className="text-xs text-center text-gray-500 mt-1">Current</p>
-                      </div>
+                  <Label htmlFor="heroImageFile">Hero Image</Label>
+                   {/* Display Current Hero Image */}
+                   {heroImageUrl ? (
+                    <div className="my-2">
+                       <p className="text-sm font-medium mb-1">Current:</p>
+                       <Image // Use Next Image for optimization
+                          src={heroImageUrl}
+                          alt="Current Hero"
+                          width={300} // Adjust width as needed
+                          height={180} // Adjust height based on aspect ratio
+                          className="max-h-40 w-auto rounded border object-contain"
+                          priority // Prioritize if it's important LCP
+                       />
+                    </div>
+                  ) : (
+                     <p className="text-sm text-muted-foreground my-2">No current hero image.</p>
                   )}
-                  {/* Display New Hero Preview */}
+                   {/* Display New Hero Preview */}
                    {newHeroPreviewUrl && (
                     <div className="my-2 p-2 border rounded inline-block border-blue-500">
+                       <p className="text-sm font-medium mb-1 text-blue-600">New Preview:</p>
                       <img src={newHeroPreviewUrl} alt="New Hero preview" className="max-h-40 rounded" />
-                       <p className="text-xs text-center text-blue-600 mt-1">New</p>
                     </div>
                   )}
                   <Input
@@ -246,21 +335,30 @@ export default function EditCategoryPage() {
                 </div>
                 {/* --- End Hero Image Upload --- */}
 
+
                 {/* --- Thumbnail Image Upload --- */}
-                <div>
-                  <Label htmlFor="thumbnailImageFile">Thumbnail Image (Upload new to replace)</Label>
+                 <div>
+                  <Label htmlFor="thumbnailImageFile">Thumbnail Image</Label>
                    {/* Display Current Thumbnail Image */}
-                  {currentThumbnailFullUrl && !newThumbnailPreviewUrl && (
-                      <div className="my-2 p-2 border rounded inline-block">
-                          <Image src={currentThumbnailFullUrl} alt="Current Thumbnail" width={100} height={100} className="object-contain rounded" />
-                           <p className="text-xs text-center text-gray-500 mt-1">Current</p>
-                      </div>
+                   {thumbnailImageUrl ? (
+                     <div className="my-2">
+                       <p className="text-sm font-medium mb-1">Current:</p>
+                       <Image
+                          src={thumbnailImageUrl}
+                          alt="Current Thumbnail"
+                          width={100} // Smaller size for thumbnail
+                          height={100}
+                          className="max-h-24 w-auto rounded border object-contain"
+                       />
+                    </div>
+                  ) : (
+                     <p className="text-sm text-muted-foreground my-2">No current thumbnail image.</p>
                   )}
                    {/* Display New Thumbnail Preview */}
                    {newThumbnailPreviewUrl && (
                     <div className="my-2 p-2 border rounded inline-block border-blue-500">
+                       <p className="text-sm font-medium mb-1 text-blue-600">New Preview:</p>
                       <img src={newThumbnailPreviewUrl} alt="New Thumbnail preview" className="max-h-24 rounded" />
-                       <p className="text-xs text-center text-blue-600 mt-1">New</p>
                     </div>
                   )}
                   <Input

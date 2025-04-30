@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { toast } from 'sonner'; // Assuming you use sonner for toasts
 
 export default function CreateCategoryPage() {
   const queryClient = useQueryClient();
@@ -17,28 +18,28 @@ export default function CreateCategoryPage() {
   const [description, setDescription] = useState('');
   const [seoTitle, setSeoTitle] = useState('');
   const [seoDescription, setSeoDescription] = useState('');
+  const [seoMetaDescription, setSeoMetaDescription] = useState(''); // <-- Add state for new field
   // --- State for File Uploads ---
   const [heroImageFile, setHeroImageFile] = useState<File | null>(null);
   const [thumbnailImageFile, setThumbnailImageFile] = useState<File | null>(null);
-  // Preview URLs (optional)
   const [heroPreviewUrl, setHeroPreviewUrl] = useState<string | null>(null);
   const [thumbnailPreviewUrl, setThumbnailPreviewUrl] = useState<string | null>(null);
-  // --- End State ---
+  // --- End File State ---
 
   const createMutation = useMutation({
     mutationFn: createCategory,
-    onSuccess: (result) => {
-      if (result.success) {
-        alert(result.message);
-        queryClient.invalidateQueries({ queryKey: ['categories'] });
-        // Navigate back to the category list page on success
-        router.push('/admin/categories');
+    onSuccess: (data) => {
+      if (data.success) {
+        toast.success(data.message);
+        queryClient.invalidateQueries({ queryKey: ['categories'] }); // Invalidate cache
+        router.push('/admin/categories'); // Redirect on success
       } else {
-        alert(`Creation failed: ${result.message}`);
+        toast.error(`Creation failed: ${data.message}`);
       }
     },
-    onError: (error) => {
-      alert(`Creation error: ${error.message}`);
+    onError: (error: Error) => {
+      console.error("Mutation error:", error);
+      toast.error(`An unexpected error occurred: ${error.message || 'Unknown error'}`);
     },
   });
 
@@ -72,18 +73,20 @@ export default function CreateCategoryPage() {
     const trimmedDesc = description.trim();
     const trimmedSeoTitle = seoTitle.trim();
     const trimmedSeoDesc = seoDescription.trim();
+    const trimmedSeoMetaDesc = seoMetaDescription.trim(); // <-- Trim new field
 
-    if (!trimmedName || !trimmedDesc || !trimmedSeoTitle || !trimmedSeoDesc) {
-      alert('Name, Description, SEO Title, and SEO Description are required.');
+    // Add trimmedSeoMetaDesc to validation if required
+    if (!trimmedName || !trimmedDesc || !trimmedSeoTitle || !trimmedSeoDesc /* || !trimmedSeoMetaDesc */) {
+      toast.error('Please fill in all required text fields.'); // Use toast for feedback
       return;
     }
     // --- Validate File Inputs ---
     if (!heroImageFile) {
-      alert('Hero Image is required.');
+      toast.error('Hero Image is required.');
       return;
     }
     if (!thumbnailImageFile) {
-      alert('Thumbnail Image is required.');
+      toast.error('Thumbnail Image is required.');
       return;
     }
     // --- End File Validation ---
@@ -93,9 +96,11 @@ export default function CreateCategoryPage() {
     formData.append('description', trimmedDesc);
     formData.append('seoTitle', trimmedSeoTitle);
     formData.append('seoDescription', trimmedSeoDesc);
+    formData.append('seoMetaDescription', trimmedSeoMetaDesc); // <-- Append new field
     // --- Append Files ---
-    formData.append('heroImageFile', heroImageFile);
-    formData.append('thumbnailImageFile', thumbnailImageFile);
+    // Ensure files are not null before appending (already checked above, but good practice)
+    if (heroImageFile) formData.append('heroImageFile', heroImageFile);
+    if (thumbnailImageFile) formData.append('thumbnailImageFile', thumbnailImageFile);
     // --- End Append Files ---
 
     createMutation.mutate(formData);
@@ -104,15 +109,15 @@ export default function CreateCategoryPage() {
   const isLoading = createMutation.isPending;
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl">
+    <div className="max-w-2xl mx-auto p-4 md:p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Create New Category</h1>
         <Button variant="outline" size="sm" asChild>
-          <Link href="/admin/categories">Back to Categories List</Link>
+          <Link href="/admin/categories">Cancel</Link>
         </Button>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-lg shadow">
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* Category Name */}
         <div>
           <Label htmlFor="categoryName">Category Name*</Label>
@@ -121,7 +126,7 @@ export default function CreateCategoryPage() {
             type="text"
             value={categoryName}
             onChange={(e) => setCategoryName(e.target.value)}
-            placeholder="Enter category name"
+            placeholder="e.g., Unicorn"
             required
             disabled={isLoading}
             className="mt-1"
@@ -135,7 +140,7 @@ export default function CreateCategoryPage() {
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            placeholder="Enter category description"
+            placeholder="Enter category description (visible on category page)"
             required
             disabled={isLoading}
             className="mt-1"
@@ -151,27 +156,46 @@ export default function CreateCategoryPage() {
             type="text"
             value={seoTitle}
             onChange={(e) => setSeoTitle(e.target.value)}
-            placeholder="Enter SEO title"
+            placeholder="Enter SEO title (for search results & browser tab)"
             required
             disabled={isLoading}
             className="mt-1"
           />
+           <p className="text-xs text-gray-500 mt-1">Keep concise and keyword-rich (e.g., &quot;Free Unicorn Coloring Pages&quot;).</p>
         </div>
 
-        {/* SEO Description */}
+        {/* SEO Description (for OG/Twitter) */}
         <div>
-          <Label htmlFor="seoDescription">SEO Description*</Label>
+          <Label htmlFor="seoDescription">SEO Description (for Social Sharing)*</Label>
           <Textarea
             id="seoDescription"
             value={seoDescription}
             onChange={(e) => setSeoDescription(e.target.value)}
-            placeholder="Enter SEO description"
+            placeholder="Enter SEO description for social media previews (Open Graph/Twitter)"
             required
             disabled={isLoading}
             className="mt-1"
             rows={2}
           />
+           <p className="text-xs text-gray-500 mt-1">~155 characters. Used for Facebook, Twitter etc. previews.</p>
         </div>
+
+        {/* SEO Meta Description (for Google Search Results) */}
+        <div>
+          <Label htmlFor="seoMetaDescription">SEO Meta Description (for Google)*</Label>
+          <Textarea
+            id="seoMetaDescription"
+            value={seoMetaDescription}
+            onChange={(e) => setSeoMetaDescription(e.target.value)} // <-- Set state
+            placeholder="Enter meta description for Google search results"
+            // required // Make required if needed
+            disabled={isLoading}
+            className="mt-1"
+            rows={2}
+          />
+           <p className="text-xs text-gray-500 mt-1">~160 characters. This appears in Google search snippets.</p>
+        </div>
+
 
         {/* --- Hero Image Upload --- */}
         <div>
@@ -187,6 +211,7 @@ export default function CreateCategoryPage() {
           />
           {heroPreviewUrl && (
             <div className="mt-2">
+              <p className="text-sm font-medium mb-1">Preview:</p>
               <img src={heroPreviewUrl} alt="Hero preview" className="max-h-40 rounded border" />
             </div>
           )}
@@ -208,6 +233,7 @@ export default function CreateCategoryPage() {
           />
            {thumbnailPreviewUrl && (
             <div className="mt-2">
+               <p className="text-sm font-medium mb-1">Preview:</p>
               <img src={thumbnailPreviewUrl} alt="Thumbnail preview" className="max-h-24 rounded border" />
             </div>
           )}

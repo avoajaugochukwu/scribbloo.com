@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getCategories } from '@/app/admin/actions/categories/read'; // Adjust path if needed
 import CategoryThumbnail from './CategoryThumbnail'; // Assuming it's in the same folder
-import { Category } from '@/types/database';
+import Category from '@/types/category.type';
 
 // This is a React Server Component (RSC) as it fetches data
 export default async function CategoryListDisplay() {

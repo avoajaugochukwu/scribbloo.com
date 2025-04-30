@@ -21,7 +21,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
     // 1 & 2: Query categories table for the category ID and details
     const { data: categoryData, error: categoryError } = await supabase
       .from('categories')
-      .select('id, name, slug, created_at, description, seo_title, seo_description, hero_image_url, thumbnail_image_url') // <-- Removed description
+      .select('id, name, slug, created_at, description, seo_title, seo_description, seo_meta_description, hero_image_url, thumbnail_image_url') // <-- Removed description
       .eq('slug', categorySlug)
       .maybeSingle(); // Expect 0 or 1 category
 
@@ -62,6 +62,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
         description: categoryData.description,
         seo_title: categoryData.seo_title,
         seo_description: categoryData.seo_description,
+        seo_meta_description: categoryData.seo_meta_description,
         hero_image_url: categoryData.hero_image_url,
         thumbnail_image_url: categoryData.thumbnail_image_url,
         images: [],
@@ -90,6 +91,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
       description: categoryData.description,
       seo_title: categoryData.seo_title,
       seo_description: categoryData.seo_description,
+      seo_meta_description: categoryData.seo_meta_description,
       hero_image_url: categoryData.hero_image_url,
       thumbnail_image_url: categoryData.thumbnail_image_url,
       images: (imagesData || []) as ImageType[],

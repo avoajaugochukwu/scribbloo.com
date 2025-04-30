@@ -15,8 +15,10 @@ create table categories (
   description text default '' not null,
   seo_title text default '' not null,
   seo_description text default '' not null,
+  seo_meta_description text default '' not null,
   hero_image_url text default '' not null,
   thumbnail_image_url text default '' not null
+
 );
 
 -- Create tags table

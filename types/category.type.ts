@@ -1,13 +1,12 @@
-type Category = {
+export default interface Category {
   id: string;
   name: string;
-  created_at: string;
-  description: string;
-  seo_title: string;
-  seo_description: string;
-  hero_image_url: string;
-  thumbnail_image_url: string;
   slug: string;
-};
-
-export default Category;
+  description: string | null;
+  thumbnail_image_url: string | null;
+  hero_image_url: string | null;
+  seo_title: string | null;
+  seo_description: string | null;
+  seo_meta_description: string | null;
+  created_at: string;
+}

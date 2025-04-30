@@ -1,7 +1,7 @@
 'use client';
 
 import { Constants } from '@/config/constants';
-import { Category } from '@/types/database';
+import Category from '@/types/category.type';
 import Image from 'next/image';
 
 interface CategoryThumbnailProps {
