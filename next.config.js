@@ -5,7 +5,7 @@ const nextConfig = {
   // Add or modify the experimental block for serverActions
   experimental: {
     serverActions: {
-      bodySizeLimit: '7mb', // Increase the limit to 7MB
+      bodySizeLimit: '24mb', // Increase the limit to 7MB
     },
     // ... other experimental flags ...
   },

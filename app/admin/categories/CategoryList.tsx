@@ -62,8 +62,6 @@ export function CategoryList() {
 
   const isMutating = deleteMutation.isPending;
 
-  console.log('categories', categories);
-
   return (
     <div className="mt-8">
       <h2 className="text-xl font-semibold mb-4">Existing Categories</h2>

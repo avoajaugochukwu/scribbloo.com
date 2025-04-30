@@ -156,7 +156,7 @@ export default function CreateImagePage() {
         </div>
 
         <div>
-          <Label htmlFor="imageFile">Image File*</Label>
+          <Label htmlFor="imageFile">Coloring Page File*</Label>
           <Input
             type="file"
             id="imageFile"
