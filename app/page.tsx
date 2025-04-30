@@ -1,91 +1,95 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { fetchPages } from "@/lib/notion";
-import Link from 'next/link';
-import { format } from 'date-fns';
-import { BlogPostCard } from "@/components/BlogPostCard";
-import CategoryListDisplay from "./coloring-pages/components/CategoryListDisplay";
+import Image from 'next/image';
+import CategoryListDisplay from './coloring-pages/components/CategoryListDisplay';
+// Keep Link if you plan to add other sections with links later
+// import Link from 'next/link';
 
-export default async function Home() {
-  const pages = await fetchPages();
-
-  if (!pages || pages.length === 0) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center text-muted-foreground">No posts found</div>
-      </div>
-    );
-  }
-
-  const posts = pages.map((page: any) => {
-    const dateStr = page.properties.Created?.created_time || new Date().toISOString();
-
-    let featuredImageUrl = '/placeholder-image.jpg';
-    const featuredImageProp = page.properties["Featured Image"]?.files;
-    if (featuredImageProp && featuredImageProp.length > 0) {
-      if (featuredImageProp[0].type === 'external') {
-        featuredImageUrl = featuredImageProp[0].external.url;
-      } else if (featuredImageProp[0].type === 'file') {
-        featuredImageUrl = featuredImageProp[0].file.url;
-      }
-    }
-
-    // Extract author names from multi-select
-    const authorMultiSelect = page.properties.Author?.multi_select;
-    let authorNames = 'Scribbloo Team'; // Default author
-    if (authorMultiSelect && authorMultiSelect.length > 0) {
-      // Map over the array and get the name of each selected author
-      authorNames = authorMultiSelect.map((author: any) => author.name).join(', ');
-    }
-
-    return {
-      id: page.id,
-      title: page.properties.Title?.title[0]?.plain_text || 'Untitled Post',
-      slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
-      excerpt: page.properties.Excerpt?.rich_text[0]?.plain_text || 'No excerpt available.',
-      formattedDate: format(new Date(dateStr), 'MMM d, yyyy'),
-      featuredImageUrl: featuredImageUrl,
-      author: authorNames, // Assign the joined author names string
-    };
-  }).sort((a, b) => new Date(b.formattedDate).getTime() - new Date(a.formattedDate).getTime());
+export default function Home() {
+  // Remove previous Notion fetching and post mapping logic
 
   return (
-    <div className="container mx-auto px-4 py-16 md:py-20 lg:py-24">
-      <section className="text-center mb-20 md:mb-24 lg:mb-28">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-            <span className="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">
-              Fun Coloring Pages for Kids & Adults
-            </span>
+    // Using min-height to ensure the container has space for positioned images
+    // Added overflow-hidden on the main container to prevent positioned images
+    // from creating unwanted scrollbars if they slightly exceed boundaries.
+    <div className="container mx-auto px-4 py-4 md:py-4 lg:py-4 overflow-hidden">
+
+      {/* New Hero Section - Reduced min-height */}
+      <section className="relative flex items-center justify-center text-center min-h-[50vh] md:min-h-[60vh] mb-16">
+
+        {/* Central Text Block */}
+        {/* z-10 ensures text is layered above the images (which will be z-0) */}
+        <div className="z-10 max-w-3xl">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-5xl lg:text-6xl mb-6 text-pink-600">
+            Free Printable Coloring Pages for All Ages
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8">
-            Get your coloring fix with our wide range of free and premium coloring pages for kids and adults.
+          <p className="text-lg md:text-xl text-muted-foreground w-4/5 mx-auto">
+            Download high-quality coloring sheets for kids, teens, and adults. From unicorns to mandalas—new pages added weekly.
           </p>
+          {/* Optional: Add a Call to Action Button here */}
+          {/* <div className="mt-8">
+            <Link href="/coloring-pages" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90">
+              Browse Pages
+            </Link>
+          </div> */}
+        </div>
+
+        {/* Absolutely Positioned Images */}
+        {/* These are hidden on small screens (below md) using 'hidden md:block' */}
+        {/* z-0 layers them below the text block */}
+
+        {/* Unicorn (Top Left) - Moved higher */}
+        <div className="absolute top-[0%] left-[2%] transform -rotate-12 hidden md:block z-0">
+          <Image
+            src="/img/unicorn.png" // Ensure this path is correct
+            alt="Unicorn coloring page example"
+            width={180} // Adjust size
+            height={270} // Adjust size maintaining aspect ratio
+            className="rounded-xl shadow-lg border-4 border-yellow-200" // Added border like screenshot
+            priority // Prioritize loading for LCP if it's a key visual element
+          />
+        </div>
+
+        {/* Dinosaur (Top Right) - Moved higher */}
+        <div className="absolute top-[1%] right-[4%] transform rotate-6 hidden md:block z-0">
+          <Image
+            src="/img/dinosaur.png" // Ensure this path is correct
+            alt="Dinosaur coloring page example"
+            width={180} // Adjust size
+            height={270} // Adjust size
+            className="rounded-xl shadow-lg border-4 border-green-200" // Added border
+          />
+        </div>
+
+        {/* Butterfly (Bottom Left) - Moved further down and left */}
+        <div className="absolute bottom-[10%] left-[8%] transform rotate-3 hidden md:block z-0">
+          <Image
+            src="/img/butterfly.png" // Ensure this path is correct
+            alt="Butterfly coloring page example"
+            width={180} // Adjust size
+            height={270} // Adjust size
+            className="rounded-xl shadow-lg border-4 border-blue-200" // Added border
+          />
+        </div>
+
+        {/* Fairy (Bottom Right) - Moved further down and right */}
+        <div className="absolute bottom-[5%] right-[2%] transform -rotate-6 hidden md:block z-0">
+          <Image
+            src="/img/fairy-girl.png" // Ensure this path is correct
+            alt="Fairy coloring page example"
+            width={180} // Adjust size
+            height={270} // Adjust size
+            className="rounded-xl shadow-lg border-4 border-pink-200" // Added border
+          />
         </div>
       </section>
 
-      <section>
+      {/* You can add other sections back below here if needed */}
+      {/* Example: */}
+      <section className="my-16">
+        <h2 className="text-3xl font-bold text-center mb-10">Coloring Pages</h2>
         <CategoryListDisplay />
       </section>
+     
 
-      <section>
-        <h2 className="text-3xl font-bold text-center mb-10 md:mb-12">
-          Latest Coloring Pages
-        </h2>
-        {posts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {posts.map((post) => (
-              <BlogPostCard key={post.id} post={post} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center text-muted-foreground mb-12">No recent posts found.</div>
-        )}
-        <div className="text-center">
-          <Link href="/blog" className="text-primary hover:underline font-medium">
-            View all posts &rarr;
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { Plane } from 'lucide-react'; // Assuming you might use an icon
+import Image from 'next/image';
+// Import any components used in the right-aligned section if needed (e.g., Button, ThemeToggle)
+// import { Button } from "@/components/ui/button";
+// import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   return (
@@ -8,13 +12,14 @@ export function Header() {
         {/* Site Title/Logo */}
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Plane className="h-6 w-6" />
-            <span className="font-bold inline-block">Scribbloo</span>
+            <Image src="/img/Logo.svg" alt="Scribbloo Logo" width={150} height={100} />
           </Link>
         </div>
 
-        {/* Navigation Links */}
-        <nav className="flex items-center gap-4 text-sm lg:gap-6 flex-grow">
+        {/* Right-aligned items - Move Nav Links Here */}
+        {/* Added gap-4 lg:gap-6 for spacing between links */}
+        <div className="flex flex-1 items-center justify-end space-x-4 lg:space-x-6 text-sm">
+          {/* Moved Nav Links */}
           <Link
             href="/"
             className="transition-colors hover:text-foreground/80 text-foreground/60"
@@ -33,11 +38,9 @@ export function Header() {
           >
             Coloring Pages
           </Link>
-          {/* Add other links like "/about", "/contact" here */}
-        </nav>
+          {/* Add other links like "/about", "/contact" here if needed */}
 
-        {/* Optional: Right-aligned items (e.g., Theme Toggle, Auth Button) */}
-        <div className="flex flex-1 items-center justify-end space-x-2">
+          {/* Keep other right-aligned items here */}
           {/* Example: Add a theme toggle or login button here */}
           {/* <ThemeToggle /> */}
           {/* <Button variant="outline" size="sm">Login</Button> */}
