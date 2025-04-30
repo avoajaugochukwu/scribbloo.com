@@ -3,9 +3,7 @@ import CategoryWithImages from '@/types/categorywithimages.type';
 import { supabase } from './supabaseClient'; // Adjust path if needed
 import ColoringPage from '@/types/coloringpage.type';
 import Category from '@/types/category.type';
-
-const IMAGES_TABLE = 'coloring_pages'; // <-- Define constant
-const IMAGE_CATEGORIES_TABLE = 'image_categories'; // <-- Define constant
+import { Constants } from '@/config/constants';
 
 /**
  * Fetches a category by its slug, including its associated images, using multiple queries.
@@ -42,17 +40,17 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
 
     // 3: Query image_categories table for image IDs
     const { data: imageCategoryLinks, error: linksError } = await supabase
-      .from(IMAGE_CATEGORIES_TABLE) // <-- Use constant
-      .select('image_id')
+      .from(Constants.COLORING_PAGE_CATEGORY_TABLE)
+      .select('coloring_page_id')
       .eq('category_id', categoryId);
 
     if (linksError) {
-      console.error('Error fetching image_categories links:', linksError.message);
+      console.error('Error fetching coloring page tag links:', linksError.message);
       throw linksError;
     }
 
     // 4: Get all image_ids
-    const imageIds = imageCategoryLinks?.map(link => link.image_id) || [];
+    const imageIds = imageCategoryLinks?.map(link => link.coloring_page_id) || [];
 
     // If no images are linked, return category data with empty images array
     if (imageIds.length === 0) {
@@ -75,7 +73,7 @@ export async function getImagesByCategorySlug(categorySlug: string): Promise<Cat
 
     // 5: Query coloring_pages table for image details
     const { data: imagesData, error: imagesError } = await supabase
-      .from(IMAGES_TABLE) // <-- Use constant
+      .from(Constants.COLORING_PAGES_TABLE) // <-- Use constant
       .select('id, title, description, image_url, created_at')
       .in('id', imageIds);
 

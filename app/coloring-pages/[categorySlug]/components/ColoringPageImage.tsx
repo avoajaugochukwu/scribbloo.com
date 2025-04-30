@@ -17,7 +17,7 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
     ? image.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';
 
-  // Append "-scribbloo.com.png" to the base filename
+  // Append "-scribbloo.com.png" to the base filename for download
   const downloadFilename = `${baseFilename}-scribbloo.com.png`;
 
   return (
@@ -27,7 +27,7 @@ export default function ColoringPageImage({ image, categoryName }: ColoringPageI
         {image.image_url ? (
           <Image
             src={imageUrl}
-            alt={image.title || `Coloring page in ${categoryName}`}
+            alt={image.description || `Coloring page in ${categoryName}`}
             width={300}
             height={300}
             className="w-full transition-transform duration-300 group-hover:scale-105"
