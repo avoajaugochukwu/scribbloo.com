@@ -140,7 +140,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   );
 }
 
-// Optional: Generate metadata dynamically
 export async function generateMetadata(
   { params }: CategoryPageProps,
 ): Promise<Metadata> {
@@ -155,19 +154,15 @@ export async function generateMetadata(
   }
 
   // --- SEO Optimization ---
-  const title = categoryData.seo_title
-    ? categoryData.seo_title
-    : `${categoryData.name} Coloring Pages - Free Printables | Scribbloo`; // Add your site name
+  const title = `${categoryData.name} Coloring Pages - Free Printable Sheets`;
 
-  const description = categoryData.seo_meta_description
-    ? categoryData.seo_meta_description
-    : `Explore our collection of ${categoryData.name} coloring pages. Download and print free images for kids and adults on Scribbloo.`; // Add site name/context
+  const description = categoryData.seo_meta_description || "";
 
   const canonicalUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
 
   const ogImageUrl = categoryData.hero_image
     ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`
-    : undefined; // Use undefined if no hero image
+    : undefined;
 
   return {
     title,
@@ -190,8 +185,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: 'summary_large_image',
-      title: title,
-      description: description,
+      title,
+      description,
       images: ogImageUrl ? [ogImageUrl] : [],
     },
   };
