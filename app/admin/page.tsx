@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 // Import the updated action and type
 import { getAdminColoringPages } from './actions/coloring-pages/read';
-import { deleteImage } from './actions/coloring-pages/delete'; // Import delete action
+import { deleteColoringPage } from './actions/coloring-pages/delete'; // Import delete action
 import { type AdminImageWithRelations } from './actions/coloring-pages/types';
 import Link from 'next/link';
 import { Edit, Trash2 } from 'lucide-react'; // Add Trash2 if adding delete button
@@ -52,7 +52,7 @@ export default function AdminPage() {
 
   // --- Delete Mutation ---
   const deleteMutation = useMutation({
-    mutationFn: deleteImage,
+    mutationFn: deleteColoringPage,
     onSuccess: (result, imageId) => {
       if (result.success) {
         console.log(`Image ${imageId} deleted successfully.`);

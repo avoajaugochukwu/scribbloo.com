@@ -4,7 +4,8 @@ create table coloring_pages (
   title text not null,
   description text,
   image_url text not null,
-  created_at timestamp with time zone default timezone('utc', now())
+  created_at timestamp with time zone default timezone('utc', now()),
+  webp_image_url text not null
 );
 
 -- Create categories table

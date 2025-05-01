@@ -5,77 +5,105 @@ import { revalidatePath } from 'next/cache';
 import { deleteStorageFile } from '@/lib/storageUtils';
 import { Constants } from '@/config/constants';
 
+const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE;
+const COLORING_PAGES_BUCKET = Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME;
+
 /**
  * Deletes an image record and its associated file from storage.
  */
-export async function deleteImage(imageId: string): Promise<{ success: boolean; message: string }> {
-    if (!imageId) {
-        return { success: false, message: 'Image ID is required.' };
+export async function deleteColoringPage(
+    coloringPageId: string
+): Promise<{ success: boolean; message: string }> {
+    if (!coloringPageId) {
+        return { success: false, message: 'Coloring Page ID is required.' };
     }
 
-    let imagePath: string | null = null;
-    let imageTitle: string | null = 'Unknown'; // For logging
+    console.log(`Attempting to delete coloring page ID: ${coloringPageId}`);
+
+    let originalImagePath: string | null = null;
+    let webpImagePath: string | null = null;
 
     try {
-        // 1. Fetch the image to get its path BEFORE deleting
-        console.log(`Fetching image ${imageId} to get path for deletion...`);
-        const { data: imageToDelete, error: fetchError } = await supabase
-            .from(Constants.COLORING_PAGES_TABLE) // <-- Use updated table name
-            .select('title, image_url')
-            .eq('id', imageId)
+        // 1. Fetch the record to get the file paths BEFORE deleting
+        console.log(`Fetching paths for coloring page ID: ${coloringPageId}`);
+        const { data: pageData, error: fetchError } = await supabase
+            .from(COLORING_PAGES_TABLE)
+            .select('image_url, webp_image_url')
+            .eq('id', coloringPageId)
             .single();
 
         if (fetchError) {
-            if (fetchError.code === 'PGRST116') {
-                 console.warn(`Image ${imageId} not found for fetching path, likely already deleted.`);
-                 return { success: true, message: `Image ${imageId} likely already deleted.` };
+            // Handle cases where the page might already be deleted or doesn't exist
+            if (fetchError.code === 'PGRST116') { // PostgREST code for "Not Found"
+                 console.warn(`Coloring page ${coloringPageId} not found for deletion, possibly already deleted.`);
+                 // Optionally revalidate paths anyway and return success
+                 revalidatePath('/admin/coloring-pages', 'layout');
+                 revalidatePath('/coloring-pages', 'layout');
+                 return { success: true, message: 'Coloring page not found, assumed already deleted.' };
             }
-            console.error(`Error fetching image ${imageId} before delete:`, fetchError.message);
-            return { success: false, message: `Failed to fetch image details before deletion: ${fetchError.message}` };
+            console.error(`Error fetching coloring page ${coloringPageId} for deletion:`, fetchError);
+            return { success: false, message: `Failed to fetch coloring page details: ${fetchError.message}` };
         }
 
-        if (!imageToDelete) {
-             console.warn(`Image ${imageId} not found when fetching for delete.`);
-             return { success: true, message: `Image ${imageId} not found.` };
-        }
+        // Store the paths if the record exists
+        originalImagePath = pageData?.image_url;
+        webpImagePath = pageData?.webp_image_url;
+        console.log(`Found paths - Original: ${originalImagePath}, WebP: ${webpImagePath}`);
 
-        // Store the path and title
-        imagePath = imageToDelete.image_url;
-        imageTitle = imageToDelete.title;
 
-        // 2. Delete the image record from the database
-        // Assumes ON DELETE CASCADE is set for image_categories and image_tags FKs
-        console.log(`Attempting to delete image "${imageTitle}" (ID: ${imageId}) from database...`);
+        // 2. Delete the database record
+        // Cascade delete should handle the join table entries (categories, tags)
+        console.log(`Deleting database record for ID: ${coloringPageId}`);
         const { error: deleteDbError } = await supabase
-            .from(Constants.COLORING_PAGES_TABLE) // <-- Use updated table name
+            .from(COLORING_PAGES_TABLE)
             .delete()
-            .eq('id', imageId);
+            .eq('id', coloringPageId);
 
         if (deleteDbError) {
-            console.error(`Database error deleting image ${imageId}:`, deleteDbError.message);
-            return { success: false, message: `Database error deleting image: ${deleteDbError.message}` };
+            console.error(`Error deleting coloring page record ${coloringPageId} from database:`, deleteDbError);
+            return { success: false, message: `Database deletion failed: ${deleteDbError.message}` };
+        }
+        console.log(`Database record deleted successfully.`);
+
+
+        // 3. Delete associated files from storage AFTER successful DB deletion
+        const deletePromises = [];
+        if (originalImagePath) {
+            console.log(`Queueing deletion of original image: ${originalImagePath}`);
+            deletePromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, originalImagePath));
+        }
+        if (webpImagePath) {
+            console.log(`Queueing deletion of WebP image: ${webpImagePath}`);
+            deletePromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, webpImagePath));
         }
 
-        console.log(`Image "${imageTitle}" deleted successfully from database.`);
-
-        // 3. Delete associated image file from storage AFTER successful DB deletion
-        if (imagePath) {
-            console.log(`Attempting to delete image file: ${imagePath}`);
-            await deleteStorageFile(Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME, imagePath);
+        if (deletePromises.length > 0) {
+            console.log(`Attempting deletion of ${deletePromises.length} storage file(s)...`);
+            const results = await Promise.allSettled(deletePromises);
+            console.log('Storage file deletion results:', results);
+            // Log any failures but don't necessarily fail the whole operation,
+            // as the primary goal (DB deletion) succeeded.
+            results.forEach((result, index) => {
+                if (result.status === 'rejected') {
+                    const pathAttempted = index === 0 && originalImagePath ? originalImagePath : webpImagePath;
+                    console.warn(`Failed to delete storage file ${pathAttempted}: ${result.reason}`);
+                }
+            });
         } else {
-            console.log(`No image path found for deleted image ${imageId}.`);
+             console.log('No storage files associated with the record or paths were null.');
         }
 
-        // 4. Success - Revalidate Paths
-        console.log(`Revalidating paths after deleting image ${imageId}...`);
-        revalidatePath('/admin');
-        revalidatePath('/coloring-pages', 'layout'); // Revalidate public pages
+        // 4. Revalidate relevant paths
+        console.log('Revalidating paths after deletion...');
+        revalidatePath('/admin/coloring-pages', 'layout');
+        revalidatePath('/admin'); // General admin revalidation
+        revalidatePath('/coloring-pages', 'layout'); // Revalidate public listing
 
-        return { success: true, message: `Image "${imageTitle}" and associated file deleted successfully.` };
+        return { success: true, message: 'Coloring page deleted successfully.' };
 
     } catch (err: any) {
-        console.error(`Unexpected error deleting image ${imageId}:`, err);
-        const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
+        console.error(`Unexpected error deleting coloring page ${coloringPageId}:`, err);
+        const message = err instanceof Error ? err.message : 'An unexpected error occurred during deletion.';
         return { success: false, message };
     }
 } 

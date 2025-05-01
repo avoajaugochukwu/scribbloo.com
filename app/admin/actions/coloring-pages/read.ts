@@ -37,7 +37,6 @@ export async function getAdminColoringPages(page = 1, pageSize = 10): Promise<{ 
             `)
             .order('created_at', { ascending: false })
             .range(offset, offset + pageSize - 1);
-        console.log('Data:', JSON.stringify(data, null, 2));
 
         if (error) {
             console.error('Error fetching images with relations:', error.message);

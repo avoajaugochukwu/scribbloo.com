@@ -16,7 +16,7 @@ const SUPABASE_COLORING_PAGES_BUCKET_URL: string = `${SUPABASE_URL}/storage/v1/o
 const SUPABASE_HERO_IMAGES_NAME: string = 'hero-images';
 const SUPABASE_HERO_IMAGES_BUCKET_URL: string = `${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_HERO_IMAGES_NAME}/`;
 const SUPABASE_THUMBNAIL_IMAGES_NAME: string = 'thumbnail-images';
-const SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL: string = `${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_THUMBNAIL_IMAGES_NAME}/`;  
+const SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL: string = `${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_THUMBNAIL_IMAGES_NAME}/`;
 
 const COLORING_PAGES_TABLE: string = 'coloring_pages';
 const CATEGORIES_TABLE: string = 'categories';
