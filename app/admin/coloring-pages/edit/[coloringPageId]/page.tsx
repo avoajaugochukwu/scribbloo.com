@@ -367,7 +367,6 @@ export default function EditImagePage() {
                      <p className="text-sm text-gray-500 italic">No tags available.</p>
                  )}
 
-
                 {/* Submit Button */}
                 <Button type="submit" disabled={isLoading} className="w-full">
                     {updateMutation.isPending ? 'Updating...' : 'Update Coloring Page'}

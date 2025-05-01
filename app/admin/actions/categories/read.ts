@@ -4,14 +4,16 @@ import { Constants } from '@/config/constants';
 import { supabase } from '@/lib/supabaseClient';
 import Category from '@/types/category.type';
 
+const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE; // Ensure this constant is defined
+
 /**
  * Fetches all categories for the admin list.
  */
 export async function getCategories(): Promise<Category[]> {
-  console.log('Fetching all categories...');
+  console.log(`Fetching all categories from ${CATEGORIES_TABLE}`);
   try {
     const { data, error } = await supabase
-      .from(Constants.CATEGORIES_TABLE)
+      .from(CATEGORIES_TABLE)
       .select(`
         id,
         name,
@@ -43,7 +45,7 @@ export async function getCategories(): Promise<Category[]> {
         seo_meta_description: cat.seo_meta_description,
         hero_image: cat.hero_image,
         thumbnail_image: cat.thumbnail_image,
-        slug: cat.slug
+        slug: cat.slug,
     })) as Category[];
 
   } catch (err) {
