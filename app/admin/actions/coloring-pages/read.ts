@@ -45,14 +45,25 @@ export async function getAdminColoringPages(page = 1, pageSize = 10): Promise<{ 
         }
 
         // Process the data to match the AdminImageWithRelations type
-        const processedImages: AdminImageWithRelations[] = (data || []).map((img: any) => ({
-            id: img.id,
-            title: img.title,
-            image_url: img.image_url,
-            created_at: img.created_at,
-            categories: img.image_categories?.map((ic: any) => ic.categories?.name).filter(Boolean) ?? [],
-            tags: img.image_tags?.map((it: any) => it.tags?.name).filter(Boolean) ?? [],
-        }));
+        const processedImages: AdminImageWithRelations[] = (data || []).map((img: any) => {
+            // Correctly access data based on the query structure
+            const categoryNames = img.coloring_page_categories?.map(
+                (joinEntry: any) => joinEntry.categories?.name // Access join table -> target table -> name
+            ).filter(Boolean) ?? []; // Filter out null/undefined names
+
+            const tagNames = img.coloring_page_tags?.map(
+                (joinEntry: any) => joinEntry.tags?.name // Access join table -> target table -> name
+            ).filter(Boolean) ?? []; // Filter out null/undefined names
+
+            return {
+                id: img.id,
+                title: img.title,
+                image_url: img.image_url,
+                created_at: img.created_at,
+                categories: categoryNames, // Assign the correctly extracted names
+                tags: tagNames,           // Assign the correctly extracted names
+            };
+        });
 
         console.log(`Fetched ${processedImages.length} images. Total count: ${count ?? 0}`);
         return { images: processedImages, totalCount: count ?? 0 };
