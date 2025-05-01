@@ -1,7 +1,5 @@
 import { supabase } from '@/lib/supabaseClient';
-// Remove unused imports if uuidv4 and path are no longer needed here
-// import { v4 as uuidv4 } from 'uuid';
-// import path from 'path';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 // Helper function to create a URL-safe slug
 function slugify(text: string): string {

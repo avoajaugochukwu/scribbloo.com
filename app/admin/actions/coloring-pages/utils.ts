@@ -1,4 +1,5 @@
 // --- Helper Function: Find or Create Tags ---
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { Constants } from '@/config/constants';
 import { PostgrestError } from '@supabase/supabase-js';

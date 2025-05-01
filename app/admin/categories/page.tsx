@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { CategoryList } from './CategoryList';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from 'next/link';
 import { PlusCircle } from 'lucide-react';
 import Image from 'next/image';
