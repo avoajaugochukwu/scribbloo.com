@@ -16,6 +16,8 @@ import {
 } from '@/lib/storageUtils';
 import { findOrCreateTags } from './utils';
 import logger from '@/lib/logger'; // Import logger
+import { ImageProcessingService } from '@/services/ImageProcessingService';
+import { validateImageFiles } from '@/lib/validation';
 
 const BUCKET_NAME = Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME;
 
@@ -37,16 +39,14 @@ export async function createColoringPage(
     const log = logger.child({ action: 'createColoringPage', titleAttempt: title });
     log.info('Attempting to create coloring page');
 
-    // --- Validation ---
-    if (!imageFile || imageFile.size === 0) {
-        log.warn('Validation failed: Image file is required.');
-        return { success: false, message: 'Image file is required.' };
+    // --- File Validation ---
+    const fileValidation = validateImageFiles([
+        { file: imageFile, fieldName: 'coloring page image', required: true }
+    ], log);
+
+    if (!fileValidation.valid) {
+        return { success: false, message: fileValidation.message || 'File validation failed' };
     }
-    if (!imageFile.type.startsWith('image/')) {
-        log.warn({ fileType: imageFile.type }, 'Validation failed: Invalid file type.');
-        return { success: false, message: 'Invalid file type. Please upload an image.' };
-    }
-    // --- End Validation ---
 
     let originalFilePath: string | null = null;
     let webpFilePath: string | null = null;

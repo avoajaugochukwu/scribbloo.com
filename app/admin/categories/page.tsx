@@ -16,6 +16,7 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { Pencil } from 'lucide-react';
+import { DeleteCategoryButton } from '../components/DeleteCategoryButton';
 
 export default async function ManageCategoriesPage() {
     let categories: Category[] = [];
@@ -92,12 +93,20 @@ export default async function ManageCategoriesPage() {
                                         <TableCell>{category.slug}</TableCell>
                                         <TableCell className="max-w-xs truncate">{category.description}</TableCell>
                                         <TableCell className="text-right">
-                                            <div className="flex justify-end gap-2">
-                                                <Button variant="outline" size="icon" asChild>
+                                            <div className="flex justify-end space-x-2">
+                                                <Button 
+                                                    variant="outline" 
+                                                    size="sm" 
+                                                    asChild
+                                                >
                                                     <Link href={`/admin/categories/edit/${category.id}`}>
-                                                        <Pencil className="h-4 w-4" />
+                                                        Edit
                                                     </Link>
                                                 </Button>
+                                                <DeleteCategoryButton 
+                                                    categoryId={category.id} 
+                                                    categoryName={category.name} 
+                                                />
                                             </div>
                                         </TableCell>
                                     </TableRow>

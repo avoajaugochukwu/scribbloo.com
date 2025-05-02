@@ -62,7 +62,7 @@ export default function EditCategoryPage() {
 
     // Mutation for updating the category
     const updateMutation = useMutation({
-        mutationFn: updateCategory,
+        mutationFn: (formData: FormData) => updateCategory(categoryId as string, formData),
         onSuccess: (data) => {
             if (data.success) {
                 toast.success(data.message);
@@ -128,14 +128,17 @@ export default function EditCategoryPage() {
         formData.append('seoDescription', trimmedSeoDesc);
         formData.append('seoMetaDescription', trimmedSeoMetaDesc);
 
-        // --- Append NEW Files ONLY if they exist ---
+        // Always keep images unless explicitly replacing them
+        formData.append('keepThumbnail', currentThumbnailPath ? 'true' : 'false');
+        formData.append('keepHero', currentHeroPath ? 'true' : 'false');
+
+        // Only append files if new ones selected
         if (newHeroImageFile) {
             formData.append('heroFile', newHeroImageFile);
         }
         if (newThumbnailImageFile) {
             formData.append('thumbnailFile', newThumbnailImageFile);
         }
-        // --- End Append Files ---
 
         updateMutation.mutate(formData);
     };

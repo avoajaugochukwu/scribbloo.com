@@ -1,250 +1,222 @@
 'use server';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
-import { revalidatePath } from 'next/cache';
-import { Constants } from '@/config/constants'; // Import constants
-import Category from '@/types/category.type'; // Use your specific Category type path
-// Import the new specific functions
-import {
-    generateStoragePath,
-    convertImageToWebpBuffer,
-    uploadBufferToStorage,
-    deleteStorageFile
-} from '@/lib/storageUtils';
-import { generateSlug } from '@/lib/utils'; // Assuming slugify is also in utils or import from storageUtils
-import logger from '@/lib/logger'; // Import logger
+import { Constants } from '@/config/constants';
+import { generateSlug } from '@/lib/utils';
+import logger from '@/lib/logger';
+import { ImageProcessingService } from '@/services/ImageProcessingService';
+import { validateImageFiles } from '@/lib/validation';
+import { RevalidationService } from '@/services/RevalidationService';
+import Category from '@/types/category.type';
 
-const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE;
+// Define bucket names
 const THUMBNAIL_BUCKET = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_NAME;
 const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;
+const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE;
 
 /**
- * Updates an existing category, handling optional image replacements and slug changes.
+ * Updates an existing category with images and SEO metadata.
  */
-export async function updateCategory(formData: FormData): Promise<{ success: boolean; message: string }> {
-  const categoryId = formData.get('categoryId')?.toString();
+export async function updateCategory(
+  categoryId: string,
+  formData: FormData
+): Promise<{ success: boolean; message: string }> {
+  // Extract form data
   const name = formData.get('categoryName')?.toString().trim();
   const description = formData.get('description')?.toString().trim();
-  // Expect two separate potential new files
+  
+  // Get SEO fields
+  const seoTitle = formData.get('seoTitle')?.toString().trim() || null;
+  const seoDescription = formData.get('seoDescription')?.toString().trim() || null;
+  const seoMetaDescription = formData.get('seoMetaDescription')?.toString().trim() || null;
+  
+  // Get image files and retention flags
   const thumbnailFile = formData.get('thumbnailFile') as File | null;
   const heroFile = formData.get('heroFile') as File | null;
+  const keepThumbnail = formData.get('keepThumbnail') === 'true';
+  const keepHero = formData.get('keepHero') === 'true';
 
-  const log = logger.child({ action: 'updateCategory', categoryId }); // Add logger context
-  log.debug({ formDataEntries: Object.fromEntries(formData.entries()) }, 'Received form data for update');
+  const log = logger.child({ action: 'updateCategory', categoryId, nameAttempt: name });
+  log.info('Attempting to update category');
 
-  // --- Validation ---
+  // --- Basic Validation ---
   if (!categoryId) {
-    log.warn('Validation failed: Category ID is missing.');
-    return { success: false, message: 'Category ID is missing.' };
+    log.warn('Validation failed: Category ID is required.');
+    return { success: false, message: 'Category ID is required.' };
   }
+  
   if (!name) {
     log.warn('Validation failed: Category name is required.');
     return { success: false, message: 'Category name is required.' };
   }
-  if (thumbnailFile && thumbnailFile.size > 0 && !thumbnailFile.type.startsWith('image/')) {
-    return { success: false, message: 'Invalid file type for thumbnail.' };
+  
+  // --- File Validation ---
+  const fileValidation = validateImageFiles([
+    { file: thumbnailFile, fieldName: 'thumbnail image' },
+    { file: heroFile, fieldName: 'hero image' }
+  ], log);
+  
+  if (!fileValidation.valid) {
+    return { success: false, message: fileValidation.message || 'File validation failed' };
   }
-  if (heroFile && heroFile.size > 0 && !heroFile.type.startsWith('image/')) {
-    return { success: false, message: 'Invalid file type for hero image.' };
-  }
-  // --- End Validation ---
 
-  let oldThumbnailPath: string | null = null;
-  let oldHeroPath: string | null = null;
-  let newThumbnailPath: string | null = null;
-  let newHeroPath: string | null = null;
-  let uploadedThumbnailPath: string | null = null; // For rollback
-  let uploadedHeroPath: string | null = null;     // For rollback
-  let thumbnailPathChanged = false;
-  let heroPathChanged = false;
-  const uploadedFilesForRollback: { bucket: string; path: string }[] = [];
+  // --- Fetch Current Category Data ---
+  const { data: currentCategory, error: fetchError } = await supabase
+    .from(CATEGORIES_TABLE)
+    .select('thumbnail_image, hero_image, slug')
+    .eq('id', categoryId)
+    .single();
+
+  if (fetchError) {
+    log.error({ error: fetchError }, 'Error fetching category');
+    return { success: false, message: `Failed to fetch current category: ${fetchError.message}` };
+  }
+
+  // Initialize image service
+  const imageService = new ImageProcessingService({ 
+    action: 'updateCategory', 
+    entityId: categoryId 
+  });
+  
+  let thumbnailPath: string | null = currentCategory.thumbnail_image;
+  let heroPath: string | null = currentCategory.hero_image;
+  const newUploadedFiles: { bucket: string; path: string }[] = [];
 
   try {
-    // 1. Fetch current category data (both image paths AND slug)
-    log.info(`Fetching current data`);
-    const { data: currentCategory, error: fetchError } = await supabase
-      .from(CATEGORIES_TABLE)
-      .select('name, slug, description, thumbnail_image, hero_image')
-      .eq('id', categoryId)
-      .single();
-
-    if (fetchError || !currentCategory) {
-      console.error(`Error fetching category ${categoryId}:`, fetchError);
-      return { success: false, message: 'Could not find the category to update.' };
-    }
-    oldThumbnailPath = currentCategory.thumbnail_image;
-    oldHeroPath = currentCategory.hero_image;
-    newThumbnailPath = oldThumbnailPath; // Initialize with old paths
-    newHeroPath = oldHeroPath;
-    log.info({ oldThumbnail: oldThumbnailPath, oldHero: oldHeroPath }, 'Old paths fetched');
-
-    // 2. Upload NEW Thumbnail if provided
+    // 1. Handle Thumbnail Image
     if (thumbnailFile && thumbnailFile.size > 0) {
-      log.debug(`Processing thumbnail replacement`);
-      // 2a. Generate WebP path
-      const { storagePath: thumbWebpPath } = generateStoragePath({ originalFileName: thumbnailFile.name, asWebp: true });
-      log.info({ path: thumbWebpPath }, 'Generated thumbnail WebP path');
-
-      // 2b. Convert to WebP buffer
-      const thumbBuffer = await thumbnailFile.arrayBuffer();
-      const thumbConversionResult = await convertImageToWebpBuffer({ fileBuffer: thumbBuffer });
-      if (thumbConversionResult.error || !thumbConversionResult.webpBuffer) {
-        log.error({ error: thumbConversionResult.error }, 'Thumbnail WebP conversion failed');
-        return { success: false, message: `Thumbnail update failed: ${thumbConversionResult.error || 'Conversion error'}` };
-      }
-      log.info('Thumbnail converted to WebP buffer');
-
-      // 2c. Upload WebP buffer (upsert=true)
-      const thumbUploadResult = await uploadBufferToStorage({
-        bucketName: THUMBNAIL_BUCKET,
-        storagePath: thumbWebpPath,
-        buffer: thumbConversionResult.webpBuffer,
-        contentType: 'image/webp',
-        upsert: true
+      // Upload new thumbnail
+      const thumbnailResult = await imageService.processAndUploadImage(thumbnailFile, {
+        bucket: THUMBNAIL_BUCKET,
+        upsert: false,
+        webpOnly: true
       });
-      if (thumbUploadResult.error || !thumbUploadResult.path) {
-        log.error({ error: thumbUploadResult.error }, 'Thumbnail WebP upload failed');
-        // No rollback needed yet as this is the first potential upload
-        return { success: false, message: `Thumbnail update failed: ${thumbUploadResult.error || 'Upload error'}` };
+      
+      if (thumbnailResult.error) {
+        return { success: false, message: `Thumbnail upload failed: ${thumbnailResult.error}` };
       }
-      uploadedThumbnailPath = thumbUploadResult.path; // Store the actual path returned/used
-      uploadedFilesForRollback.push({ bucket: THUMBNAIL_BUCKET, path: uploadedThumbnailPath });
-      newThumbnailPath = uploadedThumbnailPath;
-      thumbnailPathChanged = oldThumbnailPath !== newThumbnailPath;
-      log.info({ path: newThumbnailPath, changed: thumbnailPathChanged }, 'New thumbnail processed');
+      
+      // Store new path and mark old one for deletion
+      const oldThumbnailPath = thumbnailPath;
+      thumbnailPath = thumbnailResult.webpPath;
+      
+      if (thumbnailPath) {
+        newUploadedFiles.push({ bucket: THUMBNAIL_BUCKET, path: thumbnailPath });
+        log.info({ path: thumbnailPath }, 'New thumbnail uploaded successfully');
+      }
+      
+      // Delete old thumbnail if we had one and if we're not keeping it
+      if (oldThumbnailPath && oldThumbnailPath !== thumbnailPath && !keepThumbnail) {
+        await imageService.deleteImageFiles(null, oldThumbnailPath, THUMBNAIL_BUCKET);
+        log.info({ path: oldThumbnailPath }, 'Old thumbnail deleted');
+      }
+    } else if (!keepThumbnail) {
+      // If no new thumbnail and not keeping existing, set to null
+      if (thumbnailPath) {
+        await imageService.deleteImageFiles(null, thumbnailPath, THUMBNAIL_BUCKET);
+        log.info({ path: thumbnailPath }, 'Thumbnail deleted without replacement');
+      }
+      thumbnailPath = null;
     }
 
-    // 3. Upload NEW Hero Image if provided
+    // 2. Handle Hero Image
     if (heroFile && heroFile.size > 0) {
-      log.debug(`Processing hero image replacement`);
-      // 3a. Generate WebP path
-      const { storagePath: heroWebpPath } = generateStoragePath({ originalFileName: heroFile.name, asWebp: true });
-      log.info({ path: heroWebpPath }, 'Generated hero WebP path');
-
-      // 3b. Convert to WebP buffer
-      const heroBuffer = await heroFile.arrayBuffer();
-      const heroConversionResult = await convertImageToWebpBuffer({ fileBuffer: heroBuffer });
-      if (heroConversionResult.error || !heroConversionResult.webpBuffer) {
-        log.error({ error: heroConversionResult.error }, 'Hero WebP conversion failed');
-        await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if uploaded
-        return { success: false, message: `Hero image update failed: ${heroConversionResult.error || 'Conversion error'}` };
-      }
-      log.info('Hero converted to WebP buffer');
-
-      // 3c. Upload WebP buffer (upsert=true)
-      const heroUploadResult = await uploadBufferToStorage({
-        bucketName: HERO_BUCKET,
-        storagePath: heroWebpPath,
-        buffer: heroConversionResult.webpBuffer,
-        contentType: 'image/webp',
-        upsert: true
+      // Upload new hero image
+      const heroResult = await imageService.processAndUploadImage(heroFile, {
+        bucket: HERO_BUCKET,
+        upsert: false,
+        webpOnly: true
       });
-      if (heroUploadResult.error || !heroUploadResult.path) {
-        log.error({ error: heroUploadResult.error }, 'Hero WebP upload failed');
-        await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if uploaded
-        return { success: false, message: `Hero image update failed: ${heroUploadResult.error || 'Upload error'}` };
+      
+      if (heroResult.error) {
+        // Roll back any new uploads
+        for (const file of newUploadedFiles) {
+          await imageService.deleteImageFiles(null, file.path, file.bucket);
+        }
+        return { success: false, message: `Hero image upload failed: ${heroResult.error}` };
       }
-      uploadedHeroPath = heroUploadResult.path;
-      uploadedFilesForRollback.push({ bucket: HERO_BUCKET, path: uploadedHeroPath });
-      newHeroPath = uploadedHeroPath;
-      heroPathChanged = oldHeroPath !== newHeroPath;
-      log.info({ path: newHeroPath, changed: heroPathChanged }, 'New hero image processed');
+      
+      // Store new path and mark old one for deletion
+      const oldHeroPath = heroPath;
+      heroPath = heroResult.webpPath;
+      
+      if (heroPath) {
+        newUploadedFiles.push({ bucket: HERO_BUCKET, path: heroPath });
+        log.info({ path: heroPath }, 'New hero image uploaded successfully');
+      }
+      
+      // Delete old hero if we had one and if we're not keeping it
+      if (oldHeroPath && oldHeroPath !== heroPath && !keepHero) {
+        await imageService.deleteImageFiles(null, oldHeroPath, HERO_BUCKET);
+        log.info({ path: oldHeroPath }, 'Old hero image deleted');
+      }
+    } else if (!keepHero && heroPath) {
+      // Don't allow hero image to be null if a replacement isn't provided
+      return { 
+        success: false, 
+        message: 'Hero image is required. Please upload a hero image.' 
+      };
     }
 
-    // 4. Generate Slug (if name changed)
-    let newSlug = currentCategory.slug; // Assume slug doesn't change initially
-    if (name && name !== currentCategory.name) {
-      log.info('Name changed, generating new slug');
-      newSlug = generateSlug(name);
+    // 3. Generate slug (if name changed)
+    let categorySlug = currentCategory.slug;
+    if (!categorySlug || (name && name.toLowerCase() !== categorySlug.toLowerCase())) {
+      categorySlug = generateSlug(name);
+      log.info({ slug: categorySlug }, 'Generated new slug based on updated name');
     }
 
-    // 5. Prepare DB Update Payload
-    const updatePayload: Partial<Category> = {};
-
-    // Always include name/slug if changed
-    if (name && name !== currentCategory.name) {
-      updatePayload.name = name;
-      updatePayload.slug = newSlug;
-    }
-    // Always include description if changed (handle null)
-    if (description !== currentCategory.description) {
-        updatePayload.description = description || null;
-    }
-    // Always include thumbnail path if a new thumbnail was successfully uploaded
-    if (uploadedThumbnailPath) {
-        updatePayload.thumbnail_image = newThumbnailPath; // Use newThumbnailPath which holds the final path
-    }
-    // Always include hero path if a new hero image was successfully uploaded
-    if (uploadedHeroPath) {
-        updatePayload.hero_image = newHeroPath; // Use newHeroPath which holds the final path
-    }
-
-    // 6. Update Database (Always attempt the update)
-    log.info({ payload: updatePayload }, 'Updating category record in database');
+    // 4. Update Category in Database
+    log.info('Updating category in database...');
     const { error: updateError } = await supabase
-        .from(CATEGORIES_TABLE)
-        .update(updatePayload) // Pass the payload, even if potentially empty
-        .eq('id', categoryId);
+      .from(CATEGORIES_TABLE)
+      .update({
+        name,
+        slug: categorySlug,
+        description,
+        thumbnail_image: thumbnailPath,
+        hero_image: heroPath,
+        // SEO fields
+        seo_title: seoTitle,
+        seo_description: seoDescription,
+        seo_meta_description: seoMetaDescription
+      })
+      .eq('id', categoryId);
 
     if (updateError) {
-        log.error({ error: updateError }, 'Database update failed');
-        await rollbackUploads(uploadedFilesForRollback); // Rollback any new uploads
-        return { success: false, message: `Database update failed: ${updateError.message}` };
+      // Roll back new uploads
+      for (const file of newUploadedFiles) {
+        await imageService.deleteImageFiles(null, file.path, file.bucket);
+      }
+      
+      return { 
+        success: false, 
+        message: `Database error: ${updateError.message}` 
+      };
     }
-    log.info('Database record updated successfully.');
+    
+    log.info('Category updated successfully');
 
-    // 7. Delete OLD files AFTER successful DB update
-    // This logic remains the same - only delete the OLD file if the NEW file has a DIFFERENT path.
-    const deleteOldPromises = [];
-    if (thumbnailPathChanged && oldThumbnailPath) {
-      log.info(`Queueing deletion of old thumbnail: ${oldThumbnailPath}`);
-      deleteOldPromises.push(deleteStorageFile({ bucketName: THUMBNAIL_BUCKET, filePath: oldThumbnailPath }));
-    }
-    if (heroPathChanged && oldHeroPath) {
-      log.info(`Queueing deletion of old hero image: ${oldHeroPath}`);
-      deleteOldPromises.push(deleteStorageFile({ bucketName: HERO_BUCKET, filePath: oldHeroPath }));
-    }
-
-    if (deleteOldPromises.length > 0) {
-      log.info(`Attempting deletion of ${deleteOldPromises.length} old storage file(s)...`);
-      await Promise.allSettled(deleteOldPromises);
-      // deleteStorageFile logs results internally
-    }
-
-    // 8. Revalidate Paths
-    log.info('Revalidating paths...');
-    revalidatePath('/admin/categories', 'layout');
-    revalidatePath('/admin');
-    if (newSlug) {
-      revalidatePath(`/coloring-pages/${newSlug}`); // Revalidate specific category page if slug exists
-    }
-    revalidatePath('/coloring-pages', 'layout'); // Revalidate main listing
-
+    // 5. Revalidate paths
+    RevalidationService.revalidateEntity('category', { 
+      action: 'updateCategory', 
+      entityId: categoryId 
+    });
+    
     return { success: true, message: 'Category updated successfully.' };
 
   } catch (err: any) {
     log.error({ error: err }, 'Unexpected error updating category');
-    await rollbackUploads(uploadedFilesForRollback); // Attempt cleanup on unexpected error
-    const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
-    return { success: false, message };
-  }
-}
-
-// Helper function for rolling back uploads (keep as is, uses deleteStorageFile)
-async function rollbackUploads(files: { bucket: string; path: string }[]) {
-  if (files.length === 0) return;
-  const log = logger.child({ function: 'rollbackUploads', context: 'updateCategory' });
-  log.warn(`Rolling back ${files.length} uploads...`);
-
-  const deletionPromises = files.map(file =>
-      deleteStorageFile({ bucketName: file.bucket, filePath: file.path })
-  );
-  const results = await Promise.allSettled(deletionPromises);
-  results.forEach((result, index) => {
-    if (result.status === 'rejected') {
-      log.warn({ path: `${files[index].bucket}/${files[index].path}`, reason: result.reason }, `Failed to rollback upload`);
+    
+    // Roll back new uploads
+    for (const file of newUploadedFiles) {
+      await imageService.deleteImageFiles(null, file.path, file.bucket);
     }
-  });
+    
+    return { 
+      success: false, 
+      message: `Unexpected error: ${err.message || 'Unknown error'}` 
+    };
+  }
 }
 
 /**
