@@ -1,4 +1,5 @@
 import { getColoringPagesByCategorySlug } from '@/lib/coloringPages';
+import { getAllCategorySlugs } from '@/lib/coloringPages';
 import Link from 'next/link';
 import ColoringPageImage from './components/ColoringPageImage';
 import { notFound } from 'next/navigation';
@@ -17,6 +18,27 @@ import React from 'react';
 import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
 import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
+
+// Force static rendering
+export const dynamic = 'force-static';
+
+// Revalidate every hour
+export const revalidate = 3600;
+
+// Generate static paths during build
+export async function generateStaticParams() {
+  try {
+    // Get all category slugs
+    const slugs = await getAllCategorySlugs();
+    
+    return slugs.map((slug) => ({
+      categorySlug: slug,
+    }));
+  } catch (error) {
+    console.error("Error generating static params:", error);
+    return [];
+  }
+}
 
 interface CategoryPageProps {
   params: Promise<{ categorySlug: string }>;

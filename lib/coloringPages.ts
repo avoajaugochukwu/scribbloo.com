@@ -137,3 +137,21 @@ export async function getAllCategories(): Promise<Category[]> {
         return []; // Return empty array on error
     }
 }
+
+/**
+ * Fetches all category slugs for static site generation
+ * @returns An array of category slugs
+ */
+export async function getAllCategorySlugs(): Promise<string[]> {
+  const { data, error } = await supabase
+    .from(Constants.CATEGORIES_TABLE)
+    .select('slug')
+    .order('name');
+  
+  if (error) {
+    console.error('Error fetching category slugs:', error);
+    return [];
+  }
+  
+  return data.map(category => category.slug);
+}
