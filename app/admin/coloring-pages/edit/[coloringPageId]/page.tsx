@@ -88,7 +88,7 @@ export default function EditImagePage() {
 
     // --- Update Image Mutation ---
     const updateMutation = useMutation({
-        mutationFn: updateColoringPage,
+        mutationFn: (formData: FormData) => updateColoringPage(coloringPageId, formData),
         onSuccess: (result) => {
             if (result.success) {
                 toast.success('Coloring page updated successfully!');
@@ -160,8 +160,12 @@ export default function EditImagePage() {
         selectedCategoryIds.forEach(id => formData.append('categoryIds', id));
         selectedTagIds.forEach(id => formData.append('tagIds', id));
 
-        // Append the file ONLY if one is selected
-        if (selectedFile) {
+        // If no new image is selected, assume we want to keep the existing one
+        const hasNewImage = !!selectedFile;
+        formData.append('keepImage', (!hasNewImage && imageDetails?.image_url) ? 'true' : 'false');
+
+        // Only append image file if a new one is selected
+        if (hasNewImage) {
             formData.append('imageFile', selectedFile);
         }
 

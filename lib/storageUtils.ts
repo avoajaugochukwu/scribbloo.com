@@ -86,22 +86,42 @@ export function generateStoragePath(params: GenerateStoragePathParams): { storag
  * Responsibility: Image format conversion.
  */
 export async function convertImageToWebpBuffer(params: ConvertToWebpParams): Promise<{ webpBuffer?: Buffer; error?: string }> {
-  const { fileBuffer, quality = 80 } = params;
-  const log = logger.child({ function: 'convertImageToWebpBuffer', quality });
-  log.debug('Converting image buffer to WebP');
+  const { fileBuffer, quality = 50 } = params;
+  const scaleFactor = 0.25; // ⬅️ Resize to 25% of original
+
+  const log = logger.child({ function: 'convertImageToWebpBuffer', quality, scaleFactor });
+  log.debug('Converting image buffer to WebP with percentage resize');
 
   try {
-    const buffer = Buffer.from(fileBuffer); // Ensure it's a Buffer for Sharp
-    const webpBuffer = await sharp(buffer)
-      .webp({ quality: quality })
+    const buffer = Buffer.from(fileBuffer);
+    const image = sharp(buffer);
+
+    const metadata = await image.metadata();
+    const targetWidth = Math.round((metadata.width || 0) * scaleFactor);
+    const targetHeight = Math.round((metadata.height || 0) * scaleFactor);
+
+    if (!targetWidth || !targetHeight) {
+      throw new Error('Could not determine image dimensions for resizing.');
+    }
+
+    const webpBuffer = await image
+      .resize(targetWidth, targetHeight)
+      .webp({
+        quality,
+        nearLossless: false,
+        smartSubsample: true,
+        effort: 6
+      })
       .toBuffer();
-    log.info('Image buffer converted to WebP successfully');
+
+    log.info(`Converted to WebP, size: ${(webpBuffer.length / 1024).toFixed(2)} KB`);
     return { webpBuffer };
   } catch (error: any) {
     log.error({ error }, 'Error converting image to WebP');
     return { error: `Image conversion failed: ${error.message}` };
   }
 }
+
 
 /**
  * SRP: Uploads a raw File object to Supabase Storage.

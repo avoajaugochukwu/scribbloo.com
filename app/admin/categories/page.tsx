@@ -100,6 +100,7 @@ export default async function ManageCategoriesPage() {
                                                     asChild
                                                 >
                                                     <Link href={`/admin/categories/edit/${category.id}`}>
+                                                        <Pencil className="h-4 w-4" />
                                                         Edit
                                                     </Link>
                                                 </Button>
