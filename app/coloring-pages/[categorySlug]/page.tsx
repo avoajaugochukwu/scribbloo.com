@@ -18,7 +18,6 @@ import React from 'react';
 import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
 import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
-import Head from 'next/head';
 
 // Force static rendering
 export const dynamic = 'force-static';
@@ -87,10 +86,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // --- End Structured Data Prep ---
 
   return (
-    <>
-    <Head>
-        <link rel="canonical" href={`${baseUrl}/coloring-pages/${categoryData.slug}`} />
-    </Head>
+
     <div className="container mx-auto px-4 pb-8 md:pb-12">
       {/* --- Embed JSON-LD Script --- */}
       <script
@@ -176,7 +172,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </p>
       )}
     </div>
-    </>
   );
 }
 
