@@ -63,11 +63,11 @@ export async function deleteCategory(categoryId: string): Promise<{ success: boo
         const deletePromises = [];
         if (thumbnailPath) {
             console.log(`Queueing deletion of thumbnail: ${thumbnailPath}`);
-            deletePromises.push(deleteStorageFile(THUMBNAIL_BUCKET, thumbnailPath));
+            deletePromises.push(deleteStorageFile({ bucketName: THUMBNAIL_BUCKET, filePath: thumbnailPath }));
         }
         if (heroPath) {
             console.log(`Queueing deletion of hero image: ${heroPath}`);
-            deletePromises.push(deleteStorageFile(HERO_BUCKET, heroPath));
+            deletePromises.push(deleteStorageFile({ bucketName: HERO_BUCKET, filePath: heroPath }));
         }
 
         if (deletePromises.length > 0) {

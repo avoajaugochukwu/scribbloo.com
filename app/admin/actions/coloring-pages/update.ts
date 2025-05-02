@@ -2,15 +2,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
-import sharp from 'sharp'; // Import sharp
-import path from 'path'; // Import path
-
-// Import shared helpers
-import { uploadStorageFile, deleteStorageFile } from '@/lib/storageUtils';
+import {
+    generateStoragePath,
+    uploadOriginalFile,
+    convertImageToWebpBuffer,
+    uploadBufferToStorage,
+    deleteStorageFile
+} from '@/lib/storageUtils';
 import ColoringPage from '@/types/coloringpage.type';
 import { Constants } from '@/config/constants';
+import logger from '@/lib/logger';
 
-// Define the bucket name for coloring images
 const COLORING_PAGES_BUCKET = Constants.SUPABASE_COLORING_PAGES_BUCKET_NAME;
 const COLORING_PAGES_TABLE = Constants.COLORING_PAGES_TABLE;
 
@@ -27,173 +29,159 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
     const tagIds = formData.getAll('tagIds') as string[];
     const newImageFile = formData.get('imageFile') as File | null;
 
+    const log = logger.child({ action: 'updateColoringPage', coloringPageId });
+    log.info('Attempting to update coloring page');
+
     // --- Validation ---
-    if (!coloringPageId) return { success: false, message: 'Coloring page ID is missing.' };
-    if (!title) return { success: false, message: 'Title is required.' };
+    if (!coloringPageId) {
+        log.warn('Validation failed: Coloring page ID is missing.');
+        return { success: false, message: 'Coloring page ID is missing.' };
+    }
+    if (!title) {
+        log.warn('Validation failed: Title is required.');
+        return { success: false, message: 'Title is required.' };
+    }
     if (newImageFile && newImageFile.size > 0 && !newImageFile.type.startsWith('image/')) {
+        log.warn({ fileType: newImageFile.type }, 'Validation failed: Invalid file type for new image.');
         return { success: false, message: 'Invalid file type for new image. Please upload an image.' };
     }
     // --- End Validation ---
-
-    console.log(`Attempting to update coloring page ID: ${coloringPageId}`);
 
     let oldOriginalImagePath: string | null = null;
     let oldWebpPath: string | null = null;
     let newOriginalImagePath: string | null = null;
     let newWebpPath: string | null = null;
-    let pathsChanged = false; // Flag to track if file paths will change
+    let originalPathChanged = false;
+    let webpPathChanged = false;
+    const uploadedFilesForRollback: { bucket: string; path: string }[] = [];
 
     // --- Rollback Function for New Files ---
-    // Note: Rollback might be less critical if upserting, but still good for unexpected errors
     const rollbackNewFiles = async () => {
-        // Only attempt rollback if paths actually changed, otherwise upsert might have overwritten anyway
-        if (pathsChanged) {
-            console.log('Rolling back newly uploaded files (paths changed)...');
-            const deletePromises = [];
-            if (newOriginalImagePath) {
-                deletePromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, newOriginalImagePath));
-            }
-            if (newWebpPath) {
-                deletePromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, newWebpPath));
-            }
-            if (deletePromises.length > 0) {
-                await Promise.allSettled(deletePromises);
-                console.log('Finished attempting rollback of new files.');
-            }
+        if (uploadedFilesForRollback.length > 0) {
+            log.warn({ count: uploadedFilesForRollback.length }, 'Rolling back newly uploaded files...');
+            const deletePromises = uploadedFilesForRollback.map(file =>
+                deleteStorageFile({ bucketName: file.bucket, filePath: file.path })
+            );
+            await Promise.allSettled(deletePromises);
         } else {
-             console.log('Skipping new file rollback as paths did not change (upsert used).');
+             log.debug('Skipping new file rollback (no new files uploaded).');
         }
     };
     // --- End Rollback Function ---
 
     try {
-        // 1. Fetch current image data to get old image paths AND other fields for comparison
-        console.log(`Fetching current data for coloring page ID: ${coloringPageId}`);
+        // 1. Fetch current image data (including both paths)
+        log.info(`Fetching current data`);
         const { data: currentImage, error: fetchError } = await supabase
             .from(COLORING_PAGES_TABLE)
-            // Select title and description along with the paths
-            .select('title, description, image_url, webp_image_url')
+            .select('title, description, image_url, webp_image_url') // Fetch both paths
             .eq('id', coloringPageId)
             .single();
 
         if (fetchError || !currentImage) {
-            console.error(`Error fetching current coloring page ${coloringPageId}:`, fetchError);
+            log.error({ error: fetchError }, `Error fetching current coloring page`);
             return { success: false, message: 'Could not find the coloring page to update.' };
         }
         oldOriginalImagePath = currentImage.image_url;
         oldWebpPath = currentImage.webp_image_url;
-        console.log(`Old paths - Original: ${oldOriginalImagePath}, WebP: ${oldWebpPath}`);
+        log.info({ oldOriginalPath: oldOriginalImagePath, oldWebpPath: oldWebpPath }, `Old image paths fetched`);
+
+        // Initialize new paths with old ones
+        newOriginalImagePath = oldOriginalImagePath;
+        newWebpPath = oldWebpPath;
 
         // 2. Handle NEW Image Upload (if provided)
         if (newImageFile && newImageFile.size > 0) {
-            console.log(`New image file "${newImageFile.name}" provided. Processing...`);
+            log.info(`New image file "${newImageFile.name}" provided. Processing...`);
 
-            // --- Determine Target Paths based on title/slug ---
-            // You'll need your slug generation logic here. Assuming a simple example:
-            // const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-            // For simplicity, we'll use the existing uploadStorageFile which generates UUID paths.
-            // If you want slug-based paths, you'll need to modify uploadStorageFile or handle path generation here.
-            // For now, we proceed assuming uploadStorageFile handles path generation.
+            // 2a. Generate new paths
+            const { storagePath: generatedOriginalPath } = generateStoragePath({ originalFileName: newImageFile.name, asWebp: false });
+            const { storagePath: generatedWebpPath } = generateStoragePath({ originalFileName: newImageFile.name, asWebp: true });
+            log.info({ newOriginalPath: generatedOriginalPath, newWebpPath: generatedWebpPath }, 'Generated new storage paths');
 
-            // 2a. Upload new original image with upsert: true
-            // Pass true as the third argument to enable upsert
-            const uploadResult = await uploadStorageFile(COLORING_PAGES_BUCKET, newImageFile, true);
-            if (uploadResult.error || !uploadResult.path) {
-                console.error('Error uploading new original image:', uploadResult.error);
-                return { success: false, message: `New image upload failed: ${uploadResult.error}` };
+            // 2b. Upload new original file (upsert=true)
+            const originalUploadResult = await uploadOriginalFile({
+                bucketName: COLORING_PAGES_BUCKET,
+                storagePath: generatedOriginalPath,
+                file: newImageFile,
+                contentType: newImageFile.type,
+                upsert: true
+            });
+            if (originalUploadResult.error || !originalUploadResult.path) {
+                return { success: false, message: `New original image upload failed: ${originalUploadResult.error}` };
             }
-            newOriginalImagePath = uploadResult.path;
-            console.log(`New original image uploaded to: ${newOriginalImagePath} (upsert=true)`);
+            newOriginalImagePath = originalUploadResult.path;
+            uploadedFilesForRollback.push({ bucket: COLORING_PAGES_BUCKET, path: newOriginalImagePath });
+            log.info({ path: newOriginalImagePath }, 'New original file uploaded');
 
-            // Check if the path changed compared to the old one
-            if (newOriginalImagePath !== oldOriginalImagePath) {
-                pathsChanged = true;
+            // 2c. Convert new file to WebP
+            const fileBuffer = await newImageFile.arrayBuffer();
+            const conversionResult = await convertImageToWebpBuffer({ fileBuffer });
+            if (conversionResult.error || !conversionResult.webpBuffer) {
+                await rollbackNewFiles(); // Rollback original upload
+                return { success: false, message: `WebP conversion failed: ${conversionResult.error}` };
             }
+            log.info('New file converted to WebP buffer');
 
-            // 2b. Convert and upload new WebP image with upsert: true
-            try {
-                const imageBuffer = Buffer.from(await newImageFile.arrayBuffer());
-                const webpBuffer = await sharp(imageBuffer).webp().toBuffer();
-
-                const parsedPath = path.parse(newOriginalImagePath);
-                const dir = parsedPath.dir.startsWith('/') ? parsedPath.dir.substring(1) : parsedPath.dir;
-                newWebpPath = path.join(dir, `${parsedPath.name}.webp`).replace(/\\/g, '/');
-
-                console.log(`Uploading new WebP version to: ${newWebpPath} (upsert=true)`);
-                const { error: webpUploadError } = await supabase.storage
-                    .from(COLORING_PAGES_BUCKET)
-                    .upload(newWebpPath, webpBuffer, {
-                        contentType: 'image/webp',
-                        upsert: true, // Use upsert: true here as well
-                    });
-
-                if (webpUploadError) {
-                    console.error('Error uploading new WebP image:', webpUploadError);
-                    // Attempt rollback only if original path changed
-                    if (pathsChanged) {
-                         await deleteStorageFile(COLORING_PAGES_BUCKET, newOriginalImagePath);
-                    }
-                    return { success: false, message: `Failed to upload WebP version: ${webpUploadError.message}` };
-                }
-                console.log('New WebP image uploaded successfully.');
-
-                // Check if the webp path changed
-                if (newWebpPath !== oldWebpPath) {
-                    pathsChanged = true; // Set flag if either path changed
-                }
-
-            } catch (conversionError: any) {
-                console.error('Error during image conversion or WebP upload:', conversionError);
-                 // Attempt rollback only if original path changed
-                 if (pathsChanged) {
-                      await deleteStorageFile(COLORING_PAGES_BUCKET, newOriginalImagePath);
-                 }
-                return { success: false, message: `Image conversion/WebP upload failed: ${conversionError.message}` };
+            // 2d. Upload new WebP buffer (upsert=true)
+            const webpUploadResult = await uploadBufferToStorage({
+                bucketName: COLORING_PAGES_BUCKET,
+                storagePath: generatedWebpPath,
+                buffer: conversionResult.webpBuffer,
+                contentType: 'image/webp',
+                upsert: true
+            });
+            if (webpUploadResult.error || !webpUploadResult.path) {
+                await rollbackNewFiles(); // Rollback original upload
+                return { success: false, message: `New WebP image upload failed: ${webpUploadResult.error}` };
             }
+            newWebpPath = webpUploadResult.path;
+            uploadedFilesForRollback.push({ bucket: COLORING_PAGES_BUCKET, path: newWebpPath });
+            log.info({ path: newWebpPath }, 'New WebP file uploaded');
+
+            // Check if paths actually changed
+            originalPathChanged = newOriginalImagePath !== oldOriginalImagePath;
+            webpPathChanged = newWebpPath !== oldWebpPath;
+            log.info({ originalChanged: originalPathChanged, webpChanged: webpPathChanged }, 'Path change status');
+
         } else {
-            console.log('No new image file provided.');
+            log.info('No new image file provided.');
         }
 
         // 3. Prepare data for DB update
         const updateData: Partial<ColoringPage> = {
             title: title,
             description: description || null,
-            // Conditionally add image URLs ONLY if a new image was successfully processed
-            ...(newOriginalImagePath && { image_url: newOriginalImagePath }),
-            ...(newWebpPath && { webp_image_url: newWebpPath }),
+            // Only include paths if they actually changed AND are not null
+            ...(originalPathChanged && newOriginalImagePath && { image_url: newOriginalImagePath }),
+            ...(webpPathChanged && newWebpPath && { webp_image_url: newWebpPath }),
         };
 
         // Check if there's anything to update besides links
-        // Only include fields that actually changed from the fetched `currentImage` data
-        // (This prevents unnecessary DB updates if only links changed) - Optional optimization
         const hasDataUpdates = (updateData.title !== currentImage.title) ||
-                               (updateData.description !== (currentImage.description || null)) || // Handle null description
-                               (newOriginalImagePath && newOriginalImagePath !== oldOriginalImagePath) ||
-                               (newWebpPath && newWebpPath !== oldWebpPath);
-
+                               (updateData.description !== (currentImage.description || null)) ||
+                               originalPathChanged || webpPathChanged;
 
         // 4. Update Image Record in Database (if necessary)
         if (hasDataUpdates) {
-            console.log('Updating coloring page record in database with data:', updateData);
+            log.info({ data: updateData }, 'Updating coloring page record in database');
             const { error: updateError } = await supabase
                 .from(COLORING_PAGES_TABLE)
                 .update(updateData)
                 .eq('id', coloringPageId);
 
             if (updateError) {
-                console.error('Error updating coloring page record:', updateError.message);
-                // Rollback new files only if paths actually changed
-                await rollbackNewFiles();
+                log.error({ error: updateError }, 'Error updating coloring page record');
+                await rollbackNewFiles(); // Attempt rollback of new files
                 return { success: false, message: `Database update error: ${updateError.message}` };
             }
-            console.log('Database record updated successfully.');
+            log.info('Database record updated successfully.');
         } else {
-            console.log('No changes to title, description, or image path. Skipping main record update.');
+            log.info('No changes to title, description, or image paths. Skipping main record update.');
         }
 
-
-        // 5. Update Links using RPC (always run if categories/tags might have changed)
-        console.log('Updating coloring page category/tag links via RPC...');
+        // 5. Update Links using RPC
+        log.info('Updating coloring page category/tag links via RPC...');
         const { error: rpcError } = await supabase.rpc('update_coloring_page_links', {
             p_coloring_page_id: coloringPageId,
             p_category_ids: categoryIds,
@@ -201,61 +189,41 @@ export async function updateColoringPage(formData: FormData): Promise<{ success:
         });
 
         if (rpcError) {
-            console.error('Error updating coloring page links via RPC:', rpcError);
-            // If links fail, the main data (and potentially new files) are already updated/upserted.
+            log.error({ error: rpcError }, 'Error updating coloring page links via RPC');
             // Don't rollback file changes here. Report the link error.
             return { success: false, message: `Coloring page details updated, but failed to update links: ${rpcError.message}` };
         }
-        console.log('Category/tag links updated successfully via RPC.');
+        log.info('Category/tag links updated successfully via RPC.');
 
         // 6. Delete OLD images from storage ONLY IF their paths changed
-        if (pathsChanged) { // Only delete if paths are different
-            console.log("Paths changed, attempting to delete old files...");
-            const deleteOldPromises = [];
-            // Check oldOriginalImagePath before attempting delete
-            if (oldOriginalImagePath && oldOriginalImagePath !== newOriginalImagePath) {
-                console.log(`Attempting to delete old original image: ${oldOriginalImagePath}`);
-                deleteOldPromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, oldOriginalImagePath));
-            }
-             // Check oldWebpPath before attempting delete
-            if (oldWebpPath && oldWebpPath !== newWebpPath) {
-                console.log(`Attempting to delete old WebP image: ${oldWebpPath}`);
-                deleteOldPromises.push(deleteStorageFile(COLORING_PAGES_BUCKET, oldWebpPath));
-            }
+        const deleteOldPromises = [];
+        if (originalPathChanged && oldOriginalImagePath) {
+            log.info({ oldPath: oldOriginalImagePath }, "Original path changed, queueing deletion of old file");
+            deleteOldPromises.push(deleteStorageFile({ bucketName: COLORING_PAGES_BUCKET, filePath: oldOriginalImagePath }));
+        }
+        if (webpPathChanged && oldWebpPath) {
+            log.info({ oldPath: oldWebpPath }, "WebP path changed, queueing deletion of old file");
+            deleteOldPromises.push(deleteStorageFile({ bucketName: COLORING_PAGES_BUCKET, filePath: oldWebpPath }));
+        }
 
-            if (deleteOldPromises.length > 0) {
-                const results = await Promise.allSettled(deleteOldPromises);
-                console.log('Old file deletion results:', results);
-                results.forEach((result, index) => {
-                    if (result.status === 'rejected') {
-                        // Determine which path failed based on the promises pushed
-                        let failedPath = 'unknown';
-                        if (index === 0 && oldOriginalImagePath && oldOriginalImagePath !== newOriginalImagePath) failedPath = oldOriginalImagePath;
-                        else if (oldWebpPath && oldWebpPath !== newWebpPath) failedPath = oldWebpPath; // This assumes webp is second if original exists
-
-                        console.warn(`Failed to delete old storage file ${failedPath}:`, result.reason);
-                    }
-                });
-            } else {
-                 console.log("No old files needed deletion (paths matched or old paths were null).");
-            }
-        } else if (newImageFile && newImageFile.size > 0) {
-             console.log("Paths did not change, old files were overwritten by upsert.");
+        if (deleteOldPromises.length > 0) {
+            log.info({ count: deleteOldPromises.length }, 'Attempting deletion of old storage files...');
+            await Promise.allSettled(deleteOldPromises);
+            // deleteStorageFile logs results internally
         }
 
         // 7. Success - Revalidate Paths
-        console.log(`Coloring page "${title}" (ID: ${coloringPageId}) updated successfully.`);
+        log.info(`Coloring page "${title}" updated successfully.`);
         revalidatePath('/admin');
         revalidatePath(`/admin/coloring-pages/edit/${coloringPageId}`);
-        revalidatePath('/admin/coloring-pages', 'layout'); // Revalidate list page
-        revalidatePath('/coloring-pages', 'layout'); // Revalidate public pages
+        revalidatePath('/admin/coloring-pages', 'layout');
+        revalidatePath('/coloring-pages', 'layout');
 
         return { success: true, message: `Coloring page "${title}" updated successfully.` };
 
     } catch (err: any) {
-        console.error('Unexpected error updating coloring page:', err);
-        // Attempt cleanup of NEW files only if paths changed
-        await rollbackNewFiles();
+        log.error({ error: err }, 'Unexpected error updating coloring page');
+        await rollbackNewFiles(); // Attempt cleanup of NEW files
         const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
         return { success: false, message };
     }

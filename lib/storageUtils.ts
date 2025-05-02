@@ -1,8 +1,52 @@
 import { supabase } from '@/lib/supabaseClient';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import sharp from 'sharp'; // Make sure sharp is installed (npm install sharp)
+import logger from './logger'; // Import the configured logger
 
-// Helper function to create a URL-safe slug
+// --- Type Definitions for Parameters ---
+
+interface GenerateStoragePathParams {
+  originalFileName: string;
+  /** If true, generates a path ending in .webp */
+  asWebp?: boolean;
+}
+
+interface ConvertToWebpParams {
+  fileBuffer: ArrayBuffer;
+  quality?: number;
+}
+
+interface UploadFileParams {
+  bucketName: string;
+  storagePath: string; // Full path including filename
+  file: File;
+  contentType: string; // e.g., 'image/jpeg', 'image/png'
+  upsert?: boolean;
+}
+
+interface UploadBufferParams {
+  bucketName: string;
+  storagePath: string; // Full path including filename (e.g., 'my-image.webp')
+  buffer: Buffer;
+  contentType: string; // Should be 'image/webp'
+  upsert?: boolean;
+}
+
+interface CheckPathExistsParams {
+  bucketName: string;
+  storagePath: string;
+}
+
+interface DeleteFileParams {
+    bucketName: string;
+    filePath: string;
+}
+
+// --- Helper Functions (Single Responsibility) ---
+
+/**
+ * Generates a URL-safe slug from text. (Internal helper)
+ */
 function slugify(text: string): string {
   return text
     .toString()
@@ -17,188 +61,195 @@ function slugify(text: string): string {
 }
 
 /**
- * Uploads a file to a specified Supabase Storage bucket using an SEO-friendly name
- * derived from the original filename.
- *
- * @param bucketName The name of the Supabase Storage bucket.
- * @param file The file object to upload.
- * @param upsert Optional. If true, overwrites the file if it already exists. Defaults to false.
- * @returns An object containing the path (the generated filename) or an error.
+ * SRP: Generates a storage-safe path, optionally with a .webp extension.
+ * Responsibility: Determine the final filename/path based on the original name.
  */
-export async function uploadStorageFile(
-    bucketName: string,
-    file: File,
-    upsert: boolean = false // Keep upsert parameter
-): Promise<{ path?: string; error?: string | null }> {
+export function generateStoragePath(params: GenerateStoragePathParams): { storagePath: string } {
+  const { originalFileName, asWebp = false } = params;
+  const log = logger.child({ function: 'generateStoragePath', originalFileName, asWebp });
+  log.debug('Generating storage path');
+
+  const extension = originalFileName.substring(originalFileName.lastIndexOf('.'));
+  const baseName = originalFileName.substring(0, originalFileName.lastIndexOf('.')) || originalFileName;
+  const slugifiedBaseName = slugify(baseName);
+
+  // Use original extension unless asWebp is true
+  const finalExtension = asWebp ? '.webp' : extension.toLowerCase();
+  const finalPath = `${slugifiedBaseName}${finalExtension}`;
+
+  log.info({ resultPath: finalPath }, 'Generated storage path successfully');
+  return { storagePath: finalPath };
+}
+
+/**
+ * SRP: Converts an image buffer to a WebP buffer using Sharp.
+ * Responsibility: Image format conversion.
+ */
+export async function convertImageToWebpBuffer(params: ConvertToWebpParams): Promise<{ webpBuffer?: Buffer; error?: string }> {
+  const { fileBuffer, quality = 80 } = params;
+  const log = logger.child({ function: 'convertImageToWebpBuffer', quality });
+  log.debug('Converting image buffer to WebP');
+
+  try {
+    const buffer = Buffer.from(fileBuffer); // Ensure it's a Buffer for Sharp
+    const webpBuffer = await sharp(buffer)
+      .webp({ quality: quality })
+      .toBuffer();
+    log.info('Image buffer converted to WebP successfully');
+    return { webpBuffer };
+  } catch (error: any) {
+    log.error({ error }, 'Error converting image to WebP');
+    return { error: `Image conversion failed: ${error.message}` };
+  }
+}
+
+/**
+ * SRP: Uploads a raw File object to Supabase Storage.
+ * Responsibility: Interact with Supabase storage API for upload.
+ */
+export async function uploadOriginalFile(params: UploadFileParams): Promise<{ path?: string; error?: string }> {
+    const { bucketName, storagePath, file, contentType, upsert = false } = params;
+    const log = logger.child({ function: 'uploadOriginalFile', bucketName, storagePath, contentType, upsert });
+    log.info('Attempting to upload original file');
+
     try {
-        if (!file || file.size === 0) {
-             console.warn('Upload skipped: File is empty or missing.');
-             return { error: 'File is empty or missing.' };
-        }
-        // Basic image type check (can be expanded)
-        if (!file.type.startsWith('image/')) {
-             console.warn(`Upload skipped: Invalid file type "${file.type}". Only images are allowed.`);
-             return { error: 'Invalid file type. Only images are allowed.' };
-        }
-
-        // --- Generate SEO-friendly filename ---
-        const fileExtension = file.name.split('.').pop()?.toLowerCase();
-        if (!fileExtension) {
-            console.error('Upload failed: Could not determine file extension.');
-            return { error: 'Could not determine file extension.' };
-        }
-        const baseName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
-        const slugifiedBaseName = slugify(baseName);
-
-        // Filename is now just the slugified base name + extension
-        const seoFileName = `${slugifiedBaseName}.${fileExtension}`;
-        // --- End filename generation ---
-
-
-        console.log(`Uploading file "${file.name}" as "${seoFileName}" to bucket "${bucketName}" with upsert: ${upsert}`);
-
         const { data, error } = await supabase.storage
             .from(bucketName)
-            .upload(seoFileName, file, { // Use seoFileName as the path
-                cacheControl: '3600', // Optional: Example cache control
-                upsert: upsert, // Use the upsert parameter here
+            .upload(storagePath, file, {
+                contentType: contentType,
+                upsert: upsert,
             });
 
         if (error) {
-            // If upsert is false, duplicate errors are possible. If upsert is true, other errors might occur.
-            console.error(`Storage upload error (${bucketName}, ${seoFileName}):`, error);
-             // Check specifically for the duplicate file error if upsert was false
-             if (!upsert && (error.message.includes('Duplicate') || error.message.includes('already exists'))) {
-                  console.warn(`Storage upload error (${bucketName}): Filename "${seoFileName}" already exists (upsert was false).`);
-                  // Return a specific error message for duplicates when not upserting
-                  return { error: `Filename "${seoFileName}" already exists. Please rename the file or enable overwriting.` };
-             }
+            log.error({ error, errorMessage: error.message, errorStatus: (error as any).status }, 'Supabase storage upload failed for original file');
+            if (!upsert && (error.message.includes('Duplicate') || error.message.includes('already exists'))) {
+                return { error: `File "${storagePath}" already exists in bucket "${bucketName}". Choose a different name or enable overwriting.` };
+            }
             return { error: `Storage upload failed: ${error.message}` };
         }
 
-        // Supabase upload returns the key (path) used for the upload in data.path
-        if (!data?.path) {
-             console.error('Upload successful but no path returned from Supabase.');
-             return { error: 'Upload successful but no path returned from Supabase.' };
-        }
-
-        console.log(`File uploaded successfully. Path: ${data.path}`);
-        // Return the actual path used by Supabase (should match seoFileName)
-        return { path: data.path };
+        log.info({ path: data?.path }, 'Original file uploaded successfully');
+        // Note: Supabase upload might not return the full path, just the key.
+        // The storagePath passed in is usually what we need.
+        return { path: storagePath };
 
     } catch (err: any) {
-        console.error('Unexpected error during file upload:', err);
+        log.error({ error: err }, 'Unexpected error during original file upload');
         const message = err instanceof Error ? err.message : 'An unexpected error occurred during upload.';
         return { error: message };
     }
 }
 
 /**
- * Uploads an image file to Supabase Storage, converting it to WebP format first.
- * Uses a slugified filename based on the original file name.
- *
- * @param bucketName The name of the Supabase Storage bucket.
- * @param file The image file object to upload and convert.
- * @param upsert Optional. If true, overwrites the file if it already exists. Defaults to false.
- * @returns An object containing the path (the generated .webp filename) or an error.
+ * SRP: Uploads a Buffer (expected to be WebP) to Supabase Storage.
+ * Responsibility: Interact with Supabase storage API for upload.
  */
-export async function uploadAndConvertToWebp(
-    bucketName: string,
-    file: File,
-    upsert: boolean = false
-): Promise<{ path?: string; error?: string | null }> {
-    try {
-        if (!file || file.size === 0) {
-            return { error: 'File is empty or missing.' };
-        }
-        if (!file.type.startsWith('image/')) {
-            return { error: 'Invalid file type. Only images are allowed.' };
-        }
+export async function uploadBufferToStorage(params: UploadBufferParams): Promise<{ path?: string; error?: string }> {
+  const { bucketName, storagePath, buffer, contentType, upsert = false } = params;
+  const log = logger.child({ function: 'uploadBufferToStorage', bucketName, storagePath, contentType, upsert });
+  log.info('Attempting to upload buffer');
 
-        // Generate base slug from original filename (without extension)
-        const baseName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
-        const slugifiedBaseName = slugify(baseName);
-        const webpFileName = `${slugifiedBaseName}.webp`; // Target filename
+  try {
+    const { data, error } = await supabase.storage
+      .from(bucketName)
+      .upload(storagePath, buffer, {
+        contentType: contentType, // Should be 'image/webp'
+        upsert: upsert,
+      });
 
-        console.log(`Converting "${file.name}" to WebP as "${webpFileName}" for bucket "${bucketName}"`);
-
-        // Convert image to WebP buffer using sharp
-        const fileBuffer = await file.arrayBuffer();
-        const webpBuffer = await sharp(fileBuffer)
-            .webp({ quality: 80 }) // Adjust quality as needed
-            .toBuffer();
-
-        console.log(`Uploading "${webpFileName}" to bucket "${bucketName}" with upsert: ${upsert}`);
-
-        // Upload the WebP buffer
-        const { data, error } = await supabase.storage
-            .from(bucketName)
-            .upload(webpFileName, webpBuffer, {
-                cacheControl: '3600',
-                upsert: upsert,
-                contentType: 'image/webp', // Set content type explicitly
-            });
-
-        if (error) {
-            console.error(`Storage upload error (${bucketName}, ${webpFileName}):`, error);
-             if (!upsert && (error.message.includes('Duplicate') || error.message.includes('already exists'))) {
-                  return { error: `Filename "${webpFileName}" already exists. Please rename the file or enable overwriting.` };
-             }
-            return { error: `Storage upload failed: ${error.message}` };
-        }
-
-        if (!data?.path) {
-             return { error: 'Upload successful but no path returned from Supabase.' };
-        }
-
-        console.log(`WebP file uploaded successfully. Path: ${data.path}`);
-        return { path: data.path }; // Should match webpFileName
-
-    } catch (err: any) {
-        console.error('Error during image conversion or upload:', err);
-        const message = err instanceof Error ? err.message : 'An unexpected error occurred during image processing.';
-        return { error: message };
+    if (error) {
+      log.error({ error, errorMessage: error.message, errorStatus: (error as any).status }, 'Supabase storage buffer upload failed');
+      if (!upsert && (error.message.includes('Duplicate') || error.message.includes('already exists'))) {
+         return { error: `File "${storagePath}" already exists in bucket "${bucketName}". Choose a different name or enable overwriting.` };
+      }
+      return { error: `Storage upload failed: ${error.message}` };
     }
+
+    log.info({ path: data?.path }, 'Buffer uploaded successfully');
+    return { path: storagePath }; // Return the intended path
+
+  } catch (err: any) {
+    log.error({ error: err }, 'Unexpected error during buffer upload');
+    const message = err instanceof Error ? err.message : 'An unexpected error occurred during buffer upload.';
+    return { error: message };
+  }
 }
 
 /**
- * Deletes a file from a specified Supabase Storage bucket.
- *
- * @param bucketName The name of the Supabase Storage bucket.
- * @param filePath The path (filename) of the file to delete within the bucket.
- * @returns An object indicating success or containing an error.
+ * SRP: Checks if a specific path exists in a Supabase Storage bucket.
+ * Responsibility: Interact with Supabase storage API to check for file existence.
  */
-export async function deleteStorageFile(
-    bucketName: string,
-    filePath: string
-): Promise<{ success: boolean; error?: string | null }> {
+export async function checkIfPathExistsInStorage(params: CheckPathExistsParams): Promise<{ exists: boolean; error?: string }> {
+    const { bucketName, storagePath } = params;
+    const log = logger.child({ function: 'checkIfPathExistsInStorage', bucketName, storagePath });
+    log.debug('Checking if path exists in storage');
+
+    // Extract directory and filename for Supabase list options
+    const lastSlashIndex = storagePath.lastIndexOf('/');
+    const pathPrefix = lastSlashIndex > -1 ? storagePath.substring(0, lastSlashIndex) : undefined; // List files in this directory
+    const fileName = storagePath.substring(lastSlashIndex + 1); // Search for this specific file
+
     try {
-        // Ensure filePath is not empty or just whitespace
-        if (!filePath || filePath.trim() === '') {
-            console.warn('Attempted to delete file with empty path. Skipping.');
-            return { success: true }; // Consider this success as there's nothing to delete
+        // Use list with search to find the specific file efficiently
+        const { data, error } = await supabase.storage
+            .from(bucketName)
+            .list(pathPrefix, { // pathPrefix can be undefined for root
+                limit: 1,
+                search: fileName,
+            });
+
+        if (error) {
+            log.error({ error }, 'Failed to list storage bucket contents');
+            return { exists: false, error: `Failed to check storage: ${error.message}` };
         }
 
-        console.log(`Attempting to delete file: ${bucketName}/${filePath}`);
+        // If data is not null and contains an item with the exact name, it exists
+        const exists = data?.some(item => item.name === fileName) ?? false;
+        log.info({ exists }, 'Path existence check complete');
+        return { exists };
+
+    } catch (error: any) {
+        log.error({ error }, 'Unexpected error checking path existence');
+        return { exists: false, error: `Unexpected error checking storage: ${error.message}` };
+    }
+}
+
+// --- Delete Function (Updated Logging) ---
+
+/**
+ * Deletes a file from a specified Supabase Storage bucket.
+ */
+export async function deleteStorageFile(params: DeleteFileParams): Promise<{ success: boolean; error?: string | null }> {
+    const { bucketName, filePath } = params;
+    const log = logger.child({ function: 'deleteStorageFile', bucketName, filePath });
+
+    try {
+        if (!filePath || filePath.trim() === '') {
+            log.warn('Attempted to delete file with empty path. Skipping.');
+            return { success: true };
+        }
+
+        log.info('Attempting to delete file from storage');
         const { error } = await supabase.storage
             .from(bucketName)
             .remove([filePath]); // remove expects an array of paths
 
         if (error) {
-            // It's common to get a "Not Found" error if the file was already deleted or never existed.
-            // We might not want to treat this as a critical failure in rollback scenarios.
-            if (error.message.includes('Not Found')) { // Adjust based on actual Supabase error message
-                 console.warn(`File not found during deletion (might be expected): ${filePath}`);
-                 return { success: true }; // Treat "Not Found" as success for cleanup purposes
+            // Check for "Not Found" which might not be a true error in cleanup scenarios
+            if (error.message.includes('Not Found')) {
+                 log.warn({ error }, 'File not found during deletion (might be expected). Treating as success.');
+                 return { success: true }; // Treat "Not Found" as success for cleanup
             }
-            console.error(`Error deleting file ${filePath}:`, error);
+            // Log error details - remove error.code
+            log.error({ error, errorMessage: error.message }, 'Error deleting file from storage');
             return { success: false, error: error.message };
         }
 
-        console.log(`Successfully deleted file: ${filePath}`);
+        log.info('Successfully deleted file from storage');
         return { success: true };
+
     } catch (err: any) {
-        console.error(`Unexpected error during file deletion for path ${filePath}:`, err);
+        log.error({ error: err }, 'Unexpected error during file deletion');
         const message = err instanceof Error ? err.message : 'An unexpected error occurred during deletion.';
         return { success: false, error: message };
     }

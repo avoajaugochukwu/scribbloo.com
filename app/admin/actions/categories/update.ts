@@ -5,8 +5,9 @@ import { revalidatePath } from 'next/cache';
 import { Constants } from '@/config/constants'; // Import constants
 import Category from '@/types/category.type'; // Use your specific Category type path
 // Import shared helpers
-import { uploadAndConvertToWebp, deleteStorageFile } from '@/lib/storageUtils';
+import { processAndUploadImage, deleteStorageFile } from '@/lib/storageUtils';
 import { generateSlug } from '@/lib/utils'; // Assuming slugify is also in utils or import from storageUtils
+import logger from '@/lib/logger'; // Import logger
 
 const THUMBNAIL_BUCKET = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_NAME;
 const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;
@@ -69,11 +70,16 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     // 2. Upload NEW Thumbnail if provided
     if (thumbnailFile && thumbnailFile.size > 0) {
       console.log(`Processing thumbnail replacement for category: ${name}`);
-      const uploadResult = await uploadAndConvertToWebp(THUMBNAIL_BUCKET, thumbnailFile, true); // upsert = true
-      if (uploadResult.error) {
-        return { success: false, message: `Thumbnail upload failed: ${uploadResult.error}` };
+      const uploadResult = await processAndUploadImage({
+          bucketName: THUMBNAIL_BUCKET,
+          file: thumbnailFile,
+          upsert: true // upsert = true for update
+      });
+      if (uploadResult.error || !uploadResult.path) {
+        console.error({ error: uploadResult.error }, 'Thumbnail processing/upload failed during update');
+        return { success: false, message: `Thumbnail update failed: ${uploadResult.error || 'Unknown upload error'}` };
       }
-      uploadedThumbnailPath = uploadResult.path!;
+      uploadedThumbnailPath = uploadResult.path;
       uploadedFilesForRollback.push({ bucket: THUMBNAIL_BUCKET, path: uploadedThumbnailPath });
       newThumbnailPath = uploadedThumbnailPath;
       thumbnailPathChanged = oldThumbnailPath !== newThumbnailPath;
@@ -83,10 +89,15 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     // 3. Upload NEW Hero Image if provided
     if (heroFile && heroFile.size > 0) {
       console.log(`Processing hero image replacement for category: ${name}`);
-      const uploadResult = await uploadAndConvertToWebp(HERO_BUCKET, heroFile, true); // upsert = true
-      if (uploadResult.error) {
+      const uploadResult = await processAndUploadImage({
+          bucketName: HERO_BUCKET,
+          file: heroFile,
+          upsert: true // upsert = true for update
+      });
+      if (uploadResult.error || !uploadResult.path) {
+        console.error({ error: uploadResult.error }, 'Hero image processing/upload failed during update');
         await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if it was uploaded
-        return { success: false, message: `Hero image upload failed: ${uploadResult.error}` };
+        return { success: false, message: `Hero image update failed: ${uploadResult.error || 'Unknown upload error'}` };
       }
       uploadedHeroPath = uploadResult.path!;
       uploadedFilesForRollback.push({ bucket: HERO_BUCKET, path: uploadedHeroPath });
@@ -133,11 +144,11 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     const deletePromises = [];
     if (thumbnailPathChanged && oldThumbnailPath) {
       console.log(`Queueing deletion of old thumbnail: ${oldThumbnailPath}`);
-      deletePromises.push(deleteStorageFile(THUMBNAIL_BUCKET, oldThumbnailPath));
+      deletePromises.push(deleteStorageFile({ bucketName: THUMBNAIL_BUCKET, filePath: oldThumbnailPath }));
     }
     if (heroPathChanged && oldHeroPath) {
       console.log(`Queueing deletion of old hero image: ${oldHeroPath}`);
-      deletePromises.push(deleteStorageFile(HERO_BUCKET, oldHeroPath));
+      deletePromises.push(deleteStorageFile({ bucketName: HERO_BUCKET, filePath: oldHeroPath }));
     }
 
     if (deletePromises.length > 0) {
@@ -170,7 +181,7 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 async function rollbackUploads(files: { bucket: string; path: string }[]) {
   if (files.length === 0) return;
   console.log(`Rolling back ${files.length} uploads...`);
-  const deletionPromises = files.map(file => deleteStorageFile(file.bucket, file.path));
+  const deletionPromises = files.map(file => deleteStorageFile({ bucketName: file.bucket, filePath: file.path }));
   const results = await Promise.allSettled(deletionPromises);
   results.forEach((result, index) => {
     if (result.status === 'rejected') {
