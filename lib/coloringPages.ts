@@ -75,7 +75,7 @@ export async function getColoringPagesByCategorySlug(categorySlug: string): Prom
     // 5: Query coloring_pages table for image details
     const { data: coloringPagesData, error: coloringPagesError } = await supabase
       .from(Constants.COLORING_PAGES_TABLE) // <-- Use constant
-      .select('id, title, description, image_url, created_at')
+      .select('id, title, description, image_url, created_at, webp_image_url')
       .in('id', coloringPageIds);
 
     if (coloringPagesError) {

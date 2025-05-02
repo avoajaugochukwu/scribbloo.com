@@ -4,11 +4,17 @@ import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 import { Constants } from '@/config/constants'; // Import constants
 import Category from '@/types/category.type'; // Use your specific Category type path
-// Import shared helpers
-import { processAndUploadImage, deleteStorageFile } from '@/lib/storageUtils';
+// Import the new specific functions
+import {
+    generateStoragePath,
+    convertImageToWebpBuffer,
+    uploadBufferToStorage,
+    deleteStorageFile
+} from '@/lib/storageUtils';
 import { generateSlug } from '@/lib/utils'; // Assuming slugify is also in utils or import from storageUtils
 import logger from '@/lib/logger'; // Import logger
 
+const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE;
 const THUMBNAIL_BUCKET = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_NAME;
 const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;
 
@@ -47,13 +53,14 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
   let thumbnailPathChanged = false;
   let heroPathChanged = false;
   const uploadedFilesForRollback: { bucket: string; path: string }[] = [];
+  const log = logger.child({ action: 'updateCategory', categoryId }); // Add logger context
 
   try {
-    // 1. Fetch current category data (both image paths)
-    console.log(`Fetching current data for category ID: ${categoryId}`);
+    // 1. Fetch current category data (both image paths AND slug)
+    log.info(`Fetching current data`);
     const { data: currentCategory, error: fetchError } = await supabase
-      .from(Constants.CATEGORIES_TABLE)
-      .select('name, description, thumbnail_image, hero_image')
+      .from(CATEGORIES_TABLE)
+      .select('name, slug, description, thumbnail_image, hero_image')
       .eq('id', categoryId)
       .single();
 
@@ -65,127 +72,177 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
     oldHeroPath = currentCategory.hero_image;
     newThumbnailPath = oldThumbnailPath; // Initialize with old paths
     newHeroPath = oldHeroPath;
-    console.log(`Old paths - Thumbnail: ${oldThumbnailPath}, Hero: ${oldHeroPath}`);
+    log.info({ oldThumbnail: oldThumbnailPath, oldHero: oldHeroPath }, 'Old paths fetched');
 
     // 2. Upload NEW Thumbnail if provided
     if (thumbnailFile && thumbnailFile.size > 0) {
-      console.log(`Processing thumbnail replacement for category: ${name}`);
-      const uploadResult = await processAndUploadImage({
-          bucketName: THUMBNAIL_BUCKET,
-          file: thumbnailFile,
-          upsert: true // upsert = true for update
-      });
-      if (uploadResult.error || !uploadResult.path) {
-        console.error({ error: uploadResult.error }, 'Thumbnail processing/upload failed during update');
-        return { success: false, message: `Thumbnail update failed: ${uploadResult.error || 'Unknown upload error'}` };
+      log.debug(`Processing thumbnail replacement`);
+      // 2a. Generate WebP path
+      const { storagePath: thumbWebpPath } = generateStoragePath({ originalFileName: thumbnailFile.name, asWebp: true });
+      log.info({ path: thumbWebpPath }, 'Generated thumbnail WebP path');
+
+      // 2b. Convert to WebP buffer
+      const thumbBuffer = await thumbnailFile.arrayBuffer();
+      const thumbConversionResult = await convertImageToWebpBuffer({ fileBuffer: thumbBuffer });
+      if (thumbConversionResult.error || !thumbConversionResult.webpBuffer) {
+        log.error({ error: thumbConversionResult.error }, 'Thumbnail WebP conversion failed');
+        return { success: false, message: `Thumbnail update failed: ${thumbConversionResult.error || 'Conversion error'}` };
       }
-      uploadedThumbnailPath = uploadResult.path;
+      log.info('Thumbnail converted to WebP buffer');
+
+      // 2c. Upload WebP buffer (upsert=true)
+      const thumbUploadResult = await uploadBufferToStorage({
+        bucketName: THUMBNAIL_BUCKET,
+        storagePath: thumbWebpPath,
+        buffer: thumbConversionResult.webpBuffer,
+        contentType: 'image/webp',
+        upsert: true
+      });
+      if (thumbUploadResult.error || !thumbUploadResult.path) {
+        log.error({ error: thumbUploadResult.error }, 'Thumbnail WebP upload failed');
+        // No rollback needed yet as this is the first potential upload
+        return { success: false, message: `Thumbnail update failed: ${thumbUploadResult.error || 'Upload error'}` };
+      }
+      uploadedThumbnailPath = thumbUploadResult.path; // Store the actual path returned/used
       uploadedFilesForRollback.push({ bucket: THUMBNAIL_BUCKET, path: uploadedThumbnailPath });
       newThumbnailPath = uploadedThumbnailPath;
       thumbnailPathChanged = oldThumbnailPath !== newThumbnailPath;
-      console.log(`New thumbnail uploaded: ${newThumbnailPath}. Path changed: ${thumbnailPathChanged}`);
+      log.info({ path: newThumbnailPath, changed: thumbnailPathChanged }, 'New thumbnail processed');
     }
 
     // 3. Upload NEW Hero Image if provided
     if (heroFile && heroFile.size > 0) {
-      console.log(`Processing hero image replacement for category: ${name}`);
-      const uploadResult = await processAndUploadImage({
-          bucketName: HERO_BUCKET,
-          file: heroFile,
-          upsert: true // upsert = true for update
-      });
-      if (uploadResult.error || !uploadResult.path) {
-        console.error({ error: uploadResult.error }, 'Hero image processing/upload failed during update');
-        await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if it was uploaded
-        return { success: false, message: `Hero image update failed: ${uploadResult.error || 'Unknown upload error'}` };
+      log.debug(`Processing hero image replacement`);
+      // 3a. Generate WebP path
+      const { storagePath: heroWebpPath } = generateStoragePath({ originalFileName: heroFile.name, asWebp: true });
+      log.info({ path: heroWebpPath }, 'Generated hero WebP path');
+
+      // 3b. Convert to WebP buffer
+      const heroBuffer = await heroFile.arrayBuffer();
+      const heroConversionResult = await convertImageToWebpBuffer({ fileBuffer: heroBuffer });
+      if (heroConversionResult.error || !heroConversionResult.webpBuffer) {
+        log.error({ error: heroConversionResult.error }, 'Hero WebP conversion failed');
+        await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if uploaded
+        return { success: false, message: `Hero image update failed: ${heroConversionResult.error || 'Conversion error'}` };
       }
-      uploadedHeroPath = uploadResult.path!;
+      log.info('Hero converted to WebP buffer');
+
+      // 3c. Upload WebP buffer (upsert=true)
+      const heroUploadResult = await uploadBufferToStorage({
+        bucketName: HERO_BUCKET,
+        storagePath: heroWebpPath,
+        buffer: heroConversionResult.webpBuffer,
+        contentType: 'image/webp',
+        upsert: true
+      });
+      if (heroUploadResult.error || !heroUploadResult.path) {
+        log.error({ error: heroUploadResult.error }, 'Hero WebP upload failed');
+        await rollbackUploads(uploadedFilesForRollback); // Rollback thumbnail if uploaded
+        return { success: false, message: `Hero image update failed: ${heroUploadResult.error || 'Upload error'}` };
+      }
+      uploadedHeroPath = heroUploadResult.path;
       uploadedFilesForRollback.push({ bucket: HERO_BUCKET, path: uploadedHeroPath });
       newHeroPath = uploadedHeroPath;
       heroPathChanged = oldHeroPath !== newHeroPath;
-      console.log(`New hero image uploaded: ${newHeroPath}. Path changed: ${heroPathChanged}`);
+      log.info({ path: newHeroPath, changed: heroPathChanged }, 'New hero image processed');
     }
 
-    // 4. Update category record in database
-    const categorySlug = generateSlug(name);
-    const updateData = {
-      name: name,
-      slug: categorySlug,
-      description: description,
-      thumbnail_image: newThumbnailPath, // Use potentially new thumbnail path
-      hero_image: newHeroPath,          // Use potentially new hero path
-      // Add other fields as necessary
-    };
+    // 4. Generate Slug (if name changed)
+    let newSlug = currentCategory.slug; // Assume slug doesn't change initially
+    if (name && name !== currentCategory.name) {
+      log.info('Name changed, generating new slug');
+      newSlug = generateSlug(name);
+    }
 
-    // Only update if something actually changed (metadata or images)
-    const hasChanges = name !== currentCategory.name ||
-                       description !== currentCategory.description ||
-                       thumbnailPathChanged ||
-                       heroPathChanged;
+    // 5. Prepare DB Update Payload
+    const updatePayload: Partial<Category> = {};
+    let needsDbUpdate = false;
 
-    if (hasChanges) { // Optional: Check if any data actually changed before updating DB
-      console.log(`Updating category ${categoryId} with data:`, updateData);
+    if (name && name !== currentCategory.name) {
+      updatePayload.name = name;
+      updatePayload.slug = newSlug; // Update slug if name changed
+      needsDbUpdate = true;
+    }
+    if (description && description !== currentCategory.description) {
+      updatePayload.description = description;
+      needsDbUpdate = true;
+    }
+    if (thumbnailPathChanged && newThumbnailPath) { // Check path is not null
+      updatePayload.thumbnail_image = newThumbnailPath;
+      needsDbUpdate = true;
+    }
+    if (heroPathChanged && newHeroPath) { // Check path is not null
+      updatePayload.hero_image = newHeroPath;
+      needsDbUpdate = true;
+    }
+
+    // 6. Update Database if necessary
+    if (needsDbUpdate) {
+      log.info({ payload: updatePayload }, 'Updating category record in database');
       const { error: updateError } = await supabase
-        .from(Constants.CATEGORIES_TABLE)
-        .update(updateData)
+        .from(CATEGORIES_TABLE)
+        .update(updatePayload)
         .eq('id', categoryId);
 
       if (updateError) {
-        console.error('Error updating category record:', updateError);
+        log.error({ error: updateError }, 'Database update failed');
         await rollbackUploads(uploadedFilesForRollback); // Rollback any new uploads
-        return { success: false, message: `Database update error: ${updateError.message}` };
+        return { success: false, message: `Database update failed: ${updateError.message}` };
       }
-      console.log('Database record updated successfully.');
+      log.info('Database record updated successfully.');
     } else {
-       console.log("No changes detected in category data or images. Skipping database update.");
+      log.info('No changes detected for database update.');
     }
 
-    // 5. Delete OLD images from storage ONLY IF their paths changed
-    const deletePromises = [];
+    // 7. Delete OLD files AFTER successful DB update
+    const deleteOldPromises = [];
     if (thumbnailPathChanged && oldThumbnailPath) {
-      console.log(`Queueing deletion of old thumbnail: ${oldThumbnailPath}`);
-      deletePromises.push(deleteStorageFile({ bucketName: THUMBNAIL_BUCKET, filePath: oldThumbnailPath }));
+      log.info(`Queueing deletion of old thumbnail: ${oldThumbnailPath}`);
+      deleteOldPromises.push(deleteStorageFile({ bucketName: THUMBNAIL_BUCKET, filePath: oldThumbnailPath }));
     }
     if (heroPathChanged && oldHeroPath) {
-      console.log(`Queueing deletion of old hero image: ${oldHeroPath}`);
-      deletePromises.push(deleteStorageFile({ bucketName: HERO_BUCKET, filePath: oldHeroPath }));
+      log.info(`Queueing deletion of old hero image: ${oldHeroPath}`);
+      deleteOldPromises.push(deleteStorageFile({ bucketName: HERO_BUCKET, filePath: oldHeroPath }));
     }
 
-    if (deletePromises.length > 0) {
-      const results = await Promise.allSettled(deletePromises);
-      results.forEach((result, index) => {
-        if (result.status === 'rejected') {
-          const pathAttempted = (index === 0 && thumbnailPathChanged && oldThumbnailPath) ? oldThumbnailPath : oldHeroPath;
-          console.warn(`Failed to delete old storage file ${pathAttempted}: ${result.reason}`);
-        }
-      });
+    if (deleteOldPromises.length > 0) {
+      log.info(`Attempting deletion of ${deleteOldPromises.length} old storage file(s)...`);
+      await Promise.allSettled(deleteOldPromises);
+      // deleteStorageFile logs results internally
     }
 
-    // 6. Revalidate paths
-    console.log(`Category "${name}" (ID: ${categoryId}) processed successfully.`);
-    revalidatePath('/admin/categories');
-    revalidatePath(`/admin/categories/edit/${categoryId}`);
+    // 8. Revalidate Paths
+    log.info('Revalidating paths...');
+    revalidatePath('/admin/categories', 'layout');
     revalidatePath('/admin');
+    if (newSlug) {
+      revalidatePath(`/coloring-pages/${newSlug}`); // Revalidate specific category page if slug exists
+    }
+    revalidatePath('/coloring-pages', 'layout'); // Revalidate main listing
 
-    return { success: true, message: `Category "${name}" updated successfully.` };
+    return { success: true, message: 'Category updated successfully.' };
 
   } catch (err: any) {
-    console.error(`Unexpected error updating category ${categoryId}:`, err);
-    await rollbackUploads(uploadedFilesForRollback); // Attempt rollback on unexpected errors
+    log.error({ error: err }, 'Unexpected error updating category');
+    await rollbackUploads(uploadedFilesForRollback); // Attempt cleanup on unexpected error
     const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
     return { success: false, message };
   }
 }
 
-// Helper function for rolling back uploads (can be shared or duplicated)
+// Helper function for rolling back uploads (keep as is, uses deleteStorageFile)
 async function rollbackUploads(files: { bucket: string; path: string }[]) {
   if (files.length === 0) return;
-  console.log(`Rolling back ${files.length} uploads...`);
-  const deletionPromises = files.map(file => deleteStorageFile({ bucketName: file.bucket, filePath: file.path }));
+  const log = logger.child({ function: 'rollbackUploads', context: 'updateCategory' });
+  log.warn(`Rolling back ${files.length} uploads...`);
+
+  const deletionPromises = files.map(file =>
+      deleteStorageFile({ bucketName: file.bucket, filePath: file.path })
+  );
   const results = await Promise.allSettled(deletionPromises);
   results.forEach((result, index) => {
     if (result.status === 'rejected') {
-      console.warn(`Failed to rollback upload for ${files[index].bucket}/${files[index].path}:`, result.reason);
+      log.warn({ path: `${files[index].bucket}/${files[index].path}`, reason: result.reason }, `Failed to rollback upload`);
     }
   });
 }

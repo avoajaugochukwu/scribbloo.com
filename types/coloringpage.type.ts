@@ -4,6 +4,7 @@ type ColoringPage = {
   description: string | null;
   image_url: string;
   created_at: string; // timestamp with time zone is typically string
+  webp_image_url: string | null;
 }
 
 export default ColoringPage;

@@ -13,6 +13,8 @@ interface ColoringPageImageProps {
 
 export default function ColoringPageImage({ coloringPage, categoryName }: ColoringPageImageProps) {
   const imageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.image_url;
+  const webpImageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.webp_image_url;
+  console.log('webpImageUrl', webpImageUrl);
   const baseFilename = coloringPage.title
     ? coloringPage.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';
@@ -26,7 +28,7 @@ export default function ColoringPageImage({ coloringPage, categoryName }: Colori
       <div className="relative">
         {coloringPage.image_url ? (
           <Image
-            src={imageUrl}
+            src={webpImageUrl}
             alt={`${coloringPage.description} coloring page in ${categoryName}`}
             width={300}
             height={300}

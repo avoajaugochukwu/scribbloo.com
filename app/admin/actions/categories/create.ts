@@ -3,7 +3,12 @@
 import { supabase } from '@/lib/supabaseClient';
 import { revalidatePath } from 'next/cache';
 import { Constants } from '@/config/constants'; // Import constants
-import { processAndUploadImage, deleteStorageFile } from '@/lib/storageUtils'; // Import shared helpers
+import {
+    generateStoragePath,
+    convertImageToWebpBuffer,
+    uploadBufferToStorage,
+    deleteStorageFile
+} from '@/lib/storageUtils'; // Import shared helpers
 import { generateSlug } from '@/lib/utils'; // Assuming slugify is also in utils or import from storageUtils
 import logger from '@/lib/logger'; // Import logger
 
@@ -11,6 +16,8 @@ import logger from '@/lib/logger'; // Import logger
 // If using the same bucket, ensure filenames don't clash (slugs help here)
 const THUMBNAIL_BUCKET = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_NAME; // e.g., 'category-thumbnails'
 const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;          // e.g., 'category-hero-images'
+
+const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE;
 
 /**
  * Creates a new category with uploaded images using shared helpers.
@@ -42,104 +49,118 @@ export async function createCategory(formData: FormData): Promise<{ success: boo
   }
   // --- End Validation ---
 
-  const categorySlug = generateSlug(name);
   let thumbnailPath: string | null = null;
   let heroPath: string | null = null;
   const uploadedFiles: { bucket: string; path: string }[] = []; // Track uploads for rollback
 
+  // --- Rollback Function ---
+  const performRollback = async (step: string, errorDetails: any) => {
+    log.error({ step, error: errorDetails }, `Error during ${step}, performing rollback.`);
+    if (uploadedFiles.length > 0) {
+      log.warn({ count: uploadedFiles.length }, 'Attempting storage file rollback');
+      const deletePromises = uploadedFiles.map(file =>
+        deleteStorageFile({ bucketName: file.bucket, filePath: file.path })
+      );
+      await Promise.allSettled(deletePromises);
+    }
+    const message = errorDetails instanceof Error ? errorDetails.message : String(errorDetails);
+    return { success: false, message: `Failed during ${step}: ${message}` };
+  };
+  // --- End Rollback Function ---
+
   try {
-    // 1. Process and Upload Thumbnail Image (if provided)
+    // 1. Upload Thumbnail (if provided)
     if (thumbnailFile && thumbnailFile.size > 0) {
-      log.debug('Processing thumbnail file');
-      const uploadResult = await processAndUploadImage({
-        bucketName: THUMBNAIL_BUCKET,
-        file: thumbnailFile,
-        upsert: false // Don't overwrite on create
-      });
-      if (uploadResult.error || !uploadResult.path) {
-        log.error({ error: uploadResult.error }, 'Thumbnail processing/upload failed');
-        return { success: false, message: `Thumbnail upload failed: ${uploadResult.error || 'Unknown upload error'}` };
+      log.debug('Processing thumbnail');
+      // 1a. Generate Path
+      const { storagePath: thumbWebpPath } = generateStoragePath({ originalFileName: thumbnailFile.name, asWebp: true });
+      log.info({ path: thumbWebpPath }, 'Generated thumbnail WebP path');
+      // 1b. Convert
+      const thumbBuffer = await thumbnailFile.arrayBuffer();
+      const thumbConversionResult = await convertImageToWebpBuffer({ fileBuffer: thumbBuffer });
+      if (thumbConversionResult.error || !thumbConversionResult.webpBuffer) {
+        return await performRollback('Thumbnail Conversion', thumbConversionResult.error || 'Conversion failed');
       }
-      thumbnailPath = uploadResult.path;
+      log.info('Thumbnail converted to WebP buffer');
+      // 1c. Upload (upsert=false for create)
+      const thumbUploadResult = await uploadBufferToStorage({
+        bucketName: THUMBNAIL_BUCKET,
+        storagePath: thumbWebpPath,
+        buffer: thumbConversionResult.webpBuffer,
+        contentType: 'image/webp',
+        upsert: false
+      });
+      if (thumbUploadResult.error || !thumbUploadResult.path) {
+        return await performRollback('Thumbnail Upload', thumbUploadResult.error || 'Upload error');
+      }
+      thumbnailPath = thumbUploadResult.path;
       uploadedFiles.push({ bucket: THUMBNAIL_BUCKET, path: thumbnailPath });
       log.info({ path: thumbnailPath }, 'Thumbnail uploaded successfully');
     }
 
-    // 2. Process and Upload Hero Image (if provided)
+    // 2. Upload Hero Image (if provided)
     if (heroFile && heroFile.size > 0) {
-      log.debug('Processing hero file');
-      const uploadResult = await processAndUploadImage({
+      log.debug('Processing hero image');
+      // 2a. Generate Path
+      const { storagePath: heroWebpPath } = generateStoragePath({ originalFileName: heroFile.name, asWebp: true });
+      log.info({ path: heroWebpPath }, 'Generated hero WebP path');
+      // 2b. Convert
+      const heroBuffer = await heroFile.arrayBuffer();
+      const heroConversionResult = await convertImageToWebpBuffer({ fileBuffer: heroBuffer });
+      if (heroConversionResult.error || !heroConversionResult.webpBuffer) {
+        return await performRollback('Hero Conversion', heroConversionResult.error || 'Conversion failed');
+      }
+      log.info('Hero converted to WebP buffer');
+      // 2c. Upload (upsert=false for create)
+      const heroUploadResult = await uploadBufferToStorage({
         bucketName: HERO_BUCKET,
-        file: heroFile,
+        storagePath: heroWebpPath,
+        buffer: heroConversionResult.webpBuffer,
+        contentType: 'image/webp',
         upsert: false
       });
-      if (uploadResult.error || !uploadResult.path) {
-        log.error({ error: uploadResult.error }, 'Hero image processing/upload failed');
-        await rollbackUploads(uploadedFiles); // Rollback thumbnail
-        return { success: false, message: `Hero image upload failed: ${uploadResult.error || 'Unknown upload error'}` };
+      if (heroUploadResult.error || !heroUploadResult.path) {
+        return await performRollback('Hero Upload', heroUploadResult.error || 'Upload error');
       }
-      heroPath = uploadResult.path;
+      heroPath = heroUploadResult.path;
       uploadedFiles.push({ bucket: HERO_BUCKET, path: heroPath });
       log.info({ path: heroPath }, 'Hero image uploaded successfully');
     }
 
-    // 3. Create category record in database with separate paths
-    const dbPayload = {
-      name: name,
-      slug: categorySlug,
-      description: description,
-      thumbnail_image: thumbnailPath, // Save specific thumbnail path
-      hero_image: heroPath,          // Save specific hero path
-      // Add other fields as necessary
-    };
-    log.info({ payload: dbPayload }, 'Inserting category into database');
-    const { error: insertError } = await supabase
-      .from(Constants.CATEGORIES_TABLE)
-      .insert(dbPayload);
+    // 3. Generate Slug
+    const categorySlug = generateSlug(name);
+    log.info({ slug: categorySlug }, 'Generated slug');
 
-    if (insertError) {
-      log.error({ error: insertError }, 'Database insert failed');
-      await rollbackUploads(uploadedFiles); // Rollback both uploads
-      // Check for specific DB errors like unique constraints if needed
-      if (insertError.code === '23505') { // Example: unique constraint violation
-        return { success: false, message: `Category with slug "${categorySlug}" might already exist.` };
-      }
-      return { success: false, message: `Database error: ${insertError.message}` };
+    // 4. Insert into Database
+    log.info('Inserting category into database...');
+    const { data: insertData, error: insertError } = await supabase
+      .from(CATEGORIES_TABLE)
+      .insert({
+        name,
+        slug: categorySlug,
+        description,
+        thumbnail_image: thumbnailPath, // Use the path from upload step
+        hero_image: heroPath,         // Use the path from upload step
+        // Add other fields like seo_title etc. if needed, ensure they are handled in the form
+      })
+      .select('id') // Select the ID of the newly created record
+      .single();
+
+    if (insertError || !insertData) {
+      return await performRollback('Database Insert', insertError || 'Failed to get ID');
     }
+    log.info({ categoryId: insertData.id }, 'Category inserted successfully');
 
-    // 4. Revalidate paths
-    log.info('Category created successfully, revalidating paths');
-    revalidatePath('/admin/categories');
+    // 5. Revalidate Paths
+    log.info('Revalidating paths...');
+    revalidatePath('/admin/categories', 'layout');
     revalidatePath('/admin');
+    revalidatePath('/coloring-pages', 'layout');
 
-    return { success: true, message: `Category "${name}" created successfully.` };
+    return { success: true, message: 'Category created successfully.' };
 
   } catch (err: any) {
-    log.error({ error: err }, 'Unexpected error during category creation');
-    await rollbackUploads(uploadedFiles); // Attempt rollback
-    const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
-    return { success: false, message };
+    log.error({ error: err }, 'Unexpected error creating category');
+    return await performRollback('Unexpected Error', err);
   }
-}
-
-// Helper function for rolling back uploads
-async function rollbackUploads(files: { bucket: string; path: string }[]) {
-  if (files.length === 0) return;
-  const log = logger.child({ function: 'rollbackUploads' });
-  log.warn(`Rolling back ${files.length} uploads...`);
-
-  const deletionPromises = files.map(file =>
-    deleteStorageFile({ bucketName: file.bucket, filePath: file.path }) // Use object param
-  );
-
-  const results = await Promise.allSettled(deletionPromises);
-  results.forEach((result, index) => {
-    if (result.status === 'rejected') {
-      // The error is already logged within deleteStorageFile, but we can add context here
-      log.warn({ file: files[index], reason: (result as PromiseRejectedResult).reason }, `Failed to rollback upload`);
-    } else if (result.status === 'fulfilled' && !result.value.success) {
-      // Log if deleteStorageFile returned success: false but didn't throw
-      log.warn({ file: files[index], error: result.value.error }, `Rollback attempt for file failed`);
-    }
-  });
 } 
