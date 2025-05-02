@@ -23,17 +23,22 @@ const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;
  */
 export async function updateCategory(formData: FormData): Promise<{ success: boolean; message: string }> {
   const categoryId = formData.get('categoryId')?.toString();
-  const name = formData.get('name')?.toString().trim();
+  const name = formData.get('categoryName')?.toString().trim();
   const description = formData.get('description')?.toString().trim();
   // Expect two separate potential new files
   const thumbnailFile = formData.get('thumbnailFile') as File | null;
   const heroFile = formData.get('heroFile') as File | null;
 
+  const log = logger.child({ action: 'updateCategory', categoryId }); // Add logger context
+  log.debug({ formDataEntries: Object.fromEntries(formData.entries()) }, 'Received form data for update');
+
   // --- Validation ---
   if (!categoryId) {
+    log.warn('Validation failed: Category ID is missing.');
     return { success: false, message: 'Category ID is missing.' };
   }
   if (!name) {
+    log.warn('Validation failed: Category name is required.');
     return { success: false, message: 'Category name is required.' };
   }
   if (thumbnailFile && thumbnailFile.size > 0 && !thumbnailFile.type.startsWith('image/')) {
@@ -53,7 +58,6 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
   let thumbnailPathChanged = false;
   let heroPathChanged = false;
   const uploadedFilesForRollback: { bucket: string; path: string }[] = [];
-  const log = logger.child({ action: 'updateCategory', categoryId }); // Add logger context
 
   try {
     // 1. Fetch current category data (both image paths AND slug)
@@ -156,45 +160,41 @@ export async function updateCategory(formData: FormData): Promise<{ success: boo
 
     // 5. Prepare DB Update Payload
     const updatePayload: Partial<Category> = {};
-    let needsDbUpdate = false;
 
+    // Always include name/slug if changed
     if (name && name !== currentCategory.name) {
       updatePayload.name = name;
-      updatePayload.slug = newSlug; // Update slug if name changed
-      needsDbUpdate = true;
+      updatePayload.slug = newSlug;
     }
-    if (description && description !== currentCategory.description) {
-      updatePayload.description = description;
-      needsDbUpdate = true;
+    // Always include description if changed (handle null)
+    if (description !== currentCategory.description) {
+        updatePayload.description = description || null;
     }
-    if (thumbnailPathChanged && newThumbnailPath) { // Check path is not null
-      updatePayload.thumbnail_image = newThumbnailPath;
-      needsDbUpdate = true;
+    // Always include thumbnail path if a new thumbnail was successfully uploaded
+    if (uploadedThumbnailPath) {
+        updatePayload.thumbnail_image = newThumbnailPath; // Use newThumbnailPath which holds the final path
     }
-    if (heroPathChanged && newHeroPath) { // Check path is not null
-      updatePayload.hero_image = newHeroPath;
-      needsDbUpdate = true;
+    // Always include hero path if a new hero image was successfully uploaded
+    if (uploadedHeroPath) {
+        updatePayload.hero_image = newHeroPath; // Use newHeroPath which holds the final path
     }
 
-    // 6. Update Database if necessary
-    if (needsDbUpdate) {
-      log.info({ payload: updatePayload }, 'Updating category record in database');
-      const { error: updateError } = await supabase
+    // 6. Update Database (Always attempt the update)
+    log.info({ payload: updatePayload }, 'Updating category record in database');
+    const { error: updateError } = await supabase
         .from(CATEGORIES_TABLE)
-        .update(updatePayload)
+        .update(updatePayload) // Pass the payload, even if potentially empty
         .eq('id', categoryId);
 
-      if (updateError) {
+    if (updateError) {
         log.error({ error: updateError }, 'Database update failed');
         await rollbackUploads(uploadedFilesForRollback); // Rollback any new uploads
         return { success: false, message: `Database update failed: ${updateError.message}` };
-      }
-      log.info('Database record updated successfully.');
-    } else {
-      log.info('No changes detected for database update.');
     }
+    log.info('Database record updated successfully.');
 
     // 7. Delete OLD files AFTER successful DB update
+    // This logic remains the same - only delete the OLD file if the NEW file has a DIFFERENT path.
     const deleteOldPromises = [];
     if (thumbnailPathChanged && oldThumbnailPath) {
       log.info(`Queueing deletion of old thumbnail: ${oldThumbnailPath}`);
@@ -251,12 +251,14 @@ async function rollbackUploads(files: { bucket: string; path: string }[]) {
  * Fetches a single category for editing.
  */
 export async function getCategoryForEdit(categoryId: string): Promise<Category | null> {
+    const log = logger.child({ action: 'getCategoryForEdit', categoryId });
+    
     if (!categoryId) {
-        console.log("getCategoryForEdit called with no categoryId.");
+        log.warn('Called with no categoryId');
         return null;
     }
 
-    console.log(`getCategoryForEdit: Fetching category with ID: ${categoryId}`);
+    log.info('Fetching category data');
 
     try {
         const { data, error } = await supabase
@@ -277,20 +279,20 @@ export async function getCategoryForEdit(categoryId: string): Promise<Category |
             .single();
 
         if (error) {
-            console.error(`Error fetching category ${categoryId} for edit:`, error.message);
+            log.error({ error }, 'Error fetching category data');
             return null;
         }
 
         if (!data) {
-             console.log(`getCategoryForEdit: No data found for category ID: ${categoryId}`);
-             return null;
+            log.warn('No data found for category');
+            return null;
         }
 
-        console.log(`getCategoryForEdit: Successfully fetched data for category ID: ${categoryId}`);
+        log.info('Successfully fetched category data');
         return data;
 
     } catch (err) {
-        console.error(`Unexpected error fetching category ${categoryId}:`, err);
+        log.error({ error: err }, 'Unexpected error fetching category');
         return null;
     }
 }

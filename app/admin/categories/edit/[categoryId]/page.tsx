@@ -111,7 +111,7 @@ export default function EditCategoryPage() {
         const trimmedDesc = description.trim();
         const trimmedSeoTitle = seoTitle.trim();
         const trimmedSeoDesc = seoDescription.trim();
-        const trimmedSeoMetaDesc = seoMetaDescription.trim(); // <-- Trim new field
+        const trimmedSeoMetaDesc = seoMetaDescription.trim();
 
         // Add trimmedSeoMetaDesc to validation if required
         if (!trimmedName || !trimmedDesc || !trimmedSeoTitle || !trimmedSeoDesc /* || !trimmedSeoMetaDesc */) {
@@ -126,14 +126,14 @@ export default function EditCategoryPage() {
         formData.append('description', trimmedDesc);
         formData.append('seoTitle', trimmedSeoTitle);
         formData.append('seoDescription', trimmedSeoDesc);
-        formData.append('seoMetaDescription', trimmedSeoMetaDesc); // <-- Append new field
+        formData.append('seoMetaDescription', trimmedSeoMetaDesc);
 
         // --- Append NEW Files ONLY if they exist ---
         if (newHeroImageFile) {
-            formData.append('heroImageFile', newHeroImageFile);
+            formData.append('heroFile', newHeroImageFile);
         }
         if (newThumbnailImageFile) {
-            formData.append('thumbnailImageFile', newThumbnailImageFile);
+            formData.append('thumbnailFile', newThumbnailImageFile);
         }
         // --- End Append Files ---
 
