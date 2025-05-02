@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient';
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import sharp from 'sharp'; // Make sure sharp is installed (npm install sharp)
 
 // Helper function to create a URL-safe slug
 function slugify(text: string): string {
@@ -88,6 +89,74 @@ export async function uploadStorageFile(
     } catch (err: any) {
         console.error('Unexpected error during file upload:', err);
         const message = err instanceof Error ? err.message : 'An unexpected error occurred during upload.';
+        return { error: message };
+    }
+}
+
+/**
+ * Uploads an image file to Supabase Storage, converting it to WebP format first.
+ * Uses a slugified filename based on the original file name.
+ *
+ * @param bucketName The name of the Supabase Storage bucket.
+ * @param file The image file object to upload and convert.
+ * @param upsert Optional. If true, overwrites the file if it already exists. Defaults to false.
+ * @returns An object containing the path (the generated .webp filename) or an error.
+ */
+export async function uploadAndConvertToWebp(
+    bucketName: string,
+    file: File,
+    upsert: boolean = false
+): Promise<{ path?: string; error?: string | null }> {
+    try {
+        if (!file || file.size === 0) {
+            return { error: 'File is empty or missing.' };
+        }
+        if (!file.type.startsWith('image/')) {
+            return { error: 'Invalid file type. Only images are allowed.' };
+        }
+
+        // Generate base slug from original filename (without extension)
+        const baseName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+        const slugifiedBaseName = slugify(baseName);
+        const webpFileName = `${slugifiedBaseName}.webp`; // Target filename
+
+        console.log(`Converting "${file.name}" to WebP as "${webpFileName}" for bucket "${bucketName}"`);
+
+        // Convert image to WebP buffer using sharp
+        const fileBuffer = await file.arrayBuffer();
+        const webpBuffer = await sharp(fileBuffer)
+            .webp({ quality: 80 }) // Adjust quality as needed
+            .toBuffer();
+
+        console.log(`Uploading "${webpFileName}" to bucket "${bucketName}" with upsert: ${upsert}`);
+
+        // Upload the WebP buffer
+        const { data, error } = await supabase.storage
+            .from(bucketName)
+            .upload(webpFileName, webpBuffer, {
+                cacheControl: '3600',
+                upsert: upsert,
+                contentType: 'image/webp', // Set content type explicitly
+            });
+
+        if (error) {
+            console.error(`Storage upload error (${bucketName}, ${webpFileName}):`, error);
+             if (!upsert && (error.message.includes('Duplicate') || error.message.includes('already exists'))) {
+                  return { error: `Filename "${webpFileName}" already exists. Please rename the file or enable overwriting.` };
+             }
+            return { error: `Storage upload failed: ${error.message}` };
+        }
+
+        if (!data?.path) {
+             return { error: 'Upload successful but no path returned from Supabase.' };
+        }
+
+        console.log(`WebP file uploaded successfully. Path: ${data.path}`);
+        return { path: data.path }; // Should match webpFileName
+
+    } catch (err: any) {
+        console.error('Error during image conversion or upload:', err);
+        const message = err instanceof Error ? err.message : 'An unexpected error occurred during image processing.';
         return { error: message };
     }
 }

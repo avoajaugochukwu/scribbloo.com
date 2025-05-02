@@ -6,6 +6,10 @@ import { revalidatePath } from 'next/cache';
 import { deleteStorageFile } from '@/lib/storageUtils';
 import { Constants } from '@/config/constants';
 
+const CATEGORIES_TABLE = Constants.CATEGORIES_TABLE;
+const THUMBNAIL_BUCKET = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_NAME;
+const HERO_BUCKET = Constants.SUPABASE_HERO_IMAGES_BUCKET_NAME;
+
 /**
  * Deletes a category from the database.
  */
@@ -14,86 +18,82 @@ export async function deleteCategory(categoryId: string): Promise<{ success: boo
         return { success: false, message: 'Category ID is required.' };
     }
 
-    // Define bucket names
-    const heroBucket = Constants.SUPABASE_HERO_IMAGES_NAME;
-    const thumbnailBucket = Constants.SUPABASE_THUMBNAIL_IMAGES_NAME;
-    let heroImagePath: string | null = null;
-    let thumbnailImagePath: string | null = null;
+    console.log(`Attempting to delete category ID: ${categoryId}`);
+
+    let thumbnailPath: string | null = null;
+    let heroPath: string | null = null;
 
     try {
-        // 1. Fetch the category to get image paths BEFORE deleting
-        console.log(`Fetching category ${categoryId} to get image paths for deletion...`);
-        const { data: categoryToDelete, error: fetchError } = await supabase
-            .from(Constants.CATEGORIES_TABLE)
-            .select('name, hero_image, thumbnail_image') // Renamed fields
+        // 1. Fetch the record to get BOTH file paths BEFORE deleting
+        console.log(`Fetching paths for category ID: ${categoryId}`);
+        const { data: categoryData, error: fetchError } = await supabase
+            .from(CATEGORIES_TABLE)
+            .select('thumbnail_image, hero_image') // Select both paths
             .eq('id', categoryId)
             .single();
 
         if (fetchError) {
-            // Log error but proceed to attempt DB deletion anyway? Or return error?
-            // If category not found, maybe it was already deleted.
-            if (fetchError.code === 'PGRST116') { // Code for "Resource Not Found"
-                console.warn(`Category ${categoryId} not found for fetching paths, likely already deleted.`);
-                // Proceed to attempt deletion just in case, or return success? Let's return success.
-                return { success: true, message: `Category ${categoryId} likely already deleted.` };
+            if (fetchError.code === 'PGRST116') {
+                 console.warn(`Category ${categoryId} not found for deletion.`);
+                 revalidatePath('/admin/categories', 'layout');
+                 return { success: true, message: 'Category not found, assumed already deleted.' };
             }
-            console.error(`Error fetching category ${categoryId} before delete:`, fetchError.message);
-            // Decide if you want to stop or continue. Stopping is safer if you MUST delete files.
-            return { success: false, message: `Failed to fetch category details before deletion: ${fetchError.message}` };
+            console.error(`Error fetching category ${categoryId} for deletion:`, fetchError);
+            return { success: false, message: `Failed to fetch category details: ${fetchError.message}` };
         }
 
-        if (!categoryToDelete) {
-            console.warn(`Category ${categoryId} not found when fetching for delete.`);
-            return { success: true, message: `Category ${categoryId} not found.` };
-        }
+        thumbnailPath = categoryData?.thumbnail_image;
+        heroPath = categoryData?.hero_image;
+        console.log(`Found paths - Thumbnail: ${thumbnailPath}, Hero: ${heroPath}`);
 
-        // Store the paths
-        heroImagePath = categoryToDelete.hero_image; // Use renamed field
-        thumbnailImagePath = categoryToDelete.thumbnail_image; // Use renamed field
-        const categoryName = categoryToDelete.name; // For logging
-
-        // 2. Delete the category record from the database
-        console.log(`Attempting to delete category "${categoryName}" (ID: ${categoryId}) from database...`);
+        // 2. Delete the database record
+        console.log(`Deleting database record for ID: ${categoryId}`);
         const { error: deleteDbError } = await supabase
-            .from(Constants.CATEGORIES_TABLE)
+            .from(CATEGORIES_TABLE)
             .delete()
             .eq('id', categoryId);
 
         if (deleteDbError) {
-            console.error(`Database error deleting category ${categoryId}:`, deleteDbError.message);
-            // Handle potential foreign key constraints if images link directly to categories
-            return { success: false, message: `Database error deleting category: ${deleteDbError.message}` };
+            console.error(`Error deleting category record ${categoryId}:`, deleteDbError);
+            return { success: false, message: `Database deletion failed: ${deleteDbError.message}` };
+        }
+        console.log(`Database record deleted successfully.`);
+
+        // 3. Delete associated files from storage AFTER successful DB deletion
+        const deletePromises = [];
+        if (thumbnailPath) {
+            console.log(`Queueing deletion of thumbnail: ${thumbnailPath}`);
+            deletePromises.push(deleteStorageFile(THUMBNAIL_BUCKET, thumbnailPath));
+        }
+        if (heroPath) {
+            console.log(`Queueing deletion of hero image: ${heroPath}`);
+            deletePromises.push(deleteStorageFile(HERO_BUCKET, heroPath));
         }
 
-        console.log(`Category "${categoryName}" deleted successfully from database.`);
-
-        // 3. Delete associated images from storage AFTER successful DB deletion
-        if (heroImagePath) {
-            console.log(`Attempting to delete hero image: ${heroImagePath}`);
-            await deleteStorageFile(heroBucket, heroImagePath);
+        if (deletePromises.length > 0) {
+            console.log(`Attempting deletion of ${deletePromises.length} storage file(s)...`);
+            const results = await Promise.allSettled(deletePromises);
+            console.log('Storage file deletion results:', results);
+            results.forEach((result, index) => {
+                if (result.status === 'rejected') {
+                    const pathAttempted = index === 0 && thumbnailPath ? thumbnailPath : heroPath; // Basic guess
+                    console.warn(`Failed to delete storage file ${pathAttempted}: ${result.reason}`);
+                }
+            });
         } else {
-            console.log(`No hero image path found for deleted category ${categoryId}.`);
+             console.log('No storage files associated with the record.');
         }
 
-        if (thumbnailImagePath) {
-            console.log(`Attempting to delete thumbnail image: ${thumbnailImagePath}`);
-            await deleteStorageFile(thumbnailBucket, thumbnailImagePath);
-        } else {
-            console.log(`No thumbnail image path found for deleted category ${categoryId}.`);
-        }
-
-        // 4. Success - Revalidate Paths
-        console.log(`Revalidating paths after deleting category ${categoryId}...`);
-        revalidatePath('/admin/categories');
+        // 4. Revalidate relevant paths
+        console.log('Revalidating paths after deletion...');
+        revalidatePath('/admin/categories', 'layout');
         revalidatePath('/admin');
-        revalidatePath('/coloring-pages', 'layout'); // Revalidate layout where categories might be listed
 
-        return { success: true, message: `Category "${categoryName}" and associated images deleted successfully.` };
+        return { success: true, message: 'Category deleted successfully.' };
 
     } catch (err: any) {
         console.error(`Unexpected error deleting category ${categoryId}:`, err);
-        const message = err instanceof Error ? err.message : 'An unexpected error occurred.';
-        // Note: We don't have files to clean up here unless the fetch succeeded but DB delete failed *unexpectedly*
+        const message = err instanceof Error ? err.message : 'An unexpected error occurred during deletion.';
         return { success: false, message };
     }
 } 
