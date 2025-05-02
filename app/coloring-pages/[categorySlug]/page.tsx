@@ -100,19 +100,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </h1>
 
       {categoryData.hero_image && (
-        <section className="mb-8 rounded-lg">
-          <div className="flex justify-center items-center">
-            <Image
-              src={Constants.SUPABASE_HERO_IMAGES_BUCKET_URL + categoryData.hero_image}
-              alt={`${categoryData.name} category hero image`}
-              width={500}
-              height={750}
-              className="rounded-md shadow-xl object-cover w-4/5 h-full"
-              priority
-              // style={{ objectFit: 'contain' }}
-            />
-          </div>
-        </section>
+        <div className="mb-8 w-full">
+          <Image
+            src={`${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`}
+            alt={`${categoryData.name} category hero image`}
+            width={1200}
+            height={400}
+            priority
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        </div>
       )}
 
       {categoryData.description && (
@@ -123,11 +120,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {coloringPages.length > 0 ? (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {coloringPages.map((coloringPage: ColoringPage) => (
+          {coloringPages.map((coloringPage: ColoringPage, index) => (
             <ColoringPageImage
               key={coloringPage.id}
               coloringPage={coloringPage}
               categoryName={categoryData.name}
+              priority={index < 2}
             />
           ))}
         </div>

@@ -19,8 +19,8 @@ export default function CategoryThumbnail({ category }: CategoryThumbnailProps) 
             src={imageUrl}
             alt={`${category.seo_title || category.name} thumbnail`}
             width={300}
-            height={300}
-            className="w-full transition-transform duration-300 group-hover:scale-105"
+            height={200}
+            className="w-full h-auto object-cover rounded-md transition-transform duration-300 hover:scale-105"
           />
         </div>
       ) : (

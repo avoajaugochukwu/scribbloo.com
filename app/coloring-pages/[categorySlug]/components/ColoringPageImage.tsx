@@ -9,12 +9,13 @@ import PrintIcon from './PrintIcon';
 interface ColoringPageImageProps {
   coloringPage: ColoringPage;
   categoryName: string;
+  priority?: boolean;
 }
 
-export default function ColoringPageImage({ coloringPage, categoryName }: ColoringPageImageProps) {
+export default function ColoringPageImage({ coloringPage, categoryName, priority = false }: ColoringPageImageProps) {
   const imageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.image_url;
   const webpImageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.webp_image_url;
-  console.log('webpImageUrl', webpImageUrl);
+
   const baseFilename = coloringPage.title
     ? coloringPage.title.toLowerCase().replace(/\s+/g, '-')
     : 'coloring-page';
@@ -32,6 +33,8 @@ export default function ColoringPageImage({ coloringPage, categoryName }: Colori
             alt={`${coloringPage.description} coloring page in ${categoryName}`}
             width={300}
             height={300}
+            priority={priority}
+            loading={priority ? undefined : "lazy"}
             className="w-full transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
