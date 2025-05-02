@@ -40,6 +40,8 @@ export const metadata: Metadata = {
 };
 // --- End SEO Metadata ---
 
+export const revalidate = 3600;
+
 export default function Home() {
   // Remove previous Notion fetching and post mapping logic
 

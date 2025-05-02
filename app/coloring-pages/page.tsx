@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 3600;
+
 export default function ColoringPages() {
   // --- JSON-LD Structured Data ---
   const pageUrl = `${baseUrl}/coloring-pages`;

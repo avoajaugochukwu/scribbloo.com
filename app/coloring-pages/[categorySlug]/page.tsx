@@ -18,6 +18,7 @@ import React from 'react';
 import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
 import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
+import Head from 'next/head';
 
 // Force static rendering
 export const dynamic = 'force-static';
@@ -30,7 +31,7 @@ export async function generateStaticParams() {
   try {
     // Get all category slugs
     const slugs = await getAllCategorySlugs();
-    
+
     return slugs.map((slug) => ({
       categorySlug: slug,
     }));
@@ -86,6 +87,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   // --- End Structured Data Prep ---
 
   return (
+    <>
+    <Head>
+        <link rel="canonical" href={`${baseUrl}/coloring-pages/${categoryData.slug}`} />
+    </Head>
     <div className="container mx-auto px-4 pb-8 md:pb-12">
       {/* --- Embed JSON-LD Script --- */}
       <script
@@ -130,8 +135,20 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             height={400}
             priority
             className="w-full h-auto rounded-lg shadow-md"
+            loading='eager'
           />
+          {/* No Script Image */}
+          <noscript>
+            <img
+              src={`${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`}
+              alt={`${categoryData.name} category hero image`}
+              width="1200"
+              height="400"
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            />
+          </noscript>
         </div>
+
       )}
 
       {categoryData.description && (
@@ -154,9 +171,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       ) : (
         <p className="mt-12 text-center text-muted-foreground">
           No coloring pages found in the &quot;{categoryData.name}&quot; category yet. Check back soon!
+          We&apos;re still adding {categoryData.name.toLowerCase()} coloring pages!
+          In the meantime, explore our <Link href="/coloring-pages/unicorn">Unicorn</Link> or <Link href="/coloring-pages/nature">Nature</Link> collections.
         </p>
       )}
     </div>
+    </>
   );
 }
 
@@ -188,7 +208,7 @@ export async function generateMetadata(
     title,
     description,
     alternates: {
-        canonical: canonicalUrl,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title,
