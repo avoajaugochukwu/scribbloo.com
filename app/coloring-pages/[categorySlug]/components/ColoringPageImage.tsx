@@ -14,7 +14,9 @@ interface ColoringPageImageProps {
 
 export default function ColoringPageImage({ coloringPage, categoryName, priority = false }: ColoringPageImageProps) {
   const imageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.image_url;
-  const webpImageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.webp_image_url;
+  // const webpImageUrl = Constants.SUPABASE_COLORING_PAGES_BUCKET_URL + coloringPage.webp_image_url;
+
+  const cdnUrl = `https://imagecdn.app/v1/images/${encodeURIComponent(imageUrl)}?width=600`;
 
   const baseFilename = coloringPage.title
     ? coloringPage.title.toLowerCase().replace(/\s+/g, '-')
@@ -29,11 +31,12 @@ export default function ColoringPageImage({ coloringPage, categoryName, priority
       <div className="relative">
         {coloringPage.image_url ? (
           <Image
-            src={webpImageUrl}
+            // src={webpImageUrl}
+            src={cdnUrl}
             alt={`${coloringPage.description} coloring page in ${categoryName}`}
             width={300}
             height={300}
-            priority={priority}
+            // priority={priority}
             loading={priority ? undefined : "lazy"}
             className="w-full transition-transform duration-300 group-hover:scale-105"
           />

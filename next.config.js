@@ -32,6 +32,11 @@ const nextConfig = {
       // Add other hostnames if you use images from other sources
       // Example: { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
+    domains: [
+      // Keep any existing domains
+      'hmmbilteoshdhougrfik.supabase.co', // Your Supabase storage
+      'imagecdn.app', // Add this new image CDN domain
+    ],
   },
 };
 
