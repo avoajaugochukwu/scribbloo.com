@@ -10,13 +10,14 @@ interface CategoryThumbnailProps {
 
 export default function CategoryThumbnail({ category }: CategoryThumbnailProps) {
   const imageUrl = Constants.SUPABASE_THUMBNAIL_IMAGES_BUCKET_URL + category.thumbnail_image;
+  const cdnUrl = `https://imagecdn.app/v1/images/${encodeURIComponent(imageUrl)}?width=600`;
 
   return (
     <>
       {category.thumbnail_image ? (
         <div className="mb-2 relative w-full overflow-hidden rounded">
           <Image
-            src={imageUrl}
+            src={cdnUrl}
             alt={`${category.seo_title || category.name} thumbnail`}
             width={300}
             height={200}
