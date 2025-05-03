@@ -45,13 +45,9 @@ export const metadata: Metadata = {
     google: "google-site-verification: 63EE4WX9NK",
   },
   icons: {
-    icon: "favicon_io/favicon.ico",
-    apple: "favicon_io/apple-touch-icon.png",
-    other: {
-      rel: "icon",
-      url: "favicon_io/favicon.ico",
-    },
-    shortcut: "favicon_io/favicon.ico",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   }
 };
 
