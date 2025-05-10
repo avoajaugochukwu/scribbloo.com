@@ -141,7 +141,7 @@ export async function updateColoringPage(
 
         // 2. Update Database Record
         log.info('Updating coloring page in database...');
-        const { error: updateError } = await supabase
+            const { error: updateError } = await supabase
             .from(Constants.COLORING_PAGES_TABLE)
             .update({
                 title,
@@ -151,7 +151,7 @@ export async function updateColoringPage(
             })
             .eq('id', pageId);
 
-        if (updateError) {
+            if (updateError) {
             // Roll back new uploads
             for (const file of newUploadedFiles) {
                 await imageService.deleteImageFiles(

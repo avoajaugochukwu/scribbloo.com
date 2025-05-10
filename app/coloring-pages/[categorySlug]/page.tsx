@@ -18,6 +18,7 @@ import React from 'react';
 import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
 import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
+import OtherDetails from '@/components/seo-details/OtherDetails';
 
 // Force static rendering
 export const dynamic = 'force-static';
@@ -171,6 +172,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           In the meantime, explore our <Link href="/coloring-pages/unicorn">Unicorn</Link> or <Link href="/coloring-pages/nature">Nature</Link> collections.
         </p>
       )}
+      <OtherDetails type={categoryData.slug} />
     </div>
   );
 }
