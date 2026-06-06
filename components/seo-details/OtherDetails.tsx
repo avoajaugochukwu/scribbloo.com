@@ -1,30 +1,15 @@
-"use client";
-
 import { FAQList } from "./FAQList";
-import { FAQItemType } from "./types";
-import { allDetailsData, defaultStaticContent } from './data'; // Import from the new data/index.ts
-
-// Define a type for the structure of "other details"
-interface OtherDetailsContent {
-  paragraph?: string;
-  howToGuideTitle?: string;
-  howToGuide?: Array<{ step: number; title: string; description: string }>;
-  activityIdeasTitle?: string;
-  activityIdeas?: Array<{ title: string; description: string }>;
-  printableTipsTitle?: string;
-  printableTips?: Array<{ segments: Array<{ text: string; bold?: boolean }> }>;
-  faqs?: FAQItemType[];
-}
+import type { SeoDetails } from "@/lib/content/types";
+import type { FAQItemType } from "./types";
 
 type Props = {
-  type: string;
-}
+  details?: SeoDetails;
+};
 
-export default function OtherDetails(props: Props) {
-  const { type } = props;
-
-  // Directly get details from the imported object, with a fallback
-  const details: OtherDetailsContent = allDetailsData[type.toLowerCase()] || defaultStaticContent;
+export default function OtherDetails({ details }: Props) {
+  if (!details) {
+    return null;
+  }
 
   return (
     <div className="mx-auto max-w-[764px] px-6 py-24">
@@ -79,9 +64,9 @@ export default function OtherDetails(props: Props) {
         </section>
       )}
 
-      {/* FAQ List Section - Assuming this is always present or handled by FAQList */}
+      {/* FAQ List Section */}
       <section className="py-6">
-        <FAQList faqs={details.faqs || []} />
+        <FAQList faqs={(details.faqs as FAQItemType[]) || []} />
       </section>
     </div>
   );

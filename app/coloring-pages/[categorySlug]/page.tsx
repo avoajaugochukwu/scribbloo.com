@@ -1,5 +1,4 @@
-import { getColoringPagesByCategorySlug } from '@/lib/coloringPages';
-import { getAllCategorySlugs } from '@/lib/coloringPages';
+import { getColoringPagesByCategorySlug, getAllCategorySlugs } from '@/lib/content/coloringPages';
 import Link from 'next/link';
 import ColoringPageImage from './components/ColoringPageImage';
 import { notFound } from 'next/navigation';
@@ -12,31 +11,24 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Metadata } from 'next';
-import ColoringPage from '@/types/coloringpage.type';
 import Image from 'next/image';
 import React from 'react';
-import { Constants } from '@/config/constants';
 import { baseUrl } from '@/app/metadata';
-import CategoryWithColoringPages from '@/types/categorywithcoloringpages.type';
+import { imageUrl } from '@/lib/images';
 import OtherDetails from '@/components/seo-details/OtherDetails';
 
 // Force static rendering
 export const dynamic = 'force-static';
 
-// Revalidate every hour
-export const revalidate = 3600;
-
 // Generate static paths during build
 export async function generateStaticParams() {
   try {
-    // Get all category slugs
     const slugs = await getAllCategorySlugs();
-
     return slugs.map((slug) => ({
       categorySlug: slug,
     }));
   } catch (error) {
-    console.error("Error generating static params:", error);
+    console.error('Error generating static params:', error);
     return [];
   }
 }
@@ -48,13 +40,15 @@ interface CategoryPageProps {
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { categorySlug } = await params;
 
-  const categoryData = await getColoringPagesByCategorySlug(categorySlug) as CategoryWithColoringPages | null;
+  const categoryData = await getColoringPagesByCategorySlug(categorySlug);
 
   if (!categoryData) {
     notFound();
   }
 
   const coloringPages = categoryData.coloringPages || [];
+
+  const categoryUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -63,38 +57,52 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   ];
 
   // --- Prepare JSON-LD Structured Data ---
-  const jsonLd = {
+  const collectionJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage', // Type of page
-    name: categoryData.seo_title || `${categoryData.name} Coloring Pages`,
-    description: categoryData.seo_meta_description || `Explore our collection of ${categoryData.name} coloring pages.`,
-    url: `${baseUrl}/coloring-pages/${categoryData.slug}`,
+    '@type': 'CollectionPage',
+    name: categoryData.seoTitle || `${categoryData.name} Coloring Pages`,
+    description:
+      categoryData.seoMetaDescription || `Explore our collection of ${categoryData.name} coloring pages.`,
+    url: categoryUrl,
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: coloringPages.map((coloringPage, index) => ({
         '@type': 'ListItem',
         position: index + 1,
+        url: `${baseUrl}/coloring-pages/${categoryData.slug}/${coloringPage.slug}`,
         item: {
           '@type': 'ImageObject',
           name: coloringPage.title || 'Coloring Page',
-          contentUrl: `${Constants.SUPABASE_COLORING_PAGES_BUCKET_URL}${coloringPage.image_url}`,
-          // Add description if available
-          // description: image.description,
-        }
-      }))
-    }
+          contentUrl: `${baseUrl}${imageUrl({ kind: 'coloring-page', slug: coloringPage.image, variant: 'full' })}`,
+        },
+      })),
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: `${baseUrl}${item.href}`,
+    })),
   };
   // --- End Structured Data Prep ---
 
   return (
-
     <div className="container mx-auto px-4 pb-8 md:pb-12">
-      {/* --- Embed JSON-LD Script --- */}
+      {/* --- Embed JSON-LD Scripts --- */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      {/* --- End JSON-LD Script --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {/* --- End JSON-LD Scripts --- */}
 
       <Breadcrumb className="mb-4 md:mb-6">
         <BreadcrumbList>
@@ -123,29 +131,19 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {categoryData.name} Coloring Pages
       </h1>
 
-      {categoryData.hero_image && (
+      {categoryData.heroImage && (
         <div className="mb-8 w-full">
           <Image
-            src={`${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`}
+            src={imageUrl({ kind: 'category-hero', slug: categoryData.slug })}
             alt={`${categoryData.name} category hero image`}
             width={1200}
             height={400}
             priority
+            sizes="(max-width: 1200px) 100vw, 1200px"
             className="w-full h-auto rounded-lg shadow-md"
-            loading='eager'
+            loading="eager"
           />
-          {/* No Script Image */}
-          <noscript>
-            <img
-              src={`${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`}
-              alt={`${categoryData.name} category hero image`}
-              width="1200"
-              height="400"
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-            />
-          </noscript>
         </div>
-
       )}
 
       {categoryData.description && (
@@ -156,10 +154,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {coloringPages.length > 0 ? (
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {coloringPages.map((coloringPage: ColoringPage, index) => (
+          {coloringPages.map((coloringPage, index) => (
             <ColoringPageImage
-              key={coloringPage.id}
+              key={coloringPage.slug}
               coloringPage={coloringPage}
+              categorySlug={categoryData.slug}
               categoryName={categoryData.name}
               priority={index < 2}
             />
@@ -169,19 +168,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <p className="mt-12 text-center text-muted-foreground">
           No coloring pages found in the &quot;{categoryData.name}&quot; category yet. Check back soon!
           We&apos;re still adding {categoryData.name.toLowerCase()} coloring pages!
-          In the meantime, explore our <Link href="/coloring-pages/unicorn">Unicorn</Link> or <Link href="/coloring-pages/nature">Nature</Link> collections.
         </p>
       )}
-      <OtherDetails type={categoryData.slug} />
+      <OtherDetails details={categoryData.seoDetails} />
     </div>
   );
 }
 
-export async function generateMetadata(
-  { params }: CategoryPageProps,
-): Promise<Metadata> {
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { categorySlug } = await params;
-  const categoryData = await getColoringPagesByCategorySlug(categorySlug) as CategoryWithColoringPages | null;
+  const categoryData = await getColoringPagesByCategorySlug(categorySlug);
 
   if (!categoryData) {
     return {
@@ -193,12 +189,12 @@ export async function generateMetadata(
   // --- SEO Optimization ---
   const title = `${categoryData.name} Coloring Pages - Free Printable Sheets`;
 
-  const description = categoryData.seo_meta_description || "";
+  const description = categoryData.seoMetaDescription || '';
 
   const canonicalUrl = `${baseUrl}/coloring-pages/${categoryData.slug}`;
 
-  const ogImageUrl = categoryData.hero_image
-    ? `${Constants.SUPABASE_HERO_IMAGES_BUCKET_URL}${categoryData.hero_image}`
+  const ogImageUrl = categoryData.heroImage
+    ? `${baseUrl}${imageUrl({ kind: 'category-hero', slug: categoryData.slug })}`
     : undefined;
 
   return {
@@ -210,15 +206,17 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: canonicalUrl, // Use canonical URL for OG
-      siteName: 'Scribbloo', // Add your site name
-      images: ogImageUrl ? [
-        {
-          url: ogImageUrl,
-          alt: `${categoryData.name} Hero Image`,
-        }
-      ] : [], // Empty array if no image
-      type: 'website', // Or 'article' depending on how you view the page
+      url: canonicalUrl,
+      siteName: 'Scribbloo',
+      images: ogImageUrl
+        ? [
+            {
+              url: ogImageUrl,
+              alt: `${categoryData.name} Hero Image`,
+            },
+          ]
+        : [],
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',

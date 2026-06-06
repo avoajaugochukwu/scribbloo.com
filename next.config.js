@@ -1,46 +1,27 @@
 /** @type {import('next').NextConfig} */
+
+// Images are served as local static files from /public by default, so no remote
+// patterns are required. To move images to a CDN/object store later, set
+// NEXT_PUBLIC_IMAGE_BASE_URL (e.g. https://cdn.scribbloo.com) and its host is
+// whitelisted here automatically — see lib/images.ts.
+const remotePatterns = [];
+if (process.env.NEXT_PUBLIC_IMAGE_BASE_URL) {
+  try {
+    const u = new URL(process.env.NEXT_PUBLIC_IMAGE_BASE_URL);
+    remotePatterns.push({
+      protocol: u.protocol.replace(':', ''),
+      hostname: u.hostname,
+      pathname: '/**',
+    });
+  } catch {
+    // ignore malformed env value
+  }
+}
+
 const nextConfig = {
-  // ... other configurations you might have ...
-
-  // Add or modify the experimental block for serverActions
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '24mb', // Increase the limit to 7MB
-    },
-    // ... other experimental flags ...
-  },
-
-  // OR, if serverActions is stable in your Next.js version, configure it at the top level:
-  // serverActions: {
-  //   bodySizeLimit: '7mb',
-  // },
-
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com',
-        port: '',
-        pathname: '/**', // Allow any path under this hostname
-      },
-      {
-        protocol: 'https',
-        hostname: 'hmmbilteoshdhougrfik.supabase.co', // Replace with your actual Supabase project ID hostname
-        port: '',
-        pathname: '/storage/v1/object/public/**', // Allows any path within the public storage
-      },
-      // Add other hostnames if you use images from other sources
-      // Example: { protocol: 'https', hostname: 'images.unsplash.com' },
-    ],
-    domains: [
-      // Keep any existing domains
-      'hmmbilteoshdhougrfik.supabase.co', // Your Supabase storage
-      'imagecdn.app', // Add this new image CDN domain
-    ],
+    remotePatterns,
   },
 };
 
 module.exports = nextConfig;
-
-// If using ESM (next.config.mjs):
-// export default nextConfig; 

@@ -1,0 +1,235 @@
+import {
+  getAllColoringPages,
+  getColoringPageBySlug,
+  getColoringPagesByCategorySlug,
+  getCategoryBySlug,
+} from '@/lib/content/coloringPages';
+import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
+import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import { baseUrl } from '@/app/metadata';
+import { imageUrl } from '@/lib/images';
+import ColoringPageImage from '../components/ColoringPageImage';
+import DownloadIcon from '../components/DownloadIcon';
+import PrintIcon from '../components/PrintIcon';
+
+// Force static rendering
+export const dynamic = 'force-static';
+
+// Generate static paths during build — one param per (category, page) pair.
+export async function generateStaticParams() {
+  try {
+    const pages = await getAllColoringPages();
+    return pages.flatMap((page) =>
+      page.categories.map((categorySlug) => ({
+        categorySlug,
+        pageSlug: page.slug,
+      })),
+    );
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
+}
+
+interface PageProps {
+  params: Promise<{ categorySlug: string; pageSlug: string }>;
+}
+
+export default async function ColoringPageDetail({ params }: PageProps) {
+  const { categorySlug, pageSlug } = await params;
+
+  const page = await getColoringPageBySlug(pageSlug);
+  if (!page) {
+    notFound();
+  }
+
+  const category = await getCategoryBySlug(categorySlug);
+  const categoryName = category?.name ?? categorySlug;
+
+  const fullUrl = imageUrl({ kind: 'coloring-page', slug: page.image, variant: 'full' });
+  const originalUrl = imageUrl({ kind: 'coloring-page', slug: page.image, variant: 'original' });
+
+  const baseFilename = page.title
+    ? page.title.toLowerCase().replace(/\s+/g, '-')
+    : 'coloring-page';
+  const downloadFilename = `${baseFilename}-scribbloo.com.png`;
+
+  const pageUrl = `${baseUrl}/coloring-pages/${categorySlug}/${page.slug}`;
+
+  // Related pages — other pages in the same category.
+  const categoryData = await getColoringPagesByCategorySlug(categorySlug);
+  const relatedPages = (categoryData?.coloringPages || [])
+    .filter((p) => p.slug !== page.slug)
+    .slice(0, 6);
+
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Coloring Pages', href: '/coloring-pages' },
+    { label: categoryName, href: `/coloring-pages/${categorySlug}` },
+    { label: page.title, href: pageUrl },
+  ];
+
+  // --- JSON-LD Structured Data ---
+  const imageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    name: `${page.title} Coloring Page`,
+    description: page.description || `${page.title} free printable coloring page.`,
+    contentUrl: `${baseUrl}${fullUrl}`,
+    url: pageUrl,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: item.href.startsWith('http') ? item.href : `${baseUrl}${item.href}`,
+    })),
+  };
+  // --- End Structured Data Prep ---
+
+  return (
+    <div className="container mx-auto px-4 pb-8 md:pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
+      <Breadcrumb className="mb-4 md:mb-6">
+        <BreadcrumbList>
+          {breadcrumbItems.map((item, index) => (
+            <React.Fragment key={item.href}>
+              <BreadcrumbItem>
+                {index === breadcrumbItems.length - 1 ? (
+                  <BreadcrumbPage className="font-medium text-pink-800">{item.label}</BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink asChild className="text-pink-600 hover:text-pink-700">
+                    <Link href={item.href}>{item.label}</Link>
+                  </BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+              {index < breadcrumbItems.length - 1 && (
+                <BreadcrumbSeparator>
+                  <span className="mx-1 text-muted-foreground">&gt;&gt;</span>
+                </BreadcrumbSeparator>
+              )}
+            </React.Fragment>
+          ))}
+        </BreadcrumbList>
+      </Breadcrumb>
+
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4 md:mb-6">
+        {page.title} Coloring Page
+      </h1>
+
+      <div className="mx-auto max-w-2xl">
+        <div className="border rounded-lg overflow-hidden shadow-sm">
+          <Image
+            src={fullUrl}
+            alt={`${page.title} coloring page`}
+            width={800}
+            height={800}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full h-auto"
+          />
+        </div>
+
+        {/* Action buttons */}
+        <div className="mt-6 flex items-center justify-center gap-6">
+          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} />
+          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} />
+        </div>
+
+        {page.description && (
+          <section className="mt-6 max-w-3xl mx-auto text-center text-muted-foreground">
+            <p>{page.description}</p>
+          </section>
+        )}
+      </div>
+
+      {relatedPages.length > 0 && (
+        <section className="mt-16">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            More {categoryName} Coloring Pages
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            {relatedPages.map((related) => (
+              <ColoringPageImage
+                key={related.slug}
+                coloringPage={related}
+                categorySlug={categorySlug}
+                categoryName={categoryName}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { categorySlug, pageSlug } = await params;
+
+  const page = await getColoringPageBySlug(pageSlug);
+  if (!page) {
+    return {
+      title: 'Coloring Page Not Found',
+      description: 'The requested coloring page could not be found.',
+    };
+  }
+
+  const title = `${page.title} Coloring Page - Free Printable`;
+  const description = page.description || `Download and print the free ${page.title} coloring page.`;
+  // A page can appear under multiple categories. Canonicalize every variant to a
+  // single primary-category URL so we don't split ranking signal / create dupes.
+  const primaryCategory = page.categories[0] ?? categorySlug;
+  const canonicalUrl = `${baseUrl}/coloring-pages/${primaryCategory}/${pageSlug}`;
+  const ogImageUrl = `${baseUrl}${imageUrl({ kind: 'coloring-page', slug: page.image, variant: 'full' })}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'Scribbloo',
+      images: [
+        {
+          url: ogImageUrl,
+          alt: `${page.title} Coloring Page`,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageUrl],
+    },
+  };
+}

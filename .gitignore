@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# notion migration report
+/notion-migration-report.json
+
+# supabase migration report
+/migration-report.json

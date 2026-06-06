@@ -1,104 +1,203 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { fetchBySlug, fetchPageBlocks, fetchPages } from '@/lib/notion';
-import { NotionRenderer } from '@/components/NotionRenderer'; // We'll create this basic renderer
-import { Badge } from "@/components/ui/badge";
+import Image from 'next/image';
+import Link from 'next/link';
 import { format } from 'date-fns';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+
+import { getAllPostSlugs, getPostBySlug, getAllPosts } from '@/lib/content/blog';
+import { imageUrl } from '@/lib/images';
 import { baseUrl } from '@/app/metadata';
-import { Metadata } from 'next';
+import { Badge } from '@/components/ui/badge';
+import { mdxComponents } from '@/components/mdx/MdxComponents';
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-// Optional: Generate static paths at build time
-// export async function generateStaticParams() {
-//   const pages = await fetchPages(); // Assuming fetchPages gets all slugs
-//   return pages.map((page: any) => ({
-//     slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
-//   }));
-// }
-
 export async function generateStaticParams() {
-  const pages = await fetchPages();
-  return pages.map((page: any) => ({
-    slug: page.properties.Slug.rich_text[0].plain_text,
-  }));
+  const slugs = await getAllPostSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 /**
- * Generate metadata for the blog post
- * @param params - The parameters of the blog post
- * @returns The metadata for the blog post
+ * Generate metadata for the blog post.
  */
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
-  const slug = (await params).slug;
-  const page = await fetchBySlug(slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
-  const post = page as any;
+  if (!post) {
+    return {
+      title: 'Post not found',
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const description = post.metaDescription ?? post.excerpt ?? undefined;
+  const ogImage = post.featuredImage
+    ? imageUrl({ kind: 'blog-featured', slug })
+    : undefined;
 
   return {
-    title: post?.properties?.Title?.title?.[0]?.plain_text,
-    description: post?.properties?.["Meta Description"]?.rich_text?.[0]?.plain_text,
+    title: post.title,
+    description,
     openGraph: {
-      title: post?.properties?.Title?.title?.[0]?.plain_text,
-      description: post?.properties?.["Meta Description"]?.rich_text?.[0]?.plain_text,
+      title: post.title,
+      description,
       type: 'article',
-      // you can add more OpenGraph metadata here
+      url: `${baseUrl}/blog/${slug}`,
+      ...(post.publishedAt ? { publishedTime: post.publishedAt } : {}),
+      ...(ogImage ? { images: [{ url: ogImage }] } : {}),
     },
     robots: {
-      index: true, // Allow indexing
-      follow: true, // Allow following links
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: `${baseUrl}/blog/${slug}`,
       languages: {
         'en-US': `${baseUrl}/blog/${slug}`,
-        'x-default': `${baseUrl}/blog/${slug}`
+        'x-default': `${baseUrl}/blog/${slug}`,
       },
     },
-  }
+  };
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
   const { slug } = await params;
-  const page = await fetchBySlug(slug);
+  const post = await getPostBySlug(slug);
 
-  if (!page) {
-    notFound(); // Trigger 404 if page not found
+  if (!post) {
+    notFound();
   }
 
-  const blocks = await fetchPageBlocks(page.id);
+  const author = post.author ?? 'Scribbloo';
+  const formattedDate = post.publishedAt
+    ? format(new Date(post.publishedAt), 'MMMM d, yyyy')
+    : null;
+  const featuredImageUrl = post.featuredImage
+    ? imageUrl({ kind: 'blog-featured', slug })
+    : null;
 
-  // Extract metadata (similar to index page, adjust as needed)
-  const pageProps = page.properties as any; // Use 'as any' for simplicity here, or define a stricter type
-  const title = pageProps.Title?.title[0]?.plain_text || 'Untitled Post';
-  const dateStr = pageProps.Created?.created_time || new Date().toISOString();
-  const formattedDate = format(new Date(dateStr), 'MMMM d, yyyy');
-  const readingTime = `${pageProps.ReadingTime?.number || 5} min read`;
-  const tags = pageProps.Tags?.multi_select?.map((tag: any) => tag.name) || [];
-  const author = pageProps.Author?.select?.name || 'Ugo Charles';
+  // Internal-link blocks. relatedCategories / relatedPages are currently empty
+  // arrays, but the markup lights up automatically once they are populated.
+  const allPosts = await getAllPosts();
+  const moreFromBlog = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDescription ?? post.excerpt ?? undefined,
+    ...(featuredImageUrl ? { image: `${baseUrl}${featuredImageUrl}` } : {}),
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+    author: {
+      '@type': 'Person',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Scribbloo',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${baseUrl}/blog/${slug}`,
+    },
+  };
 
   return (
     <article className="container mx-auto px-4 py-12 max-w-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <header className="mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{post.title}</h1>
         <div className="text-muted-foreground text-sm mb-4">
-          <span>{formattedDate}</span> · <span>{readingTime}</span> · <span>By {author}</span>
+          {formattedDate && <span>{formattedDate}</span>}
+          {formattedDate && <span> · </span>}
+          <span>By {author}</span>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag: any) => (
-            <Badge key={tag} variant="secondary">{tag}</Badge>
-          ))}
-        </div>
+        {post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <Badge key={tag} variant="secondary">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
       </header>
 
-      {/* Render Notion Blocks */}
-      <NotionRenderer blocks={blocks} />
+      {featuredImageUrl && (
+        <div className="mb-10 overflow-hidden rounded-lg">
+          <Image
+            src={featuredImageUrl}
+            alt={`Featured image for ${post.title}`}
+            width={1200}
+            height={630}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      )}
 
+      <div className="max-w-none">
+        <MDXRemote source={post.content} components={mdxComponents} />
+      </div>
+
+      {(post.relatedCategories.length > 0 || post.relatedPages.length > 0) && (
+        <section className="mt-16 border-t pt-8">
+          <h2 className="mb-4 text-2xl font-bold">Related</h2>
+          <ul className="flex flex-wrap gap-3">
+            {post.relatedCategories.map((categorySlug) => (
+              <li key={`cat-${categorySlug}`}>
+                <Link
+                  href={`/coloring-pages/${categorySlug}`}
+                  className="text-primary underline underline-offset-4 hover:text-primary/80"
+                >
+                  {categorySlug}
+                </Link>
+              </li>
+            ))}
+            {post.relatedPages.map((pageSlug) => (
+              <li key={`page-${pageSlug}`}>
+                <Link
+                  href={`/coloring-pages/${pageSlug}`}
+                  className="text-primary underline underline-offset-4 hover:text-primary/80"
+                >
+                  {pageSlug}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {moreFromBlog.length > 0 && (
+        <section className="mt-16 border-t pt-8">
+          <h2 className="mb-4 text-2xl font-bold">More from the blog</h2>
+          <ul className="space-y-3">
+            {moreFromBlog.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={`/blog/${p.slug}`}
+                  className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+                >
+                  {p.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }
-
-// Optional: Add revalidation
-// export const revalidate = 60; 

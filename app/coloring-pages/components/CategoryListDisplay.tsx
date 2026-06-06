@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { getCategories } from '@/app/admin/actions/categories/read'; // Adjust path if needed
-import CategoryThumbnail from './CategoryThumbnail'; // Assuming it's in the same folder
-import Category from '@/types/category.type';
+import { getAllCategories } from '@/lib/content/coloringPages';
+import CategoryThumbnail from './CategoryThumbnail';
+import type { Category } from '@/lib/content/types';
 
 // This is a React Server Component (RSC) as it fetches data
 export default async function CategoryListDisplay() {
-  const categories = await getCategories();
+  const categories = await getAllCategories();
 
   if (!categories || categories.length === 0) {
     return <p className="text-center text-muted-foreground">No categories found.</p>;
@@ -17,13 +17,12 @@ export default async function CategoryListDisplay() {
       {categories.map((category: Category) => (
         <Link
           href={`/coloring-pages/${category.slug}`}
-          key={category.id}
-          className="group block border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-200 text-center" // Added text-center
+          key={category.slug}
+          className="group block border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-200 text-center"
         >
-          {/* CategoryThumbnail likely contains the Image and Span */}
           <CategoryThumbnail category={category} />
         </Link>
       ))}
     </div>
   );
-} 
+}
