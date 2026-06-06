@@ -42,7 +42,7 @@ export default function ColoringPageImage({
           priority={priority}
           loading={priority ? undefined : 'lazy'}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="w-full transition-transform duration-300 group-hover:scale-105"
+          className="w-full border-b-2 border-black transition-transform duration-300 group-hover:scale-105"
         />
       </Link>
 

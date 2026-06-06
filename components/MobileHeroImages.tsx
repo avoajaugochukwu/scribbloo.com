@@ -12,7 +12,7 @@ export default function MobileHeroImages() {
           alt="Unicorn coloring page example"
           width={150} // Smaller size for mobile grid
           height={225}
-          className="rounded-2xl border-4 border-white shadow-lg ring-2 ring-yellow-300 w-full h-auto" // Ensure image scales within container
+          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto" // Ensure image scales within container
           priority // Keep priority on first image if desired
         />
       </div>
@@ -24,7 +24,7 @@ export default function MobileHeroImages() {
           alt="Dinosaur coloring page example"
           width={150}
           height={225}
-          className="rounded-2xl border-4 border-white shadow-lg ring-2 ring-emerald-300 w-full h-auto"
+          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
         />
       </div>
 
@@ -35,7 +35,7 @@ export default function MobileHeroImages() {
           alt="Butterfly coloring page example"
           width={150}
           height={225}
-          className="rounded-2xl border-4 border-white shadow-lg ring-2 ring-sky-300 w-full h-auto"
+          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
         />
       </div>
 
@@ -46,7 +46,7 @@ export default function MobileHeroImages() {
           alt="Fairy coloring page example"
           width={150}
           height={225}
-          className="rounded-2xl border-4 border-white shadow-lg ring-2 ring-pink-300 w-full h-auto"
+          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
         />
       </div>
     </div>

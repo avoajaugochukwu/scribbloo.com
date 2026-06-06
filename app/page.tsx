@@ -104,7 +104,7 @@ export default function Home() {
               alt="Unicorn coloring page example"
               width={180}
               height={270}
-              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-yellow-300"
+              className="rounded-2xl border-2 border-black shadow-xl"
               priority
             />
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
               alt="Dinosaur coloring page example"
               width={180}
               height={270}
-              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-emerald-300"
+              className="rounded-2xl border-2 border-black shadow-xl"
             />
           </div>
 
@@ -127,7 +127,7 @@ export default function Home() {
               alt="Butterfly coloring page example"
               width={180}
               height={270}
-              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-sky-300"
+              className="rounded-2xl border-2 border-black shadow-xl"
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function Home() {
               alt="Fairy coloring page example"
               width={180}
               height={270}
-              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-pink-300"
+              className="rounded-2xl border-2 border-black shadow-xl"
             />
           </div>
         </div>

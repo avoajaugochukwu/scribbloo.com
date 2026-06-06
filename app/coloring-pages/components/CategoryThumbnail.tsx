@@ -19,7 +19,7 @@ export default function CategoryThumbnail({ category, accent }: CategoryThumbnai
             width={300}
             height={200}
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-            className="h-auto w-full rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
+            className="h-auto w-full rounded-xl border-2 border-black object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       ) : (

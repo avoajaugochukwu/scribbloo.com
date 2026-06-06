@@ -19,7 +19,7 @@ type ImgProps = ComponentProps<'img'>;
 function MdxImage({ src, alt }: ImgProps) {
   if (typeof src !== 'string' || src.length === 0) return null;
   return (
-    <span className="my-8 block overflow-hidden rounded-lg">
+    <span className="my-8 block overflow-hidden rounded-2xl border-2 border-black">
       <Image
         src={src}
         alt={alt ?? ''}

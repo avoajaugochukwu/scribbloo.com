@@ -51,15 +51,32 @@ self.addEventListener('message', async (event) => {
     console.log("Worker: Image converted to Base64."); // Added log
 
     // --- PDF Generation ---
-    const orientation = imgWidth >= imgHeight ? 'l' : 'p'; // landscape or portrait
+    // Use a standard A4 page (595 x 842 pt) instead of sizing the page to the
+    // image's raw pixel dimensions — otherwise a 1024px image becomes a ~14in
+    // page that won't fit normal paper. Scale the image to fit the printable area
+    // (page minus margins), preserving aspect ratio, and center it.
+    const orientation = imgWidth >= imgHeight ? 'landscape' : 'portrait';
     const pdf = new jsPDF({ // Use the constructor obtained earlier
       orientation: orientation,
       unit: 'pt',
-      format: [imgWidth, imgHeight],
+      format: 'a4',
     });
     console.log("Worker: jsPDF instance created."); // Added log
 
-    pdf.addImage(base64data, 'JPEG', 0, 0, imgWidth, imgHeight, undefined, 'MEDIUM');
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const margin = 36; // 0.5 inch
+    const maxWidth = pageWidth - margin * 2;
+    const maxHeight = pageHeight - margin * 2;
+
+    // Fit within the printable area without upscaling-induced overflow.
+    const scale = Math.min(maxWidth / imgWidth, maxHeight / imgHeight);
+    const renderWidth = imgWidth * scale;
+    const renderHeight = imgHeight * scale;
+    const offsetX = (pageWidth - renderWidth) / 2;
+    const offsetY = (pageHeight - renderHeight) / 2;
+
+    pdf.addImage(base64data, 'JPEG', offsetX, offsetY, renderWidth, renderHeight, undefined, 'MEDIUM');
     console.log("Worker: Image added to PDF."); // Added log
 
     // --- Get PDF as Blob ---

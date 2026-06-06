@@ -32,7 +32,7 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
               width={640}
               height={360}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="h-full w-full border-b-2 border-black object-cover transition-transform duration-300 group-hover:scale-105"
               // onError is now allowed because this is a Client Component
               onError={(e) => {
                   e.currentTarget.src = '/og-image.png';
