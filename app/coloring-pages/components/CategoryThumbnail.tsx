@@ -12,8 +12,8 @@ export default function CategoryThumbnail({ category, accent }: CategoryThumbnai
   return (
     <>
       {category.thumbnailImage ? (
-        <div className="rounded-xl border-2 border-black bg-white p-2">
-          <div className="relative aspect-[210/297] w-full overflow-hidden rounded-lg">
+        <div className="border-2 border-black bg-white p-2">
+          <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image
               src={imageUrl({ kind: 'category-thumb', slug: category.slug })}
               alt={`${category.seoTitle || category.name} thumbnail`}

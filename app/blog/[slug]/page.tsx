@@ -136,7 +136,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </header>
 
       {featuredImageUrl && (
-        <div className="mb-10 overflow-hidden rounded-2xl border-2 border-black shadow-xl">
+        <div className="mb-10 overflow-hidden border-2 border-black shadow-xl">
           <Image
             src={featuredImageUrl}
             alt={`Featured image for ${post.title}`}

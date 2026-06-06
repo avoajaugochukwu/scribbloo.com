@@ -99,7 +99,7 @@ export default function Home() {
           {/* Absolutely Positioned Images (Desktop/Tablet) */}
           {/* Unicorn (Top Left) */}
           <div className="absolute top-[2%] left-[2%] z-0 hidden w-44 -rotate-12 md:block">
-            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+            <div className="border-2 border-black bg-white p-2 shadow-xl">
               <div className="relative aspect-[210/297] w-full overflow-hidden">
                 <Image
                   src="/img/unicorn.png"
@@ -115,7 +115,7 @@ export default function Home() {
 
           {/* Dinosaur (Top Right) */}
           <div className="absolute top-[3%] right-[4%] z-0 hidden w-44 rotate-6 md:block">
-            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+            <div className="border-2 border-black bg-white p-2 shadow-xl">
               <div className="relative aspect-[210/297] w-full overflow-hidden">
                 <Image
                   src="/img/dinosaur.png"
@@ -130,7 +130,7 @@ export default function Home() {
 
           {/* Butterfly (Bottom Left) */}
           <div className="absolute bottom-[8%] left-[8%] z-0 hidden w-44 rotate-3 md:block">
-            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+            <div className="border-2 border-black bg-white p-2 shadow-xl">
               <div className="relative aspect-[210/297] w-full overflow-hidden">
                 <Image
                   src="/img/butterfly.png"
@@ -145,7 +145,7 @@ export default function Home() {
 
           {/* Fairy (Bottom Right) */}
           <div className="absolute right-[2%] bottom-[4%] z-0 hidden w-44 -rotate-6 md:block">
-            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+            <div className="border-2 border-black bg-white p-2 shadow-xl">
               <div className="relative aspect-[210/297] w-full overflow-hidden">
                 <Image
                   src="/img/fairy-girl.png"

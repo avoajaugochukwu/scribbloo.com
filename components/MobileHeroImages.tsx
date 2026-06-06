@@ -14,7 +14,7 @@ export default function MobileHeroImages() {
       {heroImages.map((image) => (
         <div
           key={image.src}
-          className="rounded-2xl border-2 border-black bg-white p-2 shadow-lg"
+          className="border-2 border-black bg-white p-2 shadow-lg"
         >
           <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image
