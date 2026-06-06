@@ -4,19 +4,11 @@ import {
   getColoringPagesByCategorySlug,
   getCategoryBySlug,
 } from '@/lib/content/coloringPages';
-import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
+import PageHeading from '@/components/PageHeading';
 import { baseUrl } from '@/app/metadata';
 import { imageUrl } from '@/lib/images';
 import ColoringPageImage from '../components/ColoringPageImage';
@@ -113,35 +105,12 @@ export default async function ColoringPageDetail({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <Breadcrumb className="mb-4 md:mb-6">
-        <BreadcrumbList>
-          {breadcrumbItems.map((item, index) => (
-            <React.Fragment key={item.href}>
-              <BreadcrumbItem>
-                {index === breadcrumbItems.length - 1 ? (
-                  <BreadcrumbPage className="font-medium text-pink-800">{item.label}</BreadcrumbPage>
-                ) : (
-                  <BreadcrumbLink asChild className="text-pink-600 hover:text-pink-700">
-                    <Link href={item.href}>{item.label}</Link>
-                  </BreadcrumbLink>
-                )}
-              </BreadcrumbItem>
-              {index < breadcrumbItems.length - 1 && (
-                <BreadcrumbSeparator>
-                  <span className="mx-1 text-muted-foreground">&gt;&gt;</span>
-                </BreadcrumbSeparator>
-              )}
-            </React.Fragment>
-          ))}
-        </BreadcrumbList>
-      </Breadcrumb>
+      <PageBreadcrumb items={breadcrumbItems} />
 
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4 md:mb-6">
-        {page.title} Coloring Page
-      </h1>
+      <PageHeading title={`${page.title} Coloring Page`} className="mb-6 md:mb-8" />
 
       <div className="mx-auto max-w-2xl">
-        <div className="border rounded-lg overflow-hidden shadow-sm">
+        <div className="overflow-hidden rounded-2xl border-4 border-white bg-white shadow-xl ring-2 ring-pink-200">
           <Image
             src={fullUrl}
             alt={`${page.title} coloring page`}
@@ -154,13 +123,13 @@ export default async function ColoringPageDetail({ params }: PageProps) {
         </div>
 
         {/* Action buttons */}
-        <div className="mt-6 flex items-center justify-center gap-6">
-          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} />
-          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} />
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} variant="button" />
+          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} variant="button" />
         </div>
 
         {page.description && (
-          <section className="mt-6 max-w-3xl mx-auto text-center text-muted-foreground">
+          <section className="mt-8 max-w-3xl mx-auto text-center text-lg text-muted-foreground text-pretty">
             <p>{page.description}</p>
           </section>
         )}
@@ -168,9 +137,11 @@ export default async function ColoringPageDetail({ params }: PageProps) {
 
       {relatedPages.length > 0 && (
         <section className="mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-            More {categoryName} Coloring Pages
-          </h2>
+          <PageHeading
+            as="h2"
+            title={`More ${categoryName} Coloring Pages`}
+            className="mb-8"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {relatedPages.map((related) => (
               <ColoringPageImage

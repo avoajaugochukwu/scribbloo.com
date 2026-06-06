@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import React from 'react'; // Needed for React.Fragment
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb"; // Import breadcrumb components
 import CategoryListDisplay from './components/CategoryListDisplay'; // Import the new component
+import PageBreadcrumb from '@/components/PageBreadcrumb';
+import PageHeading from '@/components/PageHeading';
 import { Metadata } from 'next';
 import { baseUrl } from '@/app/metadata';
 
@@ -71,26 +70,13 @@ export default function ColoringPages() {
       />
       {/* --- End JSON-LD Script --- */}
 
-      <Breadcrumb className="mb-4 md:mb-6">
-        <BreadcrumbList>
-          <React.Fragment key="home">
-            <BreadcrumbItem>
-              <BreadcrumbLink asChild className="text-pink-600 hover:text-pink-700">
-                <Link href="/">Home</Link>
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator>
-              <span className="mx-1 text-muted-foreground">&gt;&gt;</span>
-            </BreadcrumbSeparator>
-          </React.Fragment>
-          <BreadcrumbItem key="coloring-pages">
-            <BreadcrumbPage className="font-medium text-pink-800">Coloring Pages</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4 md:mb-6">
-        Coloring Pages
-      </h1>
+      <PageBreadcrumb
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Coloring Pages', href: '/coloring-pages' },
+        ]}
+      />
+      <PageHeading title="Coloring Pages" className="mb-8 md:mb-10" />
       <section>
         <CategoryListDisplay />
       </section>

@@ -31,9 +31,9 @@ export default function ColoringPageImage({
   const detailHref = `/coloring-pages/${categorySlug}/${coloringPage.slug}`;
 
   return (
-    <div className="border rounded-lg overflow-hidden shadow-sm group relative flex flex-col">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-pink-100 bg-card shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl">
       {/* Image Section */}
-      <Link href={detailHref} className="relative block">
+      <Link href={detailHref} className="relative block overflow-hidden">
         <Image
           src={thumbUrl}
           alt={`${coloringPage.description || coloringPage.title} coloring page in ${categoryName}`}
@@ -47,11 +47,11 @@ export default function ColoringPageImage({
       </Link>
 
       {/* Info Section */}
-      <div className="p-4 flex flex-col flex-grow px-6">
+      <div className="flex flex-grow flex-col p-4 px-6">
         {/* Title and Icons Container */}
         <div className="flex justify-between items-center mb-1">
-          <h3 className="font-semibold text-xl truncate flex-grow mr-2" title={coloringPage.title || 'Untitled'}>
-            <Link href={detailHref} className="hover:text-pink-600">
+          <h3 className="font-bold text-xl truncate flex-grow mr-2" title={coloringPage.title || 'Untitled'}>
+            <Link href={detailHref} className="hover:text-fuchsia-600">
               {coloringPage.title || 'Untitled'}
             </Link>
           </h3>

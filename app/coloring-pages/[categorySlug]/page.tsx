@@ -1,18 +1,10 @@
 import { getColoringPagesByCategorySlug, getAllCategorySlugs } from '@/lib/content/coloringPages';
-import Link from 'next/link';
 import ColoringPageImage from './components/ColoringPageImage';
 import { notFound } from 'next/navigation';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
+import PageHeading from '@/components/PageHeading';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import React from 'react';
 import { baseUrl } from '@/app/metadata';
 import { imageUrl } from '@/lib/images';
 import OtherDetails from '@/components/seo-details/OtherDetails';
@@ -104,32 +96,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       />
       {/* --- End JSON-LD Scripts --- */}
 
-      <Breadcrumb className="mb-4 md:mb-6">
-        <BreadcrumbList>
-          {breadcrumbItems.map((item, index) => (
-            <React.Fragment key={item.href}>
-              <BreadcrumbItem>
-                {index === breadcrumbItems.length - 1 ? (
-                  <BreadcrumbPage className="font-medium text-pink-800">{item.label}</BreadcrumbPage>
-                ) : (
-                  <BreadcrumbLink asChild className="text-pink-600 hover:text-pink-700">
-                    <Link href={item.href}>{item.label}</Link>
-                  </BreadcrumbLink>
-                )}
-              </BreadcrumbItem>
-              {index < breadcrumbItems.length - 1 && (
-                <BreadcrumbSeparator>
-                  <span className="mx-1 text-muted-foreground">&gt;&gt;</span>
-                </BreadcrumbSeparator>
-              )}
-            </React.Fragment>
-          ))}
-        </BreadcrumbList>
-      </Breadcrumb>
+      <PageBreadcrumb items={breadcrumbItems} />
 
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center mb-4 md:mb-6">
-        {categoryData.name} Coloring Pages
-      </h1>
+      <PageHeading title={`${categoryData.name} Coloring Pages`} className="mb-6 md:mb-8" />
 
       {categoryData.heroImage && (
         <div className="mb-8 w-full">
@@ -140,14 +109,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             height={400}
             priority
             sizes="(max-width: 1200px) 100vw, 1200px"
-            className="w-full h-auto rounded-lg shadow-md"
+            className="h-auto w-full rounded-2xl border-4 border-white shadow-xl ring-2 ring-pink-200"
             loading="eager"
           />
         </div>
       )}
 
       {categoryData.description && (
-        <section className="max-w-3xl mx-auto text-center text-muted-foreground">
+        <section className="mx-auto max-w-3xl text-center text-lg text-muted-foreground text-pretty">
           <p>{categoryData.description}</p>
         </section>
       )}

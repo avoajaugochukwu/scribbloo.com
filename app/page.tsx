@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import CategoryListDisplay from './coloring-pages/components/CategoryListDisplay';
 import { Metadata } from 'next';
 import { baseUrl } from '@/app/metadata';
 import MobileHeroImages from '@/components/MobileHeroImages';
-// Keep Link if you plan to add other sections with links later
-// import Link from 'next/link';
+import PageHeading from '@/components/PageHeading';
+import { Button } from '@/components/ui/button';
 
 // --- SEO Metadata ---
 export const metadata: Metadata = {
@@ -58,8 +59,7 @@ export default function Home() {
   // --- End Structured Data Prep ---
 
   return (
-    // Removed top padding to bring breadcrumb up
-    <div className="container mx-auto px-4 pb-8 md:pb-12">
+    <div className="pb-8 md:pb-12">
 
       {/* --- Embed JSON-LD Script --- */}
       <script
@@ -68,94 +68,89 @@ export default function Home() {
       />
       {/* --- End JSON-LD Script --- */}
 
-      {/* Updated Hero Section */}
-      {/* Using flex column for mobile, centering items */}
-      {/* On md+, using relative positioning for the desktop image layout */}
-      <section className="flex flex-col items-center text-center mb-16 md:relative md:justify-center md:min-h-[60vh]">
+      {/* Hero Section — soft brand wash behind the headline + floating examples */}
+      <section className="bg-hero-glow">
+        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:relative md:min-h-[68vh] md:justify-center md:py-24">
 
-        {/* Central Text Block */}
-        {/* Order 1 on flex, z-10 for desktop absolute layout */}
-        <div className="z-10 max-w-3xl order-1 md:order-none mb-8 md:mb-0"> {/* Added margin-bottom for mobile spacing */}
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-5xl lg:text-6xl mb-6 text-pink-600">
-            Free Printable Coloring Pages for All Ages
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground w-full sm:w-4/5 mx-auto"> {/* Adjusted width */}
-            Download high-quality coloring sheets for kids, teens, and adults. From unicorns to mandalas—new pages added weekly.
-          </p>
-          {/* Optional: Add a Call to Action Button here */}
-          {/* <div className="mt-8">
-            <Link href="/coloring-pages" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90">
-              Browse Pages
-            </Link>
-          </div> */}
-        </div>
+          {/* Central Text Block */}
+          <div className="z-10 order-1 mb-8 max-w-3xl md:order-none md:mb-0">
+            <span className="mb-4 inline-block rounded-full bg-white/80 px-4 py-1.5 text-sm font-bold text-fuchsia-700 shadow-sm ring-1 ring-pink-200">
+              🎨 100% free · new pages weekly
+            </span>
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-balance sm:text-6xl lg:text-7xl">
+              <span className="text-gradient-brand">Free Printable Coloring Pages</span>{' '}
+              <span className="text-foreground">for All Ages</span>
+            </h1>
+            <p className="mx-auto w-full text-lg text-muted-foreground text-pretty sm:w-4/5 md:text-xl">
+              Download high-quality coloring sheets for kids, teens, and adults. From unicorns to mandalas—new pages added weekly.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="xl" className="shadow-md">
+                <Link href="/coloring-pages">Browse Pages →</Link>
+              </Button>
+            </div>
+          </div>
 
-        {/* Mobile Images Component */}
-        {/* Order 2 on flex (below text), hidden on md+ */}
-        <div className="order-2 md:hidden w-full mt-6"> {/* Added margin-top for spacing */}
-           <MobileHeroImages />
-        </div>
+          {/* Mobile Images Component */}
+          <div className="order-2 mt-8 w-full md:hidden">
+            <MobileHeroImages />
+          </div>
 
+          {/* Absolutely Positioned Images (Desktop/Tablet) */}
+          {/* Unicorn (Top Left) */}
+          <div className="absolute top-[2%] left-[2%] z-0 hidden -rotate-12 md:block">
+            <Image
+              src="/img/unicorn.png"
+              alt="Unicorn coloring page example"
+              width={180}
+              height={270}
+              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-yellow-300"
+              priority
+            />
+          </div>
 
-        {/* Absolutely Positioned Images (Desktop/Tablet) */}
-        {/* These remain hidden on small screens (below md) using 'hidden md:block' */}
-        {/* z-0 layers them below the text block */}
+          {/* Dinosaur (Top Right) */}
+          <div className="absolute top-[3%] right-[4%] z-0 hidden rotate-6 md:block">
+            <Image
+              src="/img/dinosaur.png"
+              alt="Dinosaur coloring page example"
+              width={180}
+              height={270}
+              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-emerald-300"
+            />
+          </div>
 
-        {/* Unicorn (Top Left) */}
-        <div className="absolute top-[0%] left-[2%] transform -rotate-12 hidden md:block z-0">
-          <Image
-            src="/img/unicorn.png"
-            alt="Unicorn coloring page example"
-            width={180}
-            height={270}
-            className="rounded-xl shadow-lg border-4 border-yellow-200"
-            priority
-          />
-        </div>
+          {/* Butterfly (Bottom Left) */}
+          <div className="absolute bottom-[8%] left-[8%] z-0 hidden rotate-3 md:block">
+            <Image
+              src="/img/butterfly.png"
+              alt="Butterfly coloring page example"
+              width={180}
+              height={270}
+              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-sky-300"
+            />
+          </div>
 
-        {/* Dinosaur (Top Right) */}
-        <div className="absolute top-[1%] right-[4%] transform rotate-6 hidden md:block z-0">
-          <Image
-            src="/img/dinosaur.png"
-            alt="Dinosaur coloring page example"
-            width={180}
-            height={270}
-            className="rounded-xl shadow-lg border-4 border-green-200"
-          />
-        </div>
-
-        {/* Butterfly (Bottom Left) */}
-        <div className="absolute bottom-[10%] left-[8%] transform rotate-3 hidden md:block z-0">
-          <Image
-            src="/img/butterfly.png"
-            alt="Butterfly coloring page example"
-            width={180}
-            height={270}
-            className="rounded-xl shadow-lg border-4 border-blue-200"
-          />
-        </div>
-
-        {/* Fairy (Bottom Right) */}
-        <div className="absolute bottom-[5%] right-[2%] transform -rotate-6 hidden md:block z-0">
-          <Image
-            src="/img/fairy-girl.png"
-            alt="Fairy coloring page example"
-            width={180}
-            height={270}
-            className="rounded-xl shadow-lg border-4 border-pink-200"
-          />
+          {/* Fairy (Bottom Right) */}
+          <div className="absolute right-[2%] bottom-[4%] z-0 hidden -rotate-6 md:block">
+            <Image
+              src="/img/fairy-girl.png"
+              alt="Fairy coloring page example"
+              width={180}
+              height={270}
+              className="rounded-2xl border-[6px] border-white shadow-xl ring-4 ring-pink-300"
+            />
+          </div>
         </div>
       </section>
 
       {/* Coloring Pages Section */}
-      <section className="my-16">
-        <h2 className="text-3xl font-bold text-center mb-10">Coloring Pages</h2>
-        {/* Added flex wrapper to center the CategoryListDisplay component */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <PageHeading as="h2" title="Browse by Category" className="mb-10" />
         <div className="flex justify-center">
           <CategoryListDisplay />
         </div>
       </section>
-     
 
     </div>
   );

@@ -9,13 +9,17 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { toast } from 'sonner';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
 
 interface DownloadIconProps {
   imageUrl: string | null;
   filename: string;
+  /** 'icon' (compact, for cards) or 'button' (labeled, for detail pages). */
+  variant?: 'icon' | 'button';
 }
 
-export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) {
+export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: DownloadIconProps) {
   const [isDownloading, setIsDownloading] = useState(false);
   const workerRef = useRef<Worker | null>(null);
 
@@ -98,6 +102,25 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
     return null;
   }
 
+  if (variant === 'button') {
+    return (
+      <button
+        type="button"
+        onClick={handleDownload}
+        disabled={isDownloading}
+        className={cn(buttonVariants({ size: 'xl' }), 'shadow-md')}
+        aria-label="Download image as PDF"
+      >
+        {isDownloading ? (
+          <LoaderCircle className="animate-spin" />
+        ) : (
+          <Download strokeWidth={2} />
+        )}
+        {isDownloading ? 'Preparing…' : 'Download PDF'}
+      </button>
+    );
+  }
+
   return (
     <div className="inline-flex items-center justify-center h-7 w-7">
       {isDownloading ? (
@@ -110,7 +133,7 @@ export default function DownloadIcon({ imageUrl, filename }: DownloadIconProps) 
                 type="button"
                 onClick={handleDownload}
                 disabled={isDownloading}
-                className="p-1 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-1 rounded-full text-gray-500 hover:text-fuchsia-600 hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Download image as PDF"
               >
                 <Download className="h-6 w-6" strokeWidth={1.5} cursor="pointer" />

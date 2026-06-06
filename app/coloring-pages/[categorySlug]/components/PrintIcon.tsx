@@ -9,13 +9,17 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { toast } from 'sonner';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
 
 interface PrintIconProps {
   imageUrl: string | null;
   filename: string; // Keep filename for consistency
+  /** 'icon' (compact, for cards) or 'button' (labeled, for detail pages). */
+  variant?: 'icon' | 'button';
 }
 
-export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
+export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: PrintIconProps) {
   const [isPreparingPrint, setIsPreparingPrint] = useState(false);
   const workerRef = useRef<Worker | null>(null);
 
@@ -113,6 +117,28 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
     return null;
   }
 
+  if (variant === 'button') {
+    return (
+      <button
+        type="button"
+        onClick={handlePrint}
+        disabled={isPreparingPrint}
+        className={cn(
+          buttonVariants({ variant: 'outline', size: 'xl' }),
+          'border-2 border-pink-300 text-fuchsia-700 hover:bg-pink-50 hover:text-fuchsia-800',
+        )}
+        aria-label="Print image"
+      >
+        {isPreparingPrint ? (
+          <LoaderCircle className="animate-spin" />
+        ) : (
+          <Printer strokeWidth={2} />
+        )}
+        {isPreparingPrint ? 'Preparing…' : 'Print'}
+      </button>
+    );
+  }
+
   return (
     <div className="inline-flex items-center justify-center h-7 w-7">
       {isPreparingPrint ? (
@@ -125,7 +151,7 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
                 type="button"
                 onClick={handlePrint}
                 disabled={isPreparingPrint}
-                className="p-1 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-1 rounded-full text-gray-500 hover:text-fuchsia-600 hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Print image"
               >
                 <Printer className="h-6 w-6" strokeWidth={1.5} cursor="pointer" />
@@ -139,4 +165,4 @@ export default function PrintIcon({ imageUrl, filename }: PrintIconProps) {
       )}
     </div>
   );
-} 
+}

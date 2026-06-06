@@ -5,6 +5,7 @@ import { getAllPosts } from '@/lib/content/blog';
 import { imageUrl } from '@/lib/images';
 import { baseUrl } from '@/app/metadata';
 import { BlogPostCard } from '@/components/BlogPostCard';
+import PageHeading from '@/components/PageHeading';
 
 const FALLBACK_IMAGE = '/og-image.png';
 
@@ -52,12 +53,11 @@ export default async function BlogIndex() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <header className="mb-12 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Blog Posts</h1>
-        <p className="mt-3 text-xl text-muted-foreground">
-          All our latest articles and updates.
-        </p>
-      </header>
+      <PageHeading
+        title="Blog Posts"
+        subtitle="All our latest articles and updates."
+        className="mb-12"
+      />
 
       <main>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
