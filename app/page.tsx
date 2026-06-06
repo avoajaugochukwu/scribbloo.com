@@ -98,48 +98,64 @@ export default function Home() {
 
           {/* Absolutely Positioned Images (Desktop/Tablet) */}
           {/* Unicorn (Top Left) */}
-          <div className="absolute top-[2%] left-[2%] z-0 hidden -rotate-12 md:block">
-            <Image
-              src="/img/unicorn.png"
-              alt="Unicorn coloring page example"
-              width={180}
-              height={270}
-              className="rounded-2xl border-2 border-black shadow-xl"
-              priority
-            />
+          <div className="absolute top-[2%] left-[2%] z-0 hidden w-44 -rotate-12 md:block">
+            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+              <div className="relative aspect-[210/297] w-full overflow-hidden">
+                <Image
+                  src="/img/unicorn.png"
+                  alt="Unicorn coloring page example"
+                  fill
+                  sizes="176px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
           </div>
 
           {/* Dinosaur (Top Right) */}
-          <div className="absolute top-[3%] right-[4%] z-0 hidden rotate-6 md:block">
-            <Image
-              src="/img/dinosaur.png"
-              alt="Dinosaur coloring page example"
-              width={180}
-              height={270}
-              className="rounded-2xl border-2 border-black shadow-xl"
-            />
+          <div className="absolute top-[3%] right-[4%] z-0 hidden w-44 rotate-6 md:block">
+            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+              <div className="relative aspect-[210/297] w-full overflow-hidden">
+                <Image
+                  src="/img/dinosaur.png"
+                  alt="Dinosaur coloring page example"
+                  fill
+                  sizes="176px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Butterfly (Bottom Left) */}
-          <div className="absolute bottom-[8%] left-[8%] z-0 hidden rotate-3 md:block">
-            <Image
-              src="/img/butterfly.png"
-              alt="Butterfly coloring page example"
-              width={180}
-              height={270}
-              className="rounded-2xl border-2 border-black shadow-xl"
-            />
+          <div className="absolute bottom-[8%] left-[8%] z-0 hidden w-44 rotate-3 md:block">
+            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+              <div className="relative aspect-[210/297] w-full overflow-hidden">
+                <Image
+                  src="/img/butterfly.png"
+                  alt="Butterfly coloring page example"
+                  fill
+                  sizes="176px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Fairy (Bottom Right) */}
-          <div className="absolute right-[2%] bottom-[4%] z-0 hidden -rotate-6 md:block">
-            <Image
-              src="/img/fairy-girl.png"
-              alt="Fairy coloring page example"
-              width={180}
-              height={270}
-              className="rounded-2xl border-2 border-black shadow-xl"
-            />
+          <div className="absolute right-[2%] bottom-[4%] z-0 hidden w-44 -rotate-6 md:block">
+            <div className="rounded-2xl border-2 border-black bg-white p-2 shadow-xl">
+              <div className="relative aspect-[210/297] w-full overflow-hidden">
+                <Image
+                  src="/img/fairy-girl.png"
+                  alt="Fairy coloring page example"
+                  fill
+                  sizes="176px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

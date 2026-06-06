@@ -1,54 +1,33 @@
 import Image from 'next/image';
 
+const heroImages = [
+  { src: '/img/unicorn.png', alt: 'Unicorn coloring page example', priority: true },
+  { src: '/img/dinosaur.png', alt: 'Dinosaur coloring page example', priority: false },
+  { src: '/img/butterfly.png', alt: 'Butterfly coloring page example', priority: false },
+  { src: '/img/fairy-girl.png', alt: 'Fairy coloring page example', priority: false },
+];
+
 export default function MobileHeroImages() {
   return (
     // Grid container for 2x2 layout, with gap
-    <div className="grid grid-cols-2 gap-4 w-full max-w-xs mx-auto">
-
-      {/* Unicorn Image */}
-      <div className="w-full"> {/* Let grid control width */}
-        <Image
-          src="/img/unicorn.png"
-          alt="Unicorn coloring page example"
-          width={150} // Smaller size for mobile grid
-          height={225}
-          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto" // Ensure image scales within container
-          priority // Keep priority on first image if desired
-        />
-      </div>
-
-      {/* Dinosaur Image */}
-      <div className="w-full">
-        <Image
-          src="/img/dinosaur.png"
-          alt="Dinosaur coloring page example"
-          width={150}
-          height={225}
-          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
-        />
-      </div>
-
-      {/* Butterfly Image */}
-      <div className="w-full">
-        <Image
-          src="/img/butterfly.png"
-          alt="Butterfly coloring page example"
-          width={150}
-          height={225}
-          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
-        />
-      </div>
-
-      {/* Fairy Image */}
-      <div className="w-full">
-        <Image
-          src="/img/fairy-girl.png"
-          alt="Fairy coloring page example"
-          width={150}
-          height={225}
-          className="rounded-2xl border-2 border-black shadow-lg w-full h-auto"
-        />
-      </div>
+    <div className="mx-auto grid w-full max-w-xs grid-cols-2 gap-4">
+      {heroImages.map((image) => (
+        <div
+          key={image.src}
+          className="rounded-2xl border-2 border-black bg-white p-2 shadow-lg"
+        >
+          <div className="relative aspect-[210/297] w-full overflow-hidden">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(max-width: 480px) 40vw, 150px"
+              className="object-contain"
+              priority={image.priority}
+            />
+          </div>
+        </div>
+      ))}
     </div>
   );
-} 
+}

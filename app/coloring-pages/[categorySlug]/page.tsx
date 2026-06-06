@@ -102,16 +102,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {categoryData.heroImage && (
         <div className="mb-8 flex justify-center">
-          <Image
-            src={imageUrl({ kind: 'category-hero', slug: categoryData.slug })}
-            alt={`${categoryData.name} category hero image`}
-            width={1200}
-            height={400}
-            priority
-            sizes="(max-width: 512px) 100vw, 512px"
-            className="h-auto w-full max-w-lg rounded-2xl border-2 border-black shadow-xl"
-            loading="eager"
-          />
+          <div className="w-full max-w-lg rounded-2xl border-2 border-black bg-white p-4 shadow-xl">
+            <div className="relative aspect-[210/297] w-full overflow-hidden">
+              <Image
+                src={imageUrl({ kind: 'category-hero', slug: categoryData.slug })}
+                alt={`${categoryData.name} category hero image`}
+                fill
+                priority
+                sizes="(max-width: 512px) 100vw, 512px"
+                className="object-contain"
+              />
+            </div>
+          </div>
         </div>
       )}
 

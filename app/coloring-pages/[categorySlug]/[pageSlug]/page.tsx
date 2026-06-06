@@ -110,16 +110,17 @@ export default async function ColoringPageDetail({ params }: PageProps) {
       <PageHeading title={`${page.title} Coloring Page`} className="mb-6 md:mb-8" />
 
       <div className="mx-auto max-w-2xl">
-        <div className="mx-auto max-w-md overflow-hidden rounded-2xl border-2 border-black bg-white shadow-xl">
-          <Image
-            src={fullUrl}
-            alt={`${page.title} coloring page`}
-            width={800}
-            height={800}
-            priority
-            sizes="(max-width: 480px) 100vw, 448px"
-            className="w-full h-auto"
-          />
+        <div className="mx-auto max-w-md rounded-2xl border-2 border-black bg-white p-4 shadow-xl">
+          <div className="relative aspect-[210/297] w-full overflow-hidden">
+            <Image
+              src={fullUrl}
+              alt={`${page.title} coloring page`}
+              fill
+              priority
+              sizes="(max-width: 480px) 100vw, 448px"
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Action buttons */}

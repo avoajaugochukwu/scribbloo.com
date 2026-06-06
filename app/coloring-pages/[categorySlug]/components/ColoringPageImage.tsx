@@ -32,18 +32,22 @@ export default function ColoringPageImage({
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-pink-100 bg-card shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl">
-      {/* Image Section */}
-      <Link href={detailHref} className="relative block overflow-hidden">
-        <Image
-          src={thumbUrl}
-          alt={`${coloringPage.description || coloringPage.title} coloring page in ${categoryName}`}
-          width={300}
-          height={300}
-          priority={priority}
-          loading={priority ? undefined : 'lazy'}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="w-full border-b-2 border-black transition-transform duration-300 group-hover:scale-105"
-        />
+      {/* Image Section — A4 portrait frame (matches download/print), matted with padding */}
+      <Link
+        href={detailHref}
+        className="block border-b-2 border-black bg-white p-3"
+      >
+        <div className="relative aspect-[210/297] w-full overflow-hidden">
+          <Image
+            src={thumbUrl}
+            alt={`${coloringPage.description || coloringPage.title} coloring page in ${categoryName}`}
+            fill
+            priority={priority}
+            loading={priority ? undefined : 'lazy'}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
       </Link>
 
       {/* Info Section */}
