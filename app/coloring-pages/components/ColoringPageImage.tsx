@@ -7,15 +7,21 @@ import PrintIcon from './PrintIcon';
 
 interface ColoringPageImageProps {
   coloringPage: ColoringPage;
-  categorySlug: string;
-  categoryName: string;
+  /**
+   * Canonical detail URL, precomputed by the tree layer (getLeafCanonicalHref).
+   * Always the page's ONE canonical path, so every internal link points at the
+   * canonical even when the page is surfaced inside a facet grid.
+   */
+  href: string;
+  /** human label used for the image alt text (collection/subject name) */
+  contextLabel: string;
   priority?: boolean;
 }
 
 export default function ColoringPageImage({
   coloringPage,
-  categorySlug,
-  categoryName,
+  href: detailHref,
+  contextLabel,
   priority = false,
 }: ColoringPageImageProps) {
   const thumbUrl = imageUrl({ kind: 'coloring-page', slug: coloringPage.image, variant: 'thumb' });
@@ -28,13 +34,6 @@ export default function ColoringPageImage({
   // Append "-scribbloo.com.png" to the base filename for download
   const downloadFilename = `${baseFilename}-scribbloo.com.png`;
 
-  // Always link to the page's PRIMARY category, even when it's surfaced under a
-  // secondary category grid. This keeps every internal link pointing at the
-  // canonical URL (the detail page canonicalizes to categories[0]), so Google
-  // doesn't waste crawl budget on duplicate secondary-category URLs.
-  const primaryCategory = coloringPage.categories[0] ?? categorySlug;
-  const detailHref = `/coloring-pages/${primaryCategory}/${coloringPage.slug}`;
-
   return (
     <div className="group pressable shadow-pop relative flex flex-col overflow-hidden rounded-[var(--radius)] border-2 border-ink bg-card">
       {/* Image Section — A4 portrait frame (matches download/print), matted with padding */}
@@ -45,7 +44,7 @@ export default function ColoringPageImage({
         <div className="relative aspect-[210/297] w-full overflow-hidden">
           <Image
             src={thumbUrl}
-            alt={`${coloringPage.description || coloringPage.title} coloring page in ${categoryName}`}
+            alt={`${coloringPage.description || coloringPage.title} coloring page in ${contextLabel}`}
             fill
             priority={priority}
             loading={priority ? undefined : 'lazy'}

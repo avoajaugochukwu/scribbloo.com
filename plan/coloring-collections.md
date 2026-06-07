@@ -10,31 +10,19 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 `slug: crayola-coloring-pages` · **Collection (category)**
 
 - **Primary:** `crayola coloring pages` — vol **165,000**/mo · KD **0** · informational
-- **Also target:** `crayola coloring book pages` (165,000), `coloring pages from crayola` (165,000), `crayola free coloring pages` (12,100), `crayola adult coloring pages` (12,100), `crayola free printable coloring pages` (5,400), `crayola unicorn coloring pages` (4,400), `coloring book crayola` (3,600), `crayola disney coloring book` (1,900)
+- **Also target:** `crayola coloring book pages` (165,000), `coloring pages from crayola` (165,000), `crayola adult coloring pages` (12,100), `crayola free coloring pages` (12,100), `crayola free printable coloring pages` (5,400), `crayola unicorn coloring pages` (4,400), `coloring book crayola` (3,600), `crayola disney coloring book` (1,900)
 
 ## ✅ Christmas Coloring Pages
 `slug: christmas-coloring-pages` · **Collection (category)** · _exists as `christmas-drawing-ideas-for-beginners` → refresh/expand_
 
 - **Primary:** `christmas coloring pages` — vol **135,000**/mo · KD **0** · informational
-- **Also target:** `coloring book christmas pages` (135,000), `christmas coloring pages christmas` (135,000), `coloring pages christmas pages` (135,000), `holiday coloring pages christmas` (135,000), `christmas day coloring pages` (135,000), `coloring pages about christmas` (135,000), `coloring pages christmas print` (33,100), `printable coloring pages christmas` (33,100), `coloring pages free christmas` (27,100), `free printable coloring pages christmas` (27,100), `free christmas coloring book pages` (27,100)
-
-## 🆕 Xmas Coloring Pages
-`slug: xmas-coloring-pages` · **Collection (category)**
-
-- **Primary:** `xmas coloring pages` — vol **135,000**/mo · KD **0** · informational
-- **Also target:** `free coloring pages xmas` (27,100), `xmas printable coloring pages` (22,200), `free printable xmas coloring pages` (14,800), `free xmas coloring pages print` (14,800), `coloring pages xmas tree` (14,800), `coloring sheets xmas` (170), `coloring book xmas` (50), `free printable xmas tree coloring pages` (10)
-
-## 🆕 Adult Coloring Pages
-`slug: adult-coloring-pages` · **Collection (category)**
-
-- **Primary:** `adult coloring pages` — vol **90,500**/mo · KD **0** · informational
-- **Also target:** `adult coloring book coloring books for adults` (60,500), `adult coloring book for adults` (60,500), `adult coloring book coloring book` (60,500), `adult colouring book coloring books` (60,500), `adult coloring book books` (60,500), `adult coloring book pages flowers` (5,400), `easy adult coloring book pages` (4,400), `adult coloring sheets` (4,400), `adult coloring book by number` (4,400), `simple adult coloring pages` (3,600), `funny adult coloring pages` (3,600)
+- **Also target:** `coloring book christmas pages` (135,000), `christmas coloring pages christmas` (135,000), `coloring pages xmas` (135,000), `coloring pages christmas pages` (135,000), `holiday coloring pages christmas` (135,000), `christmas day coloring pages` (135,000), `coloring pages about christmas` (135,000), `coloring pages christmas print` (33,100), `printable coloring pages christmas` (33,100), `coloring pages free christmas` (27,100), `free printable coloring pages christmas` (27,100)
 
 ## 🆕 Hello Kitty Coloring Pages
 `slug: hello-kitty-coloring-pages` · **Collection (category)**
 
 - **Primary:** `hello kitty coloring pages` — vol **74,000**/mo · KD **0** · informational
-- **Also target:** `coloring pages hello kitty` (74,000), `hello kitty print coloring pages` (74,000), `hello kitty coloring pages to color` (74,000), `hello kitty printing coloring pages` (74,000), `hello kitty printable coloring pages` (74,000), `coloring book hello kitty` (74,000), `hello kitty characters coloring pages` (74,000), `free hello kitty coloring book` (6,600), `coloring pages hello kitty and friends` (6,600), `hello kitty coloring book printable` (5,400), `coloring hello kitty` (4,400)
+- **Also target:** `coloring pages hello kitty` (74,000), `hello kitty print coloring pages` (74,000), `hello kitty coloring pages to color` (74,000), `hello kitty printing coloring pages` (74,000), `hello kitty printable coloring pages` (74,000), `coloring book hello kitty` (74,000), `hello kitty characters coloring pages` (74,000), `coloring pages kitties` (18,100), `coloring pages kitty` (18,100), `free hello kitty coloring book` (6,600), `coloring pages hello kitty and friends` (6,600)
 
 ## ✅ Halloween Coloring Pages
 `slug: halloween-coloring-pages` · **Collection (category)** · _exists as `halloween-drawing-ideas-for-beginners` → refresh/expand_
@@ -43,10 +31,10 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Also target:** `coloring pages halloween` (74,000), `coloring book halloween` (74,000), `halloween coloring pages printable` (27,100), `halloween coloring pages print` (27,100), `coloring pages about halloween` (27,100), `free halloween coloring book` (9,900), `printable halloween coloring book` (8,100), `free printable halloween coloring book` (6,600), `disney halloween coloring book` (4,400), `halloween coloring pages for adults pdf` (40), `unicorn coloring pages halloween` (10)
 
 ## ✅ Flower Coloring Pages
-`slug: flower-coloring-pages` · **Collection (category)** · _exists as `flower-bouquet` → refresh/expand_
+`slug: flower-coloring-pages` · **Collection (category)** · _exists as `easy-and-magical-flower-drawing-ideas` → refresh/expand_
 
 - **Primary:** `flower coloring pages` — vol **60,500**/mo · KD **0** · informational
-- **Also target:** `coloring book page flower` (60,500), `flower coloring pages to print` (60,500), `coloring pages about flowers` (60,500), `printable flower coloring book` (8,100), `free flower coloring book pages` (3,600), `free flower coloring book` (3,600), `free printable coloring pages flowers` (2,900), `coloring book flower` (1,300)
+- **Also target:** `coloring book page flower` (60,500), `flower coloring pages to print` (60,500), `coloring pages floral` (60,500), `coloring pages about flowers` (60,500), `printable flower coloring book` (8,100), `adult coloring book pages flowers` (5,400), `free flower coloring book pages` (3,600), `free flower coloring book` (3,600), `free printable coloring pages flowers` (2,900), `coloring book flower` (1,300)
 
 ## 🆕 Pokemon Coloring Pages
 `slug: pokemon-coloring-pages` · **Collection (category)**
@@ -71,22 +59,17 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `adorable coloring pages` — vol **60,500**/mo · KD **7** · informational
 
-## 🆕 Floral Coloring Pages
-`slug: floral-coloring-pages` · **Collection (category)**
-
-- **Primary:** `floral coloring pages` — vol **60,500**/mo · KD **2** · informational
-
 ## ✅ Unicorn Coloring Pages
-`slug: unicorn-coloring-pages` · **Collection (category)** · _exists as `baby-unicorn-with-stars` → refresh/expand_
+`slug: unicorn-coloring-pages` · **Collection (category)** · _exists as `unicorn-activities-for-kids` → refresh/expand_
 
 - **Primary:** `unicorn coloring pages` — vol **49,500**/mo · KD **0** · informational
-- **Also target:** `print unicorn coloring pages` (49,500), `unicorn printable coloring pages` (49,500), `coloring book pages unicorn` (49,500), `free unicorn coloring pages` (6,600), `unicorn coloring sheet` (5,400), `free printable coloring pages unicorn` (4,400), `unicorn academy coloring pages` (2,400), `cute unicorn coloring pages` (1,600), `unicorn coloring book` (720), `unicorn coloring pages printable pdf` (590), `unicorn mermaid coloring pages` (590)
+- **Also target:** `print unicorn coloring pages` (49,500), `unicorn printable coloring pages` (49,500), `coloring book pages unicorn` (49,500), `unicornio coloring pages` (14,800), `free unicorn coloring pages` (6,600), `unicorn coloring sheet` (5,400), `free printable coloring pages unicorn` (4,400), `unicorn academy coloring pages` (2,400), `cute unicorn coloring pages` (1,600), `unicorn coloring book` (720), `unicorn coloring pages printable pdf` (590)
 
 ## 🆕 Dinosaur Coloring Pages
 `slug: dinosaur-coloring-pages` · **Collection (category)**
 
 - **Primary:** `dinosaur coloring pages` — vol **49,500**/mo · KD **0** · informational
-- **Also target:** `dinosaur coloring book printable` (6,600), `dinosaur coloring pages printable` (6,600), `printable cute dinosaur coloring pages` (90), `free printable coloring pages dinosaur` (90)
+- **Also target:** `coloring book pages dinosaurs` (49,500), `coloring pages dino` (49,500), `dinosaur coloring book printable` (6,600), `dinosaur coloring pages printable` (6,600), `printable cute dinosaur coloring pages` (90), `free printable coloring pages dinosaur` (90)
 
 ## 🆕 Spider-man Coloring Pages
 `slug: spider-man-coloring-pages` · **Collection (category)**
@@ -94,32 +77,17 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `spider-man coloring pages` — vol **49,500**/mo · KD **0** · informational
 - **Also target:** `spider-man coloring book pages` (12,100), `spider-man coloring sheets` (8,100), `spider-man printable coloring book` (2,400), `printable spider-man coloring pages` (2,400), `spider-man coloring book` (1,600), `spider-man printable coloring pages` (260), `spider-man coloring pages easy` (50)
 
-## 🆕 Summertime Coloring Pages
-`slug: summertime-coloring-pages` · **Collection (category)**
-
-- **Primary:** `summertime coloring pages` — vol **49,500**/mo · KD **5** · informational
-
-## 🆕 Dinosaurs Coloring Pages
-`slug: dinosaurs-coloring-pages` · **Collection (category)**
-
-- **Primary:** `dinosaurs coloring pages` — vol **49,500**/mo · KD **2** · informational
-
 ## 🆕 Summer Coloring Pages
 `slug: summer-coloring-pages` · **Collection (category)**
 
 - **Primary:** `summer coloring pages` — vol **49,500**/mo · KD **0** · informational
-- **Also target:** `coloring book pages summer` (49,500), `coloring book summer` (49,500), `coloring pages of summer season` (49,500), `summer scene coloring pages` (49,500), `coloring pages about summer` (49,500), `summer fun coloring pages` (49,500), `summer holiday coloring pages` (49,500), `printable coloring pages summer` (2,400), `coloring book jade summer` (1,300), `easy summer coloring pages printable` (50)
+- **Also target:** `coloring pages summer` (49,500), `coloring book pages summer` (49,500), `coloring book summer` (49,500), `coloring pages of summer season` (49,500), `summer scene coloring pages` (49,500), `coloring pages about summer` (49,500), `summer fun coloring pages` (49,500), `summer holiday coloring pages` (49,500), `printable coloring pages summer` (2,400), `coloring book jade summer` (1,300), `easy summer coloring pages printable` (50)
 
 ## 🆕 Stitch Coloring Pages
 `slug: stitch-coloring-pages` · **Collection (category)**
 
 - **Primary:** `stitch coloring pages` — vol **49,500**/mo · KD **0** · informational
-- **Also target:** `stitch disney coloring pages` (49,500), `coloring pages lilo and stitch` (22,200), `stitch coloring pages printable` (6,600), `stitch coloring book` (1,300), `stitch and angel coloring pages printable` (260), `free printable coloring pages stitch` (170)
-
-## 🆕 Dino Coloring Pages
-`slug: dino-coloring-pages` · **Collection (category)**
-
-- **Primary:** `dino coloring pages` — vol **49,500**/mo · KD **0** · informational
+- **Also target:** `stitch disney coloring pages` (49,500), `lilo coloring pages` (22,200), `coloring pages lilo and stitch` (22,200), `stitch coloring pages printable` (6,600), `stitch coloring book` (1,300), `stitch and angel coloring pages printable` (260), `free printable coloring pages stitch` (170)
 
 ## 🆕 Spider Coloring Pages
 `slug: spider-coloring-pages` · **Collection (category)**
@@ -127,40 +95,23 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `spider coloring pages` — vol **49,500**/mo · KD **0** · informational
 - **Also target:** `spider coloring pages` (4,400), `spider-man coloring book` (1,600), `spider printable coloring pages` (320)
 
-## 🆕 Autumn Coloring Pages
-`slug: autumn-coloring-pages` · **Collection (category)**
+## 🆕 Fall Coloring Pages
+`slug: fall-coloring-pages` · **Collection (category)**
 
-- **Primary:** `autumn coloring pages` — vol **40,500**/mo · KD **0** · informational
-- **Also target:** `autumn fall coloring pages` (40,500), `printable autumn coloring` (4,400), `autumn coloring book pages` (10), `autumn leaves coloring pages printable` (10)
+- **Primary:** `fall coloring pages` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `coloring pages fall` (40,500), `fall coloring book pages` (40,500), `coloring book fall` (40,500), `autumn fall coloring pages` (40,500), `coloring pages about fall` (40,500), `fall coloring sheets` (12,100), `fall coloring book printable` (4,400), `fall printable coloring pages` (4,400), `printable autumn coloring` (4,400), `color pages fall printable` (4,400), `free printable fall coloring pages` (2,900)
 
 ## ✅ Cat Coloring Pages
 `slug: cat-coloring-pages` · **Collection (category)** · _exists as `cozy-cat-by-the-window` → refresh/expand_
 
 - **Primary:** `cat coloring pages` — vol **40,500**/mo · KD **0** · informational
-- **Also target:** `coloring pages cat` (40,500), `kitten cat coloring pages` (18,100), `pete the cat coloring book` (4,400), `cat in the hat coloring book` (2,400), `free printable coloring pages of cats` (1,900)
-
-## 🆕 Fall Coloring Pages
-`slug: fall-coloring-pages` · **Collection (category)**
-
-- **Primary:** `fall coloring pages` — vol **40,500**/mo · KD **0** · informational
-- **Also target:** `fall coloring book pages` (40,500), `coloring book fall` (40,500), `coloring pages about fall` (40,500), `fall coloring sheets` (12,100), `fall coloring book printable` (4,400), `fall printable coloring pages` (4,400), `color pages fall printable` (4,400), `free printable fall coloring pages` (2,900), `cute fall coloring pages` (2,900), `fall leaves coloring book` (1,600), `fall leaves coloring pages` (1,600)
+- **Also target:** `coloring pages cat` (40,500), `coloring pages kitten` (18,100), `kitten coloring pages to print` (18,100), `kitten coloring book pages` (18,100), `kitten cat coloring pages` (18,100), `pete the cat coloring book` (4,400), `cat in the hat coloring book` (2,400), `free printable coloring pages of cats` (1,900), `free printable coloring pages kittens` (390)
 
 ## ✅ Princess Coloring Pages
 `slug: princess-coloring-pages` · **Collection (category)** · _exists as `princess-dress` → refresh/expand_
 
 - **Primary:** `princess coloring pages` — vol **40,500**/mo · KD **0** · informational
 - **Also target:** `coloring pages princess` (40,500), `coloring pages of princesses` (40,500), `coloring book pages disney princesses` (12,100), `coloring pages disney princess` (12,100), `disney princess coloring book pages` (12,100), `princesses disney coloring pages` (12,100), `printable princess coloring book` (6,600), `princess coloring pages printable` (6,600), `princess coloring book free` (3,600), `disney princess coloring book` (1,300), `disney princesses coloring book` (1,300)
-
-## 🆕 Children Coloring Pages
-`slug: children-coloring-pages` · **Collection (category)**
-
-- **Primary:** `children coloring pages` — vol **40,500**/mo · KD **59** · informational
-- **Also target:** `children's colouring printable pages` (18,100), `printable children's coloring pages` (0)
-
-## 🆕 Simply Coloring Pages
-`slug: simply-coloring-pages` · **Collection (category)**
-
-- **Primary:** `simply coloring pages` — vol **40,500**/mo · KD **0** · informational
 
 ## 🆕 Labubu Coloring Pages
 `slug: labubu-coloring-pages` · **Collection (category)**
@@ -172,13 +123,13 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 `slug: animal-coloring-pages` · **Collection (category)**
 
 - **Primary:** `animal coloring pages` — vol **33,100**/mo · KD **0** · informational
-- **Also target:** `animal coloring pages to print` (33,100), `coloring book pages animals` (33,100), `coloring pages about animals` (33,100), `ocean animal coloring book` (6,600), `coloring book animals printable` (4,400), `animal coloring pages printable` (4,400), `farm animal coloring book pages` (3,600), `free animal coloring book pages` (2,900), `coloring book animals free` (2,900), `free printable coloring pages animals` (1,900), `coloring pages zoo animals` (1,900)
+- **Also target:** `animal coloring pages to print` (33,100), `coloring book pages animals` (33,100), `coloring pages about animals` (33,100), `ocean animal coloring book` (6,600), `coloring book animals printable` (4,400), `animal coloring pages printable` (4,400), `farm animal coloring book pages` (3,600), `free animal coloring book pages` (2,900), `coloring book animals free` (2,900), `adult coloring book pages animals` (2,400), `free printable coloring pages animals` (1,900)
 
 ## 🆕 Spring Coloring Pages
 `slug: spring-coloring-pages` · **Collection (category)**
 
 - **Primary:** `spring coloring pages` — vol **33,100**/mo · KD **0** · informational
-- **Also target:** `coloring pages spring` (33,100), `spring printable coloring pages` (33,100), `spring season coloring pages` (33,100), `spring time coloring pages` (33,100), `spring coloring sheets` (6,600), `free printable coloring pages spring` (4,400), `spring coloring pages for adults` (880), `spring coloring sheets printable` (320), `coloring pages free spring` (50)
+- **Also target:** `coloring pages springtime` (33,100), `coloring pages spring` (33,100), `spring printable coloring pages` (33,100), `spring season coloring pages` (33,100), `spring time coloring pages` (33,100), `spring coloring sheets` (6,600), `free printable coloring pages spring` (4,400), `spring coloring pages for adults` (880), `spring coloring sheets printable` (320), `coloring pages free spring` (50)
 
 ## 🆕 Easter Coloring Pages
 `slug: easter-coloring-pages` · **Collection (category)**
@@ -197,11 +148,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `minecraft coloring pages` — vol **33,100**/mo · KD **0** · informational
 - **Also target:** `minecraft coloring book pages` (33,100), `minecraft coloring book free` (4,400), `minecraft coloring book printable` (2,900), `coloring book minecraft` (1,300)
-
-## 🆕 Springtime Coloring Pages
-`slug: springtime-coloring-pages` · **Collection (category)**
-
-- **Primary:** `springtime coloring pages` — vol **33,100**/mo · KD **1** · informational
 
 ## 🆕 Mario Coloring Pages
 `slug: mario-coloring-pages` · **Collection (category)**
@@ -233,10 +179,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `disney coloring pages` — vol **27,100**/mo · KD **0** · informational
 - **Also target:** `coloring book pages disney` (27,100), `disney coloring pages to color` (27,100), `disney coloring pages to print` (27,100), `disney coloring pages disney` (27,100), `coloring pages from disney` (27,100), `walt disney coloring pages` (27,100), `disney elsa coloring pages` (22,200), `free disney coloring book` (4,400), `coloring book printouts disney` (4,400), `free disney coloring book pages` (4,400), `printable disney coloring book` (4,400)
 
-## 🆕 Wintertime Coloring Pages
-`slug: wintertime-coloring-pages` · **Collection (category)**
+## 🆕 Winter Coloring Pages
+`slug: winter-coloring-pages` · **Collection (category)**
 
-- **Primary:** `wintertime coloring pages` — vol **27,100**/mo · KD **0** · informational
+- **Primary:** `winter coloring pages` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `winter printable coloring pages` (27,100), `coloring pages winter` (27,100), `coloring book pages winter` (27,100), `coloring book winter` (27,100), `winter activities coloring pages` (27,100), `winter activity coloring pages` (27,100), `coloring pages about winter` (27,100)
 
 ## 🆕 Mandala Coloring Pages
 `slug: mandala-coloring-pages` · **Collection (category)**
@@ -244,34 +191,23 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `mandala coloring pages` — vol **27,100**/mo · KD **0** · informational
 - **Also target:** `coloring pages mandala` (27,100), `mandala art coloring pages` (27,100), `mandala coloring pages colored` (27,100), `printable mandala coloring book` (3,600), `printable mandala coloring pages` (3,600), `mandala coloring pages for adults` (3,600), `free mandala coloring book` (2,400), `free mandala coloring pages` (2,400), `monday mandala coloring` (2,400), `mandala coloring book` (1,900), `easy mandala coloring pages` (1,600)
 
-## 🆕 Doggie Coloring Pages
-`slug: doggie-coloring-pages` · **Collection (category)**
-
-- **Primary:** `doggie coloring pages` — vol **27,100**/mo · KD **0** · informational
-
 ## 🆕 Dog Coloring Pages
 `slug: dog-coloring-pages` · **Collection (category)**
 
 - **Primary:** `dog coloring pages` — vol **27,100**/mo · KD **0** · informational
-- **Also target:** `coloring book pages dog` (27,100), `coloring pages about dogs` (27,100), `puppy dog coloring pages` (18,100), `dog coloring pages printable` (4,400), `dog man coloring pages printable` (210), `free printable coloring pages dog` (40)
-
-## 🆕 Winter Coloring Pages
-`slug: winter-coloring-pages` · **Collection (category)**
-
-- **Primary:** `winter coloring pages` — vol **27,100**/mo · KD **0** · informational
-- **Also target:** `coloring pages winter` (27,100), `coloring book pages winter` (27,100), `coloring book winter` (27,100), `winter activities coloring pages` (27,100), `winter activity coloring pages` (27,100), `coloring pages about winter` (27,100)
+- **Also target:** `coloring pages dog` (27,100), `coloring book pages dog` (27,100), `coloring pages about dogs` (27,100), `puppy dog coloring pages` (18,100), `dog coloring pages printable` (4,400), `dog man coloring pages printable` (210), `free printable coloring pages dog` (40)
 
 ## 🆕 Car Coloring Pages
 `slug: car-coloring-pages` · **Collection (category)**
 
 - **Primary:** `car coloring pages` — vol **22,200**/mo · KD **0** · informational
-- **Also target:** `coloring book pages cars` (22,200), `coloring pages about cars` (22,200), `cars mcqueen coloring pages` (14,800), `lightning mcqueen car coloring pages` (14,800), `lightning mcqueen cars 2 coloring pages` (14,800), `coloring police car pages` (2,900), `free car coloring book` (1,300), `easy car coloring pages` (170)
+- **Also target:** `coloring book pages cars` (22,200), `automotive coloring pages` (22,200), `automobile coloring pages` (22,200), `auto coloring pages` (22,200), `coloring pages about cars` (22,200), `cars mcqueen coloring pages` (14,800), `lightning mcqueen car coloring pages` (14,800), `lightning mcqueen cars 2 coloring pages` (14,800), `coloring police car pages` (2,900), `free car coloring book` (1,300), `easy car coloring pages` (170)
 
 ## 🆕 Spongebob Coloring Pages
 `slug: spongebob-coloring-pages` · **Collection (category)**
 
 - **Primary:** `spongebob coloring pages` — vol **22,200**/mo · KD **0** · informational
-- **Also target:** `coloring book pages spongebob` (22,200), `coloring pages spongebob characters` (22,200), `coloring pages spongebob squarepants` (22,200), `coloring book spongebob` (1,600), `coloring book spongebob squarepants` (1,600)
+- **Also target:** `coloring book pages spongebob` (22,200), `spongebob coloring pages` (22,200), `coloring pages spongebob characters` (22,200), `coloring pages spongebob squarepants` (22,200), `coloring book spongebob` (1,600), `coloring book spongebob squarepants` (1,600)
 
 ## 🆕 Elsa Coloring Pages
 `slug: elsa-coloring-pages` · **Collection (category)**
@@ -285,36 +221,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `horse coloring pages` — vol **22,200**/mo · KD **0** · informational
 - **Also target:** `coloring pages horse` (22,200), `printable horse coloring book` (2,900), `horse coloring book pages free` (1,600), `coloring book horse` (480), `free printable coloring pages horses` (390)
 
-## 🆕 Automotive Coloring Pages
-`slug: automotive-coloring-pages` · **Collection (category)**
+## 🆕 Numbers Coloring Pages
+`slug: numbers-coloring-pages` · **Collection (category)**
 
-- **Primary:** `automotive coloring pages` — vol **22,200**/mo · KD **0** · informational
-
-## 🆕 Lilo Coloring Pages
-`slug: lilo-coloring-pages` · **Collection (category)**
-
-- **Primary:** `lilo coloring pages` — vol **22,200**/mo · KD **0** · informational
-
-## 🆕 Number Coloring Pages
-`slug: number-coloring-pages` · **Collection (category)**
-
-- **Primary:** `number coloring pages` — vol **22,200**/mo · KD **0** · informational
-- **Also target:** `coloring book by number` (8,100), `color by number coloring book for adults` (4,400), `coloring pages by number` (2,900), `coloring book color by number` (1,600), `colour by number coloring book` (1,600), `free online coloring for adults by number` (390), `free printable coloring pages numbers` (260), `coloring pages number blocks` (70)
-
-## 🆕 Automobile Coloring Pages
-`slug: automobile-coloring-pages` · **Collection (category)**
-
-- **Primary:** `automobile coloring pages` — vol **22,200**/mo · KD **0** · informational
-
-## 🆕 Auto Coloring Pages
-`slug: auto-coloring-pages` · **Collection (category)**
-
-- **Primary:** `auto coloring pages` — vol **22,200**/mo · KD **0** · informational
-
-## 🆕 Pic Coloring Pages
-`slug: pic-coloring-pages` · **Collection (category)**
-
-- **Primary:** `pic coloring pages` — vol **22,200**/mo · KD **33** · informational
+- **Primary:** `numbers coloring pages` — vol **22,200**/mo · KD **0** · informational
+- **Also target:** `coloring book by number` (8,100), `adult coloring book by number` (4,400), `color by number coloring book for adults` (4,400), `coloring pages by number` (2,900), `coloring book color by number` (1,600), `colour by number coloring book` (1,600), `free online coloring for adults by number` (390), `free printable coloring pages numbers` (260), `coloring pages number blocks` (70)
 
 ## 🆕 Truck Coloring Pages
 `slug: truck-coloring-pages` · **Collection (category)**
@@ -322,33 +233,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `truck coloring pages` — vol **22,200**/mo · KD **0** · informational
 - **Also target:** `monster truck coloring pages to print` (22,200), `monster truck coloring book pages` (22,200), `coloring book monster truck` (22,200), `monster jam truck coloring pages` (22,200), `coloring book pages trucks` (8,100), `coloring pages trucks` (8,100), `coloring book fire truck` (5,400), `semi truck coloring book` (1,600), `free printable coloring pages trucks` (320)
 
-## 🆕 Bob Sponge Coloring Pages
-`slug: bob-sponge-coloring-pages` · **Collection (category)**
-
-- **Primary:** `bob sponge coloring pages` — vol **22,200**/mo · KD **0** · informational
-
-## 🆕 Kitty Coloring Pages
-`slug: kitty-coloring-pages` · **Collection (category)**
-
-- **Primary:** `kitty coloring pages` — vol **18,100**/mo · KD **0** · informational
-- **Also target:** `coloring pages kitty` (18,100)
-
 ## 🆕 Anime Coloring Pages
 `slug: anime-coloring-pages` · **Collection (category)**
 
 - **Primary:** `anime coloring pages` — vol **18,100**/mo · KD **0** · informational
 - **Also target:** `anime online coloring pages` (18,100), `anime coloring book pages` (18,100), `coloring book anime` (1,900)
-
-## ✅ Kitten Coloring Pages
-`slug: kitten-coloring-pages` · **Collection (category)** · _exists as `girl-and-her-kitten` → refresh/expand_
-
-- **Primary:** `kitten coloring pages` — vol **18,100**/mo · KD **0** · informational
-- **Also target:** `kitten coloring pages to print` (18,100), `kitten coloring book pages` (18,100), `free printable coloring pages kittens` (390)
-
-## 🆕 Teenager Coloring Pages
-`slug: teenager-coloring-pages` · **Collection (category)**
-
-- **Primary:** `teenager coloring pages` — vol **18,100**/mo · KD **8** · informational
 
 ## 🆕 Barbie Coloring Pages
 `slug: barbie-coloring-pages` · **Collection (category)**
@@ -374,12 +263,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `puppy coloring pages` — vol **18,100**/mo · KD **0** · informational
 - **Also target:** `coloring pages puppies` (18,100), `coloring book pages puppy` (18,100), `coloring book puppy` (18,100), `puppy coloring pages printable` (2,900), `cute puppy printable coloring pages` (260)
 
-## 🆕 Teenage Coloring Pages
-`slug: teenage-coloring-pages` · **Collection (category)**
-
-- **Primary:** `teenage coloring pages` — vol **18,100**/mo · KD **3** · informational
-- **Also target:** `teenage girl coloring pages for teens` (0), `coloring pages for teenage girl easy` (0), `coloring pages for teenage girl` (0)
-
 ## ✅ Rainbow Coloring Pages
 `slug: rainbow-coloring-pages` · **Collection (category)** · _exists as `rainbow-unicorn` → refresh/expand_
 
@@ -396,19 +279,13 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 `slug: animated-coloring-pages` · **Collection (category)**
 
 - **Primary:** `animated coloring pages` — vol **18,100**/mo · KD **0** · informational
-- **Also target:** `animated coloring book` (1,900)
+- **Also target:** `animation coloring pages` (18,100), `animation coloring book` (1,900), `animated coloring book` (1,900)
 
 ## 🆕 Axolotl Coloring Pages
 `slug: axolotl-coloring-pages` · **Collection (category)**
 
 - **Primary:** `axolotl coloring pages` — vol **18,100**/mo · KD **0** · informational
 - **Also target:** `free printable coloring pages axolotl` (40)
-
-## 🆕 Animation Coloring Pages
-`slug: animation-coloring-pages` · **Collection (category)**
-
-- **Primary:** `animation coloring pages` — vol **18,100**/mo · KD **0** · informational
-- **Also target:** `animation coloring book` (1,900)
 
 ## 🆕 Squishmallow Coloring Pages
 `slug: squishmallow-coloring-pages` · **Collection (category)**
@@ -434,11 +311,23 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `pumpkin coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `pumpkin coloring pages to print` (14,800), `pumpkin coloring book page` (14,800), `coloring book pumpkin` (14,800), `printable pumpkin coloring pages` (1,300), `free printable coloring pages pumpkin` (880)
 
+## 🆕 FNAF Coloring Pages
+`slug: fnaf-coloring-pages` · **Collection (category)**
+
+- **Primary:** `fnaf coloring pages` — vol **14,800**/mo · KD **0** · informational
+- **Also target:** `coloring pages 5 nights at freddy's` (14,800), `fnaf coloring book` (1,300), `printable fnaf coloring pages` (390)
+
 ## 🆕 Mcqueen Coloring Pages
 `slug: mcqueen-coloring-pages` · **Collection (category)**
 
 - **Primary:** `mcqueen coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `coloring pages lightning mcqueen` (14,800), `coloring book lightning mcqueen` (14,800), `flash mcqueen coloring pages` (14,800), `mcqueen coloring pages printable` (590)
+
+## 🆕 My Little Pony Coloring Pages
+`slug: my-little-pony-coloring-pages` · **Collection (category)**
+
+- **Primary:** `my little pony coloring pages` — vol **14,800**/mo · KD **0** · informational
+- **Also target:** `coloring pages my little pony` (14,800), `my little pony coloring book page` (14,800), `my little pony coloring book` (14,800), `coloring book my little pony` (14,800), `my little pony friendship is magic coloring pages` (14,800), `coloring book pony` (1,900), `my little pony coloring pages printable` (880)
 
 ## 🆕 Santa Coloring Pages
 `slug: santa-coloring-pages` · **Collection (category)**
@@ -446,34 +335,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `santa coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `santa coloring book pages` (14,800), `coloring book santa` (14,800), `coloring pages santa claus` (14,800), `coloring book santa claus` (14,800)
 
-## 🆕 Saint Coloring Pages
-`slug: saint-coloring-pages` · **Collection (category)**
-
-- **Primary:** `saint coloring pages` — vol **14,800**/mo · KD **0** · informational
-- **Also target:** `saint coloring pages printable` (40)
-
-## 🆕 Mlp Coloring Pages
-`slug: mlp-coloring-pages` · **Collection (category)**
-
-- **Primary:** `mlp coloring pages` — vol **14,800**/mo · KD **0** · informational
-- **Also target:** `coloring book mlp` (14,800)
-
-## 🆕 Unicornio Coloring Pages
-`slug: unicornio-coloring-pages` · **Collection (category)**
-
-- **Primary:** `unicornio coloring pages` — vol **14,800**/mo · KD **0** · informational
-
 ## 🆕 Turkey Coloring Pages
 `slug: turkey-coloring-pages` · **Collection (category)**
 
 - **Primary:** `turkey coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `turkey coloring pages printable` (14,800), `coloring book pages turkey` (8,100), `coloring book turkey` (8,100), `simple turkey coloring pages printable` (10)
-
-## 🆕 Fnaf Coloring Pages
-`slug: fnaf-coloring-pages` · **Collection (category)**
-
-- **Primary:** `fnaf coloring pages` — vol **14,800**/mo · KD **0** · informational
-- **Also target:** `fnaf coloring book` (1,300), `printable fnaf coloring pages` (390)
 
 ## 🆕 Sprunki Coloring Pages
 `slug: sprunki-coloring-pages` · **Collection (category)**
@@ -493,28 +359,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `birthday coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `happy birthday coloring pages to print` (14,800), `happy birthday coloring book page` (14,800), `coloring book happy birthday` (14,800), `birthday coloring book pages` (6,600), `coloring book birthday cake` (3,600), `free printable coloring pages happy birthday` (30)
 
-## 🆕 Pony Coloring Pages
-`slug: pony-coloring-pages` · **Collection (category)**
-
-- **Primary:** `pony coloring pages` — vol **14,800**/mo · KD **0** · informational
-- **Also target:** `coloring pages my little pony` (14,800), `my little pony coloring book page` (14,800), `my little pony coloring book` (14,800), `my little pony friendship is magic coloring pages` (14,800), `coloring book pony` (1,900), `my little pony coloring pages printable` (880)
-
 ## 🆕 Coco Wyo Coloring Pages
 `slug: coco-wyo-coloring-pages` · **Collection (category)**
 
 - **Primary:** `coco wyo coloring pages` — vol **14,800**/mo · KD **0** · informational
 - **Also target:** `coloring pages coco wyo` (1,600), `coco wyo printable coloring pages` (1,300)
-
-## 🆕 Night At Freddy Coloring Pages
-`slug: night-at-freddy-coloring-pages` · **Collection (category)**
-
-- **Primary:** `night at freddy coloring pages` — vol **14,800**/mo · KD **0** · informational
-
-## 🆕 Five Night At Coloring Pages
-`slug: five-night-at-coloring-pages` · **Collection (category)**
-
-- **Primary:** `five night at coloring pages` — vol **14,800**/mo · KD **0** · informational
-- **Also target:** `five nights at freddy coloring book` (1,300)
 
 ## 🆕 St Patrick Coloring Pages
 `slug: st-patrick-coloring-pages` · **Collection (category)**
@@ -543,8 +392,8 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 ## 🆕 Funny Coloring Pages
 `slug: funny-coloring-pages` · **Collection (category)**
 
-- **Primary:** `funny coloring pages` — vol **12,100**/mo · KD **4** · informational
-- **Also target:** `funny coloring pages printable` (320)
+- **Primary:** `funny coloring pages` — vol **12,100**/mo · KD **0** · informational
+- **Also target:** `funny adult coloring pages` (3,600), `funny adult coloring pages printable` (590), `funny coloring pages printable` (320), `funny adult coloring pages pdf` (90)
 
 ## 🆕 Minion Coloring Pages
 `slug: minion-coloring-pages` · **Collection (category)**
@@ -570,12 +419,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `frozen coloring pages` — vol **12,100**/mo · KD **0** · informational
 - **Also target:** `frozen coloring book printable` (1,900), `frozen coloring book free` (1,300)
 
-## 🆕 App Coloring Pages
-`slug: app-coloring-pages` · **Collection (category)**
-
-- **Primary:** `app coloring pages` — vol **12,100**/mo · KD **0** · transactional
-- **Also target:** `coloring book app free` (3,600), `coloring book app for adults` (1,900), `coloring book app ipad` (1,900), `pigment coloring book app` (1,900), `free coloring book apps for adults` (1,600), `best coloring book app ipad` (1,300), `coloring pages app` (320), `turn pictures into coloring pages app` (110)
-
 ## 🆕 Harry Potter Coloring Pages
 `slug: harry-potter-coloring-pages` · **Collection (category)**
 
@@ -598,18 +441,13 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 `slug: alphabet-coloring-pages` · **Collection (category)**
 
 - **Primary:** `alphabet coloring pages` — vol **9,900**/mo · KD **0** · transactional
-- **Also target:** `alphabet coloring book pages` (9,900), `alphabet coloring pages` (9,900), `alphabet coloring book printable` (1,600), `alphabet coloring pages printable` (1,600), `free printable alphabet coloring pages` (1,000), `free alphabet coloring pages` (720)
-
-## 🆕 Hero Coloring Pages
-`slug: hero-coloring-pages` · **Collection (category)**
-
-- **Primary:** `hero coloring pages` — vol **9,900**/mo · KD **0** · informational
-- **Also target:** `coloring book super hero` (9,900), `coloring book hero` (140), `coloring book hero chatgpt` (50)
+- **Also target:** `alphabet coloring book pages` (9,900), `alphabet coloring pages` (9,900), `abc coloring pages` (9,900), `alphabet coloring book printable` (1,600), `abc coloring book printable` (1,600), `alphabet coloring pages printable` (1,600), `free printable alphabet coloring pages` (1,000), `free alphabet coloring pages` (720), `coloring pages abc mouse` (70), `free printable coloring pages abc` (10)
 
 ## 🆕 Superhero Coloring Pages
 `slug: superhero-coloring-pages` · **Collection (category)**
 
 - **Primary:** `superhero coloring pages` — vol **9,900**/mo · KD **0** · informational
+- **Also target:** `superhero coloring book pages` (9,900), `coloring book super hero` (9,900), `coloring book superheroes` (9,900), `coloring book pages superheroes` (9,900), `coloring book hero` (140), `coloring book hero chatgpt` (50)
 
 ## 🆕 Turtle Coloring Pages
 `slug: turtle-coloring-pages` · **Collection (category)**
@@ -623,16 +461,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `godzilla coloring pages` — vol **9,900**/mo · KD **0** · informational
 - **Also target:** `godzilla coloring book` (9,900)
 
-## 🆕 Marker Coloring Pages
-`slug: marker-coloring-pages` · **Collection (category)**
-
-- **Primary:** `marker coloring pages` — vol **9,900**/mo · KD **0** · transactional
-- **Also target:** `coloring markers` (9,900), `best coloring book markers for adults` (3,600), `coloring book markers for adults` (1,900), `best coloring book markers` (1,900), `alcohol marker coloring book` (1,600), `dot marker coloring pages` (1,300), `coloring book for acrylic markers` (170), `coloring pages 3 marker challenge` (10)
-
 ## 🆕 Bobbie Coloring Pages
 `slug: bobbie-coloring-pages` · **Collection (category)**
 
 - **Primary:** `bobbie coloring pages` — vol **9,900**/mo · KD **0** · transactional
+- **Also target:** `boobie goods coloring book` (9,900)
 
 ## 🆕 Shark Coloring Pages
 `slug: shark-coloring-pages` · **Collection (category)**
@@ -645,28 +478,11 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `rabbit coloring pages` — vol **9,900**/mo · KD **4** · informational
 
-## 🆕 Superheroe Coloring Pages
-`slug: superheroe-coloring-pages` · **Collection (category)**
-
-- **Primary:** `superheroe coloring pages` — vol **9,900**/mo · KD **0** · informational
-- **Also target:** `coloring book pages superheroes` (9,900)
-
 ## ✅ Cozy Coloring Pages
 `slug: cozy-coloring-pages` · **Collection (category)** · _exists as `cozy-reading-nook` → refresh/expand_
 
 - **Primary:** `cozy coloring pages` — vol **9,900**/mo · KD **0** · informational
 - **Also target:** `cozy coloring pages` (9,900), `cozy friend coloring book` (5,400), `cozy corner coloring book` (2,900), `cozy cutie coloring book` (1,900), `cozy coloring pages printable` (1,000), `cute cozy coloring pages printable` (390), `cozy friends coloring pages printable` (390)
-
-## 🆕 Boobie Coloring Pages
-`slug: boobie-coloring-pages` · **Collection (category)**
-
-- **Primary:** `boobie coloring pages` — vol **9,900**/mo · KD **0** · transactional
-
-## 🆕 Abc Coloring Pages
-`slug: abc-coloring-pages` · **Collection (category)**
-
-- **Primary:** `abc coloring pages` — vol **9,900**/mo · KD **0** · informational
-- **Also target:** `abc coloring book printable` (1,600), `coloring pages abc mouse` (70), `free printable coloring pages abc` (10)
 
 ## 🆕 Transformer Coloring Pages
 `slug: transformer-coloring-pages` · **Collection (category)**
@@ -703,6 +519,204 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `penguin coloring pages` — vol **8,100**/mo · KD **0** · informational
 - **Also target:** `penguin coloring pages` (8,100), `penguin coloring pages printable` (720), `cute penguin coloring pages printable` (110)
 
+## 🆕 Rapunzel Coloring Pages
+`slug: rapunzel-coloring-pages` · **Collection (category)**
+
+- **Primary:** `rapunzel coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `rapunzel coloring book pages` (8,100), `coloring picture of rapunzel` (8,100), `rapunzel printable coloring pages` (480)
+
+## 🆕 Grinch Coloring Pages
+`slug: grinch-coloring-pages` · **Collection (category)**
+
+- **Primary:** `grinch coloring pages` — vol **8,100**/mo · KD **0** · informational
+
+## 🆕 Bear Coloring Pages
+`slug: bear-coloring-pages` · **Collection (category)**
+
+- **Primary:** `bear coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `panda bear coloring book` (4,400), `care bear coloring book pages` (3,600), `teddy bear coloring book pages` (1,600), `coloring book teddy bear` (1,600), `teddy bear coloring pages` (1,600)
+
+## 🆕 Naruto Coloring Pages
+`slug: naruto-coloring-pages` · **Collection (category)**
+
+- **Primary:** `naruto coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `coloring pages naruto` (8,100), `naruto coloring pages printable` (140)
+
+## 🆕 Frog Coloring Pages
+`slug: frog-coloring-pages` · **Collection (category)**
+
+- **Primary:** `frog coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `frog coloring pages printable` (590), `frog coloring book` (140)
+
+## 🆕 Goku Coloring Pages
+`slug: goku-coloring-pages` · **Collection (category)**
+
+- **Primary:** `goku coloring pages` — vol **8,100**/mo · KD **0** · transactional
+
+## 🆕 Bunny Coloring Pages
+`slug: bunny-coloring-pages` · **Collection (category)**
+
+- **Primary:** `bunny coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `bunny printable coloring pages` (1,600), `easy bunny coloring pages printable` (20)
+
+## 🆕 Beach Coloring Pages
+`slug: beach-coloring-pages` · **Collection (category)**
+
+- **Primary:** `beach coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `beach coloring pages` (8,100), `beach shells coloring pages` (2,400), `beach coloring pages for adults` (590), `beach scene coloring pages` (260)
+
+## 🆕 Wolf Coloring Pages
+`slug: wolf-coloring-pages` · **Collection (category)**
+
+- **Primary:** `wolf coloring pages` — vol **8,100**/mo · KD **2** · informational
+
+## ✅ Lion Coloring Pages
+`slug: lion-coloring-pages` · **Collection (category)** · _exists as `friendly-lion` → refresh/expand_
+
+- **Primary:** `lion coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `lion king coloring book pages` (4,400), `lion coloring pages printable` (590), `realistic lion coloring pages` (390)
+
+## 🆕 Shadow Coloring Pages
+`slug: shadow-coloring-pages` · **Collection (category)**
+
+- **Primary:** `shadow coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `super shadow coloring pages` (1,600), `coloring book of shadows` (320), `shadow coloring pages printable` (90), `coloring book of shadows green witch's herbal` (20)
+
+## 🆕 Letter Coloring Pages
+`slug: letter-coloring-pages` · **Collection (category)**
+
+- **Primary:** `letter coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `letter b coloring pages` (1,900), `letter c coloring pages` (1,900), `letter d coloring pages` (1,300), `letter h coloring pages` (1,300), `letter e coloring pages` (1,000), `letter l coloring pages` (880), `letter p coloring pages` (880), `letter f coloring pages` (880), `letter j coloring pages` (880), `coloring letters printable` (720), `letter z coloring pages` (480)
+
+## 🆕 Snake Coloring Pages
+`slug: snake-coloring-pages` · **Collection (category)**
+
+- **Primary:** `snake coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `snake coloring pages printable` (390)
+
+## 🆕 Melanie Martinez Coloring Pages
+`slug: melanie-martinez-coloring-pages` · **Collection (category)**
+
+- **Primary:** `melanie martinez coloring pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `melanie martinez coloring book colored` (8,100)
+
+## 🆕 Anatomy Coloring Pages
+`slug: anatomy-coloring-pages` · **Collection (category)**
+
+- **Primary:** `anatomy coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `anatomy coloring book kapit` (2,900), `anatomy and physiology coloring book marieb` (2,400), `coloring book human anatomy` (1,300), `netter's anatomy coloring book` (1,300)
+
+## 🆕 Bible Coloring Pages
+`slug: bible-coloring-pages` · **Collection (category)**
+
+- **Primary:** `bible coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `free bible coloring book` (1,300), `bible story coloring book` (1,300), `coloring book bible stories` (1,300), `coloring book pages bible stories` (1,300), `bible verse coloring pages for adults` (480), `bible coloring pages printable` (390)
+
+## 🆕 Ballerina Coloring Pages
+`slug: ballerina-coloring-pages` · **Collection (category)**
+
+- **Primary:** `ballerina coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `ballerina coloring pages` (6,600), `ballerina coloring pages printable` (320)
+
+## 🆕 Cow Coloring Pages
+`slug: cow-coloring-pages` · **Collection (category)**
+
+- **Primary:** `cow coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `cow coloring pages printable` (590), `coloring pages highland cow` (170), `cute cow coloring pages printable` (70), `free printable coloring pages highland cow` (10)
+
+## 🆕 Apple Coloring Pages
+`slug: apple-coloring-pages` · **Collection (category)**
+
+- **Primary:** `apple coloring pages` — vol **6,600**/mo · KD **0** · informational
+
+## 🆕 Jesus Coloring Pages
+`slug: jesus-coloring-pages` · **Collection (category)**
+
+- **Primary:** `jesus coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `jesus coloring book pages` (6,600), `jesus coloring pages` (6,600), `jesus coloring pages printable` (390), `free printable coloring pages jesus loves me` (140)
+
+## 🆕 Duck Coloring Pages
+`slug: duck-coloring-pages` · **Collection (category)**
+
+- **Primary:** `duck coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `duck coloring book page` (6,600), `duck coloring pages` (6,600), `duck coloring pages printable` (590)
+
+## 🆕 Monkey Coloring Pages
+`slug: monkey-coloring-pages` · **Collection (category)**
+
+- **Primary:** `monkey coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `monkey printable coloring pages` (590), `cute monkey coloring pages printable` (20)
+
+## 🆕 Hulk Coloring Pages
+`slug: hulk-coloring-pages` · **Collection (category)**
+
+- **Primary:** `hulk coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `hulk coloring book pages` (6,600)
+
+## 🆕 Kindergarten Coloring Pages
+`slug: kindergarten-coloring-pages` · **Collection (category)**
+
+- **Primary:** `kindergarten coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `free printable coloring pages kindergarten` (320)
+
+## ✅ Mushroom Coloring Pages
+`slug: mushroom-coloring-pages` · **Collection (category)** · _exists as `fairy-on-a-mushroom` → refresh/expand_
+
+- **Primary:** `mushroom coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `mushroom coloring pages` (6,600), `mushroom coloring pages cute` (720), `printable mushroom coloring pages` (480), `mushroom house coloring pages` (480), `mushroom coloring book` (260)
+
+## 🆕 Elf Coloring Pages
+`slug: elf-coloring-pages` · **Collection (category)**
+
+- **Primary:** `elf coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `elf coloring page` (6,600), `elf coloring sheets` (6,600), `printable elf coloring pages` (480)
+
+## ✅ Elephant Coloring Pages
+`slug: elephant-coloring-pages` · **Collection (category)** · _exists as `baby-elephant` → refresh/expand_
+
+- **Primary:** `elephant coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `coloring book pages elephant` (1,300), `elephant coloring pages printable` (590)
+
+## 🆕 Hot Wheel Coloring Pages
+`slug: hot-wheel-coloring-pages` · **Collection (category)**
+
+- **Primary:** `hot wheel coloring pages` — vol **6,600**/mo · KD **0** · informational
+
+## 🆕 Lisa Frank Coloring Pages
+`slug: lisa-frank-coloring-pages` · **Collection (category)**
+
+- **Primary:** `lisa frank coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `lisa frank coloring book pages` (5,400), `lisa frank printable coloring pages` (320)
+
+## 🆕 Father Day Coloring Pages
+`slug: father-day-coloring-pages` · **Collection (category)**
+
+- **Primary:** `father day coloring pages` — vol **6,600**/mo · KD **0** · informational
+
+## 🆕 House Coloring Pages
+`slug: house-coloring-pages` · **Collection (category)**
+
+- **Primary:** `house coloring pages` — vol **6,600**/mo · KD **0** · informational
+- **Also target:** `coloring book pages of houses` (3,600), `coloring pages houses` (3,600), `house printable coloring pages` (590), `gingerbread house coloring pages printable` (390), `coloring book houses` (210), `inside house coloring pages printable` (20), `free printable coloring pages house` (10)
+
+## 🆕 Ocean Coloring Pages
+`slug: ocean-coloring-pages` · **Collection (category)**
+
+- **Primary:** `ocean coloring pages` — vol **5,400**/mo · KD **0** · informational
+- **Also target:** `ocean coloring pages printable` (590)
+
+## 🆕 Cinderella Coloring Pages
+`slug: cinderella-coloring-pages` · **Collection (category)**
+
+- **Primary:** `cinderella coloring pages` — vol **5,400**/mo · KD **0** · informational
+- **Also target:** `cinderella coloring book page` (5,400), `cinderella coloring pages printable` (210)
+
+## 🆕 Giraffe Coloring Pages
+`slug: giraffe-coloring-pages` · **Collection (category)**
+
+- **Primary:** `giraffe coloring pages` — vol **5,400**/mo · KD **0** · informational
+- **Also target:** `coloring book giraffe` (5,400), `giraffe coloring pages printable` (390), `giraffe coloring pages for adults` (70)
+
 ## 🆕 Free Printable Coloring Pages
 `slug: free-printable-coloring-pages` · **Category landing**
 
@@ -713,22 +727,33 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 `slug: coloring-pages-for-adults` · **Category landing**
 
 - **Primary:** `coloring pages for adults` — vol **90,500**/mo · KD **0** · informational
-- **Also target:** `coloring book page for adults` (90,500), `coloring book for adults` (60,500), `coloring pages free for adults` (27,100), `printable coloring pages for adults` (27,100), `coloring book pages for adults printable` (27,100), `coloring pages for adults print` (27,100), `coloring book pages for adults free` (27,100), `coloring book for adults free` (27,100), `free printable coloring pages for adults` (14,800), `coloring pages for adults free to print` (14,800), `free printable coloring book pages for adults` (14,800)
+- **Also target:** `coloring book page for adults` (90,500), `adult coloring pages for adults` (90,500), `coloring book for adults` (60,500), `adult coloring book coloring books for adults` (60,500), `adult coloring book for adults` (60,500), `adult coloring book coloring book` (60,500), `adult colouring book coloring books` (60,500), `adult coloring book books` (60,500), `coloring pages free for adults` (27,100), `printable coloring pages for adults` (27,100), `coloring book pages for adults printable` (27,100)
 
 ## 🆕 Coloring Pages for Kids
 `slug: coloring-pages-for-kids` · **Category landing**
 
 - **Primary:** `free coloring pages for kids` — vol **40,500**/mo · KD **18** · informational
-- **Also target:** `coloring pages for kids` (0), `coloring pages for kids pdf` (0), `coloring for kids` (0), `printable coloring pages for kids` (0), `free printable kids coloring pages` (0), `coloring online for kids` (0)
+- **Also target:** `childrens coloring pages free` (40,500), `coloring pages for kids` (0), `coloring pages for kids pdf` (0), `coloring for kids` (0), `printable coloring pages for kids` (0), `free printable kids coloring pages` (0), `coloring online for kids` (0)
+
+## 🆕 Coloring Pages for Teens
+`slug: coloring-pages-for-teens` · **Category landing**
+
+- **Primary:** `coloring pages teens` — vol **18,100**/mo · KD **3** · informational
+- **Also target:** `coloring pages for teenagers` (18,100), `teenage coloring pages` (18,100), `coloring book pages for teens` (18,100), `printable coloring pages for teens` (1,600), `free printable coloring pages for teens` (1,000), `coloring pages for teens pdf` (170), `coloring book for teens` (110), `coloring pages for teens online` (50), `free printable coloring pages for teens pdf` (20), `coloring pages for teen boys` (0), `teenage girl coloring pages for teens` (0)
 
 ## 🆕 Online Coloring Pages
 `slug: online-coloring-pages` · **Category landing**
 
 - **Primary:** `coloring book online` — vol **12,100**/mo · KD **47** · informational
-- **Also target:** `online coloring pages` (12,100), `coloring online` (6,600), `coloring book pages online` (4,400), `online coloring sheets` (4,400), `coloring pages for teens online` (50)
+- **Also target:** `online coloring pages` (12,100), `coloring online` (6,600), `coloring book pages online` (4,400), `online coloring sheets` (4,400)
+
+## 🆕 Coloring Pages for Toddlers
+`slug: coloring-pages-for-toddlers` · **Category landing**
+
+- **Primary:** `preschool coloring book pages` — vol **8,100**/mo · KD **0** · informational
+- **Also target:** `coloring book preschool` (8,100), `preschool coloring pages pdf` (1,300), `preschool coloring pages pdf printable` (50), `free printable preschool coloring pages pdf` (50)
 
 ## 🆕 PDF Coloring Pages
 `slug: pdf-coloring-pages` · **Category landing**
 
-- **Primary:** `coloring book pages pdf` — vol **4,400**/mo · KD **11** · informational
-- **Also target:** `preschool coloring pages pdf` (1,300), `coloring pages for teens pdf` (170)
+- **Primary:** `coloring book pages pdf` — vol **4,400**/mo · KD **20** · informational

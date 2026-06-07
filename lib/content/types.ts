@@ -56,6 +56,20 @@ export const categorySchema = z.object({
   /** controls ordering in category grids (replaces the old `.order('name')`) */
   order: z.number().default(0),
   seoDetails: seoDetailsSchema.optional(),
+
+  /* --- tree / scale fields (url-structure-guide.md) --- */
+  /**
+   * 'subject' = a node in the theme tree (its URL nests under its `parent` chain).
+   * 'facet'   = a cross-cutting landing (audience/style/format) that aggregates
+   *             leaves by `facetTag` and lives flat at /coloring-pages/<slug>.
+   */
+  kind: z.enum(['subject', 'facet']).default('subject'),
+  /** parent collection slug; null = top-level theme. Only meaningful for `subject`. */
+  parent: z.string().nullable().default(null),
+  /** synonym slugs that 308-redirect into this collection's canonical path. */
+  aliases: z.array(z.string()).default([]),
+  /** for `facet` collections: the leaf tag this landing aggregates (e.g. 'kids'). */
+  facetTag: z.string().nullable().default(null),
 });
 export type Category = z.infer<typeof categorySchema>;
 
@@ -71,6 +85,13 @@ export const coloringPageSchema = z.object({
   image: z.string(),
   /** category slugs this page belongs to (the many-to-many edges live here) */
   categories: z.array(z.string()).default([]),
+  /**
+   * The ONE canonical home collection (a subject node). Drives the canonical URL
+   * (its ancestor chain + this slug). Falls back to categories[0] when null, so
+   * existing pages keep their current URLs without re-authoring. (See
+   * url-structure-guide.md §3 — replaces the order-dependent categories[0].)
+   */
+  subject: z.string().nullable().default(null),
   tags: z.array(z.string()).default([]),
   createdAt: z.string(),
   source: z.enum(['fal', 'supabase-migration', 'manual']).default('manual'),
