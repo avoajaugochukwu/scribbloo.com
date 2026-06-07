@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev | pino-pretty",
+    "validate": "node --import tsx scripts/validate-content.ts",
+    "prebuild": "node --import tsx scripts/validate-content.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

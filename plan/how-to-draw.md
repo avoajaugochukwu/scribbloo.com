@@ -95,7 +95,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Also target:** `how to draw 8 ball` (30)
 
 ## ✅ How to Draw Flower
-`slug: how-to-draw-flower` · **Tutorial (blog)** · _exists as `easy-and-magical-flower-drawing-ideas` → refresh/expand_
+`slug: how-to-draw-flower` · **Tutorial (blog)** · _exists as `flower-bouquet` → refresh/expand_
 
 - **Primary:** `how to draw flower` — vol **60,500**/mo · KD **0** · informational
 - **Also target:** `how to draw flower` (49,500), `how to draw floral` (49,500), `how to draw a good flower` (49,500), `how to draw simple flower` (9,900), `how to draw easy flower` (9,900), `how to draw a simple flower step by step` (9,900), `how to draw a flower easy step by step` (9,900), `how to draw flower easily` (9,900), `how to draw hibiscus flower` (9,900), `how to draw gumamela flower` (9,900), `how to draw a basic flower` (9,900)
@@ -273,7 +273,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Also target:** `easy dolphin drawing` (8,100)
 
 ## ✅ How to Draw Unicorn
-`slug: how-to-draw-unicorn` · **Tutorial (blog)** · _exists as `unicorn-activities-for-kids` → refresh/expand_
+`slug: how-to-draw-unicorn` · **Tutorial (blog)** · _exists as `rainbow-unicorn` → refresh/expand_
 
 - **Primary:** `how to draw unicorn` — vol **33,100**/mo · KD **2** · informational
 - **Also target:** `easy unicorn drawing` (9,900), `unicorn drawing for kids` (0)

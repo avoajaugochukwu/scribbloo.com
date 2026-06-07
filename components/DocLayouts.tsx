@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import PageBreadcrumb, { type CrumbItem } from '@/components/PageBreadcrumb';
 import PageHeading from '@/components/PageHeading';
+import { mdxComponents } from '@/components/mdx/MdxComponents';
 import type { Doc } from '@/lib/content/docs';
 
 /**
@@ -53,12 +55,12 @@ export function DocArticle({ doc, crumbs }: { doc: Doc; crumbs: CrumbItem[] }) {
     <div className="container mx-auto px-4 pb-8 md:pb-12">
       <PageBreadcrumb items={crumbs} />
       <PageHeading title={doc.title} subtitle={doc.subtitle ?? undefined} className="mb-8 md:mb-10" />
-      <article className="mx-auto max-w-2xl text-lg text-muted-foreground text-pretty">
-        {doc.description && <p className="text-xl text-foreground">{doc.description}</p>}
+      <article className="prose prose-lg mx-auto max-w-2xl text-pretty">
+        {doc.description && <p className="lead text-xl text-foreground">{doc.description}</p>}
         {doc.body ? (
-          <div className="mt-6 whitespace-pre-line">{doc.body}</div>
+          <MDXRemote source={doc.body} components={mdxComponents} />
         ) : (
-          <p className="mt-6 italic">Full content coming soon.</p>
+          <p className="mt-6 italic text-muted-foreground">Full content coming soon.</p>
         )}
       </article>
     </div>

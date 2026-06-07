@@ -12,9 +12,10 @@ see [Legacy pages](#9-legacy-pages-current-21).
 
 ## 1. Principles
 
-1. **Depth is data, not route files.** The category hierarchy lives in content frontmatter
-   (a `parent` chain), not in nested `[a]/[b]/[c]` folders. One catch-all route resolves any
-   depth. Adding a subcategory never touches routing code.
+1. **Depth is data, not route files.** The category hierarchy lives in the **content folder tree**
+   (`content/coloring-pages/<a>/<b>/…`), which mirrors the URL 1:1, not in nested `[a]/[b]/[c]`
+   route folders. One catch-all route maps URL path → file path. Adding a subcategory is a content
+   folder edit, never a routing change. *(IMPLEMENTED — folder-driven; see `lib/content/collections.ts`.)*
 2. **One canonical URL per thing.** Every leaf page resolves to exactly one path. No page is
    reachable at two indexable URLs. This is the rule that keeps us out of duplicate-content
    and cannibalization trouble.
@@ -94,20 +95,31 @@ One catch-all route under the namespace:
 app/coloring-pages/[[...path]]/page.tsx
 ```
 
-Resolution algorithm (`path` = array of segments):
+The content folder tree mirrors the URL, so the index is built by **walking the folders** once per
+process (memoized) — `_category.mdx` = a listing node, any other `*.mdx` = a leaf. Resolution
+algorithm (`path` = array of segments):
 
-1. `path` empty → render root hub.
-2. Look up `path` in the **collection tree** → if it's a node, render listing.
-3. Else treat last segment as a leaf slug whose parent path is `path[:-1]` → if found, render detail.
-4. Else check the **redirect/alias map** (§5) → 301 if matched.
-5. Else `notFound()`.
+1. `path` empty → render root hub (top-level folders + facets).
+2. `content/coloring-pages/<path>/_category.mdx` exists → render listing (children folders + leaves).
+3. `<path>` ends in `page/N` and the base is a listing → render that page (`page/1` → 308 to bare).
+4. `content/coloring-pages/<path>.mdx` exists → render leaf detail.
+5. last segment is a known unique leaf slug at a different path (legacy/secondary) → 308 to canonical.
+6. `<path>` matches a collection/facet **alias** → 308 to canonical.
+7. Else `notFound()`.
 
-`generateStaticParams()` walks the tree: emit every node path + every leaf path. All static, as today
-(`force-static`). Build cost is linear in (nodes + leaves), not the old category×page cross-product.
+`generateStaticParams()` walks the tree: every folder path + every leaf path + extra `page/N`. All
+static (`force-static`). Build cost is linear in (folders + leaves). Ancestry/breadcrumbs come free
+from the path — no `parent` field, and leaf slugs only need to be unique **within their folder**.
 
 **Pagination** for large listings is path-based, not query-string:
-`/coloring-pages/animals/dinosaurs/page/2`. (`?page=` is weaker for crawl/canonical.) Paginate any
-listing above ~48 items; `page/1` 301s to the bare listing.
+`/coloring-pages/animals/dinosaur/page/2`. (`?page=` is weaker for crawl/canonical.) `PAGE_SIZE`=48
+(one constant in `collections.ts`); page 1 is the bare URL and `/page/1` 308s to it. It's a pure
+render-time slice of the leaves in the folder — no page files. **Page ≥2 is `noindex, follow`** and
+self-canonical (thin pages stay out of the index; leaves still get crawled). *(IMPLEMENTED.)*
+
+**Validation gate** (`scripts/validate-content.ts`, wired as `prebuild`): the build FAILS on invalid
+frontmatter, a folder with leaves but no `_category.mdx`, a file/folder name collision, a missing
+image folder, or a facet with no `facetTag`. *(IMPLEMENTED.)*
 
 ---
 
@@ -173,33 +185,50 @@ kids", "cute coloring pages") without forcing every printable into an artificial
 
 ---
 
-## 7. Data model changes
+## 7. Data model (folder-driven — IMPLEMENTED)
 
-### Collections — `content/collections/*.mdx`
-(Rename/migrate from `content/categories/`. Add:)
+The folder **path** carries the hierarchy, so there is no `parent`/`subject`/`categories` field.
+A collection's metadata lives in `_category.mdx` inside its folder; a leaf is any other `*.mdx`.
+
+```
+content/coloring-pages/
+  animals/
+    _category.mdx              → /coloring-pages/animals (listing)
+    baby-elephant.mdx          → /coloring-pages/animals/baby-elephant (leaf)
+    dinosaur/
+      _category.mdx            → /coloring-pages/animals/dinosaur
+      t-rex.mdx                → /coloring-pages/animals/dinosaur/t-rex
+content/facets/
+  for-kids.mdx                 → /coloring-pages/for-kids (tag-driven, flat)
+```
 
 ```yaml
-slug: dinosaurs
-name: Dinosaurs
-kind: subject            # subject | facet
-parent: animals          # subject only; omit/null = top-level theme
-aliases: [dino, dinosaur]
+# content/coloring-pages/animals/dinosaur/_category.mdx
+slug: dinosaur                 # for metadata; the FOLDER defines the path
+name: Dinosaur
+aliases: [dino, dinosaurs]     # 308 to this folder's canonical path
 order: 12
-# existing: seoTitle, seoDescription, heroImage, thumbnailImage, seoDetails…
+# existing: seoTitle, seoMetaDescription, heroImage, thumbnailImage, seoDetails…
 ```
-
-### Leaf pages — `content/coloring-pages/*.mdx`
-Replace the `categories: []` array (whose order silently drove the canonical) with:
 
 ```yaml
-slug: t-rex-01
-subject: dinosaurs       # the ONE canonical tree home (was: categories[0])
-tags:                    # drives facet listings + related
-  - audience:kids
-  - style:cute
-  - dinosaurs
-# existing: title, description, image, source, …
+# content/coloring-pages/animals/dinosaur/t-rex.mdx  (filename = URL slug)
+slug: t-rex
+title: T-Rex
+image: t-rex
+tags: [kids, dinosaur]         # drives facet listings + related; NO subject/categories needed
+# existing: description, createdAt, source, …
 ```
+
+```yaml
+# content/facets/for-kids.mdx
+slug: for-kids
+name: For Kids
+facetTag: kids                 # aggregates every leaf whose tags include this
+```
+
+> Migration from the old flat-file + `parent` model was a one-shot script
+> (`scripts/migrate-to-folders.mjs`). Re-homing a page now = moving its file (git-tracked).
 
 `subject` → canonical path (resolved through the collection `parent` chain). `tags` → facet pages,
 related links, and internal linking. Order no longer affects URLs.
@@ -245,14 +274,16 @@ No dual rendering, no "old vs new" branching in the route.
 
 ---
 
-## 11. Implementation checklist (when we leave planning)
+## 11. Implementation status — DONE (folder model)
 
-1. Resolve [§10](#10-open-decisions).
-2. Migrate `content/categories/` → `content/collections/` with `kind`/`parent`/`aliases`.
-3. Add `subject` + `tags` to leaf MDX; drop `categories[]`.
-4. Build tree loader + path resolver in `lib/content/`.
-5. Replace `app/coloring-pages/[categorySlug]/...` with `app/coloring-pages/[[...path]]/page.tsx`.
-6. Generate alias + legacy 308s into `next.config.js redirects()`.
-7. Rewrite `app/sitemap.ts` for the tree + facets + namespaces.
-8. Add path-based pagination + breadcrumb JSON-LD helper.
-9. Stand up `/how-to-draw`, `/drawing-ideas`, `/tools` namespaces.
+All shipped:
+1. ✅ Content is the **folder tree** (`content/coloring-pages/<path>/_category.mdx` + leaves; facets in `content/facets/`). Migrated from the old flat `content/categories/` + `categories[]`.
+2. ✅ Folder-walking loader + resolver in `lib/content/collections.ts`.
+3. ✅ Catch-all `app/coloring-pages/[[...path]]/page.tsx` (listing / leaf / 308 / 404).
+4. ✅ Alias + legacy 308s in `next.config.js redirects()` (generated from `_category.mdx` aliases) + in-route.
+5. ✅ `app/sitemap.ts` derived from the tree + facets + namespaces (no paginated/alias/noindex URLs).
+6. ✅ Path-based pagination (`/…/page/N`, `PAGE_SIZE`=48, page ≥2 `noindex,follow`) + breadcrumb JSON-LD.
+7. ✅ `/how-to-draw`, `/drawing-ideas`, `/tools` namespaces (rich MDX via `DocArticle`).
+8. ✅ Validation gate (`scripts/validate-content.ts`, `prebuild`) + content writers refuse old-model output.
+
+Remaining open: [§10](#10-open-decisions) theme gaps; ISR vs force-static threshold; sitemap split at 50k.

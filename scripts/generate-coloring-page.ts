@@ -27,7 +27,7 @@ process.loadEnvFile?.('.env');
 
 interface ParsedArgs {
   title?: string;
-  categories: string[];
+  subject?: string;
   tags: string[];
   prompt?: string;
   force: boolean;
@@ -37,7 +37,6 @@ interface ParsedArgs {
 
 function parseArgs(argv: string[]): ParsedArgs {
   const out: ParsedArgs = {
-    categories: [],
     tags: [],
     force: false,
     dryRun: false,
@@ -57,8 +56,8 @@ function parseArgs(argv: string[]): ParsedArgs {
       case '--title':
         out.title = takeValue();
         break;
-      case '--categories':
-        out.categories = splitList(takeValue());
+      case '--subject':
+        out.subject = takeValue();
         break;
       case '--tags':
         out.tags = splitList(takeValue());
@@ -96,12 +95,13 @@ const USAGE = `
 generate-coloring-page — create a coloring page via fal.ai
 
 Usage:
-  npm run generate -- --title "<title>" --categories <c1,c2> --tags <t1,t2> [options]
+  npm run generate -- --title "<title>" --subject <folder/path> --tags <t1,t2> [options]
 
 Required:
   --title "<text>"          Page title (also used as the slug + default prompt).
-  --categories <c1,c2,...>  Comma-separated category slugs.
-  --tags <t1,t2,...>        Comma-separated tag names.
+  --subject <folder/path>   Collection folder this leaf belongs to (e.g. "animals"
+                            or "fantasy/unicorn"). Must already have _category.mdx.
+  --tags <t1,t2,...>        Comma-separated tag names (drive facet listings).
 
 Options:
   --prompt "<text>"         Override the generation prompt (defaults to --title).
@@ -128,7 +128,7 @@ async function main(): Promise<void> {
 
   const missing: string[] = [];
   if (!args.title) missing.push('--title');
-  if (args.categories.length === 0) missing.push('--categories');
+  if (!args.subject) missing.push('--subject');
   if (args.tags.length === 0) missing.push('--tags');
 
   if (missing.length > 0) {
@@ -139,16 +139,17 @@ async function main(): Promise<void> {
   }
 
   const title = args.title!;
+  const subject = args.subject!;
   const slug = slugify(title);
   const prompt = args.prompt ?? title;
 
-  const contentPath = path.join(paths.COLORING_PAGES_CONTENT_DIR, `${slug}.mdx`);
+  const contentPath = path.join(paths.COLORING_PAGES_CONTENT_DIR, ...subject.split('/'), `${slug}.mdx`);
   const imageDir = path.join(paths.COLORING_PAGE_IMAGES_DIR, slug);
 
   console.log('Plan:');
   console.log(`  title       : ${title}`);
   console.log(`  slug        : ${slug}`);
-  console.log(`  categories  : ${args.categories.join(', ')}`);
+  console.log(`  subject     : ${subject}`);
   console.log(`  tags        : ${args.tags.join(', ')}`);
   console.log(`  prompt      : ${prompt}`);
   console.log(`  full prompt : ${buildColoringPrompt(prompt)}`);
@@ -183,7 +184,7 @@ async function main(): Promise<void> {
     slug,
     title,
     description: null,
-    categories: args.categories,
+    subject,
     tags: args.tags,
     source: 'fal',
     falRequestId: requestId,

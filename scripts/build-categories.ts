@@ -74,6 +74,12 @@ const META: Record<string, CatMeta> = {
 };
 
 async function main() {
+  if (!process.argv.includes('--i-understand-legacy')) {
+    throw new Error(
+      'DEPRECATED: build-categories.ts writes the OLD content/categories/ dir. Under the folder model, ' +
+        'collections are content/coloring-pages/<path>/_category.mdx. Running this recreates the dead dir.',
+    );
+  }
   const dir = path.join(process.cwd(), 'content', 'categories');
   await fs.mkdir(dir, { recursive: true });
 

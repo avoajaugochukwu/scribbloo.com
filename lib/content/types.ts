@@ -40,7 +40,7 @@ export const seoDetailsSchema = z.object({
 export type SeoDetails = z.infer<typeof seoDetailsSchema>;
 
 /* -------------------------------------------------------------------------- */
-/* Category — content/categories/<slug>.mdx                                    */
+/* Collection — content/coloring-pages/<path>/_category.mdx (facets: content/facets/<slug>.mdx) */
 /* -------------------------------------------------------------------------- */
 
 export const categorySchema = z.object({
@@ -57,24 +57,19 @@ export const categorySchema = z.object({
   order: z.number().default(0),
   seoDetails: seoDetailsSchema.optional(),
 
-  /* --- tree / scale fields (url-structure-guide.md) --- */
-  /**
-   * 'subject' = a node in the theme tree (its URL nests under its `parent` chain).
-   * 'facet'   = a cross-cutting landing (audience/style/format) that aggregates
-   *             leaves by `facetTag` and lives flat at /coloring-pages/<slug>.
-   */
-  kind: z.enum(['subject', 'facet']).default('subject'),
-  /** parent collection slug; null = top-level theme. Only meaningful for `subject`. */
-  parent: z.string().nullable().default(null),
+  /* --- tree / scale fields (url-structure-guide.md) ---
+   * Hierarchy is folder-driven (the path IS the tree), so there is no `parent`/
+   * `kind` field — a folder with `_category.mdx` is a subject node; a file under
+   * content/facets/ is a facet. These two fields remain: */
   /** synonym slugs that 308-redirect into this collection's canonical path. */
   aliases: z.array(z.string()).default([]),
-  /** for `facet` collections: the leaf tag this landing aggregates (e.g. 'kids'). */
+  /** facets only (content/facets/*.mdx): the leaf tag this landing aggregates (e.g. 'kids'). */
   facetTag: z.string().nullable().default(null),
 });
 export type Category = z.infer<typeof categorySchema>;
 
 /* -------------------------------------------------------------------------- */
-/* Coloring page — content/coloring-pages/<slug>.mdx                           */
+/* Coloring page (leaf) — content/coloring-pages/<path>/<slug>.mdx             */
 /* -------------------------------------------------------------------------- */
 
 export const coloringPageSchema = z.object({
@@ -83,15 +78,8 @@ export const coloringPageSchema = z.object({
   description: z.string().nullable().default(null),
   /** folder name under public/images/coloring-pages/<image>/ — normally equals slug */
   image: z.string(),
-  /** category slugs this page belongs to (the many-to-many edges live here) */
-  categories: z.array(z.string()).default([]),
-  /**
-   * The ONE canonical home collection (a subject node). Drives the canonical URL
-   * (its ancestor chain + this slug). Falls back to categories[0] when null, so
-   * existing pages keep their current URLs without re-authoring. (See
-   * url-structure-guide.md §3 — replaces the order-dependent categories[0].)
-   */
-  subject: z.string().nullable().default(null),
+  // No `subject`/`categories`: a leaf's ONE canonical home is the folder it lives
+  // in (the file path). `tags` drive facet listings + related links.
   tags: z.array(z.string()).default([]),
   createdAt: z.string(),
   source: z.enum(['fal', 'supabase-migration', 'manual']).default('manual'),

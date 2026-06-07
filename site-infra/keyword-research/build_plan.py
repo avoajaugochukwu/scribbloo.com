@@ -421,6 +421,8 @@ for i,(p,f) in enumerate(allp,1):
 L += ["", "## Files in this plan", "",
       "- [`00-writing-guide.md`](00-writing-guide.md) — brand voice, MDX frontmatter schemas, per-type templates, SEO + internal-linking rules (read first).",
       "- [`url-structure-guide.md`](url-structure-guide.md) — canonical URL/routing spec (read before adding routes).",
+      "- [`internal-linking.md`](internal-linking.md) — the cross-type link mesh (the main ranking lever).",
+      "- [`image-pipeline.md`](image-pipeline.md) — how leaf images are made + the CDN switch.",
       "- [`collections-map.md`](collections-map.md) — collection → theme/subject/path map + aliases + review items.",
       "- [`how-to-draw.md`](how-to-draw.md) — tutorial briefs.",
       "- [`coloring-collections.md`](coloring-collections.md) — theme/character collections + category landings.",

@@ -91,7 +91,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Also target:** `things to draw halloween` (3,600), `sketch ideas halloween` (320), `doodle ideas halloween` (140), `things to draw halloween edition` (110), `sketch drawing ideas halloween` (40), `halloween doodle art ideas` (10)
 
 ## ✅ Flower Drawing Ideas
-`slug: flower-drawing-ideas` · **Listicle (blog)** · _exists as `easy-and-magical-flower-drawing-ideas` → refresh/expand_
+`slug: flower-drawing-ideas` · **Listicle (blog)** · _exists as `flower-bouquet` → refresh/expand_
 
 - **Primary:** `drawing ideas flower` — vol **8,100**/mo · KD **0** · informational
 - **Also target:** `things to draw flowers` (1,000), `pinterest flower drawing ideas` (320), `sketch ideas flower` (260), `things to draw on your hand flower` (140), `doodle ideas flowers` (90), `sketch drawing ideas flowers` (70), `doodle art flower ideas` (10)

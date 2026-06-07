@@ -31,7 +31,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Also target:** `coloring pages halloween` (74,000), `coloring book halloween` (74,000), `halloween coloring pages printable` (27,100), `halloween coloring pages print` (27,100), `coloring pages about halloween` (27,100), `free halloween coloring book` (9,900), `printable halloween coloring book` (8,100), `free printable halloween coloring book` (6,600), `disney halloween coloring book` (4,400), `halloween coloring pages for adults pdf` (40), `unicorn coloring pages halloween` (10)
 
 ## ✅ Flower Coloring Pages
-`slug: flower-coloring-pages` · **Collection (category)** · _exists as `easy-and-magical-flower-drawing-ideas` → refresh/expand_
+`slug: flower-coloring-pages` · **Collection (category)** · _exists as `flower-bouquet` → refresh/expand_
 
 - **Primary:** `flower coloring pages` — vol **60,500**/mo · KD **0** · informational
 - **Also target:** `coloring book page flower` (60,500), `flower coloring pages to print` (60,500), `coloring pages floral` (60,500), `coloring pages about flowers` (60,500), `printable flower coloring book` (8,100), `adult coloring book pages flowers` (5,400), `free flower coloring book pages` (3,600), `free flower coloring book` (3,600), `free printable coloring pages flowers` (2,900), `coloring book flower` (1,300)
@@ -60,7 +60,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `adorable coloring pages` — vol **60,500**/mo · KD **7** · informational
 
 ## ✅ Unicorn Coloring Pages
-`slug: unicorn-coloring-pages` · **Collection (category)** · _exists as `unicorn-activities-for-kids` → refresh/expand_
+`slug: unicorn-coloring-pages` · **Collection (category)** · _exists as `rainbow-unicorn` → refresh/expand_
 
 - **Primary:** `unicorn coloring pages` — vol **49,500**/mo · KD **0** · informational
 - **Also target:** `print unicorn coloring pages` (49,500), `unicorn printable coloring pages` (49,500), `coloring book pages unicorn` (49,500), `unicornio coloring pages` (14,800), `free unicorn coloring pages` (6,600), `unicorn coloring sheet` (5,400), `free printable coloring pages unicorn` (4,400), `unicorn academy coloring pages` (2,400), `cute unicorn coloring pages` (1,600), `unicorn coloring book` (720), `unicorn coloring pages printable pdf` (590)

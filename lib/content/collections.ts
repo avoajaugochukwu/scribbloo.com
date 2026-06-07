@@ -1,169 +1,245 @@
 import 'server-only';
 
-import { getAllCategories, getAllColoringPages } from './coloringPages';
-import type { Category, ColoringPage } from './types';
+import { cache } from 'react';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import matter from 'gray-matter';
+
+import { categorySchema, coloringPageSchema, type Category, type ColoringPage } from './types';
 
 /**
- * The collection TREE layer (url-structure-guide.md §3–§6).
+ * The collection layer — FOLDER-DRIVEN (url-structure-guide.md §3–§6).
  *
- * Collections form a variable-depth tree via the `parent` slug chain. A single
- * catch-all route (`app/coloring-pages/[[...path]]`) resolves any path against
- * this layer to either a listing node (a `subject`/`facet` collection) or a leaf
- * (a coloring page). Depth is DATA, not route files — adding a subcategory is a
- * content edit, never a routing change.
+ * The content directory IS the URL tree. No `parent` frontmatter, no tree walk:
  *
- * Canonical rules:
- *   - A collection's URL = /coloring-pages/<ancestor slugs…>/<slug>.
- *   - A `facet` collection is flat: /coloring-pages/<slug> (no parent nesting).
- *   - A leaf's canonical URL = its ONE `subject` collection's path + /<slug>.
- *     `subject` falls back to categories[0] so legacy pages keep their URLs.
+ *   content/coloring-pages/<a>/<b>/_category.mdx  -> listing  /coloring-pages/<a>/<b>
+ *   content/coloring-pages/<a>/<b>/<slug>.mdx     -> leaf     /coloring-pages/<a>/<b>/<slug>
+ *   content/facets/<slug>.mdx                     -> facet    /coloring-pages/<slug>  (tag-driven)
+ *
+ * Ancestry, breadcrumbs, and depth all come from the path itself. Leaf slugs only
+ * need to be unique within their folder. Everything is resolved through a single
+ * in-memory index built once per process (O(1) lookups, files parsed once).
  */
 
+const CONTENT = path.join(process.cwd(), 'content');
+const CP_DIR = path.join(CONTENT, 'coloring-pages');
+const FACET_DIR = path.join(CONTENT, 'facets');
 const ROOT = '/coloring-pages';
-const MAX_DEPTH = 8; // cycle / runaway guard
-
-/* -------------------------------------------------------------------------- */
-/* Path math                                                                  */
-/* -------------------------------------------------------------------------- */
-
-/** Ancestor-inclusive slug chain for a collection, root-first. Facets are flat. */
-function pathSlugsFor(slug: string, bySlug: Map<string, Category>): string[] | null {
-  const chain: string[] = [];
-  let cur = bySlug.get(slug);
-  if (!cur) return null;
-  for (let i = 0; i < MAX_DEPTH && cur; i++) {
-    chain.unshift(cur.slug);
-    if (cur.kind === 'facet' || !cur.parent) return chain; // facets never nest
-    cur = bySlug.get(cur.parent);
-  }
-  return chain; // depth-capped; returns best effort
-}
-
-/** The canonical home subject of a leaf (explicit `subject`, else categories[0]). */
-export function leafSubjectSlug(page: ColoringPage): string | null {
-  return page.subject ?? page.categories[0] ?? null;
-}
-
-/* -------------------------------------------------------------------------- */
-/* Public tree queries                                                        */
-/* -------------------------------------------------------------------------- */
+export const PAGE_SIZE = 48;
 
 export interface CollectionNode {
   category: Category;
-  /** root-first slug chain including this collection */
   pathSlugs: string[];
-  /** absolute canonical URL */
+  href: string;
+}
+export interface Leaf {
+  page: ColoringPage;
+  pathSlugs: string[];
   href: string;
 }
 
-/** Top-level subject themes (parent == null), ordered. */
-export async function getTopLevelCollections(): Promise<Category[]> {
-  const cats = await getAllCategories();
-  return cats.filter((c) => c.kind === 'subject' && !c.parent);
+interface Index {
+  collections: Map<string, CollectionNode>; // "fantasy/unicorn" -> node
+  leaves: Map<string, Leaf>; // "fantasy/unicorn/unicorn-01" -> leaf
+  childrenOf: Map<string, CollectionNode[]>; // parent key ("" = root) -> child nodes
+  leavesOf: Map<string, Leaf[]>; // collection key -> direct leaves
+  facets: Category[];
+  aliasTo: Map<string, string>; // alias path -> canonical href
+  slugCanonical: Map<string, string | null>; // leaf slug -> canonical href (null = ambiguous)
 }
 
-/** All facet (cross-cutting) collections, ordered. */
-export async function getFacetCollections(): Promise<Category[]> {
-  const cats = await getAllCategories();
-  return cats.filter((c) => c.kind === 'facet');
+const keyOf = (slugs: string[]) => slugs.join('/');
+const hrefOf = (slugs: string[]) => (slugs.length ? `${ROOT}/${keyOf(slugs)}` : ROOT);
+
+async function readMdx(file: string) {
+  return matter(await fs.readFile(file, 'utf8'));
 }
 
-/** Direct child subject collections of a given collection slug, ordered. */
-export async function getChildCollections(parentSlug: string): Promise<Category[]> {
-  const cats = await getAllCategories();
-  return cats.filter((c) => c.kind === 'subject' && c.parent === parentSlug);
-}
-
-/** The leaves that belong to a collection: by subject (subjects) or tag (facets). */
-export async function getLeavesForCollection(category: Category): Promise<ColoringPage[]> {
-  const pages = await getAllColoringPages();
-  if (category.kind === 'facet') {
-    const tag = category.facetTag;
-    return tag ? pages.filter((p) => p.tags.includes(tag)) : [];
+async function walk(absDir: string, rel: string[], idx: Index): Promise<void> {
+  let entries: import('node:fs').Dirent[];
+  try {
+    entries = await fs.readdir(absDir, { withFileTypes: true });
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code === 'ENOENT') return;
+    throw e;
   }
-  return pages.filter((p) => leafSubjectSlug(p) === category.slug);
+
+  // this directory is a collection node if it has _category.mdx (root has none)
+  if (rel.length && entries.some((e) => e.isFile() && e.name === '_category.mdx')) {
+    const { data } = await readMdx(path.join(absDir, '_category.mdx'));
+    const parsed = categorySchema.safeParse({ ...data, slug: data.slug ?? rel[rel.length - 1] });
+    if (parsed.success) {
+      const node: CollectionNode = { category: parsed.data, pathSlugs: rel, href: hrefOf(rel) };
+      idx.collections.set(keyOf(rel), node);
+      const parentKey = keyOf(rel.slice(0, -1));
+      (idx.childrenOf.get(parentKey) ?? idx.childrenOf.set(parentKey, []).get(parentKey)!).push(node);
+    } else {
+      console.error(`[collections] invalid _category.mdx at ${rel.join('/')}:`, parsed.error.flatten().fieldErrors);
+    }
+  }
+
+  for (const e of entries) {
+    if (e.isDirectory()) {
+      await walk(path.join(absDir, e.name), [...rel, e.name], idx);
+    } else if (e.name.endsWith('.mdx') && e.name !== '_category.mdx') {
+      const slug = e.name.slice(0, -4);
+      const { data } = await readMdx(path.join(absDir, e.name));
+      const parsed = coloringPageSchema.safeParse({ ...data, slug: data.slug ?? slug });
+      if (!parsed.success) {
+        console.error(`[collections] invalid leaf ${[...rel, slug].join('/')}:`, parsed.error.flatten().fieldErrors);
+        continue;
+      }
+      const pathSlugs = [...rel, slug];
+      const leaf: Leaf = { page: parsed.data, pathSlugs, href: hrefOf(pathSlugs) };
+      idx.leaves.set(keyOf(pathSlugs), leaf);
+      const colKey = keyOf(rel);
+      (idx.leavesOf.get(colKey) ?? idx.leavesOf.set(colKey, []).get(colKey)!).push(leaf);
+    }
+  }
 }
 
-/** Ancestor breadcrumb chain (root-first) of collection nodes for a slug. */
-export async function getAncestors(slug: string): Promise<CollectionNode[]> {
-  const cats = await getAllCategories();
-  const bySlug = new Map(cats.map((c) => [c.slug, c]));
-  const slugs = pathSlugsFor(slug, bySlug);
-  if (!slugs) return [];
-  return slugs.map((s, i) => {
-    const pathSlugs = slugs.slice(0, i + 1);
-    return { category: bySlug.get(s)!, pathSlugs, href: `${ROOT}/${pathSlugs.join('/')}` };
-  });
+const buildIndex = cache(async (): Promise<Index> => {
+  const idx: Index = {
+    collections: new Map(), leaves: new Map(), childrenOf: new Map(),
+    leavesOf: new Map(), facets: [], aliasTo: new Map(), slugCanonical: new Map(),
+  };
+  await walk(CP_DIR, [], idx);
+
+  // facets
+  try {
+    for (const f of (await fs.readdir(FACET_DIR)).filter((n) => n.endsWith('.mdx'))) {
+      const { data } = await readMdx(path.join(FACET_DIR, f));
+      const parsed = categorySchema.safeParse({ ...data, slug: data.slug ?? f.slice(0, -4) });
+      if (parsed.success) idx.facets.push(parsed.data);
+      else console.error(`[collections] invalid facet ${f}:`, parsed.error.flatten().fieldErrors);
+    }
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code !== 'ENOENT') throw e;
+  }
+
+  // sort children (order, name) and leaves (newest first)
+  for (const list of idx.childrenOf.values())
+    list.sort((a, b) => a.category.order - b.category.order || a.category.name.localeCompare(b.category.name));
+  for (const list of idx.leavesOf.values())
+    list.sort((a, b) => b.page.createdAt.localeCompare(a.page.createdAt));
+  idx.facets.sort((a, b) => a.order - b.order || a.name.localeCompare(b.name));
+
+  // aliases -> canonical href
+  for (const node of idx.collections.values()) {
+    const parentKey = keyOf(node.pathSlugs.slice(0, -1));
+    for (const alias of node.category.aliases) {
+      idx.aliasTo.set(parentKey ? `${parentKey}/${alias}` : alias, node.href);
+    }
+  }
+  for (const f of idx.facets) for (const alias of f.aliases) idx.aliasTo.set(alias, `${ROOT}/${f.slug}`);
+
+  // slug -> canonical (for legacy/non-canonical redirects); ambiguous slugs => null
+  for (const leaf of idx.leaves.values()) {
+    idx.slugCanonical.set(leaf.page.slug, idx.slugCanonical.has(leaf.page.slug) ? null : leaf.href);
+  }
+
+  return idx;
+});
+
+/* -------------------------------------------------------------------------- */
+/* Queries                                                                    */
+/* -------------------------------------------------------------------------- */
+
+export async function getRootHub(): Promise<{ themes: CollectionNode[]; facets: Category[] }> {
+  const idx = await buildIndex();
+  return { themes: idx.childrenOf.get('') ?? [], facets: idx.facets };
 }
 
-/** Canonical URL for a leaf coloring page (its subject path + slug), or null. */
-export async function getLeafCanonicalHref(page: ColoringPage): Promise<string | null> {
-  const subject = leafSubjectSlug(page);
-  if (!subject) return null;
-  const cats = await getAllCategories();
-  const bySlug = new Map(cats.map((c) => [c.slug, c]));
-  const slugs = pathSlugsFor(subject, bySlug);
-  if (!slugs) return null;
-  return `${ROOT}/${[...slugs, page.slug].join('/')}`;
+export async function getAllCollectionNodes(): Promise<CollectionNode[]> {
+  return [...(await buildIndex()).collections.values()];
+}
+
+export async function getAllLeaves(): Promise<Leaf[]> {
+  return [...(await buildIndex()).leaves.values()];
+}
+
+function ancestorsFor(slugs: string[], idx: Index): CollectionNode[] {
+  const out: CollectionNode[] = [];
+  for (let i = 1; i <= slugs.length; i++) {
+    const node = idx.collections.get(keyOf(slugs.slice(0, i)));
+    if (node) out.push(node);
+  }
+  return out;
 }
 
 /* -------------------------------------------------------------------------- */
-/* Resolver — the heart of the catch-all route                                */
+/* Resolver                                                                   */
 /* -------------------------------------------------------------------------- */
 
 export type Resolved =
-  | { type: 'collection'; category: Category; ancestors: CollectionNode[] }
-  | { type: 'leaf'; page: ColoringPage; subject: Category; ancestors: CollectionNode[] }
+  | {
+      type: 'collection';
+      node: CollectionNode;
+      ancestors: CollectionNode[];
+      children: CollectionNode[];
+      leaves: Leaf[];
+      page: number;
+      totalPages: number;
+    }
+  | { type: 'leaf'; leaf: Leaf; ancestors: CollectionNode[]; related: Leaf[] }
   | { type: 'redirect'; to: string }
   | { type: 'notFound' };
 
-/**
- * Resolve a URL path (segments after /coloring-pages) to a collection, a leaf,
- * a redirect (alias or non-canonical leaf path), or notFound.
- */
 export async function resolvePath(parts: string[]): Promise<Resolved> {
-  const cats = await getAllCategories();
-  const pages = await getAllColoringPages();
-  const bySlug = new Map(cats.map((c) => [c.slug, c]));
-  const target = parts.join('/');
+  const idx = await buildIndex();
 
-  // 1) collection node whose full path matches
-  for (const c of cats) {
-    const slugs = pathSlugsFor(c.slug, bySlug);
-    if (slugs && slugs.join('/') === target) {
-      return { type: 'collection', category: c, ancestors: await getAncestors(c.slug) };
+  // pagination suffix ".../page/N"
+  let pageNo = 1;
+  let base = parts;
+  const n = parts.length;
+  if (n >= 2 && parts[n - 2] === 'page' && /^[0-9]+$/.test(parts[n - 1])) {
+    pageNo = parseInt(parts[n - 1], 10);
+    base = parts.slice(0, n - 2);
+  }
+  const key = keyOf(base);
+  const paginated = base !== parts;
+
+  const paginate = (node: CollectionNode, allLeaves: Leaf[], children: CollectionNode[]): Resolved => {
+    const totalPages = Math.max(1, Math.ceil(allLeaves.length / PAGE_SIZE));
+    if (paginated && pageNo === 1) return { type: 'redirect', to: node.href };
+    if (pageNo < 1 || pageNo > totalPages) return { type: 'notFound' };
+    return { type: 'collection', node, ancestors: ancestorsFor(node.pathSlugs, idx), children, leaves: allLeaves, page: pageNo, totalPages };
+  };
+
+  // 1) collection
+  const node = idx.collections.get(key);
+  if (node) return paginate(node, idx.leavesOf.get(key) ?? [], idx.childrenOf.get(key) ?? []);
+
+  // 2) facet (single-segment, tag-driven)
+  if (base.length === 1) {
+    const facet = idx.facets.find((f) => f.slug === base[0]);
+    if (facet) {
+      const fNode: CollectionNode = { category: facet, pathSlugs: base, href: `${ROOT}/${facet.slug}` };
+      const tagged = facet.facetTag
+        ? [...idx.leaves.values()].filter((l) => l.page.tags.includes(facet.facetTag!))
+        : [];
+      return paginate(fNode, tagged, []);
     }
   }
 
-  // 2) leaf: last segment is a page slug
-  const slug = parts[parts.length - 1];
-  const page = pages.find((p) => p.slug === slug);
-  if (page) {
-    const canonical = await getLeafCanonicalHref(page);
-    if (canonical === `${ROOT}/${target}`) {
-      const subjectSlug = leafSubjectSlug(page)!;
-      return {
-        type: 'leaf',
-        page,
-        subject: bySlug.get(subjectSlug)!,
-        ancestors: await getAncestors(subjectSlug),
-      };
-    }
-    // requested via a non-canonical path (e.g. a secondary category) -> redirect
-    if (canonical) return { type: 'redirect', to: canonical };
+  // a page suffix on a non-listing is invalid
+  if (paginated) return { type: 'notFound' };
+
+  // 3) leaf at exact canonical path
+  const leaf = idx.leaves.get(key);
+  if (leaf) {
+    const parentKey = keyOf(leaf.pathSlugs.slice(0, -1));
+    const related = (idx.leavesOf.get(parentKey) ?? []).filter((l) => l.page.slug !== leaf.page.slug).slice(0, 6);
+    return { type: 'leaf', leaf, ancestors: ancestorsFor(leaf.pathSlugs.slice(0, -1), idx), related };
   }
 
-  // 3) alias: <parent path>/<alias> -> the aliased collection's canonical path
-  for (const c of cats) {
-    if (!c.aliases.length) continue;
-    const slugs = pathSlugsFor(c.slug, bySlug);
-    if (!slugs) continue;
-    const parentPath = slugs.slice(0, -1).join('/');
-    for (const alias of c.aliases) {
-      const aliasPath = parentPath ? `${parentPath}/${alias}` : alias;
-      if (aliasPath === target) return { type: 'redirect', to: `${ROOT}/${slugs.join('/')}` };
-    }
-  }
+  // 4) legacy / non-canonical path whose last segment is a known unique slug
+  const canonical = idx.slugCanonical.get(parts[parts.length - 1]);
+  if (canonical && canonical !== hrefOf(parts)) return { type: 'redirect', to: canonical };
+
+  // 5) alias
+  const aliasTo = idx.aliasTo.get(key);
+  if (aliasTo) return { type: 'redirect', to: aliasTo };
 
   return { type: 'notFound' };
 }
@@ -172,22 +248,20 @@ export async function resolvePath(parts: string[]): Promise<Resolved> {
 /* Static params                                                              */
 /* -------------------------------------------------------------------------- */
 
-/** Every collection path + every leaf canonical path, as catch-all params. */
 export async function getAllColoringParams(): Promise<{ path: string[] }[]> {
-  const cats = await getAllCategories();
-  const pages = await getAllColoringPages();
-  const bySlug = new Map(cats.map((c) => [c.slug, c]));
-
+  const idx = await buildIndex();
   const out: { path: string[] }[] = [];
-  for (const c of cats) {
-    const slugs = pathSlugsFor(c.slug, bySlug);
-    if (slugs) out.push({ path: slugs });
+
+  for (const node of idx.collections.values()) {
+    out.push({ path: node.pathSlugs });
+    const total = Math.ceil((idx.leavesOf.get(keyOf(node.pathSlugs))?.length ?? 0) / PAGE_SIZE);
+    for (let p = 2; p <= total; p++) out.push({ path: [...node.pathSlugs, 'page', String(p)] });
   }
-  for (const p of pages) {
-    const subject = leafSubjectSlug(p);
-    if (!subject) continue;
-    const slugs = pathSlugsFor(subject, bySlug);
-    if (slugs) out.push({ path: [...slugs, p.slug] });
+  for (const leaf of idx.leaves.values()) out.push({ path: leaf.pathSlugs });
+  for (const f of idx.facets) {
+    out.push({ path: [f.slug] });
+    const tagged = f.facetTag ? [...idx.leaves.values()].filter((l) => l.page.tags.includes(f.facetTag!)).length : 0;
+    for (let p = 2; p <= Math.ceil(tagged / PAGE_SIZE); p++) out.push({ path: [f.slug, 'page', String(p)] });
   }
   return out;
 }

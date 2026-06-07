@@ -1,13 +1,19 @@
 /**
- * Shared content writers used by BOTH the Supabase migration and the fal.ai
- * generation pipeline.
+ * Shared content writers for the fal.ai generation pipeline (and any future
+ * programmatic content creation).
  *
- * These functions own the on-disk layout described in `lib/images.ts`:
+ * FOLDER MODEL (url-structure-guide.md): a leaf lives in its collection folder —
+ *   content/coloring-pages/<subject path>/<slug>.mdx
+ * and a collection is a folder with an `_category.mdx`. There is NO `categories`
+ * array and NO `content/categories/` directory anymore. These writers REFUSE to
+ * create a leaf outside a real collection (a folder with `_category.mdx`), so an
+ * automated run cannot silently resurrect the old flat layout.
+ *
+ * On-disk image layout (owned here, see lib/images.ts):
  *   public/images/coloring-pages/<slug>/{original.png,full.webp,thumb.webp}
  *   public/images/categories/<slug>/{hero.webp,thumb.webp,hero-original.png}
  *
- * They always emit frontmatter validated by the zod schemas in
- * `lib/content/types.ts` so the readers and writers can never drift.
+ * Frontmatter is always validated by the zod schemas in `lib/content/types.ts`.
  */
 
 import { promises as fs } from 'node:fs';
@@ -32,17 +38,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
 const COLORING_PAGES_CONTENT_DIR = path.join(REPO_ROOT, 'content', 'coloring-pages');
-const CATEGORIES_CONTENT_DIR = path.join(REPO_ROOT, 'content', 'categories');
 const COLORING_PAGE_IMAGES_DIR = path.join(REPO_ROOT, 'public', 'images', 'coloring-pages');
 const CATEGORY_IMAGES_DIR = path.join(REPO_ROOT, 'public', 'images', 'categories');
 
 export const paths = {
   REPO_ROOT,
   COLORING_PAGES_CONTENT_DIR,
-  CATEGORIES_CONTENT_DIR,
   COLORING_PAGE_IMAGES_DIR,
   CATEGORY_IMAGES_DIR,
 };
+
+/** Folder path → absolute dir under content/coloring-pages, with traversal guard. */
+function collectionDir(subjectPath: string): string {
+  const parts = subjectPath.split('/').filter(Boolean);
+  if (!parts.length || parts.some((p) => p === '.' || p === '..')) {
+    throw new Error(`Invalid subject path "${subjectPath}"`);
+  }
+  return path.join(COLORING_PAGES_CONTENT_DIR, ...parts);
+}
 
 /* -------------------------------------------------------------------------- */
 /* Helpers                                                                     */
@@ -71,7 +84,14 @@ export interface WriteColoringPageInput {
   slug: string;
   title: string;
   description?: string | null;
-  categories: string[];
+  /**
+   * The collection folder this leaf belongs to, e.g. "animals" or
+   * "fantasy/unicorn". The leaf is written to
+   * content/coloring-pages/<subject>/<slug>.mdx. That folder MUST already be a
+   * collection (contain `_category.mdx`) or this throws — this is the guard that
+   * stops an automated run from creating leaves in the wrong place.
+   */
+  subject: string;
   tags: string[];
   source: 'fal' | 'supabase-migration' | 'manual';
   falRequestId?: string;
@@ -100,7 +120,7 @@ export async function writeColoringPage(
     slug,
     title,
     description = null,
-    categories,
+    subject,
     tags,
     source,
     falRequestId,
@@ -111,7 +131,16 @@ export async function writeColoringPage(
     force = false,
   } = input;
 
-  const contentPath = path.join(COLORING_PAGES_CONTENT_DIR, `${slug}.mdx`);
+  // GUARD: the target folder must be a real collection (have _category.mdx).
+  const dir = collectionDir(subject);
+  if (!(await fileExists(path.join(dir, '_category.mdx')))) {
+    throw new Error(
+      `Refusing to write leaf "${slug}": content/coloring-pages/${subject}/ is not a collection ` +
+        `(no _category.mdx). Create the collection first (folder model — see url-structure-guide.md).`,
+    );
+  }
+
+  const contentPath = path.join(dir, `${slug}.mdx`);
   const imageDir = path.join(COLORING_PAGE_IMAGES_DIR, slug);
 
   // Idempotency: skip an already-written page unless force is set. We still
@@ -153,13 +182,13 @@ export async function writeColoringPage(
     .toBuffer();
   await fs.writeFile(path.join(imageDir, 'thumb.webp'), thumbWebp);
 
-  // Build + validate frontmatter. image folder name equals slug by convention.
+  // Build + validate frontmatter. No `categories`/`subject` field — the folder is
+  // the home. image folder name equals slug by convention.
   const frontmatter = coloringPageSchema.parse({
     slug,
     title,
     description,
     image: slug,
-    categories,
     tags,
     createdAt: createdAt ?? new Date().toISOString(),
     source,
@@ -168,7 +197,6 @@ export async function writeColoringPage(
     needsRegen,
   });
 
-  await fs.mkdir(COLORING_PAGES_CONTENT_DIR, { recursive: true });
   const fileContents = matter.stringify('', frontmatter);
   await fs.writeFile(contentPath, fileContents, 'utf8');
 
@@ -182,11 +210,18 @@ export async function writeColoringPage(
 export interface WriteCategoryInput {
   slug: string;
   name: string;
+  /**
+   * Folder path for this collection under content/coloring-pages, e.g. "animals"
+   * or "fantasy/unicorn". Defaults to the slug (a top-level theme). Writes
+   * <path>/_category.mdx.
+   */
+  path?: string;
   description?: string | null;
   seoTitle?: string | null;
   seoDescription?: string | null;
   seoMetaDescription?: string | null;
   order?: number;
+  aliases?: string[];
   seoDetails?: SeoDetails;
   /** Hero image source — raw bytes or a local file path. Null/undefined => no hero. */
   hero?: Buffer | string | null;
@@ -209,18 +244,22 @@ export async function writeCategory(cat: WriteCategoryInput): Promise<WriteCateg
   const {
     slug,
     name,
+    path: folderPath,
     description = null,
     seoTitle = null,
     seoDescription = null,
     seoMetaDescription = null,
     order = 0,
+    aliases = [],
     seoDetails,
     hero,
     thumbnail,
     force = false,
   } = cat;
 
-  const contentPath = path.join(CATEGORIES_CONTENT_DIR, `${slug}.mdx`);
+  const dir = collectionDir(folderPath ?? slug);
+  await fs.mkdir(dir, { recursive: true });
+  const contentPath = path.join(dir, '_category.mdx');
   const imageDir = path.join(CATEGORY_IMAGES_DIR, slug);
 
   if ((await fileExists(contentPath)) && !force) {
@@ -273,10 +312,10 @@ export async function writeCategory(cat: WriteCategoryInput): Promise<WriteCateg
     heroImage: wroteHero ? 'hero.webp' : null,
     thumbnailImage: wroteThumb ? 'thumb.webp' : null,
     order,
+    aliases,
     ...(seoDetails ? { seoDetails } : {}),
   });
 
-  await fs.mkdir(CATEGORIES_CONTENT_DIR, { recursive: true });
   const fileContents = matter.stringify('', frontmatter);
   await fs.writeFile(contentPath, fileContents, 'utf8');
 

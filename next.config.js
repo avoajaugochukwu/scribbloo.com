@@ -65,16 +65,72 @@ const cacheHeaders = [
   },
 ];
 
+// Collection alias 308s, generated from content/categories frontmatter so they
+// fire at the edge (no React render) and stay in sync with the tree. Each
+// collection's `aliases` redirect <parent path>/<alias> -> its canonical path.
+// (The catch-all route still resolves aliases at request time as a fallback for
+// non-canonical leaf paths the edge can't know about — see lib/content/collections.ts.)
+function collectionAliasRedirects() {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const matter = require('gray-matter');
+  const CP = path.join(__dirname, 'content', 'coloring-pages');
+  const FAC = path.join(__dirname, 'content', 'facets');
+  const out = [];
+
+  // Walk the folder tree; a folder's _category.mdx aliases redirect
+  // <parent path>/<alias> -> the folder's own canonical path.
+  const walk = (absDir, rel) => {
+    let entries;
+    try {
+      entries = fs.readdirSync(absDir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    const catFile = entries.find((e) => e.isFile() && e.name === '_category.mdx');
+    if (rel.length && catFile) {
+      const { aliases } = matter(fs.readFileSync(path.join(absDir, '_category.mdx'), 'utf8')).data;
+      if (Array.isArray(aliases)) {
+        const parent = rel.slice(0, -1).join('/');
+        const destination = `/coloring-pages/${rel.join('/')}`;
+        for (const alias of aliases) {
+          const source = `/coloring-pages/${parent ? parent + '/' : ''}${alias}`;
+          if (source !== destination) out.push({ source, destination, permanent: true });
+        }
+      }
+    }
+    for (const e of entries) if (e.isDirectory()) walk(path.join(absDir, e.name), [...rel, e.name]);
+  };
+  walk(CP, []);
+
+  // Facets are flat at /coloring-pages/<slug>.
+  try {
+    for (const f of fs.readdirSync(FAC).filter((n) => n.endsWith('.mdx'))) {
+      const d = matter(fs.readFileSync(path.join(FAC, f), 'utf8')).data;
+      const slug = d.slug || f.slice(0, -4);
+      for (const alias of Array.isArray(d.aliases) ? d.aliases : []) {
+        if (alias !== slug) out.push({ source: `/coloring-pages/${alias}`, destination: `/coloring-pages/${slug}`, permanent: true });
+      }
+    }
+  } catch {
+    /* no facets dir */
+  }
+  return out;
+}
+
 const nextConfig = {
   images: {
     remotePatterns,
   },
   async redirects() {
-    return consolidatedBlogSlugs.map((slug) => ({
-      source: `/blog/${slug}`,
-      destination: BLOG_PILLAR,
-      permanent: true,
-    }));
+    return [
+      ...consolidatedBlogSlugs.map((slug) => ({
+        source: `/blog/${slug}`,
+        destination: BLOG_PILLAR,
+        permanent: true,
+      })),
+      ...collectionAliasRedirects(),
+    ];
   },
   async headers() {
     return cacheHeaders;

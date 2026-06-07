@@ -107,6 +107,12 @@ async function setCategoryArt(catSlug: string, pageSlug: string): Promise<boolea
 }
 
 async function main() {
+  if (!process.argv.includes('--i-understand-legacy')) {
+    throw new Error(
+      'DEPRECATED: seed-coloring-pages.ts was the original 21-page seed (done) and spends fal credits. ' +
+        'Its category mapping predates the folder model. Use `npm run generate -- --subject <path>` instead.',
+    );
+  }
   const items = SEED.slice(0, LIMIT === Infinity ? SEED.length : LIMIT);
   console.log(`Seeding ${items.length} coloring page(s)${DRY ? ' [DRY RUN]' : ''}…\n`);
 
@@ -131,7 +137,7 @@ async function main() {
         slug,
         title: seed.title,
         description: `${seed.title} — free printable ${seed.cat} coloring page for kids and adults.`,
-        categories: [seed.cat],
+        subject: seed.cat,
         tags: seed.tags,
         source: 'fal',
         falRequestId: requestId,

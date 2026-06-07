@@ -517,6 +517,12 @@ async function ensureGitignored(entry: string): Promise<void> {
 /* -------------------------------------------------------------------------- */
 
 async function main(): Promise<void> {
+  if (!process.argv.includes('--i-understand-legacy')) {
+    throw new Error(
+      'DEPRECATED: migrate-from-notion.ts is a one-time import that predates the folder model. ' +
+        'Re-running may write content in the old shape — update it first if you really need it.',
+    );
+  }
   console.log(`\n[migrate-from-notion] force=${FORCE} db=${DATABASE_ID}`);
   await fs.mkdir(BLOG_CONTENT_DIR, { recursive: true });
   await fs.mkdir(BLOG_IMAGES_DIR, { recursive: true });

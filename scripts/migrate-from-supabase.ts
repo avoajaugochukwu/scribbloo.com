@@ -151,6 +151,12 @@ async function tryDownload(url: string): Promise<{ buffer?: Buffer; error?: stri
 /* -------------------------------------------------------------------------- */
 
 async function main(): Promise<void> {
+  if (!process.argv.includes('--i-understand-legacy')) {
+    throw new Error(
+      'DEPRECATED: migrate-from-supabase.ts writes the OLD flat model (content/categories + categories[]). ' +
+        'The migration is already done; re-running would create invalid content under the folder model.',
+    );
+  }
   const flags = parseFlags(process.argv.slice(2));
 
   const report: MigrationReport = {
