@@ -5,22 +5,22 @@ import { Metadata } from 'next';
 import { baseUrl } from '@/app/metadata';
 
 export const metadata: Metadata = {
-  title: 'Free Printable Coloring Pages for All Ages ',
-  description: 'Browse categories and find free printable coloring pages for kids and adults. Download unicorns, animals, mandalas, and more!',
+  title: 'Browse Coloring Pages by Category | Scribbloo',
+  description: 'Browse every coloring page category — unicorns, animals, mandalas, and more. Free, high-quality printables for kids and adults to download and color.',
   alternates: {
     canonical: `${baseUrl}/coloring-pages`,
   },
   openGraph: {
-    title: 'Free Printable Coloring Pages for All Ages',
-    description: 'Browse categories and find free printable coloring pages for kids and adults.',
+    title: 'Browse Coloring Pages by Category | Scribbloo',
+    description: 'Browse every coloring page category — unicorns, animals, mandalas, and more. Free printables for kids and adults.',
     url: `${baseUrl}/coloring-pages`,
     siteName: 'Scribbloo',
     type: 'website',
   },
   twitter: {
     card: 'summary', // or summary_large_image if you add an image
-    title: 'Free Printable Coloring Pages for All Ages',
-    description: 'Browse categories and find free printable coloring pages for kids and adults.',
+    title: 'Browse Coloring Pages by Category | Scribbloo',
+    description: 'Browse every coloring page category — unicorns, animals, mandalas, and more. Free printables for kids and adults.',
     // images: [`${baseUrl}/img/og-image-coloring-index.png`], // Add if you have a specific image
   },
   robots: {
