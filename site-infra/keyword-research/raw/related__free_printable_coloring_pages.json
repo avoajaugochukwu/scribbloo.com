@@ -1,0 +1,4035 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1803 sec.",
+  "cost": 0.0128,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0387-0000-a1ccaf6664d2",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1280 sec.",
+      "cost": 0.0128,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "related_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "related_keywords",
+        "se_type": "google",
+        "keyword": "free printable coloring pages",
+        "language_name": "English",
+        "location_code": 2840,
+        "depth": 2,
+        "include_seed_keyword": true,
+        "limit": 1000,
+        "include_serp_info": false
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "free printable coloring pages",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "free printable coloring pages",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-22 22:56:33 +00:00",
+              "competition": 0.07,
+              "competition_level": "LOW",
+              "cpc": 1.13,
+              "search_volume": 90500,
+              "low_top_of_page_bid": 0.03,
+              "high_top_of_page_bid": 2,
+              "categories": [
+                10015,
+                10125,
+                10672,
+                13794
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 90500
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 165000
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 60500
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 74000
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 60500
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 74000
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 90500
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 90500
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 90500
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 74000
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 90500
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": -45,
+                "quarterly": 50,
+                "yearly": 50
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 12,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "organic",
+                "images",
+                "related_searches"
+              ],
+              "se_results_count": 179000000,
+              "last_updated_time": "2026-05-14 22:03:44 +00:00",
+              "previous_updated_time": "2026-03-12 01:15:28 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 314,
+              "dofollow": 182.1,
+              "referring_pages": 253,
+              "referring_domains": 70,
+              "referring_main_domains": 61.6,
+              "rank": 103.3,
+              "main_domain_rank": 582.9,
+              "last_updated_time": "2026-05-14 19:03:44 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-27 19:23:15 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 28,
+          "items_count": 28,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 22:56:33 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": 1.13,
+                  "search_volume": 90500,
+                  "low_top_of_page_bid": 0.03,
+                  "high_top_of_page_bid": 2,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 165000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 60500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 60500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -45,
+                    "quarterly": 50,
+                    "yearly": 50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 12,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 179000000,
+                  "last_updated_time": "2026-05-14 22:03:44 +00:00",
+                  "previous_updated_time": "2026-03-12 01:15:28 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 314,
+                  "dofollow": 182.1,
+                  "referring_pages": 253,
+                  "referring_domains": 70,
+                  "referring_main_domains": 61.6,
+                  "rank": 103.3,
+                  "main_domain_rank": 582.9,
+                  "last_updated_time": "2026-05-14 19:03:44 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 19:23:15 +00:00"
+                }
+              },
+              "depth": 0,
+              "related_keywords": [
+                "free coloring pages pdf format",
+                "free coloring pages for adults",
+                "free printable coloring pages for adults advanced",
+                "coloring pages for kids",
+                "coloring pages for kids pdf",
+                "preschool coloring pages pdf",
+                "free coloring pages for kids",
+                "free colouring pages for girls"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 23:03:10 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": 1.13,
+                  "search_volume": 90500,
+                  "low_top_of_page_bid": 0.03,
+                  "high_top_of_page_bid": 2,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 165000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 60500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 60500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 74000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -45,
+                    "quarterly": 50,
+                    "yearly": 50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "free printable coloring pages",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 9,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20printable&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 142000000,
+                  "last_updated_time": "2026-05-14 22:03:15 +00:00",
+                  "previous_updated_time": "2026-03-28 18:14:00 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 313.6,
+                  "dofollow": 181.8,
+                  "referring_pages": 252.6,
+                  "referring_domains": 69.6,
+                  "referring_main_domains": 61.2,
+                  "rank": 90.7,
+                  "main_domain_rank": 556.6,
+                  "last_updated_time": "2026-05-14 19:03:16 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 12:29:23 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages pdf format",
+                "free coloring pages for adults",
+                "free coloring pages for kids",
+                "preschool coloring pages pdf",
+                "free coloring pages for girls",
+                "coloring pages for kids pdf",
+                "free printable coloring pages for adults advanced",
+                "simple coloring pages for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 05:26:01 +00:00",
+                  "competition": 0.12,
+                  "competition_level": "LOW",
+                  "cpc": 1.03,
+                  "search_volume": 40500,
+                  "low_top_of_page_bid": 0.03,
+                  "high_top_of_page_bid": 2,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 49500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 18,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20kids&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 200000000,
+                  "last_updated_time": "2026-05-15 00:17:45 +00:00",
+                  "previous_updated_time": "2026-03-12 03:05:27 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1901.4,
+                  "dofollow": 1269.1,
+                  "referring_pages": 1628.7,
+                  "referring_domains": 570.8,
+                  "referring_main_domains": 560.8,
+                  "rank": 133.1,
+                  "main_domain_rank": 555.2,
+                  "last_updated_time": "2026-05-14 21:17:45 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 08:07:26 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "free coloring pages printable",
+                "free coloring pages for adults",
+                "free coloring pages pdf format",
+                "preschool coloring pages pdf",
+                "simple coloring pages for kids",
+                "free coloring pages for girls",
+                "coloring pages for boys",
+                "coloring for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "easy coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 10:29:50 +00:00",
+                  "competition": 0.22,
+                  "competition_level": "LOW",
+                  "cpc": 0.34,
+                  "search_volume": 40500,
+                  "low_top_of_page_bid": 1.23,
+                  "high_top_of_page_bid": 2.56,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 49500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 37,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=easy%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 233000000,
+                  "last_updated_time": "2026-05-15 00:21:36 +00:00",
+                  "previous_updated_time": "2026-03-12 04:07:28 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 913.5,
+                  "dofollow": 712.4,
+                  "referring_pages": 811.1,
+                  "referring_domains": 137.3,
+                  "referring_main_domains": 128.2,
+                  "rank": 206.5,
+                  "main_domain_rank": 397.2,
+                  "last_updated_time": "2026-05-14 21:21:36 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 15:59:58 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "easy coloring pages for kids",
+                "free bold and easy coloring pages",
+                "easy coloring pages for girls",
+                "easy coloring pages printable",
+                "easy coloring pages for adults",
+                "easy coloring pages for teens",
+                "free easy coloring pages for kids",
+                "easy coloring pages pdf"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 06:53:22 +00:00",
+                  "competition": 0.1,
+                  "competition_level": "LOW",
+                  "cpc": 2.85,
+                  "search_volume": 27100,
+                  "low_top_of_page_bid": 0.55,
+                  "high_top_of_page_bid": 3.56,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 27100
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "adult coloring pages free",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 5,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 239000000,
+                  "last_updated_time": "2026-05-15 02:34:12 +00:00",
+                  "previous_updated_time": "2026-03-28 21:21:26 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 87,
+                  "dofollow": 53,
+                  "referring_pages": 81.2,
+                  "referring_domains": 26.4,
+                  "referring_main_domains": 25.1,
+                  "rank": 74.6,
+                  "main_domain_rank": 555.3,
+                  "last_updated_time": "2026-05-14 23:34:12 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 15:53:13 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "free coloring pages for adults printable",
+                "free coloring pages for adults pdf",
+                "free printable coloring pages for adults advanced",
+                "free printable coloring pages for adults advanced pdf",
+                "free coloring pages for adults easy",
+                "free coloring pages for adults online",
+                "funny adult coloring pages",
+                "free printable fantasy coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for adults printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 02:33:39 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": 1.95,
+                  "search_volume": 14800,
+                  "low_top_of_page_bid": 0.3,
+                  "high_top_of_page_bid": 2.54,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 12100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 12100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 18100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 9900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 22,
+                    "quarterly": 22,
+                    "yearly": 49
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "free printable coloring pages for adults",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 7,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20adults%20printable&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "discussions_and_forums",
+                    "related_searches"
+                  ],
+                  "se_results_count": 115000000,
+                  "last_updated_time": "2025-04-13 01:50:36 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1655.9,
+                  "dofollow": 1546.9,
+                  "referring_pages": 1598.3,
+                  "referring_domains": 261.8,
+                  "referring_main_domains": 233.3,
+                  "rank": 175.7,
+                  "main_domain_rank": 536.5,
+                  "last_updated_time": "2025-04-12 22:50:36 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-29 13:13:36 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages for adults printable pdf",
+                "free printable coloring pages for adults advanced",
+                "free printable coloring pages for adults advanced pdf",
+                "free coloring pages printable",
+                "funny adult coloring pages",
+                "free printable coloring books (pdf)",
+                "free printable fantasy coloring pages for adults",
+                "simple adult coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages pdf format",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 01:37:37 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": 2.98,
+                  "search_volume": 5400,
+                  "low_top_of_page_bid": 0.32,
+                  "high_top_of_page_bid": 3.55,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 8100
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -46
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "keyword_metrics",
+                  "keyword_difficulty": 15,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20pdf%20format&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 131,
+                  "last_updated_time": "2026-05-16 11:58:19 +00:00",
+                  "previous_updated_time": "2026-03-13 05:27:53 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 305,
+                  "dofollow": 190.2,
+                  "referring_pages": 243.1,
+                  "referring_domains": 63.4,
+                  "referring_main_domains": 54.3,
+                  "rank": 144.8,
+                  "main_domain_rank": 334.2,
+                  "last_updated_time": "2026-05-16 08:58:19 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 17:00:31 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "free coloring pages for adults",
+                "free coloring pages printable",
+                "free coloring pages pdf format for kids",
+                "free coloring pages pdf format adults",
+                "preschool coloring pages pdf",
+                "free coloring pages for kids",
+                "free coloring pages for girls",
+                "free printable coloring pages for adults advanced"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "funny adult coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 11:36:37 +00:00",
+                  "competition": 0.37,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.78,
+                  "search_volume": 3600,
+                  "low_top_of_page_bid": 0.65,
+                  "high_top_of_page_bid": 3.52,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 4400
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": 0,
+                    "yearly": -34
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=funny%20adult%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches",
+                    "popular_products"
+                  ],
+                  "se_results_count": 12300000,
+                  "last_updated_time": "2026-03-13 17:19:46 +00:00",
+                  "previous_updated_time": "2026-01-19 20:04:08 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 25.4,
+                  "dofollow": 4.2,
+                  "referring_pages": 25.2,
+                  "referring_domains": 19.7,
+                  "referring_main_domains": 19.6,
+                  "rank": 49,
+                  "main_domain_rank": 615.2,
+                  "last_updated_time": "2026-03-13 15:19:46 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 13:54:28 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "adult coloring pages printable",
+                "funny adult coloring pages printable",
+                "funny adult coloring pages pdf",
+                "free coloring pages for adults",
+                "free printable coloring pages for adults advanced pdf",
+                "r-rated coloring pages printable pdf",
+                "funny adult coloring pages disney",
+                "funny coloring pages printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable coloring pages for adults advanced",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 21:55:35 +00:00",
+                  "competition": 0.05,
+                  "competition_level": "LOW",
+                  "cpc": 2.34,
+                  "search_volume": 2900,
+                  "low_top_of_page_bid": 0.52,
+                  "high_top_of_page_bid": 2.16,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 4400
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -38,
+                    "quarterly": -47,
+                    "yearly": -77
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 13,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20pages%20for%20adults%20advanced&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 6510000,
+                  "last_updated_time": "2026-03-13 17:26:08 +00:00",
+                  "previous_updated_time": "2026-01-19 20:06:19 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 811.1,
+                  "dofollow": 692.2,
+                  "referring_pages": 746.5,
+                  "referring_domains": 154.5,
+                  "referring_main_domains": 149.9,
+                  "rank": 117,
+                  "main_domain_rank": 505.4,
+                  "last_updated_time": "2026-03-13 15:26:08 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional",
+                    "commercial"
+                  ],
+                  "last_updated_time": "2026-04-27 19:23:16 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "free printable coloring pages for adults advanced pdf",
+                "free coloring pages for adults",
+                "free printable coloring pages for adults pdf",
+                "r-rated coloring pages printable pdf",
+                "free printable coloring books pdf",
+                "free printable fantasy coloring pages for adults",
+                "funny adult coloring pages",
+                "best free printable coloring pages for adults advanced"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable coloring pages for adults advanced pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 03:06:42 +00:00",
+                  "competition": 0.05,
+                  "competition_level": "LOW",
+                  "cpc": 3.33,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": 0.49,
+                  "high_top_of_page_bid": 3,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 19
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 14,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20pages%20for%20adults%20advanced%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 131,
+                  "last_updated_time": "2026-05-18 09:52:03 +00:00",
+                  "previous_updated_time": "2026-03-30 09:53:05 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 450.5,
+                  "dofollow": 386.3,
+                  "referring_pages": 445.4,
+                  "referring_domains": 36.2,
+                  "referring_main_domains": 34.7,
+                  "rank": 122.5,
+                  "main_domain_rank": 487.3,
+                  "last_updated_time": "2026-05-18 06:52:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 08:09:00 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free printable coloring pages for adults pdf",
+                "r-rated coloring pages printable pdf",
+                "free coloring pages for adults",
+                "free printable coloring books pdf",
+                "free printable fantasy coloring pages for adults",
+                "best free printable coloring pages for adults advanced pdf",
+                "funny adult coloring pages",
+                "free personalized coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for adults online",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 19:26:58 +00:00",
+                  "competition": 0.14,
+                  "competition_level": "LOW",
+                  "cpc": 2.82,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": 0.85,
+                  "high_top_of_page_bid": 3.39,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": -19,
+                    "yearly": -32
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "online coloring pages for adults free",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 27,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20adults%20online&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "discussions_and_forums",
+                    "related_searches"
+                  ],
+                  "se_results_count": 106000000,
+                  "last_updated_time": "2024-10-12 23:36:00 +00:00",
+                  "previous_updated_time": "2023-12-20 02:44:39 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 2599.7,
+                  "dofollow": 2455.4,
+                  "referring_pages": 2554.9,
+                  "referring_domains": 272.5,
+                  "referring_main_domains": 234.7,
+                  "rank": 211.7,
+                  "main_domain_rank": 491.9,
+                  "last_updated_time": "2024-10-12 20:36:00 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 10:37:38 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free printable coloring pages for adults advanced",
+                "free coloring pages for adults online pdf",
+                "funny adult coloring pages",
+                "free printable coloring pages for adults advanced pdf",
+                "coloring pages printable",
+                "free coloring pages pdf format"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "preschool coloring pages pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 22:28:49 +00:00",
+                  "competition": 0.24,
+                  "competition_level": "LOW",
+                  "cpc": 2.87,
+                  "search_volume": 1300,
+                  "low_top_of_page_bid": 0.74,
+                  "high_top_of_page_bid": 3.58,
+                  "categories": [
+                    10015,
+                    10016,
+                    10125,
+                    10141,
+                    10672,
+                    10767,
+                    12063,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1300
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 19,
+                    "quarterly": 19,
+                    "yearly": 46
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 18,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=preschool%20coloring%20pages%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 106,
+                  "last_updated_time": "2026-05-19 02:08:57 +00:00",
+                  "previous_updated_time": "2026-03-30 12:47:02 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 532.5,
+                  "dofollow": 265.3,
+                  "referring_pages": 394.8,
+                  "referring_domains": 193.3,
+                  "referring_main_domains": 185.7,
+                  "rank": 139.4,
+                  "main_domain_rank": 477.6,
+                  "last_updated_time": "2026-05-18 23:08:58 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 18:54:53 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "easy coloring pages",
+                "preschool coloring pages pdf printable",
+                "free printable preschool coloring pages pdf",
+                "free coloring pages printable",
+                "free coloring pages pdf format",
+                "free coloring pages for kids",
+                "simple coloring pages for kids",
+                "free coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable coloring pages for adults pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 18:18:22 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": 2.73,
+                  "search_volume": 880,
+                  "low_top_of_page_bid": 0.48,
+                  "high_top_of_page_bid": 3.35,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 480
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 108
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 11,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20pages%20for%20adults%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 136,
+                  "last_updated_time": "2026-05-21 01:59:27 +00:00",
+                  "previous_updated_time": "2026-03-31 08:00:04 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 45.7,
+                  "dofollow": 18.2,
+                  "referring_pages": 44.9,
+                  "referring_domains": 25.6,
+                  "referring_main_domains": 24.5,
+                  "rank": 91.4,
+                  "main_domain_rank": 553.2,
+                  "last_updated_time": "2026-05-20 23:05:12 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 13:20:28 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages for adults",
+                "free printable coloring pages for adults advanced pdf",
+                "best free printable coloring pages for adults pdf",
+                "r-rated coloring pages printable pdf",
+                "free printable coloring books pdf",
+                "free printable fantasy coloring pages for adults",
+                "funny adult coloring pages",
+                "simple adult coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for adults pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 21:08:16 +00:00",
+                  "competition": 0.08,
+                  "competition_level": "LOW",
+                  "cpc": 2.97,
+                  "search_volume": 720,
+                  "low_top_of_page_bid": 0.52,
+                  "high_top_of_page_bid": 3.34,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 720
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 39,
+                    "yearly": 39
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "free pdf coloring pages adults",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 22,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20adults%20pdf&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 133000000,
+                  "last_updated_time": "2025-06-22 09:35:17 +00:00",
+                  "previous_updated_time": "2025-05-08 21:45:16 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1500.6,
+                  "dofollow": 1326.4,
+                  "referring_pages": 1375,
+                  "referring_domains": 150,
+                  "referring_main_domains": 141.7,
+                  "rank": 161.7,
+                  "main_domain_rank": 449.8,
+                  "last_updated_time": "2025-06-22 06:35:19 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 18:34:41 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages for adults pdf printable",
+                "free printable coloring pages for adults advanced",
+                "free printable coloring pages for adults advanced pdf",
+                "free printable coloring books (pdf)",
+                "funny adult coloring pages",
+                "free printable fantasy coloring pages for adults",
+                "simple adult coloring pages",
+                "coloring pages printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable fantasy coloring pages for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 02:11:49 +00:00",
+                  "competition": 0.03,
+                  "competition_level": "LOW",
+                  "cpc": 4.43,
+                  "search_volume": 720,
+                  "low_top_of_page_bid": 0.86,
+                  "high_top_of_page_bid": 3.49,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 880
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20fantasy%20coloring%20pages%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 126,
+                  "last_updated_time": "2026-05-21 00:32:07 +00:00",
+                  "previous_updated_time": "2026-03-31 07:59:02 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 16.7,
+                  "dofollow": 8.5,
+                  "referring_pages": 14.5,
+                  "referring_domains": 5.8,
+                  "referring_main_domains": 5.7,
+                  "rank": 42.1,
+                  "main_domain_rank": 531.4,
+                  "last_updated_time": "2026-05-20 21:33:51 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-27 17:41:44 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free printable fantasy coloring pages for adults pdf",
+                "best free printable fantasy coloring pages for adults",
+                "dark fantasy coloring pages for adults",
+                "free printable coloring pages for adults advanced pdf",
+                "fantasy coloring pages printable",
+                "free printable fantasy coloring pages for adults animals",
+                "fantasy coloring pages easy",
+                "free adult coloring pages printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable coloring books pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 06:40:45 +00:00",
+                  "competition": 0.1,
+                  "competition_level": "LOW",
+                  "cpc": 4.12,
+                  "search_volume": 720,
+                  "low_top_of_page_bid": 0.97,
+                  "high_top_of_page_bid": 5.78,
+                  "categories": [
+                    10016,
+                    10141,
+                    11871
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 720
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -33,
+                    "quarterly": -18,
+                    "yearly": -18
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 9,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20coloring%20books%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 143,
+                  "last_updated_time": "2026-05-21 00:34:10 +00:00",
+                  "previous_updated_time": "2026-03-31 08:09:54 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 332.8,
+                  "dofollow": 211.7,
+                  "referring_pages": 266.7,
+                  "referring_domains": 56.8,
+                  "referring_main_domains": 48.8,
+                  "rank": 101.6,
+                  "main_domain_rank": 464.1,
+                  "last_updated_time": "2026-05-20 21:35:03 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:32:29 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free printable coloring books pdf for kids",
+                "free printable coloring books pdf adults",
+                "free coloring pages printable",
+                "preschool coloring pages pdf",
+                "free coloring pages for adults",
+                "free coloring pages for kids",
+                "free coloring pages for girls",
+                "cute girl coloring pages printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "r-rated coloring pages printable pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 16:09:54 +00:00",
+                  "competition": 0.04,
+                  "competition_level": "LOW",
+                  "cpc": 2.37,
+                  "search_volume": 590,
+                  "low_top_of_page_bid": 0.54,
+                  "high_top_of_page_bid": 2.05,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 210
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -12,
+                    "quarterly": 0,
+                    "yearly": 319
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=r-rated%20coloring%20pages%20printable%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 1260000,
+                  "last_updated_time": "2026-02-12 18:58:08 +00:00",
+                  "previous_updated_time": "2026-02-12 18:56:35 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 2.2,
+                  "dofollow": 1.9,
+                  "referring_pages": 2,
+                  "referring_domains": 1.3,
+                  "referring_main_domains": 1.3,
+                  "rank": 9.6,
+                  "main_domain_rank": 590.5,
+                  "last_updated_time": "2026-02-12 16:58:09 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-07 13:33:41 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free r rated coloring pages printable pdf",
+                "r rated coloring pages printable pdf disney",
+                "free printable coloring pages for adults advanced pdf",
+                "tweaker coloring pages pdf free",
+                "adult coloring pages printable pdf",
+                "funny adult coloring pages pdf",
+                "adult cussing coloring pages printable",
+                "free funny coloring pages printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for adults easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 13:30:53 +00:00",
+                  "competition": 0.1,
+                  "competition_level": "LOW",
+                  "cpc": 4.85,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": 1.13,
+                  "high_top_of_page_bid": 5.44,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 22,
+                    "quarterly": 22,
+                    "yearly": 457
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "easy adult coloring pages free",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 14,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20for%20adults%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 119000000,
+                  "last_updated_time": "2026-05-02 03:35:02 +00:00",
+                  "previous_updated_time": "2026-03-07 16:06:02 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1571.9,
+                  "dofollow": 1088.6,
+                  "referring_pages": 1364.5,
+                  "referring_domains": 532.9,
+                  "referring_main_domains": 529.3,
+                  "rank": 117.7,
+                  "main_domain_rank": 515.9,
+                  "last_updated_time": "2026-05-02 00:35:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:30:36 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages for adults easy printable",
+                "free coloring pages for adults easy pdf",
+                "free printable coloring pages for adults advanced",
+                "free coloring pages printable",
+                "free printable coloring pages for adults advanced pdf",
+                "easy coloring pages for adults",
+                "free coloring pages pdf format",
+                "funny adult coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages pdf format adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 12:03:42 +00:00",
+                  "competition": 0.05,
+                  "competition_level": "LOW",
+                  "cpc": 1.08,
+                  "search_volume": 90,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 140
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -22,
+                    "quarterly": 0,
+                    "yearly": -59
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "free coloring pages pdf format for adults",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 13,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20coloring%20pages%20pdf%20format%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 8050000,
+                  "last_updated_time": "2026-05-03 17:26:03 +00:00",
+                  "previous_updated_time": "2026-03-22 08:47:31 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 53,
+                  "dofollow": 20.8,
+                  "referring_pages": 51.9,
+                  "referring_domains": 31.6,
+                  "referring_main_domains": 30,
+                  "rank": 113.6,
+                  "main_domain_rank": 512.9,
+                  "last_updated_time": "2026-05-03 14:26:03 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 18:14:15 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages pdf format adults printable",
+                "free printable coloring books pdf",
+                "free coloring pages for adults",
+                "free printable coloring pages for adults advanced",
+                "r-rated coloring pages printable pdf",
+                "best free coloring pages pdf format adults",
+                "funny adult coloring pages",
+                "free printable fantasy coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "best free printable coloring pages for adults advanced",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 01:09:00 +00:00",
+                  "competition": 0.03,
+                  "competition_level": "LOW",
+                  "cpc": 2.46,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 100,
+                    "quarterly": -50,
+                    "yearly": 100
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 2,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=best%20free%20printable%20coloring%20pages%20for%20adults%20advanced&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 200000000,
+                  "last_updated_time": "2026-05-10 09:55:58 +00:00",
+                  "previous_updated_time": "2026-03-26 11:03:38 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 91.6,
+                  "dofollow": 56.3,
+                  "referring_pages": 85.1,
+                  "referring_domains": 26.5,
+                  "referring_main_domains": 25.2,
+                  "rank": 74.6,
+                  "main_domain_rank": 425.6,
+                  "last_updated_time": "2026-05-10 06:55:58 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "commercial",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 00:45:07 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "best free printable coloring pages for adults advanced pdf",
+                "free adult coloring pages printable",
+                "free printable coloring pages for adults pdf",
+                "r-rated coloring pages printable pdf",
+                "free printable fantasy coloring pages for adults",
+                "funny adult coloring pages",
+                "best free printable coloring pages for adults advanced animals",
+                "free printable coloring books pdf"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "preschool coloring pages pdf printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 12:53:57 +00:00",
+                  "competition": 0.39,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.88,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 110
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 75,
+                    "yearly": -22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "printable preschool coloring pages pdf",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 14,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=preschool%20coloring%20pages%20pdf%20printable&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_search",
+                    "related_searches"
+                  ],
+                  "se_results_count": 124,
+                  "last_updated_time": "2026-06-02 14:27:04 +00:00",
+                  "previous_updated_time": "2026-04-11 00:05:40 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 503.4,
+                  "dofollow": 253.5,
+                  "referring_pages": 374,
+                  "referring_domains": 181,
+                  "referring_main_domains": 173.5,
+                  "rank": 116.8,
+                  "main_domain_rank": 531.2,
+                  "last_updated_time": "2026-06-02 11:27:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 18:03:33 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "preschool coloring pages pdf printable free download",
+                "free coloring pages printable",
+                "easy preschool coloring pages pdf printable",
+                "free coloring pages pdf format",
+                "coloring pages for kids pdf",
+                "free coloring pages for kids",
+                "simple coloring pages for kids",
+                "free coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable preschool coloring pages pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 00:19:23 +00:00",
+                  "competition": 0.07,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 0.33,
+                  "high_top_of_page_bid": 2,
+                  "categories": [
+                    10015,
+                    10016,
+                    10125,
+                    10141,
+                    10672,
+                    10767,
+                    12063,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 33,
+                    "quarterly": 100,
+                    "yearly": -20
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 15,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20preschool%20coloring%20pages%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 106,
+                  "last_updated_time": "2026-06-05 23:55:21 +00:00",
+                  "previous_updated_time": "2026-06-05 22:34:20 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 521.6,
+                  "dofollow": 256.9,
+                  "referring_pages": 388.7,
+                  "referring_domains": 190.8,
+                  "referring_main_domains": 183.3,
+                  "rank": 126.3,
+                  "main_domain_rank": 471,
+                  "last_updated_time": "2026-06-05 20:56:11 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "transactional",
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 07:27:25 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free coloring pages printable",
+                "free coloring pages pdf format",
+                "free coloring pages for kids",
+                "free coloring pages for adults",
+                "simple coloring pages for kids",
+                "free coloring pages for girls",
+                "cute girl coloring pages printable",
+                "easy coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring pages for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-22 21:18:08 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 03:48:12 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring pages for kids pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-23 11:09:22 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 12:46:24 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free coloring pages for girls",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-29 10:23:26 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:08:53 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "simple coloring pages for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-02-02 14:13:50 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 03:29:17 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring pages for boys",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-27 01:13:58 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 05:14:16 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-29 07:36:08 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "colorkids",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 22,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": null,
+                  "serp_item_types": null,
+                  "se_results_count": null,
+                  "last_updated_time": "0001-01-01 00:00:00 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 06:46:48 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3382 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0794 sec.",
+  "cost": 0.0123,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0387-0000-b5a01e39db44",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0685 sec.",
+      "cost": 0.0123,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "related_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "related_keywords",
+        "se_type": "google",
+        "keyword": "photo to coloring page",
+        "language_name": "English",
+        "location_code": 2840,
+        "depth": 2,
+        "include_seed_keyword": true,
+        "limit": 1000,
+        "include_serp_info": false
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "photo to coloring page",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "photo to coloring page",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-23 14:11:44 +00:00",
+              "competition": 0.52,
+              "competition_level": "MEDIUM",
+              "cpc": 1.03,
+              "search_volume": 1900,
+              "low_top_of_page_bid": 0.14,
+              "high_top_of_page_bid": 1.33,
+              "categories": [
+                10015,
+                10125,
+                10672,
+                13794
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 2900
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 2400
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 1900
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 19,
+                "quarterly": 19,
+                "yearly": 46
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 24,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=photo%20to%20coloring%20page&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "organic",
+                "images",
+                "perspectives",
+                "related_searches"
+              ],
+              "se_results_count": 375000000,
+              "last_updated_time": "2026-03-14 16:49:12 +00:00",
+              "previous_updated_time": "2026-01-20 16:44:38 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 344.8,
+              "dofollow": 189.6,
+              "referring_pages": 288.4,
+              "referring_domains": 79.1,
+              "referring_main_domains": 75,
+              "rank": 139.1,
+              "main_domain_rank": 461.5,
+              "last_updated_time": "2026-03-14 14:49:13 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 17:52:54 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 23,
+          "items_count": 23,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 14:11:44 +00:00",
+                  "competition": 0.52,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.03,
+                  "search_volume": 1900,
+                  "low_top_of_page_bid": 0.14,
+                  "high_top_of_page_bid": 1.33,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 19,
+                    "quarterly": 19,
+                    "yearly": 46
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 24,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=photo%20to%20coloring%20page&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 375000000,
+                  "last_updated_time": "2026-03-14 16:49:12 +00:00",
+                  "previous_updated_time": "2026-01-20 16:44:38 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 344.8,
+                  "dofollow": 189.6,
+                  "referring_pages": 288.4,
+                  "referring_domains": 79.1,
+                  "referring_main_domains": 75,
+                  "rank": 139.1,
+                  "main_domain_rank": 461.5,
+                  "last_updated_time": "2026-03-14 14:49:13 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:52:54 +00:00"
+                }
+              },
+              "depth": 0,
+              "related_keywords": [
+                "photo to coloring page printable",
+                "photo to coloring page ai",
+                "photo to coloring page online free",
+                "photo to coloring page online",
+                "photo to coloring page app",
+                "turn photo into coloring page crayola",
+                "how to turn a picture into a coloring page canva",
+                "photo to coloring page app free"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring pages from photos",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 11:56:34 +00:00",
+                  "competition": 0.4,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.95,
+                  "search_volume": 1900,
+                  "low_top_of_page_bid": 0.11,
+                  "high_top_of_page_bid": 1.32,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 46
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "photo to coloring page",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 24,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=coloring%20pages%20from%20photos&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 96600000,
+                  "last_updated_time": "2024-09-16 16:28:49 +00:00",
+                  "previous_updated_time": "2024-08-06 04:29:08 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 421.1,
+                  "dofollow": 274.6,
+                  "referring_pages": 286.7,
+                  "referring_domains": 21.4,
+                  "referring_main_domains": 20.1,
+                  "rank": 130.4,
+                  "main_domain_rank": 550.4,
+                  "last_updated_time": "2024-09-16 13:28:49 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 13:49:10 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages for free",
+                "coloring pages from photos online free",
+                "coloring pages from photos online",
+                "coloring page generator",
+                "convert photo to coloring page online",
+                "turn photo into coloring page crayola",
+                "photo to coloring page app",
+                "turn photo into coloring page photoshop"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "turn pictures into coloring pages for free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 00:17:42 +00:00",
+                  "competition": 0.35,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.93,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": 0.08,
+                  "high_top_of_page_bid": 1.32,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1300
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 116
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 21,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=turn%20pictures%20into%20coloring%20pages%20for%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "ai_overview",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 210,
+                  "last_updated_time": "2026-05-18 02:00:55 +00:00",
+                  "previous_updated_time": "2026-03-15 00:38:32 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 430.6,
+                  "dofollow": 219.4,
+                  "referring_pages": 377,
+                  "referring_domains": 104,
+                  "referring_main_domains": 92.2,
+                  "rank": 138.3,
+                  "main_domain_rank": 598.5,
+                  "last_updated_time": "2026-05-17 23:02:08 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 02:56:16 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages for free printable",
+                "turn pictures into coloring pages for free online",
+                "turn pictures into coloring pages for free no sign up",
+                "how to turn a picture into a coloring page canva",
+                "free app to turn photo into coloring page",
+                "turn picture into coloring page photoshop",
+                "photo to coloring page ai",
+                "make your own coloring pages with words free"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "turn pictures into coloring pages free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 14:01:38 +00:00",
+                  "competition": 0.35,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.93,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": 0.08,
+                  "high_top_of_page_bid": 1.32,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1300
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 116
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "turn pictures into coloring pages for free",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 15,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=turn%20pictures%20into%20coloring%20pages%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "video",
+                    "images",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 20300000,
+                  "last_updated_time": "2026-03-15 00:38:10 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 337,
+                  "dofollow": 189.5,
+                  "referring_pages": 284.7,
+                  "referring_domains": 76.6,
+                  "referring_main_domains": 72.4,
+                  "rank": 111.7,
+                  "main_domain_rank": 591.7,
+                  "last_updated_time": "2026-03-14 22:38:12 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:51:18 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages free printable",
+                "turn pictures into coloring pages for free online",
+                "coloring pages from photos",
+                "free app to turn photo into coloring page",
+                "turn picture into coloring page photoshop",
+                "turn photo into coloring page crayola",
+                "make your own coloring pages with words free",
+                "photo to coloring page app"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "icoloring ai",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 14:34:51 +00:00",
+                  "competition": 0.12,
+                  "competition_level": "LOW",
+                  "cpc": 3.04,
+                  "search_volume": 720,
+                  "low_top_of_page_bid": 0.74,
+                  "high_top_of_page_bid": 3.48,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    12204,
+                    13597
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -18,
+                    "quarterly": -45,
+                    "yearly": 414
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 17,
+                  "detected_language": "it",
+                  "is_another_language": true
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=icoloring%20ai&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "people_also_ask",
+                    "video",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 30900,
+                  "last_updated_time": "2026-04-20 18:08:04 +00:00",
+                  "previous_updated_time": "2026-03-04 16:43:23 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 649.6,
+                  "dofollow": 363.4,
+                  "referring_pages": 527.1,
+                  "referring_domains": 91.6,
+                  "referring_main_domains": 77.8,
+                  "rank": 130.1,
+                  "main_domain_rank": 547.9,
+                  "last_updated_time": "2026-04-20 15:08:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-28 01:25:43 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "icoloring ai free",
+                "icoloring ai online",
+                "icoloring ai pdf",
+                "gencolor ai",
+                "colorbliss ai",
+                "coloringbook ai",
+                "ai coloring generator",
+                "turn pictures into coloring pages for free"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "coloring page generator from photo",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 10:30:37 +00:00",
+                  "competition": 0.23,
+                  "competition_level": "LOW",
+                  "cpc": 1.01,
+                  "search_volume": 320,
+                  "low_top_of_page_bid": 0.1,
+                  "high_top_of_page_bid": 1.35,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 320
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 24,
+                    "quarterly": 0,
+                    "yearly": 24
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 20,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=coloring%20page%20generator%20from%20photo&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 157,
+                  "last_updated_time": "2026-05-24 02:56:27 +00:00",
+                  "previous_updated_time": "2026-04-02 08:20:19 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 447.4,
+                  "dofollow": 224.6,
+                  "referring_pages": 389.7,
+                  "referring_domains": 110,
+                  "referring_main_domains": 95.7,
+                  "rank": 127.9,
+                  "main_domain_rank": 566.5,
+                  "last_updated_time": "2026-05-23 23:56:27 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 23:56:44 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "coloring page generator from photo free",
+                "coloring page generator from photo online free",
+                "coloring page generator from photo online",
+                "how to turn a picture into a coloring page canva",
+                "ai coloring page generator from photo",
+                "free app to turn photo into coloring page",
+                "photo to coloring page app",
+                "turn picture into coloring page photoshop"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "how to turn a picture into a coloring page canva",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 20:19:25 +00:00",
+                  "competition": 0.09,
+                  "competition_level": "LOW",
+                  "cpc": 0.46,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": 0.11,
+                  "high_top_of_page_bid": 1.87,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 260
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 24,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=how%20to%20turn%20a%20picture%20into%20a%20coloring%20page%20canva&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "people_also_ask",
+                    "short_videos",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 135,
+                  "last_updated_time": "2026-05-25 21:02:18 +00:00",
+                  "previous_updated_time": "2026-04-04 03:07:50 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 0.9,
+                  "dofollow": 0.4,
+                  "referring_pages": 0.7,
+                  "referring_domains": 0.6,
+                  "referring_main_domains": 0.6,
+                  "rank": 6.2,
+                  "main_domain_rank": 760,
+                  "last_updated_time": "2026-05-25 18:02:19 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-28 11:23:15 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "how to turn a picture into a coloring page canva online",
+                "turn pictures into coloring pages free",
+                "how to make a coloring book with your own pictures",
+                "how to make a coloring book for free",
+                "how to create a coloring book on canva to sell",
+                "how to make a mini coloring book on canva",
+                "canva coloring book templates free",
+                "how to create a coloring book on canva to sell on amazon"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "convert photo to coloring page online free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 20:44:58 +00:00",
+                  "competition": 0.34,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.89,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": 0.34,
+                  "high_top_of_page_bid": 2.5,
+                  "categories": [
+                    10019,
+                    10019,
+                    10168,
+                    10168,
+                    10885,
+                    10885,
+                    11368,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 320
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -48,
+                    "quarterly": 57,
+                    "yearly": -48
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 18,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=convert%20photo%20to%20coloring%20page%20online%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "video",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 8010000,
+                  "last_updated_time": "2026-04-29 10:37:19 +00:00",
+                  "previous_updated_time": "2026-03-05 13:34:59 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 453.4,
+                  "dofollow": 250.2,
+                  "referring_pages": 394.7,
+                  "referring_domains": 100.8,
+                  "referring_main_domains": 92.1,
+                  "rank": 146.8,
+                  "main_domain_rank": 438.6,
+                  "last_updated_time": "2026-04-29 07:37:19 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 06:47:32 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages for free",
+                "how to turn a picture into a coloring page canva",
+                "coloring pages from photos",
+                "free app to turn photo into coloring page",
+                "photo to coloring page ai",
+                "photo to coloring page app",
+                "turn picture into coloring page photoshop",
+                "turn pictures into coloring pages for free no sign up"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "how to create a coloring book on canva to sell",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 01:48:27 +00:00",
+                  "competition": 0.19,
+                  "competition_level": "LOW",
+                  "cpc": 2.94,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": 0.84,
+                  "high_top_of_page_bid": 9.58,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 210
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -48
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=how%20to%20create%20a%20coloring%20book%20on%20canva%20to%20sell&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "people_also_ask",
+                    "discussions_and_forums",
+                    "short_videos",
+                    "related_searches"
+                  ],
+                  "se_results_count": 147,
+                  "last_updated_time": "2026-05-26 15:59:14 +00:00",
+                  "previous_updated_time": "2026-04-04 03:36:37 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1.1,
+                  "dofollow": 0.6,
+                  "referring_pages": 0.9,
+                  "referring_domains": 0.7,
+                  "referring_main_domains": 0.7,
+                  "rank": 9.8,
+                  "main_domain_rank": 875.8,
+                  "last_updated_time": "2026-05-26 12:59:14 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 20:41:41 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "how to create a coloring book on canva to sell online",
+                "how to create a coloring book on canva to sell on amazon",
+                "how to create a coloring book on canva to sell free",
+                "how to create a coloring book to sell",
+                "how to create a coloring book to sell on amazon for free",
+                "canva coloring book templates free",
+                "how to make a coloring book for free",
+                "how to make a coloring book with ai"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page app",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 14:28:27 +00:00",
+                  "competition": 0.36,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.92,
+                  "search_volume": 110,
+                  "low_top_of_page_bid": 0.52,
+                  "high_top_of_page_bid": 1.75,
+                  "categories": [
+                    10019,
+                    10019,
+                    10168,
+                    10168,
+                    10885,
+                    10885,
+                    11368,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 170
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -20,
+                    "quarterly": -43,
+                    "yearly": -56
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "keyword_metrics",
+                  "keyword_difficulty": 19,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=photo%20to%20coloring%20page%20app&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "video",
+                    "discussions_and_forums",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 176000000,
+                  "last_updated_time": "2026-05-03 06:17:34 +00:00",
+                  "previous_updated_time": "2026-03-22 01:07:18 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 319.9,
+                  "dofollow": 167.7,
+                  "referring_pages": 272.6,
+                  "referring_domains": 80.6,
+                  "referring_main_domains": 74,
+                  "rank": 127.9,
+                  "main_domain_rank": 645.2,
+                  "last_updated_time": "2026-05-03 03:17:34 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational",
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-29 19:10:48 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "photo to coloring page app free",
+                "turn pictures into coloring pages for free",
+                "photo to coloring page app free download",
+                "photo to coloring page app iphone",
+                "photo to coloring page app for android",
+                "best photo to coloring page app",
+                "convert photo to coloring page online free",
+                "photo to coloring page ai"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "turn pictures into coloring pages app",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 16:18:33 +00:00",
+                  "competition": 0.44,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.39,
+                  "search_volume": 110,
+                  "low_top_of_page_bid": 0.4,
+                  "high_top_of_page_bid": 1.69,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 57,
+                    "quarterly": 0,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 19,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=turn%20pictures%20into%20coloring%20pages%20app&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 52700000,
+                  "last_updated_time": "2026-04-05 10:13:40 +00:00",
+                  "previous_updated_time": "2026-02-18 14:37:46 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 83.2,
+                  "dofollow": 22.2,
+                  "referring_pages": 78.8,
+                  "referring_domains": 53.5,
+                  "referring_main_domains": 53.1,
+                  "rank": 114.7,
+                  "main_domain_rank": 754.6,
+                  "last_updated_time": "2026-04-05 07:13:41 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-30 00:51:28 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages app free",
+                "turn pictures into coloring pages for free",
+                "turn pictures into coloring pages app iphone",
+                "turn pictures into coloring pages app android",
+                "turn pictures into coloring pages for free online",
+                "turn photo into coloring page",
+                "upload and color your own pictures",
+                "how to turn a picture into a coloring page canva"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page ai",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 22:47:47 +00:00",
+                  "competition": 0.27,
+                  "competition_level": "LOW",
+                  "cpc": 1.66,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 0.48,
+                  "high_top_of_page_bid": 2.3,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 29,
+                    "quarterly": 29,
+                    "yearly": 800
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "ai photo to coloring page",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 31,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=photo%20to%20coloring%20page%20ai&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 129000000,
+                  "last_updated_time": "2026-05-09 04:27:16 +00:00",
+                  "previous_updated_time": "2026-03-26 23:15:33 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 867.7,
+                  "dofollow": 622.7,
+                  "referring_pages": 796.5,
+                  "referring_domains": 117.1,
+                  "referring_main_domains": 102.2,
+                  "rank": 173.7,
+                  "main_domain_rank": 451.5,
+                  "last_updated_time": "2026-05-09 01:27:17 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:52:23 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "photo to coloring page ai free",
+                "turn pictures into coloring pages for free",
+                "turn pictures into coloring pages for free online",
+                "photo to coloring page ai online",
+                "coloring page generator from photo",
+                "photo to coloring page ai app",
+                "icoloring ai",
+                "photo to coloring page app"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "turn pictures into coloring pages for free online",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 09:31:33 +00:00",
+                  "competition": 0.3,
+                  "competition_level": "LOW",
+                  "cpc": 1.3,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 0.11,
+                  "high_top_of_page_bid": 1.8,
+                  "categories": [
+                    10108,
+                    13691
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 24,
+                    "quarterly": 271,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 11,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=turn%20pictures%20into%20coloring%20pages%20for%20free%20online&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "ai_overview",
+                    "discussions_and_forums",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 14300000,
+                  "last_updated_time": "2026-05-11 08:48:13 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 199.8,
+                  "dofollow": 83.3,
+                  "referring_pages": 185.6,
+                  "referring_domains": 70,
+                  "referring_main_domains": 65.5,
+                  "rank": 110.9,
+                  "main_domain_rank": 447.5,
+                  "last_updated_time": "2026-05-11 05:48:14 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-05-04 06:57:31 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "turn pictures into coloring pages for free online no sign up",
+                "how to turn a picture into a coloring page canva",
+                "turn photo into coloring page crayola",
+                "free app to turn photo into coloring page",
+                "photo to coloring page ai",
+                "turn picture into coloring page photoshop",
+                "photo to coloring page app",
+                "best photo to coloring page app"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free app to turn photo into coloring page",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 15:04:43 +00:00",
+                  "competition": 0.4,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.46,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": 0.14,
+                  "high_top_of_page_bid": 1.35,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 22,
+                    "quarterly": 22,
+                    "yearly": 450
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 19,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20app%20to%20turn%20photo%20into%20coloring%20page&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "discussions_and_forums",
+                    "video",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 21400000,
+                  "last_updated_time": "2026-05-12 12:36:57 +00:00",
+                  "previous_updated_time": "2026-03-11 10:09:39 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 302.2,
+                  "dofollow": 155.3,
+                  "referring_pages": 261.7,
+                  "referring_domains": 80.4,
+                  "referring_main_domains": 73.4,
+                  "rank": 129.3,
+                  "main_domain_rank": 627.8,
+                  "last_updated_time": "2026-05-12 09:36:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 18:17:44 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free app to turn photo into coloring page iphone",
+                "turn pictures into coloring pages for free",
+                "turn pictures into coloring pages for free online",
+                "free app to turn photo into coloring page android",
+                "best free app to turn photo into coloring page",
+                "free app to turn photo into coloring page ios",
+                "how to turn a picture into a coloring page canva",
+                "coloring pages from photos"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "turn photo into coloring page crayola",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 20:59:22 +00:00",
+                  "competition": 0.15,
+                  "competition_level": "LOW",
+                  "cpc": 0.21,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": 0.02,
+                  "high_top_of_page_bid": 0.74,
+                  "categories": [
+                    10002,
+                    10030,
+                    10235,
+                    11018,
+                    12287
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -40
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "turn photos into coloring pages crayola",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 40,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=turn%20photo%20into%20coloring%20page%20crayola&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "images",
+                    "people_also_ask",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 169,
+                  "last_updated_time": "2026-06-06 17:16:14 +00:00",
+                  "previous_updated_time": "2026-04-10 09:28:40 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 617.4,
+                  "dofollow": 337.2,
+                  "referring_pages": 464.4,
+                  "referring_domains": 94.2,
+                  "referring_main_domains": 76.4,
+                  "rank": 204.1,
+                  "main_domain_rank": 527,
+                  "last_updated_time": "2026-06-06 14:19:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-30 02:41:39 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "turn pictures into coloring pages for free",
+                "turn pictures into coloring pages for free online",
+                "turn photo into coloring page crayola free",
+                "turn photo into coloring page crayola online free",
+                "turn photo into coloring page crayola reddit",
+                "turn pictures into coloring pages app",
+                "turn photo into coloring page crayola online",
+                "free app to turn photo into coloring page"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "best photo to coloring page app",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 00:55:40 +00:00",
+                  "competition": 0.44,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.85,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": 0.65,
+                  "high_top_of_page_bid": 2.04,
+                  "categories": [
+                    10007,
+                    10878,
+                    13378,
+                    13381
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "commercial",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-07 17:12:15 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "how to make a coloring book for free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 11:46:57 +00:00",
+                  "competition": 0.32,
+                  "competition_level": "LOW",
+                  "cpc": 1.33,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": 0.6,
+                  "high_top_of_page_bid": 2.19,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 75,
+                    "quarterly": 40,
+                    "yearly": 133
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 5,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=how%20to%20make%20a%20coloring%20book%20for%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "video",
+                    "people_also_ask",
+                    "organic",
+                    "discussions_and_forums",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 240000000,
+                  "last_updated_time": "2026-05-12 06:59:06 +00:00",
+                  "previous_updated_time": "2026-03-09 12:15:29 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 264.5,
+                  "dofollow": 112.5,
+                  "referring_pages": 201.2,
+                  "referring_domains": 56.3,
+                  "referring_main_domains": 49.9,
+                  "rank": 69.7,
+                  "main_domain_rank": 600.6,
+                  "last_updated_time": "2026-05-12 03:59:07 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 22:12:50 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "how to make a coloring book for free printable",
+                "how to make a coloring book for free online",
+                "how to create a coloring book to sell",
+                "how to create a coloring book on canva to sell",
+                "how to create a coloring book on canva to sell on amazon",
+                "how to create a coloring book to sell on amazon for free",
+                "how to make a coloring book with your own pictures",
+                "how to make a coloring book with ai"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page online free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 09:07:21 +00:00",
+                  "competition": 0.08,
+                  "competition_level": "LOW",
+                  "cpc": 0.02,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": 0.07,
+                  "high_top_of_page_bid": 2.03,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368,
+                    12701
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 150,
+                    "quarterly": 150,
+                    "yearly": 150
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "photo to coloring page free online",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 28,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=photo%20to%20coloring%20page%20online%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 156000000,
+                  "last_updated_time": "2026-05-14 16:23:57 +00:00",
+                  "previous_updated_time": "2026-03-28 13:55:27 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 442.8,
+                  "dofollow": 223.4,
+                  "referring_pages": 385.1,
+                  "referring_domains": 108.7,
+                  "referring_main_domains": 96.9,
+                  "rank": 169.5,
+                  "main_domain_rank": 379.2,
+                  "last_updated_time": "2026-05-14 13:23:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:04:06 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "turn pictures into coloring pages for free",
+                "photo to coloring page online free no sign up",
+                "photo to coloring page ai",
+                "coloring pages from photos",
+                "free app to turn photo into coloring page",
+                "photo to coloring page app",
+                "how to turn a picture into a coloring page canva",
+                "best photo to coloring page app"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "how to make a mini coloring book on canva",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 13:55:22 +00:00",
+                  "competition": 0.54,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.54,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -33,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=how%20to%20make%20a%20mini%20coloring%20book%20on%20canva&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "short_videos",
+                    "people_also_ask",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 13600000,
+                  "last_updated_time": "2026-03-10 23:12:21 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1.1,
+                  "dofollow": 0.7,
+                  "referring_pages": 0.8,
+                  "referring_domains": 0.7,
+                  "referring_main_domains": 0.7,
+                  "rank": 6.5,
+                  "main_domain_rank": 911.5,
+                  "last_updated_time": "2026-03-10 21:12:36 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 22:31:16 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "how to make a mini coloring book on canva pdf",
+                "how to make a mini coloring book on canva free",
+                "how to create a coloring book on canva to sell",
+                "how to make a coloring book on canva",
+                "mini coloring book template",
+                "how to create a coloring book on canva to sell on amazon",
+                "how to create a coloring book to sell",
+                "diy coloring book party favors"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "how to make a coloring book with your own pictures",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 14:06:51 +00:00",
+                  "competition": 0.9,
+                  "competition_level": "HIGH",
+                  "cpc": 1.72,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": 0.65,
+                  "high_top_of_page_bid": 1.61,
+                  "categories": [
+                    10108,
+                    13691
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -50,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-08 02:51:41 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page online",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 08:44:55 +00:00",
+                  "competition": 0.13,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    11368
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-01 10:29:24 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "photo to coloring page app free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 03:12:12 +00:00",
+                  "competition": 0.42,
+                  "competition_level": "MEDIUM",
+                  "cpc": 1.34,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": 0.23,
+                  "high_top_of_page_bid": 1.48,
+                  "categories": [
+                    10007,
+                    10878,
+                    13378,
+                    13381
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 50,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "navigational"
+                  ],
+                  "last_updated_time": "2026-05-05 04:56:43 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "canva coloring book templates free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 02:18:07 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-04 08:07:53 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

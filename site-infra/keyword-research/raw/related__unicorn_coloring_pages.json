@@ -1,0 +1,4541 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1948 sec.",
+  "cost": 0.0132,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0387-0000-82d23f86f1fd",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1418 sec.",
+      "cost": 0.0132,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "related_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "related_keywords",
+        "se_type": "google",
+        "keyword": "unicorn coloring pages",
+        "language_name": "English",
+        "location_code": 2840,
+        "depth": 2,
+        "include_seed_keyword": true,
+        "limit": 1000,
+        "include_serp_info": false
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "unicorn coloring pages",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "unicorn coloring pages",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-22 14:58:24 +00:00",
+              "competition": 0.98,
+              "competition_level": "HIGH",
+              "cpc": 0.09,
+              "search_volume": 49500,
+              "low_top_of_page_bid": 0.06,
+              "high_top_of_page_bid": 2.03,
+              "categories": [
+                10015,
+                10125,
+                10672,
+                13794
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 33100
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 49500
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 60500
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 60500
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 0,
+                "quarterly": 0,
+                "yearly": -18
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 0,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "images",
+                "organic",
+                "video",
+                "related_searches"
+              ],
+              "se_results_count": 37500000,
+              "last_updated_time": "2026-05-14 22:55:14 +00:00",
+              "previous_updated_time": "2026-03-12 01:44:09 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 38.9,
+              "dofollow": 4,
+              "referring_pages": 22.1,
+              "referring_domains": 2.5,
+              "referring_main_domains": 2.5,
+              "rank": 31.4,
+              "main_domain_rank": 523.4,
+              "last_updated_time": "2026-05-14 19:55:14 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 22:56:31 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 32,
+          "items_count": 32,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 14:58:24 +00:00",
+                  "competition": 0.98,
+                  "competition_level": "HIGH",
+                  "cpc": 0.09,
+                  "search_volume": 49500,
+                  "low_top_of_page_bid": 0.06,
+                  "high_top_of_page_bid": 2.03,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 49500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 60500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 60500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -18
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 37500000,
+                  "last_updated_time": "2026-05-14 22:55:14 +00:00",
+                  "previous_updated_time": "2026-03-12 01:44:09 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 38.9,
+                  "dofollow": 4,
+                  "referring_pages": 22.1,
+                  "referring_domains": 2.5,
+                  "referring_main_domains": 2.5,
+                  "rank": 31.4,
+                  "main_domain_rank": 523.4,
+                  "last_updated_time": "2026-05-14 19:55:14 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:56:31 +00:00"
+                }
+              },
+              "depth": 0,
+              "related_keywords": [
+                "unicorn coloring book",
+                "unicorn coloring pages printable pdf",
+                "printable cute unicorn coloring pages",
+                "unicorn coloring pages simple",
+                "unicorn coloring pages for adults",
+                "unicorn coloring pages for kids",
+                "crayola unicorn coloring pages",
+                "unicorn coloring pages pinterest"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 19:34:53 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": 1.06,
+                  "search_volume": 6600,
+                  "low_top_of_page_bid": 0.02,
+                  "high_top_of_page_bid": 2,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 9900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 23,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "unicorn coloring pages free",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 41000000,
+                  "last_updated_time": "2026-03-29 09:08:47 +00:00",
+                  "previous_updated_time": "2026-02-07 19:12:12 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 18.3,
+                  "dofollow": 8.7,
+                  "referring_pages": 13.3,
+                  "referring_domains": 5.7,
+                  "referring_main_domains": 5.7,
+                  "rank": 61.6,
+                  "main_domain_rank": 467.4,
+                  "last_updated_time": "2026-03-29 06:08:47 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:43:37 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free unicorn coloring pages printable",
+                "unicorn coloring pages printable pdf",
+                "free unicorn coloring pages for adults",
+                "free baby unicorn coloring pages",
+                "unicorn coloring pages easy",
+                "crayola unicorn coloring pages",
+                "unicorn with wings coloring pages",
+                "unicorn images to print free"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "crayola unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 14:03:20 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": 0.7,
+                  "search_volume": 4400,
+                  "low_top_of_page_bid": 0.02,
+                  "high_top_of_page_bid": 0.89,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 124,
+                    "quarterly": 124,
+                    "yearly": 49233
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 4,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=crayola%20unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches",
+                    "popular_products"
+                  ],
+                  "se_results_count": 1230000,
+                  "last_updated_time": "2026-04-19 09:13:15 +00:00",
+                  "previous_updated_time": "2026-03-04 23:33:06 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 242.5,
+                  "dofollow": 157,
+                  "referring_pages": 188.8,
+                  "referring_domains": 35,
+                  "referring_main_domains": 27.7,
+                  "rank": 56.4,
+                  "main_domain_rank": 669.1,
+                  "last_updated_time": "2026-04-19 06:13:16 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 20:42:25 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "crayola unicorn coloring pages printable",
+                "unicorn coloring pages printable pdf",
+                "crayola unicorn coloring pages pdf",
+                "printable cute unicorn coloring pages",
+                "unicorn coloring free printable",
+                "unicorn coloring pages for adults",
+                "unicorn coloring pages easy",
+                "free baby unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 12:14:59 +00:00",
+                  "competition": 0.97,
+                  "competition_level": "HIGH",
+                  "cpc": 0.04,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -16
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute unicorn coloring page",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "short_videos",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 132,
+                  "last_updated_time": "2026-05-18 10:28:28 +00:00",
+                  "previous_updated_time": "2026-03-14 21:08:14 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 45.3,
+                  "dofollow": 8.1,
+                  "referring_pages": 26.9,
+                  "referring_domains": 3.6,
+                  "referring_main_domains": 3.6,
+                  "rank": 41.9,
+                  "main_domain_rank": 591.2,
+                  "last_updated_time": "2026-05-18 07:28:28 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 02:20:51 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute unicorn coloring pages printable",
+                "unicorn coloring pages printable pdf",
+                "cute unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "free baby unicorn coloring pages",
+                "cute unicorn coloring pages pdf free",
+                "cute unicorn coloring pages for kids",
+                "crayola unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 11:05:49 +00:00",
+                  "competition": 0.99,
+                  "competition_level": "HIGH",
+                  "cpc": 0.22,
+                  "search_volume": 720,
+                  "low_top_of_page_bid": 0.27,
+                  "high_top_of_page_bid": 0.85,
+                  "categories": [
+                    10015,
+                    10135,
+                    10736
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 720
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -18,
+                    "quarterly": 0,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "popular_products",
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 211,
+                  "last_updated_time": "2026-05-20 09:16:17 +00:00",
+                  "previous_updated_time": "2026-03-16 21:42:20 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 38.9,
+                  "dofollow": 4,
+                  "referring_pages": 22.1,
+                  "referring_domains": 2.5,
+                  "referring_main_domains": 2.5,
+                  "rank": 30.1,
+                  "main_domain_rank": 526.8,
+                  "last_updated_time": "2026-05-20 06:16:18 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:01:32 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "unicorn coloring book pdf",
+                "unicorn coloring book printable",
+                "unicorn coloring book for adults",
+                "unicorn coloring book amazon",
+                "unicorn coloring book page",
+                "unicorn coloring book for kids",
+                "unicorn coloring book walmart",
+                "unicorns gone wild coloring book for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages printable pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 19:13:01 +00:00",
+                  "competition": 0.27,
+                  "competition_level": "LOW",
+                  "cpc": 0.63,
+                  "search_volume": 590,
+                  "low_top_of_page_bid": 0.24,
+                  "high_top_of_page_bid": 2.13,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 480
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20printable%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 113,
+                  "last_updated_time": "2026-05-21 03:56:14 +00:00",
+                  "previous_updated_time": "2026-03-31 12:08:13 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 55.6,
+                  "dofollow": 8.9,
+                  "referring_pages": 37,
+                  "referring_domains": 4.1,
+                  "referring_main_domains": 4.1,
+                  "rank": 43.9,
+                  "main_domain_rank": 402.3,
+                  "last_updated_time": "2026-05-21 01:00:50 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 23:28:35 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "unicorn coloring pages printable pdf free",
+                "printable cute unicorn coloring pages",
+                "free unicorn printables pdf",
+                "unicorn colouring printable",
+                "unicorn coloring pages easy",
+                "unicorn images to print free",
+                "unicorn coloring pages for adults",
+                "crayola unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 22:01:34 +00:00",
+                  "competition": 0.39,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.23,
+                  "search_volume": 260,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 320
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 24,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "unicorn coloring pages adult",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "popular_products",
+                    "related_searches"
+                  ],
+                  "se_results_count": 35800000,
+                  "last_updated_time": "2026-04-22 18:32:41 +00:00",
+                  "previous_updated_time": "2026-03-05 01:34:46 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.7,
+                  "dofollow": 2.9,
+                  "referring_pages": 6.2,
+                  "referring_domains": 2.6,
+                  "referring_main_domains": 2.6,
+                  "rank": 33.7,
+                  "main_domain_rank": 631.4,
+                  "last_updated_time": "2026-04-22 15:35:07 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 22:51:56 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "unicorn coloring pages for adults printable",
+                "unicorn coloring pages for adults pdf",
+                "unicorn coloring pages printable pdf",
+                "easy unicorn coloring pages for adults",
+                "printable cute unicorn coloring pages",
+                "unicorn adult coloring book",
+                "unicorn coloring pages easy",
+                "free unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn colouring printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 19:14:52 +00:00",
+                  "competition": 0.73,
+                  "competition_level": "HIGH",
+                  "cpc": 0.02,
+                  "search_volume": 260,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 260
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -34
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20colouring%20printable&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches",
+                    "popular_products"
+                  ],
+                  "se_results_count": 191,
+                  "last_updated_time": "2026-05-24 10:18:01 +00:00",
+                  "previous_updated_time": "2026-04-02 14:54:32 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 86.9,
+                  "dofollow": 5.3,
+                  "referring_pages": 55.7,
+                  "referring_domains": 3,
+                  "referring_main_domains": 3,
+                  "rank": 33.4,
+                  "main_domain_rank": 520.3,
+                  "last_updated_time": "2026-05-24 07:18:01 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-29 23:21:10 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn colouring printable pdf",
+                "unicorn colouring printable free",
+                "easy unicorn colouring printable",
+                "unicorn images to print free",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "crayola unicorn coloring pages",
+                "free baby unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "printable cute unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 14:47:06 +00:00",
+                  "competition": 0.65,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.06,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 170
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=printable%20cute%20unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 132,
+                  "last_updated_time": "2026-05-25 15:11:12 +00:00",
+                  "previous_updated_time": "2026-04-02 20:05:27 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 112.5,
+                  "dofollow": 10.3,
+                  "referring_pages": 78.7,
+                  "referring_domains": 4.6,
+                  "referring_main_domains": 4.6,
+                  "rank": 47.2,
+                  "main_domain_rank": 538.5,
+                  "last_updated_time": "2026-05-25 12:11:15 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 19:05:48 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "free printable cute unicorn coloring pages",
+                "printable cute unicorn coloring pages pdf",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "unicorn images to print free",
+                "free baby unicorn coloring pages",
+                "crayola unicorn coloring pages",
+                "unicorn with wings coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 23:30:27 +00:00",
+                  "competition": 0.64,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.03,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 320
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 21,
+                    "quarterly": 89,
+                    "yearly": -35
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "easy unicorn coloring pages",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 130,
+                  "last_updated_time": "2026-05-25 08:59:36 +00:00",
+                  "previous_updated_time": "2026-04-03 10:13:17 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 156,
+                  "dofollow": 40.5,
+                  "referring_pages": 94,
+                  "referring_domains": 2.8,
+                  "referring_main_domains": 2.7,
+                  "rank": 39,
+                  "main_domain_rank": 552.4,
+                  "last_updated_time": "2026-05-25 05:59:36 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:15:52 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring pages easy printable",
+                "unicorn coloring pages printable pdf",
+                "free unicorn coloring pages easy",
+                "cute unicorn coloring pages",
+                "printable cute unicorn coloring pages",
+                "unicorn coloring pages easy pdf",
+                "unicorn coloring pages for adults",
+                "crayola unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn with wings coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 13:24:27 +00:00",
+                  "competition": 0.91,
+                  "competition_level": "HIGH",
+                  "cpc": 0.03,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 210
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": 24,
+                    "yearly": 24
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20with%20wings%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "popular_products",
+                    "related_searches"
+                  ],
+                  "se_results_count": 156,
+                  "last_updated_time": "2026-05-25 09:00:25 +00:00",
+                  "previous_updated_time": "2026-04-03 10:24:34 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 73.6,
+                  "dofollow": 7.3,
+                  "referring_pages": 41.3,
+                  "referring_domains": 4.5,
+                  "referring_main_domains": 4.5,
+                  "rank": 47.8,
+                  "main_domain_rank": 621.9,
+                  "last_updated_time": "2026-05-25 06:00:27 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "navigational"
+                  ],
+                  "last_updated_time": "2026-04-29 22:59:45 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn with wings coloring pages printable",
+                "unicorn coloring pages printable pdf",
+                "unicorn with wings coloring pages pdf",
+                "printable cute unicorn coloring pages",
+                "easy unicorn with wings coloring pages",
+                "unicorn coloring pages for adults",
+                "unicorn coloring pages easy",
+                "crayola unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn images to print free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 18:19:16 +00:00",
+                  "competition": 0.02,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 110,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    12204,
+                    13597
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 140
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -50,
+                    "quarterly": -71,
+                    "yearly": -90
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20images%20to%20print%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 171,
+                  "last_updated_time": "2026-05-27 20:39:03 +00:00",
+                  "previous_updated_time": "2026-04-04 20:48:21 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 95.7,
+                  "dofollow": 10.2,
+                  "referring_pages": 62.2,
+                  "referring_domains": 5.5,
+                  "referring_main_domains": 4.8,
+                  "rank": 46.2,
+                  "main_domain_rank": 576.8,
+                  "last_updated_time": "2026-05-27 17:40:03 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-29 23:00:43 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn images to print free pdf",
+                "unicorn images to print free download",
+                "unicorn images to print free for adults",
+                "unicorn pictures to print",
+                "unicorn images to print free for kids",
+                "unicorn coloring pages easy",
+                "free baby unicorn coloring pages",
+                "crayola unicorn coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorns gone wild coloring book for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 18:56:36 +00:00",
+                  "competition": 0.14,
+                  "competition_level": "LOW",
+                  "cpc": 0.42,
+                  "search_volume": 90,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -50,
+                    "quarterly": -78,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorns%20gone%20wild%20coloring%20book%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "popular_products",
+                    "related_searches"
+                  ],
+                  "se_results_count": 204,
+                  "last_updated_time": "2026-05-28 12:24:45 +00:00",
+                  "previous_updated_time": "2026-04-06 03:44:25 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-08 05:42:06 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorns gone wild coloring book for adults pdf",
+                "unicorns gone wild coloring book for adults free",
+                "unicorns gone wild coloring book for adults pages",
+                "unicorns gone wild coloring book for adults amazon",
+                "unicorns coloring pages pdf",
+                "honey badger coloring"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book page",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 08:46:15 +00:00",
+                  "competition": 1,
+                  "competition_level": "HIGH",
+                  "cpc": 0.03,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -40,
+                    "yearly": -40
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "color book pages unicorn",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20page&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "popular_products",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 186,
+                  "last_updated_time": "2026-06-02 00:08:14 +00:00",
+                  "previous_updated_time": "2026-06-01 20:23:51 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 238.5,
+                  "dofollow": 10.4,
+                  "referring_pages": 126.7,
+                  "referring_domains": 4.4,
+                  "referring_main_domains": 4.4,
+                  "rank": 43.9,
+                  "main_domain_rank": 511.7,
+                  "last_updated_time": "2026-06-01 21:08:25 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 01:53:55 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring pages printable pdf",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "crayola unicorn coloring pages",
+                "unicorn with wings coloring pages",
+                "unicorn coloring ideas",
+                "free baby unicorn coloring pages",
+                "unicorn and rainbow coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages simple",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 10:47:15 +00:00",
+                  "competition": 0.68,
+                  "competition_level": "HIGH",
+                  "cpc": 0.05,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 75,
+                    "yearly": 75
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "simple unicorn coloring pages",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20simple&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 134,
+                  "last_updated_time": "2026-06-06 16:06:39 +00:00",
+                  "previous_updated_time": "2026-04-13 15:09:14 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 57.1,
+                  "dofollow": 8.5,
+                  "referring_pages": 49.1,
+                  "referring_domains": 4.3,
+                  "referring_main_domains": 4.3,
+                  "rank": 44.1,
+                  "main_domain_rank": 568.7,
+                  "last_updated_time": "2026-06-06 13:12:38 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 02:14:27 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "unicorn coloring pages simple printable",
+                "unicorn coloring pages printable pdf",
+                "unicorn coloring pages simple pdf",
+                "cute unicorn coloring pages",
+                "unicorn coloring pages for adults",
+                "crayola unicorn coloring pages",
+                "free baby unicorn coloring pages",
+                "unicorn baby coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 21:16:49 +00:00",
+                  "competition": 0.99,
+                  "competition_level": "HIGH",
+                  "cpc": 0.19,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 100,
+                    "quarterly": -50,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "adult unicorn coloring book",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "popular_products",
+                    "organic",
+                    "images",
+                    "people_also_ask",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 57500000,
+                  "last_updated_time": "2026-05-11 07:42:54 +00:00",
+                  "previous_updated_time": "2026-03-09 06:36:19 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:07:13 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring book for adults printable",
+                "unicorn coloring book for adults pdf",
+                "best unicorn coloring book for adults",
+                "unicorn coloring book pdf",
+                "unicorns gone wild coloring book for adults",
+                "unicorn coloring book amazon",
+                "unicorn coloring pages",
+                "unicorn coloring book printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages printable pdf free",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 13:40:46 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -43,
+                    "quarterly": 0,
+                    "yearly": -43
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "unicorn coloring pages printable free pdf",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20printable%20pdf%20free&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 3790000,
+                  "last_updated_time": "2026-05-11 07:52:28 +00:00",
+                  "previous_updated_time": "2026-03-26 12:29:02 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 59.4,
+                  "dofollow": 12.3,
+                  "referring_pages": 42.5,
+                  "referring_domains": 6.7,
+                  "referring_main_domains": 6.7,
+                  "rank": 66.4,
+                  "main_domain_rank": 441,
+                  "last_updated_time": "2026-05-11 04:52:29 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:10:43 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring pages printable pdf free download",
+                "free unicorn printables pdf",
+                "free printable printable cute unicorn coloring pages",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "free baby unicorn coloring pages",
+                "unicorn with wings coloring pages",
+                "unicorn coloring pages for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free unicorn printables pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 04:36:24 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10108,
+                    10112
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 90
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 25,
+                    "quarterly": 0,
+                    "yearly": -29
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 8,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20unicorn%20printables%20pdf&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 3370000,
+                  "last_updated_time": "2026-04-11 23:38:38 +00:00",
+                  "previous_updated_time": "2026-02-23 03:25:50 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 23,
+                  "dofollow": 9.9,
+                  "referring_pages": 15.2,
+                  "referring_domains": 6.4,
+                  "referring_main_domains": 6.4,
+                  "rank": 78.4,
+                  "main_domain_rank": 446.4,
+                  "last_updated_time": "2026-04-11 20:38:39 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 20:36:04 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free unicorn printables pdf for kids",
+                "unicorn coloring pages printable pdf",
+                "free printable unicorn",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults",
+                "free baby unicorn coloring pages",
+                "crayola unicorn coloring pages",
+                "unicorn with wings coloring pages"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn adult coloring book",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 09:32:04 +00:00",
+                  "competition": 1,
+                  "competition_level": "HIGH",
+                  "cpc": 5.08,
+                  "search_volume": 40,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10135,
+                    10736
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -50,
+                    "quarterly": -33,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "adult unicorn coloring book",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20adult%20coloring%20book&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "popular_products",
+                    "organic",
+                    "images",
+                    "people_also_ask",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 3370000,
+                  "last_updated_time": "2026-05-11 07:47:55 +00:00",
+                  "previous_updated_time": "2026-03-26 12:23:54 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:10:38 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn adult coloring book pdf",
+                "unicorn adult coloring book printable",
+                "unicorns gone wild coloring book for adults",
+                "unicorn coloring book pdf",
+                "unicorns gone wild coloring book pdf",
+                "unicorn coloring book amazon",
+                "unicorn coloring book page",
+                "unicorn coloring book printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book amazon",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 08:06:33 +00:00",
+                  "competition": 0.52,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.05,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10135,
+                    10736
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -33,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "amazon unicorn coloring book",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20amazon&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 10900000,
+                  "last_updated_time": "2026-03-28 00:01:54 +00:00",
+                  "previous_updated_time": "2025-11-27 13:32:05 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:38:48 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring book pdf",
+                "unicorn coloring book amazon free",
+                "unicorn coloring book amazon adults",
+                "easy unicorn coloring book amazon",
+                "best unicorn coloring book amazon",
+                "unicorn coloring book for adults",
+                "unicorn coloring pages",
+                "unicorn coloring book amazon pdf"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "free printable cute unicorn coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 03:36:56 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=free%20printable%20cute%20unicorn%20coloring%20pages&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 7480000,
+                  "last_updated_time": "2026-03-11 09:56:45 +00:00",
+                  "previous_updated_time": "2025-12-24 05:33:07 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 11.9,
+                  "dofollow": 5.4,
+                  "referring_pages": 9,
+                  "referring_domains": 3.4,
+                  "referring_main_domains": 3.4,
+                  "rank": 41.7,
+                  "main_domain_rank": 571.2,
+                  "last_updated_time": "2026-03-11 07:56:46 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "commercial"
+                  ],
+                  "last_updated_time": "2026-05-04 04:31:43 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "free printable cute unicorn coloring pages pdf",
+                "free printable cute unicorn coloring pages for kids",
+                "free printable cute unicorn coloring pages easy",
+                "free printable cute unicorn coloring pages for toddlers",
+                "free unicorn printables pdf",
+                "unicorn coloring pages free printable",
+                "unicorn coloring pages easy",
+                "unicorn coloring pages for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 09:45:51 +00:00",
+                  "competition": 0.09,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10108,
+                    10112
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "coloring book unicorn pdf",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 48,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20pdf&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "people_also_search"
+                  ],
+                  "se_results_count": 87,
+                  "last_updated_time": "2023-01-13 15:49:49 +00:00",
+                  "previous_updated_time": "2022-11-17 21:19:18 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 188,
+                  "dofollow": 37.1,
+                  "referring_pages": 122.9,
+                  "referring_domains": 42.1,
+                  "referring_main_domains": 40.1,
+                  "rank": 132.2,
+                  "main_domain_rank": 424.2,
+                  "last_updated_time": "2023-01-13 13:49:50 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 22:45:02 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring free printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 12:02:27 +00:00",
+                  "competition": 0.02,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 20
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -50,
+                    "quarterly": 0,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 5,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20free%20printable&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 53000000,
+                  "last_updated_time": "2024-03-20 13:01:42 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 42.3,
+                  "dofollow": 21.8,
+                  "referring_pages": 36.5,
+                  "referring_domains": 16.7,
+                  "referring_main_domains": 15.8,
+                  "rank": 81.8,
+                  "main_domain_rank": 498.1,
+                  "last_updated_time": "2024-03-20 11:01:42 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:46:59 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring free printable pdf",
+                "unicorn images to print free",
+                "free unicorn printables pdf",
+                "cute unicorn coloring free printable",
+                "easy unicorn coloring free printable",
+                "simple unicorn coloring free printable"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages pinterest",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 11:54:35 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-07 17:23:19 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 21:55:33 +00:00",
+                  "competition": 0.96,
+                  "competition_level": "HIGH",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -50,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "printable unicorn coloring book",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20printable&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches",
+                    "popular_products"
+                  ],
+                  "se_results_count": 16400000,
+                  "last_updated_time": "2026-02-02 23:09:27 +00:00",
+                  "previous_updated_time": "2025-12-20 10:24:52 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 13,
+                  "dofollow": 7.2,
+                  "referring_pages": 10.2,
+                  "referring_domains": 3.9,
+                  "referring_main_domains": 3.5,
+                  "rank": 61,
+                  "main_domain_rank": 521.5,
+                  "last_updated_time": "2026-02-02 21:09:29 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:50:40 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring book printable pdf",
+                "unicorn coloring book printable pdf free",
+                "unicorn images to print free",
+                "unicorn coloring book printable for adults",
+                "easy unicorn coloring book printable",
+                "unicorn coloring pages for adults",
+                "unicorn coloring pages easy",
+                "free unicorn printables pdf"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book walmart",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 07:52:03 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10135,
+                    10736
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 47,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20book%20walmart&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 51,
+                  "last_updated_time": "2021-11-12 00:04:28 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:26:05 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring pages",
+                "unicorn coloring pages for kids",
+                "coloring books",
+                "anxiety coloring books",
+                "disney coloring book",
+                "easter coloring book"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "printable cute unicorn coloring pages pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 20:34:52 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 20:11:32 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages for adults printable",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 05:47:31 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 36,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": null,
+                  "serp_item_types": null,
+                  "se_results_count": null,
+                  "last_updated_time": "0001-01-01 00:00:00 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:01:52 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages for adults pdf",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 12:02:12 +00:00",
+                  "competition": 1,
+                  "competition_level": "HIGH",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 44,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=unicorn%20coloring%20pages%20for%20adults%20pdf&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "related_searches"
+                  ],
+                  "se_results_count": 69,
+                  "last_updated_time": "2021-11-12 00:04:29 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-30 01:00:35 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "unicorn coloring pages for adults printable",
+                "unicorn coloring pages printable",
+                "unicorn coloring pages for adults easy",
+                "unicorn coloring book pdf free download",
+                "free unicorn printables pdf",
+                "unicorn coloring pages for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring pages for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-29 03:58:19 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "transactional"
+                  ],
+                  "last_updated_time": "2026-04-29 23:41:02 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn coloring book for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-23 01:49:59 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "transactional",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 23:45:00 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "unicorn baby coloring pages",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-27 18:56:57 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "baby unicorn coloring pages",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 02:09:40 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

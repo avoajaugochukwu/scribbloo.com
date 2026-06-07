@@ -1,0 +1,3557 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1210 sec.",
+  "cost": 0.0125,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0387-0000-59057dd77502",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0691 sec.",
+      "cost": 0.0125,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "related_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "related_keywords",
+        "se_type": "google",
+        "keyword": "cute drawing ideas",
+        "language_name": "English",
+        "location_code": 2840,
+        "depth": 2,
+        "include_seed_keyword": true,
+        "limit": 1000,
+        "include_serp_info": false
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "cute drawing ideas",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "cute drawing ideas",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-23 16:18:28 +00:00",
+              "competition": 0.12,
+              "competition_level": "LOW",
+              "cpc": 0.03,
+              "search_volume": 33100,
+              "low_top_of_page_bid": null,
+              "high_top_of_page_bid": null,
+              "categories": [
+                10004,
+                10273,
+                11369
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 40500
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 33100
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 33100
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 33100
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 27100
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 22200
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 18100
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 18100
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 40500
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 0,
+                "quarterly": 0,
+                "yearly": 22
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": "cute drawings ideas",
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 0,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "images",
+                "short_videos",
+                "people_also_ask",
+                "organic",
+                "video",
+                "perspectives",
+                "related_searches"
+              ],
+              "se_results_count": 808000000,
+              "last_updated_time": "2026-05-15 01:33:15 +00:00",
+              "previous_updated_time": "2026-03-12 04:07:14 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 7.7,
+              "dofollow": 1.6,
+              "referring_pages": 7.4,
+              "referring_domains": 6.6,
+              "referring_main_domains": 6.6,
+              "rank": 16.5,
+              "main_domain_rank": 677.2,
+              "last_updated_time": "2026-05-14 22:33:15 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 06:06:30 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 25,
+          "items_count": 25,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawings",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 01:56:47 +00:00",
+                  "competition": 0.32,
+                  "competition_level": "LOW",
+                  "cpc": 0.02,
+                  "search_volume": 301000,
+                  "low_top_of_page_bid": 1.06,
+                  "high_top_of_page_bid": 2.42,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 201000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 135000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 201000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 450000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 22,
+                    "quarterly": 22,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "draw a cute",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawings&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 1170000000,
+                  "last_updated_time": "2026-05-14 21:22:15 +00:00",
+                  "previous_updated_time": "2026-03-12 00:30:08 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 11.8,
+                  "dofollow": 1.5,
+                  "referring_pages": 11.8,
+                  "referring_domains": 10.3,
+                  "referring_main_domains": 10.3,
+                  "rank": 20.6,
+                  "main_domain_rank": 880.2,
+                  "last_updated_time": "2026-05-14 18:22:16 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 04:34:47 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute drawings easy",
+                "cute drawings girl",
+                "cute drawings easy girl",
+                "cute drawings love",
+                "cute drawings for kids",
+                "cute drawings animals",
+                "cute drawings pencil",
+                "cute drawings hard"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 16:18:28 +00:00",
+                  "competition": 0.12,
+                  "competition_level": "LOW",
+                  "cpc": 0.03,
+                  "search_volume": 33100,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 18100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 18100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute drawings ideas",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 808000000,
+                  "last_updated_time": "2026-05-15 01:33:15 +00:00",
+                  "previous_updated_time": "2026-03-12 04:07:14 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 7.7,
+                  "dofollow": 1.6,
+                  "referring_pages": 7.4,
+                  "referring_domains": 6.6,
+                  "referring_main_domains": 6.6,
+                  "rank": 16.5,
+                  "main_domain_rank": 677.2,
+                  "last_updated_time": "2026-05-14 22:33:15 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 06:06:30 +00:00"
+                }
+              },
+              "depth": 0,
+              "related_keywords": [
+                "cute drawing ideas easy",
+                "cute drawing ideas girl",
+                "cute drawing ideas aesthetic",
+                "cute drawing ideas for beginners",
+                "cute drawing ideas with pencil",
+                "cute drawing ideas sketch",
+                "cute drawing ideas easy and beautiful",
+                "cute drawing ideas for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawings easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 18:04:52 +00:00",
+                  "competition": 0.39,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.03,
+                  "search_volume": 27100,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 14800
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 18100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute easy drawings",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 3,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawings%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "short_videos",
+                    "organic",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 638000000,
+                  "last_updated_time": "2026-05-15 02:43:15 +00:00",
+                  "previous_updated_time": "2026-03-12 05:25:33 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 11.8,
+                  "dofollow": 1.5,
+                  "referring_pages": 11.8,
+                  "referring_domains": 10.3,
+                  "referring_main_domains": 10.3,
+                  "rank": 20.6,
+                  "main_domain_rank": 952.1,
+                  "last_updated_time": "2026-05-14 23:43:15 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 04:01:46 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute drawings easy girl",
+                "cute drawings easy with pencil",
+                "cute drawings easy and beautiful girl",
+                "cute drawings easy food",
+                "cute drawings easy animals",
+                "cute drawings easy for birthday",
+                "cute drawings easy kawaii",
+                "cute drawings easy small"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 01:30:00 +00:00",
+                  "competition": 0.34,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.04,
+                  "search_volume": 8100,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 9900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "drawing ideas easy cute",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "short_videos",
+                    "people_also_ask",
+                    "video",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 127,
+                  "last_updated_time": "2026-05-15 18:07:25 +00:00",
+                  "previous_updated_time": "2026-03-12 20:33:04 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 11.6,
+                  "dofollow": 5.4,
+                  "referring_pages": 11,
+                  "referring_domains": 6.7,
+                  "referring_main_domains": 6.1,
+                  "rank": 19.4,
+                  "main_domain_rank": 717.6,
+                  "last_updated_time": "2026-05-15 15:07:25 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 06:06:30 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas girl",
+                "cute drawing ideas easy with pencil",
+                "cute drawing ideas easy girl",
+                "cute drawing ideas easy step by step",
+                "cute drawing ideas easy for beginners",
+                "very very cute drawing",
+                "cute drawing ideas easy and beautiful",
+                "cute drawing ideas easy for adults"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "aesthetic cute drawing pinterest",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 16:33:39 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 2900,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 2900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 23,
+                    "quarterly": 50,
+                    "yearly": 125
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "pinterest aesthetic drawing cute",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=aesthetic%20cute%20drawing%20pinterest&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 178,
+                  "last_updated_time": "2026-05-17 14:20:22 +00:00",
+                  "previous_updated_time": "2026-03-14 05:09:20 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "navigational"
+                  ],
+                  "last_updated_time": "2026-04-29 07:04:47 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas aesthetic pencil",
+                "aesthetic cute drawing pinterest easy",
+                "pinterest drawing ideas aesthetic girl",
+                "cute aesthetic drawings easy",
+                "vintage aesthetic aesthetic drawings pinterest",
+                "cute kawaii aesthetic drawings pinterest",
+                "aesthetic small drawings pinterest",
+                "aesthetic girl drawing"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas aesthetic",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 22:10:16 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 880,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20aesthetic&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 102,
+                  "last_updated_time": "2026-05-20 06:40:56 +00:00",
+                  "previous_updated_time": "2026-03-16 17:11:18 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 2.2,
+                  "dofollow": 1.6,
+                  "referring_pages": 1.7,
+                  "referring_domains": 0.8,
+                  "referring_main_domains": 0.8,
+                  "rank": 3.8,
+                  "main_domain_rank": 744.6,
+                  "last_updated_time": "2026-05-20 03:40:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 05:10:44 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas aesthetic easy",
+                "cute drawing ideas aesthetic girl",
+                "pinterest drawing ideas aesthetic pencil",
+                "pinterest drawing ideas aesthetic girl",
+                "cute drawing ideas aesthetic step by step",
+                "cute drawing ideas aesthetic cute girl",
+                "cute drawing ideas aesthetic pinterest",
+                "cute drawing ideas aesthetic pencil"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "very very cute drawing",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 13:29:44 +00:00",
+                  "competition": 0.33,
+                  "competition_level": "LOW",
+                  "cpc": 0.02,
+                  "search_volume": 210,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    12204,
+                    13597
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 49,
+                    "quarterly": 126,
+                    "yearly": 2833
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "very cute drawings",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 2,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=very%20very%20cute%20drawing&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "short_videos",
+                    "video",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 107,
+                  "last_updated_time": "2026-05-25 08:39:01 +00:00",
+                  "previous_updated_time": "2026-03-22 18:53:07 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 62.5,
+                  "dofollow": 3.5,
+                  "referring_pages": 26.3,
+                  "referring_domains": 8.1,
+                  "referring_main_domains": 8,
+                  "rank": 37.5,
+                  "main_domain_rank": 765.2,
+                  "last_updated_time": "2026-05-25 05:39:01 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 03:31:32 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "very very cute drawing easy",
+                "cute drawings easy girl",
+                "very very cute drawing girl",
+                "very very cute drawing ideas",
+                "cute drawings for kids",
+                "some cute drawings",
+                "very very cute drawing for kids",
+                "cute small drawings easy"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing ideas aesthetic pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 10:45:46 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 88,
+                    "yearly": 540
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20ideas%20aesthetic%20pencil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 8780000,
+                  "last_updated_time": "2026-05-01 16:35:29 +00:00",
+                  "previous_updated_time": "2026-03-07 14:27:45 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:24:34 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas aesthetic pencil easy",
+                "pinterest drawing ideas aesthetic pencil cute",
+                "pinterest drawing ideas aesthetic girl",
+                "pinterest drawing ideas aesthetic pencil girl",
+                "pinterest drawing ideas aesthetic pencil anime",
+                "pinterest pencil sketches cute",
+                "vintage aesthetic aesthetic drawings pinterest",
+                "pencil sketch pinterest"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing with colour",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 18:52:53 +00:00",
+                  "competition": 0.08,
+                  "competition_level": "LOW",
+                  "cpc": 0.02,
+                  "search_volume": 140,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 140
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -21,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute colourful drawing",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 2,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20with%20colour&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 175000000,
+                  "last_updated_time": "2026-05-02 07:21:04 +00:00",
+                  "previous_updated_time": "2026-03-21 11:59:33 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 5.7,
+                  "dofollow": 1.2,
+                  "referring_pages": 5.7,
+                  "referring_domains": 5.2,
+                  "referring_main_domains": 5.2,
+                  "rank": 20.3,
+                  "main_domain_rank": 927.2,
+                  "last_updated_time": "2026-05-02 04:21:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 04:01:45 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute drawing with colour easy",
+                "cute drawing with colour girl",
+                "cute drawing with colour pencil",
+                "cute drawing with colour hard",
+                "cute drawing with colour for kids",
+                "cute drawing with colour for beginners",
+                "cute easy drawings with color food",
+                "cute drawings"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 01:02:06 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 90,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 110
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -22,
+                    "quarterly": -22,
+                    "yearly": -22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20with%20pencil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "video",
+                    "short_videos",
+                    "related_searches"
+                  ],
+                  "se_results_count": 146,
+                  "last_updated_time": "2026-05-29 13:59:55 +00:00",
+                  "previous_updated_time": "2026-04-07 04:40:21 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 15.7,
+                  "dofollow": 3.5,
+                  "referring_pages": 15.5,
+                  "referring_domains": 9.5,
+                  "referring_main_domains": 9.5,
+                  "rank": 7.2,
+                  "main_domain_rank": 773.6,
+                  "last_updated_time": "2026-05-29 11:00:40 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 04:13:17 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas with pencil easy",
+                "cute drawings easy",
+                "cute drawing ideas with pencil girl",
+                "cute drawing ideas with pencil step by step",
+                "cute drawing ideas with pencil for kids",
+                "cute drawing ideas with pencil for beginners",
+                "cute drawing ideas girl",
+                "cute drawings easy girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas sketch",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 11:51:36 +00:00",
+                  "competition": 0.03,
+                  "competition_level": "LOW",
+                  "cpc": 0.1,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 56,
+                    "yearly": 180
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute sketch drawing ideas",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20sketch&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 78700000,
+                  "last_updated_time": "2026-05-10 03:23:17 +00:00",
+                  "previous_updated_time": "2026-03-26 02:32:12 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 165.2,
+                  "dofollow": 98.1,
+                  "referring_pages": 153.1,
+                  "referring_domains": 79.5,
+                  "referring_main_domains": 74.9,
+                  "rank": 35.6,
+                  "main_domain_rank": 719.3,
+                  "last_updated_time": "2026-05-10 00:23:17 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 06:18:59 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas sketch easy",
+                "cute drawing ideas sketch girl",
+                "cute drawing ideas sketch with pencil",
+                "cute drawing ideas aesthetic",
+                "cute drawing ideas sketch for kids",
+                "aesthetic cute drawing pinterest",
+                "cute drawings easy girl",
+                "pinterest cute drawings girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas for beginners",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 00:41:57 +00:00",
+                  "competition": 0.24,
+                  "competition_level": "LOW",
+                  "cpc": 0.01,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 25,
+                    "yearly": 25
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute drawings ideas for beginners",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20for%20beginners&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "images",
+                    "organic",
+                    "video",
+                    "people_also_ask",
+                    "short_videos",
+                    "related_searches"
+                  ],
+                  "se_results_count": 280000000,
+                  "last_updated_time": "2026-05-10 03:24:10 +00:00",
+                  "previous_updated_time": "2026-03-26 02:35:55 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 43.8,
+                  "dofollow": 2.5,
+                  "referring_pages": 43.8,
+                  "referring_domains": 41,
+                  "referring_main_domains": 33.7,
+                  "rank": 36.4,
+                  "main_domain_rank": 554.4,
+                  "last_updated_time": "2026-05-10 00:24:11 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 19:08:41 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas for beginners step by step",
+                "cute drawing ideas for beginners with pencil",
+                "cute drawings easy girl",
+                "cute drawing ideas girl",
+                "cute drawing ideas for beginners girl",
+                "very very cute drawing",
+                "cute drawings for kids",
+                "cute drawing with colour"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas easy and beautiful",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 11:20:49 +00:00",
+                  "competition": 0.16,
+                  "competition_level": "LOW",
+                  "cpc": 0.03,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 125,
+                    "yearly": 200
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20easy%20and%20beautiful&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "images",
+                    "video",
+                    "organic",
+                    "people_also_ask",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 44600000,
+                  "last_updated_time": "2026-05-12 19:19:50 +00:00",
+                  "previous_updated_time": "2026-03-09 16:57:41 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 179.6,
+                  "dofollow": 100.8,
+                  "referring_pages": 166,
+                  "referring_domains": 84.1,
+                  "referring_main_domains": 79.5,
+                  "rank": 47.2,
+                  "main_domain_rank": 602.2,
+                  "last_updated_time": "2026-05-12 16:19:50 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-26 09:36:16 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawings easy",
+                "cute drawing ideas easy and beautiful with pencil",
+                "cute drawing ideas easy and beautiful girl",
+                "cute drawing ideas girl",
+                "cute drawing ideas easy and beautiful step by step",
+                "cute drawing ideas easy and beautiful for kids",
+                "cute drawing ideas easy and beautiful for beginners",
+                "cute drawings easy girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "drawing for adults easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 06:37:45 +00:00",
+                  "competition": 0.2,
+                  "competition_level": "LOW",
+                  "cpc": 1.75,
+                  "search_volume": 50,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 40,
+                    "quarterly": 40,
+                    "yearly": 40
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "adults drawing easy",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 26,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=drawing%20for%20adults%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "video",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 107,
+                  "last_updated_time": "2026-06-04 21:31:03 +00:00",
+                  "previous_updated_time": "2026-06-04 20:18:09 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 368.3,
+                  "dofollow": 181.5,
+                  "referring_pages": 344.4,
+                  "referring_domains": 163.6,
+                  "referring_main_domains": 149.2,
+                  "rank": 140.4,
+                  "main_domain_rank": 554.3,
+                  "last_updated_time": "2026-06-04 18:32:55 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 15:26:20 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "drawing for adults easy with pencil",
+                "drawing for adults easy step by step",
+                "drawing for adults easy for kids",
+                "cute drawing for adults easy",
+                "step by step drawing for adults",
+                "step by step drawing for adults with pencil",
+                "pencil drawing for adults",
+                "pencil drawing easy and beautiful"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas easy with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 08:29:09 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10015,
+                    10131,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 50,
+                    "quarterly": -40,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute drawings ideas easy with pencil",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20easy%20with%20pencil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "perspectives",
+                    "video",
+                    "carousel",
+                    "related_searches"
+                  ],
+                  "se_results_count": 60800000,
+                  "last_updated_time": "2025-12-24 13:36:28 +00:00",
+                  "previous_updated_time": "2025-10-20 14:55:12 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-26 20:28:13 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute drawing ideas easy with pencil for kids",
+                "cute drawing ideas easy with pencil girl",
+                "cute drawing ideas easy with pencil for beginners",
+                "cute drawings easy",
+                "cute drawings easy girl",
+                "cute drawing ideas easy with pencil cute girl",
+                "cute easy drawings with color",
+                "cute drawing pictures with pencil"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas aesthetic easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-21 14:46:54 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10013,
+                    10273,
+                    11369,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -33,
+                    "quarterly": -50,
+                    "yearly": -60
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute aesthetic drawing ideas easy",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20aesthetic%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "discussions_and_forums",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 68000000,
+                  "last_updated_time": "2025-12-24 13:53:34 +00:00",
+                  "previous_updated_time": "2025-10-20 14:54:11 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 9.3,
+                  "dofollow": 6.7,
+                  "referring_pages": 7.7,
+                  "referring_domains": 1.4,
+                  "referring_main_domains": 1.4,
+                  "rank": 28.4,
+                  "main_domain_rank": 719.5,
+                  "last_updated_time": "2025-12-24 11:53:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:29:34 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute drawing ideas aesthetic easy girl",
+                "cute drawing ideas aesthetic easy with pencil",
+                "cute drawing ideas aesthetic easy and beautiful",
+                "cute drawing ideas aesthetic easy for beginners",
+                "cute aesthetic drawings pinterest",
+                "cute drawings easy",
+                "cute aesthetic drawings pinterest easy",
+                "cute drawings easy girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 17:42:38 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": -50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20for%20adults&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&glp=1&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "short_videos",
+                    "discussions_and_forums",
+                    "people_also_search",
+                    "related_searches"
+                  ],
+                  "se_results_count": 68,
+                  "last_updated_time": "2025-06-07 09:18:47 +00:00",
+                  "previous_updated_time": "2025-04-25 02:54:30 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 36.8,
+                  "dofollow": 9.2,
+                  "referring_pages": 34.3,
+                  "referring_domains": 13,
+                  "referring_main_domains": 12.9,
+                  "rank": 40,
+                  "main_domain_rank": 692.9,
+                  "last_updated_time": "2025-06-07 06:18:47 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:26:01 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "cute drawing ideas for adults easy",
+                "cute drawings",
+                "cute drawings easy",
+                "drawing for adults easy",
+                "cute drawing ideas aesthetic",
+                "drawing ideas for adults girl",
+                "cute drawing ideas for adults animals",
+                "cute drawings easy girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas easy step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 23:14:31 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10131
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 30
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 100,
+                    "quarterly": 100,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "drawing ideas easy cute step by step",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 2,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20drawing%20ideas%20easy%20step%20by%20step&num=100&hl=en&gl=US&gws_rd=cr&ie=UTF-8&oe=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 77,
+                  "last_updated_time": "2022-08-21 20:09:10 +00:00",
+                  "previous_updated_time": "2022-07-15 16:44:09 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 130.5,
+                  "dofollow": 77.9,
+                  "referring_pages": 91.2,
+                  "referring_domains": 31.7,
+                  "referring_main_domains": 29.7,
+                  "rank": 110.57142639160156,
+                  "main_domain_rank": 651.3,
+                  "last_updated_time": "2022-08-21 17:09:11 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 12:14:13 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "drawing ideas easy cute girl",
+                "drawing ideas easy for beginners",
+                "cute drawing ideas for kids",
+                "drawing ideas easy cute animals",
+                "cute drawing ideas hard",
+                "cute drawing ideas pinterest",
+                "cute easy drawings with color"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas aesthetic pinterest",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 09:18:57 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -67,
+                    "quarterly": -67,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute aesthetic drawing ideas pinterest",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-26 20:29:29 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas easy for beginners",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 10:24:04 +00:00",
+                  "competition": 0.16,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute easy drawing ideas for beginners",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 7,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": null,
+                  "serp_item_types": null,
+                  "se_results_count": null,
+                  "last_updated_time": "0001-01-01 00:00:00 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 02:20:23 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas aesthetic pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 22:00:30 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-26 22:23:16 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas with pencil easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 20:49:34 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10015,
+                    10131,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute drawings ideas easy with pencil",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 13:00:57 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawing ideas girl",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-24 04:42:24 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 07:28:24 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawings easy girl",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-26 08:17:35 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    12204,
+                    13597
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute girl drawing easy",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 19:38:36 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute drawings for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-28 16:55:35 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "for kids cute drawing",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 05:53:04 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

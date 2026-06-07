@@ -1,0 +1,1916 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.0710 sec.",
+  "cost": 0.0115,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0399-0000-a4b6452b18ac",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.0618 sec.",
+      "cost": 0.0115,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "keyword_suggestions",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "keyword_suggestions",
+        "se_type": "google",
+        "keyword": "coloring page maker",
+        "language_name": "English",
+        "location_code": 2840,
+        "include_seed_keyword": true,
+        "limit": 1000
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "coloring page maker",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "coloring page maker",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-22 12:23:22 +00:00",
+              "competition": 0.21,
+              "competition_level": "LOW",
+              "cpc": 1.64,
+              "search_volume": 1900,
+              "low_top_of_page_bid": 0.39,
+              "high_top_of_page_bid": 1.76,
+              "categories": [
+                10015,
+                10125,
+                10672,
+                13794
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 2400
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 1900
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 1300
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 1600
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 1900
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": -16,
+                "quarterly": -16,
+                "yearly": 0
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 30,
+              "detected_language": "en",
+              "is_another_language": false,
+              "words_count": 3
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=coloring%20page%20maker&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "organic",
+                "images",
+                "related_searches"
+              ],
+              "se_results_count": 53200000,
+              "last_updated_time": "2026-03-15 08:05:07 +00:00",
+              "previous_updated_time": "2026-01-20 19:41:47 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "transactional",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 15:05:01 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 1913.3,
+              "dofollow": 1646.2,
+              "referring_pages": 1790.1,
+              "referring_domains": 114.9,
+              "referring_main_domains": 105.2,
+              "rank": 191.7,
+              "main_domain_rank": 481.6,
+              "last_updated_time": "2026-03-15 06:05:07 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 15,
+          "items_count": 15,
+          "offset": 0,
+          "offset_token": "eyJDdXJyZW50T2Zmc2V0IjoxNSwiUmVxdWVzdERhdGEiOnsia2V5d29yZCI6ImNvbG9yaW5nIHBhZ2UgbWFrZXIiLCJpbmNsdWRlX3NlZWRfa2V5d29yZCI6dHJ1ZSwiZnVsbF9tYXRjaCI6ZmFsc2UsImxvYWRfc2VycF9pbmZvIjpmYWxzZSwic2VhcmNoX2FmdGVyX3Rva2VuIjpudWxsLCJpZ25vcmVfc3lub255bXMiOmZhbHNlLCJsYW5ndWFnZSI6ImVuIiwic2VhcmNoX2VuZ2luZSI6Imdvb2dsZSIsImxvY2F0aW9uIjoyODQwLCJ1c2VfbmV3X2NhdGVnb3JpZXMiOnRydWUsIm9yZGVyX2J5Ijp7Im9yZGVyX2ZpZWxkIjoia2V5d29yZF9pbmZvLnNlYXJjaF92b2x1bWUiLCJvcmRlcl90eXBlIjoiRGVzYyIsIm5leHQiOm51bGx9LCJsaW1pdCI6MTAwMCwib2Zmc2V0IjowLCJhaWQiOjEzNTI5NywidXNlX2NhY2hlIjp0cnVlLCJ0YXNrX2lkIjoiMDYwNzAzNDItMTM1Mi0wMzk5LTAwMDAtYTRiNjQ1MmIxOGFjIiwiZmxhZ3MiOm51bGx9LCJSYXdRdWVyeSI6bnVsbCwiSWQiOiJkYWU4YTE2OS0xMDFhLTQ1YjQtOGFmMi0zMDFjY2MyYmYwNzUiLCJTZWFyY2hBZnRlckRhdGEiOlsxMCwiZjU2YzNhYjItODQ5ZC0wNTI0LTVhNTItNTRiNTUyOTdiYWUzIl0sIkV4ZWN1dG9yIjotOTE4NDQwNTk0MDQ0NDUxNzYzM30=",
+          "items": [
+            {
+              "se_type": "google",
+              "keyword": "coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-22 12:23:22 +00:00",
+                "competition": 0.21,
+                "competition_level": "LOW",
+                "cpc": 1.64,
+                "search_volume": 1900,
+                "low_top_of_page_bid": 0.39,
+                "high_top_of_page_bid": 1.76,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 1600
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 1900
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 1900
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 1900
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 2400
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 1900
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 1600
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 1900
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 1600
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 1300
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 1600
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 1900
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": -16,
+                  "quarterly": -16,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": 30,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 3
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 1913.3,
+                "dofollow": 1646.2,
+                "referring_pages": 1790.1,
+                "referring_domains": 114.9,
+                "referring_main_domains": 105.2,
+                "rank": 191.7,
+                "main_domain_rank": 481.6,
+                "last_updated_time": "2026-03-15 06:05:07 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 15:05:01 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring page maker from photos",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-22 16:43:37 +00:00",
+                "competition": 1,
+                "competition_level": "HIGH",
+                "cpc": 1.29,
+                "search_volume": 170,
+                "low_top_of_page_bid": 0.39,
+                "high_top_of_page_bid": 1.58,
+                "categories": [
+                  10019,
+                  10168,
+                  10885,
+                  11368,
+                  12701
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 210
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 320
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 260
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 210
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 110
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 27
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "keyword_metrics",
+                "keyword_difficulty": 28,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 5
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 448.9,
+                "dofollow": 236.2,
+                "referring_pages": 388.9,
+                "referring_domains": 103.7,
+                "referring_main_domains": 93.2,
+                "rank": 146.7,
+                "main_domain_rank": 497.9,
+                "last_updated_time": "2026-05-01 01:22:14 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": [
+                  "transactional"
+                ],
+                "last_updated_time": "2026-04-24 16:51:02 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "canva coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-23 22:42:39 +00:00",
+                "competition": 0.02,
+                "competition_level": "LOW",
+                "cpc": 3.63,
+                "search_volume": 170,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 210
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 390
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 260
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 110
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": -44,
+                  "quarterly": -29,
+                  "yearly": 25
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": 11,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 7299.5,
+                "dofollow": 7296.6,
+                "referring_pages": 7299.2,
+                "referring_domains": 2.9,
+                "referring_main_domains": 2.7,
+                "rank": 74.6,
+                "main_domain_rank": 791.8,
+                "last_updated_time": "2026-05-01 02:09:47 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-26 03:12:30 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "name coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-24 07:28:53 +00:00",
+                "competition": 0.01,
+                "competition_level": "LOW",
+                "cpc": 1.99,
+                "search_volume": 110,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 210
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 210
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 110
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": -29
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": 0,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 1,
+                "dofollow": 0.8,
+                "referring_pages": 1,
+                "referring_domains": 0.7,
+                "referring_main_domains": 0.7,
+                "rank": 11.3,
+                "main_domain_rank": 531.6,
+                "last_updated_time": "2026-05-03 04:47:33 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": [
+                  "navigational",
+                  "informational"
+                ],
+                "last_updated_time": "2026-04-29 16:24:45 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring page maker free",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-25 01:10:19 +00:00",
+                "competition": 0.19,
+                "competition_level": "LOW",
+                "cpc": 1.27,
+                "search_volume": 110,
+                "low_top_of_page_bid": 0.07,
+                "high_top_of_page_bid": 1.63,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 90
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 55,
+                  "quarterly": 21,
+                  "yearly": 143
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": 41,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 7963.7,
+                "dofollow": 7645.1,
+                "referring_pages": 7839.5,
+                "referring_domains": 118.8,
+                "referring_main_domains": 101.6,
+                "rank": 247.2,
+                "main_domain_rank": 423.1,
+                "last_updated_time": "2026-05-03 19:47:26 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": [
+                  "transactional"
+                ],
+                "last_updated_time": "2026-04-29 07:16:38 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "free coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-21 01:27:38 +00:00",
+                "competition": 0.19,
+                "competition_level": "LOW",
+                "cpc": 1.27,
+                "search_volume": 110,
+                "low_top_of_page_bid": 0.07,
+                "high_top_of_page_bid": 1.63,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 170
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 90
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 55,
+                  "quarterly": 21,
+                  "yearly": 143
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "coloring page maker free",
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": 45,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 1225.2,
+                "dofollow": 545.3,
+                "referring_pages": 952.3,
+                "referring_domains": 126.7,
+                "referring_main_domains": 117.2,
+                "rank": 206.6,
+                "main_domain_rank": 403.2,
+                "last_updated_time": "2026-03-07 14:06:20 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": [
+                  "transactional"
+                ],
+                "last_updated_time": "2026-04-29 07:24:25 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "crayola coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-19 10:01:04 +00:00",
+                "competition": 0.13,
+                "competition_level": "LOW",
+                "cpc": 0.08,
+                "search_volume": 90,
+                "low_top_of_page_bid": 0.02,
+                "high_top_of_page_bid": 0.04,
+                "categories": [
+                  10002,
+                  10030,
+                  10235,
+                  11018,
+                  12287
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 110
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 140
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 90
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 22,
+                  "quarterly": 57,
+                  "yearly": 175
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "keyword_metrics",
+                "keyword_difficulty": 18,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 1586.7,
+                "dofollow": 1103.9,
+                "referring_pages": 1276.7,
+                "referring_domains": 249.1,
+                "referring_main_domains": 232.7,
+                "rank": 131,
+                "main_domain_rank": 543.6,
+                "last_updated_time": "2026-05-29 10:09:50 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-26 01:16:51 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "ai coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-25 18:53:54 +00:00",
+                "competition": 0.25,
+                "competition_level": "LOW",
+                "cpc": 1.89,
+                "search_volume": 50,
+                "low_top_of_page_bid": 0.69,
+                "high_top_of_page_bid": 2.07,
+                "categories": [
+                  10019,
+                  10168,
+                  10885,
+                  11368,
+                  12701
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 90
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 40
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 70
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 30
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 50
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 40
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 70
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": -44,
+                  "yearly": -29
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "keyword_metrics",
+                "keyword_difficulty": 39,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 908.7,
+                "dofollow": 488.1,
+                "referring_pages": 731.3,
+                "referring_domains": 152.1,
+                "referring_main_domains": 116.4,
+                "rank": 170.5,
+                "main_domain_rank": 500.9,
+                "last_updated_time": "2026-06-06 02:46:22 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 02:23:42 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring book page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-23 02:54:49 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 20,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 30
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 30
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 30
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 30
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 20
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 100,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-27 04:30:24 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "online coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-23 21:10:51 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 10
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 18:27:40 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "spiral coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-24 12:32:28 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 10
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": 34,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 602.8,
+                "dofollow": 329.2,
+                "referring_pages": 544.5,
+                "referring_domains": 117.3,
+                "referring_main_domains": 98.9,
+                "rank": 409.7,
+                "main_domain_rank": 409.7,
+                "last_updated_time": "2022-08-09 08:45:37 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 22:47:26 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring page maker online",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-19 11:18:31 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 10
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "online coloring page maker",
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 10:25:26 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring page maker app",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-21 19:49:21 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10007
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 10
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": -50
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": [
+                  "informational",
+                  "navigational"
+                ],
+                "last_updated_time": "2026-04-27 03:14:01 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coffee maker coloring page",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-21 17:39:00 +00:00",
+                "competition": 0,
+                "competition_level": "LOW",
+                "cpc": null,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10004,
+                  10301,
+                  11340
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 30
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 100,
+                  "yearly": 100
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 05:59:15 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "custom coloring page maker",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-21 21:34:14 +00:00",
+                "competition": 0.19,
+                "competition_level": "LOW",
+                "cpc": 1.04,
+                "search_volume": 10,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 20
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 10
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 30
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": -50
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 4
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-26 20:15:08 +00:00"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

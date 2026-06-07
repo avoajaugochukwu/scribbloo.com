@@ -28,7 +28,12 @@ export default function ColoringPageImage({
   // Append "-scribbloo.com.png" to the base filename for download
   const downloadFilename = `${baseFilename}-scribbloo.com.png`;
 
-  const detailHref = `/coloring-pages/${categorySlug}/${coloringPage.slug}`;
+  // Always link to the page's PRIMARY category, even when it's surfaced under a
+  // secondary category grid. This keeps every internal link pointing at the
+  // canonical URL (the detail page canonicalizes to categories[0]), so Google
+  // doesn't waste crawl budget on duplicate secondary-category URLs.
+  const primaryCategory = coloringPage.categories[0] ?? categorySlug;
+  const detailHref = `/coloring-pages/${primaryCategory}/${coloringPage.slug}`;
 
   return (
     <div className="group pressable shadow-pop relative flex flex-col overflow-hidden rounded-[var(--radius)] border-2 border-ink bg-card">

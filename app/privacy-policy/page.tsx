@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Scribbloo',
   description: 'Read the Privacy Policy for Scribbloo.',
-  // Prevent search engines from indexing placeholder pages (remove later)
   robots: {
     index: true,
     follow: true,

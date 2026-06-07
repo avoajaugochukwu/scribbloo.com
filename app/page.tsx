@@ -50,11 +50,9 @@ export default function Home() {
     '@type': 'WebSite',
     name: 'Scribbloo',
     url: baseUrl,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${baseUrl}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    // No SearchAction: there is no /search route yet, and advertising a
+    // sitelinks searchbox that 404s is a negative quality signal. Re-add this
+    // once a real search page exists.
   };
   // --- End Structured Data Prep ---
 

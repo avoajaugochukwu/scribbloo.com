@@ -1,0 +1,449 @@
+# How-to-Draw Tutorials
+
+_Step-by-step drawing tutorials (blog posts)._
+
+> **How to write these:** Template: **how-to-draw tutorial** in `00-writing-guide.md`. ~900–1300 words. Numbered steps (5–8), one materials list, beginner tips, a 'common mistakes' box, and a CTA to the matching coloring page/category if one exists.
+
+See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, and SEO rules. Statuses: ✅ exists · 🆕 new.
+
+## 🆕 How to Draw Rose
+`slug: how-to-draw-rose` · **Tutorial (blog)**
+
+- **Primary:** `how to draw rose` — vol **165,000**/mo · KD **0** · informational
+- **Also target:** `how to draw a rose drawing` (74,000), `how to draw how to draw a rose` (74,000), `how to do draw a rose` (74,000), `how to draw easy rose` (12,100), `how to draw simple rose` (12,100), `how to easily draw a rose` (12,100), `how to draw a basic rose` (12,100), `how to draw a rose bush easy` (12,100)
+
+## 🆕 How to Draw Butterfly
+`slug: how-to-draw-butterfly` · **Tutorial (blog)**
+
+- **Primary:** `how to draw butterfly` — vol **135,000**/mo · KD **0** · informational
+- **Also target:** `how to draw a butterfly` (135,000)
+
+## 🆕 How to Draw Dog
+`slug: how-to-draw-dog` · **Tutorial (blog)**
+
+- **Primary:** `how to draw dog` — vol **135,000**/mo · KD **0** · informational
+- **Also target:** `how to do draw a dog` (90,500), `how to drawing dog easy` (33,100), `how to draw easy dog` (12,100), `how to draw simple dog` (12,100), `how to draw dog easily` (12,100), `how to draw puppy dog` (9,900), `how to draw a dog cute` (5,400), `how to draw a dog man` (1,300), `how to draw a dog in pencil` (390), `how to draw a dog house` (320), `how to draw a dog hard` (210)
+
+## ✅ How to Draw Tree
+`slug: how-to-draw-tree` · **Tutorial (blog)** · _exists as `tree-with-birds` → refresh/expand_
+
+- **Primary:** `how to draw tree` — vol **110,000**/mo · KD **0** · informational
+- **Also target:** `how to draw a christmas tree` (27,100), `how to draw xmas tree` (27,100), `pine tree how to draw` (9,900), `how to draw a palm.tree` (6,600), `how to draw a palmetto tree` (6,600)
+
+## 🆕 How to Draw Spider
+`slug: how-to-draw-spider` · **Tutorial (blog)**
+
+- **Primary:** `how to draw spider` — vol **110,000**/mo · KD **0** · informational
+- **Also target:** `how to draw spider` (40,500), `how to draw spider web` (9,900), `how to draw a spider web with a spider` (9,900)
+
+## 🆕 How to Draw Canine
+`slug: how-to-draw-canine` · **Tutorial (blog)**
+
+- **Primary:** `how to draw canine` — vol **90,500**/mo · KD **19** · informational
+
+## 🆕 How to Draw Doggo
+`slug: how-to-draw-doggo` · **Tutorial (blog)**
+
+- **Primary:** `how to draw doggo` — vol **90,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Car
+`slug: how-to-draw-car` · **Tutorial (blog)**
+
+- **Primary:** `how to draw car` — vol **90,500**/mo · KD **0** · informational
+- **Also target:** `police car how to draw` (6,600)
+
+## 🆕 How to Draw Hello Kitty
+`slug: how-to-draw-hello-kitty` · **Tutorial (blog)**
+
+- **Primary:** `how to draw hello kitty` — vol **90,500**/mo · KD **2** · informational
+
+## 🆕 How to Draw Skull
+`slug: how-to-draw-skull` · **Tutorial (blog)**
+
+- **Primary:** `how to draw skull` — vol **90,500**/mo · KD **0** · informational
+- **Also target:** `how to draw a skull drawing` (9,900)
+
+## 🆕 How to Draw Fish
+`slug: how-to-draw-fish` · **Tutorial (blog)**
+
+- **Primary:** `how to draw fish` — vol **90,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Bird
+`slug: how-to-draw-bird` · **Tutorial (blog)**
+
+- **Primary:** `how to draw bird` — vol **74,000**/mo · KD **2** · informational
+- **Also target:** `how to draw birds drawing` (18,100)
+
+## 🆕 How to Draw Airplane
+`slug: how-to-draw-airplane` · **Tutorial (blog)**
+
+- **Primary:** `how to draw airplane` — vol **74,000**/mo · KD **0** · informational
+
+## 🆕 How to Draw Fire
+`slug: how-to-draw-fire` · **Tutorial (blog)**
+
+- **Primary:** `how to draw fire` — vol **74,000**/mo · KD **0** · informational
+
+## 🆕 How to Draw Ball
+`slug: how-to-draw-ball` · **Tutorial (blog)**
+
+- **Primary:** `how to draw ball` — vol **74,000**/mo · KD **3** · informational
+- **Also target:** `how to draw 8 ball` (30)
+
+## ✅ How to Draw Flower
+`slug: how-to-draw-flower` · **Tutorial (blog)** · _exists as `flower-bouquet` → refresh/expand_
+
+- **Primary:** `how to draw flower` — vol **60,500**/mo · KD **0** · informational
+- **Also target:** `how to draw flower` (49,500), `how to draw a good flower` (49,500), `how to draw simple flower` (9,900), `how to draw easy flower` (9,900), `how to draw a simple flower step by step` (9,900), `how to draw a flower easy step by step` (9,900), `how to draw flower easily` (9,900), `how to draw hibiscus flower` (9,900), `how to draw gumamela flower` (9,900), `how to draw a basic flower` (9,900), `how to draw lily flower` (6,600)
+
+## 🆕 How to Draw Frog
+`slug: how-to-draw-frog` · **Tutorial (blog)**
+
+- **Primary:** `how to draw frog` — vol **60,500**/mo · KD **0** · informational
+
+## ✅ How to Draw Cat
+`slug: how-to-draw-cat` · **Tutorial (blog)** · _exists as `cozy-cat-by-the-window` → refresh/expand_
+
+- **Primary:** `how to draw cat` — vol **60,500**/mo · KD **0** · informational
+- **Also target:** `how to draw cat` (60,500), `how to draw a house cat` (60,500), `how to drawing cat easy` (27,100), `how to draw cat easy` (12,100), `how to draw simple cat` (12,100), `how to draw cat easily` (12,100), `how to simply draw a cat` (12,100)
+
+## ✅ How to Draw Dragon
+`slug: how-to-draw-dragon` · **Tutorial (blog)** · _exists as `friendly-dragon` → refresh/expand_
+
+- **Primary:** `how to draw dragon` — vol **60,500**/mo · KD **0** · informational
+- **Also target:** `how to draw a dragon drawing` (60,500), `how to draw how to draw a dragon` (60,500), `how to draw a dragon dragon` (60,500), `how to draw dragon ball z goku` (18,100), `how to draw goku from dragon ball z` (18,100), `how to draw dragon easy` (8,100), `how to draw simple dragon` (8,100), `how to draw a dragon easily` (8,100), `chinese dragon how to draw` (6,600)
+
+## 🆕 How to Draw Volleyball
+`slug: how-to-draw-volleyball` · **Tutorial (blog)**
+
+- **Primary:** `how to draw volleyball` — vol **60,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Basketball
+`slug: how-to-draw-basketball` · **Tutorial (blog)**
+
+- **Primary:** `how to draw basketball` — vol **60,500**/mo · KD **0** · informational
+- **Also target:** `how to draw basketball ball` (12,100)
+
+## 🆕 How to Draw Dinosaur
+`slug: how-to-draw-dinosaur` · **Tutorial (blog)**
+
+- **Primary:** `how to draw dinosaur` — vol **60,500**/mo · KD **0** · informational
+- **Also target:** `how to draw t rex dinosaur` (6,600)
+
+## 🆕 How to Draw Snake
+`slug: how-to-draw-snake` · **Tutorial (blog)**
+
+- **Primary:** `how to draw snake` — vol **60,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Cow
+`slug: how-to-draw-cow` · **Tutorial (blog)**
+
+- **Primary:** `how to draw cow` — vol **60,500**/mo · KD **0** · informational
+
+## ✅ How to Draw Lion
+`slug: how-to-draw-lion` · **Tutorial (blog)** · _exists as `friendly-lion` → refresh/expand_
+
+- **Primary:** `how to draw lion` — vol **49,500**/mo · KD **0** · informational
+- **Also target:** `how to draw a lion drawing` (18,100), `how to draw a african lion` (18,100), `how to draw animals lion` (18,100)
+
+## 🆕 How to Draw Floral
+`slug: how-to-draw-floral` · **Tutorial (blog)**
+
+- **Primary:** `how to draw floral` — vol **49,500**/mo · KD **8** · informational
+
+## 🆕 How to Draw Snowflake
+`slug: how-to-draw-snowflake` · **Tutorial (blog)**
+
+- **Primary:** `how to draw snowflake` — vol **49,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Duck
+`slug: how-to-draw-duck` · **Tutorial (blog)**
+
+- **Primary:** `how to draw duck` — vol **49,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Eye
+`slug: how-to-draw-eye` · **Tutorial (blog)**
+
+- **Primary:** `how to draw eye` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `how to draw good eyes` (40,500), `how to draw a eye ball` (40,500), `how to drawing eyes easy` (22,200), `how to draw a n eye` (9,900), `how to draw anime eye` (9,900), `how to draw animated eyes` (9,900)
+
+## 🆕 How to Draw Eyeball
+`slug: how-to-draw-eyeball` · **Tutorial (blog)**
+
+- **Primary:** `how to draw eyeball` — vol **40,500**/mo · KD **0** · informational
+
+## 🆕 How to Draw Earth
+`slug: how-to-draw-earth` · **Tutorial (blog)**
+
+- **Primary:** `how to draw earth` — vol **40,500**/mo · KD **1** · informational
+
+## 🆕 How to Draw Bat
+`slug: how-to-draw-bat` · **Tutorial (blog)**
+
+- **Primary:** `how to draw bat` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `how to draw a bat animal` (18,100)
+
+## 🆕 How to Draw Stitch
+`slug: how-to-draw-stitch` · **Tutorial (blog)**
+
+- **Primary:** `how to draw stitch` — vol **40,500**/mo · KD **1** · informational
+- **Also target:** `how to draw stitch disney` (40,500)
+
+## 🆕 How to Draw Skeleton
+`slug: how-to-draw-skeleton` · **Tutorial (blog)**
+
+- **Primary:** `how to draw skeleton` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `how to draw skeleton head` (9,900)
+
+## 🆕 How to Draw Penguin
+`slug: how-to-draw-penguin` · **Tutorial (blog)**
+
+- **Primary:** `how to draw penguin` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `how to draw a penguin drawing` (12,100)
+
+## 🆕 How to Draw Tiger
+`slug: how-to-draw-tiger` · **Tutorial (blog)**
+
+- **Primary:** `how to draw tiger` — vol **40,500**/mo · KD **0** · informational
+- **Also target:** `how to draw animals tiger` (14,800)
+
+## ✅ How to Draw Elephant
+`slug: how-to-draw-elephant` · **Tutorial (blog)** · _exists as `baby-elephant` → refresh/expand_
+
+- **Primary:** `how to draw elephant` — vol **40,500**/mo · KD **3** · informational
+
+## 🆕 How to Draw Eagle
+`slug: how-to-draw-eagle` · **Tutorial (blog)**
+
+- **Primary:** `how to draw eagle` — vol **33,100**/mo · KD **0** · informational
+- **Also target:** `easy how to draw an eagle` (12,100)
+
+## 🆕 How to Draw Mouth
+`slug: how-to-draw-mouth` · **Tutorial (blog)**
+
+- **Primary:** `how to draw mouth` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Lady
+`slug: how-to-draw-lady` · **Tutorial (blog)**
+
+- **Primary:** `how to draw lady` — vol **33,100**/mo · KD **0** · informational
+
+## ✅ How to Draw Landscape
+`slug: how-to-draw-landscape` · **Tutorial (blog)** · _exists as `mountain-landscape` → refresh/expand_
+
+- **Primary:** `how to draw landscape` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Lip
+`slug: how-to-draw-lip` · **Tutorial (blog)**
+
+- **Primary:** `how to draw lip` — vol **33,100**/mo · KD **0** · informational
+- **Also target:** `how to draw lips realistically` (33,100)
+
+## 🆕 How to Draw Dolphin
+`slug: how-to-draw-dolphin` · **Tutorial (blog)**
+
+- **Primary:** `how to draw dolphin` — vol **33,100**/mo · KD **2** · informational
+
+## ✅ How to Draw Unicorn
+`slug: how-to-draw-unicorn` · **Tutorial (blog)** · _exists as `baby-unicorn-with-stars` → refresh/expand_
+
+- **Primary:** `how to draw unicorn` — vol **33,100**/mo · KD **5** · informational
+
+## 🆕 How to Draw Pumpkin
+`slug: how-to-draw-pumpkin` · **Tutorial (blog)**
+
+- **Primary:** `how to draw pumpkin` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Turkey
+`slug: how-to-draw-turkey` · **Tutorial (blog)**
+
+- **Primary:** `how to draw turkey` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Tu
+`slug: how-to-draw-tu` · **Tutorial (blog)**
+
+- **Primary:** `how to draw tu` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Hibiscus
+`slug: how-to-draw-hibiscus` · **Tutorial (blog)**
+
+- **Primary:** `how to draw hibiscus` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Nose
+`slug: how-to-draw-nose` · **Tutorial (blog)**
+
+- **Primary:** `how to draw nose` — vol **33,100**/mo · KD **0** · informational
+- **Also target:** `how to draw nose easy` (720)
+
+## 🆕 How to Draw Goku
+`slug: how-to-draw-goku` · **Tutorial (blog)**
+
+- **Primary:** `how to draw goku` — vol **33,100**/mo · KD **0** · informational
+- **Also target:** `how to draw goku dbz` (18,100), `how to draw goku characters` (18,100)
+
+## 🆕 How to Draw Giraffe
+`slug: how-to-draw-giraffe` · **Tutorial (blog)**
+
+- **Primary:** `how to draw giraffe` — vol **33,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Splinter Out
+`slug: how-to-draw-splinter-out` · **Tutorial (blog)**
+
+- **Primary:** `how to draw splinter out` — vol **33,100**/mo · KD **0** · informational
+- **Also target:** `how to draw out a deep splinter` (4,400)
+
+## 🆕 How to Draw Anime
+`slug: how-to-draw-anime` · **Tutorial (blog)**
+
+- **Primary:** `how to draw anime` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw anime drawing` (27,100), `how to draw draw anime` (27,100), `how to draw anime anime` (27,100), `how to draw anime women` (9,900), `how to draw anime naruto` (8,100), `how to draw anime character` (6,600), `how to draw people anime` (6,600), `how to draw anime person` (6,600), `how to draw hair anime` (5,400), `how to draw anime easy` (880), `how to draw anime step by step` (590)
+
+## 🆕 How to Draw Person
+`slug: how-to-draw-person` · **Tutorial (blog)**
+
+- **Primary:** `how to draw person` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw a person drawing` (27,100), `how to draw animated person` (6,600)
+
+## 🆕 How to Draw Hair
+`slug: how-to-draw-hair` · **Tutorial (blog)**
+
+- **Primary:** `how to draw hair` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw hair curly` (8,100), `how to draw hair curls` (8,100), `how to draw a wavy hair` (8,100)
+
+## 🆕 How to Draw Boat
+`slug: how-to-draw-boat` · **Tutorial (blog)**
+
+- **Primary:** `how to draw boat` — vol **27,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Whale
+`slug: how-to-draw-whale` · **Tutorial (blog)**
+
+- **Primary:** `how to draw whale` — vol **27,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Horse
+`slug: how-to-draw-horse` · **Tutorial (blog)**
+
+- **Primary:** `how to draw horse` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw animals horse` (27,100)
+
+## 🆕 How to Draw Body
+`slug: how-to-draw-body` · **Tutorial (blog)**
+
+- **Primary:** `how to draw body` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw bodies` (27,100), `how to draw female body` (12,100), `how to draw woman body` (12,100), `how to draw women body` (12,100), `how to draw women's bodies` (12,100), `how to draw bodies female` (12,100), `how to draw xxtenations full body` (90)
+
+## 🆕 How to Draw Star
+`slug: how-to-draw-star` · **Tutorial (blog)**
+
+- **Primary:** `how to draw star` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `star wars how to draw` (8,100), `how to draw 5 point star` (720), `how to draw 7 pointed star` (260), `how to draw 8 pointed star` (50), `how to draw 8 bit brawl stars` (10)
+
+## 🆕 How to Draw Hairstyle
+`slug: how-to-draw-hairstyle` · **Tutorial (blog)**
+
+- **Primary:** `how to draw hairstyle` — vol **27,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Hand
+`slug: how-to-draw-hand` · **Tutorial (blog)**
+
+- **Primary:** `how to draw hand` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw hand` (27,100), `how to draw hand drawings` (27,100)
+
+## 🆕 How to Draw Face
+`slug: how-to-draw-face` · **Tutorial (blog)**
+
+- **Primary:** `how to draw face` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw step by step face` (2,400), `how to draw 3/4 face` (390), `how to draw a face step by step for kids` (0)
+
+## 🆕 How to Draw Rabbit
+`slug: how-to-draw-rabbit` · **Tutorial (blog)**
+
+- **Primary:** `how to draw rabbit` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw bunny rabbit` (9,900), `how to draw rabbit easy` (6,600), `how to draw a simple rabbit` (6,600), `how to draw a bunny rabbit easy` (6,600), `how to draw rabbit easily` (6,600), `how to draw a basic rabbit` (6,600)
+
+## 🆕 How to Draw Bunny
+`slug: how-to-draw-bunny` · **Tutorial (blog)**
+
+- **Primary:** `how to draw bunny` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw bunny` (27,100), `easter bunny how to draw` (8,100), `how to draw bunnies easy` (6,600), `how to draw easy bunny` (6,600), `how to draw simple bunny` (6,600)
+
+## 🆕 How to Draw Starburst
+`slug: how-to-draw-starburst` · **Tutorial (blog)**
+
+- **Primary:** `how to draw starburst` — vol **27,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Animated
+`slug: how-to-draw-animated` · **Tutorial (blog)**
+
+- **Primary:** `how to draw animated` — vol **27,100**/mo · KD **3** · informational
+- **Also target:** `how to draw animated drawings` (27,100), `how to draw animated character` (6,600)
+
+## 🆕 How to Draw Nostril
+`slug: how-to-draw-nostril` · **Tutorial (blog)**
+
+- **Primary:** `how to draw nostril` — vol **27,100**/mo · KD **0** · informational
+
+## 🆕 How to Draw Turtle
+`slug: how-to-draw-turtle` · **Tutorial (blog)**
+
+- **Primary:** `how to draw turtle` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw turtle` (18,100), `how to draw ninja turtles` (2,400)
+
+## 🆕 How to Draw Mouse
+`slug: how-to-draw-mouse` · **Tutorial (blog)**
+
+- **Primary:** `how to draw mouse` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw mouse` (18,100), `how to draw mickey mouse drawing` (8,100)
+
+## 🆕 How to Draw Bear
+`slug: how-to-draw-bear` · **Tutorial (blog)**
+
+- **Primary:** `how to draw bear` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw a bear` (14,800), `how to draw panda bear` (9,900)
+
+## 🆕 How to Draw Thing
+`slug: how-to-draw-thing` · **Tutorial (blog)**
+
+- **Primary:** `how to draw thing` — vol **27,100**/mo · KD **0** · informational
+- **Also target:** `how to draw cool easy things` (6,600), `how to draw beautiful things` (6,600), `how to draw adorable things` (4,400), `how to draw awesome things` (3,600), `how to draw amazing things` (3,600), `how to draw stranger things` (2,900), `how to draw very easy things` (1,900), `how to draw really easy things` (1,900), `how to draw fall things` (1,300), `how to draw minecraft things` (1,000), `how to draw cute christmas things` (880)
+
+## 🆕 How to Draw Shark
+`slug: how-to-draw-shark` · **Tutorial (blog)**
+
+- **Primary:** `how to draw shark` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Volcano
+`slug: how-to-draw-volcano` · **Tutorial (blog)**
+
+- **Primary:** `how to draw volcano` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Vehicle
+`slug: how-to-draw-vehicle` · **Tutorial (blog)**
+
+- **Primary:** `how to draw vehicle` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Bow
+`slug: how-to-draw-bow` · **Tutorial (blog)**
+
+- **Primary:** `how to draw bow` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Robot
+`slug: how-to-draw-robot` · **Tutorial (blog)**
+
+- **Primary:** `how to draw robot` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Pokemon
+`slug: how-to-draw-pokemon` · **Tutorial (blog)**
+
+- **Primary:** `how to draw pokemon` — vol **22,200**/mo · KD **4** · informational
+- **Also target:** `how to draw how to draw pokemon` (9,900), `how to draw pokemon drawing` (9,900), `how to draw pokemon pokemon` (9,900)
+
+## ✅ How to Draw Castle
+`slug: how-to-draw-castle` · **Tutorial (blog)** · _exists as `unicorn-castle` → refresh/expand_
+
+- **Primary:** `how to draw castle` — vol **22,200**/mo · KD **0** · informational
+
+## 🆕 How to Draw Sheep
+`slug: how-to-draw-sheep` · **Tutorial (blog)**
+
+- **Primary:** `how to draw sheep` — vol **22,200**/mo · KD **0** · informational

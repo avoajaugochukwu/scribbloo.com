@@ -1,0 +1,21 @@
+{
+  "seedPhrases": [
+    "coloring pages",
+    "drawing ideas",
+    "how to draw",
+    "things to draw",
+    "easy drawing",
+    "cute drawing",
+    "coloring book",
+    "unicorn coloring pages",
+    "free printable coloring pages",
+    "sketch ideas"
+  ],
+  "country": "us",
+  "language": "en",
+  "expansionMode": "full",
+  "maxLetters": 26,
+  "includeNumbers": false,
+  "maxResults": 200,
+  "outputFormat": "simple"
+}

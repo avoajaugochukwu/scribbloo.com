@@ -1,0 +1,5019 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1552 sec.",
+  "cost": 0.0135,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0387-0000-3a25e3e6d7a3",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1016 sec.",
+      "cost": 0.0135,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "related_keywords",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "related_keywords",
+        "se_type": "google",
+        "keyword": "things to draw",
+        "language_name": "English",
+        "location_code": 2840,
+        "depth": 2,
+        "include_seed_keyword": true,
+        "limit": 1000,
+        "include_serp_info": false
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "things to draw",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "things to draw",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-05-25 06:04:40 +00:00",
+              "competition": 0.02,
+              "competition_level": "LOW",
+              "cpc": 0.08,
+              "search_volume": 368000,
+              "low_top_of_page_bid": 0.17,
+              "high_top_of_page_bid": 2.34,
+              "categories": [
+                10004,
+                10013,
+                10273,
+                11369,
+                13388
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2026,
+                  "month": 4,
+                  "search_volume": 450000
+                },
+                {
+                  "year": 2026,
+                  "month": 3,
+                  "search_volume": 450000
+                },
+                {
+                  "year": 2026,
+                  "month": 2,
+                  "search_volume": 368000
+                },
+                {
+                  "year": 2026,
+                  "month": 1,
+                  "search_volume": 450000
+                },
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 368000
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 368000
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 368000
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 368000
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 301000
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 201000
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 246000
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 450000
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 0,
+                "quarterly": 22,
+                "yearly": 22
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": 0,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://www.google.com/search?q=things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+              "serp_item_types": [
+                "ai_overview",
+                "organic",
+                "people_also_ask",
+                "short_videos",
+                "video",
+                "perspectives",
+                "related_searches",
+                "images"
+              ],
+              "se_results_count": 1130000000,
+              "last_updated_time": "2026-05-14 21:20:48 +00:00",
+              "previous_updated_time": "2026-03-12 00:28:34 +00:00"
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 60.7,
+              "dofollow": 3.4,
+              "referring_pages": 58.2,
+              "referring_domains": 49.7,
+              "referring_main_domains": 45.6,
+              "rank": 31.4,
+              "main_domain_rank": 568.1,
+              "last_updated_time": "2026-05-14 18:20:50 +00:00"
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 21:13:08 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 35,
+          "items_count": 35,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 06:04:40 +00:00",
+                  "competition": 0.02,
+                  "competition_level": "LOW",
+                  "cpc": 0.08,
+                  "search_volume": 368000,
+                  "low_top_of_page_bid": 0.17,
+                  "high_top_of_page_bid": 2.34,
+                  "categories": [
+                    10004,
+                    10013,
+                    10273,
+                    11369,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 450000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 450000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 450000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 368000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 301000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 201000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 246000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 450000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "organic",
+                    "people_also_ask",
+                    "short_videos",
+                    "video",
+                    "perspectives",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 1130000000,
+                  "last_updated_time": "2026-05-14 21:20:48 +00:00",
+                  "previous_updated_time": "2026-03-12 00:28:34 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 60.7,
+                  "dofollow": 3.4,
+                  "referring_pages": 58.2,
+                  "referring_domains": 49.7,
+                  "referring_main_domains": 45.6,
+                  "rank": 31.4,
+                  "main_domain_rank": 568.1,
+                  "last_updated_time": "2026-05-14 18:20:50 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 21:13:08 +00:00"
+                }
+              },
+              "depth": 0,
+              "related_keywords": [
+                "things to draw easy",
+                "things to draw pictures",
+                "things to draw pinterest",
+                "100 easy things to draw",
+                "things to draw for kids",
+                "100 easy things to draw when your bored",
+                "things to draw hard",
+                "things to draw step by step"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw when bored",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 04:18:51 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": 0.9,
+                  "search_volume": 40500,
+                  "low_top_of_page_bid": 0.63,
+                  "high_top_of_page_bid": 3.08,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 27100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 49500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20when%20bored&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 122000000,
+                  "last_updated_time": "2026-05-14 23:48:30 +00:00",
+                  "previous_updated_time": "2026-03-12 03:29:49 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 70.4,
+                  "dofollow": 2.5,
+                  "referring_pages": 66.6,
+                  "referring_domains": 58.3,
+                  "referring_main_domains": 50.7,
+                  "rank": 17.3,
+                  "main_domain_rank": 674.5,
+                  "last_updated_time": "2026-05-14 20:48:33 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 21:13:08 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "things to draw when bored easy",
+                "things to draw when bored with pencil",
+                "100 easy things to draw when your bored",
+                "things to draw when bored pinterest",
+                "things to draw when bored for kids",
+                "cool things to draw when bored",
+                "cute things to draw when bored",
+                "100 easy things to draw when your bored girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 11:43:47 +00:00",
+                  "competition": 0.12,
+                  "competition_level": "LOW",
+                  "cpc": 0.04,
+                  "search_volume": 33100,
+                  "low_top_of_page_bid": 0.56,
+                  "high_top_of_page_bid": 2.5,
+                  "categories": [
+                    10004,
+                    10013,
+                    10273,
+                    11369,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40500
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 33100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 22200
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40500
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "easy things to draw",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 10,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "short_videos",
+                    "perspectives",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 1120000000,
+                  "last_updated_time": "2026-05-15 00:47:54 +00:00",
+                  "previous_updated_time": "2026-03-12 03:28:00 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 239.4,
+                  "dofollow": 112.3,
+                  "referring_pages": 224.9,
+                  "referring_domains": 137.5,
+                  "referring_main_domains": 116.8,
+                  "rank": 90.5,
+                  "main_domain_rank": 505.4,
+                  "last_updated_time": "2026-05-14 21:47:55 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-28 23:00:12 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "things to draw easy with pencil",
+                "things to draw easy when bored",
+                "things to draw when bored",
+                "things to draw easy for kids",
+                "cute things to draw easy",
+                "100 easy things to draw",
+                "100 easy things to draw when your bored",
+                "30 easy things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute things to draw easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 16:19:49 +00:00",
+                  "competition": 0.3,
+                  "competition_level": "LOW",
+                  "cpc": 0.04,
+                  "search_volume": 9900,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 12100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 12100
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 12100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 6600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 8100
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 12100
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cute thing to draw easy",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20things%20to%20draw%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 160,
+                  "last_updated_time": "2026-05-15 14:47:46 +00:00",
+                  "previous_updated_time": "2026-03-12 16:45:38 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 76.3,
+                  "dofollow": 3.5,
+                  "referring_pages": 72.5,
+                  "referring_domains": 63.7,
+                  "referring_main_domains": 56.1,
+                  "rank": 26.3,
+                  "main_domain_rank": 672.8,
+                  "last_updated_time": "2026-05-15 11:49:30 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 05:13:02 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute things to draw easy with pencil",
+                "cute things to draw easy girl",
+                "cute things to draw easy step by step",
+                "cute things to draw easy for beginners",
+                "cute things to draw when bored",
+                "cute things to draw easy for adults",
+                "cute things to draw easy for kids",
+                "sketch #cute things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw pinterest",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 13:29:23 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 2900,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 5400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 2400
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 50,
+                    "yearly": 184
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20pinterest&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "images",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 129,
+                  "last_updated_time": "2026-05-17 15:20:04 +00:00",
+                  "previous_updated_time": "2026-03-14 14:56:27 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 65.1,
+                  "dofollow": 10.3,
+                  "referring_pages": 65,
+                  "referring_domains": 54,
+                  "referring_main_domains": 41.7,
+                  "rank": 17.4,
+                  "main_domain_rank": 857,
+                  "last_updated_time": "2026-05-17 12:20:04 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 21:10:40 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "pinterest drawing ideas aesthetic",
+                "pinterest drawing easy",
+                "things to draw pinterest y2k",
+                "things to draw easy",
+                "100 easy things to draw",
+                "pinterest drawing ideas colourful",
+                "pinterest drawing ideas cute",
+                "pinterest drawing ideas with pencil"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "100 easy things to draw when your bored",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 07:59:31 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": 0.49,
+                  "search_volume": 2400,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13425
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 3600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 2400
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -17,
+                    "quarterly": -17,
+                    "yearly": 26
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=100%20easy%20things%20to%20draw%20when%20your%20bored&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "discussions_and_forums",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 23700000,
+                  "last_updated_time": "2026-03-14 13:40:44 +00:00",
+                  "previous_updated_time": "2026-01-20 14:11:49 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 68.3,
+                  "dofollow": 4,
+                  "referring_pages": 63.6,
+                  "referring_domains": 55,
+                  "referring_main_domains": 49.4,
+                  "rank": 25.6,
+                  "main_domain_rank": 612.2,
+                  "last_updated_time": "2026-03-14 11:40:45 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-24 17:20:35 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "100 easy things to draw when your bored girl",
+                "100 easy things to draw when your bored for kids",
+                "100 easy things to draw when your bored boy",
+                "things to draw easy",
+                "30 easy things to draw",
+                "100 easy things to draw when your bored step by step",
+                "100 easy things to draw when your bored with pencil",
+                "things to draw when bored"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing easy",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 15:22:05 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 1900,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 21,
+                    "quarterly": 53,
+                    "yearly": 53
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "easy pinterest drawings",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 5,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20easy&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 325000000,
+                  "last_updated_time": "2026-03-15 03:03:55 +00:00",
+                  "previous_updated_time": "2026-01-21 00:18:56 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 10.8,
+                  "dofollow": 9.3,
+                  "referring_pages": 10.7,
+                  "referring_domains": 9.4,
+                  "referring_main_domains": 3,
+                  "rank": 33.7,
+                  "main_domain_rank": 921,
+                  "last_updated_time": "2026-03-15 01:03:55 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:51:46 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing easy cute",
+                "pinterest drawing easy step by step",
+                "pinterest drawing easy girl",
+                "pinterest drawing ideas aesthetic",
+                "pinterest drawing easy for kids",
+                "pinterest drawing ideas with pencil",
+                "pinterest drawing easy flower",
+                "cute drawings easy"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "easy things to draw step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 08:57:31 +00:00",
+                  "competition": 0.32,
+                  "competition_level": "LOW",
+                  "cpc": 0.31,
+                  "search_volume": 1900,
+                  "low_top_of_page_bid": 1.02,
+                  "high_top_of_page_bid": 4.91,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 2900
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 19,
+                    "yearly": -21
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 26,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=easy%20things%20to%20draw%20step%20by%20step&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "video",
+                    "people_also_ask",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 140,
+                  "last_updated_time": "2026-05-17 17:26:42 +00:00",
+                  "previous_updated_time": "2026-03-14 11:14:25 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 336,
+                  "dofollow": 143.1,
+                  "referring_pages": 314.2,
+                  "referring_domains": 197.7,
+                  "referring_main_domains": 182.9,
+                  "rank": 128.9,
+                  "main_domain_rank": 520.8,
+                  "last_updated_time": "2026-05-17 14:26:42 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 18:13:29 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "easy things to draw step by step for kids",
+                "easy things to draw step by step for beginners",
+                "easy things to draw step by step with pencil",
+                "easy things to draw step by step for adults",
+                "100 easy things to draw",
+                "step by step drawing for adults",
+                "100 easy things to draw when your bored",
+                "30 easy things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "drawing tutorials step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 00:47:38 +00:00",
+                  "competition": 0.17,
+                  "competition_level": "LOW",
+                  "cpc": 5.2,
+                  "search_volume": 1900,
+                  "low_top_of_page_bid": 0.6,
+                  "high_top_of_page_bid": 3.6,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 2400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 4400
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 9900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1300
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 14,
+                    "quarterly": 0,
+                    "yearly": -23
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "step by step drawing tutorials",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 45,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=drawing%20tutorials%20step%20by%20step&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "video",
+                    "short_videos",
+                    "related_searches",
+                    "images"
+                  ],
+                  "se_results_count": 132000000,
+                  "last_updated_time": "2026-03-14 20:43:57 +00:00",
+                  "previous_updated_time": "2025-10-23 01:41:41 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 1536.5,
+                  "dofollow": 1391.6,
+                  "referring_pages": 1497.8,
+                  "referring_domains": 336.7,
+                  "referring_main_domains": 318.9,
+                  "rank": 220,
+                  "main_domain_rank": 605.7,
+                  "last_updated_time": "2026-03-14 18:43:57 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 13:57:25 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "easy drawing tutorials step by step",
+                "drawing tutorials step by step for kids",
+                "free drawing tutorials step by step",
+                "drawing tutorials step by step with pencil",
+                "step by step drawing for adults",
+                "free drawing tutorials step by step with pencil",
+                "free drawing tutorials step by step pdf",
+                "free drawing tutorials step by step for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing ideas aesthetic",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 11:08:47 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 2900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1300
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 53,
+                    "yearly": 190
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20ideas%20aesthetic&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 109,
+                  "last_updated_time": "2026-05-18 02:16:05 +00:00",
+                  "previous_updated_time": "2026-03-15 13:05:39 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "navigational",
+                  "foreign_intent": [
+                    "informational"
+                  ],
+                  "last_updated_time": "2026-04-29 18:23:20 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas aesthetic pencil",
+                "pinterest drawing ideas aesthetic girl",
+                "pinterest drawing ideas aesthetic easy",
+                "pinterest drawing ideas aesthetic cute",
+                "pinterest drawing ideas aesthetic boy",
+                "pinterest drawing ideas aesthetic pencil girl",
+                "pinterest drawing ideas aesthetic flower",
+                "pinterest drawing ideas aesthetic anime"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "step by step drawing for adults",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 16:24:38 +00:00",
+                  "competition": 0.18,
+                  "competition_level": "LOW",
+                  "cpc": 2.35,
+                  "search_volume": 1600,
+                  "low_top_of_page_bid": 0.6,
+                  "high_top_of_page_bid": 3.27,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1900
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1600
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -16,
+                    "quarterly": -16,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 16,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=step%20by%20step%20drawing%20for%20adults&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "video",
+                    "images",
+                    "people_also_ask",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 155,
+                  "last_updated_time": "2026-05-18 07:52:27 +00:00",
+                  "previous_updated_time": "2026-03-15 01:25:06 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 254.7,
+                  "dofollow": 141.8,
+                  "referring_pages": 237.7,
+                  "referring_domains": 115.2,
+                  "referring_main_domains": 105.2,
+                  "rank": 109.2,
+                  "main_domain_rank": 662.2,
+                  "last_updated_time": "2026-05-18 04:52:27 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-28 22:06:50 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "step by step drawing for adults with pencil",
+                "step by step drawing for adults pdf",
+                "step by step drawing for adults with pencil - youtube",
+                "pencil drawing for beginners step by step",
+                "step by step drawing for adults realistic",
+                "step by step drawing for adults cute",
+                "step by step drawing for beginners",
+                "free drawing tutorials step by step"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 12:13:32 +00:00",
+                  "competition": 0.08,
+                  "competition_level": "LOW",
+                  "cpc": 0.67,
+                  "search_volume": 1300,
+                  "low_top_of_page_bid": 0.8,
+                  "high_top_of_page_bid": 3.07,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1600
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 26,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20step%20by%20step&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "video",
+                    "people_also_ask",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 157,
+                  "last_updated_time": "2026-05-19 01:25:13 +00:00",
+                  "previous_updated_time": "2026-03-15 11:13:56 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 433.1,
+                  "dofollow": 189.5,
+                  "referring_pages": 408.2,
+                  "referring_domains": 243.8,
+                  "referring_main_domains": 225.4,
+                  "rank": 136.4,
+                  "main_domain_rank": 452.9,
+                  "last_updated_time": "2026-05-18 22:25:17 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:59:47 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "things to draw step by step for kids",
+                "easy things to draw step by step",
+                "things to draw step by step with pencil",
+                "step by step drawing for adults",
+                "cute things to draw step by step",
+                "cool things to draw step by step",
+                "100 easy things to draw",
+                "drawing tutorials step by step"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw hard",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 06:41:15 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 1000,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1600
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 60,
+                    "yearly": 82
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "hard things to draw",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20hard&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "ai_overview",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 104,
+                  "last_updated_time": "2026-05-19 07:22:09 +00:00",
+                  "previous_updated_time": "2026-03-15 21:25:44 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 55.2,
+                  "dofollow": 1.6,
+                  "referring_pages": 53.3,
+                  "referring_domains": 45.8,
+                  "referring_main_domains": 42,
+                  "rank": 12.5,
+                  "main_domain_rank": 571.6,
+                  "last_updated_time": "2026-05-19 04:22:09 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:47:49 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "things to draw hard easy",
+                "hard things to draw for beginners",
+                "things to draw hard for kids",
+                "things to draw hard step by step",
+                "cute things to draw hard",
+                "cool things to draw hard",
+                "things to draw hard with pencil",
+                "top 10 hardest things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "30 easy things to draw",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 19:05:12 +00:00",
+                  "competition": 0.15,
+                  "competition_level": "LOW",
+                  "cpc": 0.64,
+                  "search_volume": 1000,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 1000
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 880
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -33,
+                    "quarterly": -33,
+                    "yearly": -33
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=30%20easy%20things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "short_videos",
+                    "video",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 169,
+                  "last_updated_time": "2026-05-20 00:30:41 +00:00",
+                  "previous_updated_time": "2026-03-16 07:05:06 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 186.4,
+                  "dofollow": 11,
+                  "referring_pages": 182.4,
+                  "referring_domains": 160.4,
+                  "referring_main_domains": 138.3,
+                  "rank": 47.4,
+                  "main_domain_rank": 486.2,
+                  "last_updated_time": "2026-05-19 21:30:45 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-24 17:05:01 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "30 easy things to draw with pencil",
+                "30 easy things to draw for kids",
+                "30 easy things to draw step by step",
+                "111 cool things to draw",
+                "100 easy things to draw when your bored",
+                "30 easy things to draw for adults",
+                "30 easy things to draw animals",
+                "100 things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "111 cool things to draw",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 22:56:31 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 590,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 720
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": -19,
+                    "yearly": -34
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=111%20cool%20things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 166000000,
+                  "last_updated_time": "2026-05-21 18:35:54 +00:00",
+                  "previous_updated_time": "2026-03-17 22:33:06 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 59.7,
+                  "dofollow": 5.2,
+                  "referring_pages": 59.7,
+                  "referring_domains": 48.7,
+                  "referring_main_domains": 41.3,
+                  "rank": 16.7,
+                  "main_domain_rank": 758.5,
+                  "last_updated_time": "2026-05-21 15:36:13 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-24 17:13:01 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "111 cool things to draw easy",
+                "111 cool things to draw with pencil",
+                "111 cool things to draw for kids",
+                "111 cool things to draw realistic",
+                "111 cool things to draw for adults",
+                "how to draw cool things easy",
+                "30 easy things to draw",
+                "how to draw something cool for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cool things to draw step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 06:15:21 +00:00",
+                  "competition": 0.05,
+                  "competition_level": "LOW",
+                  "cpc": 0.01,
+                  "search_volume": 590,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 1000
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": -18,
+                    "yearly": -68
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "cool thing to draw step by step",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 26,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cool%20things%20to%20draw%20step%20by%20step&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "video",
+                    "people_also_ask",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 163,
+                  "last_updated_time": "2026-05-21 07:30:46 +00:00",
+                  "previous_updated_time": "2026-03-17 13:51:00 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 365.5,
+                  "dofollow": 115.5,
+                  "referring_pages": 340.4,
+                  "referring_domains": 231.4,
+                  "referring_main_domains": 206,
+                  "rank": 100.8,
+                  "main_domain_rank": 543.2,
+                  "last_updated_time": "2026-05-21 04:30:47 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 16:43:56 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cool things to draw step by step easy",
+                "cool things to draw step by step for kids",
+                "cool things to draw step by step with pencil",
+                "cool things to draw step by step for adults",
+                "100 easy things to draw",
+                "step by step drawing for adults",
+                "100 easy things to draw when your bored",
+                "things to draw easy"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw easy when bored",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 02:28:46 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 480,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 880
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -46,
+                    "quarterly": -18,
+                    "yearly": -56
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "things to draw when bored easy",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20easy%20when%20bored&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "short_videos",
+                    "organic",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 134,
+                  "last_updated_time": "2026-05-21 20:08:29 +00:00",
+                  "previous_updated_time": "2026-03-18 00:48:29 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 70.6,
+                  "dofollow": 2.7,
+                  "referring_pages": 66.8,
+                  "referring_domains": 58.5,
+                  "referring_main_domains": 50.8,
+                  "rank": 20.8,
+                  "main_domain_rank": 563.6,
+                  "last_updated_time": "2026-05-21 17:08:31 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-06 00:22:27 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "things to draw easy when bored with pencil",
+                "100 easy things to draw when your bored",
+                "things to draw easy when bored for kids",
+                "100 easy things to draw when your bored girl",
+                "cute things to draw easy when bored",
+                "things to draw easy when bored step by step",
+                "cute things to draw easy",
+                "things to draw easy with pencil"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute things to draw step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 20:18:41 +00:00",
+                  "competition": 0.09,
+                  "competition_level": "LOW",
+                  "cpc": 0.03,
+                  "search_volume": 480,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 590
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 23,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 5,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20things%20to%20draw%20step%20by%20step&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "video",
+                    "people_also_ask",
+                    "organic",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 140,
+                  "last_updated_time": "2026-05-22 08:29:56 +00:00",
+                  "previous_updated_time": "2026-03-18 11:03:02 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 244.1,
+                  "dofollow": 102.8,
+                  "referring_pages": 226.7,
+                  "referring_domains": 137.5,
+                  "referring_main_domains": 125.3,
+                  "rank": 52.9,
+                  "main_domain_rank": 756.4,
+                  "last_updated_time": "2026-05-22 05:29:56 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 03:45:24 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute things to draw step by step for kids",
+                "cute things to draw step by step easy",
+                "cute things to draw step by step with pencil",
+                "cute things to draw step by step for adults",
+                "cute things to draw step by step cute girl",
+                "cute drawings easy girl",
+                "how to draw cute things kawaii",
+                "100 easy things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw pictures",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 02:26:25 +00:00",
+                  "competition": 0.35,
+                  "competition_level": "MEDIUM",
+                  "cpc": 0.02,
+                  "search_volume": 390,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10013,
+                    10015,
+                    10125,
+                    10273,
+                    10672,
+                    11369,
+                    13388,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 720
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 260
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 22,
+                    "yearly": 177
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "pictures of things to draw",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20pictures&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "featured_snippet",
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "short_videos",
+                    "video",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 183,
+                  "last_updated_time": "2026-05-22 14:25:46 +00:00",
+                  "previous_updated_time": "2026-04-01 22:38:43 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 86.9,
+                  "dofollow": 11.3,
+                  "referring_pages": 84,
+                  "referring_domains": 74.5,
+                  "referring_main_domains": 62,
+                  "rank": 50.7,
+                  "main_domain_rank": 534.3,
+                  "last_updated_time": "2026-05-22 11:25:49 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:58:48 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "things to draw pictures for kids",
+                "things to draw pictures easy",
+                "things to draw pictures with pencil",
+                "things to draw pictures step by step",
+                "things to draw pictures realistic",
+                "things to draw easy",
+                "100 easy things to draw",
+                "cool things to draw pictures"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw easy with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 21:25:24 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": 0.24,
+                  "search_volume": 320,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10013,
+                    10273,
+                    11369,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 480
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 210
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 23,
+                    "quarterly": 50,
+                    "yearly": 85
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20easy%20with%20pencil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "short_videos",
+                    "perspectives",
+                    "related_searches"
+                  ],
+                  "se_results_count": 149,
+                  "last_updated_time": "2026-05-23 12:30:55 +00:00",
+                  "previous_updated_time": "2026-04-02 15:36:22 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 59.1,
+                  "dofollow": 3.4,
+                  "referring_pages": 56.4,
+                  "referring_domains": 48.2,
+                  "referring_main_domains": 44,
+                  "rank": 33.3,
+                  "main_domain_rank": 575.9,
+                  "last_updated_time": "2026-05-23 09:32:33 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:49:49 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "things to draw easy with pencil step by step",
+                "things to draw easy with pencil for kids",
+                "things to draw easy with pencil for beginners",
+                "things to draw easy with pencil for adults",
+                "cute things to draw easy with pencil",
+                "100 easy things to draw",
+                "100 easy things to draw when your bored",
+                "100 easy things to draw when your bored girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "100 easy things to draw",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 00:19:22 +00:00",
+                  "competition": 0.19,
+                  "competition_level": "LOW",
+                  "cpc": 0.05,
+                  "search_volume": 260,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 1300
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 590
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 40
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 120,
+                    "quarterly": 400,
+                    "yearly": 2500
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=100%20easy%20things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "short_videos",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 186,
+                  "last_updated_time": "2026-05-25 06:43:29 +00:00",
+                  "previous_updated_time": "2026-03-23 17:24:07 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 17.1,
+                  "dofollow": 12.2,
+                  "referring_pages": 15,
+                  "referring_domains": 6.5,
+                  "referring_main_domains": 6.5,
+                  "rank": 42.8,
+                  "main_domain_rank": 613.5,
+                  "last_updated_time": "2026-05-25 03:43:32 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 04:49:54 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": [
+                "100 easy things to draw for kids",
+                "things to draw easy",
+                "30 easy things to draw",
+                "100 easy things to draw with pencil",
+                "100 easy things to draw for beginners",
+                "100 easy things to draw for adults",
+                "100 easy things to draw when your bored boy",
+                "111 cool things to draw"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing ideas with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-19 15:56:48 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 260,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 390
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 260
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20ideas%20with%20pencil&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 22400000,
+                  "last_updated_time": "2026-04-28 07:04:09 +00:00",
+                  "previous_updated_time": "2026-03-05 18:49:53 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 6.5,
+                  "dofollow": 6.2,
+                  "referring_pages": 6.5,
+                  "referring_domains": 6.2,
+                  "referring_main_domains": 0.8,
+                  "rank": 8,
+                  "main_domain_rank": 915,
+                  "last_updated_time": "2026-04-28 04:04:09 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": [
+                    "navigational"
+                  ],
+                  "last_updated_time": "2026-04-29 19:41:59 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas with pencil easy",
+                "pinterest drawing ideas with pencil easy and beautiful",
+                "pinterest drawing ideas with pencil cute",
+                "pinterest drawing ideas aesthetic",
+                "pinterest drawing ideas with pencil step by step",
+                "pinterest drawing ideas aesthetic girl",
+                "pencil drawing ideas for adults",
+                "pencil drawing ideas images"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cute things to draw hard",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 06:50:54 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 260,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13760
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 320
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 52
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cute%20things%20to%20draw%20hard&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 129000000,
+                  "last_updated_time": "2026-04-25 20:35:15 +00:00",
+                  "previous_updated_time": "2026-03-06 01:11:35 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-04 08:47:07 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cute things to draw hard easy",
+                "cute things to draw hard step by step",
+                "cute things to draw hard with pencil",
+                "cute things to draw hard for kids",
+                "cute things to draw hard animals",
+                "cute things to draw hard realistic",
+                "hard drawings for 12 year olds",
+                "hard things to draw for beginners"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw pinterest y2k",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-20 17:22:53 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 320
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 170
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": 0,
+                    "yearly": 24
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=things%20to%20draw%20pinterest%20y2k&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 154,
+                  "last_updated_time": "2026-05-26 07:50:14 +00:00",
+                  "previous_updated_time": "2026-04-04 09:04:13 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 03:43:15 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "y2k drawings pinterest easy",
+                "y2k drawings easy",
+                "y2k drawings pinterest boy",
+                "y2k drawings pinterest hello kitty",
+                "simple things to draw pinterest y2k",
+                "y2k drawings pinterest girl",
+                "cute things to draw pinterest y2k",
+                "cool things to draw pinterest y2k"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing ideas cute",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 08:33:18 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10019,
+                    10168,
+                    10885,
+                    12204,
+                    13597
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 170
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 260
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 24,
+                    "quarterly": 0,
+                    "yearly": 53
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "pinterest cute drawing ideas",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 1,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20ideas%20cute&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "related_searches"
+                  ],
+                  "se_results_count": 54200000,
+                  "last_updated_time": "2026-04-30 06:19:11 +00:00",
+                  "previous_updated_time": "2026-03-06 21:24:21 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 7.1,
+                  "dofollow": 5.8,
+                  "referring_pages": 7.1,
+                  "referring_domains": 5.9,
+                  "referring_main_domains": 1,
+                  "rank": 16.6,
+                  "main_domain_rank": 915,
+                  "last_updated_time": "2026-04-30 03:19:11 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:23:18 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas cute easy",
+                "pinterest drawing ideas cute pencil",
+                "pinterest drawing ideas cute girl",
+                "pinterest drawing ideas cute and beautiful",
+                "aesthetic cute drawing pinterest",
+                "pinterest drawing easy",
+                "cute drawings easy girl",
+                "cute drawing ideas girl"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "cool things to draw hard",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 15:16:46 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 170,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 260
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 210
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 140
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 210
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -19,
+                    "quarterly": -19,
+                    "yearly": 50
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=cool%20things%20to%20draw%20hard&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "discussions_and_forums",
+                    "related_searches"
+                  ],
+                  "se_results_count": 204,
+                  "last_updated_time": "2026-05-01 03:55:45 +00:00",
+                  "previous_updated_time": "2026-03-20 17:05:51 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 59.1,
+                  "dofollow": 4.7,
+                  "referring_pages": 59.1,
+                  "referring_domains": 48.2,
+                  "referring_main_domains": 40.8,
+                  "rank": 9.8,
+                  "main_domain_rank": 545.4,
+                  "last_updated_time": "2026-05-01 00:59:55 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 21:06:12 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "cool things to draw hard step by step",
+                "cool things to draw hard easy",
+                "cool things to draw hard realistic",
+                "cool things to draw hard for kids",
+                "top 10 hardest things to draw",
+                "hard things to draw when bored",
+                "hard things to draw anime",
+                "hard things to draw for kids"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "pinterest drawing ideas colourful",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-23 19:45:18 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 29,
+                    "yearly": 80
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=pinterest%20drawing%20ideas%20colourful&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "organic",
+                    "people_also_ask",
+                    "related_searches"
+                  ],
+                  "se_results_count": 107,
+                  "last_updated_time": "2026-05-30 18:50:48 +00:00",
+                  "previous_updated_time": "2026-05-30 14:54:42 +00:00"
+                },
+                "avg_backlinks_info": {
+                  "se_type": "google",
+                  "backlinks": 0.1,
+                  "dofollow": 0.1,
+                  "referring_pages": 0.1,
+                  "referring_domains": 0.1,
+                  "referring_main_domains": 0.1,
+                  "rank": 1.4,
+                  "main_domain_rank": 915,
+                  "last_updated_time": "2026-05-30 15:51:35 +00:00"
+                },
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 17:37:40 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "pinterest drawing ideas colourful easy",
+                "colorful drawings easy",
+                "best drawing images with colour",
+                "pinterest drawing ideas colourful cute",
+                "pinterest drawing ideas colourful pencil",
+                "colourful drawing ideas",
+                "beautiful drawing with colour",
+                "pinterest drawing ideas aesthetic pencil"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "hard things to draw for beginners",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 05:15:55 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 110
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 70
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 22,
+                    "quarterly": 0,
+                    "yearly": 120
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=hard%20things%20to%20draw%20for%20beginners&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "images",
+                    "people_also_ask",
+                    "video",
+                    "ai_overview",
+                    "organic",
+                    "perspectives",
+                    "discussions_and_forums",
+                    "related_searches"
+                  ],
+                  "se_results_count": 996000000,
+                  "last_updated_time": "2026-05-07 22:12:00 +00:00",
+                  "previous_updated_time": "2026-03-08 18:26:47 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-27 20:27:50 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "hard things to draw for beginners step by step",
+                "hard things to draw for beginners animals",
+                "hard things to draw for beginners step by step easy",
+                "hard things to draw for kids",
+                "hard things to draw pictures",
+                "top 10 hardest things to draw",
+                "hard things to draw anime",
+                "hard things to draw step by step"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "top 10 hardest things to draw",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 18:17:58 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 70,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 90
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 50
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 110
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": -22,
+                    "quarterly": 40,
+                    "yearly": -22
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": 0,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": "https://www.google.com/search?q=top%2010%20hardest%20things%20to%20draw&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+                  "serp_item_types": [
+                    "ai_overview",
+                    "images",
+                    "people_also_ask",
+                    "organic",
+                    "video",
+                    "related_searches"
+                  ],
+                  "se_results_count": 667000000,
+                  "last_updated_time": "2026-05-06 10:19:16 +00:00",
+                  "previous_updated_time": "2026-03-23 22:01:56 +00:00"
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 21:23:53 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": [
+                "top 10 hardest things to draw easy",
+                "top 10 hardest things to draw with pencil",
+                "top 10 hardest things to draw for adults",
+                "top 10 hardest things to draw reddit",
+                "hard things to draw for beginners",
+                "what is the hardest thing to draw in the world",
+                "what is the hardest thing to draw in anime",
+                "hard drawings for 12 year olds"
+              ]
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "100 easy things to draw when your bored with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-24 15:58:45 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 30,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 70
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 50
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 250,
+                    "yearly": 40
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-25 03:52:40 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw step by step with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-22 08:15:19 +00:00",
+                  "competition": 0.02,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 20,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 30
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 33,
+                    "quarterly": 300,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-03 11:15:25 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "100 easy things to draw with pencil",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 03:47:54 +00:00",
+                  "competition": 0.01,
+                  "competition_level": "LOW",
+                  "cpc": 12.32,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10013,
+                    13388
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 40
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 20
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 100,
+                    "quarterly": null,
+                    "yearly": null
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": null,
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-05-25 03:48:01 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw hard step by step",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-05-25 04:38:43 +00:00",
+                  "competition": 0,
+                  "competition_level": "LOW",
+                  "cpc": null,
+                  "search_volume": 10,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10004,
+                    10273,
+                    11369
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2026,
+                      "month": 4,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 3,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 2,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2026,
+                      "month": 1,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 10
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 10
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "hard things to draw step-by-step",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": 38,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": {
+                  "se_type": "google",
+                  "check_url": null,
+                  "serp_item_types": null,
+                  "se_results_count": null,
+                  "last_updated_time": "0001-01-01 00:00:00 +00:00",
+                  "previous_updated_time": null
+                },
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 21:10:40 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-30 13:34:00 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": null,
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-29 22:47:49 +00:00"
+                }
+              },
+              "depth": 1,
+              "related_keywords": null
+            },
+            {
+              "se_type": "google",
+              "keyword_data": {
+                "se_type": "google",
+                "keyword": "things to draw easy for kids",
+                "location_code": 2840,
+                "language_code": "en",
+                "keyword_info": {
+                  "se_type": "google",
+                  "last_updated_time": "2026-01-23 05:58:54 +00:00",
+                  "competition": null,
+                  "competition_level": null,
+                  "cpc": null,
+                  "search_volume": null,
+                  "low_top_of_page_bid": null,
+                  "high_top_of_page_bid": null,
+                  "categories": [
+                    10015,
+                    10125,
+                    10672,
+                    13794
+                  ],
+                  "monthly_searches": [
+                    {
+                      "year": 2025,
+                      "month": 12,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 11,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 10,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 9,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 8,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 7,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 6,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 5,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 4,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 3,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 2,
+                      "search_volume": 0
+                    },
+                    {
+                      "year": 2025,
+                      "month": 1,
+                      "search_volume": 0
+                    }
+                  ],
+                  "search_volume_trend": {
+                    "monthly": 0,
+                    "quarterly": 0,
+                    "yearly": 0
+                  }
+                },
+                "keyword_info_normalized_with_bing": null,
+                "keyword_info_normalized_with_clickstream": null,
+                "clickstream_keyword_info": null,
+                "keyword_properties": {
+                  "se_type": "google",
+                  "core_keyword": "easy things to draw for kids",
+                  "synonym_clustering_algorithm": "text_processing",
+                  "keyword_difficulty": null,
+                  "detected_language": "en",
+                  "is_another_language": false
+                },
+                "serp_info": null,
+                "avg_backlinks_info": null,
+                "search_intent_info": {
+                  "se_type": "google",
+                  "main_intent": "informational",
+                  "foreign_intent": null,
+                  "last_updated_time": "2026-04-30 00:48:58 +00:00"
+                }
+              },
+              "depth": 2,
+              "related_keywords": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

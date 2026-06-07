@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | Scribbloo',
   description: 'Read the Terms of Service for Scribbloo.',
-  // Prevent search engines from indexing placeholder pages (remove later)
   robots: {
     index: true,
     follow: true,

@@ -1,0 +1,1709 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1153 sec.",
+  "cost": 0.0114,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06070342-1352-0399-0000-98c559943313",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1046 sec.",
+      "cost": 0.0114,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "keyword_suggestions",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "keyword_suggestions",
+        "se_type": "google",
+        "keyword": "coloring pages for kids",
+        "language_name": "English",
+        "location_code": 2840,
+        "include_seed_keyword": true,
+        "limit": 1000
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "coloring pages for kids",
+          "seed_keyword_data": {
+            "se_type": "google",
+            "keyword": "coloring pages for kids",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-01-22 21:18:08 +00:00",
+              "competition": null,
+              "competition_level": null,
+              "cpc": null,
+              "search_volume": null,
+              "low_top_of_page_bid": null,
+              "high_top_of_page_bid": null,
+              "categories": [
+                10015,
+                10125,
+                10672,
+                13794
+              ],
+              "monthly_searches": [
+                {
+                  "year": 2025,
+                  "month": 12,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 11,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 10,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 9,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 8,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 7,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 6,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 5,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 4,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 3,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 2,
+                  "search_volume": 0
+                },
+                {
+                  "year": 2025,
+                  "month": 1,
+                  "search_volume": 0
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 0,
+                "quarterly": 0,
+                "yearly": 0
+              }
+            },
+            "keyword_info_normalized_with_bing": null,
+            "keyword_info_normalized_with_clickstream": null,
+            "clickstream_keyword_info": null,
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": null,
+              "synonym_clustering_algorithm": "text_processing",
+              "keyword_difficulty": null,
+              "detected_language": "en",
+              "is_another_language": false,
+              "words_count": 4
+            },
+            "serp_info": null,
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "informational",
+              "foreign_intent": null,
+              "last_updated_time": "2026-04-29 03:48:12 +00:00"
+            },
+            "avg_backlinks_info": null
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 14,
+          "items_count": 14,
+          "offset": 0,
+          "offset_token": "eyJDdXJyZW50T2Zmc2V0IjoxNCwiUmVxdWVzdERhdGEiOnsia2V5d29yZCI6ImNvbG9yaW5nIHBhZ2VzIGZvciBraWRzIiwiaW5jbHVkZV9zZWVkX2tleXdvcmQiOnRydWUsImZ1bGxfbWF0Y2giOmZhbHNlLCJsb2FkX3NlcnBfaW5mbyI6ZmFsc2UsInNlYXJjaF9hZnRlcl90b2tlbiI6bnVsbCwiaWdub3JlX3N5bm9ueW1zIjpmYWxzZSwibGFuZ3VhZ2UiOiJlbiIsInNlYXJjaF9lbmdpbmUiOiJnb29nbGUiLCJsb2NhdGlvbiI6Mjg0MCwidXNlX25ld19jYXRlZ29yaWVzIjp0cnVlLCJvcmRlcl9ieSI6eyJvcmRlcl9maWVsZCI6ImtleXdvcmRfaW5mby5zZWFyY2hfdm9sdW1lIiwib3JkZXJfdHlwZSI6IkRlc2MiLCJuZXh0IjpudWxsfSwibGltaXQiOjEwMDAsIm9mZnNldCI6MCwiYWlkIjoxMzUyOTcsInVzZV9jYWNoZSI6dHJ1ZSwidGFza19pZCI6IjA2MDcwMzQyLTEzNTItMDM5OS0wMDAwLTk4YzU1OTk0MzMxMyIsImZsYWdzIjpudWxsfSwiUmF3UXVlcnkiOm51bGwsIklkIjoiNThhMDU2ZjMtZjIzYi00NjE4LTk1ZDAtOGQ1MGQ3M2RiMDdkIiwiU2VhcmNoQWZ0ZXJEYXRhIjpbLTkyMjMzNzIwMzY4NTQ3NzU4MDgsImVkZThhZmVlLWE4MTItZDRmMS1kMzJiLTQyMjVjNjQxMTZkMCJdLCJFeGVjdXRvciI6LTkxODQ0MDU5NDA0NDQ1MTc2MzN9",
+          "items": [
+            {
+              "se_type": "google",
+              "keyword": "free coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-05-20 05:26:01 +00:00",
+                "competition": 0.12,
+                "competition_level": "LOW",
+                "cpc": 1.03,
+                "search_volume": 40500,
+                "low_top_of_page_bid": 0.03,
+                "high_top_of_page_bid": 2,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 4,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 33100
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 27100
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 27100
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 49500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 49500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 40500
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 49500
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 22,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": 18,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 5
+              },
+              "serp_info": null,
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 1901.4,
+                "dofollow": 1269.1,
+                "referring_pages": 1628.7,
+                "referring_domains": 570.8,
+                "referring_main_domains": 560.8,
+                "rank": 133.1,
+                "main_domain_rank": 555.2,
+                "last_updated_time": "2026-05-14 21:17:45 +00:00"
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 08:07:26 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "free printable diwali coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-15 00:58:47 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": [
+                  "informational"
+                ],
+                "last_updated_time": "2026-05-08 05:02:11 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "domestic violence coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-11 20:17:56 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 6
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "navigational",
+                "foreign_intent": [
+                  "informational"
+                ],
+                "last_updated_time": "2026-04-27 14:15:18 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "social skills coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-11 21:09:39 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 6
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 21:10:57 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "scratch coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-11 21:31:06 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 5
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": [
+                  "transactional"
+                ],
+                "last_updated_time": "2026-04-28 22:47:13 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "st patricks day coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-11 21:07:37 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-28 21:56:19 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "free printable black history month coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-14 14:34:50 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 9
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": null,
+                "last_updated_time": "2026-05-06 09:42:24 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "coloring pages for kids rumi",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-16 04:55:08 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 5
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-05-04 15:38:26 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "phoenix coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-04-15 03:23:27 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 3,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": "text_processing",
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 5
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-04-29 18:27:27 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "free printable cute halloween coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-15 05:55:37 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10006,
+                  10015,
+                  10125,
+                  10672,
+                  13509,
+                  13740,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 8
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": [
+                  "informational"
+                ],
+                "last_updated_time": "2026-05-02 18:00:37 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "free fall coloring pages for kids printable",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-14 07:45:21 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": [
+                  "informational"
+                ],
+                "last_updated_time": "2026-05-05 00:50:59 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "cute and easy coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-16 04:16:41 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": null,
+                "last_updated_time": "2026-05-05 15:24:43 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "lunar new year coloring pages for kids",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-11 20:03:28 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10015,
+                  10125,
+                  10672,
+                  13794
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": [
+                  "informational"
+                ],
+                "last_updated_time": "2026-04-29 15:12:00 +00:00"
+              }
+            },
+            {
+              "se_type": "google",
+              "keyword": "halloween coloring pages for kids hello kitty",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-03-13 15:35:40 +00:00",
+                "competition": null,
+                "competition_level": null,
+                "cpc": null,
+                "search_volume": null,
+                "low_top_of_page_bid": null,
+                "high_top_of_page_bid": null,
+                "categories": [
+                  10006,
+                  13509,
+                  13740
+                ],
+                "monthly_searches": [
+                  {
+                    "year": 2026,
+                    "month": 2,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2026,
+                    "month": 1,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 12,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 11,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 10,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 9,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 8,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 7,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 6,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 5,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 4,
+                    "search_volume": 0
+                  },
+                  {
+                    "year": 2025,
+                    "month": 3,
+                    "search_volume": 0
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 0,
+                  "quarterly": 0,
+                  "yearly": 0
+                }
+              },
+              "keyword_info_normalized_with_bing": null,
+              "keyword_info_normalized_with_clickstream": null,
+              "clickstream_keyword_info": null,
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": null,
+                "synonym_clustering_algorithm": null,
+                "keyword_difficulty": null,
+                "detected_language": "en",
+                "is_another_language": false,
+                "words_count": 7
+              },
+              "serp_info": null,
+              "avg_backlinks_info": null,
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "transactional",
+                "foreign_intent": null,
+                "last_updated_time": "2026-05-05 10:39:56 +00:00"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
