@@ -118,7 +118,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       />
 
       <header className="mb-8">
-        <h1 className="text-gradient-brand text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-balance">{post.title}</h1>
+        <h1 className="text-retro font-display text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-balance">{post.title}</h1>
         <div className="text-muted-foreground text-sm mb-4">
           {formattedDate && <span>{formattedDate}</span>}
           {formattedDate && <span> · </span>}
@@ -136,7 +136,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       </header>
 
       {featuredImageUrl && (
-        <div className="mb-10 overflow-hidden border-2 border-black shadow-xl">
+        <div className="retro-frame shadow-pop-lg mb-10 overflow-hidden p-2">
           <Image
             src={featuredImageUrl}
             alt={`Featured image for ${post.title}`}

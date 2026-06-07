@@ -31,11 +31,11 @@ export default function ColoringPageImage({
   const detailHref = `/coloring-pages/${categorySlug}/${coloringPage.slug}`;
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-pink-100 bg-card shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-pink-300 hover:shadow-xl">
+    <div className="group pressable shadow-pop relative flex flex-col overflow-hidden rounded-[var(--radius)] border-2 border-ink bg-card">
       {/* Image Section — A4 portrait frame (matches download/print), matted with padding */}
       <Link
         href={detailHref}
-        className="block border-b-2 border-black bg-white p-3"
+        className="block border-b-2 border-ink bg-white p-3"
       >
         <div className="relative aspect-[210/297] w-full overflow-hidden">
           <Image
@@ -54,8 +54,8 @@ export default function ColoringPageImage({
       <div className="flex flex-grow flex-col p-4 px-6">
         {/* Title and Icons Container */}
         <div className="flex justify-between items-center mb-1">
-          <h3 className="font-bold text-xl truncate flex-grow mr-2" title={coloringPage.title || 'Untitled'}>
-            <Link href={detailHref} className="hover:text-fuchsia-600">
+          <h3 className="font-display font-bold text-xl truncate flex-grow mr-2" title={coloringPage.title || 'Untitled'}>
+            <Link href={detailHref} className="transition-colors hover:text-terracotta">
               {coloringPage.title || 'Untitled'}
             </Link>
           </h3>
@@ -68,7 +68,7 @@ export default function ColoringPageImage({
 
         {/* Description */}
         {coloringPage.description && (
-          <p className="text-gray-600 text-md truncate mb-2 flex-grow" title={coloringPage.description}>
+          <p className="text-muted-foreground text-md truncate mb-2 flex-grow" title={coloringPage.description}>
             {coloringPage.description}
           </p>
         )}

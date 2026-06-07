@@ -123,10 +123,7 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: Prin
         type="button"
         onClick={handlePrint}
         disabled={isPreparingPrint}
-        className={cn(
-          buttonVariants({ variant: 'outline', size: 'xl' }),
-          'border-2 border-pink-300 text-fuchsia-700 hover:bg-pink-50 hover:text-fuchsia-800',
-        )}
+        className={cn(buttonVariants({ variant: 'outline', size: 'xl' }))}
         aria-label="Print image"
       >
         {isPreparingPrint ? (
@@ -142,7 +139,7 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: Prin
   return (
     <div className="inline-flex items-center justify-center h-7 w-7">
       {isPreparingPrint ? (
-        <LoaderCircle className="h-5 w-5 animate-spin text-gray-500" />
+        <LoaderCircle className="h-5 w-5 animate-spin text-ink/50" />
       ) : (
         <TooltipProvider delayDuration={100}>
           <Tooltip>
@@ -151,7 +148,7 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: Prin
                 type="button"
                 onClick={handlePrint}
                 disabled={isPreparingPrint}
-                className="p-1 rounded-full text-gray-500 hover:text-fuchsia-600 hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-1 rounded-full text-ink/60 hover:text-terracotta hover:bg-mustard/40 focus:outline-none focus:ring-2 focus:ring-ring transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Print image"
               >
                 <Printer className="h-6 w-6" strokeWidth={1.5} cursor="pointer" />

@@ -38,13 +38,13 @@ export default function PageBreadcrumb({
             <React.Fragment key={item.href}>
               <BreadcrumbItem>
                 {isLast ? (
-                  <BreadcrumbPage className="font-bold text-fuchsia-700">
+                  <BreadcrumbPage className="font-display font-bold text-terracotta-deep">
                     {item.label}
                   </BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink
                     asChild
-                    className="font-medium text-pink-600 hover:text-fuchsia-700"
+                    className="font-display font-semibold text-teal-deep hover:text-terracotta"
                   >
                     <Link href={item.href}>{item.label}</Link>
                   </BreadcrumbLink>
@@ -52,7 +52,7 @@ export default function PageBreadcrumb({
               </BreadcrumbItem>
               {!isLast && (
                 <BreadcrumbSeparator>
-                  <ChevronRight className="size-4 text-pink-300" />
+                  <ChevronRight className="size-4 text-ink/40" />
                 </BreadcrumbSeparator>
               )}
             </React.Fragment>

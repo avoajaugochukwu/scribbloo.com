@@ -110,7 +110,7 @@ export default async function ColoringPageDetail({ params }: PageProps) {
       <PageHeading title={`${page.title} Coloring Page`} className="mb-6 md:mb-8" />
 
       <div className="mx-auto max-w-2xl">
-        <div className="mx-auto max-w-md border-2 border-black bg-white p-4 shadow-xl">
+        <div className="retro-frame shadow-pop-lg mx-auto max-w-md -rotate-1 p-4">
           <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image
               src={fullUrl}

@@ -108,7 +108,7 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: D
         type="button"
         onClick={handleDownload}
         disabled={isDownloading}
-        className={cn(buttonVariants({ size: 'xl' }), 'shadow-md')}
+        className={cn(buttonVariants({ size: 'xl' }))}
         aria-label="Download image as PDF"
       >
         {isDownloading ? (
@@ -124,7 +124,7 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: D
   return (
     <div className="inline-flex items-center justify-center h-7 w-7">
       {isDownloading ? (
-        <LoaderCircle className="h-5 w-5 animate-spin text-gray-500" />
+        <LoaderCircle className="h-5 w-5 animate-spin text-ink/50" />
       ) : (
         <TooltipProvider delayDuration={100}>
           <Tooltip>
@@ -133,7 +133,7 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: D
                 type="button"
                 onClick={handleDownload}
                 disabled={isDownloading}
-                className="p-1 rounded-full text-gray-500 hover:text-fuchsia-600 hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-300 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="p-1 rounded-full text-ink/60 hover:text-terracotta hover:bg-mustard/40 focus:outline-none focus:ring-2 focus:ring-ring transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Download image as PDF"
               >
                 <Download className="h-6 w-6" strokeWidth={1.5} cursor="pointer" />

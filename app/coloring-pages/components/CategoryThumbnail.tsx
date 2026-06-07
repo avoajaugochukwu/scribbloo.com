@@ -12,7 +12,7 @@ export default function CategoryThumbnail({ category, accent }: CategoryThumbnai
   return (
     <>
       {category.thumbnailImage ? (
-        <div className="border-2 border-black bg-white p-2">
+        <div className="retro-frame overflow-hidden rounded-md p-2">
           <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image
               src={imageUrl({ kind: 'category-thumb', slug: category.slug })}
@@ -25,13 +25,13 @@ export default function CategoryThumbnail({ category, accent }: CategoryThumbnai
         </div>
       ) : (
         // Placeholder if no thumbnail image
-        <div className={`flex h-24 w-full items-center justify-center rounded-xl text-xs text-muted-foreground ${accent.tint}`}>
+        <div className="retro-frame flex aspect-[210/297] w-full items-center justify-center rounded-md text-xs text-muted-foreground">
           No Image
         </div>
       )}
-      {/* Category Name */}
-      <div className={`mt-3 rounded-xl py-2 ${accent.tint}`}>
-        <span className={`text-lg font-extrabold ${accent.title}`}>
+      {/* Category Name — saturated retro label pill */}
+      <div className={`mt-3 rounded-full border-2 border-ink py-1.5 ${accent.tint}`}>
+        <span className={`font-display text-base font-bold ${accent.title}`}>
           {category.seoTitle || category.name}
         </span>
       </div>

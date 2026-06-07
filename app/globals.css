@@ -3,11 +3,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* =========================================================================
+   SCRIBBLOO — "Storybook Retro" design system
+   A warm 70s-print aesthetic: cream paper, terracotta + mustard + teal ink,
+   chunky rounded display type, solid offset "pop" shadows, paper grain,
+   arched panels and sunburst rays.
+   ========================================================================= */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono-fallback);
+
+  /* Named retro palette — usable as bg-mustard / text-terracotta / border-ink */
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-mustard: var(--mustard);
+  --color-mustard-deep: var(--mustard-deep);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-rose: var(--rose);
+  --color-sage: var(--sage);
+  --color-plum: var(--plum);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -37,70 +62,264 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
 }
 
 :root {
-  /* Chunky, friendly corners for the bold look */
-  --radius: 1rem;
-  /* Soft blush page background so colorful cards pop */
-  --background: oklch(0.99 0.01 340);
-  --foreground: oklch(0.18 0.02 320);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 320);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 320);
-  /* Vivid brand pink — drives Button default + focus rings */
-  --primary: oklch(0.62 0.25 350);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.02 330);
-  --secondary-foreground: oklch(0.3 0.12 350);
-  --muted: oklch(0.96 0.01 330);
-  --muted-foreground: oklch(0.5 0.03 330);
-  --accent: oklch(0.95 0.04 330);
-  --accent-foreground: oklch(0.3 0.12 350);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.02 330);
-  --input: oklch(0.9 0.02 330);
-  --ring: oklch(0.62 0.25 350);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.62 0.25 350);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.95 0.04 330);
-  --sidebar-accent-foreground: oklch(0.3 0.12 350);
-  --sidebar-border: oklch(0.9 0.02 330);
-  --sidebar-ring: oklch(0.62 0.25 350);
+  /* Generously rounded, storybook corners */
+  --radius: 1.1rem;
+
+  /* --- Raw retro palette --------------------------------------------- */
+  --paper: oklch(0.962 0.022 86);        /* warm cream page */
+  --paper-deep: oklch(0.928 0.032 80);   /* deeper cream for banded sections */
+  --cream: oklch(0.985 0.015 88);         /* near-white warm */
+  --ink: oklch(0.285 0.035 52);           /* dark espresso — text + outlines */
+  --terracotta: oklch(0.635 0.145 41);    /* primary burnt orange */
+  --terracotta-deep: oklch(0.55 0.145 39);
+  --mustard: oklch(0.795 0.13 84);        /* golden mustard */
+  --mustard-deep: oklch(0.7 0.13 80);
+  --teal: oklch(0.6 0.085 198);           /* dusty teal */
+  --teal-deep: oklch(0.47 0.075 200);
+  --rose: oklch(0.73 0.085 24);           /* dusty rose */
+  --sage: oklch(0.73 0.06 150);           /* soft sage */
+  --plum: oklch(0.52 0.09 350);           /* muted plum */
+
+  /* --- Mapped semantic tokens ---------------------------------------- */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--cream);
+  --card-foreground: var(--ink);
+  --popover: var(--cream);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--terracotta);
+  --primary-foreground: oklch(0.98 0.02 88);
+
+  --secondary: oklch(0.9 0.045 196);
+  --secondary-foreground: var(--teal-deep);
+
+  --muted: oklch(0.915 0.025 82);
+  --muted-foreground: oklch(0.47 0.03 58);
+
+  --accent: oklch(0.9 0.07 86);
+  --accent-foreground: var(--ink);
+
+  --destructive: oklch(0.55 0.2 28);
+
+  --border: oklch(0.85 0.035 72);
+  --input: oklch(0.85 0.035 72);
+  --ring: var(--terracotta);
+
+  --chart-1: var(--terracotta);
+  --chart-2: var(--teal);
+  --chart-3: var(--mustard);
+  --chart-4: var(--rose);
+  --chart-5: var(--sage);
+
+  --sidebar: var(--cream);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--terracotta);
+  --sidebar-primary-foreground: oklch(0.98 0.02 88);
+  --sidebar-accent: oklch(0.9 0.07 86);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: oklch(0.85 0.035 72);
+  --sidebar-ring: var(--terracotta);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    /* Subtle warm vignette so the page reads as a printed paper sheet */
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, oklch(0.98 0.03 88) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  /* Paper grain — a single fixed overlay, multiply-blended for a print feel */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Keep real content above the grain */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  ::selection {
+    background: var(--mustard);
+    color: var(--ink);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
-  /* Bold multi-stop brand gradient for headlines */
-  .text-gradient-brand {
-    @apply bg-gradient-to-r from-pink-500 via-fuchsia-500 to-orange-400 bg-clip-text text-transparent;
+  /* --- Type ---------------------------------------------------------- */
+  .font-display {
+    font-family: var(--font-display);
   }
 
-  /* Soft brand wash behind hero / feature sections */
-  .bg-hero-glow {
-    background-image:
-      radial-gradient(60% 60% at 15% 20%, color-mix(in oklab, var(--color-pink-400) 35%, transparent) 0%, transparent 70%),
-      radial-gradient(55% 55% at 85% 15%, color-mix(in oklab, var(--color-amber-300) 35%, transparent) 0%, transparent 70%),
-      radial-gradient(60% 60% at 70% 90%, color-mix(in oklab, var(--color-sky-300) 30%, transparent) 0%, transparent 70%);
+  /* Multi-tone retro headline (mustard → terracotta → teal) */
+  .text-retro {
+    background-image: linear-gradient(
+      100deg,
+      var(--terracotta-deep) 0%,
+      var(--terracotta) 38%,
+      var(--mustard-deep) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* --- Surfaces ------------------------------------------------------ */
+  /* Solid offset "pop" shadow — the signature retro-print depth cue */
+  .shadow-pop {
+    box-shadow: 5px 5px 0 0 var(--ink);
+  }
+  .shadow-pop-sm {
+    box-shadow: 3px 3px 0 0 var(--ink);
+  }
+  .shadow-pop-lg {
+    box-shadow: 8px 8px 0 0 var(--ink);
+  }
+  .shadow-pop-color {
+    box-shadow: 5px 5px 0 0 var(--terracotta);
+  }
+
+  /* Pressable: lift + grow shadow on hover, press into the page on click */
+  .pressable {
+    transition: transform 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
+      box-shadow 0.15s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .pressable:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 0 var(--ink);
+  }
+  .pressable:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 var(--ink);
+  }
+
+  /* Framed print mat — the white border around every coloring sheet */
+  .retro-frame {
+    background: #fff;
+    border: 2px solid var(--ink);
+  }
+
+  /* --- Shapes -------------------------------------------------------- */
+  /* Arched-top panel (the storybook window) */
+  .arch-top {
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+  }
+  .arch-full {
+    border-radius: 50% 50% var(--radius) var(--radius) / 28% 28% var(--radius) var(--radius);
+  }
+
+  /* --- Decoration ---------------------------------------------------- */
+  /* Sunburst rays for hero backdrops */
+  .sunburst {
+    background-image: repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      color-mix(in oklab, var(--mustard) 55%, transparent) 0deg 6deg,
+      transparent 6deg 12deg
+    );
+  }
+
+  /* Dotted print divider */
+  .dotted-rule {
+    height: 0;
+    border: none;
+    border-top: 3px dotted color-mix(in oklab, var(--ink) 45%, transparent);
+  }
+
+  /* Hand-drawn wavy underline beneath inline emphasis */
+  .wavy-underline {
+    text-decoration: none;
+    background-image: linear-gradient(transparent 0, transparent 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 5 q 6 -6 12 0 t 12 0' fill='none' stroke='%23c25a32' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 24px 8px;
+    padding-bottom: 6px;
+  }
+}
+
+/* --- Motion ---------------------------------------------------------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) rotate(var(--tw-rotate, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(var(--tw-rotate, 0));
+  }
+}
+@keyframes float-y {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-rise {
+    animation: rise 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .animate-pop-in {
+    animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+  .animate-float-y {
+    animation: float-y 6s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin-slow 60s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-rise,
+    .animate-pop-in,
+    .animate-float-y,
+    .animate-spin-slow {
+      animation: none !important;
+    }
   }
 }

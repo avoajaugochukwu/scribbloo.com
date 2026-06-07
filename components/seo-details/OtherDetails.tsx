@@ -12,22 +12,22 @@ export default function OtherDetails({ details }: Props) {
   }
 
   return (
-    <div className="mx-auto max-w-[764px] px-6 py-24">
+    <div className="mx-auto max-w-[764px] px-6 py-20">
       {/* Introductory Paragraph */}
       {details.paragraph && (
-        <p className="text-gray-700 mb-8 leading-relaxed">
+        <p className="text-ink/80 mb-10 text-lg leading-relaxed">
           {details.paragraph}
         </p>
       )}
 
       {/* How-To Guide Section */}
       {details.howToGuideTitle && details.howToGuide && details.howToGuide.length > 0 && (
-        <section className="py-6 border-t border-b border-gray-200">
-          <h2 className="text-2xl font-semibold text-center mb-6 text-pink-600">{details.howToGuideTitle}</h2>
-          <ol className="list-decimal list-inside space-y-4 pl-4">
+        <section className="rounded-[var(--radius)] border-2 border-ink bg-cream shadow-pop-sm p-7 mb-10">
+          <h2 className="font-display text-2xl font-bold text-center mb-6 text-terracotta-deep">{details.howToGuideTitle}</h2>
+          <ol className="list-decimal list-inside space-y-4 marker:font-display marker:font-bold marker:text-terracotta">
             {details.howToGuide.map((item) => (
-              <li key={item.step} className="text-gray-700">
-                <strong className="font-medium text-gray-800">{item.title}:</strong> {item.description}
+              <li key={item.step} className="text-ink/80 leading-relaxed">
+                <strong className="font-display font-bold text-ink">{item.title}:</strong> {item.description}
               </li>
             ))}
           </ol>
@@ -36,12 +36,12 @@ export default function OtherDetails({ details }: Props) {
 
       {/* Activity Ideas Section */}
       {details.activityIdeasTitle && details.activityIdeas && details.activityIdeas.length > 0 && (
-        <section className="py-6">
-          <h2 className="text-2xl font-semibold text-center mb-6 text-purple-600">{details.activityIdeasTitle}</h2>
-          <ul className="list-disc list-inside space-y-3 pl-4">
+        <section className="rounded-[var(--radius)] border-2 border-ink bg-cream shadow-pop-sm p-7 mb-10">
+          <h2 className="font-display text-2xl font-bold text-center mb-6 text-teal-deep">{details.activityIdeasTitle}</h2>
+          <ul className="list-disc list-inside space-y-3 marker:text-teal">
             {details.activityIdeas.map((idea, index) => (
-              <li key={index} className="text-gray-700">
-                <strong className="font-medium text-gray-800">{idea.title}:</strong> {idea.description}
+              <li key={index} className="text-ink/80 leading-relaxed">
+                <strong className="font-display font-bold text-ink">{idea.title}:</strong> {idea.description}
               </li>
             ))}
           </ul>
@@ -50,13 +50,13 @@ export default function OtherDetails({ details }: Props) {
 
       {/* Printable Tips Section */}
       {details.printableTipsTitle && details.printableTips && details.printableTips.length > 0 && (
-        <section className="py-6 border-t border-gray-200">
-          <h2 className="text-2xl font-semibold text-center mb-6 text-teal-600">{details.printableTipsTitle}</h2>
-          <ul className="list-disc list-inside space-y-3 pl-4">
+        <section className="rounded-[var(--radius)] border-2 border-ink bg-cream shadow-pop-sm p-7 mb-10">
+          <h2 className="font-display text-2xl font-bold text-center mb-6 text-mustard-deep">{details.printableTipsTitle}</h2>
+          <ul className="list-disc list-inside space-y-3 marker:text-mustard-deep">
             {details.printableTips.map((tip, index) => (
-              <li key={index} className="text-gray-700">
+              <li key={index} className="text-ink/80 leading-relaxed">
                 {tip.segments.map((segment, segIndex) => (
-                  segment.bold ? <strong key={segIndex} className="font-medium text-gray-800">{segment.text}</strong> : <span key={segIndex}>{segment.text}</span>
+                  segment.bold ? <strong key={segIndex} className="font-display font-bold text-ink">{segment.text}</strong> : <span key={segIndex}>{segment.text}</span>
                 ))}
               </li>
             ))}
@@ -65,7 +65,7 @@ export default function OtherDetails({ details }: Props) {
       )}
 
       {/* FAQ List Section */}
-      <section className="py-6">
+      <section className="pt-6">
         <FAQList faqs={(details.faqs as FAQItemType[]) || []} />
       </section>
     </div>

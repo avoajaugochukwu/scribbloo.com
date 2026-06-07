@@ -8,13 +8,16 @@ const heroImages = [
 ];
 
 export default function MobileHeroImages() {
+  const tilts = ['-rotate-3', 'rotate-2', 'rotate-3', '-rotate-2'];
+
   return (
     // Grid container for 2x2 layout, with gap
-    <div className="mx-auto grid w-full max-w-xs grid-cols-2 gap-4">
-      {heroImages.map((image) => (
+    <div className="mx-auto grid w-full max-w-xs grid-cols-2 gap-5">
+      {heroImages.map((image, i) => (
         <div
           key={image.src}
-          className="border-2 border-black bg-white p-2 shadow-lg"
+          className={`retro-frame shadow-pop animate-pop-in p-2 ${tilts[i]}`}
+          style={{ animationDelay: `${i * 100}ms` }}
         >
           <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image

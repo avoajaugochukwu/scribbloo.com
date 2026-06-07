@@ -30,12 +30,27 @@ export default function PageHeading({
     <div className={cn('text-center', className)}>
       <Tag
         className={cn(
-          'text-gradient-brand font-extrabold tracking-tight text-balance',
+          'text-retro font-display font-extrabold tracking-tight text-balance',
           sizing,
         )}
       >
         {title}
       </Tag>
+      {/* Hand-drawn underline flourish under the title */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 200 12"
+        preserveAspectRatio="none"
+        className="mx-auto mt-3 h-2.5 w-40 text-terracotta"
+      >
+        <path
+          d="M2 8 Q 50 0 100 6 T 198 5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
       {subtitle && (
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground text-pretty">
           {subtitle}

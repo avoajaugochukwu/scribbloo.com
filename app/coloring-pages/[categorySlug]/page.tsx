@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {categoryData.heroImage && (
         <div className="mb-8 flex justify-center">
-          <div className="w-full max-w-lg border-2 border-black bg-white p-4 shadow-xl">
+          <div className="retro-frame shadow-pop-lg w-full max-w-lg -rotate-1 p-4">
             <div className="relative aspect-[210/297] w-full overflow-hidden">
               <Image
                 src={imageUrl({ kind: 'category-hero', slug: categoryData.slug })}

@@ -76,7 +76,11 @@ export default function ColoringPages() {
           { label: 'Coloring Pages', href: '/coloring-pages' },
         ]}
       />
-      <PageHeading title="Coloring Pages" className="mb-8 md:mb-10" />
+      <PageHeading
+        title="Coloring Pages"
+        subtitle="Pick a category and start coloring — every sheet is free to print and download."
+        className="mb-8 md:mb-10"
+      />
       <section>
         <CategoryListDisplay />
       </section>

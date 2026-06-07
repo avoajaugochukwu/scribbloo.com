@@ -19,7 +19,7 @@ type ImgProps = ComponentProps<'img'>;
 function MdxImage({ src, alt }: ImgProps) {
   if (typeof src !== 'string' || src.length === 0) return null;
   return (
-    <span className="my-8 block overflow-hidden border-2 border-black">
+    <span className="retro-frame shadow-pop-sm my-8 block overflow-hidden rounded-md p-2">
       <Image
         src={src}
         alt={alt ?? ''}
@@ -71,7 +71,7 @@ export const mdxComponents: MDXRemoteProps['components'] = {
   li: (props) => <li className="leading-relaxed" {...props} />,
   blockquote: (props) => (
     <blockquote
-      className="my-6 border-l-4 border-primary/40 pl-4 italic text-muted-foreground"
+      className="my-6 rounded-r-lg border-l-4 border-terracotta bg-mustard/15 py-2 pl-5 pr-4 italic text-ink/80"
       {...props}
     />
   ),

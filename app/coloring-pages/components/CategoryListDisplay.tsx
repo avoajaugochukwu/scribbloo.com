@@ -21,7 +21,7 @@ export default async function CategoryListDisplay() {
           <Link
             href={`/coloring-pages/${category.slug}`}
             key={category.slug}
-            className={`group block overflow-hidden rounded-2xl border-2 bg-card p-3 text-center shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${accent.border}`}
+            className="group pressable shadow-pop block rounded-[var(--radius)] border-2 border-ink bg-card p-3 text-center"
           >
             <CategoryThumbnail category={category} accent={accent} />
           </Link>

@@ -58,6 +58,13 @@ export default function Home() {
   };
   // --- End Structured Data Prep ---
 
+  const floaters = [
+    { src: '/img/unicorn.png', alt: 'Unicorn coloring page example', pos: 'top-[4%] left-[1%] -rotate-12', delay: '0ms', priority: true },
+    { src: '/img/dinosaur.png', alt: 'Dinosaur coloring page example', pos: 'top-[6%] right-[2%] rotate-6', delay: '120ms', priority: false },
+    { src: '/img/butterfly.png', alt: 'Butterfly coloring page example', pos: 'bottom-[8%] left-[5%] rotate-3', delay: '240ms', priority: false },
+    { src: '/img/fairy-girl.png', alt: 'Fairy coloring page example', pos: 'bottom-[6%] right-[3%] -rotate-6', delay: '360ms', priority: false },
+  ];
+
   return (
     <div className="pb-8 md:pb-12">
 
@@ -68,95 +75,75 @@ export default function Home() {
       />
       {/* --- End JSON-LD Script --- */}
 
-      {/* Hero Section — soft brand wash behind the headline + floating examples */}
-      <section className="bg-hero-glow">
-        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:relative md:min-h-[68vh] md:justify-center md:py-24">
+      {/* Hero Section — sunburst backdrop + floating framed examples */}
+      <section className="relative overflow-hidden border-b-2 border-ink bg-paper-deep">
+        {/* Sunburst rays radiating from behind the headline */}
+        <div
+          aria-hidden="true"
+          className="sunburst animate-spin-slow pointer-events-none absolute top-1/2 left-1/2 h-[160vw] w-[160vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.18] md:h-[120vh] md:w-[120vh]"
+        />
+        {/* Warm radial glow to soften ray edges */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(60% 55% at 50% 45%, var(--paper-deep) 30%, transparent 100%)',
+          }}
+        />
+
+        <div className="relative container mx-auto flex flex-col items-center px-4 py-16 text-center md:min-h-[72vh] md:justify-center md:py-24">
 
           {/* Central Text Block */}
           <div className="z-10 order-1 mb-8 max-w-3xl md:order-none md:mb-0">
-            <span className="mb-4 inline-block rounded-full bg-white/80 px-4 py-1.5 text-sm font-bold text-fuchsia-700 shadow-sm ring-1 ring-pink-200">
-              🎨 100% free · new pages weekly
+            <span className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-4 py-1.5 font-display text-sm font-bold text-terracotta-deep shadow-pop-sm">
+              ✶ 100% free · new pages weekly
             </span>
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-balance sm:text-6xl lg:text-7xl">
-              <span className="text-gradient-brand">Free Printable Coloring Pages</span>{' '}
-              <span className="text-foreground">for All Ages</span>
+            <h1 className="animate-rise mb-6 font-display text-5xl font-extrabold tracking-tight text-balance sm:text-6xl lg:text-7xl" style={{ animationDelay: '80ms' }}>
+              <span className="text-retro">Free Printable Coloring Pages</span>{' '}
+              <span className="text-ink">for All Ages</span>
             </h1>
-            <p className="mx-auto w-full text-lg text-muted-foreground text-pretty sm:w-4/5 md:text-xl">
-              Download high-quality coloring sheets for kids, teens, and adults. From unicorns to mandalas—new pages added weekly.
+            <p className="animate-rise mx-auto w-full text-lg text-ink/75 text-pretty sm:w-4/5 md:text-xl" style={{ animationDelay: '160ms' }}>
+              Download high-quality coloring sheets for kids, teens, and grown-ups. From unicorns to mandalas — fresh pages added every week.
             </p>
-            <div className="mt-8">
-              <Button asChild size="xl" className="shadow-md">
+            <div className="animate-rise mt-8 flex flex-wrap items-center justify-center gap-3" style={{ animationDelay: '240ms' }}>
+              <Button asChild size="xl">
                 <Link href="/coloring-pages">Browse Pages →</Link>
+              </Button>
+              <Button asChild size="xl" variant="outline">
+                <Link href="/blog">Read the Blog</Link>
               </Button>
             </div>
           </div>
 
           {/* Mobile Images Component */}
-          <div className="order-2 mt-8 w-full md:hidden">
+          <div className="order-2 mt-10 w-full md:hidden">
             <MobileHeroImages />
           </div>
 
           {/* Absolutely Positioned Images (Desktop/Tablet) */}
-          {/* Unicorn (Top Left) */}
-          <div className="absolute top-[2%] left-[2%] z-0 hidden w-44 -rotate-12 md:block">
-            <div className="border-2 border-black bg-white p-2 shadow-xl">
-              <div className="relative aspect-[210/297] w-full overflow-hidden">
-                <Image
-                  src="/img/unicorn.png"
-                  alt="Unicorn coloring page example"
-                  fill
-                  sizes="176px"
-                  className="object-contain"
-                  priority
-                />
+          {floaters.map((f) => (
+            <div
+              key={f.src}
+              className={`animate-pop-in absolute z-0 hidden w-40 lg:w-44 ${f.pos} md:block`}
+              style={{ animationDelay: f.delay }}
+            >
+              <div className="animate-float-y" style={{ animationDelay: f.delay }}>
+                <div className="retro-frame shadow-pop-lg p-2.5">
+                  <div className="relative aspect-[210/297] w-full overflow-hidden">
+                    <Image
+                      src={f.src}
+                      alt={f.alt}
+                      fill
+                      sizes="176px"
+                      className="object-contain"
+                      priority={f.priority}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Dinosaur (Top Right) */}
-          <div className="absolute top-[3%] right-[4%] z-0 hidden w-44 rotate-6 md:block">
-            <div className="border-2 border-black bg-white p-2 shadow-xl">
-              <div className="relative aspect-[210/297] w-full overflow-hidden">
-                <Image
-                  src="/img/dinosaur.png"
-                  alt="Dinosaur coloring page example"
-                  fill
-                  sizes="176px"
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Butterfly (Bottom Left) */}
-          <div className="absolute bottom-[8%] left-[8%] z-0 hidden w-44 rotate-3 md:block">
-            <div className="border-2 border-black bg-white p-2 shadow-xl">
-              <div className="relative aspect-[210/297] w-full overflow-hidden">
-                <Image
-                  src="/img/butterfly.png"
-                  alt="Butterfly coloring page example"
-                  fill
-                  sizes="176px"
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Fairy (Bottom Right) */}
-          <div className="absolute right-[2%] bottom-[4%] z-0 hidden w-44 -rotate-6 md:block">
-            <div className="border-2 border-black bg-white p-2 shadow-xl">
-              <div className="relative aspect-[210/297] w-full overflow-hidden">
-                <Image
-                  src="/img/fairy-girl.png"
-                  alt="Fairy coloring page example"
-                  fill
-                  sizes="176px"
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
