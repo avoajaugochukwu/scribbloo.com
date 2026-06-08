@@ -244,6 +244,62 @@ export async function generateArticleImage(
   return { imageUrl, requestId: result.requestId, revisedPrompt: data?.revised_prompt };
 }
 
+/* -------------------------------------------------------------------------- */
+/* Step-by-step PROCESS images for how-to-draw tutorials                        */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Style contract for the step-by-step instructional strip embedded inside a
+ * tutorial. Unlike the colored hero, this is clean black line art on white with
+ * a small number of clearly separated, captioned stages built foundation-first
+ * (light guide shapes -> basic shapes -> outline -> finished). Grok renders
+ * short stage captions reliably, so we let it.
+ */
+export const PROCESS_STYLE_PREFIX =
+  'a clean, friendly step-by-step how-to-draw tutorial sheet, simple bold black ' +
+  'line art on a plain white background, light gray construction guide lines, ' +
+  'stages clearly separated with thin divider lines, built foundation-first from ' +
+  'simple guide shapes to the finished drawing, neat and instructional, ' +
+  'no shading, no color fills, no busy background, ';
+
+export interface GenerateProcessImageInput {
+  /**
+   * Describe the staged sequence, e.g. "how to draw a cute cat in 4 stages left
+   * to right: stage 1 a circle and guide lines, stage 2 ears and face, stage 3
+   * body outline, stage 4 finished cat".
+   */
+  prompt: string;
+  /** default '16:9' (a horizontal strip of stages) */
+  aspectRatio?: ArticleAspectRatio;
+}
+
+/** Generate a step-by-step tutorial strip via fal-hosted Grok. */
+export async function generateProcessImage(
+  input: GenerateProcessImageInput,
+): Promise<GenerateArticleImageResult> {
+  ensureConfigured();
+
+  const result = await fal.subscribe(GROK_MODEL, {
+    input: {
+      prompt: `${PROCESS_STYLE_PREFIX}${input.prompt}`,
+      aspect_ratio: input.aspectRatio ?? '16:9',
+      resolution: '2k',
+      output_format: 'png',
+      num_images: 1,
+    },
+  });
+
+  const data = result.data as
+    | { images?: Array<{ url?: string }>; revised_prompt?: string }
+    | undefined;
+  const imageUrl = data?.images?.[0]?.url;
+  if (!imageUrl) {
+    throw new Error('fal/Grok returned no process image URL');
+  }
+
+  return { imageUrl, requestId: result.requestId, revisedPrompt: data?.revised_prompt };
+}
+
 /** Download a remote URL to a Buffer (used to feed writeColoringPage). */
 export async function downloadToBuffer(url: string): Promise<Buffer> {
   const res = await fetch(url);

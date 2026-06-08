@@ -348,11 +348,13 @@ const PUBLIC_IMAGES_DIR = path.join(REPO_ROOT, 'public', 'images');
 export interface WriteArticleImageInput {
   /** doc namespace folder: how-to-draw | drawing-ideas | tools | blog */
   namespace: string;
-  /** doc slug — image lands at public/images/<namespace>/<slug>/featured.webp */
+  /** doc slug — image lands at public/images/<namespace>/<slug>/<file> */
   slug: string;
   /** Buffer of the original image bytes OR a local file path. */
   image: Buffer | string;
-  /** Overwrite an existing featured.webp instead of skipping it. */
+  /** Output webp filename. Default 'featured.webp' (the hero). Use 'steps.webp' for the process strip. */
+  file?: string;
+  /** Overwrite an existing file instead of skipping it. */
   force?: boolean;
 }
 
@@ -363,21 +365,26 @@ export interface WriteArticleImageResult {
 }
 
 /**
- * Write a colorful article hero image into public/images/<namespace>/<slug>/
- * as featured-original.png + featured.webp (capped at 1600px wide). The MDX
- * frontmatter (`featuredImage: featured.webp`) is authored by hand — this writer
- * only produces the image files.
+ * Write an article image into public/images/<namespace>/<slug>/ as
+ * <name>-original.png + <name>.webp (capped at 1600px wide). The MDX references
+ * the file by hand (`featuredImage: featured.webp` in frontmatter, or a markdown
+ * `![](/images/<namespace>/<slug>/steps.webp)` in the body) — this writer only
+ * produces the image files.
  */
 export async function writeArticleImage(
   input: WriteArticleImageInput,
 ): Promise<WriteArticleImageResult> {
-  const { namespace, slug, image, force = false } = input;
+  const { namespace, slug, image, file = 'featured.webp', force = false } = input;
   const parts = namespace.split('/').filter(Boolean);
   if (!parts.length || parts.some((p) => p === '.' || p === '..')) {
     throw new Error(`Invalid namespace "${namespace}"`);
   }
+  if (file.includes('/') || file.includes('..') || !file.endsWith('.webp')) {
+    throw new Error(`Invalid image file name "${file}" (expected a *.webp basename)`);
+  }
+  const base = file.slice(0, -'.webp'.length);
   const imageDir = path.join(PUBLIC_IMAGES_DIR, ...parts, slug);
-  const webpPath = path.join(imageDir, 'featured.webp');
+  const webpPath = path.join(imageDir, file);
 
   if ((await fileExists(webpPath)) && !force) {
     return { slug, skipped: true, imageDir };
@@ -390,13 +397,13 @@ export async function writeArticleImage(
   await fs.mkdir(imageDir, { recursive: true });
 
   const originalPng = isPng ? sourceBuffer : await sharp(sourceBuffer).png().toBuffer();
-  await fs.writeFile(path.join(imageDir, 'featured-original.png'), originalPng);
+  await fs.writeFile(path.join(imageDir, `${base}-original.png`), originalPng);
 
-  const featuredWebp = await sharp(originalPng)
+  const webp = await sharp(originalPng)
     .resize({ width: 1600, withoutEnlargement: true })
     .webp({ quality: 88, effort: 6 })
     .toBuffer();
-  await fs.writeFile(webpPath, featuredWebp);
+  await fs.writeFile(webpPath, webp);
 
   return { slug, skipped: false, imageDir };
 }

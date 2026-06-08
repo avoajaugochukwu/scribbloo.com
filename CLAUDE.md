@@ -12,6 +12,11 @@ Tailwind 4. File-based MDX content (no CMS/DB). Deployed on Railway behind Cloud
 - `lib/content/` — MDX loaders + Zod schemas (`types.ts`).
 - `next.config.js` — **active config** (`.mjs`/`.ts` are stale, ignore). Holds redirects (308)
   and cache headers.
+- **Site search** — server-side over a flat in-memory index (no DB/service). Unified index +
+  scorer in `lib/content/search.ts` (client-safe types/config split into `search-shared.ts`);
+  exposed via `GET /api/search`, the `noindex` `/search` page, and the header dropdown
+  (`components/search/`). Adding a new searchable content type = one source fn + one type entry.
+  Canonical reference: **[`plan/search.md`](plan/search.md)**.
 
 ## URL structure — READ BEFORE TOUCHING ROUTES OR ADDING CONTENT
 

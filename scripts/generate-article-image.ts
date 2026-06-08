@@ -22,6 +22,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
   generateArticleImage,
+  generateProcessImage,
   downloadToBuffer,
   buildArticlePrompt,
   type ArticleAspectRatio,
@@ -35,6 +36,10 @@ interface Job {
   slug: string;
   prompt: string;
   aspectRatio?: ArticleAspectRatio;
+  /** 'hero' (colored, → featured.webp) or 'process' (step strip, → steps.webp). Default 'hero'. */
+  style?: 'hero' | 'process';
+  /** override output filename (defaults: hero→featured.webp, process→steps.webp) */
+  file?: string;
 }
 
 interface ParsedArgs {
@@ -43,6 +48,8 @@ interface ParsedArgs {
   slug?: string;
   prompt?: string;
   aspect: ArticleAspectRatio;
+  style?: 'hero' | 'process';
+  file?: string;
   force: boolean;
   dryRun: boolean;
   help: boolean;
@@ -61,6 +68,8 @@ function parseArgs(argv: string[]): ParsedArgs {
     else if (arg === '--slug' || arg.startsWith('--slug=')) out.slug = val();
     else if (arg === '--prompt' || arg.startsWith('--prompt=')) out.prompt = val();
     else if (arg === '--aspect' || arg.startsWith('--aspect=')) out.aspect = val() as ArticleAspectRatio;
+    else if (arg === '--style' || arg.startsWith('--style=')) out.style = val() as 'hero' | 'process';
+    else if (arg === '--file' || arg.startsWith('--file=')) out.file = val();
     else if (arg === '--force') out.force = true;
     else if (arg === '--dry-run') out.dryRun = true;
     else if (arg === '--help' || arg === '-h') out.help = true;
@@ -76,7 +85,16 @@ async function loadJobs(args: ParsedArgs): Promise<Job[]> {
     return parsed as Job[];
   }
   if (args.namespace && args.slug && args.prompt) {
-    return [{ namespace: args.namespace, slug: args.slug, prompt: args.prompt, aspectRatio: args.aspect }];
+    return [
+      {
+        namespace: args.namespace,
+        slug: args.slug,
+        prompt: args.prompt,
+        aspectRatio: args.aspect,
+        style: args.style,
+        file: args.file,
+      },
+    ];
   }
   throw new Error('Provide --manifest <file> OR --namespace --slug --prompt.');
 }
@@ -97,20 +115,24 @@ async function main(): Promise<void> {
 
   for (const job of jobs) {
     const tag = `${job.namespace}/${job.slug}`;
+    const style = job.style ?? 'hero';
+    const file = job.file ?? (style === 'process' ? 'steps.webp' : 'featured.webp');
     if (args.dryRun) {
-      console.log(`• [dry] ${tag}\n    ${buildArticlePrompt(job.prompt).slice(0, 140)}…`);
+      console.log(`• [dry] ${tag} (${style} → ${file})\n    ${buildArticlePrompt(job.prompt).slice(0, 120)}…`);
       continue;
     }
     try {
-      const { imageUrl, revisedPrompt } = await generateArticleImage({
-        prompt: job.prompt,
-        aspectRatio: job.aspectRatio ?? args.aspect,
-      });
+      const gen =
+        style === 'process'
+          ? generateProcessImage({ prompt: job.prompt, aspectRatio: job.aspectRatio })
+          : generateArticleImage({ prompt: job.prompt, aspectRatio: job.aspectRatio ?? args.aspect });
+      const { imageUrl, revisedPrompt } = await gen;
       const buffer = await downloadToBuffer(imageUrl);
       const res = await writeArticleImage({
         namespace: job.namespace,
         slug: job.slug,
         image: buffer,
+        file,
         force: args.force,
       });
       if (res.skipped) {

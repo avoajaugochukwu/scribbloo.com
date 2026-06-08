@@ -74,7 +74,18 @@ export default async function Home() {
   // Each leaf has exactly one top-level ancestor, so summing theme counts = total leaves.
   const totalPages = themes.reduce((sum, t) => sum + (counts.get(t.pathSlugs.join('/')) ?? 0), 0);
 
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Scribbloo', url: baseUrl };
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Scribbloo',
+    url: baseUrl,
+    // Sitelinks searchbox — lets Google surface our /search directly in results.
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${baseUrl}/search?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  };
 
   return (
     <div>
