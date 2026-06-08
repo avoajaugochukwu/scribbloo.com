@@ -27,12 +27,22 @@ boilerplate across pages — duplicated text is its own thin-content signal. Dra
 - **Artistic detail** — the drawing's style: *"intricate mandala linework,"* *"simple bold outlines
   for toddlers,"* *"realistic shading guide."*
 
-**Current state / gap.** The leaf schema (`lib/content/types.ts` → `coloringPageSchema`) has a
-single `description` string, and the detail page (`app/coloring-pages/[[...path]]/page.tsx`) renders
-it or falls back to a generic sentence. That generic fallback **is** thin content. The body of the
-leaf MDX should hold the 150–300 words (this is the same pattern blog posts already use — MDX body,
-not just frontmatter). When the generator (`scripts/generate-coloring-page.ts`) is brought onto the
-folder model, have it author a unique multi-paragraph body per page, not a one-line template.
+**How it's stored — DONE.** Each leaf carries a structured **`seoDetails`** block in frontmatter
+(same schema as collections, `seoDetailsSchema` in `lib/content/types.ts`): an intro `paragraph`
+(the 150–300 words), `printableTips` (coloring tips), and a short `faqs` list. It renders via
+`components/seo-details/OtherDetails` at the bottom of the leaf detail page
+(`app/coloring-pages/[[...path]]/page.tsx`) and is surfaced as `FAQPage` JSON-LD. We chose the
+structured block over a free-form MDX body because it renders consistently, extracts to schema
+(FAQ/HowTo) for free, and is reliable for the LLM generator to emit at 1,000+ pages.
+
+The `description` frontmatter field stays — it's the one-line lead (meta description + `ImageObject`
+schema + the lead paragraph on the page). `description`-**only** (no `seoDetails`) is still thin.
+
+**Backfill + remaining gap.** The 21 pages that shipped with `description: null` were backfilled by
+`scripts/seed-leaf-seo.ts` (a one-off; copy carried as data, merged via `gray-matter`). **Still
+open:** the generator (`scripts/generate-coloring-page.ts`) does not yet emit `seoDetails` — when it
+moves onto the folder model, have it author a unique `paragraph` + tips + FAQs per page so new pages
+never ship thin.
 
 ## 2. Descriptive images — DONE, keep it that way
 

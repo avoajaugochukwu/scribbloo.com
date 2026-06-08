@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 import { SearchIcon } from '@/components/icons';
-import type { SearchResult } from '@/lib/content/search';
+import type { SearchResult } from '@/lib/content/search-shared';
 import { SearchResultRow } from './SearchResultRow';
 
 interface SiteSearchProps {

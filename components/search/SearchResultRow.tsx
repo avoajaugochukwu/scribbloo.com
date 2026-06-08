@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
-import { SEARCH_TYPE_META, type SearchType, type SearchResult } from '@/lib/content/search';
+import { SEARCH_TYPE_META, type SearchType, type SearchResult } from '@/lib/content/search-shared';
 
 /** Per-type badge tint (pale fill + matching ink). Keeps result types scannable. */
 const TYPE_TINT: Record<SearchType, string> = {

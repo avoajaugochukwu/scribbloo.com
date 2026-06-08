@@ -11,6 +11,7 @@
     "lint": "next lint",
     "generate": "node --import tsx scripts/generate-coloring-page.ts",
     "generate:article": "node --import tsx scripts/generate-article-image.ts",
+    "research": "node --import tsx scripts/research-artist-tips.ts",
     "generate:catalog": "node --import tsx scripts/generate-catalog.ts",
     "migrate:supabase": "node --import tsx scripts/migrate-from-supabase.ts",
     "migrate:notion": "node --import tsx scripts/migrate-from-notion.ts"

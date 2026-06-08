@@ -10,78 +10,41 @@ import {
 } from './collections';
 import { getAllPosts } from './blog';
 import { getDocs } from './docs';
+import {
+  SEARCH_TYPE_META,
+  type SearchDoc,
+  type SearchResult,
+  type SearchType,
+} from './search-shared';
 
 /**
- * Site-wide search — the unified index over EVERY content type.
+ * Site-wide search — the unified index over EVERY content type (server side).
  *
  * The site has no DB. Search is a flat in-memory index built once per process
  * (React.cache) from the same file-based loaders the pages use, then scanned and
  * ranked per query. ~1k docs is a trivial linear scan, so there is no external
  * search service and nothing ships to the client — querying happens server-side
- * (API route + /search page).
+ * (API route + /search page). Client-safe types/config live in `search-shared.ts`.
  *
  * ── Extending as the site grows ──────────────────────────────────────────────
  * Every searchable thing becomes a `SearchDoc`. To add a new content type:
- *   1. add its key to `SearchType` + an entry to `SEARCH_TYPE_META`, and
+ *   1. add its key to `SearchType` + an entry to `SEARCH_TYPE_META` (search-shared.ts), and
  *   2. add a source function to the `SOURCES` array below.
  * Nothing else changes — the API, the /search page, and the header dropdown all
  * read the index generically. See plan/search.md.
  */
 
-export type SearchType =
-  | 'coloring-page'
-  | 'collection'
-  | 'facet'
-  | 'blog'
-  | 'how-to-draw'
-  | 'drawing-ideas'
-  | 'tools';
-
-export interface SearchTypeMeta {
-  /** singular human label for a single result */
-  label: string;
-  /** heading used when grouping results of this type */
-  plural: string;
-  /** small relevance nudge so e.g. a matching collection outranks a single leaf */
-  weight: number;
-}
-
-/**
- * Per-type display + ranking config. Order here is the order result groups are
- * shown on the /search page.
- */
-export const SEARCH_TYPE_META: Record<SearchType, SearchTypeMeta> = {
-  collection: { label: 'Category', plural: 'Categories', weight: 6 },
-  facet: { label: 'Collection', plural: 'Collections', weight: 5 },
-  'coloring-page': { label: 'Coloring page', plural: 'Coloring pages', weight: 2 },
-  'how-to-draw': { label: 'Drawing tutorial', plural: 'How to draw', weight: 4 },
-  'drawing-ideas': { label: 'Drawing ideas', plural: 'Drawing ideas', weight: 4 },
-  tools: { label: 'Tool', plural: 'Tools', weight: 4 },
-  blog: { label: 'Article', plural: 'From the blog', weight: 3 },
-};
-
-export const SEARCH_TYPE_ORDER = Object.keys(SEARCH_TYPE_META) as SearchType[];
-
-export interface SearchDoc {
-  /** stable unique id (`<type>:<url>`) */
-  id: string;
-  type: SearchType;
-  title: string;
-  description: string | null;
-  /** canonical, ready-to-link href */
-  url: string;
-  /** thumbnail URL, or null when the content type/instance has no art */
-  image: string | null;
-  /** extra match tokens (tags, synonyms, url segments) — never shown */
-  keywords: string[];
-  /** ISO date for recency tie-breaks, or null */
-  date: string | null;
-}
-
-/** A scored search hit (the doc plus why it ranked where it did). */
-export interface SearchResult extends SearchDoc {
-  score: number;
-}
+// Re-export the client-safe primitives so server callers can import everything
+// from one place.
+export {
+  SEARCH_TYPE_META,
+  SEARCH_TYPE_ORDER,
+  groupByType,
+  type SearchType,
+  type SearchTypeMeta,
+  type SearchDoc,
+  type SearchResult,
+} from './search-shared';
 
 /* -------------------------------------------------------------------------- */
 /* Sources — one function per content type, each emitting SearchDocs          */
@@ -278,11 +241,4 @@ export async function searchContent(
   );
 
   return hits.slice(0, limit);
-}
-
-/** Group ranked results by type, preserving SEARCH_TYPE_ORDER. */
-export function groupByType(results: SearchResult[]): Array<{ type: SearchType; results: SearchResult[] }> {
-  const buckets = new Map<SearchType, SearchResult[]>();
-  for (const r of results) (buckets.get(r.type) ?? buckets.set(r.type, []).get(r.type)!).push(r);
-  return SEARCH_TYPE_ORDER.filter((t) => buckets.has(t)).map((type) => ({ type, results: buckets.get(type)! }));
 }
