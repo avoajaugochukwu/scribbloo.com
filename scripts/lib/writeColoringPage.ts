@@ -93,8 +93,13 @@ export interface WriteColoringPageInput {
    */
   subject: string;
   tags: string[];
-  source: 'fal' | 'supabase-migration' | 'manual';
+  source: 'fal' | 'grok' | 'supabase-migration' | 'manual';
+  /** fal request id (fal hosts Grok too, so the Grok request id lives here). */
   falRequestId?: string;
+  /** composition the page was framed for — see scripts/lib/frameA4.ts. */
+  layout?: 'full' | 'bleed';
+  /** the full descriptive prompt used to generate this page (stored for regen). */
+  prompt?: string;
   relatedPosts?: string[];
   needsRegen?: boolean;
   /** Buffer of the original image bytes OR a local file path. */
@@ -124,6 +129,8 @@ export async function writeColoringPage(
     tags,
     source,
     falRequestId,
+    layout,
+    prompt,
     relatedPosts = [],
     needsRegen = false,
     image,
@@ -193,6 +200,8 @@ export async function writeColoringPage(
     createdAt: createdAt ?? new Date().toISOString(),
     source,
     ...(falRequestId ? { falRequestId } : {}),
+    ...(layout ? { layout } : {}),
+    ...(prompt ? { prompt } : {}),
     relatedPosts,
     needsRegen,
   });

@@ -26,7 +26,7 @@ self.addEventListener('message', async (event) => {
   }
   const { jsPDF } = self.jspdf; // Destructure the constructor
 
-  const { imageUrl, filename, imgWidth, imgHeight } = event.data;
+  const { imageUrl, filename, imgWidth, imgHeight, border } = event.data;
 
   // Validate received dimensions
   if (!imgWidth || !imgHeight) {
@@ -78,6 +78,23 @@ self.addEventListener('message', async (event) => {
 
     pdf.addImage(base64data, 'JPEG', offsetX, offsetY, renderWidth, renderHeight, undefined, 'MEDIUM');
     console.log("Worker: Image added to PDF."); // Added log
+
+    // Optional user-chosen border — a rounded ink frame just inside the image.
+    if (border) {
+      const pad = 6; // pt, inset from the image edge
+      pdf.setDrawColor(44, 42, 51); // --ink (#2C2A33)
+      pdf.setLineWidth(2.5);
+      pdf.roundedRect(
+        offsetX + pad,
+        offsetY + pad,
+        renderWidth - pad * 2,
+        renderHeight - pad * 2,
+        10,
+        10,
+        'S',
+      );
+      console.log("Worker: Border drawn.");
+    }
 
     // --- Get PDF as Blob ---
     const pdfBlob = pdf.output('blob');

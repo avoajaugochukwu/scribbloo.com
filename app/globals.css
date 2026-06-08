@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /* =========================================================================
-   SCRIBBLOO — "Storybook Retro" design system
-   A warm 70s-print aesthetic: cream paper, terracotta + mustard + teal ink,
-   chunky rounded display type, solid offset "pop" shadows, paper grain,
-   arched panels and sunburst rays.
+   SCRIBBLOO — design system
+   Playful, all-ages coloring-book aesthetic: warm cream paper, espresso ink
+   outlines, an 8-crayon equal-chroma palette, thick frames and solid
+   straight-down "pop" shadows. Fredoka (display) + Nunito (body).
    ========================================================================= */
 
 @theme inline {
@@ -18,20 +18,44 @@
   --font-display: var(--font-display);
   --font-mono: var(--font-mono-fallback);
 
-  /* Named retro palette — usable as bg-mustard / text-terracotta / border-ink */
+  /* --- Paper & ink (usable as bg-paper / text-ink / border-line) -------- */
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
-  --color-ink: var(--ink);
   --color-cream: var(--cream);
-  --color-terracotta: var(--terracotta);
-  --color-terracotta-deep: var(--terracotta-deep);
-  --color-mustard: var(--mustard);
-  --color-mustard-deep: var(--mustard-deep);
+  --color-cream-2: var(--cream-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  /* --- The crayon box (bg-red / text-purple / bg-yellow-t …) ------------ */
+  --color-red: var(--red);
+  --color-orange: var(--orange);
+  --color-yellow: var(--yellow);
+  --color-green: var(--green);
   --color-teal: var(--teal);
+  --color-blue: var(--blue);
+  --color-purple: var(--purple);
+  --color-pink: var(--pink);
+  --color-red-t: var(--red-t);
+  --color-orange-t: var(--orange-t);
+  --color-yellow-t: var(--yellow-t);
+  --color-green-t: var(--green-t);
+  --color-teal-t: var(--teal-t);
+  --color-blue-t: var(--blue-t);
+  --color-purple-t: var(--purple-t);
+  --color-pink-t: var(--pink-t);
+
+  /* --- Legacy aliases (old code re-skins onto the new palette) ---------- */
+  --color-terracotta: var(--red);
+  --color-terracotta-deep: var(--red-deep);
+  --color-mustard: var(--yellow);
+  --color-mustard-deep: var(--yellow-deep);
   --color-teal-deep: var(--teal-deep);
-  --color-rose: var(--rose);
-  --color-sage: var(--sage);
-  --color-plum: var(--plum);
+  --color-rose: var(--pink);
+  --color-sage: var(--green);
+  --color-plum: var(--purple);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -63,32 +87,53 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 6px);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
 }
 
 :root {
-  /* Generously rounded, storybook corners */
-  --radius: 1.1rem;
+  /* Rounded storybook corners (matches --radius-md by default) */
+  --radius: 18px;
 
-  /* --- Raw retro palette --------------------------------------------- */
-  --paper: oklch(0.962 0.022 86);        /* warm cream page */
-  --paper-deep: oklch(0.928 0.032 80);   /* deeper cream for banded sections */
-  --cream: oklch(0.985 0.015 88);         /* near-white warm */
-  --ink: oklch(0.285 0.035 52);           /* dark espresso — text + outlines */
-  --terracotta: oklch(0.635 0.145 41);    /* primary burnt orange */
-  --terracotta-deep: oklch(0.55 0.145 39);
-  --mustard: oklch(0.795 0.13 84);        /* golden mustard */
-  --mustard-deep: oklch(0.7 0.13 80);
-  --teal: oklch(0.6 0.085 198);           /* dusty teal */
-  --teal-deep: oklch(0.47 0.075 200);
-  --rose: oklch(0.73 0.085 24);           /* dusty rose */
-  --sage: oklch(0.73 0.06 150);           /* soft sage */
-  --plum: oklch(0.52 0.09 350);           /* muted plum */
+  /* --- Paper & ink ---------------------------------------------------- */
+  --paper: #fffbf3; /* warm cream page */
+  --paper-deep: #fff4e2; /* deeper cream for banded sections */
+  --cream: #ffffff; /* white card surface */
+  --cream-2: #fff4e2;
+  --ink: #2c2a33; /* espresso — text + outlines */
+  --ink-soft: #6b6873;
+  --ink-faint: #9c99a3;
+  --line: #ece6da; /* soft rules */
+  --line-strong: #2c2a33; /* the frame line */
 
-  /* --- Mapped semantic tokens ---------------------------------------- */
+  /* --- Crayon box — equal chroma/lightness, varied hue ----------------- */
+  --red: oklch(0.7 0.17 25);
+  --orange: oklch(0.75 0.15 60);
+  --yellow: oklch(0.84 0.13 92);
+  --green: oklch(0.74 0.13 150);
+  --teal: oklch(0.72 0.11 200);
+  --blue: oklch(0.68 0.14 250);
+  --purple: oklch(0.64 0.15 300);
+  --pink: oklch(0.72 0.16 350);
+
+  /* deeper variants for hover / legacy "-deep" aliases */
+  --red-deep: oklch(0.6 0.17 25);
+  --yellow-deep: oklch(0.74 0.13 84);
+  --teal-deep: oklch(0.5 0.09 200);
+
+  /* tints (soft fills behind line art / chips) */
+  --red-t: oklch(0.93 0.05 25);
+  --orange-t: oklch(0.94 0.05 60);
+  --yellow-t: oklch(0.95 0.06 92);
+  --green-t: oklch(0.94 0.05 150);
+  --teal-t: oklch(0.94 0.04 200);
+  --blue-t: oklch(0.94 0.05 250);
+  --purple-t: oklch(0.94 0.05 300);
+  --pink-t: oklch(0.94 0.05 350);
+
+  /* --- Mapped semantic tokens ----------------------------------------- */
   --background: var(--paper);
   --foreground: var(--ink);
   --card: var(--cream);
@@ -96,38 +141,38 @@
   --popover: var(--cream);
   --popover-foreground: var(--ink);
 
-  --primary: var(--terracotta);
-  --primary-foreground: oklch(0.98 0.02 88);
+  --primary: var(--red);
+  --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.9 0.045 196);
+  --secondary: var(--teal-t);
   --secondary-foreground: var(--teal-deep);
 
-  --muted: oklch(0.915 0.025 82);
-  --muted-foreground: oklch(0.47 0.03 58);
+  --muted: var(--cream-2);
+  --muted-foreground: var(--ink-soft);
 
-  --accent: oklch(0.9 0.07 86);
+  --accent: var(--yellow-t);
   --accent-foreground: var(--ink);
 
-  --destructive: oklch(0.55 0.2 28);
+  --destructive: oklch(0.6 0.2 28);
 
-  --border: oklch(0.85 0.035 72);
-  --input: oklch(0.85 0.035 72);
-  --ring: var(--terracotta);
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--red);
 
-  --chart-1: var(--terracotta);
+  --chart-1: var(--red);
   --chart-2: var(--teal);
-  --chart-3: var(--mustard);
-  --chart-4: var(--rose);
-  --chart-5: var(--sage);
+  --chart-3: var(--yellow);
+  --chart-4: var(--pink);
+  --chart-5: var(--green);
 
   --sidebar: var(--cream);
   --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--terracotta);
-  --sidebar-primary-foreground: oklch(0.98 0.02 88);
-  --sidebar-accent: oklch(0.9 0.07 86);
+  --sidebar-primary: var(--red);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--yellow-t);
   --sidebar-accent-foreground: var(--ink);
-  --sidebar-border: oklch(0.85 0.035 72);
-  --sidebar-ring: var(--terracotta);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--red);
 }
 
 @layer base {
@@ -135,115 +180,131 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    /* Subtle warm vignette so the page reads as a printed paper sheet */
-    background-image:
-      radial-gradient(120% 80% at 50% -10%, oklch(0.98 0.03 88) 0%, transparent 60%);
-    background-attachment: fixed;
-  }
-
-  /* Paper grain — a single fixed overlay, multiply-blended for a print feel */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.06;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* Keep real content above the grain */
-  body > * {
-    position: relative;
-    z-index: 1;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background: var(--mustard);
+    background: var(--yellow);
     color: var(--ink);
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.05;
     letter-spacing: -0.01em;
   }
 }
 
 @layer components {
-  /* --- Type ---------------------------------------------------------- */
   .font-display {
     font-family: var(--font-display);
   }
 
-  /* Multi-tone retro headline (mustard → terracotta → teal) */
-  .text-retro {
-    background-image: linear-gradient(
-      100deg,
-      var(--terracotta-deep) 0%,
-      var(--terracotta) 38%,
-      var(--mustard-deep) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  /* --- Surfaces ------------------------------------------------------ */
-  /* Solid offset "pop" shadow — the signature retro-print depth cue */
+  /* --- Surfaces & depth ----------------------------------------------- */
+  /* Solid straight-down "pop" shadow — the signature print depth cue */
   .shadow-pop {
-    box-shadow: 5px 5px 0 0 var(--ink);
+    box-shadow: 0 4px 0 0 var(--ink);
   }
   .shadow-pop-sm {
-    box-shadow: 3px 3px 0 0 var(--ink);
+    box-shadow: 0 2px 0 0 var(--ink);
   }
   .shadow-pop-lg {
-    box-shadow: 8px 8px 0 0 var(--ink);
+    box-shadow: 0 6px 0 0 var(--ink);
   }
   .shadow-pop-color {
-    box-shadow: 5px 5px 0 0 var(--terracotta);
+    box-shadow: 0 4px 0 0 var(--red);
+  }
+  .shadow-soft {
+    box-shadow: 0 18px 40px -24px rgba(44, 42, 51, 0.45);
   }
 
-  /* Pressable: lift + grow shadow on hover, press into the page on click */
+  /* Pressable: lift on hover, press into the page on click */
   .pressable {
-    transition: transform 0.15s cubic-bezier(0.2, 0.7, 0.2, 1),
-      box-shadow 0.15s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition:
+      transform 0.13s ease,
+      box-shadow 0.13s ease,
+      background 0.15s ease;
   }
   .pressable:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0 0 var(--ink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 0 var(--ink);
   }
   .pressable:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 0 var(--ink);
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 0 var(--ink);
   }
 
-  /* Framed print mat — the white border around every coloring sheet */
+  /* White print mat around every coloring sheet */
   .retro-frame {
     background: #fff;
-    border: 2px solid var(--ink);
+    border: 2.5px solid var(--ink);
   }
 
-  /* --- Shapes -------------------------------------------------------- */
-  /* Arched-top panel (the storybook window) */
-  .arch-top {
-    border-top-left-radius: 7rem;
-    border-top-right-radius: 7rem;
-  }
-  .arch-full {
-    border-radius: 50% 50% var(--radius) var(--radius) / 28% 28% var(--radius) var(--radius);
+  /* --- Print texture & decoration ------------------------------------- */
+  /* Dotted "paper" background */
+  .dotgrid {
+    background-image: radial-gradient(var(--line) 1.4px, transparent 1.4px);
+    background-size: 22px 22px;
   }
 
-  /* --- Decoration ---------------------------------------------------- */
-  /* Sunburst rays for hero backdrops */
-  .sunburst {
-    background-image: repeating-conic-gradient(
-      from 0deg at 50% 50%,
-      color-mix(in oklab, var(--mustard) 55%, transparent) 0deg 6deg,
-      transparent 6deg 12deg
-    );
+  /* Uppercase tracked section label */
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Difficulty / rating pips */
+  .pips {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .pips i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--line);
+    display: block;
+  }
+  .pips i.on {
+    background: var(--ink);
+  }
+
+  /* Arrowed inline link that nudges on hover */
+  .link-arrow {
+    font-family: var(--font-display);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: gap 0.15s ease;
+  }
+  .link-arrow:hover {
+    gap: 11px;
+  }
+
+  /* Blurred decorative color blob */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.55;
+    z-index: 0;
   }
 
   /* Dotted print divider */
@@ -253,11 +314,22 @@
     border-top: 3px dotted color-mix(in oklab, var(--ink) 45%, transparent);
   }
 
-  /* Hand-drawn wavy underline beneath inline emphasis */
+  /* --- Legacy shapes kept so older pages don't break ------------------ */
+  .arch-top {
+    border-top-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+  }
+  .arch-full {
+    border-radius: 50% 50% var(--radius) var(--radius) / 28% 28% var(--radius)
+      var(--radius);
+  }
+  .text-retro {
+    color: var(--red);
+  }
   .wavy-underline {
     text-decoration: none;
     background-image: linear-gradient(transparent 0, transparent 100%),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 5 q 6 -6 12 0 t 12 0' fill='none' stroke='%23c25a32' stroke-width='2'/%3E%3C/svg%3E");
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8'%3E%3Cpath d='M0 5 q 6 -6 12 0 t 12 0' fill='none' stroke='%23e0563b' stroke-width='2'/%3E%3C/svg%3E");
     background-repeat: repeat-x;
     background-position: 0 100%;
     background-size: 24px 8px;
@@ -265,7 +337,7 @@
   }
 }
 
-/* --- Motion ---------------------------------------------------------- */
+/* --- Motion ----------------------------------------------------------- */
 @keyframes rise {
   from {
     opacity: 0;
@@ -286,17 +358,13 @@
     transform: scale(1) rotate(var(--tw-rotate, 0));
   }
 }
-@keyframes float-y {
-  0%, 100% {
-    transform: translateY(0);
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
   }
   50% {
-    transform: translateY(-10px);
-  }
-}
-@keyframes spin-slow {
-  to {
-    transform: rotate(360deg);
+    transform: translateY(-12px) rotate(var(--rot, 0deg));
   }
 }
 
@@ -308,17 +376,13 @@
     animation: pop-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
   .animate-float-y {
-    animation: float-y 6s ease-in-out infinite;
-  }
-  .animate-spin-slow {
-    animation: spin-slow 60s linear infinite;
+    animation: floaty 6s ease-in-out infinite;
   }
 
   @media (prefers-reduced-motion: reduce) {
     .animate-rise,
     .animate-pop-in,
-    .animate-float-y,
-    .animate-spin-slow {
+    .animate-float-y {
       animation: none !important;
     }
   }

@@ -37,4 +37,18 @@ with per-type writing briefs in the other `plan/*.md` files and `plan/00-writing
 
 ## Design system
 
-"Storybook Retro" (70s print) aesthetic — fonts, OKLCH palette, pop-shadow/retro-frame utilities.
+Playful all-ages "coloring-book" aesthetic (defined in `app/globals.css`). Fredoka (display)
++ Nunito (body). Warm cream paper (`--paper #FFFBF3`), espresso ink outlines (`--ink #2C2A33`),
+and an 8-crayon **equal-chroma OKLCH palette** (`--red --orange --yellow --green --teal --blue
+--purple --pink`), each with a pale `-t` tint for fills behind line art. All exposed as Tailwind
+utilities (`bg-red`, `text-purple`, `bg-yellow-t`, `text-ink-soft`…). Signature primitives:
+straight-down solid `shadow-pop`/`-sm`/`-lg`, `.pressable` (lift on hover, press on click),
+`.retro-frame` (2.5px ink print mat), `.dotgrid`, `.eyebrow`, `.pips`, `.link-arrow`, `.blob`,
+the `floaty` hero animation. Legacy token names (terracotta/mustard/teal/rose/sage/plum) are
+aliased onto the new palette so older pages re-skin automatically.
+
+Coloring components live in `app/coloring-pages/components/`: `ColoringPageImage` (the `.pcard`),
+`ColoringGallery` (client search/sort/grid-masonry over server-rendered cards), `SwatchPreview`
+(detail "try a color" mat tinting). Shared chrome: `components/BrandMark` (logo lockup),
+`CategoryRail` (theme tiles), `FavoriteButton` (localStorage heart), `components/icons.tsx`
+(`ThemeIcon` keyed by subject slug + a small stroke icon set).

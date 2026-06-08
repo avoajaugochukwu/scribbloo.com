@@ -1,98 +1,90 @@
 import Link from 'next/link';
-import { Logo } from '@/components/Logo';
+import { BrandMark } from '@/components/BrandMark';
+import { getRootHub } from '@/lib/content/collections';
 
 const exploreLinks = [
-  { href: '/', label: 'Home' },
   { href: '/coloring-pages', label: 'Coloring Pages' },
+  { href: '/drawing-ideas', label: 'Drawing Ideas' },
+  { href: '/tools', label: 'Tools' },
   { href: '/blog', label: 'Blog' },
 ];
 
-const legalLinks = [
-  { href: '/privacy-policy', label: 'Privacy Policy' },
-  { href: '/terms-of-service', label: 'Terms of Service' },
+const helloLinks = [
+  { href: '/privacy-policy', label: 'Privacy' },
+  { href: '/terms-of-service', label: 'Terms' },
 ];
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
+export async function Footer() {
+  const { themes } = await getRootHub();
+  const year = new Date().getFullYear();
+  const themeLinks = themes.slice(0, 6);
 
   return (
-    <footer className="relative mt-auto bg-paper-deep">
-      {/* Scalloped top edge — like the trim on a paper banner */}
-      <div
-        aria-hidden="true"
-        className="absolute -top-3 left-0 h-3 w-full text-paper-deep"
-        style={{
-          background: 'currentColor',
-          maskImage:
-            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12' viewBox='0 0 40 12'%3E%3Cpath d='M0 12 V6 a20 20 0 0 1 40 0 V12 Z' fill='black'/%3E%3C/svg%3E\")",
-          maskSize: '40px 12px',
-          maskRepeat: 'repeat-x',
-          WebkitMaskImage:
-            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12' viewBox='0 0 40 12'%3E%3Cpath d='M0 12 V6 a20 20 0 0 1 40 0 V12 Z' fill='black'/%3E%3C/svg%3E\")",
-          WebkitMaskSize: '40px 12px',
-          WebkitMaskRepeat: 'repeat-x',
-        }}
-      />
-
-      <div className="container mx-auto grid grid-cols-1 gap-10 px-4 pt-14 pb-8 sm:grid-cols-2 lg:grid-cols-3 lg:px-6">
-        {/* Brand blurb */}
-        <div className="space-y-4">
-          <Logo className="h-7 text-ink" />
-          <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Hundreds of free, high-quality printable coloring pages for kids,
-            teens, and grown-ups. Fresh sheets added every week.
+    <footer className="mt-10 border-t-2 border-ink">
+      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 pt-12 pb-8 sm:grid-cols-2 lg:grid-cols-[1.6fr_repeat(3,1fr)] lg:px-7">
+        <div>
+          <Link href="/" aria-label="Scribbloo home">
+            <BrandMark />
+          </Link>
+          <p className="mt-3.5 max-w-[34ch] font-semibold text-ink-soft">
+            Free coloring pages, drawing ideas and tools that make creativity easy for every age.
           </p>
-          <span className="inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-mustard px-3 py-1 font-display text-xs font-bold text-ink">
-            ✶ 100% free · new pages weekly
-          </span>
         </div>
 
-        {/* Explore */}
-        <nav className="space-y-4">
-          <h2 className="font-display text-sm font-extrabold uppercase tracking-widest text-terracotta-deep">
-            Explore
-          </h2>
-          <ul className="space-y-2.5">
-            {exploreLinks.map((link) => (
-              <li key={link.href}>
+        <FooterCol title="Explore" links={exploreLinks} />
+
+        <nav>
+          <h4 className="mb-3.5 font-display text-base font-semibold">Themes</h4>
+          <ul className="grid gap-2.5">
+            {themeLinks.map((t) => (
+              <li key={t.href}>
                 <Link
-                  href={link.href}
-                  className="font-display font-semibold text-ink/75 transition-colors hover:text-terracotta"
+                  href={t.href}
+                  className="font-semibold text-ink-soft transition-colors hover:text-ink"
                 >
-                  {link.label}
+                  {t.category.name}
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
 
-        {/* Legal */}
-        <nav className="space-y-4">
-          <h2 className="font-display text-sm font-extrabold uppercase tracking-widest text-teal-deep">
-            Legal
-          </h2>
-          <ul className="space-y-2.5">
-            {legalLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  prefetch={false}
-                  className="font-display font-semibold text-ink/75 transition-colors hover:text-terracotta"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <FooterCol title="Hello" links={helloLinks} />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-6">
-        <hr className="dotted-rule" />
-        <p className="py-6 text-center font-display text-sm font-semibold text-muted-foreground">
-          &copy; {currentYear} Scribbloo · Made with crayons &amp; coffee.
-        </p>
+      <div className="container mx-auto px-4 lg:px-7">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t-2 border-line py-5 text-sm font-bold text-ink-soft">
+          <span>© {year} Scribbloo. Made for messy, joyful coloring.</span>
+          <span>Privacy · Terms · Print responsibly 🖍️</span>
+        </div>
       </div>
     </footer>
+  );
+}
+
+function FooterCol({
+  title,
+  links,
+}: {
+  title: string;
+  links: { href: string; label: string }[];
+}) {
+  return (
+    <nav>
+      <h4 className="mb-3.5 font-display text-base font-semibold">{title}</h4>
+      <ul className="grid gap-2.5">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link
+              href={l.href}
+              prefetch={false}
+              className="font-semibold text-ink-soft transition-colors hover:text-ink"
+            >
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

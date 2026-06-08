@@ -43,6 +43,7 @@ interface Index {
   leaves: Map<string, Leaf>; // "fantasy/unicorn/unicorn-01" -> leaf
   childrenOf: Map<string, CollectionNode[]>; // parent key ("" = root) -> child nodes
   leavesOf: Map<string, Leaf[]>; // collection key -> direct leaves
+  subtreeCount: Map<string, number>; // collection key -> leaves in its whole subtree
   facets: Category[];
   aliasTo: Map<string, string>; // alias path -> canonical href
   slugCanonical: Map<string, string | null>; // leaf slug -> canonical href (null = ambiguous)
@@ -101,9 +102,17 @@ async function walk(absDir: string, rel: string[], idx: Index): Promise<void> {
 const buildIndex = cache(async (): Promise<Index> => {
   const idx: Index = {
     collections: new Map(), leaves: new Map(), childrenOf: new Map(),
-    leavesOf: new Map(), facets: [], aliasTo: new Map(), slugCanonical: new Map(),
+    leavesOf: new Map(), subtreeCount: new Map(), facets: [], aliasTo: new Map(), slugCanonical: new Map(),
   };
   await walk(CP_DIR, [], idx);
+
+  // subtree leaf counts — every leaf increments each of its collection ancestors
+  for (const leaf of idx.leaves.values()) {
+    for (let i = 1; i < leaf.pathSlugs.length; i++) {
+      const k = keyOf(leaf.pathSlugs.slice(0, i));
+      idx.subtreeCount.set(k, (idx.subtreeCount.get(k) ?? 0) + 1);
+    }
+  }
 
   // facets
   try {
@@ -145,9 +154,26 @@ const buildIndex = cache(async (): Promise<Index> => {
 /* Queries                                                                    */
 /* -------------------------------------------------------------------------- */
 
-export async function getRootHub(): Promise<{ themes: CollectionNode[]; facets: Category[] }> {
+export async function getRootHub(): Promise<{
+  themes: CollectionNode[];
+  facets: Category[];
+  counts: Map<string, number>;
+}> {
   const idx = await buildIndex();
-  return { themes: idx.childrenOf.get('') ?? [], facets: idx.facets };
+  return { themes: idx.childrenOf.get('') ?? [], facets: idx.facets, counts: idx.subtreeCount };
+}
+
+/** Total number of leaves anywhere beneath a collection (its whole subtree). */
+export async function getSubtreeCount(pathSlugs: string[]): Promise<number> {
+  return (await buildIndex()).subtreeCount.get(keyOf(pathSlugs)) ?? 0;
+}
+
+/** The N most recently-added leaves across the entire site (newest first). */
+export async function getRecentLeaves(limit = 8): Promise<Leaf[]> {
+  const idx = await buildIndex();
+  return [...idx.leaves.values()]
+    .sort((a, b) => b.page.createdAt.localeCompare(a.page.createdAt))
+    .slice(0, limit);
 }
 
 export async function getAllCollectionNodes(): Promise<CollectionNode[]> {

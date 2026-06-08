@@ -15,11 +15,13 @@ import { buttonVariants } from '@/components/ui/button';
 interface DownloadIconProps {
   imageUrl: string | null;
   filename: string;
-  /** 'icon' (compact, for cards) or 'button' (labeled, for detail pages). */
-  variant?: 'icon' | 'button';
+  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (card hover bar). */
+  variant?: 'icon' | 'button' | 'mini';
+  /** draw an ink frame around the page in the generated PDF (user choice). */
+  border?: boolean;
 }
 
-export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: DownloadIconProps) {
+export default function DownloadIcon({ imageUrl, filename, variant = 'icon', border = false }: DownloadIconProps) {
   const [isDownloading, setIsDownloading] = useState(false);
   const workerRef = useRef<Worker | null>(null);
 
@@ -82,7 +84,8 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: D
           imageUrl,
           filename: pdfFilename,
           imgWidth,
-          imgHeight
+          imgHeight,
+          border
         });
       };
       img.onerror = () => {
@@ -117,6 +120,25 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon' }: D
           <Download strokeWidth={2} />
         )}
         {isDownloading ? 'Preparing…' : 'Download PDF'}
+      </button>
+    );
+  }
+
+  if (variant === 'mini') {
+    return (
+      <button
+        type="button"
+        onClick={handleDownload}
+        disabled={isDownloading}
+        className="inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-cream px-3 py-2 font-display text-[13.5px] font-semibold shadow-pop-sm transition-colors hover:bg-yellow disabled:opacity-50"
+        aria-label="Download image as PDF"
+      >
+        {isDownloading ? (
+          <LoaderCircle className="h-[15px] w-[15px] animate-spin" />
+        ) : (
+          <Download className="h-[15px] w-[15px]" strokeWidth={2.3} />
+        )}
+        Download
       </button>
     );
   }

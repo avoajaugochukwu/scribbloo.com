@@ -82,9 +82,22 @@ export const coloringPageSchema = z.object({
   // in (the file path). `tags` drive facet listings + related links.
   tags: z.array(z.string()).default([]),
   createdAt: z.string(),
-  source: z.enum(['fal', 'supabase-migration', 'manual']).default('manual'),
+  source: z.enum(['fal', 'grok', 'supabase-migration', 'manual']).default('manual'),
   /** fal.ai request id — idempotency/traceability for generated pages */
   falRequestId: z.string().optional(),
+  /**
+   * Composition the page was generated + framed for (see scripts/lib/frameA4.ts):
+   *   'full'  — whole subject inside the frame, doesn't touch the edges
+   *   'bleed' — cropped/close-up subject that runs off a page edge ("passport")
+   * No border is baked in; a border is an optional user choice at download time.
+   */
+  layout: z.enum(['full', 'bleed']).default('full'),
+  /**
+   * The full descriptive sentence(s) used to generate this page. Each page should
+   * have its OWN bespoke prompt (not just the title) — a one-line template makes
+   * every generation converge on the same look. Recorded for variety + regen.
+   */
+  prompt: z.string().optional(),
   /** blog slugs to cross-link from this page (internal linking) */
   relatedPosts: z.array(z.string()).default([]),
   /** set by the Supabase migration when the only available image looked downscaled */

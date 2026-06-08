@@ -5,14 +5,17 @@ import Link from 'next/link';
 
 import { baseUrl } from '@/app/metadata';
 import { imageUrl } from '@/lib/images';
+import { isRecent } from '@/lib/utils';
 import PageBreadcrumb, { type CrumbItem } from '@/components/PageBreadcrumb';
-import PageHeading from '@/components/PageHeading';
 import OtherDetails from '@/components/seo-details/OtherDetails';
+import CategoryRail from '@/components/CategoryRail';
+import FavoriteButton from '@/components/FavoriteButton';
+import { ArrowIcon } from '@/components/icons';
 
 import ColoringPageImage from '../components/ColoringPageImage';
-import CollectionCard from '../components/CollectionCard';
-import DownloadIcon from '../components/DownloadIcon';
-import PrintIcon from '../components/PrintIcon';
+import ColoringGallery from '../components/ColoringGallery';
+import SwatchPreview from '../components/SwatchPreview';
+import DownloadActions from '../components/DownloadActions';
 
 import {
   resolvePath,
@@ -20,7 +23,6 @@ import {
   getRootHub,
   PAGE_SIZE,
   type CollectionNode,
-  type Leaf,
   type Resolved,
 } from '@/lib/content/collections';
 
@@ -38,9 +40,6 @@ export async function generateStaticParams() {
 interface PageProps {
   params: Promise<{ path?: string[] }>;
 }
-
-const GRID = 'grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3';
-const CARD_GRID = 'grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4';
 
 function jsonLd(obj: unknown) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />;
@@ -65,29 +64,42 @@ function crumbsFromAncestors(ancestors: CollectionNode[]): CrumbItem[] {
   ];
 }
 
-/* root hub ( /coloring-pages ) */
+/* -------------------------------------------------------------------------- */
+/* root hub ( /coloring-pages )                                               */
+/* -------------------------------------------------------------------------- */
 async function RootHub() {
-  const { themes, facets } = await getRootHub();
+  const { themes, facets, counts } = await getRootHub();
   const crumbs: CrumbItem[] = [
     { label: 'Home', href: '/' },
     { label: 'Coloring Pages', href: '/coloring-pages' },
   ];
   return (
-    <div className="container mx-auto px-4 pb-8 md:pb-12">
+    <div className="container mx-auto px-4 pb-12 lg:px-7">
       {jsonLd({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Coloring Pages', url: `${baseUrl}/coloring-pages`, breadcrumb: breadcrumbJsonLd(crumbs) })}
       <PageBreadcrumb items={crumbs} />
-      <PageHeading title="Coloring Pages" subtitle="Pick a theme and start coloring — every sheet is free to print and download." className="mb-8 md:mb-10" />
-      <div className={CARD_GRID}>
-        {themes.map((t, i) => (
-          <CollectionCard key={t.href} category={t.category} href={t.href} accentIndex={i} />
-        ))}
-      </div>
+
+      <header className="py-6">
+        <span className="eyebrow">Coloring pages</span>
+        <h1 className="mt-2 font-display text-[clamp(36px,4.2vw,52px)] font-semibold">All Coloring Pages</h1>
+        <p className="mt-2.5 text-lg font-semibold text-ink-soft">
+          Pick a theme and start coloring — every sheet is free to print and download.
+        </p>
+      </header>
+
+      <CategoryRail themes={themes} counts={counts} />
+
       {facets.length > 0 && (
-        <section className="mt-14">
-          <PageHeading as="h2" title="Browse by" className="mb-8" />
-          <div className={CARD_GRID}>
-            {facets.map((f, i) => (
-              <CollectionCard key={f.slug} category={f} href={`/coloring-pages/${f.slug}`} accentIndex={i + themes.length} />
+        <section className="mt-12">
+          <h2 className="mb-5 font-display text-[clamp(24px,3vw,34px)] font-semibold">Browse by</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {facets.map((f) => (
+              <Link
+                key={f.slug}
+                href={`/coloring-pages/${f.slug}`}
+                className="pressable shadow-pop-sm inline-flex items-center rounded-full border-2 border-ink bg-cream px-5 py-2.5 font-display font-medium"
+              >
+                {f.name}
+              </Link>
             ))}
           </div>
         </section>
@@ -96,14 +108,18 @@ async function RootHub() {
   );
 }
 
-/* collection / facet listing */
-function CollectionView({
+/* -------------------------------------------------------------------------- */
+/* collection / facet listing                                                 */
+/* -------------------------------------------------------------------------- */
+async function CollectionView({
   node, ancestors, children, leaves, page, totalPages,
 }: Extract<Resolved, { type: 'collection' }>) {
   const c = node.category;
   const pageLeaves = leaves.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const crumbs = crumbsFromAncestors(ancestors);
   const pageHref = (p: number) => (p <= 1 ? node.href : `${node.href}/page/${p}`);
+  const { themes } = await getRootHub();
+  const now = Date.now();
 
   const collectionJsonLd = {
     '@context': 'https://schema.org',
@@ -123,15 +139,20 @@ function CollectionView({
   };
 
   return (
-    <div className="container mx-auto px-4 pb-8 md:pb-12">
+    <div className="container mx-auto px-4 pb-12 lg:px-7">
       {jsonLd(collectionJsonLd)}
       {jsonLd(breadcrumbJsonLd(crumbs))}
       <PageBreadcrumb items={crumbs} />
-      <PageHeading title={`${c.name} Coloring Pages`} className="mb-6 md:mb-8" />
+
+      <header className="py-6">
+        <span className="eyebrow">Coloring pages</span>
+        <h1 className="mt-2 font-display text-[clamp(36px,4.2vw,52px)] font-semibold">{c.name} Coloring Pages</h1>
+        {c.description && <p className="mt-2.5 max-w-3xl text-lg font-semibold text-ink-soft">{c.description}</p>}
+      </header>
 
       {c.heroImage && (
         <div className="mb-8 flex justify-center">
-          <div className="retro-frame shadow-pop-lg w-full max-w-lg -rotate-1 p-4">
+          <div className="retro-frame shadow-pop-lg w-full max-w-lg -rotate-1 rounded-[var(--radius-md)] p-4">
             <div className="relative aspect-[210/297] w-full overflow-hidden">
               <Image src={imageUrl({ kind: 'category-hero', slug: c.slug })} alt={`${c.name} hero image`} fill priority sizes="(max-width: 512px) 100vw, 512px" className="object-contain" />
             </div>
@@ -139,43 +160,69 @@ function CollectionView({
         </div>
       )}
 
-      {c.description && (
-        <section className="mx-auto max-w-3xl text-center text-lg text-muted-foreground text-pretty">
-          <p>{c.description}</p>
-        </section>
-      )}
+      {/* Theme chips — jump across top-level themes */}
+      <div className="mb-7 flex flex-wrap gap-2.5">
+        <Link
+          href="/coloring-pages"
+          className="inline-flex items-center rounded-full border-2 border-ink bg-cream px-4 py-2 font-display text-[15px] font-medium transition-colors hover:bg-yellow-t"
+        >
+          All pages
+        </Link>
+        {themes.map((t) => {
+          const active = t.href === node.href;
+          return (
+            <Link
+              key={t.href}
+              href={t.href}
+              className={`inline-flex items-center rounded-full border-2 border-ink px-4 py-2 font-display text-[15px] font-medium transition-colors ${
+                active ? 'bg-ink text-cream' : 'bg-cream hover:bg-yellow-t'
+              }`}
+            >
+              {t.category.name}
+            </Link>
+          );
+        })}
+      </div>
 
+      {/* Subcategories */}
       {children.length > 0 && (
-        <section className="mt-12">
-          <PageHeading as="h2" title="Browse subcategories" className="mb-8" />
-          <div className={CARD_GRID}>
-            {children.map((child, i) => (
-              <CollectionCard key={child.href} category={child.category} href={child.href} accentIndex={i} />
+        <section className="mb-10">
+          <h2 className="mb-5 font-display text-[clamp(22px,2.6vw,30px)] font-semibold">Subcategories</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {children.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                className="pressable shadow-pop-sm inline-flex items-center rounded-full border-2 border-ink bg-cream px-5 py-2.5 font-display font-medium"
+              >
+                {child.category.name}
+              </Link>
             ))}
           </div>
         </section>
       )}
 
       {pageLeaves.length > 0 ? (
-        <div className={`mt-12 ${GRID}`}>
-          {pageLeaves.map((l, i) => (
-            <ColoringPageImage key={l.href} coloringPage={l.page} href={l.href} contextLabel={c.name} priority={i < 2} />
-          ))}
-        </div>
+        <ColoringGallery
+          items={pageLeaves.map((l) => ({ page: l.page, href: l.href, isNew: isRecent(l.page.createdAt, now) }))}
+          contextLabel={c.name}
+        />
       ) : (
         leaves.length === 0 && children.length === 0 && (
-          <p className="mt-12 text-center text-muted-foreground">No coloring pages here yet — check back soon!</p>
+          <p className="py-16 text-center font-display font-bold text-ink-soft">
+            No coloring pages here yet — check back soon!
+          </p>
         )
       )}
 
       {totalPages > 1 && (
-        <nav className="mt-12 flex items-center justify-center gap-3 font-display font-bold" aria-label="Pagination">
+        <nav className="mt-12 flex items-center justify-center gap-3 font-display font-semibold" aria-label="Pagination">
           {page > 1 && (
-            <Link href={pageHref(page - 1)} className="pressable shadow-pop rounded-[var(--radius)] border-2 border-ink bg-card px-4 py-2">← Prev</Link>
+            <Link href={pageHref(page - 1)} className="pressable shadow-pop-sm rounded-full border-2 border-ink bg-cream px-5 py-2.5">← Prev</Link>
           )}
-          <span className="px-2 text-muted-foreground">Page {page} of {totalPages}</span>
+          <span className="px-2 text-ink-soft">Page {page} of {totalPages}</span>
           {page < totalPages && (
-            <Link href={pageHref(page + 1)} className="pressable shadow-pop rounded-[var(--radius)] border-2 border-ink bg-card px-4 py-2">Next →</Link>
+            <Link href={pageHref(page + 1)} className="pressable shadow-pop-sm rounded-full border-2 border-ink bg-cream px-5 py-2.5">Next →</Link>
           )}
         </nav>
       )}
@@ -185,7 +232,9 @@ function CollectionView({
   );
 }
 
-/* leaf detail */
+/* -------------------------------------------------------------------------- */
+/* leaf detail                                                                */
+/* -------------------------------------------------------------------------- */
 function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf' }>) {
   const page = leaf.page;
   const fullUrl = imageUrl({ kind: 'coloring-page', slug: page.image, variant: 'full' });
@@ -194,37 +243,88 @@ function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf'
   const baseFilename = page.title ? page.title.toLowerCase().replace(/\s+/g, '-') : 'coloring-page';
   const downloadFilename = `${baseFilename}-scribbloo.com.png`;
   const crumbs: CrumbItem[] = [...crumbsFromAncestors(ancestors), { label: page.title, href: leaf.href }];
+  const nowMs = Date.now();
+
+  const added = (() => {
+    const t = Date.parse(page.createdAt);
+    return Number.isNaN(t) ? null : new Date(t).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  })();
+
+  const specs: { label: string; value: string }[] = [
+    { label: 'Theme', value: subjectName },
+    { label: 'Format', value: 'PDF · PNG · A4' },
+    { label: 'Best for', value: 'All ages' },
+    ...(added ? [{ label: 'Added', value: added }] : []),
+  ];
 
   return (
-    <div className="container mx-auto px-4 pb-8 md:pb-12">
+    <div className="container mx-auto px-4 pb-12 lg:px-7">
       {jsonLd({ '@context': 'https://schema.org', '@type': 'ImageObject', name: `${page.title} Coloring Page`, description: page.description || `${page.title} free printable coloring page.`, contentUrl: `${baseUrl}${fullUrl}`, url: `${baseUrl}${leaf.href}` })}
       {jsonLd(breadcrumbJsonLd(crumbs))}
       <PageBreadcrumb items={crumbs} />
-      <PageHeading title={`${page.title} Coloring Page`} className="mb-6 md:mb-8" />
 
-      <div className="mx-auto max-w-2xl">
-        <div className="retro-frame shadow-pop-lg mx-auto max-w-md -rotate-1 p-4">
-          <div className="relative aspect-[210/297] w-full overflow-hidden">
-            <Image src={fullUrl} alt={`${page.title} coloring page`} fill priority sizes="(max-width: 480px) 100vw, 448px" className="object-contain" />
+      <div className="grid items-start gap-10 py-6 lg:grid-cols-[1.15fr_0.85fr]">
+        {/* Preview with try-a-color swatches */}
+        <div className="lg:sticky lg:top-24">
+          <SwatchPreview src={fullUrl} alt={`${page.title} coloring page`} />
+        </div>
+
+        {/* Info */}
+        <div>
+          <span className="eyebrow text-red">{subjectName}</span>
+          <h1 className="mt-2 font-display text-[clamp(34px,4vw,48px)] font-semibold">{page.title}</h1>
+          <p className="mt-3 text-lg font-semibold text-ink-soft">
+            {page.description ||
+              `A friendly ${subjectName.toLowerCase()} line drawing with bold, easy-to-color outlines — print it at home or color it right here.`}
+          </p>
+
+          <div className="mt-6 grid grid-cols-2 gap-3.5">
+            {specs.map((s) => (
+              <div key={s.label} className="rounded-[var(--radius-sm)] border-2 border-line bg-cream p-4">
+                <span className="text-[12.5px] font-extrabold uppercase tracking-wider text-ink-faint">{s.label}</span>
+                <b className="mt-0.5 block font-display text-[19px] font-semibold">{s.value}</b>
+              </div>
+            ))}
           </div>
+
+          <div className="mt-6 flex flex-col gap-3">
+            <DownloadActions imageUrl={originalUrl} filename={downloadFilename} />
+            <div className="flex flex-wrap gap-3 [&>*]:flex-1">
+              <Link
+                href="/tools"
+                className="pressable shadow-pop-sm inline-flex items-center justify-center gap-2 rounded-full border-[2.5px] border-ink bg-teal px-5 py-3 font-display text-base font-semibold text-cream"
+              >
+                Color online
+              </Link>
+              <FavoriteButton id={leaf.href} variant="button" />
+            </div>
+          </div>
+
+          {page.tags.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {page.tags.map((t) => (
+                <span key={t} className="rounded-full border-2 border-ink bg-cream px-3.5 py-1.5 font-display text-sm font-medium">
+                  #{t}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} variant="button" />
-          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} variant="button" />
-        </div>
-        {page.description && (
-          <section className="mt-8 max-w-3xl mx-auto text-center text-lg text-muted-foreground text-pretty">
-            <p>{page.description}</p>
-          </section>
-        )}
       </div>
 
       {related.length > 0 && (
-        <section className="mt-16">
-          <PageHeading as="h2" title={`More ${subjectName} Coloring Pages`} className="mb-8" />
-          <div className={GRID}>
-            {related.map((r) => (
-              <ColoringPageImage key={r.href} coloringPage={r.page} href={r.href} contextLabel={subjectName} />
+        <section className="mt-12">
+          <div className="mb-7 flex items-end justify-between gap-5">
+            <h2 className="font-display text-[clamp(28px,3vw,38px)] font-semibold">More {subjectName} to color</h2>
+            {ancestors.length > 0 && (
+              <Link href={ancestors[ancestors.length - 1].href} className="link-arrow shrink-0 whitespace-nowrap">
+                See all <ArrowIcon className="h-5 w-5" />
+              </Link>
+            )}
+          </div>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {related.map((r, i) => (
+              <ColoringPageImage key={r.href} coloringPage={r.page} href={r.href} contextLabel={subjectName} tintIndex={i} isNew={isRecent(r.page.createdAt, nowMs)} />
             ))}
           </div>
         </section>
@@ -272,8 +372,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title, description,
       alternates: { canonical: url },
-      // Deep pagination pages are thin — keep them out of the index but let
-      // Google follow through to the leaf URLs. Page 1 stays indexable.
       robots: r.page > 1 ? { index: false, follow: true } : undefined,
       openGraph: { title, description, url, siteName: 'Scribbloo', images: ogImageUrl ? [{ url: ogImageUrl, alt: `${c.name} Hero Image` }] : [], type: 'website' },
       twitter: { card: 'summary_large_image', title, description, images: ogImageUrl ? [ogImageUrl] : [] },

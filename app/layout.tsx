@@ -1,4 +1,4 @@
-import { Baloo_2, Nunito, Nunito_Sans } from "next/font/google";
+import { Fredoka, Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/Header";
@@ -7,12 +7,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { metadata } from "./metadata";
 import { Toaster } from "@/components/ui/sonner";
 
-// Display: chunky, rounded, storybook — used for every heading.
-const display = Baloo_2({
+// Display: rounded, friendly, all-ages — used for headings + UI chrome.
+const display = Fredoka({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 // Body: warm, rounded humanist sans that pairs with the display.

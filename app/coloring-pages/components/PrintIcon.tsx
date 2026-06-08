@@ -15,11 +15,13 @@ import { buttonVariants } from '@/components/ui/button';
 interface PrintIconProps {
   imageUrl: string | null;
   filename: string; // Keep filename for consistency
-  /** 'icon' (compact, for cards) or 'button' (labeled, for detail pages). */
-  variant?: 'icon' | 'button';
+  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (card hover bar). */
+  variant?: 'icon' | 'button' | 'mini';
+  /** draw an ink frame around the page in the generated PDF (user choice). */
+  border?: boolean;
 }
 
-export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: PrintIconProps) {
+export default function PrintIcon({ imageUrl, filename, variant = 'icon', border = false }: PrintIconProps) {
   const [isPreparingPrint, setIsPreparingPrint] = useState(false);
   const workerRef = useRef<Worker | null>(null);
 
@@ -98,7 +100,8 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: Prin
           imageUrl,
           filename: pdfFilename,
           imgWidth,
-          imgHeight
+          imgHeight,
+          border
         });
       };
       img.onerror = () => {
@@ -132,6 +135,25 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon' }: Prin
           <Printer strokeWidth={2} />
         )}
         {isPreparingPrint ? 'Preparing…' : 'Print'}
+      </button>
+    );
+  }
+
+  if (variant === 'mini') {
+    return (
+      <button
+        type="button"
+        onClick={handlePrint}
+        disabled={isPreparingPrint}
+        className="inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-cream px-3 py-2 font-display text-[13.5px] font-semibold shadow-pop-sm transition-colors hover:bg-yellow disabled:opacity-50"
+        aria-label="Print image"
+      >
+        {isPreparingPrint ? (
+          <LoaderCircle className="h-[15px] w-[15px] animate-spin" />
+        ) : (
+          <Printer className="h-[15px] w-[15px]" strokeWidth={2.3} />
+        )}
+        Print
       </button>
     );
   }
