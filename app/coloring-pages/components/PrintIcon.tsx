@@ -15,8 +15,8 @@ import { buttonVariants } from '@/components/ui/button';
 interface PrintIconProps {
   imageUrl: string | null;
   filename: string; // Keep filename for consistency
-  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (card hover bar). */
-  variant?: 'icon' | 'button' | 'mini';
+  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (labelled pill), 'overlay' (round icon on a card). */
+  variant?: 'icon' | 'button' | 'mini' | 'overlay';
   /** draw an ink frame around the page in the generated PDF (user choice). */
   border?: boolean;
 }
@@ -154,6 +154,24 @@ export default function PrintIcon({ imageUrl, filename, variant = 'icon', border
           <Printer className="h-[15px] w-[15px]" strokeWidth={2.3} />
         )}
         Print
+      </button>
+    );
+  }
+
+  if (variant === 'overlay') {
+    return (
+      <button
+        type="button"
+        onClick={handlePrint}
+        disabled={isPreparingPrint}
+        className="grid size-8 place-items-center rounded-full border-2 border-ink bg-cream text-ink shadow-pop-sm transition-colors hover:bg-yellow disabled:opacity-50"
+        aria-label="Print image"
+      >
+        {isPreparingPrint ? (
+          <LoaderCircle className="h-4 w-4 animate-spin" />
+        ) : (
+          <Printer className="h-4 w-4" strokeWidth={2.2} />
+        )}
       </button>
     );
   }

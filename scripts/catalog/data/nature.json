@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Flower Bouquet",
+    "subject": "nature",
+    "tags": ["nature", "flowers"],
+    "layout": "full",
+    "prompt": "a full bouquet of mixed flowers — roses, daisies and tulips with leaves — gathered together and tied with a ribbon bow, a variety of petal shapes and sizes, clean and easy to color"
+  },
+  {
+    "name": "Mountain Landscape",
+    "subject": "nature",
+    "tags": ["nature", "mountains", "landscape"],
+    "layout": "full",
+    "prompt": "a peaceful landscape with layered mountains, a winding river running through a valley, a few pointed pine trees in the foreground, a round sun and fluffy clouds in the sky, and two small birds in the distance"
+  },
+  {
+    "name": "Tree with Birds",
+    "subject": "nature",
+    "tags": ["nature", "tree", "birds"],
+    "layout": "full",
+    "prompt": "a big leafy tree with a sturdy trunk and a rounded cloud-like canopy, a couple of small birds perched on the branches and one flying, a little round nest, and grass with a few flowers at the base of the trunk"
+  }
+]

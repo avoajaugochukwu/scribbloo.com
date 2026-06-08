@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Fairy on a Mushroom",
+    "subject": "fairy",
+    "tags": ["fairy", "mushroom"],
+    "layout": "full",
+    "prompt": "a little fairy with delicate pointed wings sitting on top of a big round spotted mushroom, holding a tiny flower, a short petal skirt, surrounded by blades of grass and a couple of small toadstools"
+  },
+  {
+    "name": "Flying Fairy with Wand",
+    "subject": "fairy",
+    "tags": ["fairy", "wand", "magic"],
+    "layout": "full",
+    "prompt": "a cheerful fairy flying with outstretched wings, waving a star-tipped wand that trails a swirl of sparkles, a flowing dress and curly hair streaming back, tiny stars floating all around"
+  },
+  {
+    "name": "Garden Fairy with Flowers",
+    "subject": "fairy",
+    "tags": ["fairy", "flowers", "garden"],
+    "layout": "full",
+    "prompt": "a sweet garden fairy kneeling among tall flowers, holding a small watering can, leafy wings and a petal skirt, with two butterflies fluttering nearby and rounded flower blossoms framing her"
+  }
+]

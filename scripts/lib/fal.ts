@@ -21,17 +21,30 @@ export type FalImageSize =
 export const FAL_MODEL = 'fal-ai/flux/dev' as const;
 
 /**
- * Prepended to every prompt to coerce flux into clean coloring-book line art.
+ * Bump this whenever the look changes — the base style prompt below OR the A4
+ * framing pipeline (scripts/lib/frameA4.ts). It's stamped onto each generated
+ * page's frontmatter so `generate:catalog` knows which pages predate the current
+ * look and re-generates only those (resumable across fal top-ups, no --force).
+ *
+ *   v1 — initial fal/grok pipeline
+ *   v2 — solid #000000 lines (threshold-last) + "all lines solid black" base prompt
+ */
+export const STYLE_VERSION = 2;
+
+/**
+ * Prepended to every prompt to coerce the model into clean coloring-book line art.
  */
 export const COLORING_BOOK_STYLE_PREFIX =
-  'black and white coloring book page, clean even medium-weight black outline ' +
-  'lines, thin confident linework of consistent thickness, simple closed shapes ' +
-  'that are easy to color inside, plain white background, flat 2D, ' +
+  'black and white coloring book page, every outline drawn in solid pure black ' +
+  '#000000, all lines equally dark crisp and opaque with consistent medium-thin ' +
+  'weight, the background elements drawn with the SAME solid-black lines as the ' +
+  'main subject, simple closed shapes that are easy to color inside, plain pure ' +
+  'white background, flat 2D, ' +
   // hard negatives — Grok revises prompts, so state these forcefully
-  'no color, no shading, no grayscale fill, no gradients, no hatching or ' +
-  'cross-hatching, no stippling, no thick heavy brush strokes, no sketchy or ' +
-  'broken lines, no text, no watermark, no frame, no page border (any border is ' +
-  'added by the user at download time), ';
+  'no color, no shading, no grayscale, no gray lines, no faint lines, no pale or ' +
+  'light or washed-out lines, no gradients, no hatching or cross-hatching, no ' +
+  'stippling, no thick heavy brush strokes, no sketchy or broken lines, no text, ' +
+  'no watermark, no frame, no page border (any border is added by the user at download time), ';
 
 export interface GenerateColoringImageInput {
   prompt: string;

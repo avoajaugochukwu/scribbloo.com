@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Baby Unicorn with Stars",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "baby", "stars"],
+    "layout": "full",
+    "prompt": "a tiny chubby baby unicorn sitting down with a small curly mane and a short spiral horn, big sparkly eyes and a fluffy tufted tail, surrounded by floating five-point stars and a couple of little hearts"
+  },
+  {
+    "name": "Rainbow Unicorn",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "rainbow"],
+    "layout": "full",
+    "prompt": "a graceful unicorn prancing with one hoof raised, a long flowing mane and tail made of rainbow-striped curls, a spiral horn, and a big arching rainbow behind it with a couple of rounded clouds"
+  },
+  {
+    "name": "Unicorn Castle",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "castle"],
+    "layout": "full",
+    "prompt": "a magical unicorn standing in front of a tall fairytale castle with pointed towers, a flowing mane and a spiral horn, stars and a crescent moon in the sky, and a path lined with flowers leading to the castle gate"
+  }
+]

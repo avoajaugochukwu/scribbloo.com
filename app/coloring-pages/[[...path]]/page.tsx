@@ -258,12 +258,12 @@ function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf'
   ];
 
   return (
-    <div className="container mx-auto px-4 pb-12 lg:px-7">
+    <div className="mx-auto w-full max-w-6xl px-4 pb-12 lg:px-7">
       {jsonLd({ '@context': 'https://schema.org', '@type': 'ImageObject', name: `${page.title} Coloring Page`, description: page.description || `${page.title} free printable coloring page.`, contentUrl: `${baseUrl}${fullUrl}`, url: `${baseUrl}${leaf.href}` })}
       {jsonLd(breadcrumbJsonLd(crumbs))}
       <PageBreadcrumb items={crumbs} />
 
-      <div className="grid items-start gap-10 py-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="grid items-start gap-10 py-6 lg:grid-cols-[0.9fr_1.1fr]">
         {/* Preview with try-a-color swatches */}
         <div className="lg:sticky lg:top-24">
           <SwatchPreview src={fullUrl} alt={`${page.title} coloring page`} />

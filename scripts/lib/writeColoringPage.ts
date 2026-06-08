@@ -100,6 +100,8 @@ export interface WriteColoringPageInput {
   layout?: 'full' | 'bleed';
   /** the full descriptive prompt used to generate this page (stored for regen). */
   prompt?: string;
+  /** the look-version this page was generated at (see STYLE_VERSION in lib/fal.ts). */
+  styleVersion?: number;
   relatedPosts?: string[];
   needsRegen?: boolean;
   /** Buffer of the original image bytes OR a local file path. */
@@ -131,6 +133,7 @@ export async function writeColoringPage(
     falRequestId,
     layout,
     prompt,
+    styleVersion,
     relatedPosts = [],
     needsRegen = false,
     image,
@@ -202,6 +205,7 @@ export async function writeColoringPage(
     ...(falRequestId ? { falRequestId } : {}),
     ...(layout ? { layout } : {}),
     ...(prompt ? { prompt } : {}),
+    ...(styleVersion !== undefined ? { styleVersion } : {}),
     relatedPosts,
     needsRegen,
   });

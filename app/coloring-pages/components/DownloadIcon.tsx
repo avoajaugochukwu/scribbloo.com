@@ -15,8 +15,8 @@ import { buttonVariants } from '@/components/ui/button';
 interface DownloadIconProps {
   imageUrl: string | null;
   filename: string;
-  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (card hover bar). */
-  variant?: 'icon' | 'button' | 'mini';
+  /** 'icon' (compact), 'button' (labeled, detail pages), 'mini' (labelled pill), 'overlay' (round icon on a card). */
+  variant?: 'icon' | 'button' | 'mini' | 'overlay';
   /** draw an ink frame around the page in the generated PDF (user choice). */
   border?: boolean;
 }
@@ -139,6 +139,24 @@ export default function DownloadIcon({ imageUrl, filename, variant = 'icon', bor
           <Download className="h-[15px] w-[15px]" strokeWidth={2.3} />
         )}
         Download
+      </button>
+    );
+  }
+
+  if (variant === 'overlay') {
+    return (
+      <button
+        type="button"
+        onClick={handleDownload}
+        disabled={isDownloading}
+        className="grid size-8 place-items-center rounded-full border-2 border-ink bg-cream text-ink shadow-pop-sm transition-colors hover:bg-yellow disabled:opacity-50"
+        aria-label="Download image as PDF"
+      >
+        {isDownloading ? (
+          <LoaderCircle className="h-4 w-4 animate-spin" />
+        ) : (
+          <Download className="h-4 w-4" strokeWidth={2.2} />
+        )}
       </button>
     );
   }

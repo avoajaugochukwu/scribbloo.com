@@ -29,7 +29,7 @@ export default function SwatchPreview({
   return (
     <div className="shadow-pop-lg rounded-[var(--radius-lg)] border-[2.5px] border-ink bg-cream p-6">
       <div className={cn('overflow-hidden rounded-[10px] border border-line p-3 transition-colors', mat)}>
-        <div className="relative mx-auto aspect-[210/297] w-full overflow-hidden">
+        <div className="relative mx-auto aspect-[210/297] w-full overflow-hidden lg:max-w-[calc((100vh-16rem)*0.7071)]">
           <Image src={src} alt={alt} fill priority sizes="(max-width: 768px) 100vw, 560px" className="object-contain" />
         </div>
       </div>

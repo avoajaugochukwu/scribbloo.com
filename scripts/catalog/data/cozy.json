@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Cozy Cat by the Window",
+    "subject": "cozy",
+    "tags": ["cozy", "cat"],
+    "layout": "full",
+    "prompt": "a round fluffy cat curled up asleep on a windowsill cushion with calm closed eyes, a window behind it with simple curtains, a small potted plant on the sill and a steaming teacup beside the cat"
+  },
+  {
+    "name": "Cozy Reading Nook",
+    "subject": "cozy",
+    "tags": ["cozy", "books", "reading"],
+    "layout": "full",
+    "prompt": "a snug reading nook with a plump comfy armchair, a soft blanket draped over the arm, a tall stack of books beside it, a small side table holding a steaming mug, and a leafy hanging plant above"
+  },
+  {
+    "name": "Hot Cocoa and Blanket",
+    "subject": "cozy",
+    "tags": ["cozy", "cocoa", "winter"],
+    "layout": "full",
+    "prompt": "a big steaming mug of hot cocoa topped with three round marshmallows, nestled inside a chunky knitted blanket with a folded edge, a candy cane resting against the mug, and a few little stars and a crescent moon floating around"
+  }
+]

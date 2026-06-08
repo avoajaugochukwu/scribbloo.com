@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Friendly Dragon",
+    "subject": "fantasy",
+    "tags": ["fantasy", "dragon"],
+    "layout": "full",
+    "prompt": "a chubby happy baby dragon standing and smiling, big round friendly eyes, two short curved horns, small rounded wings held up, a long curled tail with a row of soft rounded spikes down the back, a plump belly with a few belly-scale lines, short stubby legs with little rounded claws"
+  },
+  {
+    "name": "Magic Castle",
+    "subject": "fantasy",
+    "tags": ["fantasy", "castle"],
+    "layout": "full",
+    "prompt": "a whimsical fairytale castle with tall pointed towers topped by waving triangular flags, a big arched front gate, round windows, a winding path leading up to it, and a few fluffy clouds and stars around the spires"
+  },
+  {
+    "name": "Wizard with Wand",
+    "subject": "fantasy",
+    "tags": ["fantasy", "wizard", "magic"],
+    "layout": "full",
+    "prompt": "a friendly old wizard with a long flowing beard and a tall pointed hat covered in stars and moons, holding up a wand with a glowing star, a long robe with wide sleeves, and a little round owl perched on his shoulder"
+  }
+]

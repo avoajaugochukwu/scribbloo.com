@@ -69,11 +69,11 @@ export default function FavoriteButton({ id, variant = 'card', className }: Favo
       aria-label={saved ? 'Remove from saved' : 'Save'}
       aria-pressed={saved}
       className={cn(
-        'grid size-[34px] place-items-center rounded-full border-2 border-ink bg-white/90 opacity-0 transition group-hover:opacity-100 focus-visible:opacity-100',
+        'grid size-8 place-items-center rounded-full border-2 border-ink bg-cream shadow-pop-sm transition-colors hover:bg-yellow',
         className,
       )}
     >
-      <HeartGlyph filled={saved} className={cn('h-[17px] w-[17px]', saved ? 'text-red' : 'text-ink')} />
+      <HeartGlyph filled={saved} className={cn('h-4 w-4', saved ? 'text-red' : 'text-ink')} />
     </button>
   );
 }

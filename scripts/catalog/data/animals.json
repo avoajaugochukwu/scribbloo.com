@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Cute Puppy",
+    "subject": "animals",
+    "tags": ["animals", "dog", "puppy"],
+    "layout": "full",
+    "prompt": "a fluffy sitting puppy with big round eyes and long floppy ears, a wagging tail, one front paw lifted up, wearing a little collar with a round name tag"
+  },
+  {
+    "name": "Baby Elephant",
+    "subject": "animals",
+    "tags": ["animals", "elephant"],
+    "layout": "full",
+    "prompt": "a chubby baby elephant standing and smiling, big floppy ears, a curled-up trunk holding a single small flower, round friendly eyes, little toenails and a tiny tail"
+  },
+  {
+    "name": "Friendly Lion",
+    "subject": "animals",
+    "tags": ["animals", "lion"],
+    "layout": "full",
+    "prompt": "a friendly cartoon lion sitting upright with a big fluffy curly mane framing its face, a happy smile, rounded paws, and a tufted tail curled around beside it"
+  }
+]

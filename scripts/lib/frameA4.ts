@@ -34,15 +34,14 @@ export type A4Layout = 'full' | 'bleed';
 export interface ComposeA4Options {
   layout?: A4Layout;
   /**
-   * Line thinning. Image models draw coloring-book outlines too heavy; trimming
-   * the anti-aliased fringe isn't enough because the stroke has a SOLID black
-   * core. So we erode it: blur softens the core's edges, then a low threshold
-   * keeps only a narrower core => visibly thinner, even lines.
+   * Final line pass, applied LAST (after all resizing) by solidify(): blur the
+   * strokes then threshold. This does two jobs at once — erodes the lines thinner
+   * AND forces every ink pixel to pure #000000 (paper to pure white). Run last so
+   * the threshold isn't re-greyed by a later resize.
    *
-   * `lineBlur` = erosion radius (px, at the model's native ~1.6k width).
-   * `lineThreshold` = gray cut point; LOWER = thinner. Set lineThreshold to 0 to
-   * disable erosion (falls back to grayscale + contrast normalise).
-   * Defaults thin aggressively (the "C" setting we tuned on real output).
+   * `lineBlur`  = erosion radius in px at the A4 (2480px) scale; higher = thinner.
+   * `lineThreshold` = gray cut point; LOWER = thinner. Set to 0 to disable
+   * (ships the grayscale art as-is, with soft anti-aliased edges).
    */
   lineBlur?: number;
   lineThreshold?: number;
@@ -52,29 +51,47 @@ export interface ComposeA4Options {
  * subject never touches the page edge even if the model drew it tight. */
 const FULL_MARGIN = 140;
 
-/** Erode the black strokes to a thinner, even weight (blur the solid core, then
- * re-threshold to a narrower core). lineThreshold=0 disables (just normalise). */
-function processLines(buf: Buffer, lineBlur: number, lineThreshold: number): sharp.Sharp {
-  const p = sharp(buf).flatten({ background: '#ffffff' }).grayscale();
-  return lineThreshold > 0 ? p.blur(lineBlur).threshold(lineThreshold) : p.normalise();
+/** Tone-prep only: flatten onto white + grayscale, keeping the model's tones.
+ * Thinning/solidifying happens LAST (see solidify), after all geometry. */
+function toned(buf: Buffer): sharp.Sharp {
+  return sharp(buf).flatten({ background: '#ffffff' }).grayscale();
+}
+
+/**
+ * FINAL pass — runs after all resizing/compositing so its result is what ships.
+ * blur softens stroke edges then threshold cuts a narrow core, which both erodes
+ * the lines thinner AND forces every ink pixel to pure #000000 (and paper to pure
+ * white). Doing this last is what guarantees solid black — a threshold before a
+ * resize gets re-greyed by the interpolation. lineThreshold=0 → no-op.
+ */
+async function solidify(buf: Buffer, lineBlur: number, lineThreshold: number): Promise<Buffer> {
+  if (lineThreshold <= 0) return buf;
+  // Two passes on purpose: sharp applies blur/threshold in a fixed INTERNAL order
+  // (not call order), so chaining .blur().threshold() lets the blur run last and
+  // re-grey the edges. Materialising the blur to a buffer first forces threshold
+  // to truly be the final op → pure #000000 ink + pure white paper.
+  const blurred = lineBlur > 0
+    ? await sharp(buf).grayscale().blur(lineBlur).png().toBuffer()
+    : buf;
+  return sharp(blurred).grayscale().threshold(lineThreshold).png().toBuffer();
 }
 
 export async function composeA4Page(
   lineArt: Buffer,
   opts: ComposeA4Options = {},
 ): Promise<Buffer> {
-  const { layout = 'full', lineBlur = 2.6, lineThreshold = 72 } = opts;
-
-  const prep = (buf: Buffer): sharp.Sharp => processLines(buf, lineBlur, lineThreshold);
+  // Blur radius is in px at the A4 (2480px) scale where solidify now runs.
+  const { layout = 'full', lineBlur = 3.4, lineThreshold = 96 } = opts;
 
   if (layout === 'bleed') {
     // Cover the whole page — the cropped subject runs off an edge. Anchor to the
     // top so a face/head stays intact and the bottom bleeds off. No trim (the
     // bleed is intentional).
-    return prep(lineArt)
+    const covered = await toned(lineArt)
       .resize(A4_WIDTH, A4_HEIGHT, { fit: 'cover', position: 'top' })
       .png()
       .toBuffer();
+    return solidify(covered, lineBlur, lineThreshold);
   }
 
   // full: trim the model's surrounding whitespace, then fit the whole subject
@@ -83,7 +100,7 @@ export async function composeA4Page(
   const contentW = A4_WIDTH - FULL_MARGIN * 2;
   const contentH = A4_HEIGHT - FULL_MARGIN * 2;
 
-  const artBuf = await prep(lineArt)
+  const artBuf = await toned(lineArt)
     .trim({ background: '#ffffff', threshold: 10 })
     .resize(contentW, contentH, { fit: 'inside', withoutEnlargement: false })
     .png()
@@ -95,15 +112,12 @@ export async function composeA4Page(
   const left = Math.round((A4_WIDTH - artW) / 2);
   const top = Math.round((A4_HEIGHT - artH) / 2);
 
-  return sharp({
-    create: {
-      width: A4_WIDTH,
-      height: A4_HEIGHT,
-      channels: 3,
-      background: '#ffffff',
-    },
+  const composed = await sharp({
+    create: { width: A4_WIDTH, height: A4_HEIGHT, channels: 3, background: '#ffffff' },
   })
     .composite([{ input: artBuf, top, left }])
     .png()
     .toBuffer();
+
+  return solidify(composed, lineBlur, lineThreshold);
 }

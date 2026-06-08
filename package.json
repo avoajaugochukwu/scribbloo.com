@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate": "node --import tsx scripts/generate-coloring-page.ts",
+    "generate:catalog": "node --import tsx scripts/generate-catalog.ts",
     "migrate:supabase": "node --import tsx scripts/migrate-from-supabase.ts",
     "migrate:notion": "node --import tsx scripts/migrate-from-notion.ts"
   },

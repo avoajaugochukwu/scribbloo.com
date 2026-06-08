@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Girl and Her Kitten",
+    "subject": "girl",
+    "tags": ["girl", "kitten", "cat"],
+    "layout": "full",
+    "prompt": "a smiling young girl in a cute dress gently hugging a small fluffy kitten in her arms, her hair in two pigtails tied with bows, with a few little hearts floating around them"
+  },
+  {
+    "name": "Girl with Balloons",
+    "subject": "girl",
+    "tags": ["girl", "balloons"],
+    "layout": "full",
+    "prompt": "a cheerful girl holding a bunch of round balloons on curling strings, wearing a frilly dress and little shoes, her hair tied with a ribbon, with a few stars and bits of confetti drifting around"
+  },
+  {
+    "name": "Princess Dress",
+    "subject": "girl",
+    "tags": ["girl", "princess"],
+    "layout": "full",
+    "prompt": "a young princess wearing a big flowing ball gown with layered ruffled skirts and a sparkling pointed tiara, holding out the sides of her dress in a curtsy, a happy smile, with a few sparkles around the hem"
+  }
+]

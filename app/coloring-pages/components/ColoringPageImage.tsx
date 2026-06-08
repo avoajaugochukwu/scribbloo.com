@@ -75,12 +75,11 @@ export default function ColoringPageImage({
           </span>
         )}
 
-        <FavoriteButton id={detailHref} className="absolute right-2.5 top-2.5" />
-
-        {/* Hover bar */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex translate-y-2 justify-center gap-2 bg-gradient-to-t from-white/95 to-transparent p-3 opacity-0 transition group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} variant="mini" />
-          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} variant="mini" />
+        {/* Always-visible action icons (top-right) — tap targets for mobile */}
+        <div className="absolute right-2.5 top-2.5 flex items-center gap-1.5">
+          <DownloadIcon imageUrl={originalUrl} filename={downloadFilename} variant="overlay" />
+          <PrintIcon imageUrl={originalUrl} filename={downloadFilename} variant="overlay" />
+          <FavoriteButton id={detailHref} />
         </div>
       </div>
 

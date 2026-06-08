@@ -98,6 +98,8 @@ export const coloringPageSchema = z.object({
    * every generation converge on the same look. Recorded for variety + regen.
    */
   prompt: z.string().optional(),
+  /** the look-version this page was generated at (see STYLE_VERSION in scripts/lib/fal.ts) */
+  styleVersion: z.number().optional(),
   /** blog slugs to cross-link from this page (internal linking) */
   relatedPosts: z.array(z.string()).default([]),
   /** set by the Supabase migration when the only available image looked downscaled */
