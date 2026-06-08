@@ -26,6 +26,7 @@ import {
   type CollectionNode,
   type Resolved,
 } from '@/lib/content/collections';
+import type { SeoDetails } from '@/lib/content/types';
 
 export const dynamic = 'force-static';
 
@@ -54,6 +55,21 @@ function breadcrumbJsonLd(items: CrumbItem[]) {
       position: i + 1,
       name: item.label,
       item: item.href.startsWith('http') ? item.href : `${baseUrl}${item.href}`,
+    })),
+  };
+}
+function faqPageJsonLd(faqs: SeoDetails['faqs']) {
+  if (!faqs || faqs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: Array.isArray(f.answer) ? f.answer.join(' ') : f.answer,
+      },
     })),
   };
 }
@@ -262,6 +278,7 @@ function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf'
     <div className="mx-auto w-full max-w-6xl px-4 pb-12 lg:px-7">
       {jsonLd({ '@context': 'https://schema.org', '@type': 'ImageObject', name: `${page.title} Coloring Page`, description: page.description || `${page.title} free printable coloring page.`, contentUrl: `${baseUrl}${fullUrl}`, url: `${baseUrl}${leaf.href}` })}
       {jsonLd(breadcrumbJsonLd(crumbs))}
+      {(() => { const f = faqPageJsonLd(page.seoDetails?.faqs); return f && jsonLd(f); })()}
       <PageBreadcrumb items={crumbs} />
 
       <div className="grid items-start gap-10 py-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -312,6 +329,8 @@ function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf'
           )}
         </div>
       </div>
+
+      {page.seoDetails && <OtherDetails details={page.seoDetails} />}
 
       {related.length > 0 && (
         <section className="mt-12">

@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { BrandMark } from '@/components/BrandMark';
 import { SearchIcon } from '@/components/icons';
+import { SiteSearch } from '@/components/search/SiteSearch';
 
 const navLinks = [
   { href: '/coloring-pages', label: 'Coloring Pages' },
@@ -21,14 +21,6 @@ function isActive(pathname: string, href: string) {
 
 export function Header() {
   const pathname = usePathname() ?? '/';
-  const router = useRouter();
-  const [q, setQ] = useState('');
-
-  const submitSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const term = q.trim();
-    router.push(term ? `/coloring-pages?q=${encodeURIComponent(term)}` : '/coloring-pages');
-  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 border-ink bg-paper/85 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
@@ -58,20 +50,15 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-3">
-          <form
-            onSubmit={submitSearch}
-            className="hidden w-[230px] items-center gap-2.5 rounded-full border-2 border-ink bg-cream px-4 py-2 lg:flex"
+          <SiteSearch className="hidden w-[260px] lg:block" />
+
+          <Link
+            href="/search"
+            aria-label="Search"
+            className="pressable shadow-pop-sm grid h-10 w-10 place-items-center rounded-full border-2 border-ink bg-cream text-ink lg:hidden"
           >
-            <SearchIcon className="h-[18px] w-[18px] shrink-0 text-ink-faint" />
-            <input
-              type="text"
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search pages…"
-              aria-label="Search coloring pages"
-              className="w-full bg-transparent font-sans text-[15px] font-semibold text-ink outline-none placeholder:text-ink-faint"
-            />
-          </form>
+            <SearchIcon className="h-[18px] w-[18px]" />
+          </Link>
 
           <Link
             href="/coloring-pages"

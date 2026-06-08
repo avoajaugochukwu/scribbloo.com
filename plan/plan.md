@@ -1,6 +1,6 @@
 # Scribbloo Content Plan
 
-**238 pages** mapped to keyword demand · **211 new** · combined target volume **8,657,200/mo**.
+**233 pages** mapped to keyword demand · **206 new** · combined target volume **8,509,700/mo**.
 Built from the fan-out keyword research (DataForSEO Labs + Apify autocomplete). Volumes = monthly US Google searches; KD = keyword difficulty (lower = easier).
 
 **Workflow for the AI writer:** pick a row → open its brief file (linked) → read the keyword targets + the per-type writing template in [`00-writing-guide.md`](00-writing-guide.md) → output the MDX file at the right path. Rows are independent, so write in parallel/batches.
@@ -86,12 +86,10 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 73 | [How to Draw Dolphin](how-to-draw.md#how-to-draw-dolphin) | ✏️ | `how to draw dolphin` | 33,100 | 2 | 🆕 | `/how-to-draw/dolphin` |
 | 74 | [How to Draw Unicorn](how-to-draw.md#how-to-draw-unicorn) | ✏️ | `how to draw unicorn` | 33,100 | 2 | ✅ | `/how-to-draw/unicorn` |
 | 75 | [How to Draw Pumpkin](how-to-draw.md#how-to-draw-pumpkin) | ✏️ | `how to draw pumpkin` | 33,100 | 0 | 🆕 | `/how-to-draw/pumpkin` |
-| 76 | [How to Draw Tu](how-to-draw.md#how-to-draw-tu) | ✏️ | `how to draw tu` | 33,100 | 0 | 🆕 | `/how-to-draw/tu` |
 | 77 | [How to Draw Hibiscus](how-to-draw.md#how-to-draw-hibiscus) | ✏️ | `how to draw hibiscus` | 33,100 | 0 | 🆕 | `/how-to-draw/hibiscus` |
 | 78 | [How to Draw Nose](how-to-draw.md#how-to-draw-nose) | ✏️ | `how to draw nose` | 33,100 | 0 | 🆕 | `/how-to-draw/nose` |
 | 79 | [How to Draw Goku](how-to-draw.md#how-to-draw-goku) | ✏️ | `how to draw goku` | 33,100 | 0 | 🆕 | `/how-to-draw/goku` |
 | 80 | [How to Draw Giraffe](how-to-draw.md#how-to-draw-giraffe) | ✏️ | `how to draw giraffe` | 33,100 | 0 | 🆕 | `/how-to-draw/giraffe` |
-| 81 | [How to Draw Splinter Out](how-to-draw.md#how-to-draw-splinter-out) | ✏️ | `how to draw splinter out` | 33,100 | 0 | 🆕 | `/how-to-draw/splinter-out` |
 | 82 | [Animal Coloring Pages](coloring-collections.md#animal-coloring-pages) | 📂 | `animal coloring pages` | 33,100 | 0 | 🆕 | `/coloring-pages/animals` |
 | 83 | [Spring Coloring Pages](coloring-collections.md#spring-coloring-pages) | 📂 | `spring coloring pages` | 33,100 | 0 | 🆕 | `/coloring-pages/holidays/spring` |
 | 84 | [Easter Coloring Pages](coloring-collections.md#easter-coloring-pages) | 📂 | `easter coloring pages` | 33,100 | 0 | 🆕 | `/coloring-pages/holidays/easter` |
@@ -102,7 +100,6 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 89 | [Paw Patrol Coloring Pages](coloring-collections.md#paw-patrol-coloring-pages) | 📂 | `paw patrol coloring pages` | 33,100 | 0 | 🆕 | `/coloring-pages/characters/paw-patrol` |
 | 90 | [Valentine Coloring Pages](coloring-collections.md#valentine-coloring-pages) | 📂 | `valentine coloring pages` | 33,100 | 0 | 🆕 | `/coloring-pages/holidays/valentine` |
 | 91 | [Simple Things to Draw](drawing-ideas.md#simple-things-to-draw) | 📝 | `things to draw simple` | 33,100 | 0 | 🆕 | `/drawing-ideas/simple` |
-| 92 | [How to Draw Ros](how-to-draw.md#how-to-draw-ros) | ✏️ | `how to draw ros` | 27,100 | 0 | 🆕 | `/how-to-draw/ros` |
 | 93 | [How to Draw Person](how-to-draw.md#how-to-draw-person) | ✏️ | `how to draw person` | 27,100 | 0 | 🆕 | `/how-to-draw/person` |
 | 94 | [How to Draw Hair](how-to-draw.md#how-to-draw-hair) | ✏️ | `how to draw hair` | 27,100 | 0 | 🆕 | `/how-to-draw/hair` |
 | 95 | [How to Draw Boat](how-to-draw.md#how-to-draw-boat) | ✏️ | `how to draw boat` | 27,100 | 0 | 🆕 | `/how-to-draw/boat` |
@@ -116,12 +113,10 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 103 | [How to Draw Rabbit](how-to-draw.md#how-to-draw-rabbit) | ✏️ | `how to draw rabbit` | 27,100 | 0 | 🆕 | `/how-to-draw/rabbit` |
 | 104 | [How to Draw Bunny](how-to-draw.md#how-to-draw-bunny) | ✏️ | `how to draw bunny` | 27,100 | 0 | 🆕 | `/how-to-draw/bunny` |
 | 105 | [How to Draw Starburst](how-to-draw.md#how-to-draw-starburst) | ✏️ | `how to draw starburst` | 27,100 | 0 | 🆕 | `/how-to-draw/starburst` |
-| 106 | [How to Draw Animated](how-to-draw.md#how-to-draw-animated) | ✏️ | `how to draw animated` | 27,100 | 3 | 🆕 | `/how-to-draw/animated` |
 | 107 | [How to Draw Nostril](how-to-draw.md#how-to-draw-nostril) | ✏️ | `how to draw nostril` | 27,100 | 0 | 🆕 | `/how-to-draw/nostril` |
 | 108 | [How to Draw Turtle](how-to-draw.md#how-to-draw-turtle) | ✏️ | `how to draw turtle` | 27,100 | 0 | 🆕 | `/how-to-draw/turtle` |
 | 109 | [How to Draw Mouse](how-to-draw.md#how-to-draw-mouse) | ✏️ | `how to draw mouse` | 27,100 | 0 | 🆕 | `/how-to-draw/mouse` |
 | 110 | [How to Draw Bear](how-to-draw.md#how-to-draw-bear) | ✏️ | `how to draw bear` | 27,100 | 0 | 🆕 | `/how-to-draw/bear` |
-| 111 | [How to Draw Thing](how-to-draw.md#how-to-draw-thing) | ✏️ | `how to draw thing` | 27,100 | 0 | 🆕 | `/how-to-draw/thing` |
 | 112 | [Disney Coloring Pages](coloring-collections.md#disney-coloring-pages) | 📂 | `disney coloring pages` | 27,100 | 0 | 🆕 | `/coloring-pages/characters/disney` |
 | 113 | [Winter Coloring Pages](coloring-collections.md#winter-coloring-pages) | 📂 | `winter coloring pages` | 27,100 | 0 | 🆕 | `/coloring-pages/holidays/winter` |
 | 114 | [Mandala Coloring Pages](coloring-collections.md#mandala-coloring-pages) | 📂 | `mandala coloring pages` | 27,100 | 0 | 🆕 | `/coloring-pages/patterns/mandala` |

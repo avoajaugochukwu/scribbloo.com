@@ -24,6 +24,12 @@ export const docSchema = z.object({
    * art exists, else null. Resolve to a URL via imageUrl({ kind: 'doc-featured' }).
    */
   featuredImage: z.string().nullable().default(null),
+  /**
+   * Optional grouping bucket for the namespace index (e.g. "Animals",
+   * "Seasonal"). When set, the index page groups cards under category headings;
+   * when absent everywhere, it falls back to a single flat grid.
+   */
+  category: z.string().nullable().default(null),
   /** ordering within the namespace index (highest-volume first, etc.) */
   order: z.number().default(0),
 });

@@ -39,6 +39,23 @@ The site is being redesigned for scale (50 → 1,000+ pages). The canonical refe
   the helper (card + detail both do). See `plan/image-pipeline.md`.
 - **Sitemap (`app/sitemap.ts`) is auto-derived** from the content tree — new collections/leaves/facets/tutorials/listicles/tools/posts appear with no edit. Only a new top-level *namespace* or *static page* needs a one-line edit there. Never hand-add content URLs; never list paginated/alias/non-canonical URLs; never use `new Date()`/`Date.now()` for `lastModified`. Full rules are in that file's header.
 
+## Thin content — READ BEFORE AUTHORING ANY LEAF OR HUB
+
+A coloring page is one image + a download button, which search engines read as **thin / low-value**
+unless we add real text and structure. The canonical policy is **[`plan/thin-content-guide.md`](plan/thin-content-guide.md)**. Non-negotiables:
+
+- **Every leaf carries 150–300 words of *unique* body text** (description + coloring tips /
+  educational value / artistic style) — in the MDX body, not a one-line `description` and never
+  shared boilerplate. The generic fallback sentence is itself thin content.
+- **Descriptive images + alt + a visible caption** (image naming/alt already enforced — see image
+  rules above; caption under the preview is the remaining gap).
+- **Schema markup**: leaves already emit `ImageObject` + `BreadcrumbList`; add `HowTo` to step-by-step
+  guides/tutorials; only add `AggregateRating` with *real* ratings — never fabricate.
+- **Hubs carry their own depth** via the collection `seoDetails` block (intro, how-to, activities,
+  tips, FAQs). Consolidate synonyms into one canonical page + `aliases`; never multiply near-duplicate
+  thin pages.
+- UGC (comments, completed-art gallery) and on-site interactive tools are the future levers — see the guide.
+
 ## Content plan
 
 `plan/plan.md` — 228 pages mapped to keyword demand (collections, tutorials, listicles, tools),

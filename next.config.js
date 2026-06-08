@@ -129,6 +129,8 @@ const nextConfig = {
         destination: BLOG_PILLAR,
         permanent: true,
       })),
+      // Drawing-ideas synonym folds: one canonical listicle, 308 the synonym slug.
+      { source: '/drawing-ideas/autumn', destination: '/drawing-ideas/fall', permanent: true },
       ...collectionAliasRedirects(),
     ];
   },

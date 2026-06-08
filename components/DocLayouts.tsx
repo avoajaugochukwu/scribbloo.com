@@ -13,6 +13,39 @@ import type { Doc } from '@/lib/content/docs';
  * thin wrapper that just supplies data + breadcrumbs.
  */
 
+function DocCard({ doc, basePath }: { doc: Doc; basePath: string }) {
+  const thumb = doc.featuredImage
+    ? imageUrl({ kind: 'doc-featured', namespace: doc.namespace, slug: doc.slug })
+    : null;
+  return (
+    <Link
+      href={`${basePath}/${doc.slug}`}
+      className="group pressable shadow-pop block overflow-hidden rounded-[var(--radius)] border-2 border-ink bg-card"
+    >
+      {thumb && (
+        <div className="aspect-[3/2] overflow-hidden border-b-2 border-ink bg-paper">
+          <Image
+            src={thumb}
+            alt={`Illustration for ${doc.title}`}
+            width={600}
+            height={400}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+          />
+        </div>
+      )}
+      <div className="p-5">
+        <h3 className="font-display text-lg font-bold leading-snug group-hover:text-terracotta">
+          {doc.title}
+        </h3>
+        {doc.description && (
+          <p className="mt-2 text-sm text-muted-foreground text-pretty">{doc.description}</p>
+        )}
+      </div>
+    </Link>
+  );
+}
+
 export function DocIndex({
   title,
   subtitle,
@@ -26,6 +59,25 @@ export function DocIndex({
   docs: Doc[];
   crumbs: CrumbItem[];
 }) {
+  // Group by category when any doc declares one; order groups by the strongest
+  // (highest-order) member so the biggest cluster leads. `docs` arrive already
+  // sorted by order desc, so within a group the order is preserved.
+  const grouped = docs.some((d) => d.category);
+  const groups: Array<{ name: string | null; items: Doc[] }> = [];
+  if (grouped) {
+    const map = new Map<string, Doc[]>();
+    for (const doc of docs) {
+      const key = doc.category ?? 'More';
+      (map.get(key) ?? map.set(key, []).get(key)!).push(doc);
+    }
+    const ordered = [...map.entries()].sort(
+      (a, b) => Math.max(...b[1].map((d) => d.order)) - Math.max(...a[1].map((d) => d.order)),
+    );
+    for (const [name, items] of ordered) groups.push({ name, items });
+  } else {
+    groups.push({ name: null, items: docs });
+  }
+
   return (
     <div className="container mx-auto px-4 pb-8 md:pb-12">
       <PageBreadcrumb items={crumbs} />
@@ -33,20 +85,20 @@ export function DocIndex({
       {docs.length === 0 ? (
         <p className="text-center text-muted-foreground">Nothing here yet — check back soon!</p>
       ) : (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {docs.map((doc) => (
-            <Link
-              key={doc.slug}
-              href={`${basePath}/${doc.slug}`}
-              className="group pressable shadow-pop block rounded-[var(--radius)] border-2 border-ink bg-card p-6"
-            >
-              <h2 className="font-display text-xl font-bold group-hover:text-terracotta">{doc.title}</h2>
-              {doc.description && (
-                <p className="mt-2 text-muted-foreground text-pretty">{doc.description}</p>
-              )}
-            </Link>
-          ))}
-        </div>
+        groups.map((group) => (
+          <section key={group.name ?? 'all'} className="mb-12">
+            {group.name && (
+              <h2 className="eyebrow mb-5 text-lg font-bold tracking-wide text-ink-soft">
+                {group.name}
+              </h2>
+            )}
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {group.items.map((doc) => (
+                <DocCard key={doc.slug} doc={doc} basePath={basePath} />
+              ))}
+            </div>
+          </section>
+        ))
       )}
     </div>
   );

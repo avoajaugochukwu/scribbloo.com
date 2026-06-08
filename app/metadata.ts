@@ -54,14 +54,14 @@ export const jsonLd = {
   name: 'Scribbloo',
   description: 'Free printable coloring pages for kids and adults — animals, unicorns, mandalas, and more. Download, print, and color. New pages added every week.',
   url: baseUrl,
-  // potentialAction: {
-  //   '@type': 'SearchAction',
-  //   target: {
-  //     '@type': 'EntryPoint',
-  //     urlTemplate: `${baseUrl}/blog?q={search_term_string}`
-  //   },
-  //   'query-input': 'required name=search_term_string'
-  // },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
   publisher: {
     '@type': 'Organization',
     name: 'Scribbloo',

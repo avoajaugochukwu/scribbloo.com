@@ -104,6 +104,14 @@ export const coloringPageSchema = z.object({
   relatedPosts: z.array(z.string()).default([]),
   /** set by the Supabase migration when the only available image looked downscaled */
   needsRegen: z.boolean().default(false),
+  /**
+   * Per-leaf SEO body (anti-thin-content — see plan/thin-content-guide.md).
+   * Reuses the same block as collections: an intro `paragraph` plus optional
+   * coloring tips (`printableTips`) and a short `faqs` list. Rendered by
+   * components/seo-details/OtherDetails and surfaced as FAQPage JSON-LD.
+   * Every published leaf SHOULD have this — `description`-only is thin.
+   */
+  seoDetails: seoDetailsSchema.optional(),
 });
 export type ColoringPage = z.infer<typeof coloringPageSchema>;
 

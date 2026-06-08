@@ -284,11 +284,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `how to draw pumpkin` — vol **33,100**/mo · KD **0** · informational
 - **Also target:** `drawing easy pumpkin` (12,100)
 
-## 🆕 How to Draw Tu
-`slug: how-to-draw-tu` · **Tutorial (blog)**
-
-- **Primary:** `how to draw tu` — vol **33,100**/mo · KD **0** · informational
-
 ## 🆕 How to Draw Hibiscus
 `slug: how-to-draw-hibiscus` · **Tutorial (blog)**
 
@@ -312,17 +307,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `how to draw giraffe` — vol **33,100**/mo · KD **0** · informational
 - **Also target:** `giraffe drawing easy` (4,400)
-
-## 🆕 How to Draw Splinter Out
-`slug: how-to-draw-splinter-out` · **Tutorial (blog)**
-
-- **Primary:** `how to draw splinter out` — vol **33,100**/mo · KD **0** · informational
-- **Also target:** `how to draw out a deep splinter` (4,400)
-
-## 🆕 How to Draw Ros
-`slug: how-to-draw-ros` · **Tutorial (blog)**
-
-- **Primary:** `how to draw ros` — vol **27,100**/mo · KD **0** · informational
 
 ## 🆕 How to Draw Person
 `slug: how-to-draw-person` · **Tutorial (blog)**
@@ -400,12 +384,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `how to draw starburst` — vol **27,100**/mo · KD **0** · informational
 
-## 🆕 How to Draw Animated
-`slug: how-to-draw-animated` · **Tutorial (blog)**
-
-- **Primary:** `how to draw animated` — vol **27,100**/mo · KD **3** · informational
-- **Also target:** `how to draw animated drawings` (27,100), `how to draw animated character` (6,600), `how to draw animation character` (6,600)
-
 ## 🆕 How to Draw Nostril
 `slug: how-to-draw-nostril` · **Tutorial (blog)**
 
@@ -428,12 +406,6 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 
 - **Primary:** `how to draw bear` — vol **27,100**/mo · KD **0** · informational
 - **Also target:** `how to draw a bear` (14,800), `easy bear drawing` (12,100), `how to draw panda bear` (9,900), `panda bear drawing easy` (8,100), `teddy bear drawing easy` (4,400)
-
-## 🆕 How to Draw Thing
-`slug: how-to-draw-thing` · **Tutorial (blog)**
-
-- **Primary:** `how to draw thing` — vol **27,100**/mo · KD **0** · informational
-- **Also target:** `drawing of easy things` (6,600), `how to draw cool easy things` (6,600), `stranger things drawing easy` (6,600), `how to draw beautiful things` (6,600), `how to draw adorable things` (4,400), `how to draw awesome things` (3,600), `how to draw amazing things` (3,600), `how to draw stranger things` (2,900), `how to draw very easy things` (1,900), `how to draw really easy things` (1,900), `how to draw fall things` (1,300)
 
 ## ✅ How to Draw Christmas
 `slug: how-to-draw-christmas` · **Tutorial (blog)** · _exists as `christmas-drawing-ideas-for-beginners` → refresh/expand_
