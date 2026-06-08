@@ -17,11 +17,20 @@ export const docSchema = z.object({
   title: z.string(),
   description: z.string().nullable().default(null),
   subtitle: z.string().nullable().default(null),
+  /**
+   * Hero image filename written by the article-image pipeline
+   * (scripts/generate-article-image.ts) to
+   * public/images/<namespace>/<slug>/featured.webp. Just "featured.webp" when
+   * art exists, else null. Resolve to a URL via imageUrl({ kind: 'doc-featured' }).
+   */
+  featuredImage: z.string().nullable().default(null),
   /** ordering within the namespace index (highest-volume first, etc.) */
   order: z.number().default(0),
 });
 export type DocFrontmatter = z.infer<typeof docSchema>;
 export interface Doc extends DocFrontmatter {
+  /** the namespace folder this doc lives in (how-to-draw | drawing-ideas | tools) */
+  namespace: string;
   /** raw MDX body (may be empty for stub/dummy pages) */
   body: string;
 }
@@ -46,7 +55,7 @@ async function readAll(sub: string): Promise<Doc[]> {
       console.error(`[content/docs] Invalid frontmatter in ${sub}/${name}:`, parsed.error.flatten().fieldErrors);
       continue;
     }
-    docs.push({ ...parsed.data, body: content.trim() });
+    docs.push({ ...parsed.data, namespace: sub, body: content.trim() });
   }
   return docs;
 }

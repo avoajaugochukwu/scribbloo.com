@@ -10,9 +10,15 @@
  *   public/images/coloring-pages/<slug>/{original.png,full.webp,thumb.webp}
  *   public/images/categories/<slug>/{hero.webp,thumb.webp,hero-original.png}
  *   public/images/blog/<slug>/{featured.webp,featured-original.<ext>}
+ *   public/images/<namespace>/<slug>/{featured.webp,featured-original.png}  (doc namespaces)
  */
 
-export type ImageKind = 'coloring-page' | 'category-hero' | 'category-thumb' | 'blog-featured';
+export type ImageKind =
+  | 'coloring-page'
+  | 'category-hero'
+  | 'category-thumb'
+  | 'blog-featured'
+  | 'doc-featured';
 export type ColoringPageVariant = 'original' | 'full' | 'thumb';
 
 export interface ImageRef {
@@ -21,11 +27,17 @@ export interface ImageRef {
   slug: string;
   /** only meaningful for kind 'coloring-page'; defaults to 'full' */
   variant?: ColoringPageVariant;
+  /**
+   * Required for kind 'doc-featured' — the doc namespace folder
+   * (how-to-draw | drawing-ideas | tools). Image lives at
+   * public/images/<namespace>/<slug>/featured.webp.
+   */
+  namespace?: string;
 }
 
 const BASE = process.env.NEXT_PUBLIC_IMAGE_BASE_URL ?? '';
 
-export function imageUrl({ kind, slug, variant }: ImageRef): string {
+export function imageUrl({ kind, slug, variant, namespace }: ImageRef): string {
   switch (kind) {
     case 'coloring-page': {
       const v = variant ?? 'full';
@@ -38,5 +50,8 @@ export function imageUrl({ kind, slug, variant }: ImageRef): string {
       return `${BASE}/images/categories/${slug}/thumb.webp`;
     case 'blog-featured':
       return `${BASE}/images/blog/${slug}/featured.webp`;
+    case 'doc-featured':
+      if (!namespace) throw new Error("imageUrl: kind 'doc-featured' requires a namespace");
+      return `${BASE}/images/${namespace}/${slug}/featured.webp`;
   }
 }

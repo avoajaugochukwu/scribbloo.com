@@ -16,6 +16,21 @@ public/images/coloring-pages/<image>/
   thumb.webp     # grid thumbnail (listings)
 ```
 
+**Image key naming — be VERY descriptive (`<slug>-coloring-page`).** The `image`
+key is the folder name, so it becomes part of the served image URL
+(`/images/coloring-pages/<image>/full.webp`). Make it the full long-tail keyword
+phrase ending in `-coloring-page` — e.g. `cute-halloween-pumpkin-coloring-page`,
+not `pumpkin`. This is the *image* name only; the leaf **URL slug (the link) stays
+short and clean** (`/coloring-pages/halloween/cute-halloween-pumpkin`). By
+convention the key = the leaf slug + `-coloring-page`, set automatically by
+`writeColoringPage` — don't hand-author it.
+
+**Alt text — also descriptive, from one helper.** Coloring-image `alt` is
+centralized in `coloringPageAlt()` (`lib/alt.ts`): `Printable hand-drawn <title>
+coloring page[ for <audience>]` (e.g. *"Printable hand-drawn unicorn coloring page
+for kids"*; audience comes from the leaf's `kids`/`adults` tags). Both the grid
+card and the detail page use it — never hand-write `alt` on a coloring image.
+
 Categories use `public/images/categories/<slug>/hero.webp` + `thumb.webp`.
 The single source of truth for turning these into URLs is `lib/images.ts` (`imageUrl()`), so **never
 hardcode `/images/...` paths** in components or MDX — go through `imageUrl()`.

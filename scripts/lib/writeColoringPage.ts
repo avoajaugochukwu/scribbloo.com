@@ -10,7 +10,7 @@
  * automated run cannot silently resurrect the old flat layout.
  *
  * On-disk image layout (owned here, see lib/images.ts):
- *   public/images/coloring-pages/<slug>/{original.png,full.webp,thumb.webp}
+ *   public/images/coloring-pages/<slug>-coloring-page/{original.png,full.webp,thumb.webp}
  *   public/images/categories/<slug>/{hero.webp,thumb.webp,hero-original.png}
  *
  * Frontmatter is always validated by the zod schemas in `lib/content/types.ts`.
@@ -151,7 +151,11 @@ export async function writeColoringPage(
   }
 
   const contentPath = path.join(dir, `${slug}.mdx`);
-  const imageDir = path.join(COLORING_PAGE_IMAGES_DIR, slug);
+  // Image folder/key is the DESCRIPTIVE form (slug + "-coloring-page") so the
+  // served file path carries the full long-tail keyword (better image SEO). The
+  // URL slug (the link) stays clean — see plan/image-pipeline.md.
+  const imageKey = `${slug}-coloring-page`;
+  const imageDir = path.join(COLORING_PAGE_IMAGES_DIR, imageKey);
 
   // Idempotency: skip an already-written page unless force is set. We still
   // probe the source image so callers always get a real longEdge back.
@@ -193,12 +197,12 @@ export async function writeColoringPage(
   await fs.writeFile(path.join(imageDir, 'thumb.webp'), thumbWebp);
 
   // Build + validate frontmatter. No `categories`/`subject` field — the folder is
-  // the home. image folder name equals slug by convention.
+  // the home. image folder name = slug + "-coloring-page" (descriptive, for SEO).
   const frontmatter = coloringPageSchema.parse({
     slug,
     title,
     description,
-    image: slug,
+    image: imageKey,
     tags,
     createdAt: createdAt ?? new Date().toISOString(),
     source,
@@ -333,4 +337,66 @@ export async function writeCategory(cat: WriteCategoryInput): Promise<WriteCateg
   await fs.writeFile(contentPath, fileContents, 'utf8');
 
   return { slug, skipped: false, contentPath, imageDir, wroteHero, wroteThumb };
+}
+
+/* -------------------------------------------------------------------------- */
+/* Article / doc hero image writer                                             */
+/* -------------------------------------------------------------------------- */
+
+const PUBLIC_IMAGES_DIR = path.join(REPO_ROOT, 'public', 'images');
+
+export interface WriteArticleImageInput {
+  /** doc namespace folder: how-to-draw | drawing-ideas | tools | blog */
+  namespace: string;
+  /** doc slug — image lands at public/images/<namespace>/<slug>/featured.webp */
+  slug: string;
+  /** Buffer of the original image bytes OR a local file path. */
+  image: Buffer | string;
+  /** Overwrite an existing featured.webp instead of skipping it. */
+  force?: boolean;
+}
+
+export interface WriteArticleImageResult {
+  slug: string;
+  skipped: boolean;
+  imageDir: string;
+}
+
+/**
+ * Write a colorful article hero image into public/images/<namespace>/<slug>/
+ * as featured-original.png + featured.webp (capped at 1600px wide). The MDX
+ * frontmatter (`featuredImage: featured.webp`) is authored by hand — this writer
+ * only produces the image files.
+ */
+export async function writeArticleImage(
+  input: WriteArticleImageInput,
+): Promise<WriteArticleImageResult> {
+  const { namespace, slug, image, force = false } = input;
+  const parts = namespace.split('/').filter(Boolean);
+  if (!parts.length || parts.some((p) => p === '.' || p === '..')) {
+    throw new Error(`Invalid namespace "${namespace}"`);
+  }
+  const imageDir = path.join(PUBLIC_IMAGES_DIR, ...parts, slug);
+  const webpPath = path.join(imageDir, 'featured.webp');
+
+  if ((await fileExists(webpPath)) && !force) {
+    return { slug, skipped: true, imageDir };
+  }
+
+  const sourceBuffer = await resolveImageBuffer(image);
+  const meta = await sharp(sourceBuffer).metadata();
+  const isPng = meta.format === 'png';
+
+  await fs.mkdir(imageDir, { recursive: true });
+
+  const originalPng = isPng ? sourceBuffer : await sharp(sourceBuffer).png().toBuffer();
+  await fs.writeFile(path.join(imageDir, 'featured-original.png'), originalPng);
+
+  const featuredWebp = await sharp(originalPng)
+    .resize({ width: 1600, withoutEnlargement: true })
+    .webp({ quality: 88, effort: 6 })
+    .toBuffer();
+  await fs.writeFile(webpPath, featuredWebp);
+
+  return { slug, skipped: false, imageDir };
 }

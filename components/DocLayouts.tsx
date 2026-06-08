@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import PageBreadcrumb, { type CrumbItem } from '@/components/PageBreadcrumb';
 import PageHeading from '@/components/PageHeading';
 import { mdxComponents } from '@/components/mdx/MdxComponents';
+import { imageUrl } from '@/lib/images';
 import type { Doc } from '@/lib/content/docs';
 
 /**
@@ -51,10 +53,26 @@ export function DocIndex({
 }
 
 export function DocArticle({ doc, crumbs }: { doc: Doc; crumbs: CrumbItem[] }) {
+  const heroUrl = doc.featuredImage
+    ? imageUrl({ kind: 'doc-featured', namespace: doc.namespace, slug: doc.slug })
+    : null;
   return (
     <div className="container mx-auto px-4 pb-8 md:pb-12">
       <PageBreadcrumb items={crumbs} />
       <PageHeading title={doc.title} subtitle={doc.subtitle ?? undefined} className="mb-8 md:mb-10" />
+      {heroUrl && (
+        <div className="retro-frame shadow-pop-lg mx-auto mb-10 max-w-3xl overflow-hidden p-2">
+          <Image
+            src={heroUrl}
+            alt={`Illustration for ${doc.title}`}
+            width={1200}
+            height={675}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      )}
       <article className="prose prose-lg mx-auto max-w-2xl text-pretty">
         {doc.description && <p className="lead text-xl text-foreground">{doc.description}</p>}
         {doc.body ? (

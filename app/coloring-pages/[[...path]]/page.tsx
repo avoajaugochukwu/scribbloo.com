@@ -16,6 +16,7 @@ import ColoringPageImage from '../components/ColoringPageImage';
 import ColoringGallery from '../components/ColoringGallery';
 import SwatchPreview from '../components/SwatchPreview';
 import DownloadActions from '../components/DownloadActions';
+import { coloringPageAlt } from '@/lib/alt';
 
 import {
   resolvePath,
@@ -266,7 +267,7 @@ function LeafView({ leaf, ancestors, related }: Extract<Resolved, { type: 'leaf'
       <div className="grid items-start gap-10 py-6 lg:grid-cols-[0.9fr_1.1fr]">
         {/* Preview with try-a-color swatches */}
         <div className="lg:sticky lg:top-24">
-          <SwatchPreview src={fullUrl} alt={`${page.title} coloring page`} />
+          <SwatchPreview src={fullUrl} alt={coloringPageAlt(page)} />
         </div>
 
         {/* Info */}

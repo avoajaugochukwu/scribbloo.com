@@ -189,7 +189,8 @@ async function main(): Promise<void> {
   }
 
   const contentPath = path.join(paths.COLORING_PAGES_CONTENT_DIR, ...subject.split('/'), `${slug}.mdx`);
-  const imageDir = path.join(paths.COLORING_PAGE_IMAGES_DIR, slug);
+  // Descriptive image key (slug + "-coloring-page") — see writeColoringPage / plan/image-pipeline.md.
+  const imageDir = path.join(paths.COLORING_PAGE_IMAGES_DIR, `${slug}-coloring-page`);
 
   console.log('Plan:');
   console.log(`  title       : ${title}`);

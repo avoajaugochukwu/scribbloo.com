@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ColoringPage } from '@/lib/content/types';
 import { imageUrl } from '@/lib/images';
+import { coloringPageAlt } from '@/lib/alt';
 import { cn } from '@/lib/utils';
 import FavoriteButton from '@/components/FavoriteButton';
 import DownloadIcon from './DownloadIcon';
@@ -11,8 +12,8 @@ interface ColoringPageImageProps {
   coloringPage: ColoringPage;
   /** The page's ONE canonical detail URL (precomputed by the tree layer). */
   href: string;
-  /** human label used for the image alt text (collection/subject name) */
-  contextLabel: string;
+  /** @deprecated alt text now comes from `coloringPageAlt()` (lib/alt.ts); kept for caller compat */
+  contextLabel?: string;
   priority?: boolean;
   /** rotates the soft tint behind the line art so a grid reads like a sticker sheet */
   tintIndex?: number;
@@ -35,7 +36,6 @@ const TINTS = [
 export default function ColoringPageImage({
   coloringPage,
   href: detailHref,
-  contextLabel,
   priority = false,
   tintIndex = 0,
   isNew = false,
@@ -59,7 +59,7 @@ export default function ColoringPageImage({
           <div className="relative aspect-[210/297] w-full overflow-hidden">
             <Image
               src={thumbUrl}
-              alt={`${coloringPage.description || coloringPage.title} coloring page in ${contextLabel}`}
+              alt={coloringPageAlt(coloringPage)}
               fill
               priority={priority}
               loading={priority ? undefined : 'lazy'}

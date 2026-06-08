@@ -28,6 +28,15 @@ The site is being redesigned for scale (50 → 1,000+ pages). The canonical refe
 - Subjects nest in the path; audience/style cuts (adult, kids, cute) are tag-driven facet listings.
 - **Pagination**: listings paginate at `PAGE_SIZE` (48) via `/…/page/N` (page 1 = bare URL; `/page/1`→308). Page ≥2 is `noindex, follow` + self-canonical — keep it that way.
 - **Content is validated on every build**: `prebuild` runs `npm run validate` (`scripts/validate-content.ts`) and FAILS the build on invalid frontmatter, a folder with leaves but no `_category.mdx`, a file/folder name collision, a missing image folder, or a facet with no `facetTag`. Run `npm run validate` directly while authoring.
+- **Image names + alt text are descriptive (SEO).** A leaf's `image` key is the
+  folder under `public/images/coloring-pages/<key>/`, so it's part of the served
+  image URL — make it the full long-tail phrase ending in `-coloring-page` (e.g.
+  `cute-halloween-pumpkin-coloring-page`, not `pumpkin`). Convention: `image` =
+  leaf slug + `-coloring-page`, set automatically by `writeColoringPage`. The
+  **URL slug (the link) stays short** — this is the image name only. Alt text is
+  centralized in `coloringPageAlt()` (`lib/alt.ts`): `Printable hand-drawn <title>
+  coloring page[ for <audience>]` — never hand-write alt on coloring images, use
+  the helper (card + detail both do). See `plan/image-pipeline.md`.
 - **Sitemap (`app/sitemap.ts`) is auto-derived** from the content tree — new collections/leaves/facets/tutorials/listicles/tools/posts appear with no edit. Only a new top-level *namespace* or *static page* needs a one-line edit there. Never hand-add content URLs; never list paginated/alias/non-canonical URLs; never use `new Date()`/`Date.now()` for `lastModified`. Full rules are in that file's header.
 
 ## Content plan

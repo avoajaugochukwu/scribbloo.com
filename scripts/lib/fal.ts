@@ -173,6 +173,77 @@ export async function generateGrokColoringImage(
   return { imageUrl, requestId: result.requestId, revisedPrompt: data?.revised_prompt };
 }
 
+/* -------------------------------------------------------------------------- */
+/* Article hero images (colorful on-brand illustration, NOT line art)          */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Style contract for article/doc hero images (how-to-draw, drawing-ideas, blog).
+ * Unlike COLORING_BOOK_STYLE_PREFIX (black-and-white printable line art), these
+ * are warm, fully-colored "Storybook Retro" illustrations that sit at the top of
+ * an article. Grok rewrites prompts server-side, so the look is stated firmly.
+ */
+export const ARTICLE_STYLE_PREFIX =
+  'warm friendly storybook illustration in a nostalgic 1970s childrens-book print ' +
+  'style, hand-drawn look with soft rounded shapes and bold confident ink outlines, ' +
+  'cheerful cozy palette of warm cream paper, terracotta, mustard yellow, sage green, ' +
+  'soft teal and dusty rose, flat 2D with gentle paper-grain texture and a few playful ' +
+  'doodle accents, clean simple composition with generous breathing room, ' +
+  // hard negatives
+  'no text, no lettering, no words, no watermark, no logo, no photorealism, no 3D render, ' +
+  'no harsh neon colors, no busy cluttered background, no frame or border, ';
+
+/** fal-Grok aspect ratios for hero images. 3:2 landscape reads best as a banner. */
+export type ArticleAspectRatio = '3:2' | '4:3' | '16:9' | '1:1';
+
+export interface GenerateArticleImageInput {
+  /** the subject clause, e.g. "a single red rose with a few green leaves" */
+  prompt: string;
+  /** defaults to '3:2' (a friendly landscape banner) */
+  aspectRatio?: ArticleAspectRatio;
+}
+
+export interface GenerateArticleImageResult {
+  imageUrl: string;
+  requestId: string;
+  revisedPrompt?: string;
+}
+
+/** Wrap a raw subject prompt in the article illustration style template. */
+export function buildArticlePrompt(prompt: string): string {
+  return `${ARTICLE_STYLE_PREFIX}${prompt}`;
+}
+
+/**
+ * Generate a colorful article hero illustration via fal-hosted Grok. Reuses the
+ * same FAL_API_KEY. Costs money per call — drive it from generate-article-image.ts.
+ */
+export async function generateArticleImage(
+  input: GenerateArticleImageInput,
+): Promise<GenerateArticleImageResult> {
+  ensureConfigured();
+
+  const result = await fal.subscribe(GROK_MODEL, {
+    input: {
+      prompt: buildArticlePrompt(input.prompt),
+      aspect_ratio: input.aspectRatio ?? '3:2',
+      resolution: '2k',
+      output_format: 'png',
+      num_images: 1,
+    },
+  });
+
+  const data = result.data as
+    | { images?: Array<{ url?: string }>; revised_prompt?: string }
+    | undefined;
+  const imageUrl = data?.images?.[0]?.url;
+  if (!imageUrl) {
+    throw new Error('fal/Grok returned no image URL');
+  }
+
+  return { imageUrl, requestId: result.requestId, revisedPrompt: data?.revised_prompt };
+}
+
 /** Download a remote URL to a Buffer (used to feed writeColoringPage). */
 export async function downloadToBuffer(url: string): Promise<Buffer> {
   const res = await fetch(url);
