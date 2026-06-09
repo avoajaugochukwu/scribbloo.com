@@ -11,7 +11,9 @@
  *
  * On-disk image layout (owned here, see lib/images.ts):
  *   public/images/coloring-pages/<slug>-coloring-page/{original.png,full.webp,thumb.webp}
- *   public/images/categories/<slug>/{hero.webp,thumb.webp,hero-original.png}
+ *   public/images/categories/<slug>/{hero.webp,thumb.webp}
+ * (coloring-page original.png is served as the printable; category/article originals
+ *  are NOT served, so they're derived in-memory and never persisted.)
  *
  * Frontmatter is always validated by the zod schemas in `lib/content/types.ts`.
  */
@@ -299,12 +301,14 @@ export async function writeCategory(cat: WriteCategoryInput): Promise<WriteCateg
     const heroMeta = await sharp(heroBuffer).metadata();
     const heroOriginalPng =
       heroMeta.format === 'png' ? heroBuffer : await sharp(heroBuffer).png().toBuffer();
-    await fs.writeFile(path.join(imageDir, 'hero-original.png'), heroOriginalPng);
+    // Only hero.webp/thumb.webp are served — derive in-memory, don't keep the
+    // unserved hero-original.png (and clear any stale one).
     const heroWebp = await sharp(heroOriginalPng)
       .resize({ width: 1600, withoutEnlargement: true })
       .webp({ quality: 90, effort: 6 })
       .toBuffer();
     await fs.writeFile(path.join(imageDir, 'hero.webp'), heroWebp);
+    await fs.rm(path.join(imageDir, 'hero-original.png'), { force: true });
     wroteHero = true;
   }
 
@@ -365,11 +369,17 @@ export interface WriteArticleImageResult {
 }
 
 /**
- * Write an article image into public/images/<namespace>/<slug>/ as
- * <name>-original.png + <name>.webp (capped at 1600px wide). The MDX references
- * the file by hand (`featuredImage: featured.webp` in frontmatter, or a markdown
+ * Write an article image into public/images/<namespace>/<slug>/ as <name>.webp
+ * (capped at 1600px wide). The MDX references the file by hand (`featuredImage:
+ * featured.webp` in frontmatter, or a markdown
  * `![](/images/<namespace>/<slug>/steps.webp)` in the body) — this writer only
  * produces the image files.
+ *
+ * Only the served .webp is persisted: the high-res original is used in-memory to
+ * derive the webp and then dropped, since nothing serves a `<name>-original.png`
+ * for article namespaces. (Coloring-page `original.png` IS served — that's a
+ * different writer and is kept.) Keeping unserved originals on disk bloats the
+ * repo by ~50x; don't reintroduce them.
  */
 export async function writeArticleImage(
   input: WriteArticleImageInput,
@@ -396,14 +406,19 @@ export async function writeArticleImage(
 
   await fs.mkdir(imageDir, { recursive: true });
 
+  // Derive the served webp straight from the source bytes in memory. We do NOT
+  // persist a `${base}-original.png` — nothing serves it for article namespaces,
+  // and keeping it bloats the repo ~50x (see fn doc).
   const originalPng = isPng ? sourceBuffer : await sharp(sourceBuffer).png().toBuffer();
-  await fs.writeFile(path.join(imageDir, `${base}-original.png`), originalPng);
-
   const webp = await sharp(originalPng)
     .resize({ width: 1600, withoutEnlargement: true })
     .webp({ quality: 88, effort: 6 })
     .toBuffer();
   await fs.writeFile(webpPath, webp);
+
+  // Belt-and-suspenders: if a stale original is lying around (older runs, manual
+  // download), remove it now that the webp exists.
+  await fs.rm(path.join(imageDir, `${base}-original.png`), { force: true });
 
   return { slug, skipped: false, imageDir };
 }

@@ -54,6 +54,10 @@ the log. This is what keeps 60 tutorials from cannibalizing each other on engage
   `![Step-by-step: how to draw a <subject>...](/images/how-to-draw/<slug>/steps.webp)`:
   `npm run generate:article -- --namespace how-to-draw --slug <slug> --style process --prompt "how to draw a <subject> in 4 stages left to right: stage 1 <guides>, stage 2 <basic shapes>, stage 3 <outline+detail>, stage 4 finished"`
   The strip's stages MUST match the written steps (foundation-first).
+- **Only the served `.webp` is committed.** `generate:article` already derives the webp in-memory and
+  drops the high-res original (it does NOT write `*-original.png`). If you create or download any image
+  by other means, delete the original once a `.webp` exists and it isn't served — never commit unserved
+  source PNGs (they bloat the repo ~50x). Coloring-page `original.png` is the one exception (it IS served).
 
 ## 5. Anti-thin publish gate (refuse to ship if any fail)
 - [ ] Every load-bearing tip/fact traces to a real source that's linked; quotes are real + attributed.

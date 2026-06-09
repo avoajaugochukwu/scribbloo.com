@@ -56,6 +56,16 @@ three variants, and writes the leaf MDX. Costs money per run — use intentional
 > drop `categories`. Until that's fixed, a generated page will land at the wrong place and fail
 > `npm run validate` (leaf at the content root with no `_category.mdx`). See url-structure-guide.md §7.
 
+## 3b. Article/hero images (how-to-draw, drawing-ideas, blog)
+
+A separate writer (`writeArticleImage` in `scripts/lib/writeColoringPage.ts`, driven by
+`npm run generate:article`) writes only the **served** file: `public/images/<namespace>/<slug>/featured.webp`
+(hero) or `steps.webp` (process strip). The high-res original is used in-memory to derive the webp and
+then dropped — we do **not** keep a `*-original.png` for these namespaces, and the writer also `rm`s any
+stale one it finds. Rule of thumb for any image *created or downloaded* by hand too: once a `.webp` exists
+and the original isn't served, delete the original. Unserved source PNGs are never committed (they bloat
+the repo ~50x). The coloring-page `original.png` above is the **one** served original — keep it.
+
 ## 4. Validation
 
 `npm run validate` (runs on `prebuild`) checks every leaf's `image` folder exists (local mode) and

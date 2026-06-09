@@ -1,7 +1,8 @@
 /**
  * Generate colorful "Storybook Retro" hero images for article/doc pages
  * (how-to-draw, drawing-ideas, blog) with fal-hosted Grok and write them to
- * public/images/<namespace>/<slug>/{featured-original.png,featured.webp}.
+ * public/images/<namespace>/<slug>/featured.webp. Only the served webp is kept —
+ * the high-res original is used in-memory to derive it, never persisted.
  *
  * The MDX is authored by hand (with `featuredImage: featured.webp` in
  * frontmatter); this script only produces the image files.
