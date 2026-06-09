@@ -45,3 +45,9 @@ next-env.d.ts
 
 # supabase migration report
 /migration-report.json
+
+# research-log artifacts from `npm run research --save` (throwaway)
+scripts/research/
+
+# high-res source PNGs from the image pipeline — only the derived .webp is served
+public/images/**/*-original.png
