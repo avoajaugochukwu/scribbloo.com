@@ -69,6 +69,13 @@ export const BookIcon = ({ className }: IconProps) => (
   </svg>
 );
 
+export const PencilIcon = ({ className }: IconProps) => (
+  <svg viewBox="0 0 24 24" className={base(className)} aria-hidden="true">
+    <path d="M15 5l4 4L8 20H4v-4z" />
+    <path d="M13.5 6.5l4 4" />
+  </svg>
+);
+
 /* ---- Theme rail icons (32×32 primitives, keyed by subject slug) --------- */
 
 const themeIcons: Record<string, React.ReactNode> = {

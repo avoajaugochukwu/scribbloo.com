@@ -6,7 +6,7 @@ import { isRecent } from '@/lib/utils';
 import CategoryRail from '@/components/CategoryRail';
 import { HeroArt } from '@/components/heroArt';
 import ColoringPageImage from './coloring-pages/components/ColoringPageImage';
-import { ArrowIcon, SparkleIcon, PaletteIcon, BookIcon } from '@/components/icons';
+import { ArrowIcon, SparkleIcon, PaletteIcon, BookIcon, PencilIcon } from '@/components/icons';
 
 export const metadata: Metadata = {
   title: 'Free Printable Coloring Pages for All Ages | Scribbloo',
@@ -40,12 +40,21 @@ const COLLAGE = [
 
 const FEATURES = [
   {
+    href: '/how-to-draw',
+    top: 'bg-blue-t',
+    accent: 'text-blue',
+    icon: <PencilIcon className="h-16 w-16" />,
+    title: 'How to Draw',
+    body: 'Easy step-by-step tutorials for animals, characters, faces and more, one simple shape at a time.',
+    cta: 'Start drawing',
+  },
+  {
     href: '/drawing-ideas',
     top: 'bg-purple-t',
     accent: 'text-purple',
     icon: <SparkleIcon className="h-16 w-16" />,
     title: 'Drawing Ideas',
-    body: 'Stuck on what to draw? Spin up doodle prompts, step-by-step guides and daily challenges.',
+    body: 'Stuck on what to draw? Spin up doodle prompts, themed idea lists and daily challenges.',
     cta: 'Get inspired',
   },
   {
@@ -195,7 +204,7 @@ export default async function Home() {
       {/* ---------------- MORE WAYS ---------------- */}
       <section className="container mx-auto px-4 py-12 lg:px-7">
         <SectionHead eyebrow="Beyond the page" title="More ways to make" />
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((f) => (
             <Link
               key={f.href}

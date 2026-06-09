@@ -4,6 +4,7 @@ import { getRootHub } from '@/lib/content/collections';
 
 const exploreLinks = [
   { href: '/coloring-pages', label: 'Coloring Pages' },
+  { href: '/how-to-draw', label: 'How to Draw' },
   { href: '/drawing-ideas', label: 'Drawing Ideas' },
   { href: '/tools', label: 'Tools' },
   { href: '/blog', label: 'Blog' },

@@ -9,6 +9,7 @@ import { SiteSearch } from '@/components/search/SiteSearch';
 
 const navLinks = [
   { href: '/coloring-pages', label: 'Coloring Pages' },
+  { href: '/how-to-draw', label: 'How to Draw' },
   { href: '/drawing-ideas', label: 'Drawing Ideas' },
   { href: '/tools', label: 'Tools' },
   { href: '/blog', label: 'Blog' },
