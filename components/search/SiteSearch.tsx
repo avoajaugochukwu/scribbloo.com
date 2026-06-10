@@ -17,7 +17,7 @@ interface SiteSearchProps {
   className?: string;
 }
 
-const DROPDOWN_LIMIT = 8;
+const DROPDOWN_LIMIT = 6;
 const DEBOUNCE_MS = 150;
 
 export function SiteSearch({
@@ -115,7 +115,7 @@ export function SiteSearch({
       </form>
 
       {dropdownOpen && (
-        <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 max-h-[70vh] overflow-y-auto rounded-3xl border-2 border-ink bg-paper p-2 shadow-pop-lg">
+        <div className="scrollbar-slim absolute left-0 right-0 top-[calc(100%+8px)] z-50 max-h-[min(70vh,26rem)] overflow-y-auto overscroll-contain rounded-3xl border-2 border-ink bg-paper p-2 pr-1.5 shadow-pop-lg">
           {loading && results.length === 0 ? (
             <p className="px-3 py-6 text-center font-display font-semibold text-ink-soft">Searching…</p>
           ) : results.length === 0 ? (

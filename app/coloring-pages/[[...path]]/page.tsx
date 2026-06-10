@@ -1,6 +1,5 @@
 import { notFound, permanentRedirect } from 'next/navigation';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { baseUrl } from '@/app/metadata';
@@ -161,21 +160,14 @@ async function CollectionView({
       {jsonLd(breadcrumbJsonLd(crumbs))}
       <PageBreadcrumb items={crumbs} />
 
-      <header className="py-6">
-        <span className="eyebrow">Coloring pages</span>
-        <h1 className="mt-2 font-display text-[clamp(36px,4.2vw,52px)] font-semibold">{c.name} Coloring Pages</h1>
-        {c.description && <p className="mt-2.5 max-w-3xl text-lg font-semibold text-ink-soft">{c.description}</p>}
+      <header className="pt-6 pb-5">
+        <h1 className="font-display text-[clamp(34px,4.2vw,52px)] font-semibold">{c.name} Coloring Pages</h1>
+        {leaves.length > 0 && (
+          <p className="mt-2 font-display text-base font-semibold text-ink-soft">
+            {leaves.length} free printable {leaves.length === 1 ? 'page' : 'pages'} · print at home or color online
+          </p>
+        )}
       </header>
-
-      {c.heroImage && (
-        <div className="mb-8 flex justify-center">
-          <div className="retro-frame shadow-pop-lg w-full max-w-lg -rotate-1 rounded-[var(--radius-md)] p-4">
-            <div className="relative aspect-[210/297] w-full overflow-hidden">
-              <Image src={imageUrl({ kind: 'category-hero', slug: c.slug })} alt={`${c.name} hero image`} fill priority sizes="(max-width: 512px) 100vw, 512px" className="object-contain" />
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Theme chips — jump across top-level themes */}
       <div className="mb-7 flex flex-wrap gap-2.5">
@@ -244,7 +236,15 @@ async function CollectionView({
         </nav>
       )}
 
-      <OtherDetails details={c.seoDetails} />
+      {c.seoDetails ? (
+        <OtherDetails details={c.seoDetails} />
+      ) : (
+        c.description && (
+          <div className="mx-auto max-w-[764px] px-6 py-20">
+            <p className="text-ink/80 text-lg leading-relaxed">{c.description}</p>
+          </div>
+        )
+      )}
     </div>
   );
 }
