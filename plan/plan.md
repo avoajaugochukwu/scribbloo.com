@@ -30,7 +30,7 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 15 | [How to Draw Hello Kitty](how-to-draw.md#how-to-draw-hello-kitty) | ✏️ | `how to draw hello kitty` | 90,500 | 2 | 🚫 | `/how-to-draw/hello-kitty` |
 | 16 | [How to Draw Skull](how-to-draw.md#how-to-draw-skull) | ✏️ | `how to draw skull` | 90,500 | 0 | 🆕 | `/how-to-draw/skull` |
 | 17 | [How to Draw Fish](how-to-draw.md#how-to-draw-fish) | ✏️ | `how to draw fish` | 90,500 | 0 | 🆕 | `/how-to-draw/fish` |
-| 18 | [Coloring Pages for Adults](coloring-collections.md#coloring-pages-for-adults) | 📂 | `coloring pages for adults` | 90,500 | 0 | 🆕 | `/coloring-pages/for-adults` |
+| 18 | [Coloring Pages for Adults](coloring-collections.md#coloring-pages-for-adults) | 📂 | `coloring pages for adults` | 90,500 | 0 | ✅ | `/coloring-pages/for-adults` |
 | 19 | [How to Draw Bird](how-to-draw.md#how-to-draw-bird) | ✏️ | `how to draw bird` | 74,000 | 2 | 🆕 | `/how-to-draw/bird` |
 | 20 | [How to Draw Airplane](how-to-draw.md#how-to-draw-airplane) | ✏️ | `how to draw airplane` | 74,000 | 0 | 🆕 | `/how-to-draw/airplane` |
 | 21 | [How to Draw Fire](how-to-draw.md#how-to-draw-fire) | ✏️ | `how to draw fire` | 74,000 | 0 | 🆕 | `/how-to-draw/fire` |
@@ -75,7 +75,7 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 60 | [Cat Coloring Pages](coloring-collections.md#cat-coloring-pages) | 📂 | `cat coloring pages` | 40,500 | 0 | ✅ | `/coloring-pages/animals/cat` |
 | 61 | [Princess Coloring Pages](coloring-collections.md#princess-coloring-pages) | 📂 | `princess coloring pages` | 40,500 | 0 | ✅ | `/coloring-pages/characters/princess` |
 | 62 | [Labubu Coloring Pages](coloring-collections.md#labubu-coloring-pages) | 📂 | `labubu coloring pages` | 40,500 | 0 | 🚫 | `/coloring-pages/characters/labubu` |
-| 63 | [Coloring Pages for Kids](coloring-collections.md#coloring-pages-for-kids) | 📂 | `free coloring pages for kids` | 40,500 | 18 | 🆕 | `/coloring-pages/for-kids` |
+| 63 | [Coloring Pages for Kids](coloring-collections.md#coloring-pages-for-kids) | 📂 | `free coloring pages for kids` | 40,500 | 18 | ✅ | `/coloring-pages/for-kids` |
 | 64 | [Things to Draw When Bored](drawing-ideas.md#things-to-draw-when-bored) | 📝 | `things to draw when bored` | 40,500 | 0 | 🆕 | `/drawing-ideas/things-to-draw-when-bored` |
 | 65 | [How to Draw Sketch](how-to-draw.md#how-to-draw-sketch) | ✏️ | `how to draw sketch` | 33,100 | 12 | 🆕 | `/how-to-draw/sketch` |
 | 66 | [How to Draw Turkey](how-to-draw.md#how-to-draw-turkey) | ✏️ | `how to draw turkey` | 33,100 | 0 | 🆕 | `/how-to-draw/turkey` |
@@ -246,6 +246,31 @@ Canonical URL paths follow [`url-structure-guide.md`](url-structure-guide.md); t
 | 236 | [Thanksgiving Drawing Ideas](drawing-ideas.md#thanksgiving-drawing-ideas) | 📝 | `drawing ideas for thanksgiving` | 1,600 | 0 | 🆕 | `/drawing-ideas/thanksgiving` |
 | 237 | [Creepy Things to Draw](drawing-ideas.md#creepy-things-to-draw) | 📝 | `things to draw creepy` | 1,600 | 0 | 🆕 | `/drawing-ideas/creepy` |
 | 238 | [Sad Things to Draw](drawing-ideas.md#sad-things-to-draw) | 📝 | `things to draw sad` | 1,600 | 0 | 🆕 | `/drawing-ideas/sad` |
+
+## Facets — built vs. deferred (decided 2026-06-10)
+
+Facets (`content/facets/<slug>.mdx`, `facetTag` set) are **tag-driven views**, not folders of images:
+a facet page lists every existing leaf carrying its `facetTag`. So a facet is only worth building once
+**≥12 leaves already carry that tag** (fewer = a thin page). Facets ARE emitted in `app/sitemap.ts`
+(only authored facets become URLs — raw leaf tags never do, unlike WordPress tag archives). **Don't
+re-evaluate the deferred ones below until the noted condition is met.**
+
+| Facet | URL | `facetTag` → leaves | Status |
+|------|-----|----------------------|--------|
+| Adorable | `/coloring-pages/adorable` | `cute` → 58 | ✅ built |
+| For Toddlers | `/coloring-pages/for-toddlers` | `toddler` → 39 | ✅ built |
+| For Kids | `/coloring-pages/for-kids` | `easy` → 64 | ✅ built |
+| For Adults | `/coloring-pages/for-adults` | `detailed` → 22 | ✅ built — **note:** currently aggregates *detailed cartoon* pages; upgrade later with true intricate adult-style line art (mandala/zentangle) tagged `adult`/`detailed`. |
+| For Teens | `/coloring-pages/for-teens` | `teens` → 0 | ⏸ deferred — needs teen-aimed pages tagged `teens` (≥12). |
+| Anime | `/coloring-pages/anime` | `anime` → 0 | ⏸ deferred — needs anime-style pages (none exist; aesthetic gap). |
+| Animated | `/coloring-pages/animated` | `animated` → 0 | ⏸ deferred — needs cartoon/show-style pages tagged `animated`. |
+| Funny | `/coloring-pages/funny` | `funny` → 1 | ⏸ deferred — tag ≥12 first. |
+| Fun | `/coloring-pages/fun` | `fun` → 1 | ⏸ deferred — tag ≥12 first. |
+| Online | `/coloring-pages/online` | — | ⏸ deferred — a **feature** (in-browser color tool), not a tag; needs `/tools` integration, not a facet. |
+| PDF | `/coloring-pages/pdf` | — | ⏸ deferred — a **format/feature** (PDF download bundles), not a tag. |
+
+To unlock a deferred facet: generate pages in that style/audience, tag them accordingly during catalog
+authoring (the `tags` field), and once the tag hits ≥12 leaves, author the facet `.mdx`.
 
 ## Files in this plan
 
