@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Friendly T-Rex",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "t-rex", "tyrannosaurus"],
+    "layout": "full",
+    "prompt": "a friendly cartoon Tyrannosaurus Rex standing on two strong legs, a big head with a wide toothy grin, tiny front arms, a long balancing tail, and rows of small triangular teeth, looking cheerful not scary"
+  },
+  {
+    "name": "Smiling Triceratops",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "triceratops"],
+    "layout": "full",
+    "prompt": "a chubby smiling Triceratops standing in profile, three horns on its face, a large bony neck frill with scalloped edges, a round body with four sturdy legs and a short tail, friendly eyes"
+  },
+  {
+    "name": "Stegosaurus in the Sun",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "stegosaurus"],
+    "layout": "full",
+    "prompt": "a happy Stegosaurus walking across grass, a double row of large diamond-shaped plates along its arched back, a small head low to the ground, a thick tail with four spikes, a round sun and a few clouds above"
+  },
+  {
+    "name": "Long-Neck Brachiosaurus",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "brachiosaurus", "long-neck"],
+    "layout": "full",
+    "prompt": "a gentle long-necked Brachiosaurus reaching its head up to nibble leaves from the top of a tall leafy tree, a huge rounded body, four pillar-like legs, and a long tapering tail"
+  },
+  {
+    "name": "Baby Dino Hatching",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "baby", "egg"],
+    "layout": "full",
+    "prompt": "a cute baby dinosaur hatching out of a cracked egg, big sparkly eyes peeking over the broken shell, tiny arms reaching up, little bumps along its head, two more spotted dinosaur eggs resting in a nest beside it"
+  },
+  {
+    "name": "Spinosaurus by the River",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "spinosaurus"],
+    "layout": "full",
+    "prompt": "a Spinosaurus standing beside a river, a tall sail of connected spines along its back, a long narrow crocodile-like snout, strong clawed hands, water ripples and a couple of reeds at its feet"
+  },
+  {
+    "name": "Velociraptor on the Run",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "velociraptor", "raptor"],
+    "layout": "full",
+    "prompt": "a sleek Velociraptor mid-stride as if running, body leaning forward, a long stiff tail held straight out for balance, a curved claw on each foot, an open mouth with small sharp teeth, alert eyes"
+  },
+  {
+    "name": "Pteranodon Flying",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "pteranodon", "flying"],
+    "layout": "full",
+    "prompt": "a Pteranodon gliding through the sky with wide outstretched leathery wings, a long pointed crest at the back of its head, a sharp beak, small clouds around it and a hint of mountains far below"
+  },
+  {
+    "name": "Ankylosaurus with Club Tail",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "ankylosaurus", "armored"],
+    "layout": "full",
+    "prompt": "a sturdy armored Ankylosaurus standing low to the ground, its back covered in rows of bony plates and small spikes, short legs, a wide friendly face, and a thick tail ending in a heavy round club"
+  },
+  {
+    "name": "Dino Mom and Baby",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "family", "baby"],
+    "layout": "full",
+    "prompt": "a tall long-necked mother dinosaur lowering her head to gently touch noses with her small baby dinosaur, both standing in a grassy clearing with a few ferns, warm and loving expressions"
+  },
+  {
+    "name": "Dino and the Volcano",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "volcano", "scene"],
+    "layout": "full",
+    "prompt": "a cute round cartoon dinosaur standing on a small hill, looking back over its shoulder at a smoking volcano in the distance, scattered ferns and a few rocks in the foreground, a couple of palm-like prehistoric plants"
+  },
+  {
+    "name": "Diplodocus Eating Leaves",
+    "subject": "animals/dinosaur",
+    "tags": ["dinosaur", "diplodocus", "long-neck"],
+    "layout": "full",
+    "prompt": "a long low Diplodocus stretching its very long neck forward to munch a leafy bush, an extremely long whip-like tail trailing behind, four thick legs, a small head and a calm smile"
+  }
+]
