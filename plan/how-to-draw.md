@@ -53,7 +53,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `how to draw car` — vol **90,500**/mo · KD **0** · informational
 - **Also target:** `easy car drawing` (27,100), `police car how to draw` (6,600)
 
-## 🆕 How to Draw Hello Kitty
+## 🚫 How to Draw Hello Kitty
 `slug: how-to-draw-hello-kitty` · **Tutorial (blog)**
 
 - **Primary:** `how to draw hello kitty` — vol **90,500**/mo · KD **2** · informational
@@ -192,7 +192,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `how to draw bat` — vol **40,500**/mo · KD **0** · informational
 - **Also target:** `how to draw a bat animal` (18,100), `bat drawing easy` (6,600)
 
-## 🆕 How to Draw Stitch
+## 🚫 How to Draw Stitch
 `slug: how-to-draw-stitch` · **Tutorial (blog)**
 
 - **Primary:** `how to draw stitch` — vol **40,500**/mo · KD **0** · informational
@@ -296,7 +296,7 @@ See [`00-writing-guide.md`](00-writing-guide.md) for voice, frontmatter schema, 
 - **Primary:** `how to draw nose` — vol **33,100**/mo · KD **0** · informational
 - **Also target:** `nose drawing easy` (5,400), `how to draw nose easy` (720)
 
-## 🆕 How to Draw Goku
+## 🚫 How to Draw Goku
 `slug: how-to-draw-goku` · **Tutorial (blog)**
 
 - **Primary:** `how to draw goku` — vol **33,100**/mo · KD **0** · informational

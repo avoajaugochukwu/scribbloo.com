@@ -184,6 +184,28 @@ THEME = {
 STYLE = {"cute","adorable","kawaii","aesthetic","funny","fun","cozy","anime","animated",
          "cool","beautiful","detailed","mini","small"}
 HUB = {"animal":"animals"}                            # subject that IS its theme's hub
+
+# ---- TRADEMARK DENYLIST — branded/licensed IP we will NOT build (see plan/00-writing-guide.md §6) ----
+# We can't produce trademarked-character work, so these subjects are dropped from every bucket here so a
+# future keyword fan-out can't re-promote them into plan.md. They stay listed (status 🚫) in plan.md for
+# the record. Generic public-domain subjects are intentionally NOT denied (princess, superhero, mermaid,
+# dragon, unicorn, santa, fairy, star, spider-the-animal, etc.).
+# Single distinctive tokens (post-FIXUPS canonical key form) — low collision risk:
+TRADEMARK_DENY_TOKEN = {
+    "hellokitty","pokemon","pikachu","sonic","bluey","spiderman","stitch","labubu","minecraft","mario",
+    "disney","spongebob","frozen","elsa","barbie","mickey","squishmallow","peppa","mcqueen","mlp","fnaf",
+    "sprunki","snoopy","minion","godzilla","transformer","crayola","bobbie","goku","naruto","grinch",
+    "hulk","rapunzel","cinderella","shadow",
+}
+# Multi-token brands matched as a phrase (so generic tokens like "toy"/"hot"/"swift" survive on their own):
+TRADEMARK_DENY_PHRASE = {
+    "paw patrol","harry potter","taylor swift","toy story","lisa frank","coco wyo","melanie martinez",
+    "hot wheel",
+}
+def is_trademarked(key):
+    kt = set(key.split())
+    return (kt & TRADEMARK_DENY_TOKEN) or any(ph in key for ph in TRADEMARK_DENY_PHRASE)
+
 def theme_of(key):
     toks = key.split()
     if any(t in STYLE for t in toks): return "facet"
@@ -288,6 +310,7 @@ def build(kind, minvol, cap=None):
         # BLOCK_SUBJ drops junk *subject nouns* — only for subject-keyed types. Listicle/named keys
         # are modifiers ("easy","cute"), which BLOCK_SUBJ would wrongly nuke (killed the 301k "easy").
         if kind in ("coloring", "tutorial") and not (set(key.split()) - BLOCK_SUBJ): continue
+        if is_trademarked(key): continue   # branded IP we can't build (TRADEMARK_DENY_*) — never re-promote
         members = list({m["keyword"]: m for m in members}.values())
         members.sort(key=lambda r:-r["v"])
         vol = members[0]["v"]
