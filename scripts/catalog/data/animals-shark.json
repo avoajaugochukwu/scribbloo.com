@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Friendly Great White",
+    "subject": "animals/shark",
+    "tags": ["shark", "great white shark"],
+    "layout": "full",
+    "prompt": "a friendly cartoon great white shark swimming to the side, a big rounded body, a pointed snout with a wide open mouth showing rows of triangular teeth, a tall pointed dorsal fin, side fins, and a crescent tail, looking cheerful not scary"
+  },
+  {
+    "name": "Hammerhead Shark",
+    "subject": "animals/shark",
+    "tags": ["shark", "hammerhead shark"],
+    "layout": "full",
+    "prompt": "a hammerhead shark swimming forward, its distinctive wide flat T-shaped head with an eye on each far end, a slim streamlined body, a tall curved dorsal fin, and a long sweeping tail"
+  },
+  {
+    "name": "Gentle Whale Shark",
+    "subject": "animals/shark",
+    "tags": ["shark", "whale shark"],
+    "layout": "full",
+    "prompt": "a huge gentle whale shark gliding through the water, a very wide flat mouth at the front, a broad rounded body patterned with a grid of round spots, large side fins, and tiny fish swimming alongside it"
+  },
+  {
+    "name": "Baby Shark",
+    "subject": "animals/shark",
+    "tags": ["shark", "baby shark", "cute"],
+    "layout": "full",
+    "prompt": "a cute chubby baby shark with big sparkly eyes and a small happy smile, a tiny rounded dorsal fin, little side fins, and a short wiggly tail, a few simple bubbles floating up beside it"
+  },
+  {
+    "name": "Mako Shark Speeding",
+    "subject": "animals/shark",
+    "tags": ["shark", "mako shark"],
+    "layout": "full",
+    "prompt": "a sleek fast mako shark angled as if darting forward, a very streamlined torpedo-shaped body, a sharp pointed snout, a crescent-shaped tail, and a few motion-style water swirls trailing behind it"
+  },
+  {
+    "name": "Shark Face Close-Up",
+    "subject": "animals/shark",
+    "tags": ["shark", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of a smiling shark head filling the frame, big round eyes, a wide open grinning mouth showing two rows of triangular teeth, gill slits on the sides, and the tips of its side fins at the bottom"
+  },
+  {
+    "name": "Shark in the Coral Reef",
+    "subject": "animals/shark",
+    "tags": ["shark", "coral reef", "scene"],
+    "layout": "full",
+    "prompt": "a reef shark swimming over a colorful coral reef, branching corals and rounded coral mounds below, a few wavy seaweed plants and small tropical fish around it, gentle bubbles rising to the surface"
+  },
+  {
+    "name": "Tiger Shark",
+    "subject": "animals/shark",
+    "tags": ["shark", "tiger shark"],
+    "layout": "full",
+    "prompt": "a tiger shark swimming in profile, a blunt rounded snout, a sturdy body marked with bold vertical stripes along its back and sides, a tall dorsal fin, and a strong notched tail"
+  },
+  {
+    "name": "Nurse Shark Resting",
+    "subject": "animals/shark",
+    "tags": ["shark", "nurse shark"],
+    "layout": "full",
+    "prompt": "a calm nurse shark resting on the sandy sea floor, a broad flat head with two small whisker-like barbels near its mouth, a long rounded body, low fins, and a few rocks and shells around it"
+  },
+  {
+    "name": "Two Sharks Swimming",
+    "subject": "animals/shark",
+    "tags": ["shark", "pair", "ocean"],
+    "layout": "full",
+    "prompt": "two happy sharks swimming side by side in the same direction, one slightly larger than the other, both with smiling mouths, pointed dorsal fins, and wavy water lines around them"
+  },
+  {
+    "name": "Shark and Treasure Chest",
+    "subject": "animals/shark",
+    "tags": ["shark", "treasure", "scene"],
+    "layout": "full",
+    "prompt": "a curious cartoon shark swimming above an open treasure chest on the ocean floor, the chest spilling out round coins and a few pearls, a couple of starfish and a pile of rocks nearby, bubbles drifting upward"
+  },
+  {
+    "name": "Shark Jumping Out of Water",
+    "subject": "animals/shark",
+    "tags": ["shark", "jumping", "action"],
+    "layout": "full",
+    "prompt": "an excited shark leaping up out of the ocean surface, body arched in the air with its mouth open in a grin, a big curved splash of water below it, and a few water droplets and bubbles flying around"
+  }
+]

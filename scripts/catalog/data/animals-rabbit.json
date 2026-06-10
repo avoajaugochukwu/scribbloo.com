@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Bunny with Carrot",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "carrot"],
+    "layout": "full",
+    "prompt": "a cute sitting bunny holding a big leafy carrot in both front paws and taking a happy nibble, tall upright ears, round cheeks, a small fluffy tail, big friendly eyes and whiskers"
+  },
+  {
+    "name": "Sleepy Baby Bunny",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "baby"],
+    "layout": "full",
+    "prompt": "a tiny round baby bunny curled up and resting in a soft patch of grass, small folded ears, eyes gently closed, a little fluffy tail tucked in, a few flowers and blades of grass around it"
+  },
+  {
+    "name": "Lop-Eared Bunny",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "lop"],
+    "layout": "full",
+    "prompt": "a fluffy lop-eared pet rabbit sitting calmly with both long ears hanging down beside its round face, a plump body, short front paws, and a soft fluffy chest"
+  },
+  {
+    "name": "Hopping Rabbit",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "hopping"],
+    "layout": "full",
+    "prompt": "a lively rabbit mid-hop with both back legs stretched and front paws tucked forward, ears swept back, a round fluffy tail, an excited open-mouth expression, a few blades of grass below"
+  },
+  {
+    "name": "Bunny Portrait",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a rabbit's face and upper chest, large gentle eyes, a small triangular twitching nose, long upright ears with detailed inner fur, and a spray of whiskers on each cheek"
+  },
+  {
+    "name": "Easter Bunny",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "easter"],
+    "layout": "full",
+    "prompt": "a cheerful Easter bunny standing upright and holding a woven basket filled with decorated eggs, a small bow at its neck, tall ears, a fluffy tail, and a couple of flowers at its feet"
+  },
+  {
+    "name": "Wild Cottontail",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "cottontail", "wild"],
+    "layout": "full",
+    "prompt": "a wild cottontail rabbit alert in a meadow, body low and ears tall and listening, a round white tail, sitting among taller grasses and a few wildflowers, looking watchful"
+  },
+  {
+    "name": "Rabbit in the Garden",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "garden", "scene"],
+    "layout": "full",
+    "prompt": "a happy rabbit standing in a vegetable garden beside a row of leafy carrot tops and a head of lettuce, a small wooden fence behind, a sun and a couple of clouds above"
+  },
+  {
+    "name": "Bunny at the Burrow",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "burrow", "scene"],
+    "layout": "full",
+    "prompt": "a rabbit peeking out from the round opening of its grassy burrow in a small hill, front paws resting on the edge, ears up, with tufts of grass and a few flowers growing around the entrance"
+  },
+  {
+    "name": "Two Bunnies",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "pair"],
+    "layout": "full",
+    "prompt": "a pair of friendly rabbits sitting close together side by side, one slightly bigger than the other, both with tall ears and fluffy tails, leaning toward each other with happy smiles"
+  },
+  {
+    "name": "Bunny with Flowers",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "flowers"],
+    "layout": "full",
+    "prompt": "a sweet bunny sitting beside a small bouquet of daisies and tulips, sniffing one flower with its nose, tall ears up, a fluffy tail, and a couple of butterflies fluttering nearby"
+  },
+  {
+    "name": "Fluffy Sitting Bunny",
+    "subject": "animals/rabbit",
+    "tags": ["rabbit", "bunny", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a very simple round fluffy bunny sitting facing forward, two big upright ears, large round eyes, a tiny nose, small front paws, and a big round tail, drawn with bold chunky shapes for little hands"
+  }
+]

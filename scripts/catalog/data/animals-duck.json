@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cute Baby Duckling",
+    "subject": "animals/duck",
+    "tags": ["duck", "duckling", "baby", "easy"],
+    "layout": "full",
+    "prompt": "a chubby fluffy baby duckling standing on two little webbed feet, a round soft body with fuzzy down, big happy eyes, a tiny rounded bill, and one small wing lifted in a wave, simple and toddler-friendly"
+  },
+  {
+    "name": "Mallard Drake",
+    "subject": "animals/duck",
+    "tags": ["duck", "mallard", "drake"],
+    "layout": "full",
+    "prompt": "a handsome male mallard duck standing in profile, a sleek rounded head, a broad flat bill, a curled feather at the tail, a plump chest, and detailed wing feathers showing along its side"
+  },
+  {
+    "name": "Duck Swimming",
+    "subject": "animals/duck",
+    "tags": ["duck", "swimming", "pond"],
+    "layout": "full",
+    "prompt": "a cheerful duck floating on the water, its body resting on gentle ripples, head held high with a content smile, a couple of curved water lines and a small lily pad drifting nearby"
+  },
+  {
+    "name": "Duck Family",
+    "subject": "animals/duck",
+    "tags": ["duck", "family", "ducklings", "scene"],
+    "layout": "full",
+    "prompt": "a mother duck leading a row of four small ducklings in a line behind her across the grass, the mother looking back over her shoulder, each duckling slightly smaller than the last, warm and caring expressions"
+  },
+  {
+    "name": "Duckling in an Egg",
+    "subject": "animals/duck",
+    "tags": ["duck", "duckling", "egg", "baby"],
+    "layout": "full",
+    "prompt": "a tiny duckling hatching out of a cracked egg, its fuzzy head and big eyes peeking over the broken shell, little wings poking out, a second smooth egg resting in a small nest of straw beside it"
+  },
+  {
+    "name": "Rubber Duck",
+    "subject": "animals/duck",
+    "tags": ["duck", "rubber-duck", "easy", "bath"],
+    "layout": "full",
+    "prompt": "a classic round rubber bath duck with a smooth body, a flat wide bill, a small wing shape on each side, a single dot eye, sitting in a little ring of bubbles and water splashes"
+  },
+  {
+    "name": "Duck in the Pond",
+    "subject": "animals/duck",
+    "tags": ["duck", "pond", "cattails", "scene"],
+    "layout": "full",
+    "prompt": "a duck swimming on a pond surrounded by tall cattails and reeds, a few lily pads with a flower on the water, gentle ripples spreading out from the duck, and a couple of clouds above"
+  },
+  {
+    "name": "Flying Duck",
+    "subject": "animals/duck",
+    "tags": ["duck", "flying", "wings"],
+    "layout": "full",
+    "prompt": "a duck in mid-flight with both wings spread wide and feathers fanned out, neck stretched forward, webbed feet tucked back under its tail, a few small clouds around it in the sky"
+  },
+  {
+    "name": "Duckling and Butterfly",
+    "subject": "animals/duck",
+    "tags": ["duck", "duckling", "butterfly", "easy"],
+    "layout": "full",
+    "prompt": "a happy little duckling sitting in the grass looking up at a butterfly fluttering just above its bill, a couple of simple flowers and blades of grass around it, sweet and gentle scene"
+  },
+  {
+    "name": "Duck Close-Up Portrait",
+    "subject": "animals/duck",
+    "tags": ["duck", "portrait", "close-up", "detailed"],
+    "layout": "full",
+    "prompt": "a close-up head-and-shoulders portrait of a duck facing forward, a detailed flat bill with nostril marks, large friendly eyes, and rows of small feather lines over the head and neck"
+  },
+  {
+    "name": "Mama Duck and Ducklings on Water",
+    "subject": "animals/duck",
+    "tags": ["duck", "family", "swimming", "scene"],
+    "layout": "full",
+    "prompt": "a mother duck swimming on calm water with three small ducklings paddling close behind her in a trail, ripples behind each one, a reed and a lily pad at the edge of the scene"
+  },
+  {
+    "name": "Wood Duck",
+    "subject": "animals/duck",
+    "tags": ["duck", "wood-duck", "detailed"],
+    "layout": "full",
+    "prompt": "a fancy wood duck perched on a low branch over the water, a crested head with a long swept-back crest, a patterned face with bold stripes, intricate feather markings along its body and folded wings"
+  }
+]

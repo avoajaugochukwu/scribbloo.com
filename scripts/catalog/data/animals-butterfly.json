@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Monarch Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "monarch"],
+    "layout": "full",
+    "prompt": "a monarch butterfly with wings spread wide and symmetrical, bold panes of orange divided by thick veins, a band of small dots along the wing edges, a slender body and two curling antennae, resting calmly"
+  },
+  {
+    "name": "Swallowtail Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "swallowtail"],
+    "layout": "full",
+    "prompt": "an elegant swallowtail butterfly with long pointed tails trailing from the lower wings, rows of decorative spots and stripes across both wings, a narrow body and long antennae, wings held open"
+  },
+  {
+    "name": "Blue Morpho Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "blue-morpho"],
+    "layout": "full",
+    "prompt": "a blue morpho butterfly with broad rounded wings shown fully open, smooth sweeping shapes inside the wings and a ring of small eye spots near the edges, a plump fuzzy body and gently curved antennae"
+  },
+  {
+    "name": "Cute Baby Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "baby", "cute"],
+    "layout": "full",
+    "prompt": "a tiny chubby cartoon baby butterfly with big sparkly eyes and a happy smile, small rounded wings with simple heart and dot patterns, little curly antennae, looking sweet and cuddly"
+  },
+  {
+    "name": "Butterfly on a Flower",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "flower"],
+    "layout": "full",
+    "prompt": "a pretty butterfly perched on a large blooming daisy, wings half open showing patterned panes, thin legs gripping the flower center, a leafy stem below and a couple of small buds nearby"
+  },
+  {
+    "name": "Caterpillar to Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "caterpillar", "life-cycle"],
+    "layout": "full",
+    "prompt": "a friendly striped caterpillar with a smiling face crawling along a leaf, a hanging chrysalis beside it, and a freshly emerged butterfly with open wings above, showing the change from caterpillar to butterfly"
+  },
+  {
+    "name": "Butterfly Close-Up",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "close-up", "detailed"],
+    "layout": "full",
+    "prompt": "a large detailed close-up of a single butterfly filling the frame, intricate lacy patterns of swirls, dots, and tiny scales across both wings, a textured body and finely curled antennae, fully spread wings"
+  },
+  {
+    "name": "Two Butterflies",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "pair"],
+    "layout": "full",
+    "prompt": "two butterflies fluttering together close to one another, their patterned wings overlapping slightly, a few small flowers and dotted flight trails around them, cheerful and playful"
+  },
+  {
+    "name": "Butterfly in the Garden",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "garden", "scene"],
+    "layout": "full",
+    "prompt": "a butterfly flying over a flower garden with tall tulips, a round sun and small clouds above, a few blades of grass and a curving path below, gentle and summery"
+  },
+  {
+    "name": "Symmetrical Wing Pattern",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "symmetry", "pattern"],
+    "layout": "full",
+    "prompt": "a decorative butterfly with perfectly mirrored wings filled with simple geometric shapes, circles, teardrops, and stripes that match left to right, a centered body and even antennae, like a coloring pattern"
+  },
+  {
+    "name": "Painted Lady Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "painted-lady"],
+    "layout": "full",
+    "prompt": "a painted lady butterfly with open wings showing a mosaic of patches and white spots near the wingtips, scalloped wing edges, a fuzzy body and two thin antennae, resting with wings spread"
+  },
+  {
+    "name": "Easy Big Butterfly",
+    "subject": "animals/butterfly",
+    "tags": ["butterfly", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a simple big-winged butterfly with thick bold outlines and only a few large open shapes inside each wing, a smiling round body and short antennae, easy for very young children to color"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Spotted Dairy Cow",
+    "subject": "animals/cow",
+    "tags": ["cow", "dairy", "holstein"],
+    "layout": "full",
+    "prompt": "a friendly spotted dairy cow standing in profile, big patches across its body, a gentle face with large eyes and floppy ears, small curved horns, a bell on a collar, and an udder, four hooved legs and a tufted tail"
+  },
+  {
+    "name": "Cute Baby Calf",
+    "subject": "animals/cow",
+    "tags": ["cow", "calf", "baby"],
+    "layout": "full",
+    "prompt": "an adorable baby calf with wobbly thin legs and knobby knees, a big round head, oversized sparkly eyes and long lashes, large floppy ears, a few soft spots on its body, and a short happy tail"
+  },
+  {
+    "name": "Grazing Cow in the Pasture",
+    "subject": "animals/cow",
+    "tags": ["cow", "pasture", "scene"],
+    "layout": "full",
+    "prompt": "a calm cow lowering its head to munch grass in a meadow, tufts of grass and a few flowers at its hooves, a low fence and a couple of clouds and a round sun behind it"
+  },
+  {
+    "name": "Shaggy Highland Cow",
+    "subject": "animals/cow",
+    "tags": ["cow", "highland", "shaggy"],
+    "layout": "full",
+    "prompt": "a fluffy highland cow with long wavy shaggy hair hanging over its eyes, wide sweeping curved horns, a fringe of hair on its forehead, a stocky body and a long bushy tail, looking cheerful"
+  },
+  {
+    "name": "Cow Face Close-Up",
+    "subject": "animals/cow",
+    "tags": ["cow", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a big friendly close-up portrait of a cow's head filling the frame, large gentle eyes with long lashes, a wide soft muzzle with two round nostrils, floppy ears sticking out to the sides, and short horns on top"
+  },
+  {
+    "name": "Sturdy Bull",
+    "subject": "animals/cow",
+    "tags": ["cow", "bull", "farm"],
+    "layout": "full",
+    "prompt": "a strong sturdy bull standing firmly, a thick muscular neck and broad chest, a ring in its nose, two big curved horns, a tuft of hair between the horns, and a long swishing tail, a confident expression"
+  },
+  {
+    "name": "Mama Cow and Calf",
+    "subject": "animals/cow",
+    "tags": ["cow", "calf", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother cow standing beside her little calf, the mother lowering her head to nuzzle the calf's cheek, both with soft spots and loving expressions, a few tufts of grass beneath them"
+  },
+  {
+    "name": "Cow Resting in the Field",
+    "subject": "animals/cow",
+    "tags": ["cow", "resting", "scene"],
+    "layout": "full",
+    "prompt": "a content cow lying down with its legs tucked underneath, chewing peacefully, surrounded by grass and a few daisies, a barn and a tree in the background"
+  },
+  {
+    "name": "Cow Jumping Over the Moon",
+    "subject": "animals/cow",
+    "tags": ["cow", "moon", "nursery-rhyme"],
+    "layout": "full",
+    "prompt": "a playful cartoon cow leaping through the night sky with legs stretched out, a big crescent moon behind it, scattered stars all around, a joyful grin on its face"
+  },
+  {
+    "name": "Cow with Sunflowers",
+    "subject": "animals/cow",
+    "tags": ["cow", "flowers", "scene"],
+    "layout": "full",
+    "prompt": "a happy spotted cow standing among tall sunflowers, a flower tucked behind one ear, big bright eyes, a bell around its neck, with leaves and a couple of bees floating nearby"
+  },
+  {
+    "name": "Toddler Easy Cow",
+    "subject": "animals/cow",
+    "tags": ["cow", "toddler", "easy"],
+    "layout": "full",
+    "prompt": "a very simple chunky cartoon cow with a big round body, large blank areas, a smiling face, two little dot eyes, tiny ears and horns, and short stubby legs, extra easy with few details"
+  },
+  {
+    "name": "Cow in the Barnyard",
+    "subject": "animals/cow",
+    "tags": ["cow", "barn", "farm"],
+    "layout": "full",
+    "prompt": "a cheerful cow standing in front of a barn with a hay bale and a wooden trough beside it, a chicken at its feet and a fence behind, a tree to one side, a bright friendly farm scene"
+  }
+]

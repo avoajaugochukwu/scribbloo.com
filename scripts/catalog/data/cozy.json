@@ -19,5 +19,68 @@
     "tags": ["cozy", "cocoa", "winter"],
     "layout": "full",
     "prompt": "a big steaming mug of hot cocoa topped with three round marshmallows, nestled inside a chunky knitted blanket with a folded edge, a candy cane resting against the mug, and a few little stars and a crescent moon floating around"
+  },
+  {
+    "name": "Cup of Tea and Cookies",
+    "subject": "cozy",
+    "tags": ["cozy", "tea", "snack"],
+    "layout": "full",
+    "prompt": "a delicate teacup on a saucer with a tea bag tag hanging over the rim and gentle steam curling up, a small plate of three round cookies beside it, a tiny spoon, and a few scattered sugar cubes"
+  },
+  {
+    "name": "Cat Napping on a Sweater",
+    "subject": "cozy",
+    "tags": ["cozy", "cat", "knit"],
+    "layout": "full",
+    "prompt": "a content sleeping kitten curled into a tight ball on top of a folded chunky knitted sweater, eyes closed with a peaceful smile, a tiny tail tucked around its nose, and a soft ball of yarn resting nearby"
+  },
+  {
+    "name": "Crackling Fireplace",
+    "subject": "cozy",
+    "tags": ["cozy", "fireplace", "winter"],
+    "layout": "full",
+    "prompt": "a brick fireplace with a glowing fire and stacked logs inside, a wooden mantel above holding a small clock and two candlesticks, a pair of stockings hanging from the mantel, and a couple of logs piled on the hearth"
+  },
+  {
+    "name": "Chunky Knitted Sweater",
+    "subject": "cozy",
+    "tags": ["cozy", "sweater", "knit"],
+    "layout": "full",
+    "prompt": "a thick folded knitted sweater shown close up, with a chunky cable-knit pattern across the front, a ribbed collar and cuffs, neatly folded sleeves, and a few little hearts and snowflakes worked into the design"
+  },
+  {
+    "name": "Rainy Day Window",
+    "subject": "cozy",
+    "tags": ["cozy", "rain", "window"],
+    "layout": "full",
+    "prompt": "a view of a rainy window with rounded raindrops trickling down the glass, simple curtains pulled to the sides, a steaming mug sitting on the sill next to a small potted plant, and a soft folded blanket draped on the ledge"
+  },
+  {
+    "name": "Stack of Books and Candle",
+    "subject": "cozy",
+    "tags": ["cozy", "books", "candle"],
+    "layout": "full",
+    "prompt": "a neat stack of four closed books with ribbon bookmarks peeking out, a lit candle in a small jar resting on top with a gentle flame, a tiny pair of reading glasses leaning against the books, and a sprig of leaves beside them"
+  },
+  {
+    "name": "Warm Socks by the Fire",
+    "subject": "cozy",
+    "tags": ["cozy", "socks", "winter"],
+    "layout": "full",
+    "prompt": "a pair of thick fuzzy knitted socks with folded cuffs and a fair-isle pattern, set side by side, a steaming mug between them, and a few little hearts and snowflakes floating above the toes"
+  },
+  {
+    "name": "Bowl of Warm Soup",
+    "subject": "cozy",
+    "tags": ["cozy", "soup", "food"],
+    "layout": "full",
+    "prompt": "a deep round bowl of soup with gentle steam rising and round vegetable pieces floating on top, a spoon resting in the bowl, a folded napkin underneath, and a thick slice of crusty bread on a small plate beside it"
+  },
+  {
+    "name": "Lit Candle and Flowers",
+    "subject": "cozy",
+    "tags": ["cozy", "candle", "calm"],
+    "layout": "full",
+    "prompt": "a chunky pillar candle with a soft glowing flame standing in a small dish, a curl of smoke drifting up, a tiny vase of three simple flowers beside it, and a folded book and a teacup nearby on a calm tabletop"
   }
 ]

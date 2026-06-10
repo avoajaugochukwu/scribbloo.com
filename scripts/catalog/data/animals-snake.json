@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Coiled Cobra",
+    "subject": "animals/snake",
+    "tags": ["snake", "cobra", "hood"],
+    "layout": "full",
+    "prompt": "a cobra rising up from a coiled body with its wide hood spread open, a pattern of scales on the hood, alert round eyes, and a forked tongue flicking out of its mouth, looking proud not scary"
+  },
+  {
+    "name": "Patterned Python",
+    "subject": "animals/snake",
+    "tags": ["snake", "python"],
+    "layout": "full",
+    "prompt": "a thick python wound into several smooth loops, its long body covered in large blotchy diamond-shaped patches, a rounded head resting on top of a coil, calm half-closed eyes"
+  },
+  {
+    "name": "Rattlesnake on the Rocks",
+    "subject": "animals/snake",
+    "tags": ["snake", "rattlesnake"],
+    "layout": "full",
+    "prompt": "a rattlesnake coiled on a flat desert rock with its head raised and tail lifted to show a segmented rattle at the tip, bold diamond patterns down its back, a small cactus and a few pebbles beside it"
+  },
+  {
+    "name": "Friendly Garden Snake",
+    "subject": "animals/snake",
+    "tags": ["snake", "garden", "grass"],
+    "layout": "full",
+    "prompt": "a slim friendly garden snake gliding through tall blades of grass with a few little flowers, a long thin striped body curving in an S-shape, a small smiling face and tiny forked tongue"
+  },
+  {
+    "name": "Baby Snake Hatching",
+    "subject": "animals/snake",
+    "tags": ["snake", "baby", "egg"],
+    "layout": "full",
+    "prompt": "a cute tiny baby snake poking its head out of a cracked egg with big sparkly eyes, a short curled body just emerging from the shell, two more spotted snake eggs resting in a soft nest beside it"
+  },
+  {
+    "name": "Snake in a Tree",
+    "subject": "animals/snake",
+    "tags": ["snake", "tree", "scene"],
+    "layout": "full",
+    "prompt": "a long green snake draped and looped over a leafy tree branch, its body hanging down in gentle curves, a few large leaves around it, head lifted with a curious expression and a flicking tongue"
+  },
+  {
+    "name": "Snake Charmer Basket",
+    "subject": "animals/snake",
+    "tags": ["snake", "basket", "activity"],
+    "layout": "full",
+    "prompt": "a cobra rising gracefully out of a woven wicker basket as if charmed by music, its hood partly spread, the basket decorated with simple patterns, a couple of musical notes floating in the air nearby"
+  },
+  {
+    "name": "Two Snakes Twisting",
+    "subject": "animals/snake",
+    "tags": ["snake", "pair", "two"],
+    "layout": "full",
+    "prompt": "two friendly snakes of slightly different sizes twined gently around each other in a loose spiral, each with its own pattern of stripes and dots, both heads turned toward one another with happy smiles"
+  },
+  {
+    "name": "Snake Head Close-Up",
+    "subject": "animals/snake",
+    "tags": ["snake", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a large close-up portrait of a snake's head facing forward, big detailed eyes, scaly textured skin around the brow, nostrils, and a long forked tongue extending from an open mouth, filling most of the frame"
+  },
+  {
+    "name": "Coral Snake Stripes",
+    "subject": "animals/snake",
+    "tags": ["snake", "coral", "stripes"],
+    "layout": "full",
+    "prompt": "a slender coral snake stretched in a long wavy line across the page, its body marked with clear bands of alternating wide and narrow stripes ringing the whole body, a small blunt head and quiet eyes"
+  },
+  {
+    "name": "Sea Snake in the Waves",
+    "subject": "animals/snake",
+    "tags": ["snake", "sea", "water"],
+    "layout": "full",
+    "prompt": "a sea snake swimming through ocean water with a paddle-shaped flattened tail, its body rippling in gentle curves, a few wave lines, small fish, and bubbles around it as it glides forward"
+  },
+  {
+    "name": "Cute Cartoon Snake",
+    "subject": "animals/snake",
+    "tags": ["snake", "cartoon", "cute"],
+    "layout": "full",
+    "prompt": "a chubby cute cartoon snake curled into one simple thick coil with a big round smiling face, large happy eyes, rosy cheeks, and a tiny tongue, a few simple round dots along its back, easy for toddlers"
+  }
+]

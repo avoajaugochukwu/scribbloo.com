@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Friendly Cartoon Spider",
+    "subject": "animals/spider",
+    "tags": ["spider", "cute", "cartoon"],
+    "layout": "full",
+    "prompt": "a friendly cartoon spider with a big round body, a smaller round head, eight evenly spaced bent legs, two large happy eyes and a cheerful smile, sitting upright and waving one leg"
+  },
+  {
+    "name": "Spider on a Web",
+    "subject": "animals/spider",
+    "tags": ["spider", "web"],
+    "layout": "full",
+    "prompt": "a smiling garden spider sitting in the center of a large round spider web with neat radiating spokes and spiral threads, the web stretched between two leafy twigs"
+  },
+  {
+    "name": "Fuzzy Tarantula",
+    "subject": "animals/spider",
+    "tags": ["spider", "tarantula", "detailed"],
+    "layout": "full",
+    "prompt": "a chunky tarantula with a wide hairy body and thick fuzzy legs covered in short bristles, two small fangs at the front, standing low on the ground with all eight legs spread out"
+  },
+  {
+    "name": "Cute Baby Spider",
+    "subject": "animals/spider",
+    "tags": ["spider", "baby", "cute"],
+    "layout": "full",
+    "prompt": "a tiny round baby spider with a chubby body, eight short stubby legs, two huge sparkly eyes and a sweet little smile, sitting on a single dewdrop leaf"
+  },
+  {
+    "name": "Jumping Spider",
+    "subject": "animals/spider",
+    "tags": ["spider", "jumping-spider", "cute"],
+    "layout": "full",
+    "prompt": "a wide-eyed jumping spider with a compact fuzzy body, two very large round front eyes and several smaller eyes, short sturdy legs crouched as if ready to pounce, an alert curious expression"
+  },
+  {
+    "name": "Daddy Longlegs",
+    "subject": "animals/spider",
+    "tags": ["spider", "daddy-longlegs", "detailed"],
+    "layout": "full",
+    "prompt": "a daddy longlegs with a tiny oval body and eight extremely long, thin, gently curved legs splayed wide, standing tall over a small pebble and a blade of grass"
+  },
+  {
+    "name": "Spider in a Web Corner",
+    "subject": "animals/spider",
+    "tags": ["spider", "web", "scene"],
+    "layout": "full",
+    "prompt": "a spider hanging from a single silk thread beside a triangular corner web with spiral threads, a small fly caught at the edge of the web, a couple of leaves framing the corner"
+  },
+  {
+    "name": "Two Spider Friends",
+    "subject": "animals/spider",
+    "tags": ["spider", "pair", "cute"],
+    "layout": "full",
+    "prompt": "two friendly round cartoon spiders sitting side by side on a leaf, each with eight legs and big smiling eyes, one slightly bigger than the other, holding two of their legs together like holding hands"
+  },
+  {
+    "name": "Spider Face Close-Up",
+    "subject": "animals/spider",
+    "tags": ["spider", "close-up", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up front view of a spider's face filling the frame, eight rounded eyes arranged in two rows, a fuzzy textured head, two small fangs below, and the tops of its front legs raised at the sides"
+  },
+  {
+    "name": "Halloween Spider",
+    "subject": "animals/spider",
+    "tags": ["spider", "halloween", "scene"],
+    "layout": "full",
+    "prompt": "a spooky-cute spider dangling from a silk thread above a carved jack-o-lantern, a wispy web with a crescent moon and a couple of bats in the background, a friendly grinning face"
+  },
+  {
+    "name": "Spider with Dewy Web",
+    "subject": "animals/spider",
+    "tags": ["spider", "web", "detailed"],
+    "layout": "full",
+    "prompt": "a detailed spider resting on a large circular web heavy with round dew drops along every thread, the web strung between tall grass stalks, a few flowers blooming at the base"
+  },
+  {
+    "name": "Spider Building a Web",
+    "subject": "animals/spider",
+    "tags": ["spider", "web", "activity"],
+    "layout": "full",
+    "prompt": "a busy spider mid-task spinning a half-finished web, a strand of silk trailing from its body as it connects two spiral threads, the outer spokes already in place between two branches"
+  }
+]

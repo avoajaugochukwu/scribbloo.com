@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Happy Sitting Puppy",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "sitting"],
+    "layout": "full",
+    "prompt": "a cute round puppy sitting upright facing forward, two big floppy ears, large friendly eyes, a little button nose, a soft fluffy chest, front paws together, and a curled tail peeking out to one side, smiling happily"
+  },
+  {
+    "name": "Sleeping Puppy",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "sleeping"],
+    "layout": "full",
+    "prompt": "a tiny puppy curled up fast asleep in a round dog bed, nose tucked under one paw, eyes closed in a peaceful smile, floppy ears resting flat, a small cozy blanket draped over its back"
+  },
+  {
+    "name": "Puppy With a Ball",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "play", "ball"],
+    "layout": "full",
+    "prompt": "a playful puppy in a low play-bow pose, front legs stretched down and tail up high, an open happy mouth with tongue out, a round bouncy ball just in front of its paws"
+  },
+  {
+    "name": "Spotted Dalmatian Puppy",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "dalmatian"],
+    "layout": "full",
+    "prompt": "a standing Dalmatian puppy in profile, its coat covered in many round spots, slightly droopy ears, a long thin tail held up, and a cheerful open-mouth smile"
+  },
+  {
+    "name": "Floppy-Eared Beagle Pup",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "beagle"],
+    "layout": "full",
+    "prompt": "a chubby Beagle puppy sitting and looking up, very long floppy ears framing its face, a rounded snout sniffing the air, short sturdy legs, and a stubby wagging tail"
+  },
+  {
+    "name": "Fluffy Golden Retriever Puppy",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "golden-retriever", "fluffy"],
+    "layout": "full",
+    "prompt": "a fluffy Golden Retriever puppy standing happily on all four paws, soft feathery fur on its ears, chest, and tail, a gentle smiling face, and a long plumed tail swept up"
+  },
+  {
+    "name": "Tiny Newborn Puppy",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "baby", "newborn"],
+    "layout": "full",
+    "prompt": "a very small newborn puppy with a big round head and tiny body, short stubby legs, little folded-down ears, closed sleepy eyes, sitting in a soft folded blanket, extra cute and simple"
+  },
+  {
+    "name": "Two Puppy Friends",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "pair", "friends"],
+    "layout": "full",
+    "prompt": "two cheerful puppies sitting side by side leaning against each other, both with floppy ears and wagging tails, one slightly taller than the other, sharing one happy smile each"
+  },
+  {
+    "name": "Basket of Puppies",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "litter", "basket"],
+    "layout": "full",
+    "prompt": "three little puppies peeking out of a woven wicker basket, their heads and front paws hanging over the rim, big eyes and floppy ears, a soft blanket tucked inside the basket"
+  },
+  {
+    "name": "Puppy Face Close-Up",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up of a puppy's face filling the frame, two large floppy ears, enormous sparkling eyes, a heart-shaped nose, soft fur tufts on the cheeks, and a sweet gentle smile"
+  },
+  {
+    "name": "Puppy in the Backyard",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "scene", "backyard"],
+    "layout": "full",
+    "prompt": "a happy puppy running across a grassy backyard, a wooden doghouse and a flower in the background, a bone-shaped name tag on its collar, ears flapping and tongue out as it plays"
+  },
+  {
+    "name": "Puppy and Mama Dog",
+    "subject": "animals/puppy",
+    "tags": ["puppy", "dog", "family", "mother"],
+    "layout": "full",
+    "prompt": "a gentle mother dog lying down with her small puppy snuggled against her side, the mama dog's head curved lovingly toward the pup, both with floppy ears and warm happy faces, resting on a soft mat"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Sitting Puppy",
+    "subject": "animals/dog",
+    "tags": ["dog", "puppy", "easy"],
+    "layout": "full",
+    "prompt": "a cute fluffy puppy sitting up with big round eyes, floppy ears, a small smiling mouth with its tongue out, a curled-up tail, and chunky little paws, looking happy and friendly"
+  },
+  {
+    "name": "Golden Retriever",
+    "subject": "animals/dog",
+    "tags": ["dog", "golden-retriever", "breed"],
+    "layout": "full",
+    "prompt": "a friendly Golden Retriever standing in profile, a long flowing coat with feathery fur on the legs and tail, soft floppy ears, a gentle smile, and a wagging tail held high"
+  },
+  {
+    "name": "Spotty Dalmatian",
+    "subject": "animals/dog",
+    "tags": ["dog", "dalmatian", "breed"],
+    "layout": "full",
+    "prompt": "a perky Dalmatian standing alert, a slim body covered in scattered round spots, tall folded ears, a long thin tail, an eager open-mouth smile, and a collar around its neck"
+  },
+  {
+    "name": "Wrinkly Pug",
+    "subject": "animals/dog",
+    "tags": ["dog", "pug", "breed"],
+    "layout": "full",
+    "prompt": "a chubby Pug sitting down with a wrinkled flat face, big bulging eyes, a short curled tail, small folded ears, and a stocky round body, looking sweet and a little goofy"
+  },
+  {
+    "name": "Long Dachshund",
+    "subject": "animals/dog",
+    "tags": ["dog", "dachshund", "breed"],
+    "layout": "full",
+    "prompt": "a long-bodied Dachshund standing on very short legs, a low stretched-out body, long droopy ears, a pointed snout, and a slim tail, with a cheerful smiling face"
+  },
+  {
+    "name": "Fluffy Poodle",
+    "subject": "animals/dog",
+    "tags": ["dog", "poodle", "breed"],
+    "layout": "full",
+    "prompt": "an elegant Poodle standing proudly, a curly fluffy coat with rounded puffs of fur on its legs, head, and tail, a slim snout, dainty paws, and a small bow on top of its head"
+  },
+  {
+    "name": "Puppy Portrait",
+    "subject": "animals/dog",
+    "tags": ["dog", "puppy", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a puppy's face filling the frame, large soulful eyes, a button nose, soft fluffy fur with a little tuft on top, one ear flopped over, looking straight ahead"
+  },
+  {
+    "name": "Dog with a Bone",
+    "subject": "animals/dog",
+    "tags": ["dog", "bone", "activity"],
+    "layout": "full",
+    "prompt": "a happy cartoon dog lying down with a big chunky bone between its front paws, ears perked up, eyes bright with excitement, tail mid-wag, ready to chew its favorite treat"
+  },
+  {
+    "name": "Puppy in a Doghouse",
+    "subject": "animals/dog",
+    "tags": ["dog", "doghouse", "scene"],
+    "layout": "full",
+    "prompt": "a cute puppy peeking out of the round doorway of a wooden doghouse, a bone-shaped sign above the door, a food bowl beside it, and a little ball on the grassy ground nearby"
+  },
+  {
+    "name": "Dog and Puppy",
+    "subject": "animals/dog",
+    "tags": ["dog", "puppy", "pair", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother dog sitting beside her small puppy, leaning down to nuzzle its head, both with soft fur and loving smiles, sitting together on a patch of grass"
+  },
+  {
+    "name": "Happy Corgi",
+    "subject": "animals/dog",
+    "tags": ["dog", "corgi", "breed"],
+    "layout": "full",
+    "prompt": "a cheerful Corgi standing on short stubby legs, a long low body, big upright pointed ears, a fluffy rounded rear, a wide open-mouth smile, and its tongue sticking out happily"
+  },
+  {
+    "name": "Dog Playing Fetch",
+    "subject": "animals/dog",
+    "tags": ["dog", "fetch", "activity", "park"],
+    "layout": "full",
+    "prompt": "an energetic dog running across a park with a ball in its mouth, body leaning forward mid-leap, ears flapping back, tail streaming out, a tree and a couple of bushes in the background"
+  }
+]

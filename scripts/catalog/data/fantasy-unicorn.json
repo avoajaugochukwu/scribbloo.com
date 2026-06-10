@@ -19,5 +19,68 @@
     "tags": ["unicorn", "castle"],
     "layout": "full",
     "prompt": "a magical unicorn standing in front of a tall fairytale castle with pointed towers, a flowing mane and a spiral horn, stars and a crescent moon in the sky, and a path lined with flowers leading to the castle gate"
+  },
+  {
+    "name": "Unicorn in the Clouds",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "clouds", "sky"],
+    "layout": "full",
+    "prompt": "a dreamy unicorn resting on top of a big fluffy cloud, a long wavy mane and spiral horn, hooves tucked underneath, with smaller puffy clouds, a few floating stars, and a crescent moon nearby in the sky"
+  },
+  {
+    "name": "Unicorn Princess",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "princess", "crown"],
+    "layout": "full",
+    "prompt": "an elegant unicorn wearing a small pointed crown tilted on its head, a long braided mane decorated with little flowers and beads, a spiral horn, a flowing decorative tail, and a draped saddle blanket with a heart pattern"
+  },
+  {
+    "name": "Chibi Unicorn",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "chibi", "cute"],
+    "layout": "full",
+    "prompt": "an adorable chibi unicorn with an oversized round head, huge sparkly eyes, tiny stubby legs, a short curly mane, and a little spiral horn, sitting happily with a small heart above it, very simple bold shapes"
+  },
+  {
+    "name": "Unicorn with Flowers",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "flowers", "garden"],
+    "layout": "full",
+    "prompt": "a gentle unicorn standing in a flower meadow with a crown of daisies and roses around its horn, lowering its head to sniff a tall blossom, a soft flowing mane, with scattered flowers and leafy grass around its hooves"
+  },
+  {
+    "name": "Flying Unicorn",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "flying", "wings", "pegasus"],
+    "layout": "full",
+    "prompt": "a winged unicorn soaring through the sky with large feathered wings spread wide, front legs reaching forward and a long streaming mane and tail, a spiral horn, with a few clouds and twinkling stars around it"
+  },
+  {
+    "name": "Sleeping Unicorn",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "sleeping", "moon"],
+    "layout": "full",
+    "prompt": "a peaceful unicorn curled up asleep with its legs tucked in and eyes gently closed, a long mane draped softly over its body, a spiral horn, resting on a patch of grass under a crescent moon with a few stars and tiny Zs floating above"
+  },
+  {
+    "name": "Unicorn and Bunny Friend",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "friends", "bunny"],
+    "layout": "full",
+    "prompt": "a friendly unicorn standing beside a small fluffy bunny, the unicorn lowering its head to greet the rabbit, both with happy expressions, a flowing mane and spiral horn, with a couple of flowers and a butterfly nearby"
+  },
+  {
+    "name": "Winter Unicorn",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "winter", "snow"],
+    "layout": "full",
+    "prompt": "a graceful unicorn standing in a snowy scene wearing a knitted scarf around its neck, a frosty mane with snowflake details, a spiral horn, falling snowflakes around it, and a small bare tree and a snowman in the background"
+  },
+  {
+    "name": "Unicorn Portrait",
+    "subject": "fantasy/unicorn",
+    "tags": ["unicorn", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up head-and-shoulders portrait of a unicorn facing forward, large gentle eyes with long lashes, a detailed spiral horn between the ears, a richly flowing mane framing the face, and a few small stars and flowers around the edges"
   }
 ]

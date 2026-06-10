@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Mighty Maned Lion",
+    "subject": "animals/lion",
+    "tags": ["lion", "mane", "male"],
+    "layout": "full",
+    "prompt": "a proud male lion standing in profile with a full flowing mane around its head and shoulders, a strong body, four sturdy legs, a long tail ending in a tufted tip, and a calm confident expression"
+  },
+  {
+    "name": "Cute Lion Cub",
+    "subject": "animals/lion",
+    "tags": ["lion", "cub", "baby"],
+    "layout": "full",
+    "prompt": "a chubby baby lion cub sitting up with big round eyes, a small fuzzy head with no mane, round ears, oversized paws, a tiny tufted tail, and a sweet happy smile"
+  },
+  {
+    "name": "Roaring Lion Close-Up",
+    "subject": "animals/lion",
+    "tags": ["lion", "roar", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of a lion's head with its mouth wide open in a big roar, large mane framing the whole face, visible teeth and tongue, whiskers, and fierce alert eyes"
+  },
+  {
+    "name": "Watchful Lioness",
+    "subject": "animals/lion",
+    "tags": ["lion", "lioness", "female"],
+    "layout": "full",
+    "prompt": "a sleek female lioness standing alert in profile with no mane, a smooth lean body, slender legs, a long tail, rounded ears, and a watchful gaze as if scanning the savanna"
+  },
+  {
+    "name": "Lion on the Rock",
+    "subject": "animals/lion",
+    "tags": ["lion", "rock", "scene"],
+    "layout": "full",
+    "prompt": "a male lion resting on top of a large flat rock looking out over the distance, full mane, front paws stretched forward, a long tail draped down the side of the rock, a few small grass tufts at the base"
+  },
+  {
+    "name": "Sleeping Lion",
+    "subject": "animals/lion",
+    "tags": ["lion", "sleeping", "easy"],
+    "layout": "full",
+    "prompt": "a relaxed lion lying down curled up asleep with its head resting on its front paws, eyes gently closed, a fluffy mane, and a peaceful smile, simple and chunky shapes"
+  },
+  {
+    "name": "Lion Family Pride",
+    "subject": "animals/lion",
+    "tags": ["lion", "pride", "family"],
+    "layout": "full",
+    "prompt": "a lion family sitting together, a maned father lion beside a lioness with a small cub in front of them, all facing forward with warm friendly expressions, a few grass tufts around their feet"
+  },
+  {
+    "name": "Playful Cub with Butterfly",
+    "subject": "animals/lion",
+    "tags": ["lion", "cub", "butterfly", "play"],
+    "layout": "full",
+    "prompt": "a playful lion cub crouched low with its rear up, batting a front paw at a fluttering butterfly above its nose, big curious eyes, round ears, and a little curled tail"
+  },
+  {
+    "name": "Lion on the Savanna",
+    "subject": "animals/lion",
+    "tags": ["lion", "savanna", "habitat", "scene"],
+    "layout": "full",
+    "prompt": "a male lion walking across open grassland with a flat-topped acacia tree behind it, a low sun and a few clouds in the sky, tall grass tufts and a small hill in the background"
+  },
+  {
+    "name": "Lion Drinking at the Watering Hole",
+    "subject": "animals/lion",
+    "tags": ["lion", "water", "scene"],
+    "layout": "full",
+    "prompt": "a lion lowering its maned head to drink from a watering hole, its reflection rippling in the water, a couple of reeds and rocks at the edge, and tall grass behind it"
+  },
+  {
+    "name": "Lion Cub and Mom",
+    "subject": "animals/lion",
+    "tags": ["lion", "mom", "cub", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother lioness lowering her head to nuzzle her small cub, the cub looking up lovingly with big eyes, both sitting close together in a grassy clearing, warm tender expressions"
+  },
+  {
+    "name": "Smiling Cartoon Lion",
+    "subject": "animals/lion",
+    "tags": ["lion", "cartoon", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a round friendly cartoon lion sitting and facing forward with a big cheerful smile, a simple ring-shaped mane, small round ears, dot eyes, and a curled tufted tail, made of big simple shapes"
+  }
+]

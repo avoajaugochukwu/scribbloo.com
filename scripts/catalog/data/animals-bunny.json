@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cute Sitting Bunny",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "easy"],
+    "layout": "full",
+    "prompt": "a cute round cartoon bunny sitting upright with two tall ears pointing up, big friendly eyes, a tiny triangle nose, little whiskers, front paws together, and a fluffy round tail behind it"
+  },
+  {
+    "name": "Floppy-Eared Lop Bunny",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "lop"],
+    "layout": "full",
+    "prompt": "a fluffy lop-eared rabbit with two long ears hanging softly down beside its cheeks, a plump rounded body, gentle sleepy eyes, a small twitchy nose, and a puff of a tail"
+  },
+  {
+    "name": "Baby Bunny",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "baby", "easy"],
+    "layout": "full",
+    "prompt": "a tiny baby bunny curled up small with extra-big sparkly eyes, short little ears folded close to its head, a chubby fuzzy body, and a sweet shy smile, simple and adorable"
+  },
+  {
+    "name": "Bunny With a Carrot",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "carrot"],
+    "layout": "full",
+    "prompt": "a happy bunny holding a big carrot in both front paws and taking a nibble, leafy carrot top sticking up, cheeks rounded, ears perked, sitting on its back legs"
+  },
+  {
+    "name": "Easter Bunny With Basket",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "easter"],
+    "layout": "full",
+    "prompt": "a cheerful Easter bunny standing upright holding a woven basket full of decorated eggs, a small bow at its neck, ears up tall, a few patterned eggs spilling near its feet"
+  },
+  {
+    "name": "Bunny in a Flower Meadow",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "meadow", "spring"],
+    "layout": "full",
+    "prompt": "a bunny hopping through a spring meadow surrounded by tall grass, daisies and tulips, a butterfly fluttering above, and a few rounded hills with a sun behind it"
+  },
+  {
+    "name": "Hopping Bunny",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "hopping"],
+    "layout": "full",
+    "prompt": "a bunny mid-hop leaping through the air with back legs stretched out behind and front paws tucked up, ears swept back from the motion, an excited open-mouthed smile"
+  },
+  {
+    "name": "Bunny Face Close-Up",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "portrait", "easy"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a bunny's face filling the frame, two tall ears, large round eyes, a heart-shaped nose, soft fluffy cheeks and long whiskers fanning out to each side"
+  },
+  {
+    "name": "Two Bunnies Together",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "pair", "friends"],
+    "layout": "full",
+    "prompt": "two bunnies sitting close together side by side, one slightly taller, leaning their cheeks toward each other, both with perky ears and gentle smiles, a small flower between them"
+  },
+  {
+    "name": "Bunny in the Garden",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "garden", "scene"],
+    "layout": "full",
+    "prompt": "a bunny peeking out from a vegetable garden between rows of leafy carrot tops and cabbages, a little wooden fence behind it, a watering can and a few pebbles nearby"
+  },
+  {
+    "name": "Sleeping Bunny",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "sleeping", "easy"],
+    "layout": "full",
+    "prompt": "a cozy bunny curled into a soft ball fast asleep, eyes closed in two gentle curves, ears resting flat along its back, paws tucked under, a tiny sleep bubble above its nose"
+  },
+  {
+    "name": "Bunny With a Spring Bouquet",
+    "subject": "animals/bunny",
+    "tags": ["bunny", "rabbit", "flowers", "spring"],
+    "layout": "full",
+    "prompt": "a sweet bunny sitting up and holding a bundle of spring flowers like tulips and daisies in its front paws, ears tall, a happy smile, with a couple of fallen petals at its feet"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Friendly African Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "african-elephant"],
+    "layout": "full",
+    "prompt": "a friendly African elephant standing in profile, large fan-shaped ears spread wide, a long curling trunk, two curved tusks, a big round body on four sturdy legs, and a small tufted tail, looking calm and gentle"
+  },
+  {
+    "name": "Cute Baby Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "baby", "calf"],
+    "layout": "full",
+    "prompt": "a chubby cartoon baby elephant with big sparkly eyes, oversized floppy ears, a short stubby trunk lifted up happily, little round feet, and a tiny tail, sitting cheerfully"
+  },
+  {
+    "name": "Elephant Splashing Water",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "water", "bath"],
+    "layout": "full",
+    "prompt": "a happy elephant standing in a shallow watering hole spraying water over its back with its raised trunk, arcs of splashing water droplets, ripples around its legs, and a cheerful open-mouthed expression"
+  },
+  {
+    "name": "Mama and Baby Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "family", "baby"],
+    "layout": "full",
+    "prompt": "a large mother elephant gently curling her trunk to touch her small baby elephant walking close beside her, both standing on grassy ground, warm and loving expressions"
+  },
+  {
+    "name": "Elephant Portrait",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of an elephant's head and face, two big floppy ears framing the head, kind eyes with long lashes, a wrinkly forehead, the trunk curling gently down the middle, and small tusks"
+  },
+  {
+    "name": "Asian Elephant in the Jungle",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "asian-elephant", "jungle"],
+    "layout": "full",
+    "prompt": "a smaller Asian elephant with rounded smaller ears and a domed back walking through a leafy jungle, tall grass and a few palm fronds around it, a curled trunk reaching toward some hanging leaves"
+  },
+  {
+    "name": "Trumpeting Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "trumpeting"],
+    "layout": "full",
+    "prompt": "an excited elephant raising its head and lifting its trunk high in the air as if trumpeting a loud call, ears flared out, front foot slightly lifted, mouth open in a joyful expression"
+  },
+  {
+    "name": "Circus Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "circus", "balance"],
+    "layout": "full",
+    "prompt": "a cheerful circus elephant balancing on a small round pedestal with its front legs lifted, wearing a decorative headpiece and a patterned blanket on its back, trunk curled upward in a playful pose"
+  },
+  {
+    "name": "Elephant on the Savanna",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "savanna", "scene"],
+    "layout": "full",
+    "prompt": "an elephant walking across the African savanna, a flat-topped acacia tree to one side, low grassland, a round sun and a few clouds above, scattered tufts of grass at its feet"
+  },
+  {
+    "name": "Elephant Eating Leaves",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "eating", "tree"],
+    "layout": "full",
+    "prompt": "an elephant reaching its long trunk up to pull leafy branches from a tall tree, mouth slightly open, ears relaxed, a leafy branch held in the curl of the trunk, a calm content expression"
+  },
+  {
+    "name": "Toddler Easy Elephant",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a very simple round cartoon elephant made of big chunky shapes, a fat oval body, two large round ears, a short curved trunk, four thick stubby legs, and two dot eyes with a tiny smile, no fine details"
+  },
+  {
+    "name": "Two Elephant Friends",
+    "subject": "animals/elephant",
+    "tags": ["elephant", "pair", "friends"],
+    "layout": "full",
+    "prompt": "two elephants standing side by side facing each other with their trunks linked together in the middle like a heart shape, big ears, friendly smiling faces, standing on grassy ground"
+  }
+]

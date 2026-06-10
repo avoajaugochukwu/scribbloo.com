@@ -19,5 +19,68 @@
     "tags": ["fairy", "flowers", "garden"],
     "layout": "full",
     "prompt": "a sweet garden fairy kneeling among tall flowers, holding a small watering can, leafy wings and a petal skirt, with two butterflies fluttering nearby and rounded flower blossoms framing her"
+  },
+  {
+    "name": "Fairy on a Flower",
+    "subject": "fairy",
+    "tags": ["fairy", "flower"],
+    "layout": "full",
+    "prompt": "a tiny fairy perched inside the open petals of a big blooming flower as if it were a chair, knees tucked up and chin resting on her hands, rounded wings folded behind her, a curving stem with a leaf below"
+  },
+  {
+    "name": "Fairy and a Butterfly",
+    "subject": "fairy",
+    "tags": ["fairy", "butterfly"],
+    "layout": "full",
+    "prompt": "a gentle fairy standing on tiptoe reaching up to a large butterfly that has landed on her fingertip, the butterfly's wings spread wide with simple patterned shapes, a few smaller flutter-shapes and floating dots around them"
+  },
+  {
+    "name": "Sleeping Fairy",
+    "subject": "fairy",
+    "tags": ["fairy", "sleeping", "moon"],
+    "layout": "full",
+    "prompt": "a peaceful fairy curled up asleep inside a flower-petal hammock slung between two stems, eyes gently closed with a soft smile, wings tucked in, a crescent moon and a scatter of stars in the night above her"
+  },
+  {
+    "name": "Tooth Fairy",
+    "subject": "fairy",
+    "tags": ["fairy", "tooth-fairy"],
+    "layout": "full",
+    "prompt": "a friendly tooth fairy hovering with little wings, holding a small drawstring pouch in one hand and a shiny tooth in the other, a star-tipped wand tucked in her belt, a sprinkle of sparkles and a tiny pillow below"
+  },
+  {
+    "name": "Fairy House in a Tree",
+    "subject": "fairy",
+    "tags": ["fairy", "house", "tree"],
+    "layout": "full",
+    "prompt": "a cozy little fairy house built into the base of an old tree trunk, a round arched door, two small round windows, a curled mushroom-cap roof, a tiny stone path and a few flowers and toadstools at the doorstep"
+  },
+  {
+    "name": "Water Fairy by the Pond",
+    "subject": "fairy",
+    "tags": ["fairy", "water", "pond"],
+    "layout": "full",
+    "prompt": "a graceful water fairy sitting on a broad lily pad at the edge of a calm pond, trailing one hand in the water to make ripples, slender dragonfly-like wings, cattails and a curious frog on a nearby leaf"
+  },
+  {
+    "name": "Fairy Friends Dancing",
+    "subject": "fairy",
+    "tags": ["fairy", "friends", "dancing"],
+    "layout": "full",
+    "prompt": "three little fairies holding hands and dancing together in a ring on the grass, flowing skirts twirling and wings spread, happy laughing faces, a circle of small mushrooms and flowers around their feet"
+  },
+  {
+    "name": "Winter Fairy",
+    "subject": "fairy",
+    "tags": ["fairy", "winter", "snowflake"],
+    "layout": "full",
+    "prompt": "a delicate winter fairy floating gently with frost-patterned wings, wearing a cozy petal dress with a fluffy collar, holding a large six-sided snowflake, soft snowflakes drifting down around her"
+  },
+  {
+    "name": "Baby Fairy",
+    "subject": "fairy",
+    "tags": ["fairy", "baby"],
+    "layout": "full",
+    "prompt": "an adorable chubby-cheeked baby fairy sitting in the cup of a tulip flower, tiny round wings, a big happy grin, reaching both little arms up toward a fluttering ladybug, with simple grass and a leaf nearby"
   }
 ]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Galloping Horse",
+    "subject": "animals/horse",
+    "tags": ["horse", "galloping", "running"],
+    "layout": "full",
+    "prompt": "a graceful horse galloping at full speed with all legs in motion, a long mane and tail streaming back in the wind, head held high, a strong muscular body, and a little grass kicked up beneath its hooves"
+  },
+  {
+    "name": "Grazing Mare",
+    "subject": "animals/horse",
+    "tags": ["horse", "mare", "grazing"],
+    "layout": "full",
+    "prompt": "a calm mare standing in a meadow with her head lowered to nibble grass, a smooth flowing mane, four sturdy legs, a relaxed swishing tail, and a few wildflowers and grass tufts around her hooves"
+  },
+  {
+    "name": "Cute Baby Foal",
+    "subject": "animals/horse",
+    "tags": ["horse", "foal", "baby"],
+    "layout": "full",
+    "prompt": "an adorable baby foal with a big round head, long wobbly legs, oversized sparkly eyes, tiny tufted mane and short fluffy tail, standing in a cute pose with a sweet happy expression"
+  },
+  {
+    "name": "Show Jumping Horse",
+    "subject": "animals/horse",
+    "tags": ["horse", "jumping", "show"],
+    "layout": "full",
+    "prompt": "an athletic horse leaping over a striped show-jumping fence, front legs tucked up and back legs pushing off, mane and tail flying, wearing a simple bridle, with the rail and a couple of poles below"
+  },
+  {
+    "name": "Pony with Flowing Mane",
+    "subject": "animals/horse",
+    "tags": ["horse", "pony", "mane"],
+    "layout": "full",
+    "prompt": "a cute round-bodied pony standing in profile with a very long, thick, wavy mane and a full flowing tail, short stocky legs, small ears, and a friendly smiling face"
+  },
+  {
+    "name": "Spotted Appaloosa",
+    "subject": "animals/horse",
+    "tags": ["horse", "appaloosa", "spotted"],
+    "layout": "full",
+    "prompt": "a standing Appaloosa horse with a clear pattern of round spots scattered across its rump and back, a neat short mane, a strong body, alert pointed ears, and a calm steady stance"
+  },
+  {
+    "name": "Horse Portrait Close-Up",
+    "subject": "animals/horse",
+    "tags": ["horse", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up head-and-neck portrait of a horse facing slightly toward the viewer, large gentle eyes, soft nostrils, two pointed ears, a forelock falling between the ears, and a flowing mane along the neck"
+  },
+  {
+    "name": "Saddled Riding Horse",
+    "subject": "animals/horse",
+    "tags": ["horse", "saddle", "tack"],
+    "layout": "full",
+    "prompt": "a horse fully tacked up and ready to ride, wearing a saddle with stirrups, a bridle and reins, and a saddle blanket, standing patiently in profile with a neatly brushed mane and tail"
+  },
+  {
+    "name": "Rearing Stallion",
+    "subject": "animals/horse",
+    "tags": ["horse", "stallion", "rearing"],
+    "layout": "full",
+    "prompt": "a powerful stallion rearing up on its hind legs with front hooves raised high in the air, a dramatic flowing mane and tail, an arched neck, an open spirited expression, and a strong muscular chest"
+  },
+  {
+    "name": "Mare and Foal",
+    "subject": "animals/horse",
+    "tags": ["horse", "mare", "foal", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother horse standing beside her small foal, the mare lowering her head to nuzzle the baby, both with soft flowing manes, standing close together in a grassy field with a couple of flowers"
+  },
+  {
+    "name": "Horse in the Barn",
+    "subject": "animals/horse",
+    "tags": ["horse", "barn", "stable", "scene"],
+    "layout": "full",
+    "prompt": "a happy horse looking out over the half-door of a wooden stable stall, head and chest poking out, a hanging hay net and a few wisps of hay nearby, plank walls and a simple barn window in the background"
+  },
+  {
+    "name": "Carousel Horse",
+    "subject": "animals/horse",
+    "tags": ["horse", "carousel", "fancy"],
+    "layout": "full",
+    "prompt": "a decorative carousel horse on a spiral pole, prancing with one leg lifted, wearing a fancy ornamental saddle and bridle decorated with swirls, flowers, and ribbons, and a fancy curled mane"
+  }
+]

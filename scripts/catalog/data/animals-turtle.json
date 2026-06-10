@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Friendly Pond Turtle",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "pond-turtle"],
+    "layout": "full",
+    "prompt": "a cheerful pond turtle standing on four stubby legs in profile, a rounded dome shell divided into clear segment plates, a small smiling head poking forward, gentle friendly eyes"
+  },
+  {
+    "name": "Sea Turtle Swimming",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "sea-turtle", "ocean"],
+    "layout": "full",
+    "prompt": "a graceful sea turtle gliding underwater with wide flipper-shaped legs stretched out, a smooth flat shell patterned in large plates, a few bubbles, a couple of small fish and wavy seaweed around it"
+  },
+  {
+    "name": "Baby Turtle Hatchling",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "baby", "hatchling"],
+    "layout": "full",
+    "prompt": "a tiny cute baby turtle crawling out of a cracked egg on the sand, big sparkly eyes, a soft little shell, short flippers reaching forward, two more turtle eggs resting in a shallow nest beside it"
+  },
+  {
+    "name": "Desert Tortoise",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "tortoise", "land"],
+    "layout": "full",
+    "prompt": "a sturdy land tortoise with a tall domed shell made of bumpy segment plates, thick stumpy elephant-like legs, a wrinkly neck stretched out, walking slowly across the ground with a small cactus nearby"
+  },
+  {
+    "name": "Turtle Shell Close-Up",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "shell", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up of a turtle from above showing the full top of its detailed shell, neat rows of hexagonal and rectangular segment plates forming a bold pattern, the head and four legs peeking out around the edges"
+  },
+  {
+    "name": "Turtle on a Log",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "pond", "scene"],
+    "layout": "full",
+    "prompt": "a happy turtle basking on a fallen log over the water, neck stretched up toward the sun, ripples below the log, a few cattail reeds and lily pads around the edges of the pond"
+  },
+  {
+    "name": "Two Turtle Friends",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "pair", "friends"],
+    "layout": "full",
+    "prompt": "two friendly turtles side by side facing each other, both with patterned dome shells and cheerful smiles, leaning their heads close together as if chatting, a small flower between them"
+  },
+  {
+    "name": "Cartoon Toddler Turtle",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "toddler", "easy"],
+    "layout": "full",
+    "prompt": "a very simple round cartoon turtle for little hands, one big smiling head, a plain rounded shell with a few large segments, four short chunky legs, thick bold simple shapes"
+  },
+  {
+    "name": "Sea Turtle on the Beach",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "sea-turtle", "beach"],
+    "layout": "full",
+    "prompt": "a sea turtle crawling up a sandy beach with broad flippers, a patterned flat shell, gentle waves rolling in behind it, a starfish and a couple of seashells scattered on the sand, a low sun on the horizon"
+  },
+  {
+    "name": "Turtle Eating a Strawberry",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "activity", "food"],
+    "layout": "full",
+    "prompt": "a cute turtle stretching its neck forward to take a bite of a big strawberry on the ground in front of it, happy closed-eye expression, a patterned shell, a leaf and another berry nearby"
+  },
+  {
+    "name": "Painted Box Turtle",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "box-turtle"],
+    "layout": "full",
+    "prompt": "a box turtle standing in grass, a high-domed shell covered in detailed radiating line patterns and small markings, a short snout, alert eyes, a few blades of grass and a tiny flower beside it"
+  },
+  {
+    "name": "Mama Turtle and Baby",
+    "subject": "animals/turtle",
+    "tags": ["turtle", "family", "baby"],
+    "layout": "full",
+    "prompt": "a large mother turtle lowering her head toward her tiny baby turtle following close behind her, both with patterned shells, walking together along the edge of a pond with reeds, warm loving expressions"
+  }
+]

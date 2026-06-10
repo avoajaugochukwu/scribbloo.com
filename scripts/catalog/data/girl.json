@@ -19,5 +19,68 @@
     "tags": ["girl", "princess"],
     "layout": "full",
     "prompt": "a young princess wearing a big flowing ball gown with layered ruffled skirts and a sparkling pointed tiara, holding out the sides of her dress in a curtsy, a happy smile, with a few sparkles around the hem"
+  },
+  {
+    "name": "Girl Reading a Book",
+    "subject": "girl",
+    "tags": ["girl", "reading", "book"],
+    "layout": "full",
+    "prompt": "a girl sitting cross-legged with an open storybook resting on her lap, looking down at the pages with a delighted smile, her hair tied in a loose braid, a small stack of books beside her and a few tiny stars drifting up from the open pages"
+  },
+  {
+    "name": "Girl Dancing in a Tutu",
+    "subject": "girl",
+    "tags": ["girl", "dancing", "ballerina"],
+    "layout": "full",
+    "prompt": "a graceful little girl in a fluffy ballet tutu and ballet slippers standing on her tiptoes with one arm raised overhead and one leg lifted behind her, her hair in a neat bun, a few sparkles and swirling ribbons around her"
+  },
+  {
+    "name": "Girl with Her Puppy",
+    "subject": "girl",
+    "tags": ["girl", "puppy", "dog"],
+    "layout": "full",
+    "prompt": "a happy girl kneeling down to pet a small wagging puppy that is jumping up toward her, the puppy's tongue out and tail curled, the girl's hair in two pigtails, a little bone and a bouncing ball on the ground nearby"
+  },
+  {
+    "name": "Girl at the Beach",
+    "subject": "girl",
+    "tags": ["girl", "beach", "summer"],
+    "layout": "full",
+    "prompt": "a girl in a sun hat and swimsuit kneeling beside a sandcastle she is building with a bucket and shovel, a beach ball and a starfish nearby, gentle wavy lines of water and a couple of seashells around her"
+  },
+  {
+    "name": "Girl Baking Cupcakes",
+    "subject": "girl",
+    "tags": ["girl", "baking", "cupcakes"],
+    "layout": "full",
+    "prompt": "a cheerful girl wearing an apron and a chef hat stirring a big mixing bowl with a wooden spoon, a tray of frosted cupcakes and a rolling pin on the table in front of her, a little flour puff and a heart floating above"
+  },
+  {
+    "name": "Girl with Flowers",
+    "subject": "girl",
+    "tags": ["girl", "flowers", "spring"],
+    "layout": "full",
+    "prompt": "a sweet girl holding a big bouquet of daisies and tulips in both arms, smelling the blooms with closed eyes and a soft smile, a flower tucked behind her ear, a couple of butterflies fluttering around her"
+  },
+  {
+    "name": "Girl on a Swing",
+    "subject": "girl",
+    "tags": ["girl", "swing", "playground"],
+    "layout": "full",
+    "prompt": "a joyful girl swinging high on a rope swing with her legs kicked out in front and hair flying back, her hands gripping the ropes, a leafy tree branch above where the swing hangs, a few birds and clouds in the sky"
+  },
+  {
+    "name": "Girl Painting at an Easel",
+    "subject": "girl",
+    "tags": ["girl", "painting", "art"],
+    "layout": "full",
+    "prompt": "a girl standing at a wooden easel holding a paintbrush and a palette, dabbing color onto a canvas that shows a simple sun and house, a smock over her clothes, a jar of brushes and a paint tube on a stool beside her"
+  },
+  {
+    "name": "Toddler Girl with Teddy",
+    "subject": "girl",
+    "tags": ["girl", "toddler", "teddy bear"],
+    "layout": "full",
+    "prompt": "a chubby little toddler girl with one curl of hair and a big simple dress hugging a round teddy bear tightly to her chest, big happy eyes, drawn with extra-simple chunky shapes, a small star and heart beside her"
   }
 ]

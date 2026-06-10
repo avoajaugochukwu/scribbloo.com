@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Swinging Monkey",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "swinging", "jungle"],
+    "layout": "full",
+    "prompt": "a cheerful cartoon monkey swinging from a leafy vine, one long arm gripping the vine above, the other arm waving, a long curling tail hanging down, a happy open-mouth smile and big round eyes"
+  },
+  {
+    "name": "Monkey with Banana",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "banana"],
+    "layout": "full",
+    "prompt": "a sitting monkey holding a peeled banana in both hands and taking a happy bite, rounded ears, a content smile, its tail curled neatly beside it"
+  },
+  {
+    "name": "Cute Baby Monkey",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "baby", "cute"],
+    "layout": "full",
+    "prompt": "a tiny adorable baby monkey sitting up with very big sparkly eyes, oversized round ears, small hands resting on its lap, a short curled tail, a sweet shy smile, simple and chunky shapes"
+  },
+  {
+    "name": "Monkey Face Close-Up",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "portrait", "face"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of a friendly monkey's face filling the frame, large expressive eyes, a heart-shaped hairless face, round ears on the sides, a gentle grin showing a few teeth"
+  },
+  {
+    "name": "Monkey in a Tree",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "tree", "jungle"],
+    "layout": "full",
+    "prompt": "a monkey perched on a thick tree branch surrounded by big jungle leaves, one hand holding the branch, its long tail wrapped around it for balance, a few hanging fruits and a peeking bird nearby"
+  },
+  {
+    "name": "Howler Monkey Calling",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "howler"],
+    "layout": "full",
+    "prompt": "a howler monkey sitting on a branch with its head tilted up and mouth wide open as if calling out loudly, a rounded jaw, shaggy fur texture, a long thick tail curled around the branch"
+  },
+  {
+    "name": "Spider Monkey Hanging",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "spider-monkey"],
+    "layout": "full",
+    "prompt": "a slim spider monkey hanging upside down from a branch by its long prehensile tail, long thin arms and legs dangling, a small round face looking forward, a couple of leaves around it"
+  },
+  {
+    "name": "Capuchin Monkey",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "capuchin"],
+    "layout": "full",
+    "prompt": "a small capuchin monkey sitting upright with a pale cap-like marking on the top of its head and a pale face, neat folded hands, alert curious eyes, a long tail trailing to one side"
+  },
+  {
+    "name": "Mom and Baby Monkey",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "baby", "family"],
+    "layout": "full",
+    "prompt": "a mother monkey sitting and cradling her small baby monkey, the baby clinging to her chest with tiny hands, both with loving expressions, their tails curling together, soft and warm scene"
+  },
+  {
+    "name": "Two Monkeys Playing",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "pair", "playing"],
+    "layout": "full",
+    "prompt": "two playful monkeys chasing and reaching toward each other on a pair of branches, big grins and outstretched arms, their long tails swooping in curvy lines, a few scattered leaves between them"
+  },
+  {
+    "name": "Monkey Troop in the Jungle",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "troop", "jungle", "scene"],
+    "layout": "full",
+    "prompt": "a busy jungle scene with several monkeys swinging on vines, sitting on branches, and peeking from behind big leaves, tall trees with hanging fruit, a detailed rainforest full of things to color"
+  },
+  {
+    "name": "Monkey Eating Fruit",
+    "subject": "animals/monkey",
+    "tags": ["monkey", "fruit"],
+    "layout": "full",
+    "prompt": "a happy monkey sitting cross-legged with a small pile of jungle fruit in front of it, holding one round fruit up to its mouth, a leafy branch overhead, cheerful eyes and puffed cheeks"
+  }
+]

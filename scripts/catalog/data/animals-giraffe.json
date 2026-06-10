@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Standing Giraffe",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "standing", "savanna"],
+    "layout": "full",
+    "prompt": "a tall friendly giraffe standing in profile on four long slender legs, a very long neck held upright, two short knobby horns on top of its head, a patchwork pattern of rounded patches across its body, a tufted tail, and a gentle smile"
+  },
+  {
+    "name": "Cute Baby Giraffe",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "baby", "calf", "cute"],
+    "layout": "full",
+    "prompt": "an adorable baby giraffe with a big head, large sparkly eyes and long eyelashes, wobbly knobby-kneed legs, a short stubby neck, little rounded horns, and a few large simple patches, looking sweet and curious"
+  },
+  {
+    "name": "Giraffe Face Close-Up",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "face", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a giraffe's face and upper neck filling the frame, big gentle eyes with long lashes, two knobby horns, large rounded ears, a soft muzzle with a smile, and a few patches along the neck"
+  },
+  {
+    "name": "Mother and Baby Giraffe",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "family", "baby", "mother"],
+    "layout": "full",
+    "prompt": "a tall mother giraffe lowering her long neck to nuzzle her small baby giraffe standing beside her, both with patchwork patterns and gentle loving faces, a few blades of grass at their feet"
+  },
+  {
+    "name": "Giraffe Eating Leaves",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "acacia", "eating", "tree"],
+    "layout": "full",
+    "prompt": "a giraffe stretching its long neck up to nibble leaves from the flat top of a tall acacia tree, tongue reaching toward a leafy branch, body covered in rounded patches, long legs planted on the ground"
+  },
+  {
+    "name": "Running Giraffe",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "running", "galloping"],
+    "layout": "full",
+    "prompt": "a giraffe galloping across the savanna with legs stretched out mid-stride, neck leaning forward, tail flying behind, a happy expression, and a patchwork coat suggesting speed and motion"
+  },
+  {
+    "name": "Giraffe Drinking Water",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "drinking", "waterhole"],
+    "layout": "full",
+    "prompt": "a giraffe with its front legs splayed wide and long neck bent all the way down to sip from a small waterhole, ripples on the water surface, a few reeds and pebbles at the edge"
+  },
+  {
+    "name": "Giraffe and Zebra Friends",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "zebra", "friends", "savanna"],
+    "layout": "full",
+    "prompt": "a tall spotted giraffe standing beside a striped zebra friend, both facing forward with cheerful smiles, a small acacia tree and a few clumps of grass behind them on the savanna"
+  },
+  {
+    "name": "Giraffe Under the Sun",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "sun", "scene"],
+    "layout": "full",
+    "prompt": "a happy giraffe standing tall on a grassy plain, a round smiling sun and a few fluffy clouds in the sky above, scattered tufts of grass and a small bush at its feet, simple and cheerful"
+  },
+  {
+    "name": "Sitting Baby Giraffe",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "baby", "sitting", "cute"],
+    "layout": "full",
+    "prompt": "a chubby baby giraffe resting on the ground with its long legs folded underneath, neck curved softly to one side, big happy eyes, tiny horns, and a few simple large patches, looking cozy and content"
+  },
+  {
+    "name": "Two Giraffes Crossing Necks",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "pair", "necks"],
+    "layout": "full",
+    "prompt": "two friendly giraffes standing side by side with their long necks gently crossing in an X shape, both heads turned toward each other with warm smiles, patchwork coats and tufted tails"
+  },
+  {
+    "name": "Giraffe with Birds",
+    "subject": "animals/giraffe",
+    "tags": ["giraffe", "birds", "savanna", "scene"],
+    "layout": "full",
+    "prompt": "a calm giraffe standing tall with two small oxpecker birds perched on its back and neck, head turned slightly to look at them, a butterfly fluttering nearby, and a few patches of savanna grass below"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cheerful Robin",
+    "subject": "animals/bird",
+    "tags": ["bird", "robin", "songbird"],
+    "layout": "full",
+    "prompt": "a plump cheerful robin perched on a thin twig, a round body with a puffed-out breast, a short pointed beak, a small wing tucked at its side, two tiny clawed feet gripping the branch, a happy eye and a couple of leaves nearby"
+  },
+  {
+    "name": "Wise Owl on a Branch",
+    "subject": "animals/bird",
+    "tags": ["bird", "owl"],
+    "layout": "full",
+    "prompt": "a wise round owl perched on a sturdy tree branch at night, two big front-facing eyes, little feather tufts on its head, a short hooked beak, fluffy patterned chest feathers, and a crescent moon and a few stars in the sky behind it"
+  },
+  {
+    "name": "Proud Peacock",
+    "subject": "animals/bird",
+    "tags": ["bird", "peacock"],
+    "layout": "full",
+    "prompt": "a proud peacock standing tall with its enormous tail fanned out in a wide half-circle behind it, rows of large eye-shaped feathers, a small crest of feathers on its head, a slender neck, and dainty feet"
+  },
+  {
+    "name": "Colorful Parrot",
+    "subject": "animals/bird",
+    "tags": ["bird", "parrot", "tropical"],
+    "layout": "full",
+    "prompt": "a colorful parrot gripping a leafy tropical branch with both feet, a curved hooked beak, a rounded head, long layered tail feathers hanging down, one wing slightly raised, and a couple of big leaves and a hanging vine around it"
+  },
+  {
+    "name": "Baby Chick",
+    "subject": "animals/bird",
+    "tags": ["bird", "chick", "baby"],
+    "layout": "full",
+    "prompt": "a tiny fluffy baby chick standing in grass, a very round soft body, big sparkly eyes, a small triangular beak open as if peeping, two short stubby legs, and one little wing lifted, looking adorable and simple"
+  },
+  {
+    "name": "Flamingo on One Leg",
+    "subject": "animals/bird",
+    "tags": ["bird", "flamingo"],
+    "layout": "full",
+    "prompt": "a graceful flamingo standing on one long thin leg in shallow water, the other leg tucked up, a long curved S-shaped neck, a head bent down low, a thick down-curved beak, and gentle water ripples around its foot"
+  },
+  {
+    "name": "Hummingbird at a Flower",
+    "subject": "animals/bird",
+    "tags": ["bird", "hummingbird"],
+    "layout": "full",
+    "prompt": "a tiny hummingbird hovering in mid-air beside a large trumpet-shaped flower, wings spread wide and blurred-fast, a very long thin needle beak dipping into the bloom, a small streamlined body and a fanned little tail"
+  },
+  {
+    "name": "Cardinal in Winter",
+    "subject": "animals/bird",
+    "tags": ["bird", "cardinal", "winter"],
+    "layout": "full",
+    "prompt": "a cardinal perched on a snowy pine branch, a pointed crest of feathers on top of its head, a short thick triangular beak, a small mask around its eye, a rounded body and tail, with a few pine needles and falling snowflakes"
+  },
+  {
+    "name": "Toucan Close-Up",
+    "subject": "animals/bird",
+    "tags": ["bird", "toucan", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a toucan's head and shoulders, an enormous oversized curved beak taking up most of the picture, a large round friendly eye, smooth head feathers, and a leafy jungle leaf behind it"
+  },
+  {
+    "name": "Duck on the Pond",
+    "subject": "animals/bird",
+    "tags": ["bird", "duck", "pond"],
+    "layout": "full",
+    "prompt": "a happy duck floating on a calm pond, a smooth rounded body, a flat broad beak, a small wing folded on its back, gentle ripples spreading out around it, a cattail reed and a lily pad with a flower nearby"
+  },
+  {
+    "name": "Eagle Soaring",
+    "subject": "animals/bird",
+    "tags": ["bird", "eagle", "flying"],
+    "layout": "full",
+    "prompt": "a majestic eagle soaring through the sky with both wings spread wide and full of layered feathers, a sharp hooked beak, strong taloned feet tucked beneath it, a fanned tail, and a few small clouds and distant mountain peaks below"
+  },
+  {
+    "name": "Bird Family in a Nest",
+    "subject": "animals/bird",
+    "tags": ["bird", "nest", "family", "baby"],
+    "layout": "full",
+    "prompt": "a mother bird standing on the edge of a round twig nest feeding three tiny baby birds, the little chicks with open beaks reaching up eagerly, two speckled eggs still in the nest, all resting on a leafy branch"
+  }
+]

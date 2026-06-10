@@ -19,5 +19,68 @@
     "tags": ["animals", "lion"],
     "layout": "full",
     "prompt": "a friendly cartoon lion sitting upright with a big fluffy curly mane framing its face, a happy smile, rounded paws, and a tufted tail curled around beside it"
+  },
+  {
+    "name": "Sleepy Sloth",
+    "subject": "animals",
+    "tags": ["animals", "sloth"],
+    "layout": "full",
+    "prompt": "a cute sleepy sloth hanging upside down from a thick tree branch by its long curved claws, a slow contented smile, half-closed droopy eyes, shaggy fur, a couple of leaves dangling nearby"
+  },
+  {
+    "name": "Happy Fox",
+    "subject": "animals",
+    "tags": ["animals", "fox"],
+    "layout": "full",
+    "prompt": "a cheerful sitting fox with large pointed ears, a long bushy tail wrapped around its paws, a slender pointed snout with a happy smile, and bright alert eyes"
+  },
+  {
+    "name": "Cuddly Koala",
+    "subject": "animals",
+    "tags": ["animals", "koala"],
+    "layout": "full",
+    "prompt": "a round cuddly koala hugging a eucalyptus tree trunk, big fluffy round ears, a large oval nose, sleepy gentle eyes, and small clawed paws gripping the bark, a few leaves above"
+  },
+  {
+    "name": "Curious Raccoon",
+    "subject": "animals",
+    "tags": ["animals", "raccoon"],
+    "layout": "full",
+    "prompt": "a curious raccoon sitting up on its hind legs, a bushy ringed tail curled behind it, a black mask marking across its eyes, small rounded ears, dexterous little front paws held up as if inspecting something, bright alert eyes"
+  },
+  {
+    "name": "Little Hedgehog",
+    "subject": "animals",
+    "tags": ["animals", "hedgehog"],
+    "layout": "full",
+    "prompt": "a tiny round hedgehog with a back full of short spiky quills, a small pointed nose, little round eyes, four stubby legs, sniffing at a single fallen leaf and an acorn on the ground"
+  },
+  {
+    "name": "Spotted Fawn",
+    "subject": "animals",
+    "tags": ["animals", "deer", "fawn"],
+    "layout": "full",
+    "prompt": "a delicate baby deer fawn standing on slender legs in a grassy meadow, rows of soft spots across its back, big gentle eyes, tall ears, a tiny tail, with a few wildflowers and tall grass around its hooves"
+  },
+  {
+    "name": "Playful Otter",
+    "subject": "animals",
+    "tags": ["animals", "otter"],
+    "layout": "full",
+    "prompt": "a playful otter floating on its back on the water surface, paws holding a smooth round pebble on its tummy, a whiskered smiling face, sleek body, and gentle water ripples and a couple of bubbles around it"
+  },
+  {
+    "name": "Hopping Kangaroo",
+    "subject": "animals",
+    "tags": ["animals", "kangaroo"],
+    "layout": "full",
+    "prompt": "a friendly kangaroo standing on strong back legs and a thick tail, a small joey peeking out of the pouch on its belly, tall pointed ears, short front arms, and a gentle smiling face"
+  },
+  {
+    "name": "Owl Portrait",
+    "subject": "animals",
+    "tags": ["animals", "owl", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of a wise owl from the chest up, two very large round eyes, a small curved beak, feathery tufts above the ears, detailed layered chest feathers, perched and looking straight ahead"
   }
 ]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Happy Penguin",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "cute", "easy"],
+    "layout": "full",
+    "prompt": "a cheerful round cartoon penguin standing facing forward, a plump white belly, dark back and head, two little flippers held out at its sides, webbed feet, a small triangular beak and big friendly eyes"
+  },
+  {
+    "name": "Emperor Penguin",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "emperor"],
+    "layout": "full",
+    "prompt": "a tall stately Emperor penguin standing in profile, a smooth rounded body, a curved patch of color around the side of its neck, a long slender beak, flippers tucked close, standing proudly upright"
+  },
+  {
+    "name": "Baby Penguin Chick",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "baby", "chick", "cute"],
+    "layout": "full",
+    "prompt": "a tiny fluffy baby penguin chick with a round fuzzy body, a soft downy texture, oversized sparkly eyes, a small beak, stubby flippers, and short legs, looking adorable and a little wobbly"
+  },
+  {
+    "name": "Penguin Family",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "family", "baby"],
+    "layout": "full",
+    "prompt": "two tall parent penguins standing side by side with a small fluffy chick between them, the parents leaning their heads gently toward the baby, all with warm happy expressions on a patch of snow"
+  },
+  {
+    "name": "Swimming Penguin",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "swimming", "underwater"],
+    "layout": "full",
+    "prompt": "a sleek penguin diving and gliding through water with flippers swept back like wings, body stretched out and streamlined, a few bubbles trailing behind it and gentle wavy water lines around it"
+  },
+  {
+    "name": "Sliding Penguin",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "sliding", "tobogganing"],
+    "layout": "full",
+    "prompt": "a playful penguin sliding on its belly down a snowy slope, flippers pushed back, feet kicking up, a big delighted grin, with small lines and little snow puffs showing the speedy slide"
+  },
+  {
+    "name": "Penguin on an Iceberg",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "iceberg", "scene"],
+    "layout": "full",
+    "prompt": "a penguin standing on top of a chunky floating iceberg, calm water with gentle ripples below, a couple of distant snowy peaks behind, and a few small floating ice chunks nearby"
+  },
+  {
+    "name": "Waddling Penguin",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "waddling", "walking"],
+    "layout": "full",
+    "prompt": "a chubby penguin caught mid-waddle as it walks, body tilted slightly, one foot lifted forward, flippers swung out for balance, a cheerful tipped-up beak and a bouncy happy posture"
+  },
+  {
+    "name": "Penguin Portrait",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up head and shoulders portrait of a penguin facing forward, showing detailed feather texture around the face, big shiny eyes, a smooth beak with a soft highlight, and a curved feather pattern across the chest"
+  },
+  {
+    "name": "Penguin Colony",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "colony", "huddle", "detailed"],
+    "layout": "full",
+    "prompt": "a group of several penguins huddled close together in a colony, some facing different directions, a couple of small chicks among them, all standing close to share warmth on a snowy plain"
+  },
+  {
+    "name": "Penguin with a Fish",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "fish", "activity"],
+    "layout": "full",
+    "prompt": "a happy penguin standing and holding a fish in its beak, head tilted proudly, flippers out to the sides, a satisfied expression, with a small splash of water near its feet"
+  },
+  {
+    "name": "Penguin in a Winter Hat",
+    "subject": "animals/penguin",
+    "tags": ["penguin", "winter", "hat", "cute"],
+    "layout": "full",
+    "prompt": "a cute cartoon penguin wearing a cozy knitted winter hat with a fluffy pom-pom and a long striped scarf wrapped around its neck, flippers raised happily, a couple of falling snowflakes around it"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Fluffy Sitting Cat",
+    "subject": "animals/cat",
+    "tags": ["cat", "kitty", "sitting"],
+    "layout": "full",
+    "prompt": "a fluffy cat sitting upright facing forward, tail curled neatly around its front paws, big round eyes, pointed ears, and long whiskers, a calm friendly expression"
+  },
+  {
+    "name": "Sleeping Curled Cat",
+    "subject": "animals/cat",
+    "tags": ["cat", "sleeping", "cozy"],
+    "layout": "full",
+    "prompt": "a content cat curled up into a tight round ball fast asleep, eyes closed in a peaceful smile, tail wrapped over its nose, lying on a soft folded blanket"
+  },
+  {
+    "name": "Kitten Playing with Yarn",
+    "subject": "animals/cat",
+    "tags": ["cat", "kitten", "playful", "yarn"],
+    "layout": "full",
+    "prompt": "a playful kitten lying on its back batting at a ball of yarn with both front paws, a loose tangled thread looping around it, ears perked and an excited open-mouthed grin"
+  },
+  {
+    "name": "Big-Eyed Kitten Portrait",
+    "subject": "animals/cat",
+    "tags": ["cat", "kitten", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up portrait of an adorable kitten's face filling the frame, enormous sparkling round eyes, a tiny triangle nose, big soft ears, and long fine whiskers fanning out to each side"
+  },
+  {
+    "name": "Cat in the Window",
+    "subject": "animals/cat",
+    "tags": ["cat", "window", "scene"],
+    "layout": "full",
+    "prompt": "a cat sitting on a windowsill looking outside, a framed window with a potted plant beside it, a curtain draped to one side, a moon and a couple of stars visible in the night sky outdoors"
+  },
+  {
+    "name": "Tabby Cat Stretching",
+    "subject": "animals/cat",
+    "tags": ["cat", "tabby", "stretching"],
+    "layout": "full",
+    "prompt": "a tabby cat in a long downward stretch, front legs reaching far forward and back arched up high, tail raised, striped fur pattern along its back, eyes squeezed shut in a satisfied yawn"
+  },
+  {
+    "name": "Cat in a Basket",
+    "subject": "animals/cat",
+    "tags": ["cat", "basket", "cozy"],
+    "layout": "full",
+    "prompt": "a chubby cat nestled inside a round woven basket with only its head, front paws, and curled tail peeking over the rim, a small cushion underneath, a relaxed sleepy smile"
+  },
+  {
+    "name": "Mother Cat and Kitten",
+    "subject": "animals/cat",
+    "tags": ["cat", "kitten", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother cat sitting beside her small kitten and leaning down to lick the top of its head, the kitten looking up happily, both with soft fur and loving expressions"
+  },
+  {
+    "name": "Cat Chasing a Butterfly",
+    "subject": "animals/cat",
+    "tags": ["cat", "butterfly", "playful", "scene"],
+    "layout": "full",
+    "prompt": "a curious cat up on its hind legs reaching a front paw toward a butterfly fluttering just above its head, a few flowers and blades of grass at its feet, an eager playful look"
+  },
+  {
+    "name": "Cute Cat Face",
+    "subject": "animals/cat",
+    "tags": ["cat", "toddler", "easy"],
+    "layout": "full",
+    "prompt": "a simple round cartoon cat face with big chunky outlines, two large dot eyes, a tiny nose and smiling mouth, three short whiskers on each side, and two pointed ears on top, very easy for little hands"
+  },
+  {
+    "name": "Cat with a Bow Tie",
+    "subject": "animals/cat",
+    "tags": ["cat", "bow", "fancy"],
+    "layout": "full",
+    "prompt": "a proud cat sitting tall wearing a fancy bow tie and a small collar with a round bell, fur neatly groomed, chest puffed out, a cheerful confident expression"
+  },
+  {
+    "name": "Cat Loafing in the Garden",
+    "subject": "animals/cat",
+    "tags": ["cat", "garden", "habitat", "scene"],
+    "layout": "full",
+    "prompt": "a relaxed cat sitting in loaf position with all four paws tucked under its body, resting among garden flowers, tall grass, and a butterfly nearby, eyes half closed and content"
+  }
+]

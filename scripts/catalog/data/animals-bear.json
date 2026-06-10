@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cuddly Teddy Bear",
+    "subject": "animals/bear",
+    "tags": ["bear", "teddy bear", "toddler"],
+    "layout": "full",
+    "prompt": "a round cuddly teddy bear sitting facing forward, big rounded ears, a stitched smile and a little oval nose, short stubby arms and legs, a small heart on its tummy, soft and simple with chunky shapes"
+  },
+  {
+    "name": "Brown Grizzly Bear",
+    "subject": "animals/bear",
+    "tags": ["bear", "grizzly", "brown bear"],
+    "layout": "full",
+    "prompt": "a big friendly brown grizzly bear standing on all four legs in profile, a broad shoulder hump, rounded ears, a long snout, large clawed paws, and a calm gentle expression"
+  },
+  {
+    "name": "Polar Bear on the Ice",
+    "subject": "animals/bear",
+    "tags": ["bear", "polar bear", "arctic"],
+    "layout": "full",
+    "prompt": "a fluffy polar bear walking across a snowy ice floe, small rounded ears, thick furry legs and wide paws, a few floating ice chunks and gentle snowdrifts around it, a calm Arctic setting"
+  },
+  {
+    "name": "Panda Eating Bamboo",
+    "subject": "animals/bear",
+    "tags": ["bear", "panda", "bamboo"],
+    "layout": "full",
+    "prompt": "a chubby panda sitting upright holding a leafy bamboo stalk in both paws, big round ears, classic patches around its eyes, a round tummy, munching happily with a few bamboo leaves nearby"
+  },
+  {
+    "name": "Baby Bear Cub",
+    "subject": "animals/bear",
+    "tags": ["bear", "cub", "baby", "toddler"],
+    "layout": "full",
+    "prompt": "a tiny adorable bear cub sitting up with big sparkly eyes, oversized round ears, little paws raised, a curious happy expression, simple chunky shapes that are easy to color"
+  },
+  {
+    "name": "Bear and the Beehive",
+    "subject": "animals/bear",
+    "tags": ["bear", "honey", "bee"],
+    "layout": "full",
+    "prompt": "a playful bear reaching a paw up toward a round beehive hanging from a tree branch, a few friendly bees buzzing around, a drip of honey, and a couple of leaves on the branch"
+  },
+  {
+    "name": "Bear Catching Fish",
+    "subject": "animals/bear",
+    "tags": ["bear", "fishing", "river"],
+    "layout": "full",
+    "prompt": "a brown bear standing in a shallow river with a fish jumping out of the water in front of it, water ripples and splashes around its legs, a couple of smooth rocks and reeds at the riverbank"
+  },
+  {
+    "name": "Bear Cub Climbing a Tree",
+    "subject": "animals/bear",
+    "tags": ["bear", "cub", "tree", "climbing"],
+    "layout": "full",
+    "prompt": "a small bear cub hugging the trunk of a tree as it climbs upward, paws gripping the bark, hind legs braced, a few leafy branches above and a curious look on its face"
+  },
+  {
+    "name": "Sleepy Bear in a Cave",
+    "subject": "animals/bear",
+    "tags": ["bear", "hibernation", "cave", "scene"],
+    "layout": "full",
+    "prompt": "a cozy bear curled up asleep inside a rocky cave den, eyes closed with a peaceful smile, paws tucked under its chin, a few fallen leaves at the cave entrance and a crescent moon outside"
+  },
+  {
+    "name": "Mama Bear and Cub",
+    "subject": "animals/bear",
+    "tags": ["bear", "family", "cub", "baby"],
+    "layout": "full",
+    "prompt": "a large mother bear sitting beside her small cub in a grassy meadow, the cub leaning lovingly against her, both with warm gentle faces, a few flowers and a small bush nearby"
+  },
+  {
+    "name": "Bear Face Close-Up",
+    "subject": "animals/bear",
+    "tags": ["bear", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a friendly bear's face filling the frame, two big rounded ears at the top, large kind eyes, a broad furry muzzle and a heart-shaped nose, fur texture around the cheeks"
+  },
+  {
+    "name": "Bear in the Forest",
+    "subject": "animals/bear",
+    "tags": ["bear", "forest", "habitat", "scene"],
+    "layout": "full",
+    "prompt": "a cheerful bear walking along a forest path among tall pine trees, a couple of mushrooms and ferns on the ground, a bird on a branch, and rolling hills in the background"
+  }
+]

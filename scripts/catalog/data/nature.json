@@ -19,5 +19,68 @@
     "tags": ["nature", "tree", "birds"],
     "layout": "full",
     "prompt": "a big leafy tree with a sturdy trunk and a rounded cloud-like canopy, a couple of small birds perched on the branches and one flying, a little round nest, and grass with a few flowers at the base of the trunk"
+  },
+  {
+    "name": "Waterfall",
+    "subject": "nature",
+    "tags": ["nature", "waterfall", "water"],
+    "layout": "full",
+    "prompt": "a tall waterfall cascading down a rocky cliff into a swirling pool below, smooth flowing water lines, a few rounded boulders and ferns along the edges, and a couple of small trees on top of the cliff"
+  },
+  {
+    "name": "Happy Sun",
+    "subject": "nature",
+    "tags": ["nature", "sun", "toddler"],
+    "layout": "full",
+    "prompt": "a big cheerful sun with a round smiling face, rosy cheeks and closed happy eyes, wide pointed and wavy rays spreading out all around it, a few simple puffy clouds drifting nearby, bold and very easy to color"
+  },
+  {
+    "name": "Pine Forest",
+    "subject": "nature",
+    "tags": ["nature", "forest", "trees"],
+    "layout": "full",
+    "prompt": "a cluster of tall pointed pine trees of different heights standing close together, a narrow path winding between the trunks, a couple of small bushes and rocks on the ground, and a few birds in the sky above the treetops"
+  },
+  {
+    "name": "Single Leaf",
+    "subject": "nature",
+    "tags": ["nature", "leaf", "toddler"],
+    "layout": "full",
+    "prompt": "one large detailed leaf shown up close, a clear central vein with branching smaller veins fanning out to gently serrated edges, a short stem at the bottom, simple and bold for easy coloring"
+  },
+  {
+    "name": "Cactus Garden",
+    "subject": "nature",
+    "tags": ["nature", "cactus", "desert"],
+    "layout": "full",
+    "prompt": "a group of friendly potted cacti of different shapes — a tall saguaro with two arms, a round barrel cactus, and a small prickly pear — each with tiny dot spines and one with a little flower on top, lined up in decorated pots"
+  },
+  {
+    "name": "Calm River",
+    "subject": "nature",
+    "tags": ["nature", "river", "landscape"],
+    "layout": "full",
+    "prompt": "a gentle river winding between grassy banks toward the horizon, smooth ripple lines on the water, a few smooth stones and cattails along the edges, a small wooden bridge crossing it, and rolling hills in the distance"
+  },
+  {
+    "name": "Vegetable Garden",
+    "subject": "nature",
+    "tags": ["nature", "garden", "plants"],
+    "layout": "full",
+    "prompt": "a tidy garden with neat rows of growing vegetables — leafy carrot tops, round cabbages, and climbing bean vines on a little fence — a small watering can and a sun hat resting on the soil, and a low picket fence around the edge"
+  },
+  {
+    "name": "Fluffy Clouds",
+    "subject": "nature",
+    "tags": ["nature", "clouds", "sky"],
+    "layout": "full",
+    "prompt": "a few big soft puffy clouds floating across the sky at different heights, each with smooth rounded bumpy edges, one cloud with a gentle smiling face, and a couple of small birds gliding between them"
+  },
+  {
+    "name": "Autumn Tree",
+    "subject": "nature",
+    "tags": ["nature", "tree", "autumn"],
+    "layout": "full",
+    "prompt": "a tree in autumn with a textured trunk and bare and leafy branches, lots of detailed maple and oak leaves on the branches and several drifting and scattered on the ground below, a small pile of raked leaves to one side"
   }
 ]

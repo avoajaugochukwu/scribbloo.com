@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Proud Tom Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "tom", "tail feathers"],
+    "layout": "full",
+    "prompt": "a proud male turkey standing tall and facing forward, a big wide fan of tall tail feathers spread out behind him, a rounded body, a bumpy wattle hanging under his beak, and a cheerful expression"
+  },
+  {
+    "name": "Thanksgiving Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "thanksgiving", "cute"],
+    "layout": "full",
+    "prompt": "a plump cheerful Thanksgiving turkey wearing a small pilgrim hat, a fanned tail of feathers behind it, round friendly eyes, a wattle under its beak, and little feet, with a couple of autumn leaves at its feet"
+  },
+  {
+    "name": "Cute Baby Poult",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "baby", "poult", "toddler"],
+    "layout": "full",
+    "prompt": "a tiny fluffy baby turkey poult with a round chubby body, big sparkly eyes, a few soft feathers, short little legs, and a sweet smile, simple and chunky for very young children"
+  },
+  {
+    "name": "Wild Turkey in the Woods",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "wild", "woods", "scene"],
+    "layout": "full",
+    "prompt": "a wild turkey walking through the forest in profile, a slender body with long legs, a small head with a snood and wattle, a partly raised tail, with tall grass, a tree trunk, and a few ferns around it"
+  },
+  {
+    "name": "Strutting Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "strutting", "display"],
+    "layout": "full",
+    "prompt": "a turkey strutting and showing off in side profile, chest puffed out, one wing dropped low toward the ground, a fully fanned tail held upright, head held high with a long dangling snood over the beak"
+  },
+  {
+    "name": "Turkey Close-Up Portrait",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "portrait", "close-up", "head"],
+    "layout": "full",
+    "prompt": "a close-up head-and-shoulders portrait of a turkey, showing the bumpy textured skin of the head and neck, a curved beak, a soft snood hanging over the beak, a rounded wattle, and a bright friendly eye"
+  },
+  {
+    "name": "Turkey Hen and Poults",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "hen", "babies", "family"],
+    "layout": "full",
+    "prompt": "a gentle mother turkey hen standing in a grassy field with three little fluffy poults gathered around her feet, the hen looking down at her chicks lovingly, a few blades of grass and a small flower"
+  },
+  {
+    "name": "Hand Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "hand-turkey", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a classic hand-turkey shape where a traced open hand forms the bird, the thumb drawn as the head with a small beak and wattle, and the four fingers spread out as colorful tail feathers, simple and bold"
+  },
+  {
+    "name": "Turkey on the Farm",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "farm", "scene"],
+    "layout": "full",
+    "prompt": "a friendly turkey standing in a farmyard beside a wooden fence, a small barn in the background, scattered hay on the ground, and a couple of pecked corn kernels near its feet, a fanned tail behind it"
+  },
+  {
+    "name": "Roosting Turkey in a Tree",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "roosting", "tree", "scene"],
+    "layout": "full",
+    "prompt": "a turkey perched on a sturdy tree branch at rest, body settled down with feathers tucked, tail folded, surrounded by leafy branches and a few stars in the night sky to show it is roosting"
+  },
+  {
+    "name": "Gobbling Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "gobbling", "funny"],
+    "layout": "full",
+    "prompt": "a funny turkey with its beak wide open mid-gobble, head tilted back and snood flopping, a stretched neck, a fanned tail behind, small motion lines near the beak to suggest a loud gobble sound"
+  },
+  {
+    "name": "Fancy Patterned Turkey",
+    "subject": "animals/turkey",
+    "tags": ["turkey", "patterned", "detailed", "feathers"],
+    "layout": "full",
+    "prompt": "an ornate decorative turkey with a large fanned tail where each feather is filled with detailed patterns like swirls, dots, and stripes, a patterned body, and curling accents, intricate for older kids to color"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Smiling Pond Frog",
+    "subject": "animals/frog",
+    "tags": ["frog", "pond", "cute"],
+    "layout": "full",
+    "prompt": "a cheerful round cartoon frog sitting upright, two big bulging eyes on top of its head, a wide friendly smile, smooth skin, four webbed feet, and a plump body, looking happy and simple"
+  },
+  {
+    "name": "Frog on a Lily Pad",
+    "subject": "animals/frog",
+    "tags": ["frog", "lily pad", "pond"],
+    "layout": "full",
+    "prompt": "a happy frog sitting on a round lily pad floating on water, a single lily flower blooming beside it, gentle water ripples around the pad, the frog mid-smile with its front feet tucked together"
+  },
+  {
+    "name": "Red-Eyed Tree Frog",
+    "subject": "animals/frog",
+    "tags": ["frog", "tree frog", "rainforest"],
+    "layout": "full",
+    "prompt": "a slender tree frog clinging to a leafy branch, large round eyes, long legs with rounded sticky toe pads gripping the leaf, a sleek body, and a couple of broad jungle leaves around it"
+  },
+  {
+    "name": "Big Bullfrog",
+    "subject": "animals/frog",
+    "tags": ["frog", "bullfrog"],
+    "layout": "full",
+    "prompt": "a large wide bullfrog crouched low to the ground, a very wide mouth, big round eyes, a puffed-out throat as if croaking, bumpy skin texture suggested with simple shapes, sitting among a few blades of grass"
+  },
+  {
+    "name": "Poison Dart Frog",
+    "subject": "animals/frog",
+    "tags": ["frog", "dart frog", "tropical"],
+    "layout": "full",
+    "prompt": "a small tropical poison dart frog perched on a leaf, a smooth round body with bold patches and spots across its back and legs for coloring, big bright eyes, tiny toes, a single tropical flower nearby"
+  },
+  {
+    "name": "Baby Froglet",
+    "subject": "animals/frog",
+    "tags": ["frog", "baby", "froglet", "cute"],
+    "layout": "full",
+    "prompt": "a tiny cute baby frog with an extra-large head and oversized sparkly eyes, a little stub of a tail still showing as a froglet, sitting on a small pebble, short stubby legs, an adorable shy smile"
+  },
+  {
+    "name": "Tadpole to Frog",
+    "subject": "animals/frog",
+    "tags": ["frog", "tadpole", "life cycle"],
+    "layout": "full",
+    "prompt": "a simple life-cycle scene showing a round tadpole with a long tail swimming, a tadpole growing tiny back legs, and a young frog with four legs, arranged left to right underwater with a few bubbles"
+  },
+  {
+    "name": "Leaping Frog",
+    "subject": "animals/frog",
+    "tags": ["frog", "jumping", "action"],
+    "layout": "full",
+    "prompt": "an energetic frog caught mid-leap through the air, back legs stretched out long behind it and front legs reaching forward, body arched, an excited open-mouth smile, a lily pad below it"
+  },
+  {
+    "name": "Frog Close-Up Face",
+    "subject": "animals/frog",
+    "tags": ["frog", "portrait", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up front-facing portrait of a friendly frog's face filling the frame, two huge round eyes with big highlights, a wide curving smile, two small nostrils, and smooth cheeks, very simple and bold"
+  },
+  {
+    "name": "Two Frog Friends",
+    "subject": "animals/frog",
+    "tags": ["frog", "pair", "friends"],
+    "layout": "full",
+    "prompt": "two cheerful frogs sitting side by side on a log, one slightly bigger than the other, both smiling and looking at each other, their front feet almost touching, a small leaf and a flower nearby"
+  },
+  {
+    "name": "Frog Catching a Fly",
+    "subject": "animals/frog",
+    "tags": ["frog", "fly", "activity"],
+    "layout": "full",
+    "prompt": "a frog with its long tongue stretched out to catch a buzzing fly in the air, mouth open wide, one fly near the tip of the tongue and a couple more bugs hovering, the frog sitting on a rock"
+  },
+  {
+    "name": "Frogs at the Pond",
+    "subject": "animals/frog",
+    "tags": ["frog", "pond", "scene", "nature"],
+    "layout": "full",
+    "prompt": "a detailed pond scene with a few frogs on lily pads, tall cattails and reeds along the edge, a dragonfly skimming above the water, ripples on the surface, and a couple of lily flowers in bloom"
+  }
+]

@@ -19,5 +19,68 @@
     "tags": ["fantasy", "wizard", "magic"],
     "layout": "full",
     "prompt": "a friendly old wizard with a long flowing beard and a tall pointed hat covered in stars and moons, holding up a wand with a glowing star, a long robe with wide sleeves, and a little round owl perched on his shoulder"
+  },
+  {
+    "name": "Brave Knight",
+    "subject": "fantasy",
+    "tags": ["fantasy", "knight", "armor"],
+    "layout": "full",
+    "prompt": "a brave knight standing proudly in plated armor, holding a tall shield with a star crest in one hand and a sword resting point-down in the other, a plumed helmet tucked under his arm, a cape flowing behind, and a determined friendly smile"
+  },
+  {
+    "name": "Soaring Phoenix",
+    "subject": "fantasy",
+    "tags": ["fantasy", "phoenix", "bird"],
+    "layout": "full",
+    "prompt": "a majestic phoenix with wide outstretched wings full of long flowing feathers, a graceful curved neck, a crest of feathers on its head, a long sweeping tail of flame-shaped plumes trailing behind, soaring upward with a few small sparkles around it"
+  },
+  {
+    "name": "Noble Griffin",
+    "subject": "fantasy",
+    "tags": ["fantasy", "griffin", "creature"],
+    "layout": "full",
+    "prompt": "a noble griffin with the head and feathered wings of an eagle and the body, hind legs and tail of a lion, sitting upright on a rock with its wings raised, a sharp curved beak, alert eyes, and a tufted tail curled at its feet"
+  },
+  {
+    "name": "Galloping Pegasus",
+    "subject": "fantasy",
+    "tags": ["fantasy", "pegasus", "horse"],
+    "layout": "full",
+    "prompt": "a graceful winged horse galloping with its front legs lifted, large feathered wings spread wide, a long flowing mane and tail streaming in the wind, a gentle expression, with a couple of small clouds beneath its hooves"
+  },
+  {
+    "name": "Magic Potion Shelf",
+    "subject": "fantasy",
+    "tags": ["fantasy", "potion", "magic"],
+    "layout": "full",
+    "prompt": "a close-up of three bubbling magic potion bottles of different shapes lined up on a wooden shelf, each with a cork stopper and a little label, swirling liquid and rising bubbles inside, a few sparkles and a small sprig of herbs beside them"
+  },
+  {
+    "name": "Crystal Ball",
+    "subject": "fantasy",
+    "tags": ["fantasy", "crystal-ball", "magic"],
+    "layout": "full",
+    "prompt": "a round crystal ball resting on an ornate clawed stand on a small draped table, swirling mist and a tiny crescent moon and stars glowing inside the glass, a few sparkles floating around it"
+  },
+  {
+    "name": "Genie and the Lamp",
+    "subject": "fantasy",
+    "tags": ["fantasy", "genie", "lamp"],
+    "layout": "full",
+    "prompt": "a cheerful genie with crossed arms and a friendly grin rising out of a curl of smoke from a magic oil lamp, a swirling smoky tail instead of legs, a small vest and a turban with a jewel, the curved lamp sitting on the ground below"
+  },
+  {
+    "name": "Friendly Troll",
+    "subject": "fantasy",
+    "tags": ["fantasy", "troll", "creature"],
+    "layout": "full",
+    "prompt": "a big friendly troll with a round belly, chunky arms and legs, a wide goofy grin, two small tusks, a tuft of messy hair, large pointed ears, and a little wooden club resting over one shoulder, looking gentle and silly"
+  },
+  {
+    "name": "Baby Fairy on a Flower",
+    "subject": "fantasy",
+    "tags": ["fantasy", "fairy", "baby"],
+    "layout": "full",
+    "prompt": "a tiny cute baby fairy sitting on top of a big blooming flower, small delicate butterfly-like wings, a little dress made of petals, holding a glowing wand, big sparkly eyes and a happy smile, a few leaves and a curling vine around the flower"
   }
 ]

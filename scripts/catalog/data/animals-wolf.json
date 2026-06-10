@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Howling Wolf",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "howling", "moon"],
+    "layout": "full",
+    "prompt": "a gray wolf sitting on a rocky outcrop with its head tipped back and muzzle pointed up, howling, eyes closed, a thick bushy tail curled at its side, a large round full moon glowing behind it"
+  },
+  {
+    "name": "Standing Gray Wolf",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "gray-wolf", "standing"],
+    "layout": "full",
+    "prompt": "a proud gray wolf standing in profile on all four legs, alert pointed ears, a long fluffy coat, a bushy tail held low, looking off into the distance with a calm watchful expression"
+  },
+  {
+    "name": "Cute Wolf Pup",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "pup", "baby", "cute"],
+    "layout": "full",
+    "prompt": "a chubby baby wolf pup sitting on its haunches with big round sparkly eyes, oversized floppy ears, a soft fluffy coat, a little tongue out and a happy playful expression"
+  },
+  {
+    "name": "Running Wolf",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "running", "action"],
+    "layout": "full",
+    "prompt": "a strong wolf mid-stride at a full run, body stretched forward, legs reaching out front and back, tail streaming straight behind, mouth slightly open, fur swept back as if moving fast"
+  },
+  {
+    "name": "Wolf Pack",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "pack", "family"],
+    "layout": "full",
+    "prompt": "a small pack of three wolves standing close together as a family, one tall adult in front and two slightly smaller wolves beside and behind it, all facing the same direction with alert ears"
+  },
+  {
+    "name": "Wolf in the Forest",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "forest", "scene"],
+    "layout": "full",
+    "prompt": "a wolf walking through a pine forest, tall evergreen trees on either side, a few ferns and rocks near its paws, soft ground underfoot, ears perked and head turned slightly toward the viewer"
+  },
+  {
+    "name": "Arctic Wolf in Snow",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "arctic-wolf", "snow", "winter"],
+    "layout": "full",
+    "prompt": "a fluffy arctic wolf standing in a snowy landscape, an extra-thick winter coat, rounded ears, a few falling snowflakes around it, small snowdrifts and a bare little tree behind"
+  },
+  {
+    "name": "Wolf Face Close-Up",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "portrait", "close-up", "face"],
+    "layout": "full",
+    "prompt": "a close-up portrait of a wolf's face and shoulders, large expressive almond-shaped eyes, pointed upright ears, detailed fur around the cheeks and ruff, a calm intense gaze looking straight ahead"
+  },
+  {
+    "name": "Friendly Cartoon Wolf",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "cartoon", "cute", "easy"],
+    "layout": "full",
+    "prompt": "a friendly cartoon wolf sitting and waving one paw, a big happy smile, round cheeks, simple chunky body shapes, large ears and a fluffy curled tail, looking cheerful and approachable"
+  },
+  {
+    "name": "Wolf Howling at Mountains",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "mountains", "howling", "scene"],
+    "layout": "full",
+    "prompt": "a wolf standing on a high ridge with its head raised to howl, layered mountain peaks rising in the background, a few scattered pine trees below, a crescent moon and a couple of clouds in the sky"
+  },
+  {
+    "name": "Wolf Mom and Pup",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "family", "pup", "baby"],
+    "layout": "full",
+    "prompt": "a gentle mother wolf lying down with her small pup snuggled against her side, the mother lowering her head to nuzzle the pup, both with soft fur and warm loving expressions, a little grass and a rock nearby"
+  },
+  {
+    "name": "Playful Wolf Pup with Ball",
+    "subject": "animals/wolf",
+    "tags": ["wolf", "pup", "playful", "activity"],
+    "layout": "full",
+    "prompt": "a young wolf pup crouched in a play-bow with its front paws down and rear up, batting at a round ball in front of it, ears flopped forward, tail wagging, a bright mischievous expression"
+  }
+]
