@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Sandcastle on the Beach",
+    "subject": "nature/beach",
+    "tags": ["beach", "sandcastle", "summer"],
+    "layout": "full",
+    "prompt": "a tall sandcastle on the sand with two round towers, an arched gate, a little flag on top, a small moat around the base, a bucket and spade resting beside it, and a few seashells scattered nearby"
+  },
+  {
+    "name": "Beach Umbrella and Towel",
+    "subject": "nature/beach",
+    "tags": ["beach", "umbrella", "summer"],
+    "layout": "full",
+    "prompt": "a large open beach umbrella with wide stripes planted in the sand, a beach towel laid out underneath, a pair of flip-flops and a sun hat beside it, gentle waves and a low sun in the background"
+  },
+  {
+    "name": "Cute Beach Ball",
+    "subject": "nature/beach",
+    "tags": ["beach", "beach ball", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a single big round beach ball with wide curved panels and a friendly cartoon smiley face, resting on smooth sand, very simple bold shapes with lots of open space, easy for little hands"
+  },
+  {
+    "name": "Seashell Close-Up",
+    "subject": "nature/beach",
+    "tags": ["beach", "seashell", "close-up"],
+    "layout": "full",
+    "prompt": "a large detailed spiral conch seashell shown up close filling the page, deep ridges and curling lines along its surface, a few grains of sand and one tiny starfish resting beside it"
+  },
+  {
+    "name": "Palm Tree by the Sea",
+    "subject": "nature/beach",
+    "tags": ["beach", "palm tree", "tropical"],
+    "layout": "full",
+    "prompt": "a tall curved palm tree leaning over a sandy shore, broad feathery leaves at the top and a couple of coconuts, gentle waves rolling in behind it, a round sun and a few birds in the sky"
+  },
+  {
+    "name": "Smiling Starfish",
+    "subject": "nature/beach",
+    "tags": ["beach", "starfish", "easy"],
+    "layout": "full",
+    "prompt": "a chubby cartoon starfish with five rounded arms and a happy smiling face, small bumpy dots across its surface, lying on the sand with a couple of tiny shells nearby"
+  },
+  {
+    "name": "Beach Sunset Scene",
+    "subject": "nature/beach",
+    "tags": ["beach", "sunset", "scene"],
+    "layout": "full",
+    "prompt": "a wide beach scene at sunset, a big round sun setting low over the ocean with rays spreading out, rolling waves, two palm trees on one side and a sailboat far out on the water"
+  },
+  {
+    "name": "Surfboard in the Sand",
+    "subject": "nature/beach",
+    "tags": ["beach", "surfboard", "summer"],
+    "layout": "full",
+    "prompt": "a tall surfboard standing upright stuck into the sand, a wavy stripe pattern down the middle, gentle curling waves breaking behind it, a few seashells and a starfish at its base"
+  },
+  {
+    "name": "Bucket and Spade Set",
+    "subject": "nature/beach",
+    "tags": ["beach", "bucket", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a simple sand bucket with a curved handle sitting on the sand next to a small spade and a star-shaped sand mold, big bold simple shapes with lots of open space, easy for toddlers"
+  },
+  {
+    "name": "Crab on the Sand",
+    "subject": "nature/beach",
+    "tags": ["beach", "crab", "animal"],
+    "layout": "full",
+    "prompt": "a cheerful round cartoon crab with two big claws raised up and lots of little legs, friendly eyes on short stalks, scuttling across the sand with a couple of small bubbles and shells around it"
+  },
+  {
+    "name": "Beach Picnic Scene",
+    "subject": "nature/beach",
+    "tags": ["beach", "picnic", "scene", "activity"],
+    "layout": "full",
+    "prompt": "a beach picnic laid out on a checkered blanket on the sand, a basket with fruit and sandwiches, a thermos and cups, an open beach umbrella for shade, gentle waves and gulls in the distance"
+  },
+  {
+    "name": "Lighthouse by the Shore",
+    "subject": "nature/beach",
+    "tags": ["beach", "lighthouse", "scene"],
+    "layout": "full",
+    "prompt": "a tall striped lighthouse standing on a rocky point beside the beach, a bright lamp room at the top with a little railing, waves splashing against the rocks below, a couple of sailboats and birds on the horizon"
+  }
+]

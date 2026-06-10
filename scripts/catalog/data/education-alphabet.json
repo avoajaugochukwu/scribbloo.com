@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Full A-to-Z Alphabet",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "abc", "a-z"],
+    "layout": "full",
+    "prompt": "a complete alphabet chart showing all 26 uppercase letters from A to Z arranged in neat rows, each letter a big bold rounded shape, evenly spaced like a classroom poster"
+  },
+  {
+    "name": "Bubble Letter A",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter a", "bubble letter"],
+    "layout": "full",
+    "prompt": "a single giant puffy bubble letter A taking up most of the page, rounded plump edges, plenty of open space inside to color, a few small stars floating around it"
+  },
+  {
+    "name": "A for Apple",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter a", "apple"],
+    "layout": "full",
+    "prompt": "a big uppercase letter A on the left and a round shiny apple with a leaf and short stem on the right, the apple smiling with a happy face, the word apple suggested below in simple block letters"
+  },
+  {
+    "name": "B for Bear",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter b", "bear"],
+    "layout": "full",
+    "prompt": "a large uppercase letter B beside a cute round teddy bear sitting up with rounded ears and a friendly smile, the bear waving one paw, simple and chunky for young children"
+  },
+  {
+    "name": "C for Cat",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter c", "cat"],
+    "layout": "full",
+    "prompt": "a big uppercase letter C next to a sitting cartoon cat with pointed ears, whiskers, and a curled tail, a content smile on its face, simple shapes for easy coloring"
+  },
+  {
+    "name": "Toddler Letter D",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter d", "toddler", "easy"],
+    "layout": "full",
+    "prompt": "one enormous simple uppercase letter D filling the whole page with very thick rounded outlines and a wide open center, nothing else, designed for tiny hands to color inside"
+  },
+  {
+    "name": "Uppercase and Lowercase E",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter e", "uppercase", "lowercase"],
+    "layout": "full",
+    "prompt": "a large uppercase letter E side by side with a matching lowercase letter e, both bold and rounded, a small star between them, arranged to compare the two forms"
+  },
+  {
+    "name": "Alphabet Train",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "train", "scene"],
+    "layout": "full",
+    "prompt": "a cheerful cartoon train chugging along, an engine pulling several boxcars, each car carrying one large letter spelling out the beginning of the alphabet, puffs of smoke and round wheels, a friendly face on the engine"
+  },
+  {
+    "name": "Letter F Close-Up",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter f", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up of a single decorative uppercase letter F filling the page, the inside of the letter divided into simple patterned sections like flowers and dots ready to color, a thick clean border around it"
+  },
+  {
+    "name": "S for Sun",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "letter s", "sun"],
+    "layout": "full",
+    "prompt": "a big uppercase letter S beside a smiling round sun with wavy and pointed rays all around it, a cheerful face on the sun, simple bold shapes for young children"
+  },
+  {
+    "name": "ABC Building Blocks",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "blocks", "abc"],
+    "layout": "full",
+    "prompt": "three stacked toy cube blocks, each block showing one large letter spelling A, B, and C on its front face, a few scattered blocks resting on the ground beside the stack, rounded playful edges"
+  },
+  {
+    "name": "Alphabet Activity Maze",
+    "subject": "education/alphabet",
+    "tags": ["alphabet", "activity", "maze"],
+    "layout": "full",
+    "prompt": "a simple winding path maze shaped like a curvy alphabet trail with a start at the letter A and a finish at the letter Z, a few letters dotted along the route, a smiling pencil character waiting at the start"
+  }
+]

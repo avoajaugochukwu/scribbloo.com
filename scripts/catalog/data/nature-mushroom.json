@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Spotted Toadstool",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "toadstool", "fly-agaric"],
+    "layout": "full",
+    "prompt": "a single classic toadstool with a wide rounded cap covered in evenly spaced round spots, a thick stem with a little ring around it, a ruffled collar at the base of the cap, sitting on a small patch of grass"
+  },
+  {
+    "name": "Cute Mushroom Friend",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "cute", "kawaii"],
+    "layout": "full",
+    "prompt": "a chubby cartoon mushroom with a big rounded spotted cap and a happy smiling face on its stem, little rosy cheeks, tiny arms waving hello, standing on a small grassy mound"
+  },
+  {
+    "name": "Mushroom House",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "house", "fairy"],
+    "layout": "full",
+    "prompt": "a whimsical storybook mushroom house with a tall round spotted cap as the roof, a little arched door and two round windows cut into the thick stem, a small chimney with a curl of smoke, flowers and pebbles around the base"
+  },
+  {
+    "name": "Forest Mushroom Cluster",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "cluster", "forest"],
+    "layout": "full",
+    "prompt": "a cluster of three or four mushrooms of different heights growing close together from a mossy patch, slender curved stems and rounded caps, a few blades of grass and a small leaf at their feet"
+  },
+  {
+    "name": "Big Easy Mushroom",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "one large simple mushroom drawn with thick bold shapes, a smooth round cap with just a few big dots, a wide chunky stem, sitting on a single line of ground, plenty of open space to color inside"
+  },
+  {
+    "name": "Mushroom Close-Up",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "close-up", "detailed"],
+    "layout": "full",
+    "prompt": "a detailed close-up of a single mushroom seen from below and the side, showing the textured cap on top and the radiating thin gills underneath the cap, the stem in clear view, a few tiny dewdrops"
+  },
+  {
+    "name": "Fairy Ring Mushrooms",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "fairy-ring", "scene"],
+    "layout": "full",
+    "prompt": "a circle of small slender mushrooms forming a fairy ring on a grassy clearing, each mushroom with a delicate cap and thin stem, a couple of tiny flowers and a fluttering butterfly inside the ring"
+  },
+  {
+    "name": "Mushrooms on a Log",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "log", "nature"],
+    "layout": "full",
+    "prompt": "several shelf-like and round mushrooms sprouting from the side and top of a fallen mossy log, different shapes and sizes, patches of moss and a small fern growing nearby"
+  },
+  {
+    "name": "Snail and Mushroom",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "snail", "activity"],
+    "layout": "full",
+    "prompt": "a friendly smiling snail with a spiral shell resting beside a tall spotted mushroom that towers over it like an umbrella, blades of grass and a tiny pebble, both with cheerful faces"
+  },
+  {
+    "name": "Tall Slender Mushrooms",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "tall", "woodland"],
+    "layout": "full",
+    "prompt": "two tall thin woodland mushrooms with long graceful stems and small pointed caps standing side by side, surrounded by short grass and a few low ferns on the forest floor"
+  },
+  {
+    "name": "Mushroom Patch Scene",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "patch", "detailed"],
+    "layout": "full",
+    "prompt": "a busy woodland patch packed with many mushrooms of all shapes and sizes, spotted caps, rounded caps and pointed caps mingled together, with grass, leaves, and a few small flowers filling the spaces between them"
+  },
+  {
+    "name": "Mushroom with Ladybug",
+    "subject": "nature/mushroom",
+    "tags": ["mushroom", "ladybug", "cute"],
+    "layout": "full",
+    "prompt": "a round spotted mushroom with a tiny smiling ladybug perched on the edge of its cap, a curl of grass at the base, a small leaf leaning against the stem, a cheerful gentle scene"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Decorated Christmas Tree",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "christmas-tree", "tree"],
+    "layout": "full",
+    "prompt": "a full triangular Christmas tree decorated with round ornaments, a string of lights draped in swags, a bright star on top, and a little pile of wrapped presents with bows tucked under its base, standing on a simple tree stand"
+  },
+  {
+    "name": "Jolly Santa Claus",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "santa", "santa-claus"],
+    "layout": "full",
+    "prompt": "a jolly Santa Claus standing and waving one mittened hand, a big round belly in his fur-trimmed suit, a wide belt, a long curly beard, rosy cheeks, a pointed hat with a fluffy pom-pom, holding a sack of toys over his shoulder"
+  },
+  {
+    "name": "Christmas Gingerbread Man",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "gingerbread", "cookie"],
+    "layout": "full",
+    "prompt": "a cheerful gingerbread man cookie standing with arms out, a wide smiling face with two dot eyes, swirly icing buttons down his front, zigzag icing trim on his arms and legs, and a little bow tie at his neck"
+  },
+  {
+    "name": "Christmas Snowman",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "snowman", "snow"],
+    "layout": "full",
+    "prompt": "a friendly snowman built from three round snowballs, a carrot nose, coal-dot eyes and smile, a chunky knitted scarf around his neck, a top hat, twig arms, and a few falling snowflakes around him"
+  },
+  {
+    "name": "Christmas Stocking",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "stocking", "fireplace"],
+    "layout": "full",
+    "prompt": "a plump Christmas stocking hanging from a hook, a soft cuff at the top, a candy cane, a small wrapped gift and a star poking out of the opening, with a knitted pattern on the toe and heel"
+  },
+  {
+    "name": "Candy Cane Close-Up",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "candy-cane", "close-up"],
+    "layout": "full",
+    "prompt": "a single large candy cane shown up close, its hooked top curving over, wrapped with a big ribbon bow tied near the curve, and a couple of small holly leaves and berries resting against the base"
+  },
+  {
+    "name": "Christmas Wreath",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "wreath", "holly"],
+    "layout": "full",
+    "prompt": "a round Christmas wreath made of layered pine sprigs, dotted with round berries, small pinecones, and a few ornaments, finished with a large floppy bow at the bottom"
+  },
+  {
+    "name": "Santa's Reindeer",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "reindeer", "rudolph"],
+    "layout": "full",
+    "prompt": "a cute reindeer standing in profile, large branching antlers, a round nose, big gentle eyes, a small jingle-bell collar around its neck, and a holly sprig tucked behind one antler"
+  },
+  {
+    "name": "Easy Christmas Ornament",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "ornament", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "one big round Christmas ornament hanging from a simple cap and loop, divided into a few large bands decorated with simple stars, dots, and a wavy stripe, with plenty of open space for easy coloring"
+  },
+  {
+    "name": "Santa in His Sleigh",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "santa", "sleigh", "scene"],
+    "layout": "full",
+    "prompt": "Santa Claus riding in a curvy sleigh loaded with a sack of presents, holding the reins, a reindeer pulling at the front, a few stars and a crescent moon in the sky, and a swoosh of motion lines behind them"
+  },
+  {
+    "name": "Cute Christmas Penguin",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "penguin", "cute"],
+    "layout": "full",
+    "prompt": "a chubby cute penguin wearing a tiny Santa hat and a striped scarf, standing on a small mound of snow, holding a single wrapped present in its flippers, with a happy smile and a couple of snowflakes nearby"
+  },
+  {
+    "name": "Cozy Christmas Fireplace",
+    "subject": "holidays/christmas",
+    "tags": ["christmas", "fireplace", "scene", "detailed"],
+    "layout": "full",
+    "prompt": "a cozy fireplace scene with three stockings hung along the mantel, a crackling fire below, a garland with ornaments draped across the mantel, a framed picture and a clock above, and a couple of presents on the floor beside it"
+  }
+]

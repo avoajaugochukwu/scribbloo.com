@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Speedy Race Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "race-car", "racing"],
+    "layout": "full",
+    "prompt": "a low sleek race car seen from the side, a big number circle on the door, a tall rear spoiler, wide racing tires, a small driver helmet poking above the cockpit, ready to speed off"
+  },
+  {
+    "name": "Cute Cartoon Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "cute", "cartoon"],
+    "layout": "full",
+    "prompt": "a rounded chubby cartoon car with big friendly headlight eyes and a smiling bumper grille, two round wheels, a small antenna on the roof, looking cheerful and bouncy"
+  },
+  {
+    "name": "Classic Convertible",
+    "subject": "vehicles/car",
+    "tags": ["car", "convertible", "classic"],
+    "layout": "full",
+    "prompt": "a vintage convertible car with its top down, long curved fenders, rounded headlights, chrome bumper and trim, whitewall tires, and a pair of bench seats visible inside"
+  },
+  {
+    "name": "Off-Road Truck",
+    "subject": "vehicles/car",
+    "tags": ["car", "truck", "off-road"],
+    "layout": "full",
+    "prompt": "a rugged off-road pickup truck with chunky knobby tires, a high body lifted off the ground, a roof rack with two spotlights, mud splashes around the wheels, parked on rocky ground"
+  },
+  {
+    "name": "Family Minivan",
+    "subject": "vehicles/car",
+    "tags": ["car", "minivan", "family"],
+    "layout": "full",
+    "prompt": "a roomy family minivan seen from the side, a sliding door, several large windows, a roof box for luggage on top, four wheels, looking ready for a road trip"
+  },
+  {
+    "name": "Police Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "police", "emergency"],
+    "layout": "full",
+    "prompt": "a friendly police car with a light bar on the roof, a star badge on the door, a number on the side, side mirrors and a front grille, parked and ready to help"
+  },
+  {
+    "name": "Sports Car Close-Up",
+    "subject": "vehicles/car",
+    "tags": ["car", "sports-car", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up front view of a sleek sports car, two sharp angular headlights, a wide low grille, a curved hood with vents, a small license plate, filling most of the frame"
+  },
+  {
+    "name": "Easy Toddler Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a very simple boxy little car made of big basic shapes, two large round wheels, one square window, one round headlight, and a tiny door, with thick clear shapes and lots of open space"
+  },
+  {
+    "name": "Monster Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "monster-car", "big-wheels"],
+    "layout": "full",
+    "prompt": "a bold cartoon car with enormous oversized monster-truck wheels lifting it high in the air, a small grinning body on top, big bouncy springs, looking playful and ready to bounce"
+  },
+  {
+    "name": "Car at the Gas Station",
+    "subject": "vehicles/car",
+    "tags": ["car", "gas-station", "scene"],
+    "layout": "full",
+    "prompt": "a cheerful little car parked beside a gas pump at a service station, a fuel nozzle hose reaching to its tank, a small price sign on a post, a fluffy cloud and the station roof above"
+  },
+  {
+    "name": "Electric City Car",
+    "subject": "vehicles/car",
+    "tags": ["car", "electric", "city"],
+    "layout": "full",
+    "prompt": "a small rounded compact electric city car plugged into a charging post by a curb, a charging cable running to its side, a tiny leaf emblem on the door, two doors and a hatchback rear"
+  },
+  {
+    "name": "Cars in Traffic",
+    "subject": "vehicles/car",
+    "tags": ["car", "traffic", "scene"],
+    "layout": "full",
+    "prompt": "three different cars lined up bumper to bumper on a street, a traffic light on a pole beside them, lane lines on the road below, a few simple buildings in the background"
+  }
+]

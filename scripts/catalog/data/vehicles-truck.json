@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Monster Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "monster truck"],
+    "layout": "full",
+    "prompt": "a big bouncy monster truck with huge oversized knobby tires, a high suspension lifting the body off the ground, a chunky cab with a bold grille and round headlights, flames pattern on the side, parked on a dirt mound"
+  },
+  {
+    "name": "Fire Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "fire truck"],
+    "layout": "full",
+    "prompt": "a cheerful fire truck with a tall extending ladder on top, a coiled hose on the side, a flashing light bar on the roof, rolled-up hose reels, big round wheels, and the number on the door"
+  },
+  {
+    "name": "Dump Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "dump truck", "construction"],
+    "layout": "full",
+    "prompt": "a hard-working dump truck with its tilted bed raised up pouring out a pile of rocks and dirt, a sturdy cab in front, large rugged tires, and a small dirt mound on the ground beside it"
+  },
+  {
+    "name": "Garbage Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "garbage truck"],
+    "layout": "full",
+    "prompt": "a friendly garbage truck with a big boxy compactor body, a mechanical arm reaching down to lift a wheeled trash bin, side mirrors, a square cab with a smiling driver window, and chunky tires"
+  },
+  {
+    "name": "Cement Mixer Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "cement mixer", "construction"],
+    "layout": "full",
+    "prompt": "a cement mixer truck with a large rotating drum tilted on the back showing spiral ridges, a sturdy cab in front, a chute folded along the side, six big wheels, and a small puddle of concrete below"
+  },
+  {
+    "name": "Semi Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "semi truck", "big rig"],
+    "layout": "full",
+    "prompt": "a long-haul semi truck with a tall sleeper cab, two upright exhaust stacks, a wide grille and twin round headlights, towing a long rectangular box trailer, rows of wheels, driving down a straight road"
+  },
+  {
+    "name": "Tow Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "tow truck"],
+    "layout": "full",
+    "prompt": "a tow truck with a strong crane arm and hook lifting the front of a small broken-down car off the ground, a flashing light on the roof, a flat hauling bed, and big sturdy tires"
+  },
+  {
+    "name": "Pickup Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "pickup truck"],
+    "layout": "full",
+    "prompt": "a friendly pickup truck with an open cargo bed in back carrying a few cardboard boxes and a potted plant, a roomy cab with two doors, side mirrors, round headlights, and rugged off-road tires"
+  },
+  {
+    "name": "Cute Easy Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a very simple chubby cartoon truck with a big smiling face on the front grille, two round friendly eyes for headlights, a short stubby body, two large round wheels, drawn with thick simple shapes for little hands"
+  },
+  {
+    "name": "Ice Cream Truck",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "ice cream truck"],
+    "layout": "full",
+    "prompt": "a cheerful ice cream truck with a big serving window on the side, a giant ice cream cone shape on the roof, a striped awning, swirl and popsicle pictures on the panel, a little speaker, and round wheels"
+  },
+  {
+    "name": "Truck Front Close-Up",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "close-up"],
+    "layout": "full",
+    "prompt": "a bold close-up of the front of a big rig truck filling the frame, a tall chrome grille with vertical bars, two large round headlights, side mirrors, an emblem on the hood, and the top of the windshield"
+  },
+  {
+    "name": "Truck at the Construction Site",
+    "subject": "vehicles/truck",
+    "tags": ["truck", "construction", "scene"],
+    "layout": "full",
+    "prompt": "a busy dump truck parked at a construction site beside a small pile of bricks and a traffic cone, a partly built wall in the background, a stack of pipes, and a tall crane outline behind it"
+  }
+]

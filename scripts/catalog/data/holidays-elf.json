@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Happy Christmas Elf",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "santas helper"],
+    "layout": "full",
+    "prompt": "a cheerful Christmas elf standing with hands on hips, a tall pointed hat with a fluffy pom-pom, pointed ears, a tunic with a wide belt and big buttons, striped stockings, and curly-toed shoes, a big friendly smile"
+  },
+  {
+    "name": "Cute Easy Elf",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a very simple chubby cartoon elf with a round body, big round eyes, a small pointed hat, mitten hands, and tiny boots, drawn with thick bold simple shapes for little hands, waving hello"
+  },
+  {
+    "name": "Elf in Santa's Workshop",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "workshop", "scene"],
+    "layout": "full",
+    "prompt": "a busy elf working at a wooden workbench in Santa's toy workshop, hammering a wooden toy, shelves of finished toys behind, a hanging lantern, scattered tools and wood shavings on the bench"
+  },
+  {
+    "name": "Elf Wrapping Gifts",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "gifts", "presents"],
+    "layout": "full",
+    "prompt": "a happy elf wrapping a present, holding a roll of ribbon, tying a big bow on a square gift box, more wrapped boxes and a spool of ribbon stacked around its feet, a content smile"
+  },
+  {
+    "name": "Elf Building a Toy",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "toys", "workshop"],
+    "layout": "full",
+    "prompt": "an elf carefully assembling a wooden toy train on a workbench, holding a small screwdriver, a stack of toy blocks and a teddy bear nearby, tongue poking out in concentration"
+  },
+  {
+    "name": "Elf with a Candy Cane",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "candy cane"],
+    "layout": "full",
+    "prompt": "a joyful elf holding a giant striped candy cane taller than itself, leaning on it like a staff, a pointed hat tilted to one side, curly-toed shoes, a few peppermint candies scattered at its feet"
+  },
+  {
+    "name": "Shelf Elf Sitting",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "shelf elf"],
+    "layout": "full",
+    "prompt": "a mischievous little elf sitting on the edge of a shelf with its legs dangling, long pointed shoes, hands resting on the shelf edge, a sly grin, a small framed picture and a candle on the shelf beside it"
+  },
+  {
+    "name": "Girl Elf with Bow",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "girl", "santas helper"],
+    "layout": "full",
+    "prompt": "a sweet girl elf in a pointed hat with a big bow, two braided pigtails, a flared skirt with a holly trim, striped stockings, curly-toed shoes, holding a small gift, a cheerful smile"
+  },
+  {
+    "name": "Baby Elf with Stocking",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "baby", "stocking"],
+    "layout": "full",
+    "prompt": "an adorable baby elf peeking out of a large hanging Christmas stocking, only its head and mitten hands showing over the top, big sparkly eyes, a tiny pointed hat, the stocking trimmed with fluffy cuff"
+  },
+  {
+    "name": "Elf Face Close-Up",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "close-up", "face"],
+    "layout": "full",
+    "prompt": "a close-up of a smiling elf face filling the frame, large pointed ears, rosy round cheeks, big friendly eyes, the bottom edge of a pointed hat with a pom-pom on top, a small holly sprig tucked behind one ear"
+  },
+  {
+    "name": "Elf on a Sleigh",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "sleigh", "scene"],
+    "layout": "full",
+    "prompt": "an excited elf riding in a curvy decorated sleigh loaded with wrapped presents, holding the reins, a tall pointed hat streaming back, a few snowflakes and a swirl of motion lines around the sleigh"
+  },
+  {
+    "name": "Elf Coloring Maze Activity",
+    "subject": "holidays/elf",
+    "tags": ["elf", "christmas", "activity", "maze"],
+    "layout": "full",
+    "prompt": "a cheerful elf standing on one side of a simple winding path that leads to a pile of presents on the other side, holly leaves and small stars decorating the corners, the path drawn as an easy maze for kids to trace"
+  }
+]

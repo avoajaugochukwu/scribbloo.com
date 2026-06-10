@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Easter Bunny and Egg Basket",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "bunny",
+      "basket"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful upright Easter bunny with long floppy ears and a fluffy tail, holding a woven basket filled with decorated eggs, a happy smile, a little bow at its neck, sitting in short grass with a flower or two"
+  },
+  {
+    "name": "Decorated Easter Egg",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "egg",
+      "pattern"
+    ],
+    "layout": "full",
+    "prompt": "a single large standing Easter egg decorated with bold horizontal stripes, rows of dots, zigzag bands, and a wavy ribbon across the middle, resting in a small tuft of grass"
+  },
+  {
+    "name": "Easter Egg Basket",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "basket",
+      "eggs"
+    ],
+    "layout": "full",
+    "prompt": "a woven wicker basket brimming with rounded Easter eggs of different patterns, a few blades of grass and a tied bow on the handle, a couple of eggs resting on the ground beside it"
+  },
+  {
+    "name": "Fluffy Easter Chick",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "chick",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a tiny round fluffy baby chick standing on two little feet, a small triangle beak, big sparkly eyes, soft feathers, and a single flower or blade of grass beside it"
+  },
+  {
+    "name": "Chick in Easter Egg",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "chick",
+      "egg",
+      "hatching"
+    ],
+    "layout": "full",
+    "prompt": "a cute baby chick peeking out of a cracked Easter egg, the top half of the shell tilted like a little hat, tiny wings resting on the broken edge, happy eyes, a few decorative dots on the shell"
+  },
+  {
+    "name": "Bunny Holding Easter Egg",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "bunny",
+      "egg",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a small chubby cartoon bunny sitting and hugging one big patterned Easter egg almost as large as itself, round cheeks, long ears flopping to one side, a content smile"
+  },
+  {
+    "name": "Easter Egg Hunt Scene",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "egg-hunt",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a spring garden scene with several decorated Easter eggs hidden among grass tufts and behind a small bush, a happy bunny crouching as if searching, a butterfly fluttering above and a few flowers"
+  },
+  {
+    "name": "Easter Egg Close-Up",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "egg",
+      "pattern",
+      "detailed"
+    ],
+    "layout": "full",
+    "prompt": "one very large Easter egg filling most of the frame, covered edge to edge with intricate decorative patterns of swirls, teardrops, flowers, lattice, and dots arranged in neat bands to fill in"
+  },
+  {
+    "name": "Easy Easter Egg for Toddlers",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "egg",
+      "easy",
+      "toddler"
+    ],
+    "layout": "full",
+    "prompt": "one big simple Easter egg with thick bold outlines and just three or four wide empty bands across it, plain and roomy, sitting on a short patch of grass, very easy to color"
+  },
+  {
+    "name": "Spring Easter Flowers",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "flowers",
+      "spring"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful bunch of spring Easter flowers including tulips and daffodils with rounded petals and leafy stems, tied together with a ribbon bow, a small butterfly resting on one bloom"
+  },
+  {
+    "name": "Easter Bunny and Chick Friends",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "bunny",
+      "chick",
+      "friends"
+    ],
+    "layout": "full",
+    "prompt": "a soft Easter bunny sitting beside a tiny baby chick, the two leaning together as friends with happy smiles, a decorated egg resting between them, a few flowers and grass around their feet"
+  },
+  {
+    "name": "Easter Egg Tree",
+    "subject": "holidays/easter",
+    "tags": [
+      "easter",
+      "egg",
+      "tree",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a small leafy spring tree with several decorated Easter eggs hanging from its branches by little loops, each egg with a different stripe or dot pattern, a couple of birds and blossoms among the leaves"
+  }
+]

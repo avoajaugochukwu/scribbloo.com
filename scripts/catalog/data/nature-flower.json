@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Cheerful Sunflower",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "sunflower"
+    ],
+    "layout": "full",
+    "prompt": "a tall cheerful sunflower in full bloom, a large round center packed with seeds, a wide ring of long pointed petals around it, a sturdy stem with two broad leaves, standing proud against a few small clouds"
+  },
+  {
+    "name": "Blooming Rose",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "rose"
+    ],
+    "layout": "full",
+    "prompt": "a single open rose seen from the front, many layered curling petals spiraling out from a tight bud center, a curved stem with a couple of thorns and two serrated leaves, elegant and full"
+  },
+  {
+    "name": "Three Garden Tulips",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "tulip"
+    ],
+    "layout": "full",
+    "prompt": "three tulips of slightly different heights growing side by side, each with a smooth cup-shaped blossom of six rounded petals on a straight stem, long slender leaves at the base, a little grass beneath them"
+  },
+  {
+    "name": "Cute Smiling Flower",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "cute",
+      "easy"
+    ],
+    "layout": "full",
+    "prompt": "a cute cartoon flower with a happy smiling face in its round center, five big simple rounded petals, two little leaf arms, and a short stem, very chunky and easy with thick simple shapes"
+  },
+  {
+    "name": "Easy Daisy",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "daisy",
+      "easy"
+    ],
+    "layout": "full",
+    "prompt": "one simple daisy with a round center button and a single ring of evenly spaced oval petals, a straight stem and two small leaves, clean and uncluttered with bold simple lines for young children"
+  },
+  {
+    "name": "Round Flower Wreath",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "mandala",
+      "adult"
+    ],
+    "layout": "full",
+    "prompt": "a symmetrical circular flower mandala built from repeating rings of petals radiating from a central blossom, layered floral patterns, dots and small leaves filling the rings, intricate and detailed for relaxing coloring"
+  },
+  {
+    "name": "Flower Bouquet in a Vase",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "bouquet",
+      "vase"
+    ],
+    "layout": "full",
+    "prompt": "a full bouquet of mixed flowers arranged in a round vase, a rose, a daisy, a tulip and a couple of small buds with leaves and stems, the vase sitting on a flat surface, balanced and cheerful"
+  },
+  {
+    "name": "Cherry Blossom Branch",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "cherry-blossom",
+      "spring"
+    ],
+    "layout": "full",
+    "prompt": "a curving cherry blossom branch with clusters of five-petaled blossoms and small round buds along it, a few petals drifting in the air, slim twigs branching off, light and airy springtime feel"
+  },
+  {
+    "name": "Lotus Flower on Water",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "lotus",
+      "water"
+    ],
+    "layout": "full",
+    "prompt": "a serene lotus flower floating open on calm water, many pointed petals layered around a rounded seed pod center, a large flat lily pad beside it, gentle ripples around the base"
+  },
+  {
+    "name": "Bee on a Daisy",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "daisy",
+      "bee"
+    ],
+    "layout": "full",
+    "prompt": "a friendly round bumblebee with striped body and little wings landing on the center of a large daisy, the daisy's petals spread wide, a stem with leaves below, a few dotted flight lines around the bee"
+  },
+  {
+    "name": "Flower Garden Scene",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "garden",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful garden row of several different flowers growing together, tall sunflowers, short tulips and daisies of varying heights, a little picket fence behind them, a sun and a butterfly above"
+  },
+  {
+    "name": "Rose Close-Up",
+    "subject": "nature/flower",
+    "tags": [
+      "flower",
+      "rose",
+      "close-up",
+      "adult"
+    ],
+    "layout": "full",
+    "prompt": "an extreme close-up of a single rose blossom that fills the whole frame, many overlapping curved petals with detailed inner folds spiraling toward the center, fine veins on the petals, intricate for detailed coloring"
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Jack-o'-Lantern Pumpkin",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "pumpkin",
+      "jack-o-lantern"
+    ],
+    "layout": "full",
+    "prompt": "a carved jack-o'-lantern pumpkin with a wide toothy grin, two triangle eyes and a triangle nose, a curly stem and a leaf on top, sitting on a little patch of grass with a tiny bat flying above"
+  },
+  {
+    "name": "Friendly Halloween Ghost",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "ghost",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a cute floating ghost with a round wavy bottom, big friendly eyes and a happy open smile, arms raised in a gentle playful boo, a few small stars and a crescent moon around it"
+  },
+  {
+    "name": "Witch on a Broomstick",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "witch",
+      "broomstick"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful young witch flying on a broomstick across the night sky, a tall pointed hat, a flowing cloak and striped stockings, a crescent moon and scattered stars behind her, her hair streaming in the wind"
+  },
+  {
+    "name": "Halloween Black Cat",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "black-cat",
+      "cat"
+    ],
+    "layout": "full",
+    "prompt": "a black cat with an arched back and puffed-up tail standing beside a small pumpkin, pointed ears, big round eyes and curling whiskers, a full moon glowing behind it"
+  },
+  {
+    "name": "Spooky Haunted House",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "haunted-house",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a tall spooky haunted house with crooked windows, a pointed roof and a leaning tower, a creaky front door and a winding path, bare twisty trees and a full moon, a couple of bats circling the chimney"
+  },
+  {
+    "name": "Trick-or-Treat Kids",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "trick-or-treat",
+      "costume"
+    ],
+    "layout": "full",
+    "prompt": "two happy children in costumes holding out candy buckets at a doorstep, one dressed as a little ghost and one as a pumpkin, a carved jack-o'-lantern glowing beside the door, a few falling leaves around their feet"
+  },
+  {
+    "name": "Easy Halloween Pumpkin",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "pumpkin",
+      "easy",
+      "toddler"
+    ],
+    "layout": "full",
+    "prompt": "a single big round smiling pumpkin with a short curly stem and one simple leaf, very thick bold shapes and a cheerful happy face, plenty of open space to color"
+  },
+  {
+    "name": "Candy Corn Close-Up",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "candy-corn",
+      "candy",
+      "close-up"
+    ],
+    "layout": "full",
+    "prompt": "a large close-up piece of candy corn with three clear striped bands, a cute smiling face on the front, surrounded by a few small wrapped candies and a tiny pumpkin"
+  },
+  {
+    "name": "Bats and Full Moon",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "bats",
+      "moon",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a flock of cute cartoon bats with little fangs flying across a big full moon, a bare spooky tree branch reaching in from one side, a scatter of stars filling the night sky"
+  },
+  {
+    "name": "Halloween Spider Web",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "spider",
+      "web"
+    ],
+    "layout": "full",
+    "prompt": "a friendly round spider with eight legs and big eyes hanging from a single thread in the middle of a large detailed spider web stretched between two corners, a tiny dangling pumpkin charm nearby"
+  },
+  {
+    "name": "Halloween Skeleton Wave",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "skeleton",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a friendly cartoon skeleton standing and waving hello with a big grin, clearly drawn ribs and rounded bones, slightly bent knees in a relaxed pose, a small bat and a pumpkin at its feet"
+  },
+  {
+    "name": "Halloween Mummy",
+    "subject": "holidays/halloween",
+    "tags": [
+      "halloween",
+      "mummy",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a cute cartoon mummy wrapped in long bandages with loose trailing ends, two big round eyes peeking through a gap in the wraps, arms held out in a playful pose, a small spider dangling beside it"
+  }
+]

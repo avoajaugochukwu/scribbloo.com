@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Mermaid on a Rock",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "rock", "ocean"],
+    "layout": "full",
+    "prompt": "a graceful mermaid sitting on a smooth ocean rock, long wavy hair flowing down her back, a curving scaled tail draped over the side, hands resting gently behind her, gentle waves and a couple of starfish at the base of the rock"
+  },
+  {
+    "name": "Cute Baby Mermaid",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "baby", "cute", "easy"],
+    "layout": "full",
+    "prompt": "a chubby cheerful baby mermaid with big sparkly eyes and a small round face, short curly hair, a little chubby scaled tail curling beneath her, tiny hands clapping, a few round bubbles floating around her, simple and adorable"
+  },
+  {
+    "name": "Swimming Mermaid",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "swimming", "underwater"],
+    "layout": "full",
+    "prompt": "a mermaid swimming gracefully through the water with her long hair streaming behind her, arms reaching forward, her scaled tail flicked up in motion, trailing bubbles and a small fish swimming alongside"
+  },
+  {
+    "name": "Mermaid and Dolphin",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "dolphin", "friends"],
+    "layout": "full",
+    "prompt": "a smiling mermaid floating beside a friendly leaping dolphin, one hand gently touching the dolphin's nose, her long tail curving below, a scatter of bubbles and a couple of small fish around them"
+  },
+  {
+    "name": "Mermaid Princess with Crown",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "princess", "crown"],
+    "layout": "full",
+    "prompt": "an elegant mermaid princess wearing a tall seashell-and-pearl crown, long flowing hair with a few small starfish tucked in it, a beaded seashell top, hands folded gracefully, a long detailed scaled tail with a flowing fin"
+  },
+  {
+    "name": "Mermaid Tail Close-Up",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "tail", "scales", "close-up"],
+    "layout": "full",
+    "prompt": "a large close-up of a curving mermaid tail filling the page, rows of overlapping scales in neat patterns, a wide flowing fan-shaped fin at the end, a few small bubbles and a starfish resting against it"
+  },
+  {
+    "name": "Mermaid with Seahorse",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "seahorse", "ocean"],
+    "layout": "full",
+    "prompt": "a young mermaid holding hands with a curly-tailed seahorse friend, both smiling, her hair drifting in the water, a curved scaled tail beneath her, a few strands of seaweed and bubbles around them"
+  },
+  {
+    "name": "Mermaid in the Coral Reef",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "coral", "reef", "scene"],
+    "layout": "full",
+    "prompt": "a mermaid resting among a colorful coral reef full of fan corals, sea anemones, and swaying seaweed, several little fish darting around her, her long tail tucked to one side, bubbles rising to the top"
+  },
+  {
+    "name": "Mermaid Treasure Chest",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "treasure", "underwater"],
+    "layout": "full",
+    "prompt": "a curious mermaid leaning over an open treasure chest spilling with pearls, jewels, and a string of beads, her eyes wide with delight, a sunken anchor and a few seashells nearby on the ocean floor"
+  },
+  {
+    "name": "Easy Mermaid for Toddlers",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "easy", "toddler", "simple"],
+    "layout": "full",
+    "prompt": "a very simple smiling mermaid with big round shapes, a round happy face, a few thick wavy lines of hair, a plain rounded tail with just a few large scales, two big bubbles beside her, thick clear shapes easy for little hands"
+  },
+  {
+    "name": "Mermaid Blowing Bubbles",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "bubbles", "playful"],
+    "layout": "full",
+    "prompt": "a playful mermaid with cheeks puffed, blowing a stream of round bubbles that float up across the page, her tail flicked happily behind her, long hair swirling, a tiny fish chasing the bubbles"
+  },
+  {
+    "name": "Dancing Mermaid",
+    "subject": "fantasy/mermaid",
+    "tags": ["mermaid", "dancing", "graceful"],
+    "layout": "full",
+    "prompt": "a mermaid posed as if dancing in the water, arms raised gracefully overhead, body curved in a flowing arc, her long hair and the wide fin of her tail sweeping in motion, sparkles and bubbles around her"
+  }
+]

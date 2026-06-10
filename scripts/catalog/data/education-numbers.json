@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Big Bubble Number One",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-1", "one", "toddler"],
+    "layout": "full",
+    "prompt": "a giant friendly bubble-style numeral one with a happy face, rounded chunky edges filling most of the page, a single balloon floating beside it, simple and bold for little hands"
+  },
+  {
+    "name": "Counting Number Two Ducks",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-2", "two", "counting"],
+    "layout": "full",
+    "prompt": "a large rounded numeral two beside exactly two cute waddling ducks, a couple of cattail reeds and small water ripples, a cheerful scene that pairs the digit with its quantity"
+  },
+  {
+    "name": "Number Three Balloons",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-3", "three", "counting"],
+    "layout": "full",
+    "prompt": "a big bubble numeral three next to exactly three round party balloons with curly strings, a small bow tied at the bottom, playful and bold"
+  },
+  {
+    "name": "Number Four Apples",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-4", "four", "counting"],
+    "layout": "full",
+    "prompt": "a chunky numeral four with exactly four apples beside it, each apple with a leaf and stem, one apple slightly bitten, a friendly counting layout"
+  },
+  {
+    "name": "Smiling Number Five",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-5", "five", "cute", "character"],
+    "layout": "full",
+    "prompt": "a cute cartoon numeral five as a character with big sparkly eyes, little stick arms and legs, waving one hand and smiling, a few small stars around it"
+  },
+  {
+    "name": "Number Six Flowers",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-6", "six", "counting"],
+    "layout": "full",
+    "prompt": "a rounded bubble numeral six surrounded by exactly six simple daisies on stems, a small bee hovering nearby, a cheerful garden counting scene"
+  },
+  {
+    "name": "Number Seven Stars",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-7", "seven", "counting"],
+    "layout": "full",
+    "prompt": "a bold numeral seven with exactly seven five-pointed stars scattered around it, a crescent moon in the corner, a calm night-sky counting layout"
+  },
+  {
+    "name": "Number Eight Bees",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-8", "eight", "counting"],
+    "layout": "full",
+    "prompt": "a big curvy numeral eight beside exactly eight little smiling bees with looping flight trails, a flower or two, a busy buzzing counting scene"
+  },
+  {
+    "name": "Number Nine Hearts",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-9", "nine", "counting"],
+    "layout": "full",
+    "prompt": "a chunky bubble numeral nine framed by exactly nine rounded hearts of slightly different sizes arranged around it, sweet and simple"
+  },
+  {
+    "name": "Number Zero Donut",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-0", "zero", "cute"],
+    "layout": "full",
+    "prompt": "a friendly numeral zero shaped like a round donut with a sprinkled top and a happy face, sitting on a little plate, playful and bold for the tiniest counters"
+  },
+  {
+    "name": "Numbers One to Ten Chart",
+    "subject": "education/numbers",
+    "tags": ["numbers", "number-chart", "counting", "1-10"],
+    "layout": "full",
+    "prompt": "a tidy grid chart showing the numbers one through ten in order, each big digit inside its own box with a matching number of dots beside it, neat rows for tracing and coloring"
+  },
+  {
+    "name": "Counting Train Numbers",
+    "subject": "education/numbers",
+    "tags": ["numbers", "train", "counting", "scene"],
+    "layout": "full",
+    "prompt": "a cheerful cartoon train with an engine and several carriages, each carriage carrying a large numbered block from one upward, puffs of smoke from the engine, rolling along a simple track"
+  }
+]

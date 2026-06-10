@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Spring Tulip Trio",
+    "subject": "holidays/spring",
+    "tags": ["spring", "flowers", "tulips"],
+    "layout": "full",
+    "prompt": "three cheerful tulips growing side by side from the ground, each with a rounded cup-shaped bloom and long curving leaves, a small bumblebee hovering nearby, a few blades of grass at the base"
+  },
+  {
+    "name": "Spring Butterfly Garden",
+    "subject": "holidays/spring",
+    "tags": ["spring", "butterfly", "flowers"],
+    "layout": "full",
+    "prompt": "a large butterfly with wide patterned wings fluttering above a cluster of blooming flowers, swirling petal patterns on its wings, two thin curled antennae, a couple of buds and leaves below"
+  },
+  {
+    "name": "Spring Rainbow and Clouds",
+    "subject": "holidays/spring",
+    "tags": ["spring", "rainbow", "weather"],
+    "layout": "full",
+    "prompt": "a big arching rainbow stretching across the sky with a fluffy rounded cloud at each end, a few small raindrops falling beneath, a smiling sun peeking from one corner"
+  },
+  {
+    "name": "Spring Baby Chick",
+    "subject": "holidays/spring",
+    "tags": ["spring", "chick", "easy"],
+    "layout": "full",
+    "prompt": "a fluffy round baby chick standing in fresh grass, big happy eyes, a tiny triangle beak, little wings tucked at its sides, a single flower beside it, simple and cute for young children"
+  },
+  {
+    "name": "Spring Bunny with Basket",
+    "subject": "holidays/spring",
+    "tags": ["spring", "bunny", "easter"],
+    "layout": "full",
+    "prompt": "a sweet sitting bunny with long upright ears holding a small woven basket filled with flowers and a couple of eggs, a fluffy round tail, whiskers and a gentle smile, a tuft of grass nearby"
+  },
+  {
+    "name": "Spring Daffodil Close-Up",
+    "subject": "holidays/spring",
+    "tags": ["spring", "flowers", "daffodil"],
+    "layout": "full",
+    "prompt": "a single large daffodil shown up close filling the page, a trumpet-shaped center ringed by six wide pointed petals, a sturdy stem with two long leaves, a couple of dewdrops on a petal"
+  },
+  {
+    "name": "Spring Umbrella in the Rain",
+    "subject": "holidays/spring",
+    "tags": ["spring", "rain", "umbrella"],
+    "layout": "full",
+    "prompt": "an open umbrella with a curved handle held upright, gentle raindrops falling all around and bouncing in small puddles below, a pair of rain boots beside it, a couple of clouds above"
+  },
+  {
+    "name": "Spring Bumblebee on a Flower",
+    "subject": "holidays/spring",
+    "tags": ["spring", "bee", "flowers"],
+    "layout": "full",
+    "prompt": "a cute chubby bumblebee with striped body and small rounded wings landing on a large open flower, big friendly eyes and a tiny smile, the flower's petals spread wide, a leaf curling beside it"
+  },
+  {
+    "name": "Spring Cherry Blossom Branch",
+    "subject": "holidays/spring",
+    "tags": ["spring", "blossom", "tree"],
+    "layout": "full",
+    "prompt": "a slender tree branch covered in delicate cherry blossoms, each five-petaled flower with a little round center, a few buds not yet open, a couple of petals drifting down and a small leaf or two"
+  },
+  {
+    "name": "Spring Flower Pot",
+    "subject": "holidays/spring",
+    "tags": ["spring", "flowers", "easy"],
+    "layout": "full",
+    "prompt": "a rounded flower pot filled with three tall flowers of different simple shapes, leaves spilling over the rim, a smiling sun above and a small bee nearby, big bold shapes easy for little hands"
+  },
+  {
+    "name": "Spring Garden Scene",
+    "subject": "holidays/spring",
+    "tags": ["spring", "garden", "scene"],
+    "layout": "full",
+    "prompt": "a busy spring garden with rows of blooming flowers, a small watering can, a butterfly and a bee flying above, a friendly worm peeking from the soil, a fence and a bright sun in the background"
+  },
+  {
+    "name": "Spring Birdhouse",
+    "subject": "holidays/spring",
+    "tags": ["spring", "bird", "birdhouse"],
+    "layout": "full",
+    "prompt": "a little wooden birdhouse hanging from a leafy branch, a round entrance hole and a tiny perch, a cheerful songbird sitting beside it with a small worm in its beak, blossoms dotting the branch"
+  }
+]

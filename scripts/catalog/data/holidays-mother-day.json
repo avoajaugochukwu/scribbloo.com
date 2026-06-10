@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Best Mom Ever Heart",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "heart", "best-mom"],
+    "layout": "full",
+    "prompt": "a large plump heart in the center with a ribbon banner across the middle reading BEST MOM EVER, small flowers and sparkles tucked around the edges, a cheerful celebratory feel"
+  },
+  {
+    "name": "I Love You Mom Banner",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "banner", "card"],
+    "layout": "full",
+    "prompt": "a flowing ribbon banner spelling out I LOVE YOU MOM in bubbly hand-lettered letters, decorated with a few hearts and a little flower at each end, plenty of open space inside the letters to color"
+  },
+  {
+    "name": "Mother's Day Tulip Bouquet",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "flowers", "bouquet", "tulips"],
+    "layout": "full",
+    "prompt": "a bouquet of tall tulips with rounded cup-shaped blooms and long leaves, wrapped in paper and tied with a big bow, a couple of small hearts floating above the flowers"
+  },
+  {
+    "name": "Mom and Child Hug",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "mom", "child", "scene"],
+    "layout": "full",
+    "prompt": "a smiling mother kneeling to wrap her arms around her happy young child in a warm hug, both with cheerful faces, a few small hearts in the air around them"
+  },
+  {
+    "name": "Mother's Day Breakfast in Bed",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "breakfast", "scene"],
+    "layout": "full",
+    "prompt": "a breakfast tray holding a steaming teapot, a cup, a stack of pancakes with a pat of butter, and a small vase with a single flower, a folded napkin and a tiny heart-shaped note on the tray"
+  },
+  {
+    "name": "Simple Mother's Day Heart",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "heart", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "one big bold simple heart filling most of the page with the short word MOM in large rounded letters inside it, a couple of small dots and a tiny flower beside it, very easy and uncluttered for little hands"
+  },
+  {
+    "name": "Mom Flower Close-Up",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "flower", "close-up"],
+    "layout": "full",
+    "prompt": "a single large detailed daisy-like flower seen up close, filling the page, layered petals radiating from a round center, a couple of leaves at the base, the word MOM curving gently across the center"
+  },
+  {
+    "name": "Mother's Day Flower Mandala",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "mandala", "flowers", "detailed"],
+    "layout": "full",
+    "prompt": "a circular mandala built from repeating flowers, petals, hearts, and swirling leaves arranged in symmetrical rings around a small heart at the center, intricate and detailed for older colorists"
+  },
+  {
+    "name": "Happy Mother's Day Card",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "card", "greeting"],
+    "layout": "full",
+    "prompt": "a folded greeting card shape with HAPPY MOTHER'S DAY in cheerful lettering across the front, framed by a border of small hearts and flowers, a little bow in one corner"
+  },
+  {
+    "name": "Number One Mom Trophy",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "trophy", "best-mom"],
+    "layout": "full",
+    "prompt": "a shiny award trophy with two handles standing on a base, the number 1 and the word MOM on the front, a small star above it and a couple of sparkle marks, a celebratory ribbon at the foot"
+  },
+  {
+    "name": "Mother's Day Teacup and Cupcake",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "tea", "cupcake", "cute"],
+    "layout": "full",
+    "prompt": "a cute teacup on a saucer with a heart on the side and gentle steam rising, sitting beside a frosted cupcake topped with a swirl and a little heart, a small flower resting next to them"
+  },
+  {
+    "name": "Mom and Baby Animals",
+    "subject": "holidays/mother-day",
+    "tags": ["mother-day", "animals", "cute", "scene"],
+    "layout": "full",
+    "prompt": "a sweet mother bird in a nest tucking her wing around two small chicks, a leafy branch with a couple of blossoms and a tiny hovering heart, warm and loving expressions"
+  }
+]

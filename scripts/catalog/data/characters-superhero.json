@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Flying Caped Superhero",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "cape", "flying"],
+    "layout": "full",
+    "prompt": "a brave superhero soaring through the sky with one fist punched forward, a long cape streaming out behind, a bold star emblem on the chest, a small eye mask, and a confident smile, a few puffy clouds around"
+  },
+  {
+    "name": "Masked Superhero Hero Pose",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "mask", "pose"],
+    "layout": "full",
+    "prompt": "a strong superhero standing tall with hands on hips in a classic hero stance, a fitted costume with a chest emblem and belt, a cape draped behind the shoulders, an eye mask, looking proud and ready"
+  },
+  {
+    "name": "Cute Superhero Toddler",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "cute", "easy"],
+    "layout": "full",
+    "prompt": "a round chubby little superhero toddler with big sparkly eyes, a short cape, a simple star on the chest, tiny boots, and arms raised high in a happy cheer, very simple bold shapes"
+  },
+  {
+    "name": "Superhero Over the City",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "city", "scene"],
+    "layout": "full",
+    "prompt": "a superhero crouched on the edge of a tall city rooftop at night, cape flowing to one side, looking out over a skyline of skyscrapers and a round moon, ready to leap into action"
+  },
+  {
+    "name": "Super-Strong Superhero Lifting",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "strength", "scene"],
+    "layout": "full",
+    "prompt": "a muscular superhero lifting a giant boulder high overhead with both arms, feet planted firmly, a flowing cape and chest emblem, a strained determined smile showing great strength"
+  },
+  {
+    "name": "Speedster Superhero Running",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "speed", "running"],
+    "layout": "full",
+    "prompt": "a sleek speedster superhero dashing forward at full sprint, body leaning into the run, small motion swirls trailing behind the legs and arms, a lightning-bolt emblem on the chest, a fitted mask"
+  },
+  {
+    "name": "Superhero Team Lineup",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "team", "group"],
+    "layout": "full",
+    "prompt": "a team of four friendly superheroes standing shoulder to shoulder in a confident row, each with a different cape, mask, and chest emblem, varied poses with crossed arms and hands on hips, all smiling"
+  },
+  {
+    "name": "Super Pup Sidekick",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "dog", "pet", "cute"],
+    "layout": "full",
+    "prompt": "a cute cartoon puppy superhero sidekick wearing a tiny cape and a little eye mask, sitting upright with one paw lifted, a small star tag on its collar, big happy eyes and a wagging tail"
+  },
+  {
+    "name": "Superhero Mask Close-Up",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "mask", "close-up", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up of a superhero's face and shoulders, a detailed eye mask, a brave determined expression, wind-swept hair, the top of a high collar and cape clasp visible, simple background"
+  },
+  {
+    "name": "Superhero to the Rescue",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "rescue", "scene", "cat"],
+    "layout": "full",
+    "prompt": "a kind superhero gently rescuing a small kitten from a tree branch, one arm reaching out to cradle the cat, cape flowing, a friendly reassuring smile, leaves and a sturdy branch around them"
+  },
+  {
+    "name": "Design Your Own Superhero",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "activity", "blank", "create"],
+    "layout": "full",
+    "prompt": "a superhero standing in a confident pose with a completely blank plain shield shape on the chest and a plain blank cape, ready for a child to draw their own emblem and patterns, simple bold outlines"
+  },
+  {
+    "name": "Superhero Girl with Cape",
+    "subject": "characters/superhero",
+    "tags": ["superhero", "girl", "cape"],
+    "layout": "full",
+    "prompt": "a cheerful superhero girl standing with one hand raised in a friendly wave and the other on her hip, a flowing cape, a heart emblem on the chest, an eye mask, ponytail, boots, and a bright smile"
+  }
+]

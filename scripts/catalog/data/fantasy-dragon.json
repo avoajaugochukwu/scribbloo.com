@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Fire-Breathing Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "fire", "fire-breathing"],
+    "layout": "full",
+    "prompt": "a mighty winged dragon standing tall and breathing a swirling stream of fire from its open mouth, large bat-like wings spread wide, a long spiked tail, rows of scales along its back, and sharp claws planted firmly on the rocky ground"
+  },
+  {
+    "name": "Cute Baby Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "baby", "cute", "easy"],
+    "layout": "full",
+    "prompt": "a round chubby baby dragon sitting happily, big sparkly eyes, a small wide smile, tiny stubby wings, two little horn bumps on its head, short legs, and a curled-up tail with a heart-shaped tip"
+  },
+  {
+    "name": "Chinese Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "chinese", "serpent"],
+    "layout": "full",
+    "prompt": "a long serpent-like Chinese dragon coiling and weaving through the air, a flowing mane and whiskers, a row of soft spines down its back, four short clawed legs, and a pearl floating near its open friendly mouth"
+  },
+  {
+    "name": "Baby Dragon Hatching",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "baby", "egg", "hatching"],
+    "layout": "full",
+    "prompt": "a tiny baby dragon hatching out of a large cracked egg, its head and one little wing peeking over the broken shell, big curious eyes, two more spotted dragon eggs resting in a nest of straw beside it"
+  },
+  {
+    "name": "Dragon and Castle",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "castle", "scene"],
+    "layout": "full",
+    "prompt": "a friendly dragon flying over a tall fairy-tale castle with pointed towers and waving flags, wings outstretched against a few fluffy clouds, a crescent moon, and rolling hills below the castle walls"
+  },
+  {
+    "name": "Sleeping Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "sleeping", "cute"],
+    "layout": "full",
+    "prompt": "a peaceful dragon curled up asleep with its tail wrapped around its body, eyes gently closed, a content smile, folded wings draped over its back, and a few little snore puffs drifting up from its nose"
+  },
+  {
+    "name": "Dragon Guarding Treasure",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "treasure", "gold", "cave"],
+    "layout": "full",
+    "prompt": "a proud dragon perched on a big pile of treasure, coins, gems, and a crown scattered around it, wings tucked at its sides, a long tail curling around the gold hoard inside a rocky cave mouth"
+  },
+  {
+    "name": "Two-Headed Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "two-headed", "fantasy"],
+    "layout": "full",
+    "prompt": "a bold two-headed dragon standing on a hilltop, both heads facing slightly different directions with toothy grins, two long necks twisting together, wide spread wings, and a single spiked tail behind it"
+  },
+  {
+    "name": "Flying Dragon Over Mountains",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "flying", "mountains", "scene"],
+    "layout": "full",
+    "prompt": "a dragon soaring high through the sky with wings fully spread, body leaning into the wind, a long trailing tail, jagged snowy mountain peaks far below, and a scattering of small clouds around it"
+  },
+  {
+    "name": "Easy Toddler Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "easy", "toddler", "simple"],
+    "layout": "full",
+    "prompt": "a very simple round cartoon dragon made of big chunky shapes, a smiling face, two small triangle wings, a stubby tail, and three soft scallop bumps along its back, drawn with plenty of open space to color"
+  },
+  {
+    "name": "Dragon Face Close-Up",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "close-up", "face", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up of a friendly dragon's face filling the frame, large expressive eyes, two curved horns, textured scales across the cheeks and snout, flared nostrils, and a hint of small fangs in a gentle smile"
+  },
+  {
+    "name": "Knight and Dragon",
+    "subject": "fantasy/dragon",
+    "tags": ["dragon", "knight", "scene", "activity"],
+    "layout": "full",
+    "prompt": "a brave little knight in armor holding a shield standing face to face with a large but playful dragon, the dragon tilting its head curiously, a few rocks and a small banner between them on a grassy field"
+  }
+]

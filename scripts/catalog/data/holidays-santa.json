@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Jolly Santa Waving",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "wave"],
+    "layout": "full",
+    "prompt": "a jolly Santa Claus standing and waving one mittened hand hello, a big round belly, a fluffy beard, a tasseled hat, a wide belt with a buckle, rosy cheeks and a warm friendly smile"
+  },
+  {
+    "name": "Santa on His Sleigh",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "sleigh"],
+    "layout": "full",
+    "prompt": "Santa Claus sitting in a curved sleigh piled with wrapped presents, holding the reins, a couple of reindeer harnessed in front, a few stars and snowflakes in the night sky around him"
+  },
+  {
+    "name": "Santa by the Fireplace",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "fireplace"],
+    "layout": "full",
+    "prompt": "Santa Claus crouching beside a cozy fireplace placing a gift, three stockings hanging from the mantel, a decorated garland above, a small fire and a few logs in the hearth"
+  },
+  {
+    "name": "Santa with Toy Sack",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "gifts"],
+    "layout": "full",
+    "prompt": "Santa Claus carrying a large bulging sack of toys over his shoulder, a teddy bear and a candy cane poking out of the top, his other hand steadying the bag, a cheerful expression"
+  },
+  {
+    "name": "Santa and Reindeer",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "reindeer"],
+    "layout": "full",
+    "prompt": "Santa Claus standing next to a friendly reindeer with big antlers and a round nose, his arm around the reindeer's neck, a small bell collar on the reindeer, snowy ground beneath them"
+  },
+  {
+    "name": "Cute Baby Santa",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "cute", "toddler"],
+    "layout": "full",
+    "prompt": "an adorable round baby-style Santa with a chubby face, oversized hat slipping a little, big sparkly eyes, tiny mittens, and a short fluffy beard, drawn with simple chunky shapes for little hands"
+  },
+  {
+    "name": "Santa Face Close-Up",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "portrait"],
+    "layout": "full",
+    "prompt": "a close-up of Santa Claus's smiling face filling the frame, twinkling eyes behind round glasses, rosy round cheeks, a thick curly beard and moustache, bushy eyebrows, and a hat with a fluffy pom-pom"
+  },
+  {
+    "name": "Santa Down the Chimney",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "chimney"],
+    "layout": "full",
+    "prompt": "Santa Claus squeezing down a brick chimney with his sack of toys, only his upper body and arms visible above the chimney top, a starry sky and a snow-dusted rooftop around him"
+  },
+  {
+    "name": "Santa Reading His List",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "list"],
+    "layout": "full",
+    "prompt": "Santa Claus holding a long unrolled scroll list in both hands, peering at it through his glasses with a thoughtful smile, a feather quill tucked behind his ear, his hat tilted slightly"
+  },
+  {
+    "name": "Santa and Christmas Tree",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "tree"],
+    "layout": "full",
+    "prompt": "Santa Claus standing beside a tall decorated Christmas tree topped with a star, hanging an ornament on a branch, a few wrapped presents stacked at the base of the tree"
+  },
+  {
+    "name": "Santa with Snowman",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "snowman"],
+    "layout": "full",
+    "prompt": "Santa Claus standing next to a cheerful snowman with a carrot nose, a scarf, and twig arms, both waving, a few falling snowflakes and a small snowy hill behind them"
+  },
+  {
+    "name": "Santa Ringing a Bell",
+    "subject": "holidays/santa",
+    "tags": ["santa", "christmas", "bell"],
+    "layout": "full",
+    "prompt": "Santa Claus holding up a large jingle bell and ringing it, his mouth open as if calling out a merry greeting, his other hand on his hip, motion lines around the bell and a big festive grin"
+  }
+]

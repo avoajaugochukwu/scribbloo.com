@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Simple Mandala for Beginners",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "simple", "beginner"],
+    "layout": "full",
+    "prompt": "an easy circular mandala with big open shapes radiating from the center, a ring of large rounded petals around a plain circle, a ring of simple teardrops outside that, and a scalloped outer edge, lots of empty space to color"
+  },
+  {
+    "name": "Flower Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "flower", "floral"],
+    "layout": "full",
+    "prompt": "a floral mandala built from repeating daisy and rose blooms arranged in symmetrical rings, curling leaves and vines filling the gaps, a single open flower at the very center, balanced and even all the way around"
+  },
+  {
+    "name": "Heart Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "heart", "love"],
+    "layout": "full",
+    "prompt": "a mandala made of repeating hearts radiating outward, an inner ring of small hearts around a central heart, a middle ring of medium hearts joined by curved lines, and an outer ring of large hearts with tiny dot details between them"
+  },
+  {
+    "name": "Sun Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "sun", "rays"],
+    "layout": "full",
+    "prompt": "a radiant sun mandala with a calm smiling face in the center circle, alternating long pointed and short wavy rays around it, a ring of small dots and swirls, and a decorative scalloped border"
+  },
+  {
+    "name": "Geometric Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "geometric", "shapes"],
+    "layout": "full",
+    "prompt": "a precise geometric mandala built from triangles, diamonds, hexagons, and straight lines arranged in perfect symmetry, an angular star at the center, concentric rings of repeating polygons, sharp and structured"
+  },
+  {
+    "name": "Star Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "star"],
+    "layout": "full",
+    "prompt": "a mandala built around stars, a large eight-pointed star at the center, rings of smaller five-pointed stars radiating outward, fine connecting lines and small dots filling the spaces between the star points"
+  },
+  {
+    "name": "Lotus Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "lotus", "floral"],
+    "layout": "full",
+    "prompt": "a lotus mandala with layered rows of pointed lotus petals opening outward from a small seedpod center, each petal lined with delicate inner veins, surrounded by a ring of tiny buds and a simple circular border"
+  },
+  {
+    "name": "Cute Animal Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "cute", "animal", "kids"],
+    "layout": "full",
+    "prompt": "a playful kid-friendly mandala with a smiling cartoon cat face in the center, a ring of little paw prints, a ring of fish and bones, and an outer ring of rounded petals, cheerful and easy to color"
+  },
+  {
+    "name": "Mandala Center Close-Up",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "close-up", "detail"],
+    "layout": "full",
+    "prompt": "a close-up of the heart of a mandala filling the whole frame, a small intricate flower in the very middle surrounded by a few enlarged rings of detailed petals, dots, and curved lines, with the pattern fading off the edges"
+  },
+  {
+    "name": "Butterfly Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "butterfly", "nature"],
+    "layout": "full",
+    "prompt": "a mandala made of butterflies arranged in a circle, their wings meeting wing-tip to wing-tip to form a continuous ring, patterned wings with swirls and dots, a small round flower at the center they all face"
+  },
+  {
+    "name": "Intricate Detailed Mandala",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "intricate", "detailed", "adult"],
+    "layout": "full",
+    "prompt": "a highly intricate mandala packed with fine repeating detail, many concentric rings of tiny petals, paisley swirls, lace-like loops, beaded dots, and lattice patterns, dense and ornate all the way to a delicate filigree border"
+  },
+  {
+    "name": "Mandala Color-by-Number",
+    "subject": "patterns/mandala",
+    "tags": ["mandala", "color-by-number", "activity", "kids"],
+    "layout": "full",
+    "prompt": "a clear circular mandala with each section marked by a small printed number for a color-by-number activity, simple rings of petals and shapes with roomy areas, a tidy numbered key boxes arranged neatly in one corner"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Classic Five-Point Star",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "simple",
+      "five-pointed"
+    ],
+    "layout": "full",
+    "prompt": "a single bold five-pointed star centered on the page, perfectly symmetrical with clean straight edges and an open middle, large and simple for easy coloring"
+  },
+  {
+    "name": "Smiling Cute Star",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "cute",
+      "kawaii"
+    ],
+    "layout": "full",
+    "prompt": "a chubby cartoon star with a happy smiling face, two big round sparkly eyes, rosy cheeks, tiny waving arms and little feet at the bottom points, looking cheerful and friendly"
+  },
+  {
+    "name": "Wishing Shooting Star",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "shooting-star",
+      "wish"
+    ],
+    "layout": "full",
+    "prompt": "a shooting star streaking across the sky with a long curved sparkly trail flowing behind it, small swirls and tiny dots in the tail, a few little stars scattered around"
+  },
+  {
+    "name": "Starburst Pattern",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "mandala",
+      "pattern"
+    ],
+    "layout": "full",
+    "prompt": "an intricate circular mandala built from layered star shapes, repeating five-pointed stars radiating from the center outward, decorative dots, petals, and swirling patterns filling each ring"
+  },
+  {
+    "name": "Starry Night Sky Scene",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "night-sky",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a peaceful night sky scene with a smiling crescent moon and many twinkling stars of different sizes scattered across it, a few wispy clouds and rolling hilltops along the bottom"
+  },
+  {
+    "name": "Star Cluster Bunch",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "cluster",
+      "group"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful cluster of many five-pointed stars grouped together at different sizes and angles, some overlapping, a few tiny sparkle dots tucked between them, filling the page"
+  },
+  {
+    "name": "Big Star Close-Up",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "close-up",
+      "detailed"
+    ],
+    "layout": "full",
+    "prompt": "a single large detailed star filling most of the page, each of its five points divided into facets and sections with line patterns, a small decorative star design in the center"
+  },
+  {
+    "name": "Twinkling Sparkle Star",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "sparkle",
+      "twinkle"
+    ],
+    "layout": "full",
+    "prompt": "a glittering four-point sparkle star with long thin radiating beams of light, small bursts and tiny dot sparkles surrounding it, a bright shining magical look"
+  },
+  {
+    "name": "Star and Crescent Moon",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "moon",
+      "crescent"
+    ],
+    "layout": "full",
+    "prompt": "a friendly crescent moon with a single bright five-pointed star nestled in its curve, both with gentle smiling faces, a few small sparkles drifting around them"
+  },
+  {
+    "name": "Easy Toddler Star",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "easy",
+      "toddler"
+    ],
+    "layout": "full",
+    "prompt": "one very large chunky five-pointed star with thick rounded outlines and a wide open middle, extra simple and bold, perfect for the smallest hands to color inside"
+  },
+  {
+    "name": "Star Constellation Map",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "constellation",
+      "activity"
+    ],
+    "layout": "full",
+    "prompt": "a connect-the-stars constellation scene with several small stars joined by straight dotted lines forming simple shapes like a bear and a dipper, set against an open sky with a few scattered stars"
+  },
+  {
+    "name": "Wreath of Stars",
+    "subject": "nature/star",
+    "tags": [
+      "star",
+      "wreath",
+      "ring"
+    ],
+    "layout": "full",
+    "prompt": "a circular wreath made of many five-pointed stars linked together in a ring, small leaves and dots woven between the stars, an open center and a little bow at the top"
+  }
+]

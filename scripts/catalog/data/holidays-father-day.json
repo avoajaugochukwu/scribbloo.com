@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Happy Father's Day Card",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "card", "lettering"],
+    "layout": "full",
+    "prompt": "a cheerful greeting-card design with large bubble lettering reading Happy Father's Day across the middle, a small bow tie under the words, and a border of little hearts and stars framing the message"
+  },
+  {
+    "name": "Best Dad Trophy",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "trophy", "best-dad"],
+    "layout": "full",
+    "prompt": "a shiny award trophy standing on a wide base, two curved handles, a star on top, and a banner across the cup reading Best Dad, with a couple of sparkle marks around it"
+  },
+  {
+    "name": "Number One Dad Mug",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "mug", "coffee"],
+    "layout": "full",
+    "prompt": "a chunky coffee mug with a big rounded handle and gentle steam curls rising from the top, a large number 1 and the word Dad printed on the front, sitting on a small saucer"
+  },
+  {
+    "name": "Father's Day Necktie",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "tie", "easy"],
+    "layout": "full",
+    "prompt": "a single large necktie hanging straight down with a neat knot at the top, decorated with simple stripes and polka dots, the word Dad in a small heart near the knot, a clean toddler-friendly shape"
+  },
+  {
+    "name": "Dad and Kid Fishing",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "fishing", "scene"],
+    "layout": "full",
+    "prompt": "a smiling dad and his child sitting together at the end of a little wooden dock holding fishing rods, a happy fish jumping out of the rippling water, a few reeds and a round sun in the sky"
+  },
+  {
+    "name": "Dad at the Barbecue Grill",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "barbecue", "grill"],
+    "layout": "full",
+    "prompt": "a cheerful dad wearing an apron and a chef hat standing behind a barbecue grill flipping burgers with a spatula, hot dogs and burgers on the grill, a small puff of smoke and a bottle of sauce on a side table"
+  },
+  {
+    "name": "Father's Day Bear Hug",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "hug", "love"],
+    "layout": "full",
+    "prompt": "a dad kneeling down to wrap his arms around his small child in a warm hug, both with big happy smiles and closed eyes, a few floating hearts around them"
+  },
+  {
+    "name": "Piggyback Ride with Dad",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "piggyback", "scene"],
+    "layout": "full",
+    "prompt": "a laughing dad carrying his giggling child on his shoulders, the child's arms raised with joy, both wearing casual clothes, a couple of birds and a small cloud overhead in a park setting"
+  },
+  {
+    "name": "I Love Dad Heart",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "heart", "easy"],
+    "layout": "full",
+    "prompt": "one big rounded heart shape with the words I Love Dad written across the center in cheerful lettering, a simple dotted border around the edge of the heart, an easy bold design for little hands"
+  },
+  {
+    "name": "Father's Day Balloon Bunch",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "balloons", "celebration"],
+    "layout": "full",
+    "prompt": "a bunch of round and heart-shaped balloons floating up on long curly strings tied together at the bottom, one balloon spelling DAD across them, a few small confetti shapes drifting nearby"
+  },
+  {
+    "name": "Dad's Toolbox Close-Up",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "tools", "close-up"],
+    "layout": "full",
+    "prompt": "a close-up of an open toolbox with a hammer, a wrench, a screwdriver, a saw, and a tape measure neatly arranged inside, a small Best Dad tag tied to the handle, simple sturdy shapes"
+  },
+  {
+    "name": "Father and Child Reading",
+    "subject": "holidays/father-day",
+    "tags": ["father-day", "reading", "scene"],
+    "layout": "full",
+    "prompt": "a dad sitting in a big cozy armchair reading a storybook to his child curled up beside him, a small lamp on a side table, a houseplant in the corner, and a warm peaceful expression on both faces"
+  }
+]

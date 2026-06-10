@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Thanksgiving Turkey Feast",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "turkey",
+      "fall"
+    ],
+    "layout": "full",
+    "prompt": "a proud plump turkey standing tall and facing forward, a wide fan of long tail feathers spread out behind it, a round body, a wattle under its beak, two skinny legs, and a cheerful smiling face"
+  },
+  {
+    "name": "Cute Hand Turkey",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "turkey",
+      "easy",
+      "toddler"
+    ],
+    "layout": "full",
+    "prompt": "a very simple cute hand-shaped turkey with the thumb as the head and the four fingers as big rounded tail feathers, two tiny feet, big happy eyes, and a small beak, drawn with thick chunky shapes for little kids"
+  },
+  {
+    "name": "Thanksgiving Cornucopia",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "cornucopia",
+      "harvest"
+    ],
+    "layout": "full",
+    "prompt": "a woven horn-shaped cornucopia basket lying on its side, overflowing with pumpkins, gourds, apples, grapes, corn, and autumn leaves spilling out onto a table"
+  },
+  {
+    "name": "Pumpkin Pie Slice",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "pumpkin pie",
+      "dessert"
+    ],
+    "layout": "full",
+    "prompt": "a single slice of pumpkin pie on a small plate, a fluted crust edge, a generous swirl of whipped cream on top, a fork resting beside the plate, and a couple of tiny steam curls rising up"
+  },
+  {
+    "name": "Thanksgiving Feast Table",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "feast",
+      "scene",
+      "dinner"
+    ],
+    "layout": "full",
+    "prompt": "a festive dinner table loaded with a whole roast turkey on a platter in the center, surrounded by a bowl of mashed potatoes, a pie, corn, a basket of bread, and lit candles, viewed from the front"
+  },
+  {
+    "name": "Friendly Pilgrim Boy",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "pilgrim",
+      "history"
+    ],
+    "layout": "full",
+    "prompt": "a smiling Pilgrim boy standing and waving, wearing a tall buckled hat, a collared coat, and buckled shoes, holding a small basket of harvest vegetables in one hand"
+  },
+  {
+    "name": "Mayflower Ship",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "mayflower",
+      "ship",
+      "history"
+    ],
+    "layout": "full",
+    "prompt": "an old wooden sailing ship like the Mayflower floating on gentle ocean waves, three tall masts with billowing square sails, rigging ropes, a few seagulls in the sky, and a hint of clouds"
+  },
+  {
+    "name": "Give Thanks Banner",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "banner",
+      "lettering",
+      "thankful"
+    ],
+    "layout": "full",
+    "prompt": "a decorative banner with bubble lettering that reads GIVE THANKS, framed by autumn leaves, acorns, a small pumpkin, and a couple of curling vines around the words"
+  },
+  {
+    "name": "Autumn Harvest Pumpkins",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "pumpkin",
+      "harvest",
+      "fall"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful group of three pumpkins of different sizes clustered together with curling stems and a few autumn leaves and acorns scattered around their base, sitting on the ground"
+  },
+  {
+    "name": "Thanksgiving Corn",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "corn",
+      "harvest",
+      "close-up"
+    ],
+    "layout": "full",
+    "prompt": "a close-up of three ears of Indian corn tied together at the top, each ear showing rows of plump kernels, with peeled-back husk leaves fanning out behind them"
+  },
+  {
+    "name": "Grateful Turkey Sign",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "turkey",
+      "thankful",
+      "cute"
+    ],
+    "layout": "full",
+    "prompt": "a cute round cartoon turkey sitting down and holding up a small blank sign with both wings, a fan of feathers behind it, big happy eyes, leaving room to color and write a thankful message"
+  },
+  {
+    "name": "Thanksgiving Maze Activity",
+    "subject": "holidays/thanksgiving",
+    "tags": [
+      "thanksgiving",
+      "maze",
+      "activity",
+      "turkey"
+    ],
+    "layout": "full",
+    "prompt": "a simple printable maze shaped inside a square, with a hungry turkey at the start in one corner and a big slice of pie at the finish in the opposite corner, winding paths between them and small leaves decorating the border"
+  }
+]

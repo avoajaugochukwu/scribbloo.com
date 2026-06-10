@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Leaping Dolphin",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "dolphin", "sea"],
+    "layout": "full",
+    "prompt": "a cheerful dolphin leaping above the water in a graceful arch, a curved sleek body, a smiling beak and friendly eye, a tall dorsal fin, splashing water droplets and a couple of gentle waves below"
+  },
+  {
+    "name": "Smiling Sea Turtle",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "sea turtle", "turtle"],
+    "layout": "full",
+    "prompt": "a happy sea turtle gliding through the water, a patterned domed shell, four wide flippers spread out as if swimming, a gentle smile and kind eyes, a few small bubbles rising around it"
+  },
+  {
+    "name": "Curious Octopus",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "octopus", "sea"],
+    "layout": "full",
+    "prompt": "a friendly octopus with a big round head and large curious eyes, eight curling tentacles lined with rows of round suckers swirling in different directions, a few small bubbles drifting nearby"
+  },
+  {
+    "name": "Coral Reef Scene",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "coral reef", "underwater"],
+    "layout": "full",
+    "prompt": "a busy underwater coral reef with branching and fan-shaped corals, swaying seaweed, several little fish weaving between the coral, a starfish on a rock, and small bubbles floating toward the surface"
+  },
+  {
+    "name": "Friendly Whale",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "whale", "humpback"],
+    "layout": "full",
+    "prompt": "a big gentle humpback whale swimming through the water with a rounded body and wide tail flukes, long flippers, a small friendly eye, grooves along its throat, and a soft spout of water from its blowhole"
+  },
+  {
+    "name": "Cute Clownfish",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "clownfish", "fish", "easy"],
+    "layout": "full",
+    "prompt": "a single chubby cartoon clownfish with simple bold rounded stripes across its body, a small smiling mouth, big happy eyes, and gently flowing fins, drawn large and simple for little hands"
+  },
+  {
+    "name": "Graceful Seahorse",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "seahorse", "sea"],
+    "layout": "full",
+    "prompt": "an elegant seahorse curving its long coiled tail around a strand of seaweed, a horse-like head with a small snout, a ridged crest along its back, and a row of bony bumps down its curved body"
+  },
+  {
+    "name": "Smiling Crab",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "crab", "easy"],
+    "layout": "full",
+    "prompt": "a cheerful round crab standing on the sand, a wide oval shell, two big raised claws, four little legs on each side, two eyes on short stalks, a happy smile, and a couple of small seashells beside it"
+  },
+  {
+    "name": "Friendly Shark",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "shark", "sea"],
+    "layout": "full",
+    "prompt": "a friendly cartoon shark swimming forward with a streamlined body, a tall dorsal fin and side fins, a wide grinning mouth showing a row of small triangular teeth, a big eye, and a few bubbles trailing behind"
+  },
+  {
+    "name": "Floating Jellyfish",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "jellyfish", "sea"],
+    "layout": "full",
+    "prompt": "a gentle jellyfish drifting upward with a smooth domed bell, a sweet little face, and many long wavy ruffled tentacles trailing below in flowing curves, surrounded by scattered small bubbles"
+  },
+  {
+    "name": "Underwater Mermaid",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "mermaid", "underwater"],
+    "layout": "full",
+    "prompt": "a smiling mermaid swimming underwater with long flowing wavy hair, a scaly fish tail curving behind her, a shell top, her arms gracefully posed, surrounded by a few fish, seaweed, and rising bubbles"
+  },
+  {
+    "name": "Octopus Eye Close-Up",
+    "subject": "nature/ocean",
+    "tags": ["ocean", "octopus", "close-up", "detailed"],
+    "layout": "full",
+    "prompt": "an extreme close-up of an octopus face filling the frame, one enormous expressive eye, the rounded mantle above, and the tops of several thick tentacles curling in with detailed rows of round suckers"
+  }
+]

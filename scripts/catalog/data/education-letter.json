@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Big Letter A",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "a", "uppercase"],
+    "layout": "full",
+    "prompt": "one giant uppercase letter A filling the page, a thick bold block shape with plenty of open space inside, a few small stars and a smiling sun in the corners, simple and toddler-friendly"
+  },
+  {
+    "name": "Letter A is for Apple",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "a", "apple", "picture"],
+    "layout": "full",
+    "prompt": "a large uppercase letter A on the left and a round shiny apple with a leaf and stem on the right, a friendly cartoon style with a smiling face on the apple, both shapes big and easy to color"
+  },
+  {
+    "name": "Bubble Letter B",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "b", "bubble"],
+    "layout": "full",
+    "prompt": "a plump puffy bubble-style uppercase letter B with rounded edges, small floating soap bubbles and a couple of tiny hearts drifting around it, cheerful and playful"
+  },
+  {
+    "name": "Letter C with Cat",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "c", "cat", "picture"],
+    "layout": "full",
+    "prompt": "a big uppercase letter C with a cute sitting cartoon cat curled into the curve of the letter, the cat has whiskers and a happy face and a curled tail, a small ball of yarn beside it"
+  },
+  {
+    "name": "Letter D for Dog",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "d", "dog", "picture"],
+    "layout": "full",
+    "prompt": "a large uppercase letter D next to a friendly sitting cartoon puppy with floppy ears and a wagging tail, a small bone on the ground, both shapes bold and simple to color"
+  },
+  {
+    "name": "Uppercase and Lowercase Ee",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "e", "uppercase", "lowercase"],
+    "layout": "full",
+    "prompt": "a big uppercase letter E standing beside a matching lowercase letter e, both drawn as friendly block shapes with cute smiling faces, a small elephant peeking between them"
+  },
+  {
+    "name": "Flower Letter F",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "f", "flower", "decorated"],
+    "layout": "full",
+    "prompt": "an uppercase letter F decorated with little blooming flowers, leaves and vines growing up and around the strokes of the letter, a couple of buzzing bees nearby, pretty and detailed"
+  },
+  {
+    "name": "Bubble Letter M",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "m", "bubble"],
+    "layout": "full",
+    "prompt": "a chunky rounded bubble-style uppercase letter M with a glossy puffy look, small twinkling stars and a swirl or two around it, bold and fun to fill in"
+  },
+  {
+    "name": "Big Letter S as a Snake",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "s", "snake", "picture"],
+    "layout": "full",
+    "prompt": "an uppercase letter S shaped like a cute friendly cartoon snake, the body curving into the S form with a smiling face at the top end, a flicking tongue and simple scale patterns along its back"
+  },
+  {
+    "name": "Letter Z for Zebra",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "z", "zebra", "picture"],
+    "layout": "full",
+    "prompt": "a big uppercase letter Z beside a happy cartoon zebra with a striped mane and tail, the zebra standing and smiling, both shapes clear and easy to color"
+  },
+  {
+    "name": "Letter Close-Up Q",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "q", "close-up", "decorated"],
+    "layout": "full",
+    "prompt": "a single large uppercase letter Q filling the page up close, its round bowl and little tail drawn boldly, the inside filled with simple swirls, dots, and patterns to color in like a doodle"
+  },
+  {
+    "name": "Alphabet ABC Chart",
+    "subject": "education/letter",
+    "tags": ["letter", "alphabet", "abc", "chart"],
+    "layout": "full",
+    "prompt": "a full alphabet chart with all twenty-six uppercase letters A through Z arranged in neat rows inside little boxes, each letter drawn as a bold simple block shape ready to color, a cheerful banner across the top"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Birthday Cake with Candles",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "cake", "candles"],
+    "layout": "full",
+    "prompt": "a tall three-tier birthday cake decorated with swirls of frosting and a ring of lit candles on top, drips of icing along each layer, a sprinkle of small dots, sitting on a round cake plate"
+  },
+  {
+    "name": "Birthday Balloons Bunch",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "balloons", "party"],
+    "layout": "full",
+    "prompt": "a cheerful bunch of round party balloons of different sizes floating together, their strings gathered and tied in a bow at the bottom, a few star shapes and a curling ribbon among them"
+  },
+  {
+    "name": "Wrapped Birthday Present",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "present", "gift"],
+    "layout": "full",
+    "prompt": "a large square birthday gift box wrapped with patterned paper, a big puffy ribbon bow on top with looping tails, a small gift tag tied to one corner, set on a flat surface"
+  },
+  {
+    "name": "Happy Birthday Banner",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "banner", "bunting"],
+    "layout": "full",
+    "prompt": "a festive 'Happy Birthday' bunting banner made of triangular flag pennants strung across the top, each pennant holding one big bubble letter, with small stars and confetti dots scattered around"
+  },
+  {
+    "name": "Cute Birthday Cupcake",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "cupcake", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a single big friendly cupcake with a smiling face, a swirl of frosting on top, one tall candle with a flame, a fluted paper wrapper, and a cherry, drawn with simple chunky shapes"
+  },
+  {
+    "name": "Party Hat Close-Up",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "party-hat", "close-up"],
+    "layout": "full",
+    "prompt": "a single tall cone-shaped party hat shown up close, a fuzzy pom-pom on the pointed top, a stretchy chin strap, and bold polka-dot and zigzag stripe patterns wrapping around it"
+  },
+  {
+    "name": "Birthday Bear with Balloon",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "bear", "cute", "animal"],
+    "layout": "full",
+    "prompt": "a cuddly cartoon teddy bear wearing a little party hat, holding the string of a round balloon in one paw, a happy smile, sitting upright with a small wrapped gift beside it"
+  },
+  {
+    "name": "Birthday Party Scene",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "party", "scene", "detailed"],
+    "layout": "full",
+    "prompt": "a lively birthday party table with a candle-topped cake in the center, balloons tied to the chairs, a stack of wrapped presents, paper streamers draped above, and party hats and plates set out"
+  },
+  {
+    "name": "Birthday Cupcake Trio",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "cupcakes", "treats"],
+    "layout": "full",
+    "prompt": "three frosted birthday cupcakes lined up in a row, each with a different swirl of frosting topped with sprinkles, cherries, and a single candle, sitting on a small dessert tray"
+  },
+  {
+    "name": "Number Candle Cake",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "cake", "candles", "counting"],
+    "layout": "full",
+    "prompt": "a rounded birthday cake with smooth frosting and a wavy icing border, topped with several thin numbered birthday candles standing in a row, lit flames flickering, a few decorative dots along the side"
+  },
+  {
+    "name": "Birthday Gift Pile",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "presents", "gifts"],
+    "layout": "full",
+    "prompt": "a cheerful stack of birthday presents of different sizes piled on top of each other, each box wrapped in its own patterned paper with a bow, a couple of balloons tied to the top box"
+  },
+  {
+    "name": "Birthday Slice and Treats",
+    "subject": "holidays/birthday",
+    "tags": ["birthday", "cake-slice", "treats"],
+    "layout": "full",
+    "prompt": "a generous slice of layered birthday cake on a plate showing the cream filling between layers and a cherry on top, a small fork beside it, with a balloon and a wrapped candy in the background"
+  }
+]

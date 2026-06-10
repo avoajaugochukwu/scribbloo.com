@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Human Skeleton",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "skeleton", "bones"],
+    "layout": "full",
+    "prompt": "a full standing human skeleton shown from the front, arms slightly away from the body, the skull, ribcage, spine, pelvis, arm and leg bones all clearly separated, blank label lines pointing to major bone groups"
+  },
+  {
+    "name": "Human Heart",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "heart", "circulatory"],
+    "layout": "full",
+    "prompt": "a detailed anatomical human heart with the four chambers, the aorta and major arteries arching off the top, the large veins entering, and the surface blood vessels, blank label lines pointing to each main part"
+  },
+  {
+    "name": "Human Brain",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "brain", "nervous-system"],
+    "layout": "full",
+    "prompt": "a human brain shown from the side, the wrinkled folds and grooves of the cerebrum, the smaller cerebellum at the back, and the brain stem leading down, the four main lobes outlined with blank label lines"
+  },
+  {
+    "name": "Human Lungs",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "lungs", "respiratory"],
+    "layout": "full",
+    "prompt": "a pair of human lungs with the windpipe at the top branching into two bronchi and into smaller airways inside each lung, the dome of the diaphragm beneath, blank label lines pointing to the parts"
+  },
+  {
+    "name": "Digestive System",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "digestive-system", "stomach"],
+    "layout": "full",
+    "prompt": "a simplified human digestive system inside a body outline, the path from mouth and esophagus to the stomach, the long coiled small intestine, the framing large intestine, with the liver and pancreas, blank label lines"
+  },
+  {
+    "name": "Muscle Diagram",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "muscles", "muscular-system"],
+    "layout": "full",
+    "prompt": "a full front-facing human figure showing the major skeletal muscles, the chest, abdomen, arm and leg muscles drawn with their fiber direction, blank label lines pointing to the big muscle groups"
+  },
+  {
+    "name": "Human Eye",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "eye", "senses"],
+    "layout": "full",
+    "prompt": "a large cross-section of the human eye, the round iris and pupil at the front, the curved lens behind, the eyeball with the retina lining the back and the optic nerve leaving it, blank label lines pointing to each structure"
+  },
+  {
+    "name": "Human Ear",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "ear", "senses"],
+    "layout": "full",
+    "prompt": "a cross-section of the human ear showing the outer ear flap and canal, the round eardrum, the three tiny middle-ear bones, and the spiral cochlea of the inner ear, blank label lines pointing to the parts"
+  },
+  {
+    "name": "Hand Bones",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "hand", "bones"],
+    "layout": "full",
+    "prompt": "an x-ray-style view of the bones of a human hand and wrist, the small cluster of wrist bones, the long bones of the palm, and the jointed finger and thumb bones, blank label lines pointing to the bone groups"
+  },
+  {
+    "name": "Tooth Cross-Section",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "tooth", "teeth"],
+    "layout": "full",
+    "prompt": "a large cross-section of a single human molar tooth, the hard outer enamel, the layer beneath it, the soft pulp chamber in the center, and the roots anchored into the gum and jaw bone, blank label lines"
+  },
+  {
+    "name": "My Body Cartoon",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "body", "cute"],
+    "layout": "full",
+    "prompt": "a cheerful smiling cartoon child standing with arms out, big friendly eyes, simple bold shapes, with short blank label lines pointing to the head, arms, hands, tummy, legs, and feet for young learners"
+  },
+  {
+    "name": "Friendly Skeleton Buddy",
+    "subject": "education/anatomy",
+    "tags": ["anatomy", "skeleton", "cute"],
+    "layout": "full",
+    "prompt": "a cute friendly cartoon skeleton standing and waving, a big round happy skull with a wide smile, simple chunky rounded bones for the arms, ribs and legs, easy thick shapes for little hands to color"
+  }
+]

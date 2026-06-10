@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Lucky Four-Leaf Clover",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "clover", "four-leaf-clover", "lucky"],
+    "layout": "full",
+    "prompt": "a single large four-leaf clover with a cheerful smiling face, four heart-shaped leaves, a curling stem, and a few tiny sparkle marks around it to show it is lucky"
+  },
+  {
+    "name": "Friendly Leprechaun",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "leprechaun", "irish"],
+    "layout": "full",
+    "prompt": "a cheerful leprechaun standing and waving, a tall buckled hat with a shamrock tucked in the band, a curly beard, a buttoned coat, a bow tie, and little buckled shoes, a big friendly grin"
+  },
+  {
+    "name": "Pot of Gold",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "pot-of-gold", "treasure", "coins"],
+    "layout": "full",
+    "prompt": "a round cauldron-style pot overflowing with shiny round gold coins, a few coins spilling onto the ground beside it, two small clover sprigs at its base, the pot tipped slightly forward to show the treasure"
+  },
+  {
+    "name": "Rainbow and Pot of Gold",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "rainbow", "pot-of-gold", "scene"],
+    "layout": "full",
+    "prompt": "a big arching rainbow with fluffy clouds at each end, a pot brimming with gold coins resting at the bottom of the rainbow, a few stars and a smiling sun peeking from one corner"
+  },
+  {
+    "name": "Shamrock Trio",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "shamrock", "clover", "easy"],
+    "layout": "full",
+    "prompt": "three plump three-leaf shamrocks of slightly different sizes arranged together with curling stems, simple bold shapes with plenty of open space, gentle leaf veins, a couple of small dots around them"
+  },
+  {
+    "name": "Cute Baby Leprechaun",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "leprechaun", "cute", "toddler-easy"],
+    "layout": "full",
+    "prompt": "an adorable chibi baby leprechaun with a big round head, oversized buckled hat, chubby cheeks, tiny waving hand, and a single shamrock held in the other hand, very simple rounded shapes for little hands"
+  },
+  {
+    "name": "Lucky Horseshoe",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "horseshoe", "lucky"],
+    "layout": "full",
+    "prompt": "an upward-facing lucky horseshoe with bold nail holes around its edge, a shamrock resting in the curve and a ribbon bow tied at the top, a few sparkle marks to show good fortune"
+  },
+  {
+    "name": "Leprechaun Hat Close-Up",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "hat", "close-up", "leprechaun"],
+    "layout": "full",
+    "prompt": "a large detailed leprechaun top hat shown up close, a wide brim, a thick band with a square buckle, a single four-leaf clover tucked into the band, gentle creases in the felt"
+  },
+  {
+    "name": "Happy St. Patrick's Day Banner",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "lettering", "banner", "typography"],
+    "layout": "full",
+    "prompt": "playful bubble lettering reading Happy St Patrick's Day arranged on a curved banner, small shamrocks and a tiny pot of gold decorating the corners, a cheerful festive arrangement"
+  },
+  {
+    "name": "Dancing Leprechaun with Coins",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "leprechaun", "coins", "scene"],
+    "layout": "full",
+    "prompt": "a joyful leprechaun mid-dance with one leg kicked up and arms out, gold coins tossed in the air around him, a buckled hat tilted on his head, motion lines and a few floating shamrocks"
+  },
+  {
+    "name": "Shamrock Wreath",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "shamrock", "wreath", "decorative"],
+    "layout": "full",
+    "prompt": "a round wreath made of overlapping shamrocks and clover leaves, a bow ribbon tied at the bottom, a few tiny gold coins and curling tendrils woven through the ring, an open center"
+  },
+  {
+    "name": "Leprechaun Catching a Coin",
+    "subject": "holidays/st-patrick",
+    "tags": ["st-patrick", "leprechaun", "activity", "scene"],
+    "layout": "full",
+    "prompt": "a leprechaun crouched beside his pot of gold reaching out to catch a single coin tumbling toward him, a rainbow arcing overhead, scattered clovers on the ground and an excited expression"
+  }
+]

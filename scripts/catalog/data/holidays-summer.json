@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Summer Beach Day",
+    "subject": "holidays/summer",
+    "tags": ["summer", "beach", "scene"],
+    "layout": "full",
+    "prompt": "a cheerful sandy beach scene with gentle ocean waves rolling in, a big bright sun with rays in the sky, a striped beach umbrella stuck in the sand, a beach ball, and a bucket and spade resting nearby"
+  },
+  {
+    "name": "Summer Ice Cream Cone",
+    "subject": "holidays/summer",
+    "tags": ["summer", "ice cream", "easy"],
+    "layout": "full",
+    "prompt": "a tall ice cream cone with three rounded scoops stacked on top of a waffle cone, a cherry on top, a few sprinkles and a little drip down the side, with a happy smiling face on the front scoop"
+  },
+  {
+    "name": "Summer Swimming Pool",
+    "subject": "holidays/summer",
+    "tags": ["summer", "pool", "scene"],
+    "layout": "full",
+    "prompt": "a fun backyard swimming pool with rippling water, an inflatable ring float and a beach ball bobbing on the surface, a diving board on one side, a sun lounger and a small palm in pot beside the pool"
+  },
+  {
+    "name": "Summer Sandcastle",
+    "subject": "holidays/summer",
+    "tags": ["summer", "sandcastle", "beach"],
+    "layout": "full",
+    "prompt": "a detailed sandcastle on the beach with several towers topped by little triangle flags, an arched doorway and a moat, a bucket and spade leaning against it, a couple of seashells and a starfish in the sand"
+  },
+  {
+    "name": "Summer Watermelon Slice",
+    "subject": "holidays/summer",
+    "tags": ["summer", "watermelon", "easy"],
+    "layout": "full",
+    "prompt": "a big juicy triangular watermelon slice with a thick rind, neat rows of seeds, and a cute smiling face, with a couple of drips and a small leaf at the corner"
+  },
+  {
+    "name": "Summer Sun Close-Up",
+    "subject": "holidays/summer",
+    "tags": ["summer", "sun", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a large round smiling sun filling the page, long pointed and wavy rays radiating outward, a happy cheerful face with rosy cheeks, a couple of tiny puffy clouds peeking at the edges"
+  },
+  {
+    "name": "Summer Flip-Flops",
+    "subject": "holidays/summer",
+    "tags": ["summer", "flip-flops", "beach"],
+    "layout": "full",
+    "prompt": "a pair of beach flip-flops resting side by side in the sand, decorated with simple flower patterns on the straps, a few seashells and a small starfish scattered around them"
+  },
+  {
+    "name": "Summer Lemonade Stand",
+    "subject": "holidays/summer",
+    "tags": ["summer", "lemonade", "scene"],
+    "layout": "full",
+    "prompt": "a cute wooden lemonade stand with a banner sign reading lemonade, a big pitcher of lemonade and two filled cups on the counter, a bowl of cut lemons and a little price card, a sun in the corner"
+  },
+  {
+    "name": "Summer Beach Ball",
+    "subject": "holidays/summer",
+    "tags": ["summer", "beach ball", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a single large round beach ball with wide curved stripe panels, sitting on the sand near the edge of the water, simple bold shapes that are easy to color"
+  },
+  {
+    "name": "Summer Picnic Scene",
+    "subject": "holidays/summer",
+    "tags": ["summer", "picnic", "scene"],
+    "layout": "full",
+    "prompt": "a checkered picnic blanket spread on the grass under a leafy tree, an open picnic basket, sandwiches and fruit on plates, a pitcher of juice, a few flowers and a butterfly fluttering above"
+  },
+  {
+    "name": "Summer Popsicle Trio",
+    "subject": "holidays/summer",
+    "tags": ["summer", "popsicle", "easy"],
+    "layout": "full",
+    "prompt": "three different ice popsicles on sticks standing in a row, one with a twisty swirl, one with a bite taken out and a drip, and one shaped like a rocket, each with a small cute smiling face"
+  },
+  {
+    "name": "Summer Surfer Kid",
+    "subject": "holidays/summer",
+    "tags": ["summer", "surfing", "beach"],
+    "layout": "full",
+    "prompt": "a happy cartoon kid in swim shorts riding a surfboard on a curling ocean wave, arms out for balance, a big smile, the sun and a seagull in the sky and splashy water around the board"
+  }
+]

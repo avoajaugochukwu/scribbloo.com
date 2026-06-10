@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Jack-o'-Lantern",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "jack-o-lantern", "halloween"],
+    "layout": "full",
+    "prompt": "a classic round carved jack-o'-lantern with a wide toothy grin, two triangle eyes and a triangle nose, deep vertical ridges down its body, a short curved stem on top, sitting on the ground"
+  },
+  {
+    "name": "Cute Smiling Pumpkin",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "cute", "easy", "toddler"],
+    "layout": "full",
+    "prompt": "a chubby round cartoon pumpkin with big happy eyes, rosy cheeks and a cheerful smile, a small curly stem and one little leaf on top, simple bold shapes for very young children"
+  },
+  {
+    "name": "Pumpkin on the Vine",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "vine", "garden"],
+    "layout": "full",
+    "prompt": "a plump ribbed pumpkin resting on the ground still attached to its curling vine, large leaves and twisting tendrils spreading around it, a curved stem on top"
+  },
+  {
+    "name": "Pumpkin Patch",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "pumpkin-patch", "scene"],
+    "layout": "full",
+    "prompt": "a field full of pumpkins of different sizes scattered across the ground, sprawling vines and leaves connecting them, a few tall corn stalks in the background and a low fence"
+  },
+  {
+    "name": "Pumpkin Close-Up",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "close-up", "detailed"],
+    "layout": "full",
+    "prompt": "a large detailed single pumpkin filling most of the frame, deep curved ridges all around its body, a thick gnarled stem with texture lines, one broad leaf curling beside it"
+  },
+  {
+    "name": "Stacked Pumpkins",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "stack", "fall"],
+    "layout": "full",
+    "prompt": "three pumpkins of decreasing size stacked into a tower, a big one on the bottom, a medium one in the middle and a small one on top, each with its own stem, a couple of leaves tucked between them"
+  },
+  {
+    "name": "Pumpkin and Fall Leaves",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "autumn", "leaves"],
+    "layout": "full",
+    "prompt": "a round pumpkin surrounded by falling maple and oak leaves, a couple of acorns near its base, a curved stem on top, a cozy autumn arrangement"
+  },
+  {
+    "name": "Pumpkin Wheelbarrow",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "harvest", "scene"],
+    "layout": "full",
+    "prompt": "an old wooden wheelbarrow piled high with round pumpkins of different sizes, a few leaves spilling over the edge and one pumpkin resting on the ground beside the wheel"
+  },
+  {
+    "name": "Spooky Jack-o'-Lantern Face",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "halloween", "spooky"],
+    "layout": "full",
+    "prompt": "a carved pumpkin with a mischievous spooky face, jagged zigzag mouth with crooked teeth, angled angry eyebrows over slanted eyes, a crooked stem, with small bats flying above it"
+  },
+  {
+    "name": "Pumpkin with Candle",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "jack-o-lantern", "candle"],
+    "layout": "full",
+    "prompt": "a carved jack-o'-lantern glowing with a lit candle inside, soft light shapes coming from the cut eyes and grinning mouth, the lid stem set slightly to one side, sitting on a wooden surface"
+  },
+  {
+    "name": "Pumpkin and Friends Gourds",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "gourds", "harvest"],
+    "layout": "full",
+    "prompt": "a round pumpkin beside an assortment of bumpy fall gourds and squashes of different shapes, some long and curved, some warty and round, arranged together with a few leaves"
+  },
+  {
+    "name": "Princess Pumpkin Carriage",
+    "subject": "holidays/pumpkin",
+    "tags": ["pumpkin", "carriage", "fairytale"],
+    "layout": "full",
+    "prompt": "a magical fairy-tale carriage made from a giant pumpkin, ornate curving wheels, a small arched door and a tiny window cut into the side, swirling decorative scrolls, the curly stem on top"
+  }
+]

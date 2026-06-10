@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Big Simple Heart",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "easy",
+      "toddler"
+    ],
+    "layout": "full",
+    "prompt": "one large bold heart centered on the page, smooth rounded curves and a clean simple shape with plenty of open space inside, no extra details, easy for little hands"
+  },
+  {
+    "name": "Cute Kawaii Heart",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "cute",
+      "kawaii"
+    ],
+    "layout": "full",
+    "prompt": "a plump cartoon heart with a happy kawaii face, two big sparkly eyes, rosy cheeks, a cheerful smile, and tiny little arms waving, looking adorable and friendly"
+  },
+  {
+    "name": "Patterned Heart Design",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "mandala",
+      "pattern"
+    ],
+    "layout": "full",
+    "prompt": "an intricate heart-shaped mandala filled with symmetrical patterns, swirls, petals, teardrops, and small dots radiating from the center out to the heart's edge, detailed and balanced"
+  },
+  {
+    "name": "Doily Lace Heart",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "lace",
+      "doily"
+    ],
+    "layout": "full",
+    "prompt": "a heart shaped like a delicate paper lace doily, with scalloped edges, cut-out flower and leaf patterns, and fine decorative holes throughout, like an old-fashioned valentine"
+  },
+  {
+    "name": "Heart Balloons Bunch",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "balloons",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a cheerful bunch of heart-shaped balloons of different sizes floating upward, their curly strings gathered and tied together at the bottom in a neat bow, a few small sparkles around them"
+  },
+  {
+    "name": "Floral Heart Wreath",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "flowers",
+      "wreath"
+    ],
+    "layout": "full",
+    "prompt": "a heart outline formed entirely from a ring of blooming flowers, leaves, and little buds woven together into a wreath shape, with open space in the middle"
+  },
+  {
+    "name": "Rainbow Hearts Scene",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "rainbow",
+      "scene"
+    ],
+    "layout": "full",
+    "prompt": "a big arching rainbow with a fluffy cloud at each end, lots of little hearts of different sizes raining and floating down from the rainbow, a few stars scattered in the sky"
+  },
+  {
+    "name": "I Love You Banner Heart",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "banner",
+      "valentine"
+    ],
+    "layout": "full",
+    "prompt": "a bold heart with a ribbon banner draped across the middle that reads I LOVE YOU in bubbly letters, small decorative swirls and tiny hearts in the corners"
+  },
+  {
+    "name": "Heart Close-Up Pattern",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "pattern",
+      "detailed"
+    ],
+    "layout": "full",
+    "prompt": "a single large heart that fills most of the page, its inside divided into sections packed with mixed patterns like polka dots, stripes, zigzags, swirls, and small flowers, a decorative coloring challenge"
+  },
+  {
+    "name": "Heart in Cupped Hands",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "hands",
+      "kindness"
+    ],
+    "layout": "full",
+    "prompt": "two open hands gently cupped together holding a glowing heart resting in the palms, a few small sparkle lines around the heart to show it shining, warm and caring"
+  },
+  {
+    "name": "Connect-the-Dots Heart",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "activity",
+      "dot-to-dot"
+    ],
+    "layout": "full",
+    "prompt": "a dot-to-dot activity where small numbered dots placed around the page trace the outline of a heart when connected in order, with a few of the dots near the top already linked by a guide line"
+  },
+  {
+    "name": "Stacked Doodle Hearts",
+    "subject": "patterns/heart",
+    "tags": [
+      "heart",
+      "doodle",
+      "collage"
+    ],
+    "layout": "full",
+    "prompt": "a page filled with many overlapping hand-drawn hearts of all different sizes and styles, some plain, some with stripes, dots, swirls, or zigzags inside, arranged in a fun doodle collage"
+  }
+]

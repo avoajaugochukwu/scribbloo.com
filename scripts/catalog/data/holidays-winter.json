@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Cheerful Snowman",
+    "subject": "holidays/winter",
+    "tags": ["winter", "snowman", "snow"],
+    "layout": "full",
+    "prompt": "a cheerful round snowman made of three stacked snowballs, a carrot nose, coal-button eyes and mouth, twig arms, a cozy knitted scarf and a top hat, a few snowflakes drifting around him"
+  },
+  {
+    "name": "Winter Snowflake",
+    "subject": "holidays/winter",
+    "tags": ["winter", "snowflake", "snow"],
+    "layout": "full",
+    "prompt": "a single large symmetrical six-sided snowflake with delicate branching arms and detailed crystal patterns, perfectly centered, a few tiny snowflakes scattered in the background"
+  },
+  {
+    "name": "Cozy Winter Mittens",
+    "subject": "holidays/winter",
+    "tags": ["winter", "mittens", "easy"],
+    "layout": "full",
+    "prompt": "a matching pair of chunky knitted winter mittens joined by a cord, decorated with simple stripes and a snowflake pattern, plump cuffs, lying side by side"
+  },
+  {
+    "name": "Hot Cocoa Mug",
+    "subject": "holidays/winter",
+    "tags": ["winter", "hot-cocoa", "cozy"],
+    "layout": "full",
+    "prompt": "a steaming mug of hot cocoa topped with fluffy marshmallows and a candy cane, gentle swirls of steam rising, a small cookie resting beside the mug on a saucer"
+  },
+  {
+    "name": "Kids Sledding Downhill",
+    "subject": "holidays/winter",
+    "tags": ["winter", "sledding", "scene"],
+    "layout": "full",
+    "prompt": "two happy bundled-up kids riding a wooden sled speeding down a snowy hill, scarves flying behind them, arms raised with joy, a snowy slope with a couple of bare trees and snow spraying up"
+  },
+  {
+    "name": "Snowy Cabin Scene",
+    "subject": "holidays/winter",
+    "tags": ["winter", "cabin", "scene"],
+    "layout": "full",
+    "prompt": "a cozy little log cabin with snow piled on its roof, smoke curling from the chimney, warm windows, snow-covered pine trees on either side, a winding path and a snowy fence in front"
+  },
+  {
+    "name": "Penguin in the Snow",
+    "subject": "holidays/winter",
+    "tags": ["winter", "penguin", "cute"],
+    "layout": "full",
+    "prompt": "a cute round penguin wearing a striped winter hat and a scarf, standing on a patch of snow and ice, flippers out to the sides, a happy expression, a couple of snowflakes falling around it"
+  },
+  {
+    "name": "Ice Skates Pair",
+    "subject": "holidays/winter",
+    "tags": ["winter", "ice-skating", "skates"],
+    "layout": "full",
+    "prompt": "a pair of white figure ice skates with long laces tied together and hung by the boots, shiny curved blades, a small snowflake charm on the laces, presented neatly side by side"
+  },
+  {
+    "name": "Bear in Winter Scarf",
+    "subject": "holidays/winter",
+    "tags": ["winter", "bear", "toddler-easy"],
+    "layout": "full",
+    "prompt": "a big friendly cartoon bear sitting in the snow wearing a chunky knitted scarf and a pom-pom hat, simple round body and big paws, a warm smile, a small snowdrift behind it"
+  },
+  {
+    "name": "Snowflake Close-Up",
+    "subject": "holidays/winter",
+    "tags": ["winter", "snowflake", "close-up"],
+    "layout": "full",
+    "prompt": "an extreme close-up of one ornate six-pointed snowflake filling most of the frame, intricate lace-like crystal patterns and fern-like branches radiating from the center, fine detailed edges"
+  },
+  {
+    "name": "Building a Snowman",
+    "subject": "holidays/winter",
+    "tags": ["winter", "snowman", "activity"],
+    "layout": "full",
+    "prompt": "two bundled-up children building a snowman together outdoors, one rolling a big snowball and one placing a carrot nose, scarves and mittens, a bucket and twigs nearby, snow falling and a few snowy trees"
+  },
+  {
+    "name": "Mitten Snow Pattern",
+    "subject": "holidays/winter",
+    "tags": ["winter", "mitten", "easy"],
+    "layout": "full",
+    "prompt": "a single large cozy mitten with a wide ribbed cuff, decorated with a simple repeating pattern of snowflakes, hearts, and stripes, plump and rounded with bold easy shapes"
+  }
+]

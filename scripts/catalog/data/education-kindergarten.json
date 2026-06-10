@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Kindergarten School Bus",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "school bus", "back to school"],
+    "layout": "full",
+    "prompt": "a friendly cartoon school bus with a smiling face on the front, big round headlight eyes, rows of windows along the side, an open folding door, and a small stop sign on the side, parked on a road with a couple of clouds above"
+  },
+  {
+    "name": "First Day of Kindergarten",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "first day of school", "scene"],
+    "layout": "full",
+    "prompt": "a happy child waving and wearing a backpack standing in front of a school building with a big door and an arched sign reading school, a flag on a pole, a tree and a flower at the side"
+  },
+  {
+    "name": "Kindergarten Backpack",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "backpack", "supplies"],
+    "layout": "full",
+    "prompt": "a cute filled backpack with a smiling face, two front pockets with a zipper, padded straps, a water bottle tucked in a side pocket, and a pencil and ruler poking out of the top"
+  },
+  {
+    "name": "Kindergarten Classroom",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "classroom", "scene"],
+    "layout": "full",
+    "prompt": "a tidy kindergarten classroom scene with a small desk and chair, a chalkboard on the wall showing the letters A B C, a bookshelf with a few books, a clock, and a potted plant on the windowsill"
+  },
+  {
+    "name": "Kindergarten Alphabet Letters",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "alphabet", "letters"],
+    "layout": "full",
+    "prompt": "four big rounded bubble uppercase letters A B C D arranged in a row, each with a friendly smiling face, sitting on a simple baseline with a few small stars floating around them"
+  },
+  {
+    "name": "Kindergarten Counting Numbers",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "numbers", "counting"],
+    "layout": "full",
+    "prompt": "the chunky numbers 1 2 3 in a row, the 1 beside a single apple, the 2 beside two balloons, and the 3 beside three stars, each number drawn as a thick rounded shape easy to color"
+  },
+  {
+    "name": "Kindergarten Crayon Box",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "crayons", "easy"],
+    "layout": "full",
+    "prompt": "a cheerful open box of crayons with a smiling face on the box, several tall crayons standing up inside with pointed tips, one crayon resting in front of the box, large simple shapes for easy coloring"
+  },
+  {
+    "name": "Kindergarten Pencil Close-Up",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "pencil", "close-up"],
+    "layout": "full",
+    "prompt": "a single large smiling pencil shown up close filling most of the frame, a sharpened wooden tip with a point, a tall body with a happy face, and a rounded eraser at the top, a few small doodle stars nearby"
+  },
+  {
+    "name": "Kindergarten Shapes",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "shapes", "easy"],
+    "layout": "full",
+    "prompt": "a friendly group of basic shapes each with a smiling face, a circle, a square, a triangle, and a star arranged together, big and simple with thick outlines for the youngest colorers"
+  },
+  {
+    "name": "Kindergarten Apple for Teacher",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "apple", "teacher"],
+    "layout": "full",
+    "prompt": "a plump round apple with a cheerful smiling face, a curved stem and a single leaf at the top, a small worm peeking out with a tiny wave, resting on a simple desk surface"
+  },
+  {
+    "name": "Kindergarten ABC Blocks",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "alphabet blocks", "toys"],
+    "layout": "full",
+    "prompt": "a small stack of cube alphabet blocks, each block showing a single letter on its face spelling A B and C, the blocks slightly tilted and piled together, one extra block resting beside the stack"
+  },
+  {
+    "name": "Kindergarten Recess Playground",
+    "subject": "education/kindergarten",
+    "tags": ["kindergarten", "playground", "scene"],
+    "layout": "full",
+    "prompt": "a sunny kindergarten playground scene with a curved slide, a pair of swings hanging from a frame, a small seesaw, a bouncy ball on the ground, and a smiling sun with a couple of clouds above"
+  }
+]
