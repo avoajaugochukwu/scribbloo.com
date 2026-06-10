@@ -112,7 +112,7 @@ static (`force-static`). Build cost is linear in (folders + leaves). Ancestry/br
 from the path — no `parent` field, and leaf slugs only need to be unique **within their folder**.
 
 **Pagination** for large listings is path-based, not query-string:
-`/coloring-pages/animals/dinosaur/page/2`. (`?page=` is weaker for crawl/canonical.) `PAGE_SIZE`=48
+`/coloring-pages/animals/dinosaur/page/2`. (`?page=` is weaker for crawl/canonical.) `PAGE_SIZE`=24
 (one constant in `collections.ts`); page 1 is the bare URL and `/page/1` 308s to it. It's a pure
 render-time slice of the leaves in the folder — no page files. **Page ≥2 is `noindex, follow`** and
 self-canonical (thin pages stay out of the index; leaves still get crawled). *(IMPLEMENTED.)*

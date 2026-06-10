@@ -1,5 +1,6 @@
 import { notFound, permanentRedirect } from 'next/navigation';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { baseUrl } from '@/app/metadata';
@@ -9,7 +10,7 @@ import PageBreadcrumb, { type CrumbItem } from '@/components/PageBreadcrumb';
 import OtherDetails from '@/components/seo-details/OtherDetails';
 import CategoryRail from '@/components/CategoryRail';
 import FavoriteButton from '@/components/FavoriteButton';
-import { ArrowIcon } from '@/components/icons';
+import { ArrowIcon, ThemeIcon } from '@/components/icons';
 
 import ColoringPageImage from '../components/ColoringPageImage';
 import ColoringGallery from '../components/ColoringGallery';
@@ -28,6 +29,8 @@ import {
 import type { SeoDetails } from '@/lib/content/types';
 
 export const dynamic = 'force-static';
+
+const SUBCAT_TINTS = ['bg-yellow-t', 'bg-teal-t', 'bg-pink-t', 'bg-purple-t', 'bg-orange-t', 'bg-green-t', 'bg-blue-t', 'bg-red-t'];
 
 export async function generateStaticParams() {
   try {
@@ -134,7 +137,7 @@ async function CollectionView({
   const pageLeaves = leaves.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const crumbs = crumbsFromAncestors(ancestors);
   const pageHref = (p: number) => (p <= 1 ? node.href : `${node.href}/page/${p}`);
-  const { themes } = await getRootHub();
+  const { themes, counts } = await getRootHub();
   const now = Date.now();
 
   const collectionJsonLd = {
@@ -193,20 +196,51 @@ async function CollectionView({
         })}
       </div>
 
-      {/* Subcategories */}
+      {/* Subcategories — visual tiles (hero thumb + leaf count) */}
       {children.length > 0 && (
         <section className="mb-10">
-          <h2 className="mb-5 font-display text-[clamp(22px,2.6vw,30px)] font-semibold">Subcategories</h2>
-          <div className="flex flex-wrap gap-2.5">
-            {children.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className="pressable shadow-pop-sm inline-flex items-center rounded-full border-2 border-ink bg-cream px-5 py-2.5 font-display font-medium"
-              >
-                {child.category.name}
-              </Link>
-            ))}
+          <h2 className="mb-5 font-display text-[clamp(22px,2.6vw,30px)] font-semibold">
+            Browse {c.name} categories
+          </h2>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {children.map((child, i) => {
+              const count = counts.get(child.pathSlugs.join('/')) ?? 0;
+              const hasImg = !!(child.category.thumbnailImage || child.category.heroImage);
+              const imgSrc = child.category.thumbnailImage
+                ? imageUrl({ kind: 'category-thumb', slug: child.category.slug })
+                : imageUrl({ kind: 'category-hero', slug: child.category.slug });
+              return (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className="group pressable shadow-pop-sm flex flex-col overflow-hidden rounded-[var(--radius-md)] border-[2.5px] border-ink bg-cream"
+                >
+                  <div className={`relative border-b-[2.5px] border-ink ${SUBCAT_TINTS[i % SUBCAT_TINTS.length]}`}>
+                    <div className="relative aspect-[210/297] w-full overflow-hidden p-3">
+                      {hasImg ? (
+                        <Image
+                          src={imgSrc}
+                          alt={`${child.category.name} coloring pages`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          className="object-contain transition-transform duration-300 group-hover:scale-105"
+                        />
+                      ) : (
+                        <span className="grid h-full w-full place-items-center">
+                          <ThemeIcon slug={child.category.slug} className="h-20 w-20 text-ink" />
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex flex-1 items-center justify-between gap-2 px-4 py-3">
+                    <h3 className="truncate font-display text-lg font-semibold">{child.category.name}</h3>
+                    <span className="shrink-0 font-sans text-[12.5px] font-bold text-ink-soft">
+                      {count > 0 ? `${count} page${count === 1 ? '' : 's'}` : 'New'}
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </section>
       )}

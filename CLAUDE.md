@@ -31,7 +31,7 @@ The site is being redesigned for scale (50 → 1,000+ pages). The canonical refe
   aliases, never separate pages. (We already hit this cannibalization on the blog and fixed it via
   `redirects()` in `next.config.js` — same pattern applies to collections.)
 - Subjects nest in the path; audience/style cuts (adult, kids, cute) are tag-driven facet listings.
-- **Pagination**: listings paginate at `PAGE_SIZE` (48) via `/…/page/N` (page 1 = bare URL; `/page/1`→308). Page ≥2 is `noindex, follow` + self-canonical — keep it that way.
+- **Pagination**: listings paginate at `PAGE_SIZE` (24) via `/…/page/N` (page 1 = bare URL; `/page/1`→308). Page ≥2 is `noindex, follow` + self-canonical — keep it that way.
 - **Content is validated on every build**: `prebuild` runs `npm run validate` (`scripts/validate-content.ts`) and FAILS the build on invalid frontmatter, a folder with leaves but no `_category.mdx`, a file/folder name collision, a missing image folder, or a facet with no `facetTag`. Run `npm run validate` directly while authoring.
 - **Image names + alt text are descriptive (SEO).** A leaf's `image` key is the
   folder under `public/images/coloring-pages/<key>/`, so it's part of the served

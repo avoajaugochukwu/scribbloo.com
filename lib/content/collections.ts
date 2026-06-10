@@ -25,7 +25,7 @@ const CONTENT = path.join(process.cwd(), 'content');
 const CP_DIR = path.join(CONTENT, 'coloring-pages');
 const FACET_DIR = path.join(CONTENT, 'facets');
 const ROOT = '/coloring-pages';
-export const PAGE_SIZE = 48;
+export const PAGE_SIZE = 24;
 
 export interface CollectionNode {
   category: Category;
