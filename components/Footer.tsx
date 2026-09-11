@@ -55,7 +55,18 @@ export async function Footer() {
 
       <div className="container mx-auto px-4 lg:px-7">
         <div className="flex flex-wrap items-center justify-between gap-3 border-t-2 border-line py-5 text-sm font-bold text-ink-soft">
-          <span>© {year} Scribbloo. Made for messy, joyful coloring.</span>
+          <span>
+            © {year} Scribbloo. Made for messy, joyful coloring. Built by{' '}
+            <a
+              href="https://bottta.com/"
+              target="_blank"
+              rel="noopener"
+              className="underline transition-colors hover:text-ink"
+            >
+              bottta
+            </a>
+            .
+          </span>
           <span>Privacy · Terms · Print responsibly 🖍️</span>
         </div>
       </div>
