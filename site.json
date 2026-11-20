@@ -10,5 +10,12 @@
   },
   "analytics": {
     "measurementId": "G-LV4B3PXPG8"
+  },
+  "cloudflare": {
+    "workerName": "scribbloo-com",
+    "scriptTag": "bc4cca39cc884ecf8534d31e815934df",
+    "triggerUuid": "9a3ae828-4c51-4011-b3a0-f226c8c1e5e3",
+    "workersDev": "scribbloo-com.avoajacharles.workers.dev",
+    "releaseHook": true
   }
 }
