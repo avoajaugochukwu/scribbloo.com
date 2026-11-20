@@ -211,9 +211,39 @@ export type Resolved =
   | { type: 'redirect'; to: string }
   | { type: 'notFound' };
 
-export async function resolvePath(parts: string[]): Promise<Resolved> {
-  const idx = await buildIndex();
+/**
+ * The URL facts resolvePath needs, as plain data. Built from the content tree at
+ * build time (scripts/build-runtime-index.ts) so redirects and 404s still resolve
+ * at request time on the Worker, where there is no content/ folder.
+ */
+export interface RouteTable {
+  collections: Map<string, number>; // collection key -> direct leaf count
+  facets: Map<string, number>; // facet slug -> tagged leaf count
+  leaves: Set<string>; // leaf keys
+  slugCanonical: Map<string, string | null>;
+  aliasTo: Map<string, string>;
+}
 
+export async function getRouteTable(): Promise<RouteTable> {
+  const idx = await buildIndex();
+  return {
+    collections: new Map([...idx.collections.keys()].map((k) => [k, idx.leavesOf.get(k)?.length ?? 0])),
+    facets: new Map(idx.facets.toReversed().map((f) => [f.slug, taggedLeaves(f, idx).length])), // first facet wins, like find()
+    leaves: new Set(idx.leaves.keys()),
+    slugCanonical: idx.slugCanonical,
+    aliasTo: idx.aliasTo,
+  };
+}
+
+function taggedLeaves(facet: Category, idx: Index): Leaf[] {
+  return facet.facetTag ? [...idx.leaves.values()].filter((l) => l.page.tags.includes(facet.facetTag!)) : [];
+}
+
+/**
+ * Decides redirect / 404 from the route table alone; the content index is read
+ * only to render a real listing or leaf (those are prerendered at build).
+ */
+export async function resolvePath(table: RouteTable, parts: string[]): Promise<Resolved> {
   // pagination suffix ".../page/N"
   let pageNo = 1;
   let base = parts;
@@ -225,49 +255,64 @@ export async function resolvePath(parts: string[]): Promise<Resolved> {
   const key = keyOf(base);
   const paginated = base !== parts;
 
-  const paginate = (node: CollectionNode, allLeaves: Leaf[], children: CollectionNode[]): Resolved => {
-    const totalPages = Math.max(1, Math.ceil(allLeaves.length / PAGE_SIZE));
-    if (paginated && pageNo === 1) return { type: 'redirect', to: node.href };
+  const paginate = async (
+    href: string,
+    count: number,
+    view: (idx: Index) => { node: CollectionNode; leaves: Leaf[]; children: CollectionNode[] },
+  ): Promise<Resolved> => {
+    const totalPages = Math.max(1, Math.ceil(count / PAGE_SIZE));
+    if (paginated && pageNo === 1) return { type: 'redirect', to: href };
     if (pageNo < 1 || pageNo > totalPages) return { type: 'notFound' };
-    return { type: 'collection', node, ancestors: ancestorsFor(node.pathSlugs, idx), children, leaves: allLeaves, page: pageNo, totalPages };
+    const idx = await buildIndex();
+    const { node, leaves, children } = view(idx);
+    return { type: 'collection', node, ancestors: ancestorsFor(node.pathSlugs, idx), children, leaves, page: pageNo, totalPages };
   };
 
   // 1) collection
-  const node = idx.collections.get(key);
-  if (node) return paginate(node, idx.leavesOf.get(key) ?? [], idx.childrenOf.get(key) ?? []);
+  const count = table.collections.get(key);
+  if (count !== undefined) {
+    return paginate(hrefOf(base), count, (idx) => ({
+      node: required(idx.collections.get(key), key),
+      leaves: idx.leavesOf.get(key) ?? [],
+      children: idx.childrenOf.get(key) ?? [],
+    }));
+  }
 
   // 2) facet (single-segment, tag-driven)
-  if (base.length === 1) {
-    const facet = idx.facets.find((f) => f.slug === base[0]);
-    if (facet) {
-      const fNode: CollectionNode = { category: facet, pathSlugs: base, href: `${ROOT}/${facet.slug}` };
-      const tagged = facet.facetTag
-        ? [...idx.leaves.values()].filter((l) => l.page.tags.includes(facet.facetTag!))
-        : [];
-      return paginate(fNode, tagged, []);
-    }
+  const facetCount = base.length === 1 ? table.facets.get(base[0]) : undefined;
+  if (facetCount !== undefined) {
+    return paginate(`${ROOT}/${base[0]}`, facetCount, (idx) => {
+      const facet = required(idx.facets.find((f) => f.slug === base[0]), key);
+      return { node: { category: facet, pathSlugs: base, href: `${ROOT}/${facet.slug}` }, leaves: taggedLeaves(facet, idx), children: [] };
+    });
   }
 
   // a page suffix on a non-listing is invalid
   if (paginated) return { type: 'notFound' };
 
   // 3) leaf at exact canonical path
-  const leaf = idx.leaves.get(key);
-  if (leaf) {
+  if (table.leaves.has(key)) {
+    const idx = await buildIndex();
+    const leaf = required(idx.leaves.get(key), key);
     const parentKey = keyOf(leaf.pathSlugs.slice(0, -1));
     const related = (idx.leavesOf.get(parentKey) ?? []).filter((l) => l.page.slug !== leaf.page.slug).slice(0, 6);
     return { type: 'leaf', leaf, ancestors: ancestorsFor(leaf.pathSlugs.slice(0, -1), idx), related };
   }
 
   // 4) legacy / non-canonical path whose last segment is a known unique slug
-  const canonical = idx.slugCanonical.get(parts[parts.length - 1]);
+  const canonical = table.slugCanonical.get(parts[parts.length - 1]);
   if (canonical && canonical !== hrefOf(parts)) return { type: 'redirect', to: canonical };
 
   // 5) alias
-  const aliasTo = idx.aliasTo.get(key);
+  const aliasTo = table.aliasTo.get(key);
   if (aliasTo) return { type: 'redirect', to: aliasTo };
 
   return { type: 'notFound' };
+}
+
+function required<T>(value: T | undefined, key: string): T {
+  if (value === undefined) throw new Error(`[collections] "${key}" is in the route table but not in the content index`);
+  return value;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -286,7 +331,7 @@ export async function getAllColoringParams(): Promise<{ path: string[] }[]> {
   for (const leaf of idx.leaves.values()) out.push({ path: leaf.pathSlugs });
   for (const f of idx.facets) {
     out.push({ path: [f.slug] });
-    const tagged = f.facetTag ? [...idx.leaves.values()].filter((l) => l.page.tags.includes(f.facetTag!)).length : 0;
+    const tagged = taggedLeaves(f, idx).length;
     for (let p = 2; p <= Math.ceil(tagged / PAGE_SIZE); p++) out.push({ path: [f.slug, 'page', String(p)] });
   }
   return out;

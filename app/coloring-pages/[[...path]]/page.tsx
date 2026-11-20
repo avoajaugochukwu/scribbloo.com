@@ -18,8 +18,8 @@ import SwatchPreview from '../components/SwatchPreview';
 import DownloadActions from '../components/DownloadActions';
 import { coloringPageAlt } from '@/lib/alt';
 
+import { resolvePath } from '@/lib/content/runtime-index';
 import {
-  resolvePath,
   getAllColoringParams,
   getRootHub,
   PAGE_SIZE,

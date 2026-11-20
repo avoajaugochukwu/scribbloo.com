@@ -3,8 +3,8 @@
  *
  * Today images live under `public/images/...` and are served as plain static
  * files (BASE = ''). To move to a CDN/object store later, set
- * NEXT_PUBLIC_IMAGE_BASE_URL (e.g. "https://cdn.scribbloo.com") and add that
- * host to `images.remotePatterns` in next.config.js — no page/component edits.
+ * NEXT_PUBLIC_IMAGE_BASE_URL (e.g. "https://cdn.scribbloo.com") — no page/component
+ * edits (next/image is unoptimized, so any host works).
  *
  * On-disk layout this maps to:
  *   public/images/coloring-pages/<slug>/{original.png,full.webp,thumb.webp}

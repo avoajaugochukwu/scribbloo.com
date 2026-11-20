@@ -14,7 +14,7 @@ instant and keeps everything in one place we control.
 ## 1. Architecture at a glance
 
 ```
-content (MDX) ──► loaders (lib/content/*) ──► getSearchIndex()  [SearchDoc[]]
+content (MDX) ──► loaders ──► buildSearchIndex() ──prebuild──► runtime-index.json [SearchDoc[]]
                                                      │
                                        searchContent(q) scores + ranks
                                                      │
@@ -26,15 +26,17 @@ content (MDX) ──► loaders (lib/content/*) ──► getSearchIndex()  [Sea
 ```
 
 Every searchable thing — a coloring page, a category, a facet, a blog post, a tutorial — is
-normalized into a single `SearchDoc`. The index is built **once per process** with
-`React.cache`, from the same loaders the pages already use. Query time is a weighted scan.
+normalized into a single `SearchDoc`. The index is built **at build time** (`prebuild` runs
+`scripts/build-runtime-index.ts`) from the same loaders the pages use, because the Worker has no
+`content/` folder at request time. Query time is a weighted scan.
 
 ## 2. Files
 
 | File | Role |
 |---|---|
 | `lib/content/search-shared.ts` | **Client-safe** primitives: `SearchType`, `SearchDoc`, `SearchResult`, `SEARCH_TYPE_META` (labels + ranking weights + group order), `groupByType()`. No `server-only`, no loaders — safe to import from client components. |
-| `lib/content/search.ts` | **Server-only** index + scorer. Holds the source registry, `getSearchIndex()`, `searchContent()`, and the scoring. Re-exports everything from `search-shared.ts` so server callers can import from one place. |
+| `lib/content/search-sources.ts` | **Build-time** source registry (`SOURCES`) and `buildSearchIndex()`. |
+| `lib/content/search.ts` | **Server-only** scorer. `searchContent()` ranks the prebuilt index from `runtime-index.ts`. Re-exports everything from `search-shared.ts` so server callers can import from one place. |
 | `app/api/search/route.ts` | `GET /api/search?q=&limit=&types=` → ranked JSON. Edge-cacheable. |
 | `app/search/page.tsx` | Server-rendered results page, grouped by type, `noindex, follow`. Works with JS disabled; shareable via `?q=`. |
 | `components/search/SiteSearch.tsx` | Client search input. `variant="header"` = live debounced dropdown hitting the API; `variant="page"` = larger box that submits to `/search`. |
@@ -79,13 +81,13 @@ relevance there — it's the one knob.
 
 ## 5. Adding a new searchable content type
 
-Three edits, all in the two `search*` files. Nothing else (API, page, dropdown) changes — they
+Three edits, all in the `search*` files. Nothing else (API, page, dropdown) changes — they
 all read the index generically.
 
 1. **`search-shared.ts`** — add the key to the `SearchType` union and an entry to
    `SEARCH_TYPE_META` (`label`, `plural`, `weight`). Its position in that object also sets where
    the group appears on `/search`.
-2. **`search.ts`** — write a source function `async (): Promise<SearchDoc[]>` that maps your
+2. **`search-sources.ts`** — write a source function `async (): Promise<SearchDoc[]>` that maps your
    loader's items into `SearchDoc`s (resolve thumbnails via `imageUrl`, push tags/aliases into
    `keywords`), and add it to the `SOURCES` array.
 3. If it's an image kind `imageUrl` doesn't know yet, add it in `lib/images.ts`.

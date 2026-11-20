@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { BrandMark } from '@/components/BrandMark';
-import { getRootHub } from '@/lib/content/collections';
+import { themeLinks as allThemes } from '@/lib/content/runtime-index';
 
 const exploreLinks = [
   { href: '/coloring-pages', label: 'Coloring Pages' },
@@ -15,10 +15,9 @@ const helloLinks = [
   { href: '/terms-of-service', label: 'Terms' },
 ];
 
-export async function Footer() {
-  const { themes } = await getRootHub();
+export function Footer() {
   const year = new Date().getFullYear();
-  const themeLinks = themes.slice(0, 6);
+  const themeLinks = allThemes.slice(0, 6);
 
   return (
     <footer className="mt-10 border-t-2 border-ink">
@@ -43,7 +42,7 @@ export async function Footer() {
                   href={t.href}
                   className="font-semibold text-ink-soft transition-colors hover:text-ink"
                 >
-                  {t.category.name}
+                  {t.name}
                 </Link>
               </li>
             ))}

@@ -1,7 +1,8 @@
 # Scribbloo
 
 Free printable coloring pages + drawing tutorials. Next.js 15 (App Router), TypeScript,
-Tailwind 4. File-based MDX content (no CMS/DB). Deployed on Railway behind Cloudflare.
+Tailwind 4. File-based MDX content (no CMS/DB). Runs on Cloudflare Workers via OpenNext; deploys
+by `git push` to `main` (Workers Builds). Never run `wrangler deploy` by hand.
 
 ## Architecture quick map
 
@@ -10,10 +11,13 @@ Tailwind 4. File-based MDX content (no CMS/DB). Deployed on Railway behind Cloud
   `app/sitemap.ts`, `app/robots.ts`.
 - `content/` — all content as MDX + YAML frontmatter (`categories/`, `coloring-pages/`, `blog/`).
 - `lib/content/` — MDX loaders + Zod schemas (`types.ts`).
-- `next.config.js` — **active config** (`.mjs`/`.ts` are stale, ignore). Holds redirects (308)
-  and cache headers.
+- `next.config.js` — the only config. Holds redirects (308) and cache headers; `public/_headers`
+  repeats the cache headers for files the Workers assets binding serves.
+- **No `content/` folder at request time.** Pages are prerendered. What runs per request (search,
+  coloring-page redirects/404s, footer themes) reads `lib/content/runtime-index.ts`, which
+  `scripts/build-runtime-index.ts` writes in `prebuild`. `[slug]` routes use `dynamicParams = false`.
 - **Site search** — server-side over a flat in-memory index (no DB/service). Unified index +
-  scorer in `lib/content/search.ts` (client-safe types/config split into `search-shared.ts`);
+  scorer in `lib/content/search.ts`, sources in `search-sources.ts` (client-safe types/config in `search-shared.ts`);
   exposed via `GET /api/search`, the `noindex` `/search` page, and the header dropdown
   (`components/search/`). Adding a new searchable content type = one source fn + one type entry.
   Canonical reference: **[`plan/search.md`](plan/search.md)**.

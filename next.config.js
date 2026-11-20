@@ -1,23 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-// Images are served as local static files from /public by default, so no remote
-// patterns are required. To move images to a CDN/object store later, set
-// NEXT_PUBLIC_IMAGE_BASE_URL (e.g. https://cdn.scribbloo.com) and its host is
-// whitelisted here automatically — see lib/images.ts.
-const remotePatterns = [];
-if (process.env.NEXT_PUBLIC_IMAGE_BASE_URL) {
-  try {
-    const u = new URL(process.env.NEXT_PUBLIC_IMAGE_BASE_URL);
-    remotePatterns.push({
-      protocol: u.protocol.replace(':', ''),
-      hostname: u.hostname,
-      pathname: '/**',
-    });
-  } catch {
-    // ignore malformed env value
-  }
-}
-
 // Blog consolidation: these near-duplicate "drawing ideas for beginners"
 // variants were cannibalizing the pillar post and getting flagged
 // "Crawled - currently not indexed" in Search Console. We 301 (308) them into
@@ -34,10 +16,8 @@ const consolidatedBlogSlugs = [
   'drawing-ideas-for-beginners-easy-sketches-tutorials-tips',
 ];
 
-// Long-lived cache headers for static assets. Ported from vercel.json when the
-// app moved off Vercel onto Railway — Next.js uses the same path-to-regexp as
-// Vercel, so these `source` patterns are 1:1 with the old config. Cloudflare's
-// CDN sits in front of Railway and honors these origin headers.
+// Long-lived cache headers. On Workers, files in public/ and _next/static are
+// served by the assets binding, which ignores these; public/_headers repeats them there.
 const cacheHeaders = [
   {
     source: '/(.*)\\.(jpg|jpeg|png|webp|svg|ico|gif)',
@@ -119,9 +99,8 @@ function collectionAliasRedirects() {
 }
 
 const nextConfig = {
-  images: {
-    remotePatterns,
-  },
+  // No optimizer on Cloudflare Workers (no sharp); images are pre-sized webp files.
+  images: { unoptimized: true },
   async redirects() {
     return [
       ...consolidatedBlogSlugs.map((slug) => ({

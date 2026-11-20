@@ -52,3 +52,11 @@ next-env.d.ts
 
 # research-log artifacts from `npm run research --save` (throwaway)
 scripts/research/
+
+# cloudflare
+.open-next
+.wrangler
+cloudflare-env.d.ts
+
+# build-time runtime index (scripts/build-runtime-index.ts)
+/lib/content/generated/

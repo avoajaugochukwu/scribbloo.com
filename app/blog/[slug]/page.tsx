@@ -15,6 +15,9 @@ type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// Unknown slugs 404 without a request-time render (MDX can't compile on Workers).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
   return slugs.map((slug) => ({ slug }));

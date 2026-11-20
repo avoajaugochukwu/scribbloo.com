@@ -1,15 +1,6 @@
 import 'server-only';
 
-import { cache } from 'react';
-
-import { imageUrl } from '@/lib/images';
-import {
-  getAllCollectionNodes,
-  getAllLeaves,
-  getRootHub,
-} from './collections';
-import { getAllPosts } from './blog';
-import { getDocs } from './docs';
+import { searchIndex } from './runtime-index';
 import {
   SEARCH_TYPE_META,
   type SearchDoc,
@@ -18,20 +9,14 @@ import {
 } from './search-shared';
 
 /**
- * Site-wide search — the unified index over EVERY content type (server side).
+ * Site-wide search — ranks the unified index over EVERY content type (server side).
  *
- * The site has no DB. Search is a flat in-memory index built once per process
- * (React.cache) from the same file-based loaders the pages use, then scanned and
- * ranked per query. ~1k docs is a trivial linear scan, so there is no external
+ * The site has no DB. The index is a flat list of SearchDocs built at build time
+ * from the file-based loaders (search-sources.ts -> runtime-index), then scanned
+ * and ranked per query. ~1k docs is a trivial linear scan, so there is no external
  * search service and nothing ships to the client — querying happens server-side
  * (API route + /search page). Client-safe types/config live in `search-shared.ts`.
- *
- * ── Extending as the site grows ──────────────────────────────────────────────
- * Every searchable thing becomes a `SearchDoc`. To add a new content type:
- *   1. add its key to `SearchType` + an entry to `SEARCH_TYPE_META` (search-shared.ts), and
- *   2. add a source function to the `SOURCES` array below.
- * Nothing else changes — the API, the /search page, and the header dropdown all
- * read the index generically. See plan/search.md.
+ * To add a content type, see search-sources.ts and plan/search.md.
  */
 
 // Re-export the client-safe primitives so server callers can import everything
@@ -45,104 +30,6 @@ export {
   type SearchDoc,
   type SearchResult,
 } from './search-shared';
-
-/* -------------------------------------------------------------------------- */
-/* Sources — one function per content type, each emitting SearchDocs          */
-/* -------------------------------------------------------------------------- */
-
-async function coloringPageDocs(): Promise<SearchDoc[]> {
-  const leaves = await getAllLeaves();
-  return leaves.map((leaf) => ({
-    id: `coloring-page:${leaf.href}`,
-    type: 'coloring-page' as const,
-    title: leaf.page.title,
-    description: leaf.page.description,
-    url: leaf.href,
-    image: imageUrl({ kind: 'coloring-page', slug: leaf.page.image, variant: 'thumb' }),
-    keywords: [...leaf.page.tags, ...leaf.pathSlugs.slice(0, -1)],
-    date: leaf.page.createdAt,
-  }));
-}
-
-async function collectionDocs(): Promise<SearchDoc[]> {
-  const nodes = await getAllCollectionNodes();
-  return nodes.map((node) => ({
-    id: `collection:${node.href}`,
-    type: 'collection' as const,
-    title: node.category.name,
-    description: node.category.seoDescription ?? node.category.description,
-    url: node.href,
-    image: node.category.thumbnailImage
-      ? imageUrl({ kind: 'category-thumb', slug: node.category.slug })
-      : node.category.heroImage
-        ? imageUrl({ kind: 'category-hero', slug: node.category.slug })
-        : null,
-    keywords: [...node.category.aliases, ...node.pathSlugs],
-    date: null,
-  }));
-}
-
-async function facetDocs(): Promise<SearchDoc[]> {
-  const { facets } = await getRootHub();
-  return facets.map((facet) => ({
-    id: `facet:/coloring-pages/${facet.slug}`,
-    type: 'facet' as const,
-    title: facet.name,
-    description: facet.seoDescription ?? facet.description,
-    url: `/coloring-pages/${facet.slug}`,
-    image: facet.thumbnailImage ? imageUrl({ kind: 'category-thumb', slug: facet.slug }) : null,
-    keywords: [...facet.aliases, facet.facetTag ?? ''].filter(Boolean),
-    date: null,
-  }));
-}
-
-async function blogDocs(): Promise<SearchDoc[]> {
-  const posts = await getAllPosts();
-  return posts.map((post) => ({
-    id: `blog:/blog/${post.slug}`,
-    type: 'blog' as const,
-    title: post.title,
-    description: post.excerpt ?? post.metaDescription,
-    url: `/blog/${post.slug}`,
-    image: post.featuredImage ? imageUrl({ kind: 'blog-featured', slug: post.slug }) : null,
-    keywords: post.tags,
-    date: post.publishedAt,
-  }));
-}
-
-/** Factory for the three flat doc namespaces (how-to-draw, drawing-ideas, tools). */
-function docNamespaceSource(namespace: Extract<SearchType, 'how-to-draw' | 'drawing-ideas' | 'tools'>) {
-  return async (): Promise<SearchDoc[]> => {
-    const docs = await getDocs(namespace);
-    return docs.map((doc) => ({
-      id: `${namespace}:/${namespace}/${doc.slug}`,
-      type: namespace,
-      title: doc.title,
-      description: doc.description ?? doc.subtitle,
-      url: `/${namespace}/${doc.slug}`,
-      image: doc.featuredImage ? imageUrl({ kind: 'doc-featured', slug: doc.slug, namespace }) : null,
-      keywords: [doc.category ?? '', doc.slug].filter(Boolean),
-      date: null,
-    }));
-  };
-}
-
-/** The registry. Add a content type here and it becomes searchable everywhere. */
-const SOURCES: Array<() => Promise<SearchDoc[]>> = [
-  coloringPageDocs,
-  collectionDocs,
-  facetDocs,
-  blogDocs,
-  docNamespaceSource('how-to-draw'),
-  docNamespaceSource('drawing-ideas'),
-  docNamespaceSource('tools'),
-];
-
-/** The full search index, built once per process. */
-export const getSearchIndex = cache(async (): Promise<SearchDoc[]> => {
-  const batches = await Promise.all(SOURCES.map((source) => source()));
-  return batches.flat();
-});
 
 /* -------------------------------------------------------------------------- */
 /* Scoring                                                                    */
@@ -224,10 +111,9 @@ export async function searchContent(
   if (terms.length === 0) return [];
 
   const typeFilter = types && types.length ? new Set(types) : null;
-  const index = await getSearchIndex();
 
   const hits: SearchResult[] = [];
-  for (const doc of index) {
+  for (const doc of searchIndex) {
     if (typeFilter && !typeFilter.has(doc.type)) continue;
     const score = scoreDoc(doc, haystackOf(doc), terms, fullQuery);
     if (score > 0) hits.push({ ...doc, score });

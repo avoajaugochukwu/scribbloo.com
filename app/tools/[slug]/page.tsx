@@ -6,6 +6,9 @@ import { DocArticle } from '@/components/DocLayouts';
 
 export const dynamic = 'force-static';
 
+// Unknown slugs 404 without a request-time render (MDX can't compile on Workers).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return (await getDocSlugs('tools')).map((slug) => ({ slug }));
 }

@@ -1,0 +1,14 @@
+{
+  "domain": "scribbloo.com",
+  "subdomains": [
+    "@",
+    "www"
+  ],
+  "registrar": "hostinger",
+  "github": {
+    "repo": "avoajaugochukwu/scribbloo.com"
+  },
+  "analytics": {
+    "measurementId": "G-LV4B3PXPG8"
+  }
+}
